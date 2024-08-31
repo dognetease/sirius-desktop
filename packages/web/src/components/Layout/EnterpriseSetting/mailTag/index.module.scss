@@ -1,0 +1,39 @@
+@import '@web-common/styles/variables.scss';
+
+.page-container {
+  padding: 20px 24px;
+  height: 100%;
+  overflow: hidden auto;
+}
+
+.page-title {
+  font-family: 'PingFang SC';
+  font-style: normal;
+  color: #262a33;
+
+  @include font-size(500, 20px, 28px);
+}
+
+.edit-rule-modal {
+  .color-selector > span {
+    width: 24px;
+    height: 24px;
+  }
+  .color-selector > span:not(:last-child) {
+    margin-right: 12px;
+  }
+  .color-selector :global(.active::before) {
+    top: 11px;
+    left: 8px;
+  }
+  .color-selector :global(.active::after) {
+    top: 17px;
+    left: 11px;
+  }
+}
+
+.subtitle {
+  margin: 12px 0 20px;
+  @include c4-3-reg12();
+  color: $label-6_3;
+}

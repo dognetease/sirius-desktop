@@ -1,0 +1,100 @@
+#!/usr/bin/env node
+
+const shell = require('shelljs');
+const path = require('path');
+const env = require('env_def');
+const delTinymce = require('../../modified_third_party/tinymce/tinymcerc');
+// const fse = require('fs-extra');
+shell.echo('install third party file to public');
+
+// shell.chmod('755', dist);
+// const files = shell.ls(dist);
+// for (let j of files) {
+
+const stage = env.config('stage');
+const profile = env.config('profile');
+
+const isEdm = profile && profile.includes('edm');
+
+function copy(from, toDir, onlyChildren) {
+  const dist = path.resolve(process.cwd(), from);
+  const toFolder = path.resolve(process.cwd(), './public', toDir || '');
+  shell.mkdir('-p', toFolder);
+  console.log('copy ' + dist + ' to ' + toFolder);
+  shell.cp('-rf', dist + (onlyChildren ? '/*' : ''), toFolder);
+}
+
+function copyAppleSiteAssociation() {
+  copy('../web-ui/apple-app-site-association-wm');
+  const orgFile = path.resolve(process.cwd(), './public', 'apple-app-site-association-wm');
+  const destFile = path.resolve(process.cwd(), './public', 'apple-app-site-association');
+  shell.mv(orgFile, destFile);
+}
+// copy('../api/dist', 'api');
+if (stage === 'prod') {
+  delTinymce();
+} else {
+  copy('../../modified_third_party/tinymce', 'tinymce', true);
+}
+// copy('../../modified_third_party/hubble/DATracker.globals.1.6.12.8.js');
+// copy('../../modified_third_party/hubble/DATracker.sync.js');
+copy('../../modified_third_party/hubble/DATracker.globals.js');
+copy('../../modified_third_party/hubble/DATracker_Init.js');
+copy('../../modified_third_party/qiyukf/kf_init.js');
+copy('../../modified_third_party/npsmeter/nps_init.js');
+// copy('../../modified_third_party/lovefield/dist/lovefield.js');
+// copy('../../modified_third_party/lovefield/dist/lovefield.min.js');
+// copy('../../modified_third_party/lovefield/dist/lovefield.min.js.map');
+
+copy('../../modified_third_party/ttf/黑体.TTF');
+copy('../../modified_third_party/ttf/LucidaGrande.otf');
+copy('../../modified_third_party/ttf/uverdana.ttf');
+copy('../../modified_third_party/ttf/思源黑体.ttf');
+copy('../../modified_third_party/ttf/menlo-regular.ttf');
+copy('../../modified_third_party/ttf/verdana.ttf');
+copy('../../modified_third_party/ttf/楷体.ttf');
+copy('../../modified_third_party/devicecheck/lx-device-check.js');
+copy('../../modified_third_party/pdfjs/pdf.js');
+copy('../../modified_third_party/pdfjs/pdf-worker.js');
+copy('../web-ui/static_html/print-mail-preview.html');
+
+// shell.mkdir('-p', './public/app/static_html');
+copy('../web-ui/static_html/download_h5.html', 'app/static_html');
+
+copy('../web-ui/static_html');
+copy('../web-ui/api_dist', '', true);
+copy('../web-ui/static_js', '', true);
+copy('../web-ui/help');
+copy('../web-ui/images/' + (isEdm ? 'favicon_edm.png' : 'favicon.png'));
+// copy('../web-ui/apple-app-site-association');
+copyAppleSiteAssociation();
+copy('../web-ui/conf/robots.txt');
+copy('./../web/static', '', true);
+
+copy('./../v8-snapshot/src/snapshot-umd.js'); // snapshot umd file，用于纯web端加载
+copy('./../v8-snapshot/src/dev-script.js'); // dev时动态判断是否加载snapshot umd file
+copy('../web/umd-packages/global-script-2023-11-05.js');
+copy('../web/umd-packages/global-style-2023-12-21.css');
+copy('../web/umd-packages/ant-dark-2023-09-18.css');
+
+if (!profile.includes('edm')) {
+  if (profile === 'prod') {
+    copy('../web-preview/statics', '', true);
+  } else if (profile === 'test_prod') {
+    copy('../web-preview/statics', '', true);
+  } else if (profile === 'prev') {
+    copy('../web-preview/staticsprev', '', true);
+  } else {
+    copy('../web-preview/staticsdev', '', true);
+  }
+}
+
+copy('../api/langdist', 'lang', true);
+
+copy('../api/langdist', 'lang', true);
+if (stage === 'prod') {
+  const dist = path.resolve(process.cwd(), './public');
+  shell.rm('-rf', dist + '/*.js.map');
+}
+const verFile = path.resolve(process.cwd(), './public/ver.txt');
+shell.exec('echo `git rev-parse HEAD` > ' + verFile);

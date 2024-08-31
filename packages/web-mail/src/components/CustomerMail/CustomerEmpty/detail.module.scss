@@ -1,0 +1,29 @@
+.emptyWrap {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .emptyImage {
+    width: 456px;
+    height: 280px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .emptyTitle {
+    margin-top: 80px;
+    @include h4-med24();
+    color: $Text-5;
+  }
+  .emptyContent {
+    margin-top: 12px;
+    @include p1-3-reg14();
+    width: 284px;
+    text-align: center;
+    color: $Text-4;
+  }
+}

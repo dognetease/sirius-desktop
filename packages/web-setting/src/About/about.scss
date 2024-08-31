@@ -1,0 +1,122 @@
+@import '../../../web/src/styles/varies';
+.about-setting-container {
+  .config-title {
+    flex: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    box-shadow: inset 0px -0.5px 0px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+    padding: 0 16px;
+    font-weight: 500;
+    // background-color: #ffffff;
+    background-color: $white;
+
+    .config-title-icon {
+      @include sirius-no-drag;
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+      // background-image: url('../../../web/src/images/icons/close_icon.svg');
+      background-size: 100% 100%;
+    }
+  }
+  min-width: 400px;
+  min-height: 300px;
+  // background: #ffffff;
+  background-color: $white;
+  box-sizing: border-box;
+  border-radius: 6px;
+  position: relative;
+  .about-close {
+    cursor: pointer;
+    position: absolute;
+    right: 27px;
+    top: 27px;
+    width: 16px;
+    height: 16px;
+  }
+  .about-wrap {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-end; */
+    padding: 24px;
+    .logo {
+      margin-top: 56px;
+      width: 56px;
+      height: 56px;
+    }
+    .name {
+      margin-top: 24px;
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #000000;
+    }
+    .version {
+      @include p1-3-reg14();
+      /* identical to box height, or 157% */
+
+      // color: #262a33;
+      color: $font-color-2;
+      // text-align: center;
+    }
+    .protocol-wrap {
+      margin-top: 24px;
+      display: flex;
+      span.protocal-span {
+        // color: #262a33;
+        color: $font-color-2;
+        text-decoration-line: none;
+      }
+      > span {
+        // &:first-child {
+        //   margin-right: 32px;
+        // }
+        cursor: pointer;
+        @include p1-3-reg14();
+        /* identical to box height, or 133% */
+        text-align: center;
+        text-decoration-line: underline;
+        /* 主色/灵犀蓝 */
+        color: #386ee7;
+      }
+    }
+    .footer-wrap {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+      span {
+        font-family: PingFang SC;
+        color: #a8a8a8;
+        cursor: pointer;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+}
+
+.about-mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.no-mask {
+    top: $electron-title-bar-height;
+    background: #fff;
+    .about-container {
+      border-radius: 0 0 6px 6px;
+    }
+  }
+}

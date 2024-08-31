@@ -1,0 +1,118 @@
+@import './varies.scss';
+@import './lingxiToast.scss';
+
+/**
+* 全局样式，包括一些三方组件样式的覆盖
+*/
+
+.sirius-no-drag {
+  -webkit-app-region: no-drag;
+}
+
+.sirius-middle-grid {
+  @include sirius-middle-grid;
+}
+
+.web-layout-border {
+  border-top-left-radius: 8px;
+}
+
+.sirius-middle-grid-bg {
+  @include sirius-middle-grid-bg;
+}
+
+.sirius-bg-write {
+  background-color: #ffffff;
+}
+
+.sirius-loading {
+  background: #ffffff url('./../../../web/src/images/app_bg_loading.gif') no-repeat fixed center center;
+  background-size: 140px 140px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  @include sirius-drag;
+}
+
+.sirius-app-loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: #fff;
+  @include sirius-drag;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  &.show {
+    display: flex;
+  }
+  .sirius-app-loading-icon {
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+    background-image: url(./../../../web/src/images/icons/common/loading.svg);
+    display: inline-block;
+    animation: spin 1s linear infinite;
+  }
+  .sirius-app-loading-label {
+    margin-left: 8px;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  }
+}
+
+.sirius-app-loading-icon {
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+  background-image: url(./../../../web/src/images/icons/common/loading.svg);
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
+body {
+  font-family: 'PingFang SC', 'Source Han Sans', '思源黑体', 'Microsoft YaHei', '微软雅黑', 'Arial', 'sans-serif';
+}
+
+body {
+  background: transparent;
+  overflow: hidden;
+  &.loading {
+    @extend .sirius-loading;
+  }
+}
+
+.sirius-flex-ellipsis-text {
+  @include flex-ellipsis-text();
+}
+
+.sirius-spin {
+  animation: spin 1s linear infinite;
+}
+
+.sirius-scroll-hide {
+  @include sirius-scroll-hide;
+}
+
+.sirius-scroll {
+  @include sirius-scroll;
+}
+
+.sirius-ellipsis-text {
+  @include ellipsis-text();
+}
+
+a,
+a:hover {
+  color: $main-enhance-color;
+}

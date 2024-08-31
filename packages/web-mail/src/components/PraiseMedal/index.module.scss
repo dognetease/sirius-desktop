@@ -1,0 +1,67 @@
+.medalItemWrap {
+  text-align: center;
+  padding: 8px 0 20px;
+}
+
+.medalName {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  color: #262a33;
+  margin-bottom: 4px;
+}
+.medalName span {
+  position: relative;
+  margin-left: 12px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #7d8085;
+}
+
+.medalName span:before {
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  content: '';
+  width: 6px;
+  height: 1px;
+  background: #7d8085;
+  transform: rotate(45deg);
+}
+
+.medalName span:after {
+  position: absolute;
+  top: 50%;
+  left: -8px;
+  content: '';
+  width: 6px;
+  height: 1px;
+  background: #7d8085;
+  transform: rotate(-45deg);
+}
+
+.desc {
+  font-size: 12px;
+  line-height: 20px;
+  color: #7d8085;
+  margin: 0 45px;
+}
+
+.pendant {
+  width: 142px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px auto 0;
+  background: #fffffd;
+  border: 0.5px solid rgba(38, 42, 51, 0.16);
+  box-sizing: border-box;
+  border-radius: 4px;
+  color: #51555c;
+  cursor: pointer;
+}
+
+.pendantContact {
+  margin: 22px auto 0;
+}

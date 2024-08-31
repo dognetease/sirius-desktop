@@ -1,0 +1,34 @@
+.btn-wrapper {
+  background: rgba($Success-5-r, $Success-5-g, $Success-5-b, 0.08);
+  &:hover {
+    background: rgba($Success-5-r, $Success-5-g, $Success-5-b, 0.2);
+  }
+  &.isEdm {
+    margin-left: 8px;
+    margin-right: 0;
+    background-color: #fff;
+    flex: none;
+    height: 24px;
+    &:hover {
+      background-color: $Fill-4;
+    }
+  }
+  .icon,
+  .iconWrap {
+    &:global(.sirius-icon) {
+      width: 12px;
+      height: 12px;
+      line-height: 1;
+      color: $Fill-7;
+    }
+    width: 12px;
+    height: 12px;
+    line-height: 1;
+    color: $Fill-7;
+  }
+  .iconText {
+    margin-left: 4px;
+    @include c4-3-reg12;
+    color: $Text-5;
+  }
+}

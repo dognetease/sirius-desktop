@@ -1,0 +1,39 @@
+@import '@web-common/styles/variables.scss';
+
+.page-container {
+  padding: 20px 24px;
+}
+
+.page-title {
+  font-style: normal;
+  @include h3-med20();
+  margin-bottom: 20px;
+  color: #262a33;
+}
+
+.sale-stage-table {
+  :global(.ant-table-cell) {
+    color: #51555c;
+  }
+}
+
+.action-group {
+  float: right;
+  :global {
+    .ant-btn + .ant-btn {
+      margin-left: 6px;
+    }
+    .ant-btn-link {
+      border-color: transparent;
+      &:hover,
+      &:focus {
+        background: transparent;
+        color: #386ee7;
+      }
+    }
+  }
+}
+
+.btn + .btn {
+  margin-left: 16px;
+}

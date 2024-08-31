@@ -1,0 +1,63 @@
+.preventCreateNewSiteModal {
+  :global {
+    .ant-modal-content {
+      border-radius: 8px;
+    }
+    .ant-modal-body {
+      padding: 20px 20px 18px 20px;
+    }
+  }
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    .errorIcon {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    & > span {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      color: #272e47;
+      margin-left: 6px;
+    }
+  }
+  .info {
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #747a8c;
+    margin-top: 10px;
+    margin-left: 24px;
+  }
+  .buttonRow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 18px;
+    .freeConsuleButton {
+      padding: 5px 16px;
+      background: #4c6aff;
+      border-radius: 4px;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      text-align: center;
+      color: #ffffff;
+      border: 0px;
+      &:hover {
+        background: #7088ff;
+      }
+      &:active {
+        background: #445fe5;
+      }
+    }
+  }
+}

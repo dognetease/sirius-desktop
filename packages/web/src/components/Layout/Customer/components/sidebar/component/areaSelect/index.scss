@@ -1,0 +1,20 @@
+.ant-tree-switcher_close .ant-tree-switcher-icon svg,
+.ant-tree .ant-tree-node-content-wrapper {
+  color: $label-6_3;
+}
+
+.ant-tree .ant-tree-node-content-wrapper.ant-tree-node-selected {
+  background-color: $Fill-1;
+  color: $Avatar-6;
+}
+
+// 影响面比较大，暂时注释掉，如果产生问题，可以联系 @周昊 进行讨论
+//.ant-space,
+//.ant-space-item,
+//.ant-tree-treenode {
+//  width: 100%;
+//}
+
+.site-tree-search-value {
+  color: $Avatar-6;
+}

@@ -1,0 +1,52 @@
+.list {
+  .title {
+    display: flex;
+    align-items: center;
+    .bar {
+      width: 2px;
+      height: 16px;
+      background: #4c6aff;
+    }
+    .label {
+      margin-left: 4px;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      /* identical to box height, or 157% */
+
+      color: #1a2233;
+    }
+  }
+  .table {
+    // height: 1000px;
+    margin-top: 12px;
+    .table-wrap {
+      // background-color: red;
+      :global(.ant-table-thead) {
+        :global(.ant-table-cell) {
+          font-family: 'PingFang SC';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          /* identical to box height, or 157% */
+
+          /* 文字/Text-3次要信息 */
+
+          color: #747a8c;
+        }
+      }
+    }
+    .table-wrap-no-data {
+      // background-color: red;
+      :global(.ant-table-tbody) {
+        display: none;
+      }
+    }
+  }
+  .row {
+    background-color: #f8f9fa;
+  }
+}

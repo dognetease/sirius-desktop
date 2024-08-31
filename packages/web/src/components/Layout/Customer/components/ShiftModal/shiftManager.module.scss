@@ -1,0 +1,67 @@
+.clue-modal-wrap {
+  input::-webkit-input-placeholder {
+    font-size: 12px !important;
+    color: #a8aaad;
+    font-weight: normal;
+  }
+  :global(.ant-select-selection-placeholder) {
+    color: #a8aaad;
+    font-weight: normal;
+  }
+  :global(.ant-modal-header) {
+    border-bottom: none;
+    padding: 24px;
+  }
+  :global(.ant-modal-footer) {
+    padding: 24px;
+    border-top: none;
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+  }
+  .title {
+    height: 22px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #3c3f47;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    // width: 330px;
+  }
+  .content {
+    .inner {
+      :global(.ant-form-item) {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .selectItem {
+      margin-bottom: 12px !important;
+    }
+  }
+  :global(.ant-form-item) {
+    margin-bottom: 14px;
+    :global(.ant-form-item-label) {
+      font-size: 12px;
+      font-weight: normal;
+      color: #3c3f47;
+      color: red;
+      width: 66px;
+      font-size: 14px;
+    }
+  }
+  :global(.ant-modal-footer .ant-btn + .ant-btn) {
+    margin-left: 12px;
+  }
+  .dec {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #8a8d91;
+    padding-left: 92px;
+  }
+}

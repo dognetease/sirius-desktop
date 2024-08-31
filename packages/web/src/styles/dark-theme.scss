@@ -1,0 +1,755 @@
+:root .lx-theme-dark {
+  // 品牌色-主色
+  --Brand-7: #445fe5;
+  --Brand-7-r: 68;
+  --Brand-7-g: 95;
+  --Brand-7-b: 229;
+  --brand-7: #445fe5;
+  --brand-7-r: 68;
+  --brand-7-g: 95;
+  --brand-7-b: 229;
+
+  --Brand-6: #4c6aff;
+  --Brand-6-r: 76;
+  --Brand-6-g: 106;
+  --Brand-6-b: 255;
+  --brand-6: #4c6aff;
+  --brand-6-r: 76;
+  --brand-6-g: 106;
+  --brand-6-b: 255;
+
+  --Brand-6-bg: #282829;
+  --Brand-6-bg-r: 40;
+  --Brand-6-bg-g: 40;
+  --Brand-6-bg-b: 41;
+  --brand-6-bg: #282829;
+  --brand-6-bg-r: 40;
+  --brand-6-bg-g: 40;
+  --brand-6-bg-b: 41;
+
+  --Brand-5: #7088ff;
+  --Brand-5-r: 112;
+  --Brand-5-g: 136;
+  --Brand-5-b: 255;
+  --brand-5: #7088ff;
+  --brand-5-r: 112;
+  --brand-5-g: 136;
+  --brand-5-b: 255;
+
+  --Brand-4: #94a6ff;
+  --Brand-4-r: 148;
+  --Brand-4-g: 166;
+  --Brand-4-b: 255;
+  --brand-4: #94a6ff;
+  --brand-4-r: 148;
+  --brand-4-g: 166;
+  --brand-4-b: 255;
+
+  --Brand-3: #b7c3ff;
+  --Brand-3-r: 183;
+  --Brand-3-g: 195;
+  --Brand-3-b: 255;
+  --brand-3: #b7c3ff;
+  --brand-3-r: 183;
+  --brand-3-g: 195;
+  --brand-3-b: 255;
+
+  --Brand-2: #edf0ff;
+  --Brand-2-r: 237;
+  --Brand-2-g: 240;
+  --Brand-2-b: 255;
+  --brand-2: #edf0ff;
+  --brand-2-r: 237;
+  --brand-2-g: 240;
+  --brand-2-b: 255;
+
+  --Brand-2-bg: #3b3b3d;
+  --Brand-2-bg-r: 59;
+  --Brand-2-bg-g: 59;
+  --Brand-2-bg-b: 61;
+  --brand-2-bg: #3b3b3d;
+  --brand-2-bg-r: 59;
+  --brand-2-bg-g: 59;
+  --brand-2-bg-b: 61;
+
+  --Brand-1: #f2f5ff;
+  --Brand-1-r: 242;
+  --Brand-1-g: 245;
+  --Brand-1-b: 255;
+  --brand-1: #f2f5ff;
+  --brand-1-r: 242;
+  --brand-1-g: 245;
+  --brand-1-b: 255;
+
+  // 中性色-线条
+  --Line-3: #3b3b3d;
+  --Line-3-r: 59;
+  --Line-3-g: 59;
+  --Line-3-b: 61;
+  --line-3: #3b3b3d;
+  --line-3-r: 59;
+  --line-3-g: 59;
+  --line-3-b: 61;
+
+  --Line-2: #313233;
+  --Line-2-r: 49;
+  --Line-2-g: 50;
+  --Line-2-b: 51;
+  --line-2: #313233;
+  --line-2-r: 49;
+  --line-2-g: 50;
+  --line-2-b: 51;
+
+  --Line-1: #282829;
+  --Line-1-r: 40;
+  --Line-1-g: 40;
+  --Line-1-b: 41;
+  --line-1: #282829;
+  --line-1-r: 40;
+  --line-1-g: 40;
+  --line-1-b: 41;
+
+  // 中性色-填充色
+  --Fill-8: #e4e5eb;
+  --Fill-8-r: 228;
+  --Fill-8-g: 229;
+  --Fill-8-b: 235;
+  --fill-8: #e4e5eb;
+  --fill-8-r: 228;
+  --fill-8-g: 229;
+  --fill-8-b: 235;
+
+  --Fill-7: #bcbdc2;
+  --Fill-7-r: 188;
+  --Fill-7-g: 189;
+  --Fill-7-b: 194;
+  --fill-7: #bcbdc2;
+  --fill-7-r: 188;
+  --fill-7-g: 189;
+  --fill-7-b: 194;
+
+  --Fill-6: #949599;
+  --Fill-6-r: 148;
+  --Fill-6-g: 149;
+  --Fill-6-b: 153;
+  --fill-6: #949599;
+  --fill-6-r: 148;
+  --fill-6-g: 149;
+  --fill-6-b: 153;
+
+  --Fill-5: #4a4a4c;
+  --Fill-5-r: 74;
+  --Fill-5-g: 74;
+  --Fill-5-b: 76;
+  --fill-5: #4a4a4c;
+  --fill-5-r: 74;
+  --fill-5-g: 74;
+  --fill-5-b: 76;
+
+  --Fill-4: #3b3b3d;
+  --Fill-4-r: 59;
+  --Fill-4-g: 59;
+  --Fill-4-b: 61;
+  --fill-4: #3b3b3d;
+  --fill-4-r: 59;
+  --fill-4-g: 59;
+  --fill-4-b: 61;
+
+  --Fill-3: #313233;
+  --Fill-3-r: 49;
+  --Fill-3-g: 50;
+  --Fill-3-b: 51;
+  --fill-3: #313233;
+  --fill-3-r: 49;
+  --fill-3-g: 50;
+  --fill-3-b: 51;
+
+  --Fill-2_5: #282829;
+  --Fill-2_5-r: 40;
+  --Fill-2_5-g: 40;
+  --Fill-2_5-b: 41;
+  --fill-2_5: #282829;
+  --fill-2_5-r: 40;
+  --fill-2_5-g: 40;
+  --fill-2_5-b: 41;
+
+  --Fill-2: #232324;
+  --Fill-2-r: 35;
+  --Fill-2-g: 35;
+  --Fill-2-b: 36;
+  --fill-2: #232324;
+  --fill-2-r: 35;
+  --fill-2-g: 35;
+  --fill-2-b: 36;
+
+  --Fill-1: #1d1d1f;
+  --Fill-1-r: 29;
+  --Fill-1-g: 29;
+  --Fill-1-b: 31;
+  --fill-1: #1d1d1f;
+  --fill-1-r: 29;
+  --fill-1-g: 29;
+  --fill-1-b: 31;
+
+  // 中性色-字色
+  --Text-6: #f7f9ff;
+  --Text-6-r: 247;
+  --Text-6-g: 249;
+  --Text-6-b: 255;
+  --text-6: #f7f9ff;
+  --text-6-r: 247;
+  --text-6-g: 249;
+  --text-6-b: 255;
+
+  --Text-5: #eeeff5;
+  --Text-5-r: 238;
+  --Text-5-g: 239;
+  --Text-5-b: 245;
+  --text-5: #eeeff5;
+  --text-5-r: 238;
+  --text-5-g: 239;
+  --text-5-b: 245;
+
+  --Text-4: #d0d1d6;
+  --Text-4-r: 208;
+  --Text-4-g: 209;
+  --Text-4-b: 214;
+  --text-4: #d0d1d6;
+  --text-4-r: 208;
+  --text-4-g: 209;
+  --text-4-b: 214;
+
+  --Text-3: #a8a9ad;
+  --Text-3-r: 168;
+  --Text-3-g: 169;
+  --Text-3-b: 173;
+  --text-3: #a8a9ad;
+  --text-3-r: 168;
+  --text-3-g: 169;
+  --text-3-b: 173;
+
+  --Text-2: #7c7d80;
+  --Text-2-r: 124;
+  --Text-2-g: 125;
+  --Text-2-b: 128;
+  --text-2: #7c7d80;
+  --text-2-r: 124;
+  --text-2-g: 125;
+  --text-2-b: 128;
+
+  --Text-1: #636366;
+  --Text-1-r: 99;
+  --Text-1-g: 99;
+  --Text-1-b: 102;
+  --text-1: #636366;
+  --text-1-r: 99;
+  --text-1-g: 99;
+  --text-1-b: 102;
+
+  // 功能色-头像
+  --Avatar-1: #7c70ff;
+  --Avatar-1-r: 124;
+  --Avatar-1-g: 112;
+  --Avatar-1-b: 255;
+  --avatar-1: #7c70ff;
+  --avatar-1-r: 124;
+  --avatar-1-g: 112;
+  --avatar-1-b: 255;
+
+  --Avatar-2: #16d9b8;
+  --Avatar-2-r: 22;
+  --Avatar-2-g: 217;
+  --Avatar-2-b: 184;
+  --avatar-2: #16d9b8;
+  --avatar-2-r: 22;
+  --avatar-2-g: 217;
+  --avatar-2-b: 184;
+
+  --Avatar-3: #fe7266;
+  --Avatar-3-r: 254;
+  --Avatar-3-g: 114;
+  --Avatar-3-b: 102;
+  --avatar-3: #fe7266;
+  --avatar-3-r: 254;
+  --avatar-3-g: 114;
+  --avatar-3-b: 102;
+
+  --Avatar-4: #21ccdb;
+  --Avatar-4-r: 33;
+  --Avatar-4-g: 204;
+  --Avatar-4-b: 219;
+  --avatar-4: #21ccdb;
+  --avatar-4-r: 33;
+  --avatar-4-g: 204;
+  --avatar-4-b: 219;
+
+  --Avatar-5: #ac74f2;
+  --Avatar-5-r: 172;
+  --Avatar-5-g: 116;
+  --Avatar-5-b: 242;
+  --avatar-5: #ac74f2;
+  --avatar-5-r: 172;
+  --avatar-5-g: 116;
+  --avatar-5-b: 242;
+
+  --Avatar-6: #5e79ff;
+  --Avatar-6-r: 94;
+  --Avatar-6-g: 121;
+  --Avatar-6-b: 255;
+  --avatar-6: #5e79ff;
+  --avatar-6-r: 94;
+  --avatar-6-g: 121;
+  --avatar-6-b: 255;
+
+  // 功能色-链接
+  --Link-7: #569afa;
+  --Link-7-r: 86;
+  --Link-7-g: 154;
+  --Link-7-b: 250;
+  --link-7: #569afa;
+  --link-7-r: 86;
+  --link-7-g: 154;
+  --link-7-b: 250;
+
+  --Link-6: #438ffa;
+  --Link-6-r: 67;
+  --Link-6-g: 143;
+  --Link-6-b: 250;
+  --link-6: #438ffa;
+  --link-6-r: 67;
+  --link-6-g: 143;
+  --link-6-b: 250;
+
+  --Link-5: #3776d1;
+  --Link-5-r: 55;
+  --Link-5-g: 118;
+  --Link-5-b: 209;
+  --link-5: #3776d1;
+  --link-5-r: 55;
+  --link-5-g: 118;
+  --link-5-b: 209;
+
+  --Link-4: #2b5da9;
+  --Link-4-r: 43;
+  --Link-4-g: 93;
+  --Link-4-b: 169;
+  --link-4: #2b5da9;
+  --link-4-r: 43;
+  --link-4-g: 93;
+  --link-4-b: 169;
+
+  --Link-3: #1f4480;
+  --Link-3-r: 31;
+  --Link-3-g: 68;
+  --Link-3-b: 128;
+  --link-3: #1f4480;
+  --link-3-r: 31;
+  --link-3-g: 68;
+  --link-3-b: 128;
+
+  --Link-2: #163263;
+  --Link-2-r: 22;
+  --Link-2-g: 50;
+  --Link-2-b: 99;
+  --link-2: #163263;
+  --link-2-r: 22;
+  --link-2-g: 50;
+  --link-2-b: 99;
+
+  --Link-1: #07122f;
+  --Link-1-r: 7;
+  --Link-1-g: 18;
+  --Link-1-b: 47;
+  --link-1: #07122f;
+  --link-1-r: 7;
+  --link-1-g: 18;
+  --link-1-b: 47;
+
+  // 功能色-成功
+  --Success-7: #31da94;
+  --Success-7-r: 49;
+  --Success-7-g: 218;
+  --Success-7-b: 148;
+  --success-7: #31da94;
+  --success-7-r: 49;
+  --success-7-g: 218;
+  --success-7-b: 148;
+
+  --Success-6: #22e091;
+  --Success-6-r: 34;
+  --Success-6-g: 224;
+  --Success-6-b: 145;
+  --success-6: #22e091;
+  --success-6-r: 34;
+  --success-6-g: 224;
+  --success-6-b: 145;
+
+  --Success-5: #1fcc84;
+  --Success-5-r: 31;
+  --Success-5-g: 204;
+  --Success-5-b: 132;
+  --success-5: #1fcc84;
+  --success-5-r: 31;
+  --success-5-g: 204;
+  --success-5-b: 132;
+
+  --Success-4: #19a46a;
+  --Success-4-r: 25;
+  --Success-4-g: 164;
+  --Success-4-b: 106;
+  --success-4: #19a46a;
+  --success-4-r: 25;
+  --success-4-g: 164;
+  --success-4-b: 106;
+
+  --Success-3: #137b50;
+  --Success-3-r: 19;
+  --Success-3-g: 123;
+  --Success-3-b: 80;
+  --success-3: #137b50;
+  --success-3-r: 19;
+  --success-3-g: 123;
+  --success-3-b: 80;
+
+  --Success-2: #0d5336;
+  --Success-2-r: 13;
+  --Success-2-g: 83;
+  --Success-2-b: 54;
+  --success-2: #0d5336;
+  --success-2-r: 13;
+  --success-2-g: 83;
+  --success-2-b: 54;
+
+  --Success-1: #072d1d;
+  --Success-1-r: 7;
+  --Success-1-g: 45;
+  --Success-1-b: 29;
+  --success-1: #072d1d;
+  --success-1-r: 7;
+  --success-1-g: 45;
+  --success-1-b: 29;
+
+  // 功能色-警告/提醒
+  --Warning-7: #ffc575;
+  --Warning-7-r: 255;
+  --Warning-7-g: 197;
+  --Warning-7-b: 117;
+  --warning-7: #ffc575;
+  --warning-7-r: 255;
+  --warning-7-g: 197;
+  --warning-7-b: 117;
+
+  --Warning-6: #ffbf66;
+  --Warning-6-r: 255;
+  --Warning-6-g: 191;
+  --Warning-6-b: 102;
+  --warning-6: #ffbf66;
+  --warning-6-r: 255;
+  --warning-6-g: 191;
+  --warning-6-b: 102;
+
+  --Warning-5: #e8ae5d;
+  --Warning-5-r: 232;
+  --Warning-5-g: 174;
+  --Warning-5-b: 93;
+  --warning-5: #e8ae5d;
+  --warning-5-r: 232;
+  --warning-5-g: 174;
+  --warning-5-b: 93;
+
+  --Warning-4: #ba8b4a;
+  --Warning-4-r: 186;
+  --Warning-4-g: 139;
+  --Warning-4-b: 74;
+  --warning-4: #ba8b4a;
+  --warning-4-r: 186;
+  --warning-4-g: 139;
+  --warning-4-b: 74;
+
+  --Warning-3: #8c6938;
+  --Warning-3-r: 140;
+  --Warning-3-g: 105;
+  --Warning-3-b: 56;
+  --warning-3: #8c6938;
+  --warning-3-r: 140;
+  --warning-3-g: 105;
+  --warning-3-b: 56;
+
+  --Warning-2: #5e4726;
+  --Warning-2-r: 94;
+  --Warning-2-g: 71;
+  --Warning-2-b: 38;
+  --warning-2: #5e4726;
+  --warning-2-r: 94;
+  --warning-2-g: 71;
+  --warning-2-b: 38;
+
+  --Warning-1: #332614;
+  --Warning-1-r: 51;
+  --Warning-1-g: 38;
+  --Warning-1-b: 20;
+  --warning-1: #332614;
+  --warning-1-r: 51;
+  --warning-1-g: 38;
+  --warning-1-b: 20;
+
+  // 功能色-错误
+  --Error-7: #fe766a;
+  --Error-7-r: 254;
+  --Error-7-g: 118;
+  --Error-7-b: 106;
+  --error-7: #fe766a;
+  --error-7-r: 254;
+  --error-7-g: 118;
+  --error-7-b: 106;
+
+  --Error-6: #fe7266;
+  --Error-6-r: 254;
+  --Error-6-g: 114;
+  --Error-6-b: 102;
+  --error-6: #fe7266;
+  --error-6-r: 254;
+  --error-6-g: 114;
+  --error-6-b: 102;
+
+  --Error-5: #e16b60;
+  --Error-5-r: 225;
+  --Error-5-g: 107;
+  --Error-5-b: 96;
+  --error-5: #e16b60;
+  --error-5-r: 225;
+  --error-5-g: 107;
+  --error-5-b: 96;
+
+  --Error-4: #774641;
+  --Error-4-r: 119;
+  --Error-4-g: 70;
+  --Error-4-b: 65;
+  --error-4: #774641;
+  --error-4-r: 119;
+  --error-4-g: 70;
+  --error-4-b: 65;
+
+  --Error-2: #4a302d;
+  --Error-2-r: 74;
+  --Error-2-g: 48;
+  --Error-2-b: 45;
+  --error-2: #4a302d;
+  --error-2-r: 74;
+  --error-2-g: 48;
+  --error-2-b: 45;
+
+  --Error-1: #402b29;
+  --Error-1-r: 64;
+  --Error-1-g: 43;
+  --Error-1-b: 41;
+  --error-1: #402b29;
+  --error-1-r: 64;
+  --error-1-g: 43;
+  --error-1-b: 41;
+
+  // 功能色-标签
+  --label-1_3: #66a8ff;
+  --label-1_3-r: 102;
+  --label-1_3-g: 168;
+  --label-1_3-b: 255;
+  --label-1_2: #4979b8;
+  --label-1_2-r: 73;
+  --label-1_2-g: 121;
+  --label-1_2-b: 184;
+  --label-1_1: #283242;
+  --label-1_1-r: 40;
+  --label-1_1-g: 50;
+  --label-1_1-b: 66;
+  --label-2_3: #31c4ac;
+  --label-2_3-r: 49;
+  --label-2_3-g: 196;
+  --label-2_3-b: 172;
+  --label-2_2: #0c7765;
+  --label-2_2-r: 12;
+  --label-2_2-g: 119;
+  --label-2_2-b: 101;
+  --label-2_1: #1d322f;
+  --label-2_1-r: 29;
+  --label-2_1-g: 50;
+  --label-2_1-b: 47;
+  --label-3_3: #bf8cff;
+  --label-3_3-r: 191;
+  --label-3_3-g: 140;
+  --label-3_3-b: 255;
+  --label-3_2: #6e4a9b;
+  --label-3_2-r: 110;
+  --label-3_2-g: 74;
+  --label-3_2-b: 155;
+  --label-3_1: #312d37;
+  --label-3_1-r: 49;
+  --label-3_1-g: 45;
+  --label-3_1-b: 55;
+  --label-4_3: #e5b673;
+  --label-4_3-r: 229;
+  --label-4_3-g: 182;
+  --label-4_3-b: 115;
+  --label-4_2: #8c6938;
+  --label-4_2-r: 140;
+  --label-4_2-g: 105;
+  --label-4_2-b: 56;
+  --label-4_1: #362f28;
+  --label-4_1-r: 54;
+  --label-4_1-g: 47;
+  --label-4_1-b: 40;
+  --label-5_3: #e57c73;
+  --label-5_3-r: 229;
+  --label-5_3-g: 124;
+  --label-5_3-b: 115;
+  --label-5_2: #8c3f38;
+  --label-5_2-r: 140;
+  --label-5_2-g: 63;
+  --label-5_2-b: 56;
+  --label-5_1: #362828;
+  --label-5_1-r: 54;
+  --label-5_1-g: 40;
+  --label-5_1-b: 40;
+  --label-6_3: #d0d1d6;
+  --label-6_3-r: 208;
+  --label-6_3-g: 209;
+  --label-6_3-b: 214;
+  --label-6_2: #636366;
+  --label-6_2-r: 99;
+  --label-6_2-g: 99;
+  --label-6_2-b: 102;
+  --label-6_1: #313233;
+  --label-6_1-r: 49;
+  --label-6_1-g: 50;
+  --label-6_1-b: 51;
+  // 功能色-日历
+  --calendar-6: #78b0ff;
+  --calendar-6-r: 120;
+  --calendar-6-g: 176;
+  --calendar-6-b: 255;
+  --calendar-5: #7cceb1;
+  --calendar-5-r: 124;
+  --calendar-5-g: 206;
+  --calendar-5-b: 177;
+  --calendar-4: #b29bf2;
+  --calendar-4-r: 178;
+  --calendar-4-g: 155;
+  --calendar-4-b: 242;
+  --calendar-3: #f7b088;
+  --calendar-3-r: 247;
+  --calendar-3-g: 176;
+  --calendar-3-b: 136;
+  --calendar-2: #f78888;
+  --calendar-2-r: 247;
+  --calendar-2-g: 136;
+  --calendar-2-b: 136;
+  --calendar-1: #b8b8b8;
+  --calendar-1-r: 184;
+  --calendar-1-g: 184;
+  --calendar-1-b: 184;
+  // 白色
+  --white: #232324;
+  --white-r: 35;
+  --white-g: 35;
+  --white-b: 36;
+  --white-bg: #1d1d1f;
+  --white-hover-bg: #313233;
+  --white-tooltip: #313233;
+  --white-transparent: #ffffff;
+  --white-wrap: #282829;
+  --white-modal: #1d1d1f;
+  --white-header-bg: #313233;
+  // 黑色
+  --font-color: #eeeff5;
+  --font-color-1: #eeeff5;
+  --font-color-2: #eeeff5;
+  --font-color-2-r: 238;
+  --font-color-2-g: 239;
+  --font-color-2-b: 245;
+  --font-color-3: #eeeff5;
+  --font-color-3-r: 238;
+  --font-color-3-g: 239;
+  --font-color-3-b: 245;
+  --sidebar-hover: #313233;
+  --sidebar-hover-r: 49;
+  --sidebar-hover-g: 50;
+  --sidebar-hover-b: 51;
+  // 主题蓝
+  --brand-blue: #282829;
+  --brand-blue-1: #3b3b3d;
+  --brand-blue-2: #438ffa;
+  --brand-bg: #313233;
+  --brand-bg-r: 49;
+  --brand-bg-g: 50;
+  --brand-bg-b: 51;
+  --tree-hover: #3b3b3d;
+  --tree-hover-r: 59;
+  --tree-hover-g: 59;
+  --tree-hover-b: 61;
+
+  // 图标，图片
+  --sidebar-mailbox: url(../images/icons/sidebar/mailBox.svg);
+  --sidebar-mailbox-enhance: url(../images/icons/sidebar/mailBox_dark_selected.svg);
+  --sidebar-schedule: url(../images/icons/sidebar/catalog.svg);
+  --sidebar-schedule-enhance: url(../images/icons/sidebar/catalog_dark_selected.svg);
+  --sidebar-contact: url(../images/icons/sidebar/contact.svg);
+  --sidebar-contact-enhance: url(../images/icons/sidebar/contact_dark_selected.svg);
+  --sidebar-im: url(../images/icons/sidebar/message.svg);
+  --sidebar-im-enhance: url(../images/icons/sidebar/message_dark_selected.svg);
+  --sidebar-disk: url(../images/icons/sidebar/disk.svg);
+  --sidebar-disk-enhance: url(../images/icons/sidebar/disk_dark_selected.svg);
+  --sidebar-apps: url(../images/icons/sidebar/apps.svg);
+  --sidebar-apps-enhance: url(../images/icons/sidebar/apps_dark_selected.svg);
+  --mail-refresh: url(../images/icons/common/sync_dark.svg);
+  --add-member: url(../images/icons/common/addMember_dark.svg);
+  --sidebar-jump-out-trade-acquisition: url(../images/icons/sidebar/jumpOut/jump_out_trade_acqusition.svg);
+  --sidebar-jump-out-trade-acquisition-enhance: url(../images/icons/sidebar/jumpOut/jump_out_trade_acqusition_enhance_dark.svg);
+  --sidebar-jump-out-mail-marketing: url(../images/icons/sidebar/jumpOut/jump_out_mail_marketing.svg);
+  --sidebar-jump-out-mail-marketing-enhance: url(../images/icons/sidebar/jumpOut/jump_out_mail_marketing_enhance_dark.svg);
+  --idebar-jump-out-waimao-website: url(../images/icons/sidebar/jumpOut/jump_out_waimao_website.svg);
+  --idebar-jump-out-waimao-website-enhance: url(../images/icons/sidebar/jumpOut/jump_out_waimao_website_enhance_dark.svg);
+  --sidebar-jump-out-big-data: url(../images/icons/sidebar/jumpOut/jump_out_big_data.svg);
+  --sidebar-jump-out-big-data-enhance: url(../images/icons/sidebar/jumpOut/jump_out_big_data_enhance_dark.svg);
+  --sidebar-jump-out-media-marketing: url(../images/icons/sidebar/jumpOut/jump_out_media_marketing.svg);
+  --sidebar-jump-out-media-marketing-enhance: url(../images/icons/sidebar/jumpOut/jump_out_media_marketing_enhance_dark.svg);
+  --logo-qiye: url(../images/icons/login/qiye_mail_logo_dark.png);
+  --logo-qq: url(../images/icons/login/qq_mail_logo_dark.png);
+  --logo-163: url(../images/icons/login/163_mail_logo_dark.png);
+  --logo-other: url(../images/icons/login/other_mail_logo_dark.png);
+  --logo-gmail: url(../images/icons/login/gmail_logo_dark.png) !important;
+  --logo-outlook: url(../images/icons/login/outlook_mail_logo_dark.png) !important;
+  --logo-microsoft: url(../images/icons/login/microsoft_365_mail_logo_dark.png) !important;
+  --logo-microsoft-global: url(../images/icons/login/microsoft_mail_logo_dark.png) !important;
+  --logo-tencent-qiye: url(../images/icons/login/tencent_qiye_mail_logo_dark.png) !important;
+  --mail-mode1: url(../images/mail/modeNormal_dark.png);
+  --mail-mode2: url(../images/mail/modeMerge_dark.png);
+  --mail-layout1: url(../images/mail/fullColumn_dark.png);
+  --mail-layout2: url(../images/mail/zuoyoufenlan_dark.png);
+  --mail-layout3: url(../images/mail/UpDownSettingIcon_dark.png);
+  --mail-tightness1: url(../images/mail/mailTightness1_dark.png);
+  --mail-tightness2: url(../images/mail/mailTightness2_dark.png);
+  --mail-tightness3: url(../images/mail/mailTightness3_dark.png);
+  --arrow-left: url(../images/icons/calendarDetail/arrow-left-dark.png);
+  --arrow-right: url(../images/icons/calendarDetail/arrow-right-dark.png);
+  --fc-settings-button: url(../images/icons/calendarDetail/catalog_setting_dark.svg);
+  // --banner-bg: url();
+  --close-left: url(../images/icons/collapsibleList/test_left_dark.svg);
+  --close-right: url(../images/icons/collapsibleList/test_right_dark.svg);
+  --im-unread: url(../images/icons/im_unread_dark.svg);
+  // 特殊模块
+  --sidebar-label-focus-color: #5c77ff;
+  --titlebar-bg: #282829;
+  --gray-light-bg: #1d1d1f;
+  --brand-light-bg: rgba(183, 195, 255, 80%);
+  --brand-bg: #3c4fac;
+  --gray-bg: #3b3b3d;
+  --im-chat: #313233;
+  --im-my-chat: #2b3a83;
+  --scrollbar-thumb: rgb(191, 191, 203);
+  --scrollbar-thumb-hover: rgb(191, 191, 203);
+  // 线条rgb(3, 13, 62)
+  --border-line-2-dark: -1px 0px 0px 0px #313233 inset;
+  // 设置列表密度背景图
+  --mail-tightness-shadow: none;
+  // 图片 filter
+  --img-invert: invert(100) hue-rotate(180deg);
+}

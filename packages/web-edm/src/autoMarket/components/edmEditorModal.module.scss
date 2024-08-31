@@ -1,0 +1,121 @@
+@import 'src/styles/varies';
+
+.edm-editor-modal {
+  :global(.tox .tox-toolbar--scrolling) {
+    @include sirius-scroll;
+    overflow-x: overlay;
+  }
+
+  :global(.ant-modal-body) {
+    padding: 0;
+    height: 500px;
+  }
+
+  :global(.tox-edit-area) {
+    margin-top: 10px !important;
+  }
+}
+
+.edm-editor-modal2 {
+  :global(.ant-modal-content) {
+    border-radius: 0;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 60px;
+    padding: 43px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    :global(.ant-modal-close) {
+      // display: none;
+      top: 43px;
+    }
+    :global(.ant-modal-header) {
+    }
+    :global(.ant-modal-body) {
+      flex: 1;
+      height: 0;
+    }
+    :global(.ant-modal-footer) {
+      flex-shrink: 0;
+    }
+  }
+}
+.edm-editor-modal-web {
+  :global(.ant-modal-content) {
+    left: 0;
+    top: 54px;
+  }
+}
+
+.footer {
+  display: flex;
+
+  :global(.ant-btn:not(.ant-btn-primary)) {
+    border-color: #f0f3f5;
+    background-color: #f0f3f5;
+  }
+
+  :global(.ant-btn-primary) {
+    background-color: #4c6aff;
+  }
+}
+
+.footer-content {
+  flex-grow: 1;
+  text-align: left;
+
+  .unsubscribe {
+    color: #7d8085;
+    font-size: 12px;
+    line-height: 32px;
+  }
+}
+
+.footer-buttons {
+  flex-shrink: 0;
+
+  :global(.ant-btn) {
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  height: 36px;
+  justify-content: space-between;
+  padding: 0 10px 0 14px;
+  align-items: center;
+  box-shadow: inset 0px -0.5px 0px #e5e5e7;
+  flex-shrink: 0;
+  &-title {
+    font-style: normal;
+    // font-weight: 500;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    /* identical to box height, or 100% */
+
+    color: #262a33;
+  }
+  &-close {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.unsubscribe-popover :global(.ant-popover-inner-content) {
+  padding: 8px 12px !important;
+}

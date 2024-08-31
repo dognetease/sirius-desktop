@@ -1,0 +1,29 @@
+.breadcrumb {
+  color: #747a8c;
+
+  :global {
+    .ant-breadcrumb-link {
+      cursor: pointer;
+      padding: 0 4px;
+      font-size: 14px;
+      line-height: 22px;
+      border-radius: 2px;
+      &:hover {
+        background: #e1e3e8;
+        color: #4c6aff;
+      }
+    }
+    .ant-breadcrumb-separator {
+      margin: 0;
+    }
+  }
+
+  & > span:last-child {
+    color: #272e47;
+    font-weight: 500;
+    pointer-events: none;
+    :global(.ant-breadcrumb-link) {
+      cursor: default;
+    }
+  }
+}

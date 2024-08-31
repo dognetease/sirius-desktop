@@ -1,0 +1,78 @@
+.thumb-up-modal {
+  .ant-modal-content {
+    height: 400px;
+    .ant-modal-header {
+      padding: 20px;
+      border-bottom: none;
+      .ant-modal-title {
+        font-size: 16px;
+        height: 16px;
+        line-height: 16px;
+        font-weight: 500;
+        color: #000000;
+      }
+    }
+    .ant-modal-close-icon {
+      // color: rgba($color: $Text-5, $alpha: 1);
+      color: $Text-5;
+    }
+  }
+  .ant-modal-body {
+    padding: 0px 0px 0px 20px;
+    height: 344px;
+    // overflow-y: auto;
+    .thumb-item {
+      display: flex;
+      align-items: center;
+      // margin: 10px 0px;
+      .thumb-item-div {
+        height: 50px;
+        line-height: 50px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        .thumb-item-name {
+          margin: 8px 0px 4px 0px;
+          font-size: 14px;
+          line-height: 14px;
+          height: 14px;
+          font-weight: 500;
+          color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        .thumb-item-email {
+          font-size: 12px;
+          line-height: 16px;
+          height: 16px;
+          color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+  // .ant-modal-body::-webkit-scrollbar {
+  //     display: none;
+  // }
+  /* 设置滚动条的样式 */
+  .thumb-up-container::-webkit-scrollbar {
+    width: 6px;
+    background: #fff;
+  }
+  /* 滚动槽 */
+  .thumb-up-container::-webkit-scrollbar-track {
+    border-radius: 6px;
+  }
+  /* 滚动条滑块 */
+  .thumb-up-container::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.3);
+    padding: 4px;
+  }
+}

@@ -1,0 +1,21 @@
+.source-detail {
+  padding: 24px;
+  height: 100%;
+  background-color: #f9fafb;
+  overflow-y: auto;
+
+  .breadcrumb {
+    margin-top: 9px;
+    margin-bottom: 9px;
+
+    &-link {
+      cursor: pointer;
+    }
+  }
+
+  .title {
+    color: #232d47;
+    @include h4-med24();
+    margin-bottom: 24px;
+  }
+}

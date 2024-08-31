@@ -1,0 +1,48 @@
+.timeZoneWorldCont {
+  width: 50%;
+  min-width: 251px;
+  height: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  .title {
+    @include h1-4-med16();
+    color: #262a33;
+  }
+  .timeZoneSelect {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 12px;
+    margin-top: 5px;
+    .dropDownLink {
+      @include c4-3-reg12();
+      color: #262a33;
+    }
+  }
+  .timeCountDownCont {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .hhmmss {
+      font-family: 'LX-numbers';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 32px;
+      color: #262a33;
+      margin-top: 5px;
+    }
+    .monthDay {
+      @include c4-1-reg12();
+      color: #262a33;
+      margin-top: 15px;
+    }
+  }
+}

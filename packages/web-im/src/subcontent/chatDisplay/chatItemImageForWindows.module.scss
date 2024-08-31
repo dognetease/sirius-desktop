@@ -1,0 +1,22 @@
+@import '../../../../web/src/styles/varies';
+body[data-previewchatimg] {
+  :global(.ant-image-preview-operations-operation):first-child {
+    text-align: right;
+    flex: 1;
+    order: 0;
+  }
+  :global(.ant-image-preview-operations-operation):nth-child(5) {
+    flex: 1;
+    text-align: right;
+    justify-self: flex-end;
+  }
+  :global(.ant-image-preview-operations-operation):nth-child(2) {
+    flex: initial !important;
+  }
+}
+
+body[data-previewchatimg='windows'] {
+  :global(.ant-image-preview-wrap) {
+    top: $electron-title-bar-height !important;
+  }
+}

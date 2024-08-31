@@ -1,0 +1,43 @@
+// 邮件讨论
+.mailDiscussArea {
+  // min-width: 94px;
+  // white-space: nowrap;
+  // height: 28px;
+  // padding: 0 2px;
+  // border-radius: 999px;
+  // background: $Fill-2;
+  // font-weight: 400;
+  // font-size: 12px;
+  // line-height: 14px;
+  // color: #262A33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background: $white;
+  border-radius: 14px;
+  // box-sizing: border-box;
+  &:hover {
+    // background: $Brand-2;
+    background: $white-bg;
+  }
+  // &.hasDiscussGroup {
+  //     background: $Fill-2;
+  //     &:hover {
+  //         background: $Brand-2;
+  //     }
+  // }
+  .discussIcon {
+    margin-right: 8px;
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    // background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  :global(.ant-popover) {
+    padding-top: 0 !important;
+  }
+}

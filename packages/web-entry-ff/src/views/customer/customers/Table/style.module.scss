@@ -1,0 +1,66 @@
+.linkBtn {
+  cursor: pointer;
+  color: #4c6aff;
+  transition: all 0.2s;
+  user-select: none;
+
+  &:hover {
+    color: #4c6aff;
+  }
+}
+.min-width-cell {
+  min-width: 110px;
+}
+
+.max-width-cell {
+  max-width: 260px;
+}
+
+.tag {
+  display: inline-block;
+  border-radius: 2px;
+  background: #ffe5e2;
+  color: #cb493d;
+  font-size: 12px;
+  padding: 2px 6px;
+  margin-right: 4px;
+}
+
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.wrap {
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: initial;
+}
+
+.companyName {
+  width: 220px;
+}
+
+.searchData {
+  display: flex;
+  .linkBtn {
+    // flex: 1;
+    min-width: 0;
+  }
+}
+
+.email,
+.phoneNumber {
+  // max-width: 120px;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: initial;
+}
+
+.task {
+  max-width: 180px;
+  word-wrap: break-word;
+  word-break: break-all;
+  white-space: initial;
+}

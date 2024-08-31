@@ -1,0 +1,14 @@
+.express-img {
+  white-space: nowrap;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+  span {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    display: inline-block;
+    overflow: hidden;
+  }
+}

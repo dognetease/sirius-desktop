@@ -1,0 +1,40 @@
+@import '@web-common/styles/variables.scss';
+
+.page-container {
+  padding: 20px 24px;
+  height: 100%;
+  overflow: hidden auto;
+}
+
+.page-title {
+  @include h3-med20;
+
+  // font-family: 'PingFang SC';
+  // font-style: normal;
+  // font-weight: 500;
+  // font-size: 20px;
+  // line-height: 28px;
+  color: #262a33;
+}
+
+.subtitle {
+  margin: 12px 0 20px;
+  @include font-size(400, 12px, 20px);
+
+  // font-weight: 400;
+  // font-size: 12px;
+  // line-height: 20px;
+  color: $label-6_3;
+}
+
+.title-right {
+  float: right;
+  @include font-size(400, 12px, 28px);
+
+  // font-family: 'PingFang SC';
+  // font-style: normal;
+  // font-weight: 400;
+  // font-size: 12px;
+  // line-height: 28px;
+  color: $label-6_3;
+}

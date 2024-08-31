@@ -1,0 +1,106 @@
+@import '../../../../web/src/styles/varies';
+.bottomline-mark,
+.unread-msgline-mark {
+  background: transparent;
+  width: 100%;
+  height: 1px;
+  overflow: hidden;
+  font-size: 0;
+}
+
+.bottomline-mark {
+  margin: 2px 0 8px;
+}
+
+.current-msg-line-mark {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  // z-index: -1;
+  border-radius: 2px;
+  &.highlight {
+    animation-name: historyHighlight;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-duration: 2.5s;
+  }
+}
+
+.msg-unread-markline {
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 13px;
+  color: $main-enhance-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 0 10px;
+  white-space: nowrap;
+  &::before,
+  &::after {
+    content: '';
+    margin: 0 8px;
+    width: 432px;
+    height: 1px;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+  }
+  &::before {
+    transform: scale(0.5) translateX(50%);
+    background: linear-gradient(to left, $main-enhance-color, transparent);
+  }
+  &::after {
+    transform: scale(0.5) translateX(-50%);
+    background: linear-gradient(to right, $main-enhance-color, transparent);
+  }
+}
+
+.msg-anchor-point {
+  position: absolute;
+  height: 32px;
+  bottom: 24px;
+  right: 0;
+  padding: 0 8px 0 20px;
+  box-shadow: 0px 2px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+  line-height: 32px;
+  border-radius: 32px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  font-size: 12px;
+  color: $main-enhance-color;
+  // background: #ffffff;
+  background-color: $white;
+  cursor: pointer;
+  display: none;
+  z-index: 5;
+  &.visible {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  &:global(.arrow-up) {
+    bottom: initial;
+    top: 24px;
+  }
+  .text {
+    padding-left: 4px;
+  }
+}
+
+@keyframes historyHighlight {
+  0% {
+    background-color: transparent;
+  }
+  10% {
+    background-color: $Link-1;
+  }
+  90% {
+    background-color: $Link-1;
+  }
+  100% {
+    background-color: transparent;
+  }
+}

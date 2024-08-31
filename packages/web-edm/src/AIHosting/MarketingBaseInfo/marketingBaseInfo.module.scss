@@ -1,0 +1,227 @@
+.marketing-base-info {
+  padding: 16px;
+  :global(.ant-form) {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+  }
+  :global(.ant-form-item) {
+    margin-bottom: 16px;
+  }
+  :global(.sirius-select-small) {
+    height: auto;
+  }
+  :global(.sirius-select-ui-small) {
+    height: auto;
+  }
+  .auto-image {
+    position: relative;
+    width: 100%;
+    height: 140px;
+    display: block;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    background: linear-gradient(271deg, #d6e1ff 2.95%, #edf0ff 96.56%);
+  }
+  .auto-image-left {
+    position: absolute;
+    left: 35px;
+    top: 36px;
+    z-index: 1;
+  }
+  .auto-image-icon1 {
+    position: absolute;
+    left: 20px;
+    top: 92px;
+  }
+  .auto-image-icon2 {
+    position: absolute;
+    left: 350px;
+    top: 66px;
+  }
+  .auto-image-title {
+    color: #2b449c;
+    @include h5-med28;
+  }
+  .auto-image-desc {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  .auto-image-item {
+    color: #6d86d1;
+    @include c4-4-med12;
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: 0.5px solid #fff;
+    background: rgba(255, 255, 255, 0.5);
+  }
+  .auto-image-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 448px;
+    height: 100%;
+  }
+  .base-info-item .base-info-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 88px;
+    border-radius: 4px;
+    padding: 16px 16px 0;
+    background-color: $Fill-1;
+  }
+  .base-info-title {
+    margin-bottom: 8px;
+    color: $Text-5;
+    @include p1-4-med14;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .base-info-desc {
+    padding-left: 4px;
+    color: $Text-3;
+    @include c4-1-reg12;
+  }
+  .fill-help {
+    color: $Brand-6;
+    @include p1-3-reg14;
+    cursor: pointer;
+  }
+  .base-info-popover {
+    padding: 16px;
+    @include c4-1-reg12;
+    width: 322px;
+    .popover-image {
+      width: 100%;
+      height: 170px;
+      display: block;
+    }
+    .popover-desc {
+      color: $Text-5;
+      @include p1-4-med14;
+      margin: 5px 0 0;
+    }
+    .popover-list {
+      margin: 8px 0 0;
+      @include c4-3-reg12;
+    }
+    .popover-item {
+      margin: 0;
+      display: flex;
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        border-radius: 100%;
+        background-color: #000;
+        margin: 7px 6px 0;
+        flex: none;
+      }
+      .popover-item-desc {
+        color: $Text-2;
+      }
+    }
+  }
+  .base-info-tip {
+    color: $Text-2;
+    @include c4-3-reg12;
+    margin: -10px 0 16px;
+  }
+  .base-info-label {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 4px;
+    cursor: pointer;
+  }
+  .base-info-label-desc {
+    @include c4-3-reg12;
+    color: $Text-3;
+  }
+  .form-left,
+  .form-right {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 1;
+  }
+  .form-sender {
+    :global(.ant-form-item-label:first-child label:before) {
+      display: inline-block;
+      margin-right: 4px;
+      color: #ff4d4f;
+      font-size: 14px;
+      content: '*';
+    }
+  }
+  .placeholder-light {
+    width: 100%;
+    :global(.sirius-cascader-select-selection-placeholder) {
+      color: $Text-5;
+    }
+  }
+  .base-info-input-count {
+    color: $Text-2;
+    @include c4-1-reg12;
+  }
+}
+.time-pick {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  .split-line {
+    background: var(--fill-6, #8d92a1);
+    height: 1px;
+    width: 16px;
+  }
+}
+.split-line {
+  background: var(--fill-6, #8d92a1);
+  height: 1px;
+  width: 16px;
+}
+.send-limit {
+  display: flex;
+  align-items: center;
+  .number {
+    margin-left: 8px;
+    flex-shrink: 0;
+    @include c4-3-reg12;
+    color: $Text-3;
+  }
+}
+.priority-list {
+  border: 1px solid $Line-3;
+  background: #fff;
+  border-radius: 4px;
+  display: flex;
+  height: 32px;
+  align-items: center;
+  padding: 0px 6px;
+}
+.priority-item {
+  display: flex;
+  @include c4-3-reg12;
+  padding: 2px 12px;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 16px;
+  background: var(--fill-2, #f6f7fa);
+
+  gap: 8px;
+  &:hover,
+  &:active {
+    border: 1px solid var(--brand-6, #4c6aff);
+    background: var(--brand-2, #eff2ff);
+  }
+}
+
+.select {
+  width: 100%;
+}

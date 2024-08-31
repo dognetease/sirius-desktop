@@ -1,0 +1,76 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.container {
+  .title {
+    color: $Text-5;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .intro {
+    color: $Text-3;
+    font-size: 12px;
+  }
+
+  .content-box {
+    display: flex;
+    height: 320px;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid $Line-2;
+    margin-top: 12px;
+  }
+
+  .content {
+    flex: 0 0 50%;
+    padding: 12px 0 12px 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .allotContent {
+    flex: 0 0 50%;
+    padding: 12px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sep {
+    flex: 0 0 1px;
+    width: 1px;
+    height: 100%;
+    background: $Line-2;
+  }
+
+  .content-title {
+    flex-grow: 0;
+    display: flex;
+    justify-content: space-between;
+    color: $Text-5;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0 0 12px 0;
+    padding: 0 16px;
+  }
+
+  .content-subtitle {
+    color: $Text-3;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .list {
+    height: 100%;
+    flex: 1 1 auto;
+    overflow-y: auto;
+
+    @include sirius-scroll();
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 18px;
+  }
+}

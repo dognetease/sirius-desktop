@@ -1,0 +1,36 @@
+@import '@web-common/styles/variables.scss';
+
+.container {
+  display: flex;
+  margin-bottom: 12px;
+
+  .title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: $Text-4;
+    width: 80px;
+    flex-shrink: 0;
+  }
+
+  .listWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .label {
+      line-height: 22px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      cursor: pointer;
+      color: $Text-5;
+
+      &-checked {
+        color: $Avatar-6;
+      }
+    }
+  }
+}

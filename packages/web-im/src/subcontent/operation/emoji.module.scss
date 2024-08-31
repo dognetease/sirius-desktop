@@ -1,0 +1,140 @@
+@import '../../../../web/src/styles/varies';
+.wrapper {
+  width: 508px;
+  p {
+    margin: 0;
+  }
+  .expression-content {
+    @include sirius-scroll();
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+    height: 280px;
+  }
+  .expression-name {
+    font-family: PingFang SC;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 14px;
+    color: #51555c;
+    padding: 14px 20px 2px;
+    background: #fff;
+    &:first-child {
+      padding-top: 20px;
+    }
+  }
+  .expression-name-stick {
+    position: sticky;
+    top: 0;
+  }
+  .expression-list {
+    display: flex;
+    flex-wrap: wrap;
+    height: 240px;
+    justify-content: flex-start;
+    align-content: flex-start;
+    padding: 6px 14px;
+    padding-right: 0;
+  }
+  .expression-list-recent {
+    height: auto;
+    padding-bottom: 0;
+  }
+  .expression-item {
+    width: 32px;
+    height: 32px;
+    margin: 4px;
+    padding: 4px;
+    display: inline-block;
+    border-radius: 6px;
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  .custom-expression-item {
+    width: 80px;
+    height: 80px;
+    padding: 6px;
+    box-sizing: border-box;
+    display: inline-block;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    &:hover {
+      background-color: #f0f0f1;
+      .gif-emoji {
+        display: block;
+      }
+      .static-emoji {
+        display: none;
+      }
+    }
+    .static-emoji {
+      display: block;
+    }
+    .gif-emoji {
+      display: none;
+    }
+    img {
+      width: 68px;
+      height: 68px;
+    }
+  }
+  .category-names {
+    height: 40px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f5;
+    .category-name {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      background-color: transparent;
+      margin-right: 12px;
+      background-size: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+      &:last-child {
+        margin-right: 0;
+      }
+      &.checked {
+        background-color: #fff;
+      }
+      &:global(.common) {
+        background-image: url(https://cowork-storage-public-cdn.lx.netease.com/lxbg/2021/04/25/7b6e29fc4feb46c3a693774b80b1a103.png);
+      }
+      &:global(.custom-lt) {
+        background-image: url(../../../../web/src/images/emoji/lt_s_normal@2x.png);
+        &.checked {
+          background-image: url(../../../../web/src/images/emoji/lt_s_highlighted@2x.png);
+        }
+      }
+      &:global(.custom-ajmd) {
+        background-image: url(../../../../web/src/images/emoji/ajmd_s_normal@2x.png);
+        &.checked {
+          background-image: url(../../../../web/src/images/emoji/ajmd_s_highlighted@2x.png);
+        }
+      }
+      &:global(.custom-xxy) {
+        background-image: url(../../../../web/src/images/emoji/xxy_s_normal@2x.png);
+        &.checked {
+          background-image: url(../../../../web/src/images/emoji/xxy_s_highlighted@2x.png);
+        }
+      }
+    }
+  }
+}
+
+.icon-real-entry {
+  width: 100%;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.tooltip-emoji-name {
+  // 删除arrow占据的空间
+  padding-bottom: 0 !important;
+}

@@ -1,0 +1,47 @@
+@import '../../../../web/src/styles/varies.scss';
+.cancel-tooltip {
+  :global {
+    .ant-popover-inner {
+      box-shadow: 0px 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+      background-color: $white;
+      .ant-popover-inner-content {
+        padding: 0;
+      }
+    }
+  }
+
+  .card {
+    width: 280px;
+    height: 108px;
+    border-radius: 6px;
+    padding: 20px;
+    z-index: 999;
+    .title {
+      font-family: PingFang SC;
+      // color: #000;
+      color: $font-color-3;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .btn-group {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 16px;
+      .btn-confirm,
+      .btn-cancel {
+        padding: 0;
+        height: 28px;
+        line-height: 16px;
+      }
+      .btn-confirm {
+        min-width: 64px;
+      }
+      .btn-cancel {
+        min-width: 88px;
+        margin-right: 16px;
+        border-color: #386ee7;
+        color: #386ee7;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.message-box {
+  margin-top: 8px;
+  height: 32px;
+  background: #e5eaff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  padding: 0 10px;
+  box-shadow: 5px;
+  font-weight: 400;
+  color: $Text-4;
+}

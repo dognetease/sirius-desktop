@@ -1,0 +1,43 @@
+.fold-card {
+  border: 0.5px solid rgba(38, 42, 51, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+
+  .header {
+    position: relative;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    height: 38px;
+    background-color: #f9fafc;
+
+    .title {
+      color: #262a33;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .options {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      right: 20px;
+      bottom: 0;
+
+      .fold-trigger {
+        color: #51555c;
+        font-size: 12px;
+        line-height: 20px;
+        margin-left: 20px;
+        cursor: pointer;
+        user-select: none;
+      }
+    }
+  }
+
+  .body {
+    overflow: hidden;
+    transition: height 0.3s;
+  }
+}

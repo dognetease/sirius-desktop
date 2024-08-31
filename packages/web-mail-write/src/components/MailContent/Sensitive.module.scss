@@ -1,0 +1,210 @@
+@import '../../../../web/src/styles/varies.scss';
+.root {
+  flex: none;
+  position: relative;
+  width: 220px;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid $Line-2;
+  box-sizing: border-box;
+
+  .header {
+    display: flex;
+    width: 100%;
+    height: 36px;
+    .item {
+      flex: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fff;
+      @include p1-3-reg14;
+      color: $Text-3;
+      border-bottom: 1px solid $Line-2;
+      &:first-child {
+        border-right: 1px solid $Line-2;
+      }
+    }
+
+    .itemSelected {
+      @include p1-4-med14;
+      color: $Text-5;
+      border-bottom: none;
+      background-color: $Fill-1;
+    }
+  }
+
+  .content {
+    flex: 1;
+    width: 100%;
+    @include sirius-scroll;
+    background-color: $Fill-1;
+  }
+
+  .opIcon {
+    cursor: pointer;
+    position: absolute;
+    left: -24px;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: 0 auto;
+  }
+
+  .redDot {
+    right: 6px;
+    top: 2px;
+    position: absolute;
+
+    border-radius: 8px;
+    background: $Error-6;
+    display: inline-flex;
+    height: 16px;
+    min-width: 16px;
+    padding: 0px 4px;
+
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    color: #fff;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 11px;
+  }
+}
+
+.sensitiveResult2 {
+  position: static;
+}
+
+.sensitiveResult {
+  min-width: 220px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+
+  .sensitiveResultTitle {
+    padding: 16px 16px 0;
+    color: $Text-5;
+    @include p1-4-med14;
+  }
+
+  .sensitiveResultClose {
+    padding: 8px;
+    position: absolute;
+    top: 14px;
+    right: 10px;
+    font-size: 0;
+    cursor: pointer;
+  }
+
+  .sensitiveResultWarning {
+    padding: 8px 16px 0;
+    color: #51555c;
+    font-size: 12px;
+    line-height: 18px;
+    flex-shrink: 0;
+  }
+
+  .sensitiveResultContent {
+    padding: 16px 16px 0px;
+    flex-grow: 1;
+    .sensitiveHeader {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+    .sensitiveLabel {
+      color: $Text-5;
+      @include c4-4-med12;
+    }
+    .sensitiveInfo {
+      color: $Text-3;
+      @include c4-3-reg12;
+    }
+  }
+
+  .sensitiveResultItem {
+    margin-bottom: 16px;
+    .sensitiveResultItemTop {
+      display: flex;
+      align-items: center;
+      .sensitiveResultItemTopWord {
+        color: #fe5b4c;
+      }
+
+      .sensitiveResultItemTopIndex {
+        font-size: 10px;
+        width: 14px;
+        height: 14px;
+        color: #fff;
+        border-radius: 50%;
+        background: #fe5b4c;
+        line-height: 14px;
+        text-align: center;
+        margin-right: 6px;
+      }
+    }
+    .sensitiveResultItemBottom {
+      margin-top: 4px;
+      color: $Text-4;
+      @include c4-3-reg12;
+    }
+  }
+
+  &-item2 {
+    position: relative;
+    padding-left: 26px;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 22px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-word {
+      color: #fe5b4c;
+      margin-right: 4px;
+    }
+
+    &-index {
+      position: absolute;
+      font-size: 10px;
+      width: 20px;
+      height: 20px;
+      color: #fff;
+      border-radius: 50%;
+      background: #fe5b4c;
+      line-height: 22px;
+      text-align: center;
+      margin-left: -26px;
+      margin-top: 2px;
+    }
+  }
+
+  .sensitiveResultEmpty {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-Content {
+      text-align: center;
+    }
+
+    &-text {
+      padding-top: 10px;
+      font-size: 12px;
+      color: #7a8599;
+    }
+
+    &-img {
+      width: 93px;
+      height: 93px;
+    }
+  }
+}

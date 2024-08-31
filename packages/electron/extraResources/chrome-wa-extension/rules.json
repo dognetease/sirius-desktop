@@ -1,0 +1,37 @@
+[{
+  "id": 1,
+  "priority": 1,
+  "condition": {
+      "urlFilter": "*.whatsapp.*",
+      "resourceTypes": [
+        "main_frame",
+        "sub_frame",
+        "xmlhttprequest",
+        "other"
+    ]
+  },
+  "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+          { "header": "referer", "operation": "remove" },
+          { "header": "sec-fetch-dest", "operation": "remove" }
+      ],
+      "responseHeaders": [
+          {"header":"x-frame-options","operation":"remove"},
+          {"header":"content-security-policy","operation":"remove"},
+          {"header":"content-security-policy-report-only","operation":"remove"},
+          {"header":"x-content-type-options","operation":"remove"},
+          {"header":"x-xss-protection","operation":"remove"},
+          {"header":"x-download-options","operation":"remove"},
+          {"header":"x-permitted-cross-domain-policies","operation":"remove"},
+          {"header":"x-webkit-csp","operation":"remove"},
+          {"header":"frame-options","operation":"remove"},
+          {"header":"cross-origin","operation":"remove"},
+          {"header":"cache-control","operation":"remove"},
+          {"header":"pragma","operation":"remove"},
+          {"header":"expires","operation":"remove"},
+          {"header":"expect-ct","operation":"remove"},
+          {"header":"referrer-policy","operation":"remove"}
+      ]
+  }
+}]

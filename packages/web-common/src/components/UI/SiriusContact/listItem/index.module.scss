@@ -1,0 +1,166 @@
+@import '../../../../../../web/src/styles/varies';
+.item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 8px 16px;
+  cursor: pointer;
+
+  .hitText {
+    color: #386ee7;
+  }
+
+  &-select {
+    // background-color: $hover-menu-item-color;
+    background-color: $white-hover-bg;
+  }
+  &-checked {
+    background-color: $selected-menu-item-color;
+  }
+
+  .itemWrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .itemAvatar {
+      flex: none;
+      margin-right: 8px;
+    }
+    .itemContent {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      overflow: hidden;
+      color: $font-color-2;
+      .titleWrap {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        > span {
+          // width:100%;
+          display: flex;
+          align-items: center;
+        }
+        .titleName {
+          font-style: normal;
+          @include flex-ellipsis-text;
+          &.disableName {
+            color: $Text-1;
+          }
+        }
+        .mailListIcon {
+          margin-left: 4px;
+          display: none;
+        }
+      }
+      .descWrap {
+        // margin-top: 5px;
+        flex: 1;
+      }
+    }
+    &.itemWrapPaddingRight {
+      box-sizing: border-box;
+      padding-right: 24px;
+    }
+  }
+
+  &:hover .itemWrap .titleWrap .mailListIcon {
+    display: block;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    line-height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    white-space: nowrap;
+    width: auto;
+    margin-bottom: 2px;
+  }
+
+  .itemDelete {
+    background: url('../../../../../../web/src/images/icons/calendar_icon_close.png') center center no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+  }
+
+  .itemAvatarContainer {
+    display: flex;
+    align-items: center;
+
+    .itemAvatarCheckbox {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+
+      :global(.ant-checkbox) {
+        top: 0;
+      }
+    }
+
+    .itemAvatarWrap {
+      height: 32px;
+      width: 32px;
+    }
+  }
+
+  &:hover:not(.item-select):not(.item-select-disable) {
+    // background: #f0f0f1;
+    background-color: $white-hover-bg;
+  }
+}
+
+.titleLabel {
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  margin-left: 8px;
+  // padding: 2px 6px;
+  padding: 2px 4px;
+  flex: none;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  background-color: $Warning-1;
+  color: $Warning-7;
+  &.isMy {
+    background-color: $Success-1;
+    color: $label-2_3;
+  }
+}
+
+:global(.ant-list-item-meta.p-right) {
+  padding-right: 24px;
+}
+:global(.ant-list-item-meta-avatar) {
+  margin-right: 12px;
+}
+
+:global(.ant-list-item-meta-title) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  white-space: nowrap;
+  width: auto;
+  margin-bottom: 2px;
+  line-height: 16px;
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+}
+
+:global(.ant-list-item-meta-description) {
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+}

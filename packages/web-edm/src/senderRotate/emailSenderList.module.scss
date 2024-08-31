@@ -1,0 +1,194 @@
+@import '@/styles/varies.scss';
+
+.root {
+  padding: 12px;
+  border-radius: 4px;
+  max-height: 284px;
+  min-height: 212px;
+  overflow-y: auto;
+  background-color: #fff;
+  @include sirius-scroll();
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .title {
+      @include c4-3-reg12;
+      color: $Text-4;
+    }
+    .number {
+      @include c4-3-reg12;
+      color: $Text-5;
+      margin: 0 4px;
+    }
+  }
+
+  .empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin-top: 16px;
+    gap: 8px;
+
+    .title {
+      @include c4-1-reg12;
+      color: $Text-2;
+    }
+    .action {
+      cursor: pointer;
+      @include c4-1-reg12;
+      color: $Brand-6;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .title {
+      @include c4-1-reg12;
+      color: $Text-4;
+    }
+
+    .emails {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      background: $Fill-1;
+      gap: 12px;
+    }
+
+    .item {
+      width: calc((100% - 12px) / 2);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      height: 22px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+      gap: 4px;
+
+      :global(.ant-checkbox + span) {
+        padding-right: 0px;
+        overflow: hidden;
+      }
+      .checkBox {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      .title {
+        @include p1-3-reg14;
+        color: $Text-5;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .multi-title {
+    @include c4-1-reg12;
+    color: $Text-4;
+    gap: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .multi-img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .history {
+    cursor: pointer;
+    flex-shrink: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    overflow: hidden;
+    color: $label-1_3;
+
+    @include c4-3-reg12;
+  }
+}
+
+.sender-email-popover-content {
+  font-weight: 400;
+
+  :global(.ant-modal-confirm-content) {
+    padding-left: 0px;
+  }
+
+  .popover-title {
+    color: $Text-5;
+    @include h1-4-med16;
+  }
+
+  .popover-sub-title {
+    color: $Text-4;
+    @include c4-1-reg12;
+  }
+  .popover-desc {
+    margin-bottom: 8px;
+    color: #272e47;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  .popover-warn {
+    margin-top: 12px;
+    color: #e5a344;
+  }
+  .popover-icon {
+    width: 12px;
+    height: 12px;
+    color: #ffb54c;
+    margin-right: 5px;
+  }
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 8px;
+  @include c4-3-reg12;
+  color: $Error-6;
+}
+
+.icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.send-tips {
+  margin-top: 8px;
+  color: var(---Text-3, #747a8c);
+  /* 灵犀桌面2.0/C4.3-Reg12 */
+  font-family: PingFang SC;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}

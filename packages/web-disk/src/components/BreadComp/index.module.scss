@@ -1,0 +1,34 @@
+.breadComp {
+  margin-top: 4px;
+  display: flex;
+  align-items: flex-end;
+  .item {
+    font-size: 14px;
+    line-height: 1;
+    font-weight: normal;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .bread {
+    display: flex;
+    align-items: center;
+    // color: #51555c;
+    color: $font-color-1;
+    &:hover {
+      color: #386ee7;
+    }
+  }
+  .last-bread {
+    font-weight: 500;
+    font-size: 20px;
+    font-weight: 500;
+    // color: #262a33;
+    color: $Text-6;
+  }
+  .share-time {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0;
+  }
+}

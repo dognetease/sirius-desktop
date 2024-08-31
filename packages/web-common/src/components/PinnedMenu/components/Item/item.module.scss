@@ -1,0 +1,21 @@
+.item {
+  box-sizing: border-box;
+  border: 1px solid #f0f1f5;
+  height: 36px;
+  width: 134px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  .label {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    flex: 0 0 82px;
+  }
+  .icon {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+}

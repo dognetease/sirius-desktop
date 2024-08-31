@@ -1,0 +1,39 @@
+.loginErrorWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  min-height: 800px;
+  min-height: 400px;
+  z-index: 1000;
+  background-color: #fff;
+  & > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .errorBg {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 16px;
+  }
+  .errorInfo {
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #51555c;
+    margin-bottom: 16px;
+  }
+  .btnWrapper {
+  }
+}

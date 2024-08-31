@@ -1,0 +1,141 @@
+.list-modal {
+  :global(.ant-modal-body) {
+    padding: 0;
+  }
+  :global(.ant-modal-close) {
+    display: none !important;
+  }
+  .modal-out-box {
+    height: 612px;
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    flex-shrink: 0;
+    box-shadow: 0px 1px 0px #eceff4;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    .left-menu {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #272e47;
+      .info {
+        font-family: 'PingFang SC';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #747a8c;
+        margin-left: 8px;
+      }
+    }
+    .right-close {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+  }
+  .list-wrapper {
+    flex: 1;
+    height: 0;
+    position: relative;
+    // &>div {
+    //     position: static !important;
+    // }
+    .list-box {
+      height: 100%;
+      overflow-y: auto;
+      position: relative;
+      & > div {
+        position: static !important;
+      }
+    }
+    .detail-content {
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      background-color: #f4f4f5;
+      .detail-list {
+        flex: 1;
+        overflow-y: auto;
+        & > div {
+          padding: 0 24px;
+          overflow-y: visible;
+        }
+        :global(.ant-table-body) {
+          overflow: auto !important;
+        }
+      }
+      .detail-footer {
+        flex-shrink: 0;
+        box-shadow: 0px -1px 0px #eceff4;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 24px;
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.modal-out {
+  display: flex;
+  img {
+    flex-shrink: 0;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  .modal-right {
+    flex: 1;
+  }
+}
+.modal-title {
+  display: flex;
+  margin-bottom: 16px;
+  .title {
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #232d47;
+  }
+}
+.confirm-modal {
+  // background-color: red;
+  :global(.ant-modal-header) {
+    display: none !important;
+  }
+  :global(.ant-modal-close-x) {
+    display: none !important;
+  }
+  :global(.ant-modal-footer) {
+    display: none !important;
+  }
+  :global(.ant-modal-body) {
+    padding: 20px;
+  }
+  .modal-content {
+    // padding: 8px 0 0 8px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    & > * {
+      flex-wrap: nowrap;
+    }
+  }
+}

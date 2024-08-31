@@ -1,0 +1,134 @@
+.contentEditor {
+  background: #ffffff;
+  border: 1px solid #e1e3e8;
+  border-radius: 4px;
+}
+:global(.ant-form-item-has-error) {
+  .contentEditor {
+    border-color: #ff4d4f;
+  }
+}
+
+.footer {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding: 16px 20px;
+  height: 64px;
+  // display: flex;
+}
+
+// 查看样式
+.check {
+  height: 100%;
+  overflow: hidden;
+
+  .scene {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-box-orient: vertical;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #272e47;
+  }
+
+  .content {
+    margin-top: 8px;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #747a8c;
+    height: calc(100% - 30px);
+  }
+}
+.btnGroup {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  height: 68px;
+  padding: 20px 64px;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.radioText {
+  color: #545a6e;
+}
+.salesPitchHandleDrawer {
+  :global(.ant-drawer-close) {
+    top: 5px;
+  }
+  &.is-windows {
+    :global(.ant-drawer-wrapper-body) {
+      padding-top: 40px;
+      position: relative;
+    }
+    .btnGroup {
+      top: 60px;
+    }
+  }
+
+  :global(.ant-btn-primary) {
+    background-color: #4c6aff;
+  }
+  :global(.ant-form-item-with-help) {
+    margin-bottom: 24px;
+  }
+  :global(.ant-form-item-explain-error) {
+    margin-top: 8px;
+  }
+}
+
+.radioButton {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .btnItem {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    background-image: url(@/images/edm/normal.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-size: 100% 100%;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #545a6e;
+
+    &:first-of-type {
+      background-image: url(@/images/edm/first.png);
+    }
+    &:last-of-type {
+      background-image: url(@/images/edm/last.png);
+    }
+  }
+  .btnItemSelect {
+    background-image: url(@/images/edm/normal_select.png);
+    color: #ffffff;
+
+    &:first-of-type {
+      background-image: url(@/images/edm/first_select.png);
+    }
+    &:last-of-type {
+      background-image: url(@/images/edm/last_select.png);
+    }
+  }
+}

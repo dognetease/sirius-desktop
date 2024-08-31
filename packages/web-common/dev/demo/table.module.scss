@@ -1,0 +1,10 @@
+.picTable {
+  :global .ant-table-tbody > tr > td:nth-child(1) {
+    padding: 7px 16px;
+  }
+
+  :global .pic {
+    border-radius: 4px;
+    border: 1px solid #e1e6ed;
+  }
+}

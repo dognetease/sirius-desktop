@@ -1,0 +1,51 @@
+.loginPage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  padding: 0 40px;
+  .loginPageLeft,
+  .loginPageRight {
+    position: relative;
+    flex: 1;
+    min-width: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 30px;
+    .loginWrap {
+      width: 100%;
+    }
+  }
+  .loginModalCloseBtn {
+    cursor: pointer;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    color: $Text-4;
+    @include h1-3-reg16();
+  }
+}
+.closeAccountPageBtn {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  color: #386ee7;
+  font-size: 16px;
+  user-select: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.wmlogos {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 364px;
+  height: 20px;
+}

@@ -1,0 +1,101 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.create-site {
+  :global {
+    .ant-modal-body {
+      padding: 0 24px 16px;
+      margin-top: 24px;
+    }
+
+    .ant-modal-header {
+      border-bottom: none;
+      padding: 24px 24px 0;
+    }
+
+    .ant-modal-title {
+      color: #272e47;
+    }
+
+    .ant-modal-footer {
+      border-top: none;
+    }
+    .ant-checkbox-group-item {
+      margin-bottom: 21px;
+    }
+    .ant-form-item {
+      &:first-child {
+        height: 56px;
+        margin-bottom: 0;
+
+        &.ant-form-item-with-help {
+          height: 56px;
+        }
+      }
+
+      &:nth-child(2) {
+        height: 72px;
+        margin-bottom: 0;
+
+        &.ant-form-item-with-help {
+          height: 72px;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+        justify-content: flex-end;
+
+        .ant-form-item-control-input-content {
+          justify-content: flex-end;
+        }
+      }
+
+      .ant-form-item-control-input-content {
+        display: flex;
+        .site-name {
+          width: 100%;
+
+          &-tip {
+            margin-top: 8px;
+            font-size: 14px;
+            line-height: 22px;
+            color: $Text-2;
+          }
+        }
+      }
+    }
+    .ant-form-horizontal .ant-form-item-label {
+      padding-right: 5px;
+      text-align: left;
+    }
+
+    .ant-form-item-label > label {
+      color: #272e47;
+    }
+
+    .lx-btn + .lx-btn {
+      margin-left: 12px;
+    }
+    .lx-ui-btn + .lx-ui-btn {
+      margin-left: 12px;
+    }
+
+    .ant-modal-body {
+      position: relative;
+
+      .info {
+        position: absolute;
+        left: 24px;
+        bottom: 24px;
+        color: $Text-4;
+        font-size: 12px;
+
+        span {
+          color: $Brand-6;
+          margin-left: 4px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

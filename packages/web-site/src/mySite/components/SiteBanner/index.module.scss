@@ -1,0 +1,141 @@
+@import '@web-common/styles/waimao/varies.scss';
+.siteBanner {
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  padding: 32px 24px;
+  box-sizing: border-box;
+  background-image: url(../../../images/site-banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: -28px;
+  .flexContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .mainTitle {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      color: #373b52;
+      margin-bottom: 12px;
+      & > span {
+        color: $Brand-6;
+      }
+    }
+    .mainFlexContainer {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: flex-start;
+      align-items: flex-end;
+      gap: 20px;
+      .left {
+        flex-grow: 1;
+        flex-shrink: 0;
+      }
+      .right {
+        flex-grow: 1;
+        flex-shrink: 1;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        gap: 12px;
+      }
+    }
+  }
+  .rowFlexWrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+  }
+  .columnFlexWrapper {
+    width: 185px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .title {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      color: #373b52;
+      padding-left: 10px;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 5px;
+        background-color: #7088ff;
+        left: 0px;
+        top: 50%;
+        margin-top: -2.5px;
+      }
+    }
+    .info {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      color: #545a6e;
+      opacity: 0.8;
+      margin-top: 6px;
+    }
+  }
+  .defaultButton {
+    padding: 5px 18px;
+    background: #ffffff;
+    border: 1px solid #f0f1f5;
+    border-radius: 35px;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #545a6e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .primaryButton {
+    background: #4c6aff;
+    border-radius: 35px;
+    padding: 5px 18px;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .priceWrapper {
+    position: absolute;
+    top: 30px;
+    right: 24px;
+    .price {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+      color: $Error-6;
+    }
+    .unit {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17.6px;
+      line-height: 28px;
+      color: #8d92a1;
+    }
+  }
+}

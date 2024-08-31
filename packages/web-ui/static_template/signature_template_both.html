@@ -1,0 +1,114 @@
+<th:block th:fragment="innerContent" xmlns:th="http://www.thymeleaf.org" th:object="${data}">
+    <!-- 样式一，完整版 -->
+    <div th:if="*{signType}==1" class="lingxi-signature-container">
+        <a id="lingxi-signature-block"
+           style="display: block;width: 100%;position: relative;text-decoration: none;text-underline: none;"
+           th:href="*{detailUrl}" target="_blank">
+            <div style="position: absolute;top:16px;left: 16px;border-radius: 50%">
+                <img src="https://mimg.qiye.163.com/p/js6/lib/img/noface.gif" th:if="*{profilePhoto}"
+                     th:src="*{profilePhoto}" style="border-radius: 50%;object-fit: cover;width: 40px;height: 40px;"
+                     itemid="avatar" width="40px" height="40px"/>
+                <div th:if="*{profilePhoto}==null" th:text="*{name}"
+                     style="color:#fff;width:40px;height:40px;border-radius:50%; line-height:40px;background:#000000;text-align:center;font-size: 13px;">
+                    --
+                </div>
+            </div>
+            <div id="lingxi-signature-content" itemid="id" th:attr="itemprop=*{signId}"
+                 style="font-size: 14px;line-height: 16px;color: #7D8085;border-bottom: 1px solid rgba(38, 42, 51, 0.08);padding: 16px 16px 4px 4px;margin-left: 68px;word-break: break-all; ">
+                <div style="color: #262A33;border: none;margin-bottom:10px;font-size: 16px;text-underline: none;"
+                     itemid="name" th:text="*{name}">---
+                </div>
+                <div style="color: #262A33;border: none;margin-bottom:10px;text-underline: none;" itemid="title"
+                     th:unless="*{#strings.isEmpty(title)}" th:text="*{title}"></div>
+                <div style="border: none;margin-bottom:10px;text-underline: none;" itemid="email" th:unless="*{#strings.isEmpty(company)}"
+                     th:text="*{company}"></div>
+                <div style="border: none;margin-bottom:10px;text-underline: none;" th:unless="*{#strings.isEmpty(email)}"
+                     th:text="*{email}"></div>
+                <div style="border: none;margin-bottom:10px;text-underline: none;" th:unless="*{#strings.isEmpty(mobile)}"
+                     th:text="*{mobile}"></div>
+                <div style="border: none;margin-bottom:10px;text-underline: none;" itemid="location" th:unless="*{#strings.isEmpty(location)}"
+                     th:text="*{location}"></div>
+                <th:block th:if="*{userAddItem && userAddItem.length>0}" th:each="item:${userAddItem}">
+                    <div style="border: none;margin-bottom:10px;text-underline: none;" itemid="email"
+                         th:if="${item.item}" th:text="${item.item}"></div>
+                </th:block>
+            </div>
+        </a>
+        <div style="padding-left: 68px;color: #A8AAAD;font-size: 12px;margin-top: 12px" th:if="*{showAppVipTag}">
+            签名由
+            <a href="https://office.163.com/" style="color:#386EE7;display: inline;text-underline: none;"
+               target="_blank">网易灵犀办公</a>
+            定制
+        </div>
+    </div>
+
+    <!-- 样式二，无头像 -->
+    <a id="lingxi-signature-v2-block" th:if="*{signType}==2"
+       style="display: block;width: 100%;padding-right: 10px;text-decoration: none;text-underline: none;"
+       target="_blank"
+       href="*{detailUrl}">
+        <div id="lingxi-signature-v2-content" itemid="id" th:attr="itemprop=*{signId}"
+             style="width: 100%;font-size: 14px;line-height: 16px;color: #7D8085;padding-bottom:4px; margin: 16px; ">
+            <div style="color: #262A33;border: none;margin-bottom:10px;font-size: 16px;text-underline: none;"
+                 itemid="name" th:text="*{name}">---
+            </div>
+            <div style="color: #262A33;border: none;margin-bottom:10px;text-underline: none;" itemid="title"
+                 th:unless="*{#strings.isEmpty(title)}" th:text="*{title}"></div>
+            <div style="border: none;margin-bottom:10px;text-underline: none;" itemid="email" th:unless="*{#strings.isEmpty(company)}"
+                 th:text="*{company}"></div>
+            <div style="border: none;margin-bottom:10px;text-underline: none;" th:unless="*{#strings.isEmpty(email)}"
+                 th:text="*{email}"></div>
+            <div style="border: none;margin-bottom:10px;text-underline: none;" th:unless="*{#strings.isEmpty(mobile)}"
+                 th:text="*{mobile}"></div>
+            <div style="border: none;margin-bottom:10px;text-underline: none;" itemid="location" th:unless="*{#strings.isEmpty(location)}"
+                 th:text="*{location}"></div>
+                 <th:block th:if="*{userAddItem!=null && userAddItem.length>0}" th:each="item:*{userAddItem}">
+                    <div style="border: none;margin-bottom:10px;text-underline: none;" itemprop="additional"
+                         th:if="${item.item}"
+                         th:text="${item.item}"></div>
+                </th:block>
+        </div>
+    </a>
+
+    <!-- 样式三，默认 -->
+    <a id="lingxi-signature-v3-block" th:if="*{signType}==3"
+       style="display: block;width: 100%;position: relative;text-decoration: none;text-underline: none;" target="_blank"
+       href="*{detailUrl}">
+        <div style="position: absolute;top:16px;left: 16px;border-radius: 50%">
+            <img src="https://mimg.qiye.163.com/p/js6/lib/img/noface.gif" th:if="*{profilePhoto}"
+                 th:src="*{profilePhoto}" style="border-radius: 50%;width: 40px;height: 40px;"
+                 itemid="avatar" width="40px" height="40px"/>
+            <div th:if="*{profilePhoto}==null" th:text="*{name}"
+                 style="color:#fff;width:40px;height:40px;border-radius:50%; line-height:40px;background:#000000;text-align:center;font-size: 13px;">
+                --
+            </div>
+        </div>
+        <div id="lingxi-signature-v3-content" itemid="id" th:attr="itemprop=*{signId}"
+             style="width: 100%;font-size: 14px;line-height: 16px;color: #7D8085;padding-bottom:14px; margin-bottom:16px; ">
+            <div style="color: #262A33;border: none;padding: 16px 16px 4px 4px;margin-left: 68px;font-size: 16px;position: relative; top: 10px;"
+                 itemid="name" th:text="*{name}">---
+            </div>
+        </div>
+    </a>
+
+</th:block>
+<th:block th:if="${data.needHtml}">
+    <!DOCTYPE html>
+    <html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charSet="utf-8"/>
+        <meta httpEquiv="x-ua-compatible" content="ie=edge"/>
+        <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    </head>
+    <body style="width: 100%;margin: 0; padding: 0">
+    <th:block th:replace="this::innerContent">
+
+    </th:block>
+    </body>
+    </html>
+</th:block>
+<th:block th:if="${!data.needHtml}" th:replace="this::innerContent">
+
+</th:block>

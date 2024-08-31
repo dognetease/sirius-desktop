@@ -1,0 +1,54 @@
+.ff-book-detail {
+  :global(.ant-descriptions-title) {
+    font-size: 14px;
+  }
+  :global(.ant-descriptions-header) {
+    margin-bottom: 10px;
+  }
+  .main-content {
+    display: flex;
+    background: #fff; // #5f5f5
+    &-left {
+      width: 500px;
+      padding: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      margin-right: 16px;
+    }
+    &-right {
+      flex: 1;
+      padding: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      .mark-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .mark-title {
+          font-size: 14px;
+          font-weight: bold;
+        }
+      }
+      .mark-list {
+        margin-top: 16px;
+        .empty {
+          margin-top: 100px;
+        }
+      }
+      .card {
+        background: #fafafa;
+      }
+    }
+  }
+  .footer {
+    float: right;
+    .footer-btn {
+      border-radius: 2px;
+      border: none;
+      &:nth-child(1) {
+        margin-right: 16px;
+      }
+      &:nth-child(2) {
+        margin-right: 16px;
+      }
+    }
+  }
+}

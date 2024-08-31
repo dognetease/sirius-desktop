@@ -1,0 +1,230 @@
+.send-ai-post {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+
+  .header {
+    flex-shrink: 0;
+    padding: 14px 20px;
+    border-bottom: 1px solid $Line-2;
+
+    .header-content {
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .from {
+      color: $Text-3;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      cursor: pointer;
+    }
+
+    .arrow {
+      margin-left: 4px;
+    }
+
+    .title {
+      color: $Text-5;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      margin-left: 4px;
+    }
+
+    .ai-quota {
+      margin-left: 8px;
+    }
+  }
+
+  .body {
+    flex-grow: 1;
+    display: flex;
+    overflow: auto;
+
+    .config {
+      flex-shrink: 0;
+      height: 100%;
+      overflow: auto;
+      width: 502px;
+      border-right: 1px solid $Line-2;
+
+      .tabs {
+        padding: 20px 36px;
+        border-bottom: 1px solid $Line-2;
+      }
+
+      .form {
+        padding: 24px 36px;
+      }
+
+      .form :global {
+        .ant-form-item-label {
+          overflow: initial;
+          height: auto;
+        }
+
+        .ant-form-item-label label {
+          position: relative;
+          align-items: flex-start;
+          display: inline-block;
+          padding-top: 7px;
+          padding-right: 4px;
+          height: auto;
+
+          &::before {
+            position: absolute;
+            left: -12px;
+            top: 12px;
+          }
+
+          &::after {
+            content: none;
+          }
+        }
+
+        .ant-form-item-control {
+          max-width: calc(100% - 80px);
+        }
+      }
+
+      .label-wrapper {
+        display: flex;
+
+        .label {
+          flex-grow: 1;
+          white-space: normal;
+          word-break: break-all;
+        }
+
+        .extra {
+          flex-shrink: 0;
+          margin-top: 3px;
+          margin-left: 4px;
+        }
+      }
+
+      .radio-form-item,
+      .radio-form-limit-item {
+        margin-top: -5px;
+
+        :global(.ant-form-item-control-input) {
+          min-height: 35px;
+        }
+      }
+
+      .radio-form-limit-item {
+        margin-bottom: 2px;
+
+        :global {
+          .ant-form-item-label {
+            label {
+              padding: 0;
+
+              &::before {
+                top: 5px;
+              }
+            }
+          }
+
+          .ant-form-item-control {
+            flex: 1 1 !important;
+          }
+
+          .ant-radio-group {
+            label {
+              margin-bottom: 17px;
+            }
+          }
+        }
+      }
+
+      .tone-language {
+        display: flex;
+        gap: 12px;
+      }
+
+      .picture-required-form-item {
+        margin-bottom: 0;
+        margin-top: -24px;
+      }
+
+      .picture-required-tip {
+        color: $Warning-6;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+      }
+
+      .ai-picture-desc-form-item + .picture-required-form-item {
+        margin-top: -16px;
+      }
+
+      // :global(.ant-form-item-has-error) + .picture-required-form-item {
+      //   display: none;
+      // }
+    }
+
+    .preview {
+      flex-grow: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      overflow: auto;
+      background-color: $Fill-2;
+
+      .generate-tip {
+        flex-shrink: 0;
+        width: 694px;
+        margin: 0 auto 12px;
+      }
+
+      .posts {
+        flex-grow: 1;
+        overflow: auto;
+        width: 694px;
+        margin: 0 auto;
+
+        .post-preview {
+          max-height: 500px;
+          margin-bottom: 16px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .empty {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .empty-icon {
+          margin-bottom: 12px;
+        }
+
+        .empty-tip {
+          color: $Text-3;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 20px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .footer {
+    flex-shrink: 0;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid $Line-1;
+    gap: 12px;
+  }
+}

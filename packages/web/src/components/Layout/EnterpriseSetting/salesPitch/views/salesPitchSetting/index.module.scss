@@ -1,0 +1,197 @@
+/**
+ * Created by zh on 2023/3/17.
+ */
+@import '@web-common/styles/waimao/varies.scss';
+
+.salesPitchSettingContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 16px 20px 4px;
+  background: #f6f7fa;
+
+  .salesPitchHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 32px;
+    margin-bottom: 16px;
+    .back {
+      background: url(@web-common/images/icons/back.svg) no-repeat center;
+      width: 16px;
+      margin-right: 12px;
+      height: 12px;
+      vertical-align: initial;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .salesPitchTitle {
+      font-size: 16px;
+      color: #272e47;
+      font-weight: 500;
+    }
+
+    .salesPitchHeaderRight {
+      display: flex;
+      align-items: center;
+    }
+
+    .closeIconContainer {
+      display: flex;
+      align-items: center;
+      margin-left: 16px;
+      cursor: pointer;
+    }
+  }
+
+  .salesPitchContent {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    align-items: self-start;
+    padding-bottom: 12px;
+
+    @include sirius-scroll;
+
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+  }
+
+  .salesPitchColumnContainer {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    padding: 16px 6px 16px 12px;
+    background: #fff;
+    margin-right: 8px;
+    border-top-width: 4px;
+    border-top-style: solid;
+    border-radius: 4px;
+    flex: 1 1 190px;
+    min-width: 190px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .salesPitchBoardListStage {
+    position: relative;
+    height: 32px;
+    line-height: 32px;
+    background: #f0f2f7;
+    border-radius: 2px;
+    color: #272e47;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    flex: 0 0 32px;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-top: 8px solid #fff;
+      border-bottom: 8px solid transparent;
+      border-right: 4px solid #fff;
+      border-left: 4px solid transparent;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      border-bottom: 8px solid #fff;
+      border-top: 8px solid transparent;
+      border-right: 4px solid #fff;
+      border-left: 4px solid transparent;
+    }
+  }
+
+  .salesPitchBoardCreateBtn {
+    flex: 0 0 32px;
+  }
+
+  .salesPitchListCommonContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .salesPitchError {
+    width: 110px;
+    height: 96px;
+    background: url('../../images/fetch-fail.png') no-repeat center center;
+    background-size: cover;
+    margin: 0 auto;
+  }
+
+  .salesPitchNoDataContainer {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 300px;
+    transform: translateX(-50%);
+    text-align: center;
+
+    .salesPitchNoDataBlock {
+      width: 98px;
+      height: 112px;
+      background: url('../../images/no-data.png') no-repeat center center;
+      background-size: cover;
+      margin: 0 auto 20px;
+    }
+  }
+
+  .salesPitchNoDataText {
+    font-size: 14px;
+    color: #747a8c;
+    margin-top: 20px;
+  }
+
+  .refreshText {
+    font-size: 14px;
+    color: #4c6aff;
+    margin-top: 12px;
+    cursor: pointer;
+  }
+}
+
+:global(.salesPitchColumnContainer-START) {
+  border-top-color: #83b3f7;
+}
+
+:global(.salesPitchColumnContainer-INQUIRY) {
+  border-top-color: #66e0cc;
+}
+
+:global(.salesPitchColumnContainer-QUOTATION) {
+  border-top-color: #bb98fe;
+}
+
+:global(.salesPitchColumnContainer-SAMPLES) {
+  border-top-color: #ffb54c;
+}
+
+:global(.salesPitchColumnContainer-ORDER) {
+  border-top-color: #83b3f7;
+}
+
+:global(.salesPitchColumnContainer-MAINTENANCE) {
+  border-top-color: #c0c8d6;
+}

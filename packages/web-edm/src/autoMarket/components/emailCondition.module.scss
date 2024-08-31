@@ -1,0 +1,104 @@
+.email-condition {
+  :global(.ant-drawer-header) {
+    border-bottom: none;
+  }
+
+  :global(.ant-drawer-footer) {
+    border-top: none;
+
+    :global(.ant-btn:not(.ant-btn-primary)) {
+      border-color: #f0f3f5;
+      background-color: #f0f3f5;
+    }
+
+    :global(.ant-btn-primary) {
+      background-color: #4c6aff;
+    }
+  }
+
+  &-body {
+    padding: 8px 24px;
+
+    .form {
+      > :global(.ant-form-item) {
+        margin-bottom: 0;
+      }
+    }
+
+    .sub-title {
+      color: #7a8599;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      margin-bottom: 12px;
+    }
+
+    .email-operation {
+      display: flex;
+      align-items: flex-start;
+
+      .email-op-days {
+        width: 120px;
+      }
+
+      .email-op-type {
+        width: 120px;
+      }
+
+      .space-text {
+        line-height: 32px;
+        margin: 0 16px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &-footer {
+    text-align: right;
+
+    :global(.ant-btn) {
+      margin-right: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.edmEmail {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  .taskInfo {
+    flex: 1;
+    font-size: 12px;
+    color: #747a8c;
+    .taskName {
+      font-weight: bold;
+      font-size: 14px;
+      color: #272e47;
+      padding-bottom: 5px;
+    }
+  }
+
+  .taskOp {
+  }
+}
+
+.linkBtn {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 22px;
+  color: #4c6aff;
+}

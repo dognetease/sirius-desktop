@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Source Han Sans';
+    src: url('/思源黑体.TTF');
+}
+
+@font-face {
+    font-family: 'lucida grande';
+    src: url('/LucidaGrande.otf');
+}
+
+@font-face {
+    font-family: 'uverdana';
+    src: url('/uverdana.ttf');
+}
+
+@font-face {
+    font-family: 'simhei';
+    src: url('/黑体.TTF');
+}
+
+@font-face {
+    font-family: 'menlo';
+    src: url('/menlo-regular.ttf');
+}
+
+@font-face {
+    font-family: 'verdana';
+    src: url('/verdana.ttf');
+}
+
+@font-face {
+    font-family: 'geneva';
+    src: url('/verdana.ttf');
+}
+
+@font-face {
+    font-family: 'KaiTi';
+    src: url('/楷体.ttf');
+}

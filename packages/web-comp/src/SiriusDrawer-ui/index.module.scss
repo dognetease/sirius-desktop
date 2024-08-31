@@ -1,0 +1,77 @@
+@import '../styles/varies.scss';
+
+.siriusDrawerUi {
+  &.is-web-entry-wm-customer-style {
+    :global(.lx-ant-drawer-content-wrapper) {
+      height: calc(100% - #{$main-offset-top-height});
+      top: $main-offset-top-height;
+    }
+  }
+
+  &:global(.lx-ant-drawer-open.lx-ant-drawer-left) {
+    :global .lx-ant-drawer-content-wrapper {
+      border-right: 1px solid $Line-1;
+      box-shadow: 6px 0px 16px $shadow-1;
+    }
+  }
+  &:global(.lx-ant-drawer-open.lx-ant-drawer-right) {
+    :global .lx-ant-drawer-content-wrapper {
+      border-left: 1px solid $Line-1;
+      box-shadow: -6px 0px 16px $shadow-1;
+    }
+  }
+  &:global(.lx-ant-drawer-open.lx-ant-drawer-top) {
+    :global .lx-ant-drawer-content-wrapper {
+      border-bottom: 1px solid $Line-1;
+      box-shadow: 0px 6px 16px $shadow-1;
+    }
+  }
+  &:global(.lx-ant-drawer-open.lx-ant-drawer-bottom) {
+    :global .lx-ant-drawer-content-wrapper {
+      border-top: 1px solid $Line-1;
+      box-shadow: 0px -6px 16px $shadow-1;
+    }
+  }
+
+  :global .lx-ant-drawer-header {
+    height: 68px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 24px;
+    border: none;
+    .lx-ant-drawer-title {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 500;
+      color: $Text-5;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  :global .lx-ant-drawer-header-no-title {
+    position: relative;
+  }
+
+  :global .lx-ant-drawer-footer {
+    border: none;
+    height: 72px;
+    padding: 20px;
+  }
+
+  :global .lx-ant-drawer-body {
+    padding: 20px;
+  }
+
+  &.siriusDrawerWindows {
+    :global(.lx-ant-drawer-wrapper-body) {
+      padding-top: 32px;
+    }
+  }
+  &.siriusDrawerClosable {
+    :global(.lx-ant-drawer-title) {
+      width: calc(100% - 40px);
+    }
+  }
+}

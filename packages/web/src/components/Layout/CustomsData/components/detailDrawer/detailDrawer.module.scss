@@ -1,0 +1,114 @@
+@import '@web-common/styles/variables.scss';
+
+.customs-data-detail {
+  height: 100%;
+
+  :global(.ant-drawer-body) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    flex-shrink: 0;
+    z-index: 1;
+    padding: 20px 24px 8px 24px;
+
+    &.shadow {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+    }
+
+    .bread-crumb {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      color: $Avatar-6;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .upper-level {
+        cursor: pointer;
+      }
+    }
+
+    .dig-card {
+      margin-top: 12px;
+      width: 100%;
+      background: $Brand-1;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 24px;
+
+      .card-left {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        &-Box {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        &-text {
+          font-size: 14px;
+          color: #232d47;
+          margin-right: 12px;
+        }
+
+        &-sub-text {
+          color: #7a8599;
+          font-size: 12px;
+          font-weight: 400;
+        }
+
+        &-btn {
+          display: inline-block;
+          padding: 0px 8px;
+          gap: 4px;
+          min-width: 80px;
+          height: 22px;
+          line-height: 22px;
+          background: $Avatar-6;
+          border-radius: 30px;
+          font-weight: 400;
+          font-size: 12px;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .body {
+    flex-grow: 1;
+    position: relative;
+    padding: 8px 24px 24px 24px;
+    overflow-x: hidden;
+    transition: padding-right 0.3s;
+
+    .main {
+      border: 1px solid #f0f3f5;
+      min-height: 100px;
+      border-radius: 5px;
+
+      &-header {
+        line-height: 32px;
+        display: flex;
+        padding: 24px 24px;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 500;
+        font-size: 16px;
+
+        .header-icon {
+          width: 28px;
+          height: 28px;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}

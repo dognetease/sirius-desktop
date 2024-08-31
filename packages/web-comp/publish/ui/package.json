@@ -1,0 +1,26 @@
+{
+  "name": "@lingxi-common-component/sirius-ui",
+  "version": "1.5.1",
+  "main": "index.js",
+  "description": "基于antd的组件库",
+  "dependencies": {
+    "@babel/runtime": "^7.12.5",
+    "rc-motion": "^2.4.0",
+    "rc-resize-observer": "^1.0.0",
+    "@types/react-datepicker": "^4.1.4",
+    "moment": "^2.29.1",
+    "rc-cascader": "~3.9.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "comp"
+  ],
+  "author": "lujiajian",
+  "license": "ISC"
+}

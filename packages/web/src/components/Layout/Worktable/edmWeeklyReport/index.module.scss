@@ -1,0 +1,15 @@
+.edmWeeklyReportContainer {
+  position: relative;
+  cursor: pointer;
+
+  .redPoint {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(---Error-6, #fe5b4c);
+  }
+}

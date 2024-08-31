@@ -1,0 +1,21 @@
+@import '../../../../web/src/styles/varies';
+
+.syncIcon {
+  box-sizing: border-box;
+  border: 1px solid $white;
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  background-size: 16px 16px;
+  background: $white url(../../../../web/src/images/icons/common/sync.svg) no-repeat center center;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+  cursor: pointer;
+  @include sirius-no-drag();
+
+  &:hover {
+    // background-image: url('../../../../web/src/images/icons/common/sync_hover.svg');
+    border: 1px solid $main-enhance-color;
+  }
+}

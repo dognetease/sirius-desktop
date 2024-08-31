@@ -1,0 +1,27 @@
+.sub-allot-item {
+  display: flex;
+  align-items: center;
+  padding: 6px 0 6px 16px;
+  color: $Text-5;
+
+  .sub-allot-input {
+    width: 56px;
+    margin: 0 12px;
+
+    :global(.ant-input-number-handler-wrap) {
+      display: none;
+    }
+  }
+
+  .close-icon {
+    color: $Fill-5;
+  }
+
+  &:hover {
+    background: $Fill-2;
+
+    .close-icon {
+      color: $Fill-6;
+    }
+  }
+}

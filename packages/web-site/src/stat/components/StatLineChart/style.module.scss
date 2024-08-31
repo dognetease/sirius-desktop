@@ -1,0 +1,59 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.card {
+  background: #ffffff;
+  width: calc(50% - 6px);
+  border-radius: 4px;
+  margin-top: 12px;
+  padding: 20px 10px 20px 20px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    &-title {
+      font-size: 14px;
+      line-height: 22px;
+      color: $Text-5;
+    }
+    &-details {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      line-height: 22px;
+      color: #747a8c;
+      cursor: pointer;
+      padding-right: 10px;
+
+      svg {
+        path {
+          stroke: #747a8c;
+        }
+      }
+    }
+  }
+
+  .count {
+    font-size: 22px;
+    line-height: 24px;
+    color: $Text-5;
+  }
+
+  .product-name {
+    font-size: 14px;
+    line-height: 22px;
+    color: $Text-4;
+  }
+
+  .line-chart {
+    width: 100%;
+    height: calc(33vh - 170px);
+    min-height: 150px;
+  }
+
+  .bar-chart {
+    width: 100%;
+    height: calc(33vh - 120px);
+    min-height: 200px;
+  }
+}

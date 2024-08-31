@@ -1,0 +1,65 @@
+.service-modal {
+  :global {
+    .ant-modal-content {
+      border-radius: 4px;
+    }
+    .ant-modal-body {
+      padding: 0 24px 16px;
+    }
+    .ant-modal-header {
+      border-bottom: none;
+      padding: 16px 24px 28px;
+    }
+  }
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  line-height: 22px;
+  margin-bottom: 10px;
+
+  > div:nth-child(1) {
+    width: 74px;
+    color: #747a8c;
+  }
+  > div:nth-child(2) {
+    color: #272e47;
+    display: flex;
+    align-items: center;
+  }
+
+  .green-tag,
+  .red-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 20px;
+    border-radius: 2px;
+    font-size: 12px;
+  }
+
+  .green-tag {
+    background: #d6f7f1;
+    color: #398e80;
+  }
+
+  .red-tag {
+    background: #ffe5e2;
+    color: #cb493d;
+  }
+
+  &-link {
+    color: $Brand-6;
+    display: flex;
+    align-items: center;
+    margin-left: 4px;
+  }
+}
+
+.service-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+}

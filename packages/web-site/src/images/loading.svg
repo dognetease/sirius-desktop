@@ -1,0 +1,5 @@
+<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20.89 12A8.889 8.889 0 1 0 3.11 12a8.889 8.889 0 0 0 17.778 0Z" stroke="#B7C3FF" stroke-width="3"/>
+    <path d="M3.111 12a8.889 8.889 0 0 1 16.14-5.142" stroke="#4C6AFF" stroke-width="3" stroke-linecap="round"/>
+    <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="1s" repeatCount="indefinite"/>
+</svg>

@@ -1,0 +1,25 @@
+@import '@web-common/styles/variables.scss';
+
+.page-container {
+  height: 100%;
+  .page-content {
+    padding: 8px 20px 20px;
+    background: #fff;
+  }
+  :global {
+    .ant-alert {
+      background: #edf0ff;
+      border-radius: 4px;
+      border: none;
+      margin-bottom: 12px;
+      .ant-alert-icon {
+        color: #4c6aff;
+      }
+      .ant-alert-message {
+        font-size: 12px;
+        line-height: 16px;
+        color: #272e47;
+      }
+    }
+  }
+}

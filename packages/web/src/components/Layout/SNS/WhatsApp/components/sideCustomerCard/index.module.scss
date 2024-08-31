@@ -1,0 +1,168 @@
+// @import '@/styles/mixin.scss';
+
+.wa-sidebar {
+  position: relative;
+  padding-top: 16px;
+  height: 100%;
+  background: #fff;
+
+  :global(.send-sales-pitch) {
+    display: none !important;
+  }
+}
+
+.info-container {
+  padding: 16px 0;
+}
+.header {
+  flex: none;
+  padding: 0 16px 16px;
+  border-bottom: 1px solid #f0f3f5;
+}
+.body {
+  flex: 1;
+  padding: 0 16px;
+}
+.header-info {
+  display: flex;
+  gap: 8px;
+}
+
+.row {
+  margin-top: 3px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  svg {
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+}
+.company-name {
+  @include h1-4-med16();
+  color: #232d47;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.header-info-main {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.flex-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.flex-tabs {
+  height: 100%;
+  :global(.ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap) {
+    margin-right: 0;
+  }
+  :global(.ant-tabs-nav-list) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    :global(.ant-tabs-tab + .ant-tabs-tab) {
+      margin: 0;
+    }
+  }
+  :global(.ant-tabs-content) {
+    height: 100%;
+  }
+}
+
+.actions {
+  flex: none;
+  display: flex;
+  // justify-content: space-between;
+  margin-top: 20px;
+  gap: 8px;
+}
+.action-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 52px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.action-icon-wrap {
+  margin-bottom: 4px;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  border-radius: 14px;
+  background: $Brand-1;
+  svg {
+    vertical-align: middle;
+  }
+}
+
+.stranger-info {
+  @include c4-1-reg12();
+}
+
+.customer-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden auto;
+  padding: 16px;
+  color: $Text-4;
+  @include p1-3-reg14();
+}
+.customer-list-item {
+  color: $Text-5;
+  @include p1-4-med14();
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid $Line-3;
+}
+
+.customer-info-box {
+  display: flex;
+  margin-left: 22px;
+  padding-bottom: 16px;
+  .customer-left {
+    flex: 1;
+    margin-right: 12px;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @include p1-3-reg14();
+
+    h3 {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      @include h1-4-med16();
+    }
+  }
+}
+
+.contact-row {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  svg {
+    vertical-align: -3px;
+    margin-right: 12px;
+  }
+}
+
+.scroller {
+  flex: 1;
+  overflow: hidden auto;
+}
+.customer-footer {
+  flex: none;
+}

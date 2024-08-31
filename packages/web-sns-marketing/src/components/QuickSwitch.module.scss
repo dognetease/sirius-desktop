@@ -1,0 +1,27 @@
+.quick-switch {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid $Line-1;
+  border-radius: 2px;
+  background-color: $Fill-1;
+
+  .item {
+    padding: 4px;
+    cursor: pointer;
+    display: flex;
+
+    &.disabled {
+      cursor: not-allowed;
+
+      .icon {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .separator {
+    width: 1px;
+    height: 12px;
+    border: 1px solid $Line-1;
+  }
+}

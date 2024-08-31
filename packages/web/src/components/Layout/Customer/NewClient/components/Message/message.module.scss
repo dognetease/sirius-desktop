@@ -1,0 +1,32 @@
+.alert-common-wrap {
+  // background-color: #fff7e6;
+  .alert-box {
+    border: none;
+    height: 32px;
+    color: #51555c;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 14px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    svg {
+      vertical-align: -3px;
+      margin-right: 6px;
+      cursor: pointer;
+    }
+  }
+  .alert-success {
+    background: #386ee7;
+  }
+  .alert-fail {
+    background: #ffeeee;
+  }
+  .alert-info {
+    background: #ecf1fd;
+  }
+  .alert-warning {
+    background-color: #fff7e6;
+  }
+}

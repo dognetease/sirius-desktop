@@ -1,0 +1,57 @@
+@import '../../../../web/src/styles/varies';
+.msg-section {
+  position: relative;
+  &:hover .single-msg-time {
+    visibility: visible;
+  }
+  .single-msg-time {
+    // display: none;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    // color: #a8aaad;
+    color: $Text-2;
+    visibility: hidden;
+    &.follow {
+      display: inline-block;
+      padding-left: 4px;
+    }
+    &.alone {
+      position: absolute;
+      padding: 0 40px;
+      top: -3px;
+    }
+  }
+  .msg-status {
+    width: 16px;
+    height: 16px;
+    // background: #000;
+    border-radius: 12px;
+    display: inline-block;
+    position: absolute;
+    bottom: -7px;
+    right: -8px;
+    &:global(.uploading) {
+      // 暂时用这个颜色 后期需要替换
+      // background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5)
+    }
+    &:global(.sending) {
+      // 暂时用这个颜色 后期需要替换
+      animation: msgSendingAnimation;
+      animation-duration: 1500ms;
+      animation-timing-function: linear;
+      animation-delay: 100ms;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+.unread-Wrap {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url('@/images/icons/im_unread.svg') no-repeat center; // 兜底
+  background: $im-unread no-repeat center;
+}

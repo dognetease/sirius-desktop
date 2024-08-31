@@ -1,0 +1,93 @@
+.folder-wrap {
+  // display: flex;
+  background: #f4f4f5;
+  margin-top: 12px;
+  position: relative;
+  .folder-table {
+    // flex: 1 1 auto;
+    width: 100%;
+    height: 346px;
+    // margin-right: 16px;
+    background-color: $white;
+    padding: 16px 296px 16px 16px;
+    position: relative;
+    .switch {
+      position: absolute;
+      // right: 16px;
+      right: 296px;
+      top: 16px;
+      display: flex;
+      align-items: center;
+      height: 28px;
+      padding: 0 3px;
+      border-radius: 4px;
+      border: 1px solid $Line-2;
+      margin: 0;
+      span:first-child {
+        margin-right: 4px;
+      }
+      span.active {
+        color: $Brand-6;
+        font-weight: 500;
+        background-color: $Brand-1;
+      }
+      span {
+        display: inline-block;
+        width: 52px;
+        height: 22px;
+        line-height: 22px;
+        text-align: center;
+        border-radius: 2px;
+        color: $Text-4;
+        font-family: 'PingFang SC';
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 22px;
+        cursor: pointer;
+      }
+    }
+    .container {
+      height: 275px;
+      width: 100%;
+    }
+    .bar {
+      height: 280px;
+    }
+    .table {
+      :global .ant-table-thead > tr > th,
+      :global .ant-table-tbody > tr > td {
+        padding: 12px 6px;
+      }
+    }
+  }
+  .line {
+    position: absolute;
+    right: 264px;
+    top: 0;
+    height: 346px;
+    width: 16px;
+    background-color: #f4f4f5;
+  }
+  .folder-pie {
+    // flex: 0 0 264px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 264px;
+    height: 346px;
+    background-color: $white;
+    border-radius: 4px;
+    padding: 16px;
+    .pie {
+      height: 272px;
+    }
+    .title {
+      margin-bottom: 32px;
+    }
+  }
+  .title {
+    @include p1-4-med14;
+    color: $Text-5;
+    margin-bottom: 16px;
+  }
+}

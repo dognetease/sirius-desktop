@@ -1,0 +1,92 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.create-custom-site {
+  :global {
+    .ant-modal-body {
+      padding: 0 24px 16px;
+      margin-top: 24px;
+    }
+
+    .ant-modal-header {
+      border-bottom: none;
+      padding: 24px 24px 0;
+    }
+
+    .ant-modal-footer {
+      border-top: none;
+    }
+    .ant-form-item {
+      &:last-child {
+        margin-bottom: 0;
+        justify-content: flex-end;
+
+        .ant-form-item-control-input-content {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+
+    .ant-btn {
+      width: 64px;
+      height: 32px;
+      min-width: initial;
+      font-size: 14px;
+      border: none;
+      background: $Brand-6;
+
+      &:hover {
+        background: $Brand-5;
+      }
+
+      &:active {
+        background: $Brand-7;
+      }
+    }
+
+    .steps-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 27px;
+
+      .line {
+        width: 34px;
+        height: 1.5px;
+        background: $Fill-4;
+        margin: 0 10px;
+      }
+
+      div {
+        margin-left: 8px;
+        color: $Text-5;
+        font-size: 14px;
+      }
+    }
+
+    .step-1-container {
+      .content {
+        text-align: center;
+        padding-top: 4px;
+        font-size: 14px;
+        line-height: 22px;
+        color: $Text-3;
+      }
+
+      .info {
+        text-align: center;
+        color: $Brand-6;
+        font-size: 14px;
+        line-height: 22px;
+        margin: 8px 0 50px;
+        cursor: pointer;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+    }
+  }
+}

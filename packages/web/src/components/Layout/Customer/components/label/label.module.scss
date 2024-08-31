@@ -1,0 +1,32 @@
+.label {
+  position: relative;
+  display: inline-block;
+  padding: 4px;
+  font-size: 12px;
+  line-height: 12px;
+  border-radius: 2px;
+  overflow: hidden;
+
+  &.deletable {
+    cursor: pointer;
+
+    &:hover .delete-trigger {
+      right: 0;
+    }
+  }
+
+  .delete-trigger {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    transition: right 0.2s;
+  }
+
+  .no-ellipsis {
+    max-width: initial;
+  }
+}
+
+.label-no-hidden {
+  overflow: initial;
+}

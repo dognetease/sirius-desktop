@@ -1,0 +1,39 @@
+.empty-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+}
+.no-chat {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  .title {
+    padding-top: 16px;
+    font-size: 24px;
+    line-height: 32px;
+    color: $Text-5;
+  }
+  .content {
+    // color: #7d8085;
+    color: $Text-3;
+    padding-top: 12px;
+    line-height: 19px;
+  }
+}
+
+.no-chat-img {
+  width: 120px;
+  height: 120px;
+  background-image: url(../../../web/src/images/email_empty.png);
+  background-size: 100%;
+}
+
+.no-chat-text {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+  margin-top: 28px;
+}

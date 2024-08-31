@@ -1,0 +1,165 @@
+.job-edit {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .header {
+    flex-shrink: 0;
+    padding: 7px 0;
+
+    .back {
+      padding: 0 12px;
+      height: 32px;
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+
+      .back-text {
+        color: #262a33;
+        @include p1-4-med14();
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .body {
+    flex-grow: 1;
+    padding-top: 12px;
+    overflow-y: scroll;
+
+    .content {
+      width: 640px;
+      margin: 0 auto;
+
+      .title {
+        color: #262a33;
+        @include h3-med20();
+        margin-bottom: 8px;
+      }
+
+      .banner-quota {
+        min-height: 32px;
+        margin-bottom: 8px;
+      }
+
+      .sub-title {
+        color: $label-6_3;
+        @include c4-3-reg12();
+        margin-bottom: 16px;
+      }
+
+      .tip {
+        color: #a8aaad;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+
+      .form > :global(.ant-row) > :global(.ant-col.ant-form-item-label) {
+        position: absolute;
+        top: 0;
+        left: -200px;
+        width: 200px;
+        text-align: right;
+        padding-right: 14px;
+        margin-top: 6px;
+
+        &.form-item-receiver {
+          margin-top: 2px;
+        }
+      }
+
+      .form-item-receiver > :global(.ant-col.ant-form-item-label) {
+        margin-top: 2px !important;
+      }
+
+      .send-type:global(.ant-form-item) {
+        margin-bottom: 0;
+      }
+
+      .cron-send-tip {
+        color: #51555c;
+        margin-top: 4px;
+        cursor: pointer;
+      }
+
+      .send-tip {
+        margin-top: 4px;
+      }
+
+      .warning {
+        color: #f74f4f;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+      }
+
+      .template-params {
+        margin-bottom: 12px;
+      }
+
+      .template-params-warning {
+        margin-top: 4px;
+      }
+
+      .receiver {
+        margin-top: 4px;
+      }
+
+      :global(.ant-input),
+      :global(.ant-select),
+      :global(.ant-textarea),
+      :global(.ant-radio-wrapper) {
+        font-size: 12px;
+        line-height: 22px;
+      }
+
+      :global(.ant-radio-inner) {
+        width: 14px;
+        height: 14px;
+
+        &::after {
+          top: 2px;
+          left: 2px;
+        }
+      }
+
+      :global(.ant-form-item-label) {
+        line-height: 20px;
+        padding-bottom: 4px;
+      }
+
+      :global(.ant-form-item-label) label {
+        color: #51555c;
+        @include c4-1-reg12();
+      }
+
+      :global(.ant-form-item) {
+        position: relative;
+        margin-bottom: 16px;
+      }
+
+      :global(.ant-form-item-explain-error) {
+        position: absolute;
+        min-height: 16px;
+        @include c4-1-reg12();
+        left: 0;
+        bottom: -16px;
+      }
+    }
+  }
+
+  .footer {
+    padding: 20px 24px;
+    flex-shrink: 0;
+    text-align: right;
+
+    :global(.ant-btn) {
+      margin-right: 12px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

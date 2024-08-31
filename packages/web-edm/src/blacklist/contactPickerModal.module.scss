@@ -1,0 +1,23 @@
+@import '@/styles/varies.scss';
+
+.contact-picker-modal {
+  :global(.ant-modal-close) {
+    @include sirius-no-drag();
+  }
+}
+
+.p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+
+  text-align: justify;
+
+  color: #fe5b4c;
+}
+
+.input {
+  margin: 10px 0;
+  margin-top: -11px;
+}

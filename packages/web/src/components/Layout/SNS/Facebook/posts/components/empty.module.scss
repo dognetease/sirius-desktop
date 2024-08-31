@@ -1,0 +1,15 @@
+@import '@web-common/styles/variables.scss';
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  .img-box {
+    background: url(@/images/icons/facebook/empty.png) no-repeat center center;
+    width: 150px;
+    height: 150px;
+    background-size: 100%;
+  }
+}

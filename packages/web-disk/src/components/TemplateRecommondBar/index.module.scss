@@ -1,0 +1,166 @@
+@media screen and (min-width: 970px) and (max-width: 1200px) {
+  :global(.tp-tmplate-item:nth-child(1)) {
+    display: block;
+  }
+  :global(.tp-tmplate-item:nth-child(2)) {
+    display: block;
+  }
+  :global(.tp-tmplate-item:nth-child(3)) {
+    display: block;
+  }
+  :global(.tp-tmplate-item:nth-child(4)) {
+    display: none;
+  }
+}
+@media screen and (min-width: 740px) and (max-width: 970px) {
+  :global(.tp-tmplate-item:nth-child(1)) {
+    display: block;
+  }
+  :global(.tp-tmplate-item:nth-child(2)) {
+    display: block;
+  }
+  :global(.tp-tmplate-item:nth-child(3)) {
+    display: none;
+  }
+  :global(.tp-tmplate-item:nth-child(4)) {
+    display: none;
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 740px) {
+  :global(.tp-tmplate-item:nth-child(1)) {
+    display: block;
+  }
+  :global(.tp-tmplate-item:nth-child(2)) {
+    display: none;
+  }
+  :global(.tp-tmplate-item:nth-child(3)) {
+    display: none;
+  }
+  :global(.tp-tmplate-item:nth-child(4)) {
+    display: none;
+  }
+}
+
+/** 
+* unitable 左侧菜单栏展示情况下的媒体查询
+* 同等展示数量情况下：要求screen宽度统一增加100px
+*/
+
+@media screen and (min-width: 1070px) and (max-width: 1200px) {
+  .small-mode-layout {
+    :global(.tp-tmplate-item:nth-child(1)) {
+      display: block;
+    }
+    :global(.tp-tmplate-item:nth-child(2)) {
+      display: block;
+    }
+    :global(.tp-tmplate-item:nth-child(3)) {
+      display: block;
+    }
+    :global(.tp-tmplate-item:nth-child(4)) {
+      display: none;
+    }
+  }
+}
+@media screen and (min-width: 840px) and (max-width: 1070px) {
+  .small-mode-layout {
+    :global(.tp-tmplate-item:nth-child(1)) {
+      display: block;
+    }
+    :global(.tp-tmplate-item:nth-child(2)) {
+      display: block;
+    }
+    :global(.tp-tmplate-item:nth-child(3)) {
+      display: none;
+    }
+    :global(.tp-tmplate-item:nth-child(4)) {
+      display: none;
+    }
+  }
+}
+@media screen and (min-width: 0px) and (max-width: 840px) {
+  .small-mode-layout {
+    :global(.tp-tmplate-item:nth-child(1)) {
+      display: block;
+    }
+    :global(.tp-tmplate-item:nth-child(2)) {
+      display: none;
+    }
+    :global(.tp-tmplate-item:nth-child(3)) {
+      display: none;
+    }
+    :global(.tp-tmplate-item:nth-child(4)) {
+      display: none;
+    }
+  }
+}
+.small-mode-layout {
+  padding-left: 240px;
+}
+.templateRecommondBarContainer {
+  position: fixed;
+  bottom: 52px;
+  width: 100%;
+  z-index: 2;
+  .list-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    div + div {
+      margin-left: 21px;
+    }
+  }
+}
+.more-template {
+  position: relative;
+  width: 170px;
+  height: 200px;
+  margin-bottom: 16px;
+
+  > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding-top: 43px;
+    align-items: center;
+    flex-direction: column;
+    vertical-align: middle;
+    cursor: pointer;
+    background: #ffffff;
+    /* 颜色/描边分割线EBEBEB */
+    border: 0.5px solid $Fill-3;
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+    &:hover {
+      transform: translate(0, -4px);
+    }
+  }
+  img {
+    width: 118px;
+    height: 94px;
+  }
+
+  span {
+    margin-top: 6px;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: $label-6_3;
+  }
+
+  .close {
+    display: block;
+    margin-top: 0;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: -36px;
+    top: 0;
+    cursor: pointer;
+  }
+}

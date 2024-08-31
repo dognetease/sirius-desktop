@@ -1,0 +1,10 @@
+.file-picker {
+  :global(.ant-modal-body) {
+    padding: 4px 24px 0 24px !important;
+    max-height: none !important;
+  }
+
+  .file-card {
+    padding: 0;
+  }
+}

@@ -1,0 +1,128 @@
+.select {
+  height: 32px;
+
+  // :global {
+
+  //   .ant-select-selector .ant-select-selection-overflow-item {
+
+  //     &:nth-child(6n - 5) .ant-tag {
+  //       color: #4759B2;
+  //       background-color: #DEEBFD;
+  //     }
+
+  //     &:nth-child(6n - 4) .ant-tag {
+  //       color: #398E80;
+  //       background-color: #D6F7F1;
+  //     }
+
+  //     &:nth-child(6n - 3) .ant-tag {
+  //       color: #7A51CB;
+  //       background-color: #EDE4FF;
+  //     }
+
+  //     &:nth-child(6n - 2) .ant-tag {
+  //       color: #CC913D;
+  //       background-color: #FFF3E2;
+  //     }
+
+  //     &:nth-child(6n - 1) .ant-tag {
+  //       color: #CB493D;
+  //       background-color: #FFE5E2;
+  //     }
+
+  //     &:nth-child(6n) .ant-tag {
+  //       color: #4E5A70;
+  //       background-color: #E7EBF1;
+  //     }
+  //   }
+  // }
+}
+
+.option {
+  :global {
+    .ant-select-item-option {
+      padding-top: 8px;
+      &:first-child {
+        padding-top: 12px;
+      }
+    }
+
+    .ant-select-item-option-state {
+      display: none;
+    }
+
+    .ant-select-item {
+      background: #fff;
+    }
+    .ant-select-arrow {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &-input {
+    padding-left: 12px;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    &-real {
+      height: 32px;
+      margin: 0 8px;
+    }
+
+    &-suffix {
+      display: inline-flex;
+      align-items: center;
+      &-cancel {
+        color: $Text-5;
+        cursor: pointer;
+      }
+
+      &-ok {
+        color: $Brand-6;
+        cursor: pointer;
+        margin-right: 20px;
+      }
+
+      .disabled {
+        color: $Text-1;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &-add {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: $Brand-6;
+    user-select: none;
+    margin-left: 12px;
+    svg {
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+    }
+
+    span {
+      margin-left: 8px;
+      cursor: pointer;
+    }
+  }
+}
+
+.selectOverflow {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  :global {
+    span:nth-child(2) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import '@web-common/styles/variables.scss';
+
+.fb-post-filter {
+  padding: 12px 0px;
+  border-radius: 8px;
+  :global(.ant-form-item) {
+    margin-right: 12px;
+  }
+
+  input::-webkit-input-placeholder {
+    color: $Text-2;
+  }
+  :global {
+    .ant-input-affix-wrapper {
+      height: 36px;
+      border: 1px solid $Fill-3;
+      border-radius: 2px;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    .ant-form-item-control-input {
+      height: 36px;
+    }
+  }
+
+  .is-all-match-form-item {
+    display: inline-flex;
+    align-items: center;
+
+    :global(.ant-form-item) {
+      margin-right: 0;
+    }
+
+    :global(.ant-checkbox-inner) {
+      border-color: $label-6_2;
+    }
+
+    :global(.ant-checkbox + span) {
+      padding-left: 6px;
+      padding-right: 4px;
+      color: $Text-4;
+    }
+  }
+
+  :global(.ant-select-selector) {
+    border: 1px solid rgba(38, 42, 51, 0.11);
+  }
+}

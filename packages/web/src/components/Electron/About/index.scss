@@ -1,0 +1,116 @@
+@import 'src/styles/varies';
+.about-container {
+  min-width: 400px;
+  min-height: 300px;
+  background: #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(38, 42, 51, 0.2);
+  border-radius: 6px;
+  position: relative;
+  .about-close {
+    cursor: pointer;
+    position: absolute;
+    right: 27px;
+    top: 27px;
+    width: 16px;
+    height: 16px;
+  }
+  .about-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .logo {
+      margin-top: 56px;
+      width: 56px;
+      height: 56px;
+    }
+    .name {
+      margin-top: 24px;
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #000000;
+    }
+    .version {
+      margin-top: 8px;
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      color: rgba(38, 42, 51, 0.9);
+    }
+    .protocol-wrap {
+      margin-top: 48px;
+      display: flex;
+      align-items: center;
+      > span {
+        &:first-child {
+          margin-right: 32px;
+        }
+        cursor: pointer;
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height, or 133% */
+        text-align: center;
+        text-decoration-line: underline;
+        /* 主色/灵犀蓝 */
+        color: #386ee7;
+      }
+    }
+  }
+
+  .footer-wrap {
+    width: 100%;
+    .footer-content {
+      padding: 20px 0;
+      margin: 40px 24px 0;
+      display: flex;
+      border-top: 1px solid #ebedf2;
+      align-items: center;
+    }
+    .about-logo {
+      width: 79px;
+      height: 17px;
+    }
+
+    .about-links {
+      flex: 1;
+      text-align: right;
+      font-size: 10px;
+      color: #747a8c;
+      span {
+        padding: 0 5px;
+      }
+    }
+  }
+}
+
+.about-mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.no-mask {
+    top: $electron-title-bar-height;
+    background: #fff;
+    .about-container {
+      border-radius: 0 0 6px 6px;
+    }
+  }
+}
+
+.web-wm-entry {
+  z-index: 99;
+}

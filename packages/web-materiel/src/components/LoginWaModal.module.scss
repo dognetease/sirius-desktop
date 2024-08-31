@@ -1,0 +1,21 @@
+.login-wa-modal {
+  :global(.ant-modal-body) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .qr-code-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 238px;
+    height: 238px;
+
+    .error-msg {
+      color: $Text-5;
+      margin-bottom: 12px;
+    }
+  }
+}

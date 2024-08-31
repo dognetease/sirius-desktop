@@ -1,0 +1,224 @@
+@import '@web-common/styles/variables.scss';
+
+.container {
+  min-width: 862px;
+  min-height: 100%;
+  background-color: $Fill-2;
+  position: relative;
+
+  &-inner {
+    background: url('https://cowork-storage-public-cdn.lx.netease.com/common/2023/12/21/0b23ceef8c554b2993c3177c4a4832e7.png') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    height: 352px;
+  }
+
+  &-country {
+    max-width: 1014px;
+    padding: 0 90px 20px;
+    margin: 16px auto;
+  }
+
+  .countup {
+    margin-top: 16px;
+  }
+
+  &-list {
+    padding: 0 16px 16px;
+  }
+
+  .header {
+    max-width: 1014px;
+    padding: 80px 90px 0;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 36px;
+      color: #fff;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+  }
+}
+
+.peersSearch {
+  &-box {
+    position: absolute;
+    top: 261px;
+    width: 100%;
+
+    &-inner {
+      max-width: 1014px;
+      padding: 0 90px;
+      margin: 0 auto;
+
+      &-list {
+        max-width: 100%;
+        padding: 0;
+      }
+    }
+
+    :global {
+      .ant-form-item {
+        margin: 0 !important;
+        padding-right: 32px !important;
+      }
+    }
+
+    &-list {
+      position: relative;
+      top: auto;
+    }
+
+    .form {
+      // gap: 16px;
+      justify-content: space-between;
+      row-gap: 16px;
+
+      &-hide {
+        .countrySelect,
+        .relationCountrySelect,
+        .containsExpress,
+        .viewStatus,
+        .divider {
+          display: none;
+        }
+      }
+
+      &-list {
+        justify-content: normal;
+        flex-wrap: wrap;
+      }
+
+      .divider {
+        width: 100%;
+        border-top: dashed 1px #e1e3e8;
+      }
+
+      :global {
+        .ant-form-item-label {
+          label {
+            color: $Text-3 !important;
+          }
+        }
+
+        .ant-form-item {
+          padding-right: 32px !important;
+        }
+
+        .ant-checkbox-wrapper {
+          span {
+            color: $Text-5 !important;
+          }
+        }
+      }
+    }
+
+    .stowSpan {
+      width: 20%;
+      text-align: right;
+    }
+
+    .formOp {
+      width: auto;
+      margin-left: 0;
+
+      button {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.peersLoading {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 16px;
+  border-radius: 4px;
+}
+
+.peersTable {
+  padding: 4px 20px 20px;
+  border-radius: 4px;
+  border: 1px solid $Line-1;
+  background: #fff;
+  margin-top: 12px;
+}
+
+.bread {
+  background-color: $Fill-2;
+  padding-top: 16px;
+  padding-bottom: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+
+  :global {
+    .ant-breadcrumb-separator {
+      margin: 0 4px;
+      vertical-align: middle;
+    }
+
+    .ant-breadcrumb {
+      color: #1d2129;
+    }
+
+    .ant-breadcrumb a:hover {
+      color: $Avatar-6;
+    }
+  }
+}
+
+.wcaBanner {
+  height: 48px;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: url('../../../images/wca_banner.svg') no-repeat;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+
+  .icon {
+    width: 40px;
+    height: 24px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    // line-height: 18px;
+    border: 2px solid #fff;
+    font-weight: 400;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 24px;
+  }
+
+  .wcaText {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+  }
+}
+
+.latestData {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+
+  .icon {
+    margin-left: 16px;
+    line-height: 1px;
+    cursor: pointer;
+  }
+
+  > span {
+    color: $Avatar-6;
+  }
+}

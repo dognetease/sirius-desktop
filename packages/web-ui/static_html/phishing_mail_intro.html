@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>钓鱼邮件</title>
+    <style>
+        body, html {
+            padding: 0;
+            margin: 0;
+        }
+        /* 移动端 */
+        @media screen and (max-width: 500px) {
+            .info-content {
+                padding: 27px 20px 48px;
+            }
+            .banner {
+                height: 148px;
+                background: url('https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/09/07/5af36bed283f493a8b3ab24b9f8dff0f.png') no-repeat center;
+                background-size: 100% 100%;
+                position: relative;
+            }
+            .mail-img {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 115px;
+                height: 127px;
+                background: url('https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/09/07/0cd395c3907b4d4abb8ec44324dce123.png') no-repeat center;
+                background-size: 100% 100%;
+            }
+            .content {
+                position: absolute;
+                top: 32px;
+                left: 20px;
+                /* padding: 32px 0 0 20px; */
+                z-index: 10;
+            }
+            .example {
+                background: url('https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/09/08/8bb72e1715c1401389be594d8415fcde.png') no-repeat center;
+                background-size: 100% 100%;
+                width: 100%;
+                max-width: 335px;
+                height: 398px;
+            }
+        }
+        /* 桌面端 */
+        @media screen and (min-width: 500px) {
+            .out-wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .out-wrapper>div {
+                width: 100%;
+                max-width: 800px;
+                box-sizing: border-box;
+            }
+            .info-content {
+                padding: 27px 20px 24px;
+            }
+            .banner {
+                height: 148px;
+                background: url('https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/09/07/970d8eeda13a41bda9b774c428e8c7e2.png') no-repeat center;
+                background-size: 100% 100%;
+                position: relative;
+            }
+            .mail-img {
+                position: absolute;
+                top: 0;
+                right: 100px;
+                width: 127px;
+                height: 127px;
+                background: url('https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/09/19/15742752c93d4e348ce965286216ac6e.png') no-repeat center;
+                background-size: 100% 100%;
+            }
+            .content {
+                position: absolute;
+                top: 32px;
+                left: 83px;
+                /* padding: 32px 0 0 20px; */
+                z-index: 10;
+            }
+            .example {
+                background: url('https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/09/08/29b05eeda90e4e3eb2c03ac7fd7a2366.png') no-repeat center;
+                background-size: 100% 100%;
+                width: 100%;
+                max-width: 600px;
+                height: 360px;
+            }
+        }
+        .content-info {
+            margin-top: 10px;
+            color: #232D47;
+            font-family: 'PingFang SC';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .content-info-tips {
+            font-size: 14px;
+            font-weight: 400;
+        }
+        .alert-tag {
+            width: 44px;
+            height: 26px;
+            background: url('https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/09/07/2322608042fb4e2dae35f5d3eb0b879b.png') no-repeat center;
+            background-size: 100% 100%;
+        }
+        .part {
+            position: relative;
+        }
+        .part2 {
+            margin-top: 35px;
+        }
+        .img {
+            width: 48px;
+            height: 26px;
+        }
+        .part-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #232D47;
+            font-family: 'PingFang SC';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+        }
+        .split-line {
+            margin-top: 4px;
+            background: #4C6AFF;
+            border-radius: 1px;
+            width: 24px;
+            height: 4px;
+        }
+        .part-content {
+            margin-top: 24px;
+            font-family: 'PingFang SC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            text-align: justify;
+            /* 文字/Text-4 正文 */
+            color: #4E5A70;
+        }
+        .chapter {
+            margin-top: 24px;
+        }
+        .chapter-title {
+            font-family: 'PingFang SC';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #232D47;
+        }
+        .chapter-content {
+            margin-top: 8px;
+            font-family: 'PingFang SC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            text-align: justify;
+            color: #4E5A70;
+        }
+        .mark {
+            color: #FE5B4C;
+            font-weight: 500;
+        }
+        .mark1 {
+            display: inline-block;
+        }
+        .part3 {
+            margin-top: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .example-info {
+            font-family: 'PingFang SC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+            color: #A9B2C2;
+            margin-top: 12px;
+        }
+    </style>
+    <!-- 
+        banner-pc: https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/09/07/970d8eeda13a41bda9b774c428e8c7e2.png
+        banner-pcmail: https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/09/07/aa1d440c9fb44d8d851194022f621303.png
+        banner-phonemail: https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/09/07/0cd395c3907b4d4abb8ec44324dce123.png
+        banner-phone: https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/09/07/5af36bed283f493a8b3ab24b9f8dff0f.png
+        alert: https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/09/07/2322608042fb4e2dae35f5d3eb0b879b.png
+        example-pc: https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/09/08/29b05eeda90e4e3eb2c03ac7fd7a2366.png
+        example-phone: https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/09/08/8bb72e1715c1401389be594d8415fcde.png
+        01: https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/09/08/dd5e9c9f1f3242919599630244697376.png
+        02: https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/09/08/e71e2ef88070416d953d82d04d267f0b.png
+     -->
+</head>
+<body>
+    <div class="out-wrapper">
+        <div class="banner">
+            <div class="mail-img"></div>
+            <div class="content">
+                <div class="alert-tag"></div>
+                <div class="content-info">
+                    <div>该邮件疑似钓鱼邮件! </div>
+                    <div class="content-info-tips">请谨慎识别，不要轻易泄漏账号密码信息。</div>
+                </div>
+            </div>
+        </div>
+        <div class="info-content">
+            <div class="part">
+                <div class="part-title">
+                    <img class="img" src="https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/09/08/dd5e9c9f1f3242919599630244697376.png" alt="">
+                    <div>什么是钓鱼邮件</div>
+                    <div class="split-line"></div>
+                </div>
+                <div class="part-content">
+                    钓鱼邮件是指利用电子邮件欺骗收件人将账号、密码等信息回复给指定的接收者；或引导收件人点击网页链接（如伪装的网上银行登录页）并输入银行卡号码、账户名称及密码等信息，从而造成隐私信息泄露或直接经济损失。
+                </div>
+            </div>
+            <div class="part part2">
+                <div class="part-title">
+                    <img class="img" src="https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/09/08/e71e2ef88070416d953d82d04d267f0b.png" alt="">
+                    <div>怎么识别钓鱼邮件</div>
+                    <div class="split-line"></div>
+                </div>
+                <div class="part-content">
+                    经系统识别，该邮件疑似钓鱼邮件，建议您仔细核查、提高警惕。您可以通过以下方式核实是否为钓鱼邮件:
+                </div>
+                <div class="chapter">
+                    <div class="chapter-title">
+                        1.看发信地址
+                    </div>
+                    <div class="chapter-content">
+                        钓鱼邮件常通过不易识别的错误拼写骗取收件人信任。如钓鱼邮件的发信地址是admin@off<span class="mark mark1">l</span>ce163com，而实际企业的真实域名是@off<span class="mark mark1">i</span>ce163com。
+                    </div>
+                </div>
+                <div class="chapter">
+                    <div class="chapter-title">
+                        2.看邮件标题及附件
+                    </div>
+                    <div class="chapter-content">
+                        典型的钓鱼邮件标题通常包含“<span class="mark">邮件投递失败、邮箱账号密码到期、邮箱容量上限、新冠防疫时事</span>”等，遇到这类邮件，尤其需要警惕、核实其他细节内容。在下载邮件附件前，应仔细检查附件文件名和格式，不要因好奇下载可疑附件。
+                    </div>
+                </div>
+                <div class="chapter">
+                    <div class="chapter-title">
+                        3.看正文内容及措辞
+                    </div>
+                    <div class="chapter-content">
+                        正文中包含<span class="mark">链接或二维码</span>、或<span class="mark">索要登录账号密码</span>等隐私信息，一定要提高警惕，通过邮件点开的网址<span class="mark">不要轻易输入个人隐私信息</span>。对通过“<span class="mark">紧急、失效、重要、尽快</span>"等词制造紧急气氛的邮件需谨慎辨别，不要忙中犯错。
+                    </div>
+                </div>
+            </div>
+            <div class="part3">
+                <div class="example"></div>
+            </div>
+            <div class="example-info">
+                — 疑似钓鱼邮件案例 —
+            </div>
+        </div>
+    </div>
+</body>
+</html>

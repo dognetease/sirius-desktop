@@ -1,0 +1,115 @@
+.preminum-modal {
+  .orders {
+    display: flex;
+    justify-content: center;
+  }
+
+  .order {
+    width: 300px;
+    padding: 24px;
+    border-radius: 8px;
+
+    .title {
+      display: flex;
+      align-items: center;
+      @include h1-4-med16();
+    }
+
+    .title-label {
+      padding: 4px 8px;
+      width: 40px;
+      @include c4-1-reg12();
+      border-radius: 12px;
+      margin-left: 4px;
+    }
+
+    .sub-title {
+      @include c4-3-reg12();
+      margin-bottom: 12px;
+    }
+
+    .price {
+      display: flex;
+      align-items: flex-end;
+      @include c4-1-reg12();
+    }
+
+    .price-num {
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 36px;
+      transform: translateY(5px);
+    }
+
+    .content {
+      padding-top: 20px;
+      border-top-width: 1px;
+      border-top-style: solid;
+      margin-top: 20px;
+    }
+
+    .content-item {
+      display: flex;
+      align-items: center;
+      @include p1-3-reg14();
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .content-icon {
+        width: 16px;
+        margin-right: 8px;
+        flex-shrink: 0;
+      }
+
+      .content-text {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  .free {
+    color: #232d47;
+    background-color: $Brand-1;
+    margin-right: 24px;
+
+    .sub-title {
+      color: #a9b2c2;
+    }
+
+    .content {
+      border-color: #e1e6ed;
+    }
+
+    .content-item-disabled {
+      color: $label-6_3;
+    }
+  }
+
+  .preminum {
+    color: #ffffff;
+    background-color: $Brand-6;
+
+    .title-label {
+      color: $Brand-6;
+      background-color: #ffffff;
+    }
+
+    .sub-title {
+      color: #ffffff;
+    }
+
+    .content {
+      border-top-color: rgba(#ffffff, 0.2);
+    }
+  }
+
+  .tip {
+    color: #7a8599;
+    @include p1-3-reg14();
+    text-align: center;
+    margin-top: 28px;
+  }
+}

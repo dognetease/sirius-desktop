@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charSet="utf-8"/>
+    <meta httpEquiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+</head>
+<body style="width: 100%; margin: 0; padding: 0;" th:object="${data}">
+     <style type="text/css" th:inline="css">
+        #disk-expansion-application-wrap{
+          display: block;
+          width: 100%;
+          margin: 0 auto;
+          max-width: 750px;
+        }
+        #disk-expansion-application-wrap .wrap-header{
+          padding: 0 16px;
+          overflow: hidden;
+        }
+        #disk-expansion-application-wrap .wrap-header .header-icon{
+          margin-top: 24px;
+          width: 200px;
+        }
+        #disk-expansion-application-wrap .wrap-content{
+          padding: 0 16px;
+          margin-top: 46px;
+          overflow: hidden;
+        }
+        #disk-expansion-application-wrap .wrap-content .content-image{
+          width: 138px;
+          height: 72px;
+          margin: 0 auto;
+        }
+        #disk-expansion-application-wrap .wrap-content .content-image img{
+          width: 100%;
+        }
+        #disk-expansion-application-wrap .wrap-content .content-title{
+          font-size: 20px;
+          color: #232D47;
+          margin: 27px auto 0;
+          text-align: center;
+          font-weight: 500;
+        }
+        #disk-expansion-application-wrap .wrap-content .content-desc{
+          margin: 0 auto;
+          margin-top: 12px;
+          font-size: 14px;
+          line-height: 22px;
+          color: #232D47;
+        }
+        /* #disk-expansion-application-wrap .wrap-content .content-desc .content-txt{
+          margin: 0;
+          padding: 0;
+        } */
+        #disk-expansion-application-wrap .wrap-content .content-desc .content-email{
+          font-weight: 500;
+        }
+        #disk-expansion-application-wrap .wrap-content .content-desc .content-mail-color{
+          color: #4C6AFF !important;
+          text-decoration: none !important;
+        }
+        #disk-expansion-application-wrap .wrap-content .content-desc .content-mail-color a{
+          color: #4C6AFF !important;
+          text-decoration: none !important;
+        }
+     </style>
+    <div id="disk-expansion-application-wrap">
+      <div class="wrap-header">
+        <img src="https://cowork-storage-public-cdn.lx.netease.com/common/2022/11/03/a008d65d71a543ff9607f5d633fe54ee.png" class="header-icon" />
+      </div>
+      <div class="wrap-content">
+        <div class="content-image">
+          <img src="https://cowork-storage-public-cdn.lx.netease.com/common/2022/11/03/94d18f2981554739b8d8e1ea5ae6b92d.png" />
+        </div>
+        <div class="content-title">云文档扩容申请</div>
+        <div class="content-desc">
+          <div class="content-txt">
+            <span>管理员您好，</span>
+            <span class="content-email" th:text="${data.userNickname}"></span><span class="content-email">（ <span class="content-email content-mail-color" th:text="${data.userEmail}"></span>） </span>正在使用灵犀办公企业空间/个人空间存储重要的工作文件，当前空间容量不足，申请扩容。</div>
+          <div class="content-txt content-txt2">你可联系客服邮箱:<span class="content-email content-mail-color">kf@office.163.com</span>咨询企业云文档容量使用情况及付费申请扩容。</div>
+        </div>
+      </div>
+    </div>        
+</body>
+</html>

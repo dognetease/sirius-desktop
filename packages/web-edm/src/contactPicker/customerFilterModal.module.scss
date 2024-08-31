@@ -1,0 +1,53 @@
+.customer-filter-modal {
+  max-width: '100%';
+  top: 40px !important;
+  :global(.ant-modal-header) {
+    border-bottom: none;
+  }
+  :global(.ant-modal-body) {
+    padding: 12px 0 20px;
+  }
+  :global(.ant-tabs-tabpane) {
+    padding: 20px 24px 0;
+  }
+  :global(.ant-tabs-nav) {
+    padding: 0 24px;
+  }
+  :global(.ant-tabs-top > .ant-tabs-nav::before) {
+    border-bottom: 1px solid #f0f3f5;
+  }
+  :global(.ant-form-item-control-input-content) {
+    display: flex;
+  }
+  :global(.ant-form-item-label) label {
+    height: 20px;
+    margin-bottom: 8px;
+  }
+  :global(.ant-form-item-label) label,
+  :global(.ant-form-item-control-input-content) > div {
+    font-size: 12px;
+    color: #7a8599;
+  }
+  :global(.ant-form-item) {
+    margin-bottom: 20px;
+  }
+  .action-group {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 8px;
+    padding: 0 24px;
+    :global(.ant-btn-link) {
+      border: none;
+      padding: 0;
+      color: #4c6aff;
+      min-width: auto;
+      width: auto;
+      height: auto;
+      font-size: 12px;
+      line-height: 20px;
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+}

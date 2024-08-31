@@ -1,0 +1,35 @@
+.avatar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .avatar-inner {
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .platform {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+  }
+
+  .close {
+    display: none;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &:hover .close {
+    display: block;
+  }
+
+  &.close-always .close {
+    display: block;
+  }
+}

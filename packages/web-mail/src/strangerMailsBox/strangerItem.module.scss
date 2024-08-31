@@ -1,0 +1,77 @@
+.strangerItem {
+  border-radius: 6px;
+  width: 264px;
+  padding-top: 16px;
+  background: white;
+  box-sizing: border-box;
+  cursor: pointer;
+  &:hover {
+    background: rgba($Text-3-r, $Text-3-g, $Text-3-b, 0.08);
+  }
+  &.blue {
+    background: rgba($Link-2-r, $Link-2-g, $Link-2-b, 0.6);
+    .opts {
+      > span {
+        background: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+
+  .itemContent {
+    margin-bottom: 14px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    .headPic {
+      margin-right: 12px;
+    }
+    .msg {
+      flex: 1;
+      overflow: hidden;
+      .name {
+        width: 100%;
+        margin-bottom: 2px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color: #262a33;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      .email {
+        width: 100%;
+        margin-bottom: 0;
+        font-size: 12px;
+        line-height: 16px;
+        color: #7d8085;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+  .opts {
+    padding: 6px 0 6px 0;
+    border-top: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+    text-align: right;
+    > span {
+      margin: 0 8px;
+      padding: 2px 12px;
+      font-size: 12px;
+      line-height: 16px;
+      color: #262a33;
+      background: #f4f4f5;
+      border-radius: 4px;
+      text-align: center;
+      cursor: pointer;
+      &:hover {
+        color: #386ee7;
+      }
+    }
+  }
+}
+
+:global(.lang-en .priority-item-list > span) {
+  padding: 2px 6px !important;
+}

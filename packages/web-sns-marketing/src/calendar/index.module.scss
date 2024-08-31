@@ -1,0 +1,37 @@
+.page {
+  position: relative;
+  height: 100%;
+  padding-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 20px 20px 16px;
+  color: $Text-5;
+  @include h1-4-med16();
+}
+.search-box {
+  padding: 0 16px 16px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $Line-2;
+}
+
+.calendar-wrapper {
+  flex: 1;
+  padding: 0px 20px;
+  // overflow: hidden auto;
+}
+
+.account-selector {
+  width: 160px;
+
+  :global(.ant-select-selection-overflow) {
+    min-height: 28px;
+  }
+}
+
+:global(.fc .fc-popover) {
+  z-index: 998;
+}

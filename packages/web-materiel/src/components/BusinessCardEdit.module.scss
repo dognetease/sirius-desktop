@@ -1,0 +1,62 @@
+.business-card-edit {
+  :global(.ant-modal-body) {
+    padding: 0 20px 0 0 !important;
+    max-height: none !important;
+  }
+
+  .form > :global(.ant-row) {
+    padding-left: 20px;
+    width: 50%;
+    display: inline-flex;
+  }
+
+  .form :global {
+    .ant-form-item {
+      margin-bottom: 24px;
+    }
+
+    .ant-form-item-label {
+      padding-bottom: 2px;
+    }
+
+    .ant-form-item-label label {
+      color: $Text-3;
+    }
+
+    .ant-form-item-with-help {
+      margin-bottom: 0;
+    }
+
+    .ant-form-item-explain,
+    .ant-form-item-extra {
+      font-size: 12px;
+      min-height: 20px;
+    }
+  }
+
+  .row {
+    width: 100% !important;
+  }
+
+  .avatar-img {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border: 1px solid $Line-3;
+    border-radius: 50%;
+    margin: 8px 12px 8px 0;
+  }
+
+  .avatar-empty {
+    width: 56px;
+    height: 56px;
+    border: 1px solid $Line-3;
+    border-radius: 50%;
+    background-color: $Fill-2;
+    margin: 8px 12px 8px 0;
+  }
+
+  .checkbox {
+    color: $Text-4;
+  }
+}

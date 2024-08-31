@@ -1,0 +1,86 @@
+.page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden auto;
+  padding: 20px 16px;
+  background: $Fill-2;
+}
+
+.header {
+  margin-bottom: 16px;
+  color: $Text-5;
+  @include h1-4-med16();
+}
+.search-box {
+  padding: 0 0 12px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $Line-2;
+}
+
+.notice {
+  font-size: 12px;
+  line-height: 20px;
+  padding: 6px 12px;
+  border: none;
+  background: $Warning-1;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.table-wrapper {
+  position: relative;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid $Line-2;
+  border-radius: 4px;
+}
+
+.lx-number {
+  font-family: 'LX-numbers';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: $Text-5;
+}
+.btn-group {
+  display: flex;
+  gap: 12px;
+
+  a:not(:last-child) {
+    position: relative;
+    padding-right: 12px;
+    white-space: nowrap;
+
+    &::after {
+      position: absolute;
+      top: 4px;
+      right: 0;
+      content: '';
+      padding-left: 12px;
+      width: 0;
+      height: 14px;
+      border-right: 1px solid $Line-3;
+    }
+  }
+}
+
+.post-error-tip {
+  color: $Error-6;
+  :global(.sirius-icon) {
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    vertical-align: -0.125em;
+    background-size: 16px;
+  }
+}
+
+.status-tag {
+  min-width: 48px;
+}
+
+.showmorebtn {
+  white-space: nowrap;
+}

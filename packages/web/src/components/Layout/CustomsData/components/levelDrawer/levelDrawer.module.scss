@@ -1,0 +1,6 @@
+@import '@web-common/styles/variables.scss';
+.level-drawer {
+  :global(.ant-drawer-content-wrapper) {
+    box-shadow: none !important;
+  }
+}

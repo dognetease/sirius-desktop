@@ -1,0 +1,106 @@
+@import '@web-common/styles/variables.scss';
+
+// 邮件签名样式
+.mail-sign-item {
+  max-width: 632px;
+  border: 1px solid $Fill-3;
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &-left {
+    // width: 430px;
+    max-width: 390px;
+    overflow-y: auto;
+    img {
+      max-width: 100%;
+    }
+    & * {
+      word-break: break-all;
+      white-space: normal;
+    }
+    .mail-sign-item-box {
+      display: flex;
+      &-left {
+        margin-right: 12px;
+      }
+      &-right {
+      }
+    }
+  }
+
+  // hover
+  &:hover {
+    .mail-sign-item-right {
+      .mail-sign-item-right-tag {
+        display: none;
+      }
+      .mail-sign-item-right-action-box {
+        display: flex;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &-right {
+    display: flex;
+    width: 160px;
+    margin-left: 16px;
+    flex-shrink: 0;
+    justify-content: flex-end;
+    &-tag {
+      padding: 2px 6px;
+      // width: 60px;
+      // height: 20px;
+      background: $Link-1;
+      border-radius: 2px;
+      color: $Avatar-6;
+      text-align: center;
+      display: inline-block;
+      flex-shrink: 0;
+      white-space: nowrap;
+      @include c4-1-reg12();
+    }
+    &-action-box {
+      display: none;
+      align-items: center;
+      font-size: 14px;
+      margin-right: 8px;
+      & > div {
+        cursor: pointer;
+      }
+      .mail-sign-item-delete {
+        color: #f74f4f;
+        margin-right: 16px;
+        white-space: nowrap;
+      }
+      .mail-sign-item-edit {
+        color: #7a8599;
+        margin-right: 16px;
+        white-space: nowrap;
+        font-weight: 400;
+      }
+      .mail-sign-item-default {
+        color: #7a8599;
+        white-space: nowrap;
+        font-weight: 400;
+      }
+    }
+  }
+  &-name {
+    color: #232d47;
+    font-style: normal;
+    @include p1-4-med14();
+  }
+  &-info {
+    font-style: normal;
+    @include font-size(400, 12px, 20px);
+    color: #7a8599;
+  }
+}
+
+.docIframe {
+  border: none;
+}

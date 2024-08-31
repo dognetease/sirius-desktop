@@ -1,0 +1,83 @@
+.employeeRankCard {
+  width: 100%;
+  height: 100%;
+  overflow-y: overlay;
+  padding-top: 28px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  :global {
+    .edm-table .ant-table {
+      border: 0px;
+      border-radius: 0px;
+    }
+    .ant-tooltip-content .ant-tooltip-arrow {
+      display: block !important;
+    }
+
+    .ant-tooltip-content {
+      background: rgba(0, 0, 0, 0.8) !important;
+    }
+  }
+
+  .tableNameGroup {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    .name {
+      max-width: 86px;
+      @include p1-3-reg14();
+      color: $Text-5;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-left: 10px;
+    }
+    .userIconWrap {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 14px;
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+  }
+
+  .tableValueGroup {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: $Text-5;
+    &:hover {
+      color: $Brand-6;
+    }
+    &.normalHover:hover {
+      color: $Text-5;
+    }
+    .topRankIconWrapper {
+      margin-left: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    span {
+      font-family: 'LX-numbers';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+}
+
+.ghostTools {
+  margin-right: 8px;
+}

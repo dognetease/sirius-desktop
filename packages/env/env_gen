@@ -1,0 +1,57 @@
+#!/usr/bin/env node
+const shell = require('shelljs');
+const packInfo = require('./../electron/package.json');
+const edmWebVersion = require('./../web-entry-wm/package.json');
+// const path = require('path');
+let stage = 'local';
+let platform = 'web';
+if (process.argv && process.argv.length > 1) {
+  stage = (process.argv.length === 3 ? process.argv[1] : process.argv[2]) || stage;
+  platform = (process.argv.length === 3 ? process.argv[2] : process.argv[3]) || platform;
+}
+console.log('----- build for ----- ' + stage + ' ' + platform);
+const shouldOverWriteVersion = true;
+const isEdm = stage.includes('edm');
+const isWeb = platform === 'web';
+let version;
+if (!isWeb) {
+  if (isEdm) {
+    version = packInfo.edmVersion;
+  } else {
+    version = packInfo.version;
+  }
+} else {
+  if (isEdm) {
+    version = edmWebVersion.version;
+  } else {
+    version = packInfo.version;
+  }
+}
+if (!version) {
+  version = '0.0.1';
+}
+const isWin = process.platform === 'win32';
+const platformFlag = !isWin
+  ? {
+      web: 'build_for=web',
+      win: 'build_for=electron os=win',
+      mac: 'build_for=electron os=mac',
+      win32: 'build_for=electron os=win32',
+    }
+  : {
+      web: 'build_for=web',
+      win: 'build_for=electron$os=win$is_msi_build=true',
+      mac: 'build_for=electron$os=mac',
+      win32: 'build_for=electron$os=win32$is_msi_build=true',
+    };
+
+const flag = platformFlag[platform] + (shouldOverWriteVersion && version ? (!isWin ? ' version=' + version : '$version=' + version) : '');
+const cmd = !isWin
+  ? `build_env '${flag}' ${stage} --implFileName '' --exportScan './src/gen/' --indexFileName 'index' --envFileName 'gen/env.ts'`
+  : `build_env '${flag}' ${stage} --implFileName  --exportScan ./src/gen/ --indexFileName index --envFileName gen/env.ts`;
+shell.exec('yarn prepare');
+shell.echo('run command : ' + cmd);
+shell.exec(cmd);
+
+shell.exec('yarn compile');
+shell.exec('mkdir -p ../web-ui/api_dist');

@@ -1,0 +1,145 @@
+.container {
+  position: relative;
+  padding: 24px;
+  height: 100%;
+  min-width: 852px;
+  min-height: 640px;
+  overflow-y: auto;
+  background-color: #f9fafb;
+
+  .title {
+    @include h4-med24();
+    color: #232d47;
+    margin-top: 8px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .sub-title {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #9fa2ad;
+    margin-left: 8px;
+    > a {
+      margin-left: 4px;
+      > svg {
+        margin-left: 2px;
+        vertical-align: text-top;
+      }
+    }
+  }
+  .video-tip {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    color: $Brand-6;
+    @include c4-1-reg12;
+    cursor: pointer;
+    span {
+      margin-left: 4px;
+    }
+  }
+
+  .tip {
+    padding: 0 12px;
+    height: 44px;
+    margin-bottom: 12px;
+    background: rgba(255, 181, 76, 0.1);
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 44px;
+    color: #272e47;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & > * {
+      display: flex;
+      align-items: center;
+    }
+    .warning {
+      display: inline-block;
+      margin-top: 12px;
+      margin-left: 12px;
+    }
+  }
+
+  .tabs {
+    margin-bottom: 16px;
+
+    // 不覆盖子组件的tab样式
+    & > :global(.ant-tabs-nav) {
+      :global(.ant-tabs-ink-bar) {
+        display: none;
+      }
+
+      :global(.ant-tabs-tab) {
+        padding: 5px 16px;
+        color: #7a8599;
+        @include p1-3-reg14();
+        border-radius: 16px;
+      }
+
+      :global(.ant-tabs-tab) + :global(.ant-tabs-tab) {
+        margin: 0 0 0 12px;
+      }
+
+      :global(.ant-tabs-tab-active) {
+        background-color: $Brand-6;
+      }
+
+      :global(.ant-tabs-tab-active) :global(.ant-tabs-tab-btn) {
+        color: #ffffff !important;
+        font-weight: 400;
+        text-shadow: none;
+      }
+    }
+  }
+
+  .operations {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+
+    .left {
+      flex-shrink: 0;
+      margin-right: 16px;
+    }
+
+    .right {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      overflow: auto;
+
+      :global(.address-book-sync-tip) {
+        margin-right: 16px;
+        overflow: auto;
+
+        span {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+
+  .lx-contacts-sync {
+    border: none;
+    background: rgba(214, 230, 252, 0.5);
+    border-radius: 4px;
+    @include c4-3-reg12();
+    color: $Text-5;
+    margin-bottom: 12px;
+
+    &-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

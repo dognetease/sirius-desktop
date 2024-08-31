@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+
+  .accountSelect {
+    width: 200px;
+    margin-left: 10px;
+  }
+
+  :global .ant-select-single .ant-select-selector .ant-select-selection-item {
+    line-height: 1;
+  }
+
+  .platformAll {
+    &.actived {
+      border-color: #4c6aff;
+      background-color: #4c6aff;
+      color: #fff;
+    }
+  }
+
+  .platformItem {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e1e3e8;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+
+    &.actived {
+      border-color: #4c6aff;
+      // background-color: #4c6aff;
+    }
+  }
+}

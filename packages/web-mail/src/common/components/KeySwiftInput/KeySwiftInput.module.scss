@@ -1,0 +1,14 @@
+@import '@/styles/varies.scss';
+
+.error {
+  border: 1px solid var(--error-6, #fe5b4c);
+
+  color: var(--error-6, #fe5b4c);
+
+  &:hover {
+    border: 1px solid var(--error-6, #fe5b4c);
+  }
+  &:focus {
+    border: 1px solid var(--error-6, #fe5b4c);
+  }
+}

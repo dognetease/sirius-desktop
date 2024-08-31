@@ -1,0 +1,19 @@
+.my-clue-wrap {
+  // position: relative;
+  .tabs-top {
+    margin-top: 16px;
+  }
+  .empty-list-body {
+    width: auto !important;
+  }
+  .table-wrap {
+    margin-top: 16px;
+  }
+}
+.company-name {
+  cursor: pointer;
+  color: #386ee7;
+  &:hover {
+    color: #386ee7;
+  }
+}

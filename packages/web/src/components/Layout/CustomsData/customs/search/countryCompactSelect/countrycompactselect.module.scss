@@ -1,0 +1,239 @@
+@import '@web-common/styles/variables.scss';
+
+.changeCountry {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  min-width: 66px;
+  display: block;
+  /* identical to box height, or 157% */
+
+  /* 常用/Brand-6 常规 */
+
+  color: $Avatar-6;
+  cursor: pointer;
+}
+
+.modalContent {
+  height: 494px;
+  margin-left: -24px;
+  margin-right: -24px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.continent {
+  margin-top: 12px;
+  margin-bottom: 24px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  .list {
+    margin-top: 8px;
+
+    .item {
+      overflow: hidden;
+      height: 38px;
+      line-height: 38px;
+      background: #f9fafb;
+      border-radius: 4px;
+      font-weight: 400;
+      font-size: 14px;
+      color: $Text-5;
+      align-items: center;
+      display: flex;
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+
+      &:not(.item-select):hover {
+        background: $Brand-1;
+      }
+
+      &-select {
+        background: $Avatar-6;
+        color: #ffffff;
+      }
+
+      .name {
+        width: 93px;
+        word-break: keep-all;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      i {
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-left: 12px;
+        margin-right: 8px;
+        border-radius: 50%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+
+        &.universal {
+          background-image: url(./universal.svg);
+          background-color: #f9fafb;
+        }
+      }
+
+      .closeIcon {
+        position: absolute;
+        height: 16px;
+        right: 12px;
+        text-align: center;
+        line-height: 16px;
+      }
+    }
+  }
+}
+
+.country {
+  &-chinese {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    line-height: 30px;
+    background-color: #f4f6f7;
+    padding: 0 8px;
+    border-radius: 2px;
+    color: #4c6aff;
+    cursor: pointer;
+  }
+
+  &-text {
+    width: 100%;
+    overflow: hidden;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &-close {
+    height: 24px;
+    margin-left: 5px;
+  }
+}
+
+.follow-title {
+  margin-bottom: 8px;
+
+  .tail {
+    float: right;
+    display: flex;
+    align-items: center;
+
+    .addCou {
+      display: flex;
+      align-items: center;
+
+      > svg {
+        margin-right: 8px;
+      }
+    }
+
+    > div {
+      color: $Avatar-6;
+      opacity: 0.9;
+      cursor: pointer;
+
+      &:first-child {
+        margin-right: 24px;
+      }
+    }
+  }
+}
+
+.searchInput {
+  background: #f9fafb;
+  border-radius: 2px;
+  border: none !important;
+  height: 44px;
+  line-height: 44px;
+
+  :global {
+    input {
+      background: #f9fafb;
+
+      &::placeholder {
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.modal {
+  :global {
+    .ant-modal-header {
+      border-bottom: none;
+    }
+
+    .ant-modal-footer {
+      border-top: none;
+    }
+
+    .ant-input-prefix {
+      margin-right: 8px;
+      margin-left: 8px;
+    }
+
+    .ant-modal-body {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .tab {
+    :global {
+      .ant-checkbox-wrapper {
+        display: flex;
+        align-items: center;
+
+        .ant-checkbox {
+          top: 0;
+        }
+      }
+
+      .ant-tabs-tab-btn {
+        color: $Text-3;
+      }
+
+      .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn,
+      .ant-tabs-tab:hover {
+        color: $Avatar-6;
+      }
+
+      .ant-tabs-ink-bar {
+        background-color: $Avatar-6;
+      }
+
+      .ant-tabs-nav {
+        margin: 0 0 12px 0;
+
+        .ant-tabs-nav-wrap {
+          .ant-tabs-tab {
+            padding-bottom: 4px;
+            line-height: 20px;
+          }
+        }
+      }
+
+      .ant-tabs-ink-bar {
+        transform: scale(0.25, 1);
+      }
+    }
+  }
+}
+
+.countryTitle {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000000;
+}

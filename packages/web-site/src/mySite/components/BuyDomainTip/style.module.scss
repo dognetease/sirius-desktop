@@ -1,0 +1,17 @@
+.tip {
+  padding: 0 12px;
+  height: 32px;
+  margin-bottom: 12px;
+  background: #edf0ff;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 32px;
+  color: #272e47;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  & > * {
+    display: flex;
+    align-items: center;
+  }
+}

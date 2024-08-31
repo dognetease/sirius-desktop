@@ -1,0 +1,134 @@
+.sync-entry {
+  display: inline-flex;
+  align-items: center;
+  color: $Text-5;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  cursor: pointer;
+
+  .text {
+    margin-left: 4px;
+  }
+}
+
+.sync-tip {
+  display: inline-flex;
+  align-items: center;
+  color: $Text-2;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+
+  .icon {
+    flex-shrink: 0;
+  }
+
+  .text {
+    margin-left: 4px;
+  }
+}
+
+.guide-popover {
+  z-index: 900;
+
+  :global {
+    .ant-popover-content {
+      max-width: 322px;
+    }
+
+    .ant-popover-arrow {
+      opacity: 1 !important;
+    }
+
+    .ant-popover-inner {
+      padding: 16px;
+    }
+
+    .ant-popover-title {
+      min-height: auto;
+      color: $Text-5;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 22px;
+      margin-bottom: 8px;
+    }
+  }
+
+  .guide-content {
+    .guide-body {
+      color: $Text-5;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      margin-bottom: 12px;
+    }
+  }
+
+  .guide-footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.config-popover {
+  z-index: 900;
+
+  :global {
+    .ant-popover-content {
+      max-width: 376px;
+    }
+
+    .ant-popover-arrow {
+      opacity: 1 !important;
+    }
+
+    .ant-popover-inner {
+      padding: 20px;
+    }
+
+    .ant-popover-title {
+      min-height: auto;
+      color: $Text-5;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .config-content {
+    .config-body {
+      color: $Text-3;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .config-footer {
+    display: flex;
+    align-items: center;
+    color: $Text-5;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+
+    .text {
+      margin-right: 4px;
+    }
+
+    .icon {
+      margin-right: 8px;
+    }
+
+    :global(.anticon) {
+      vertical-align: 0;
+      top: -1px;
+    }
+  }
+}

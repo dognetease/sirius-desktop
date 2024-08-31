@@ -1,0 +1,219 @@
+@import '@web-common/styles/variables.scss';
+
+.container {
+  position: relative;
+  min-height: 100%;
+  background: $Fill-1;
+  min-width: 852px;
+  margin-top: 12px;
+}
+
+.header {
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #f0f1f5;
+  border-radius: 4px;
+}
+
+.headerCompany {
+  margin-right: 4px;
+  cursor: pointer;
+  color: #4c6aff;
+}
+
+.headerDesc {
+  color: #272e47;
+}
+
+.headerTag {
+  padding: 2px 6px;
+  margin-left: 8px;
+  background-color: #fe6c5e;
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  border-radius: 2px;
+}
+
+.info {
+  display: flex;
+  margin-top: 12px;
+}
+
+.group {
+  display: flex;
+  margin-right: 16px;
+}
+
+.isOpacity {
+  opacity: 0.6;
+}
+.isOpacityColor {
+  color: #8c8888d9;
+}
+
+.tableHeader {
+  color: #272e47;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  :global {
+    .ant-radio-button-wrapper {
+      height: 28px;
+      font-size: 12px;
+      line-height: 26px;
+      font-weight: normal;
+
+      &:hover {
+        color: $Brand-6;
+      }
+
+      &:first-child {
+        border-radius: 4px 0px 0px 4px;
+      }
+
+      &:last-child {
+        border-radius: 0px 4px 4px 0px;
+      }
+    }
+
+    .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+      color: $Brand-6;
+      border-color: $Brand-6;
+
+      &:hover {
+        color: $Brand-6;
+        border-color: $Brand-6;
+      }
+
+      &:first-child {
+        border-color: $Brand-6;
+      }
+    }
+  }
+}
+
+.label {
+  font-size: 14px;
+  line-height: 22px;
+  color: #747a8c;
+}
+
+.labelValue {
+  font-size: 14px;
+  line-height: 22px;
+  color: #272e47;
+}
+
+.companyDescWrapper {
+  position: relative;
+  .companyDesc {
+    max-width: 400px;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  .fissionTranslate {
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 22px;
+    height: 22px;
+  }
+  &:hover {
+    .fissionTranslate {
+      display: inline-flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+}
+
+.companyGroup {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.companyItem {
+  margin-right: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  color: #747a8c;
+  font-size: 14px;
+  line-height: 22px;
+  max-width: 500px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.body {
+  margin-top: 12px;
+  padding: 16px;
+  background-color: #fff;
+  border: 1px solid #f0f1f5;
+  border-radius: 4px;
+}
+
+.companyNameItem {
+  display: flex;
+  align-items: center;
+  color: #4c6aff;
+}
+
+.extraNum {
+  color: #4c6aff;
+}
+
+.resetIcon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  margin-left: 4px;
+}
+
+.resetBtn {
+  margin-left: -12px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: #4c6aff;
+  cursor: pointer;
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filterItem {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  margin-right: 32px;
+  flex-shrink: 0;
+  :global {
+    .ant-checkbox + span {
+      color: #272e47;
+    }
+    .ant-checkbox-inner::after {
+      top: 40%;
+      width: 4px;
+      height: 6px;
+    }
+  }
+}

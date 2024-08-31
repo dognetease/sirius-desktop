@@ -1,0 +1,20 @@
+{
+  "name": "v8-snapshot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "v8-snapshot",
+  "scripts": {
+    "createSnapshot": "node ./tools/create-v8-snapshot.js --input-file=./src/snapshot-umd.js --output-path=./snapshots/",
+    "copySnapshotToDevElectron": "node ./tools/copy-v8-snapshot.js --input-dir=./snapshots",
+    "copySnapshotToDevElectron:arm64": "node ./tools/copy-v8-snapshot.js --input-dir=./snapshots --arch=arm64",
+    "copySnapshotToDevElectron:x64": "node ./tools/copy-v8-snapshot.js --input-dir=./snapshots --arch=x64",
+    "createSnapshot:ia32": "node ./tools/create-v8-snapshot.js --input-file=./src/snapshot-umd.js --output-path=./snapshots/ --arch=ia32",
+    "createSnapshot:arm64": "node ./tools/create-v8-snapshot.js --input-file=./src/snapshot-umd.js --output-path=./snapshots/ --arch=arm64",
+    "installArm64Dep": "rm -rf node_modules && npm config set arch arm64 && npm i",
+    "installIa32Dep": "rm -rf node_modules && npm config set arch ia32 && npm i",
+    "installX64Dep": "rm -rf node_modules && npm config set arch x64 && npm i"
+  },
+  "dependencies": {
+    "electron-mksnapshot": "22.3.27"
+  }
+}

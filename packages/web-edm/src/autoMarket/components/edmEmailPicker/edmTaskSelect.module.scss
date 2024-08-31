@@ -1,0 +1,21 @@
+@import '../edmSendboxModal.module.scss';
+
+.search {
+  padding: 0 20px 10px;
+}
+
+.sendbox-list {
+  height: 400px;
+  position: relative;
+
+  .sendboxItemDisabled {
+    cursor: not-allowed;
+  }
+}
+
+.loading {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

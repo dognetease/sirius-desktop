@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 28px;
+
+  .ignore {
+    border-radius: 4px;
+    background-color: white;
+    border-color: white;
+    color: #747a8c;
+  }
+
+  .have-look {
+    background-color: #7088ff;
+    border-width: 1px;
+    border-color: white;
+    border-radius: 4px;
+    color: white;
+  }
+}

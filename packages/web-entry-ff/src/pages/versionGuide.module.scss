@@ -1,0 +1,123 @@
+@import '../styles/varies.scss';
+
+.wrapper {
+  background: url('@web-common/images/version_guide_bg.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 58px 74px 26px 83px;
+  border-radius: 4px;
+
+  > ul {
+    list-style: none;
+    display: flex;
+    color: $Text-4;
+    margin-top: 18px;
+    margin-bottom: 16px;
+    padding-inline-start: 0;
+
+    li {
+      position: relative;
+      &:not(:last-child) {
+        margin-right: 56px;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        top: 8px;
+        left: -17px;
+        border-radius: 50%;
+        background-color: $Brand-6;
+      }
+    }
+  }
+
+  > img {
+    width: 652px;
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 28px;
+    color: $Text-5;
+  }
+
+  .btn {
+    margin-top: 14px;
+    padding: 7px 25px;
+    height: auto;
+    background-color: $Brand-6;
+  }
+}
+
+.wrapper-free {
+  width: 910px;
+  height: 592px;
+  display: flex;
+  .left {
+    width: 312px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 58px 38px 50px;
+    .title {
+      font-weight: 600;
+      color: $Text-5;
+      font-size: 22px;
+      line-height: 28px;
+    }
+    > ul {
+      list-style: none;
+      color: $Text-4;
+      margin-top: 18px;
+      margin-bottom: 16px;
+      margin-left: 18px;
+      padding-inline-start: 0;
+
+      li {
+        position: relative;
+        &:not(:last-child) {
+          margin-right: 56px;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          top: 8px;
+          left: -17px;
+          border-radius: 50%;
+          background-color: $Brand-6;
+        }
+      }
+    }
+    .btn-link {
+      padding: 0;
+      margin-top: 14px;
+      :global(.anticon) {
+        vertical-align: middle;
+      }
+    }
+    .btn {
+      margin-top: 34px;
+      width: 100%;
+    }
+  }
+  .right {
+    flex-grow: 1;
+    background: url('@web-common/images/version_guide_bg.png') no-repeat center center;
+    background-size: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    img {
+      width: 508px;
+    }
+  }
+}

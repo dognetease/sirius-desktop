@@ -1,0 +1,278 @@
+@import '../styles/varies.scss';
+
+$input: 'sirius-input-ui';
+
+@mixin size($h, $p, $font) {
+  height: $h;
+  padding-top: $p;
+  padding-bottom: $p;
+
+  .ant-input,
+  .lx-ant-input {
+    font-size: $font;
+  }
+}
+
+@mixin suffix($padding, $top, $height) {
+  .#{$input}-suffix {
+    padding-left: $padding;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: $height;
+      left: 0;
+      top: $top;
+      width: 1px;
+      background-color: $Line-3;
+    }
+  }
+}
+
+@mixin prefix($padding, $top, $height) {
+  .#{$input}-prefix {
+    padding-right: $padding;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: $height;
+      right: 0;
+      top: $top;
+      width: 1px;
+      background-color: $Line-3;
+    }
+  }
+}
+
+.#{$input} {
+  &-mini {
+    @include size(24px, 0px, 12px);
+    @include suffix(12px, 4px, 14px);
+    @include prefix(12px, 4px, 14px);
+  }
+
+  &-small {
+    @include size(28px, 3px, 12px);
+    @include suffix(12px, 3px, 16px);
+    @include prefix(12px, 3px, 16px);
+  }
+
+  &-default {
+    @include size(32px, 5px, 14px);
+    @include suffix(12px, 1px, 20px);
+    @include prefix(12px, 1px, 20px);
+  }
+
+  &-middle {
+    @include size(36px, 7px, 14px);
+    @include suffix(12px, 1px, 20px);
+    @include prefix(12px, 1px, 20px);
+  }
+
+  &-large {
+    @include size(42px, 10px, 14px);
+    @include suffix(12px, -4px, 30px);
+    @include prefix(12px, -4px, 30px);
+  }
+
+  &.ant-input,
+  &.lx-ant-input {
+    border-radius: 4px;
+
+    &:not(.ant-input-disabled),
+    &:not(.lx-ant-input-disabled) {
+      border: 1px solid $Line-3;
+      color: $Text-5;
+      caret-color: $Brand-6;
+
+      &:hover {
+        border-color: $Brand-6;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .ant-input-prefix,
+  .lx-ant-input-prefix {
+    margin-right: 8px;
+  }
+
+  .ant-input-suffix,
+  .lx-ant-input-suffix {
+    margin-left: 8px;
+  }
+
+  &.ant-input:focus,
+  &.lx-ant-input:focus {
+    box-shadow: none;
+    border-right-width: 0;
+    border-color: $Brand-6;
+  }
+
+  &.ant-input-affix-wrapper,
+  &.lx-ant-input-affix-wrapper {
+    border-radius: 4px;
+
+    .ant-input[disabled],
+    .lx-ant-input[disabled] {
+      color: $Text-1;
+    }
+  }
+
+  &.ant-input[disabled],
+  &.lx-ant-input[disabled] {
+    background: $Fill-2;
+    border: 1px solid $Line-3;
+    color: $Text-1;
+  }
+
+  &.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover,
+  &.lx-ant-input-affix-wrapper:not(.lx-ant-input-affix-wrapper-disabled):hover {
+    border-color: $Brand-6;
+    caret-color: $Brand-6;
+  }
+
+  &.ant-input-affix-wrapper-focused,
+  &.lx-ant-input-affix-wrapper-focused {
+    caret-color: $Brand-6;
+    border: 1px solid $Brand-6;
+    box-shadow: none;
+  }
+
+  &.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-focused),
+  &.lx-ant-input-affix-wrapper:not(.lx-ant-input-affix-wrapper-focused) {
+    border: 1px solid $Line-3;
+    box-shadow: none;
+  }
+
+  &.ant-input-affix-wrapper-disabled,
+  &.lx-ant-input-affix-wrapper-disabled {
+    background: $Fill-2;
+  }
+
+  &.ant-input,
+  &.lx-ant-input {
+    &::placeholder {
+      color: $Text-2;
+    }
+  }
+
+  /** textarea **/
+  textarea.ant-input[disabled],
+  textarea.lx-ant-input[disabled] {
+    background: $Fill-2;
+    border: 1px solid $Line-3;
+    color: $Text-1;
+  }
+
+  textarea.ant-input,
+  textarea.lx-ant-input {
+    border: 1px solid $Line-3;
+    color: $Text-5;
+    caret-color: $Brand-6;
+    border-radius: 4px;
+
+    &::placeholder {
+      color: $Text-2;
+    }
+
+    &:hover,
+    &:focus {
+      border: 1px solid $Brand-6;
+      box-shadow: none;
+    }
+  }
+
+  input.ant-input,
+  input.lx-ant-input {
+    &::placeholder {
+      color: $Text-2;
+    }
+  }
+
+  .ant-input-textarea,
+  .lx-ant-input-textarea {
+    &.ant-input-textarea-show-count,
+    &.lx-ant-input-textarea-show-count {
+      position: relative;
+    }
+  }
+
+  .ant-input-affix-wrapper-textarea-with-clear-btn .ant-input-clear-icon,
+  .lx-ant-input-affix-wrapper-textarea-with-clear-btn .lx-ant-input-clear-icon {
+    top: 10px;
+  }
+
+  .ant-input-textarea-show-count:after,
+  .lx-ant-input-textarea-show-count:after {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    left: 1px;
+    height: 24px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 12px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    color: $Text-2;
+    font-family: PingFang SC;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    background-color: $base-bg;
+  }
+
+  .ant-input-textarea-show-count.sirius-input-ui-disable::after,
+  .lx-ant-input-textarea-show-count.sirius-input-ui-disable::after {
+    background-color: $Fill-2;
+  }
+
+  &-max-count {
+    &.ant-input-textarea-show-count:after,
+    &.lx-ant-input-textarea-show-count:after {
+      color: $Error-6;
+    }
+  }
+}
+
+/** 表单下的表现 **/
+.ant-form-item-explain.ant-form-item-explain-error,
+.lx-ant-form-item-explain.lx-ant-form-item-explain-error {
+  color: $Error-6;
+}
+
+.ant-form-item-has-error,
+.lx-ant-form-item-has-error {
+  .sirius-input-ui:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper,
+  .ant-form-item-has-error :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless),
+  .sirius-input-ui:not(.lx-ant-input-affix-wrapper-disabled):not(.lx-ant-input-affix-wrapper-borderless).lx-ant-input-affix-wrapper,
+  .lx-ant-form-item-has-error :not(.lx-ant-input-affix-wrapper-disabled):not(.lx-ant-input-affix-wrapper-borderless) {
+    &.ant-input-affix-wrapper:hover,
+    &.lx-ant-input-affix-wrapper:hover {
+      border-color: $Error-6;
+      caret-color: $Error-6;
+    }
+  }
+}
+
+.ant-form-item-has-error,
+.lx-ant-form-item-has-error {
+  .sirius-input-ui:not(.ant-input-disabled):not(.ant-input-borderless).ant-input,
+  .sirius-input-ui:not(.lx-ant-input-disabled):not(.lx-ant-input-borderless).lx-ant-input {
+    border-color: $Error-6;
+    box-shadow: none;
+    caret-color: $Error-6;
+  }
+
+  .sirius-input-ui:not(.ant-input-affix-wrapper-disabled).ant-input-affix-wrapper-focused,
+  .sirius-input-ui:not(.lx-ant-input-affix-wrapper-disabled).lx-ant-input-affix-wrapper-focused {
+    border-color: $Error-6;
+    box-shadow: none;
+    caret-color: $Error-6;
+  }
+}

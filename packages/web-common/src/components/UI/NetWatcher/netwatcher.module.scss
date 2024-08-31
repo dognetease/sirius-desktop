@@ -1,0 +1,58 @@
+.netwatcher-wrapper {
+  // position: absolute;
+  // left: 0;
+  // right: 0;
+  // z-index: 10;
+  background: #f74f4f;
+  opacity: 0.8;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  height: 40px;
+  display: flex;
+  align-items: center;
+
+  .wifiIcon {
+    height: 16px;
+    width: 16px;
+    background: url(../../../../../web/src/images/icons/wifi_closed.svg);
+    background-position: center;
+    background-size: 16px;
+    margin-left: 16px;
+    margin-right: 8px;
+  }
+}
+
+.offline-guard-wrap {
+  text-align: center;
+  position: relative;
+  min-width: 500px;
+  min-height: 400px;
+  .content {
+    width: 220px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .bg-img {
+    width: 200px;
+    height: 128px;
+    background: url(../../../../../web/src/images/no_network.png) no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .tip {
+    font-size: 14px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+    margin-top: 12px;
+  }
+  .retry {
+    font-size: 12px;
+    // color: rgba($color: $Text-2, $alpha: 1);
+    color: $Text-2;
+    margin-top: 12px;
+    cursor: pointer;
+  }
+}

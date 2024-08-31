@@ -1,0 +1,20 @@
+.folderSkeleton {
+  margin: 22px 0 6px 0;
+  padding: 13px 11px 0 24px;
+  height: 244px;
+  border-radius: 6px;
+  // background: white;
+  background-color: $white;
+  box-sizing: border-box;
+  overflow: hidden;
+  .row {
+    padding: 17px 0;
+    :global(.ant-skeleton-content) {
+      vertical-align: middle;
+    }
+    :global(.ant-skeleton-title) {
+      margin: 0;
+      height: 20px;
+    }
+  }
+}

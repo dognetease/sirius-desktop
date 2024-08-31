@@ -1,0 +1,56 @@
+//@import '../../../styles/varies.scss';
+@import '@web-common/styles/waimao/varies.scss';
+.container {
+  width: 229px;
+  background-color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 8px;
+
+  > li {
+    display: flex;
+    align-items: center;
+    height: 38px;
+    padding-left: 20px;
+    color: $label-6_3;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $Fill-2_5;
+    }
+
+    &:last-child {
+      border-top: 1px solid $Fill-2;
+    }
+
+    > span {
+      width: 100%;
+    }
+  }
+
+  .uMenu {
+    > li {
+      display: flex;
+      align-items: center;
+      height: 38px;
+      padding-left: 20px;
+      color: $label-6_3;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $Fill-2_5;
+      }
+
+      > span {
+        width: 100%;
+      }
+    }
+
+    margin-bottom: 8px;
+  }
+
+  .logout {
+    height: 44px;
+  }
+}

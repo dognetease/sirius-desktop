@@ -1,0 +1,227 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+@mixin common-title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: $Text-5;
+}
+
+.seo-config {
+  height: 100%;
+  width: 100%;
+  padding: 20px 16px;
+  background-color: $Fill-2;
+  overflow-y: auto;
+
+  :global {
+    .ant-breadcrumb {
+      margin-bottom: 16px;
+    }
+  }
+
+  .container {
+    background-color: #fff;
+    padding: 40px 0 230px;
+  }
+
+  .content {
+    min-width: 300px;
+    max-width: 624px;
+    margin: 0 auto;
+
+    .site-map-title {
+      @include common-title;
+    }
+
+    .site-map {
+      padding: 20px;
+      background-color: #f9fafb;
+      border: 1px solid $Line-1;
+      border-radius: 4px;
+      margin: 16px 0 32px;
+
+      :global {
+        .ant-checkbox-wrapper {
+          span:last-of-type {
+            font-size: 14px;
+            color: #000;
+          }
+        }
+
+        .ant-checkbox-checked:not(.ant-checkbox-disabled) .ant-checkbox-inner {
+          background-color: $Brand-6;
+        }
+
+        .ant-checkbox-checked:not(.ant-checkbox-disabled) .ant-checkbox-inner::after {
+          background-color: $Brand-6;
+        }
+      }
+
+      .message {
+        display: flex;
+        align-items: center;
+        color: $Avatar-4;
+        font-size: 14px;
+        margin-top: 12px;
+
+        svg {
+          margin-right: 4px;
+        }
+      }
+
+      .no-include {
+        color: $Text-1;
+      }
+
+      :global(.ant-input-group) {
+        display: flex;
+        height: 32px;
+        margin-top: 20px;
+        border: 1px solid $Line-2;
+        border-radius: 2px;
+
+        input {
+          border: none;
+          background-color: transparent;
+        }
+
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 52px;
+          background-color: $Fill-2_5;
+          font-size: 14px;
+          color: $Text-4;
+          border-radius: 0 2px 2px 0;
+          border-left: 1px solid $Line-2;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .seo-header {
+      display: flex;
+      justify-content: space-between;
+
+      &-title {
+        @include common-title;
+      }
+
+      div:last-of-type {
+        cursor: pointer;
+        font-size: 14px;
+        color: $Brand-6;
+      }
+    }
+
+    .config {
+      background-color: #f9fafb;
+      border: 1px solid $Line-1;
+      border-radius: 4px;
+      padding: 20px;
+      margin: 16px 0;
+
+      &-item {
+        display: flex;
+        align-items: flex-start;
+        margin: 20px 18px 0 0;
+
+        &:nth-child(1) {
+          margin-top: 0;
+        }
+
+        .title {
+          width: 54px;
+          color: $Text-5;
+          font-size: 14px;
+        }
+
+        :global(.ant-input) {
+          caret-color: $Brand-6;
+          border-color: $Brand-6;
+          &::placeholder {
+            color: $Text-2;
+          }
+        }
+
+        textarea {
+          height: 98px;
+          resize: none;
+
+          &::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            border-radius: 12px;
+            -moz-border-radius: 12px;
+            -webkit-border-radius: 12px;
+            background-color: $Fill-5;
+          }
+
+          &::-webkit-scrollbar-track {
+            background-color: transparent;
+          }
+        }
+
+        .text {
+          display: flex;
+          max-width: 90%;
+          align-items: center;
+          color: $Text-4;
+          font-size: 14px;
+          position: relative;
+
+          p {
+            flex: 1;
+            margin-bottom: 0;
+
+            span {
+              color: $Text-2;
+            }
+          }
+
+          svg {
+            margin-left: 6px;
+            cursor: pointer;
+            position: absolute;
+            right: -18px;
+            bottom: 5px;
+          }
+        }
+
+        .text-area {
+          p {
+            display: -webkit-box;
+            overflow: hidden;
+            white-space: normal !important;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+          }
+        }
+      }
+
+      &-item-edit {
+        align-items: center;
+      }
+
+      .keyword-message {
+        font-size: 12px;
+        color: $Text-3;
+        line-height: 20px;
+        margin-left: 46px;
+      }
+    }
+
+    .check-demo {
+      color: $Brand-6;
+      margin-top: 12px;
+      cursor: pointer;
+    }
+  }
+}

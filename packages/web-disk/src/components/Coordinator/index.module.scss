@@ -1,0 +1,124 @@
+@import './../../../../web/src/styles/varies.scss';
+
+.coordinator-hc-wrapper {
+  display: flex;
+  margin-right: 24px;
+
+  .hc-user-wrapper {
+    flex: 1;
+    margin-right: 12px;
+    cursor: default;
+  }
+
+  .hc-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: $Fill-4;
+    text-align: center;
+    line-height: 32px;
+    cursor: pointer;
+  }
+}
+
+.coordinator-dropdown {
+  z-index: 99 !important;
+}
+
+.coordinator-tooltip {
+  :global(.ant-tooltip-arrow) {
+    display: block !important;
+  }
+}
+
+.coordinator-avatar-wrapper {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    vertical-align: top;
+    overflow: hidden;
+  }
+
+  .avatar-color-img {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+    color: #fff;
+    line-height: 32px;
+    border-radius: 16px;
+  }
+
+  .avatar-cursor {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+  }
+}
+
+.coordinator-vc-wrapper-for-scroll {
+  padding: 2px 2px 2px 0;
+  border: 1px solid $Fill-5;
+  background: linear-gradient(0deg, #ffffff, #ffffff), $Text-1;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+.coordinator-vc-wrapper {
+  padding: 6px 0;
+  width: 200px;
+  max-height: 490px;
+  overflow-y: auto;
+
+  /* 设置滚动条的样式 */
+  &::-webkit-scrollbar {
+    width: 6px;
+    background: #fff;
+  }
+  /* 滚动槽 */
+  &::-webkit-scrollbar-track {
+    border-radius: 6px;
+  }
+  /* 滚动条滑块 */
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.3);
+    padding: 4px;
+  }
+
+  .vc-user-wrapper {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 8px 16px;
+
+    width: 100%;
+
+    &:hover {
+      background-color: $Fill-2;
+    }
+  }
+
+  .vc-user-name {
+    margin-left: 12px;
+    @include flex-ellipsis-text;
+    font-size: 14px;
+    color: $Text-5;
+  }
+}

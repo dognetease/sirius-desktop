@@ -1,0 +1,51 @@
+.wrapper {
+  padding: 16px;
+  background-color: #fff;
+
+  .title {
+    color: #272e47;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 18px;
+  }
+
+  .tips {
+    padding: 6px 12px;
+    color: #272e47;
+    font-size: 12px;
+    background: rgba(76, 106, 255, 0.09);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    :global .sirius-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    :global .ant-space-item {
+      line-height: 1;
+    }
+  }
+  .op {
+    padding: 12px 0;
+  }
+
+  .empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 127px 0;
+
+    .emptyTip {
+      padding-top: 12px;
+      font-size: 12px;
+      color: #747a8c;
+    }
+  }
+
+  .postList {
+  }
+}

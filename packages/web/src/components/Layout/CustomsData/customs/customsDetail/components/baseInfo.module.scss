@@ -1,0 +1,52 @@
+@import '@web-common/styles/variables.scss';
+
+.base-info {
+  // padding: 12px 20px 20px;
+  .box {
+    display: flex;
+    gap: 12px;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+
+  .label-color {
+    color: #7a8599;
+  }
+
+  .link {
+    color: #386ee7;
+    cursor: pointer;
+  }
+
+  .dig-box {
+    margin-top: 16px;
+    width: 100%;
+    justify-content: space-between;
+    display: inline-flex;
+    align-items: center;
+    padding: 0px 20px;
+    gap: 12px;
+    height: 46px;
+    background: $Brand-1;
+    border-radius: 4px;
+    color: $label-6_3;
+  }
+
+  .dig-btn {
+    padding: 0px 8px;
+    height: 22px;
+    background: $Avatar-6;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .warning_text {
+    display: flex;
+    align-items: center;
+    color: #747a8c;
+    margin-bottom: 12px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

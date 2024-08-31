@@ -1,0 +1,7 @@
+[defaults]
+project=sirius-web
+org=lingxi
+url=http://sentry.lx.netease.com
+
+[auth]
+token=d3fcedcdd2e247249eb4864f173587e43dc5885417924a52b28bdb0a123d0de9

@@ -1,0 +1,35 @@
+.tabList {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  overflow: hidden;
+}
+.customerTab {
+  height: 40px;
+  :global(.ant-tabs-nav-list) {
+    height: 40px;
+  }
+  :global(.ant-tabs-nav) {
+    margin-left: 20px;
+    &::before {
+      border: none;
+    }
+  }
+  :global(.ant-tabs-tab) {
+    font-family: PingFang SC;
+    font-size: 14px;
+    font-weight: 400;
+    color: $Text-3;
+  }
+  :global(.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn) {
+    color: $Brand-6;
+  }
+  :global(.ant-tabs-tab) {
+    &:hover {
+      color: $Brand-6;
+    }
+  }
+  :global(.ant-tabs-ink-bar) {
+    color: $Brand-6;
+  }
+}

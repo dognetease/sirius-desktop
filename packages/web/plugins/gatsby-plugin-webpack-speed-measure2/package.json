@@ -1,0 +1,36 @@
+{
+  "name": "gatsby-plugin-webpack-speed-measure",
+  "version": "0.1.1",
+  "description": "Shows you how long each Webpack plugin takes during gatsby build which may help you pinpoint problems in slow builds.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'No test specified'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crunchtime-ali/gatsby-plugin-webpack-speed-measure"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "webpack",
+    "bundle"
+  ],
+  "author": {
+    "name": "Alexander Zigelski",
+    "email": "ali@crunchtime.dev"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crunchtime-ali/gatsby-plugin-webpack-speed-measure/issues"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.0.0"
+  },
+  "dependencies": {
+    "speed-measure-webpack-plugin": "1.3.1"
+  }
+}

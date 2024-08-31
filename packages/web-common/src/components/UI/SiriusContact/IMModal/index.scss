@@ -1,0 +1,15 @@
+.contact-im-modal-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  .body-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+  }
+  .body-right {
+    flex: 1;
+  }
+}

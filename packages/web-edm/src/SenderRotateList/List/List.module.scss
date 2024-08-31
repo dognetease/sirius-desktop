@@ -1,0 +1,32 @@
+.wrap {
+  padding: 16px;
+  border-radius: 4px;
+  background: var(--unnamed, #fff);
+  .header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    .title {
+      color: var(--text-5, #272e47);
+      /* 灵犀桌面2.0/P1.4-Med14 */
+      font-family: PingFang SC;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 22px;
+    }
+    .right {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.range-picker {
+  :global(.ant-picker-range-separator) {
+    width: 16px;
+    height: 1px;
+    margin: 0 12px;
+    background-color: #e1e3e8;
+  }
+}

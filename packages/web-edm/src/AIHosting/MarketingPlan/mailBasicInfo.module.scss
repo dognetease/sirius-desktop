@@ -1,0 +1,92 @@
+.basic-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding: 16px 16px 22px 16px;
+  background: $Fill-1;
+  border-radius: 4px;
+
+  .notify-root {
+    display: flex;
+    flex-direction: row;
+    border-radius: 4px;
+    gap: 6px;
+    background: $Link-1;
+    height: 32px;
+    align-items: center;
+    justify-content: flex-start;
+
+    .icon {
+      margin-left: 12px;
+      width: 16px;
+      height: 16px;
+    }
+
+    .title {
+      color: $Text-5;
+      @include c4-3-reg12;
+    }
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .title {
+        @include h1-4-med16;
+        color: $Text-5;
+      }
+
+      .subTitle {
+        @include p1-3-reg14;
+        color: $Text-3;
+      }
+    }
+
+    .right {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+
+      :global(.ant-checkbox + span) {
+        padding: 0;
+      }
+
+      .button {
+        cursor: pointer;
+        gap: 4px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .right-text {
+        color: $Text-5;
+        @include c4-3-reg12;
+        padding: 0 4px;
+      }
+
+      .text {
+        @include c4-3-reg12;
+        color: $Brand-6;
+      }
+    }
+  }
+
+  .body {
+    gap: 4px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}

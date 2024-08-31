@@ -1,0 +1,108 @@
+@import 'src/styles/varies';
+
+.template-params {
+  @include sirius-scroll;
+
+  display: flex;
+  align-items: flex-start;
+  padding: 16px;
+  max-height: 380px;
+  overflow-y: auto;
+  border-radius: 4px;
+  background-color: #f4f6f7;
+
+  .editor {
+    flex-grow: 1;
+    min-width: 0;
+    margin-right: 16px;
+
+    .media-url-preview {
+      position: relative;
+      display: inline-block;
+
+      &-image {
+        min-width: 100px;
+        max-width: 100%;
+        max-height: 100px;
+        border-radius: 4px;
+      }
+
+      &-delete {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
+      &-delete-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+      }
+    }
+
+    .media-url-preview:hover .media-url-preview-delete {
+      display: block;
+    }
+
+    .media-url-upload {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      border: 1px solid rgba(38, 42, 51, 0.16);
+      border-radius: 4px;
+      cursor: pointer;
+
+      &-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    .media-url-types {
+      color: #a8aaad;
+      @include c4-3-reg12();
+      margin-top: 4px;
+    }
+
+    .variable-label {
+      color: #7d8085;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      margin-bottom: 4px;
+    }
+
+    .variable-content {
+      display: flex;
+
+      .variable-type {
+        flex-shrink: 0;
+        width: 156px;
+        margin-right: 8px;
+      }
+
+      .variable-value {
+        flex-grow: 1;
+        min-width: 0;
+      }
+
+      :global(.ant-form-item) {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  .preview {
+    flex-shrink: 0;
+  }
+}

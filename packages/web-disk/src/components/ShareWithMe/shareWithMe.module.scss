@@ -1,0 +1,109 @@
+@import './../../../../web/src/styles/varies.scss';
+.shareWithMe {
+  height: 100%;
+  padding: 16px 16px 16px 24px;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  .title {
+    @include sirius-no-drag;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    margin-right: 20px;
+    // color: #262a33;
+    color: $font-color-2;
+    .text {
+      margin-right: 4px;
+    }
+  }
+  .triangle-top {
+    &::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border: 5px solid transparent;
+      border-top: 8px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+      position: relative;
+      top: 3px;
+      left: 4px;
+    }
+  }
+  .triangle-bottom {
+    &::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border: 5px solid transparent;
+      border-bottom: 8px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+      position: relative;
+      top: -3px;
+      left: 4px;
+    }
+  }
+  .authority {
+    margin-left: 10px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+  }
+  .bread {
+    overflow: hidden;
+    flex: 1;
+  }
+}
+
+.drop-menu {
+  font-weight: normal;
+  border-radius: 4px;
+  &:global(.ant-dropdown-menu) {
+    background-color: $white;
+  }
+  :global(.ant-dropdown-menu-item) {
+    font-size: 12px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    &:hover {
+      // background-color: $white-background-hover-color;
+      background-color: $white-hover-bg;
+    }
+  }
+  .action {
+    color: #386ee7;
+  }
+}
+
+.single-bread-item {
+  display: flex;
+  align-items: center;
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+  font-size: 20px;
+  line-height: 20px;
+  margin-top: 4px;
+  font-weight: 500;
+  &:hover {
+    color: #386ee7;
+  }
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.share-time {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-align: right;
+  // color: rgba($color: $Text-3, $alpha: 1);
+  color: $Text-3;
+}
+
+.rest-body {
+  flex: 1;
+  overflow: hidden;
+}

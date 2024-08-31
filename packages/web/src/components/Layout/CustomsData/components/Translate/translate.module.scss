@@ -1,0 +1,50 @@
+@import '@web-common/styles/variables.scss';
+@import '@/styles/varies.scss';
+.customs-confirm-overlay {
+  max-height: 280px;
+  box-sizing: border-box;
+  z-index: 1060;
+  :global(.ant-popover-title) {
+    font-size: 14px;
+    padding: 8px 16px 0px;
+    border-bottom: none;
+    color: $label-6_3;
+    font-weight: 400;
+    max-height: 200px;
+    overflow: scroll;
+    margin-bottom: 8px;
+    @include sirius-scroll;
+  }
+  :global(.ant-popover-content) {
+    max-width: 360px;
+  }
+  :global(.ant-btn) {
+    height: 32px;
+    font-size: 14px;
+    margin-left: 12px;
+  }
+  :global(.ant-btn.ant-btn-primary) {
+    border-color: #386ee7;
+    background-color: #386ee7;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+  :global(.ant-popover-arrow) {
+    opacity: 1;
+    top: 20px;
+  }
+  .confirmButtons {
+    padding: 20px;
+    padding-top: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .confirmCheckBox {
+    padding: 20px;
+    padding-top: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+}

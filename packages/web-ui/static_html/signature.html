@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no,minimal-ui">
+
+    <title>网易灵犀办公-定制签名</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        #container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .content-container {
+            background-color: white;
+        }
+
+        #content{
+            word-break: break-all;
+        }
+
+        #user-img {
+            height: 220px;
+            width: 100%;
+            position: relative;
+            background: #FFF;
+            margin: 0;
+            padding: 0;
+            border-bottom: 1px solid rgba(38, 42, 51, 0.08);
+        }
+
+        .header {
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            border-radius: 50%;
+            background-image: url("./assets/default-header.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            /*background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%);*/
+        }
+
+        #name {
+            color: #262A33;
+            position: absolute;
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: 2px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            max-width: 80%;
+            top: 50%;
+            left: 50%;
+            margin-top: 48px;
+            transform: translate(-50%, 0);
+            /*word-spacing: 7px;*/
+            /*-webkit-text-stroke: 1px black;*/
+            /*text-shadow: 1px 1px 0 #777,*/
+            /*-1px -1px 0 #777,*/
+            /*1px -1px 0 #777,*/
+            /*-1px 1px 0 #000,*/
+            /*1px 1px 0 #000;*/
+        }
+
+        #content div {
+            font-size: 16px;
+            color: #3C3F47;
+            /*height: 52px;*/
+            line-height: 21px;
+            padding: 18px 0px;
+            margin: 0px 16px;
+            border-bottom: 1px solid rgba(38, 42, 51, 0.08);
+        }
+
+        .button {
+            background: #386EE7;
+            border-radius: 8px;
+            width: 315px;
+            height: 52px;
+            margin: 20px auto;
+            color: white;
+            font-size: 18px;
+            line-height: 52px;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .tooltip {
+            color: #A8AAAD;
+            margin-top: 12px;
+            padding: 0px 16px;
+            font-size: 12px;
+            line-height: 12px;
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                background: none;
+            }
+
+            .content-container {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            body {
+                background: url("./assets/bg.jpg") 50%/cover no-repeat fixed;
+            }
+
+            #container {
+                background: rgba(251, 251, 251, 0.8);
+                backdrop-filter: blur(16px);
+                min-height: 724px;
+
+            }
+
+            .content-container {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: -188px;
+                margin-top: -362px;
+                width: 375px;
+                /*margin: 178px auto 0 auto;*/
+                height: 724px;
+                overflow-y: auto;
+                box-shadow: 15px 15px 25px rgba(208, 209, 210, 0.33);
+                border-radius: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div class="loading"></div>
+    <div class="error"></div>
+    <div class="content-container">
+        <div id="user-img">
+            <div id="user-avatar" class="header"></div>
+            <div id="name">---</div>
+        </div>
+        <div id="content" class='sign-temp-content'>
+        </div>
+        <div class="tooltip">
+            签名由网易灵犀办公定制，更多高级签名定制前往
+        </div>
+        <div class="button" id="button">立即体验</div>
+    </div>
+    <script src="./assets/DATracker_Init.js?v=1.21.1"></script>
+    <script>
+        document.addEventListener("readystatechange", function (ev) {
+            var isProd = window.location.host.indexOf('://lingxi.office.163.com/') >= 0;
+            if (document.readyState !== "complete") return;
+            var containerEl = document.getElementById('container');
+            var height = window.innerHeight || document.documentElement.clientHeight ||
+                document.body.clientHeight;
+            containerEl.style.height = height + "px";
+            var queryStr = location.search;
+            if (queryStr && queryStr.length > 0) {
+               var reg = /id=([\d]+)/;
+               var match = queryStr.match(reg);
+               var id;
+               if(match && match[1]) {
+                id = match[1];
+               }
+                console.log("sig id:" + id);
+                document.getElementById("button").addEventListener("click", function () {
+                    window.DATracker.track("click_bottomButton_signatureDetailPage", {ua: window.navigator.userAgent});
+                    window.open("https://hubble.netease.com/sl/aaagLe", "_blank");
+                });
+                if(!id) return;
+                const urlPrefix = '/personal-signature/api/pub/mail/sign/get?signName=';
+                //fetch存在兼容性问题
+                fetch(urlPrefix + id, {
+                    "headers": {
+                        "accept": "*/*",
+                        "accept-language": "zh-CN,zh;q=0.9,en;q=0.8",
+                        "cache-control": "no-cache",
+                        "pragma": "no-cache"
+                    },
+                    "method": "GET",
+                    "mode": "cors"
+                })
+                    .then(function(response) { return response.json()})
+                    .then(function(re) {
+                        if (re && re.success && re.data && re.data.signInfoDTO) {
+                            const dt = re.data.signInfoDTO;
+                            const additional = [];
+                            if (dt.userAddItem) {
+                                for (let it in dt.userAddItem) {
+                                    if (dt.userAddItem.hasOwnProperty(it) && dt.userAddItem[it]) {
+                                        additional.push(dt.userAddItem[it]);
+                                    }
+                                }
+                            }
+                            return {
+                                name: dt.name,
+                                userImg: dt.profilePhoto,
+                                title: dt.position,
+                                position: dt.companyName,
+                                mobile: dt.phoneNo,
+                                email: dt.emailAddr,
+                                location: dt.addr,
+                                additional: additional,
+                                defaultImg: re.data.isDefaultProfile
+                            }
+                        } else {
+                            return Promise.reject("请求失败");
+                        }
+                    })
+                    .then(function(res) {
+                        if (res.name) {
+                            document.getElementById("name").innerText = res.name;
+                        }
+                        if (res.userImg) {
+                            const background = 'url("' + res.userImg + '")';
+                            const elementUserImgStyle = document.getElementById("user-avatar").style;
+                            elementUserImgStyle.backgroundImage = background;
+                            elementUserImgStyle.backgroundSize = 'cover';
+                        }
+                        const content = document.getElementById('content');
+                        const appendContent = [];
+                        if (res.title) {
+                            appendContent.push("<div id=\"title\">" + res.title + "</div>");
+                        }
+                        if (res.position) {
+                            appendContent.push("<div id=\"position\">" + res.position + "</div>");
+                        }
+                        if (res.email) {
+                            appendContent.push("<div id=\"email\">" + res.email + "</div>");
+                        }
+                        if (res.mobile) {
+                            appendContent.push("<div id=\"mobile\">" + res.mobile + "</div>");
+                        }
+                        if (res.location) {
+                            appendContent.push("<div id=\"location\">" + res.location + "</div>");
+                        }
+                        if (res.additional && res.additional.length > 0) {
+                            res.additional.forEach(function (it, idx) {
+                                appendContent.push("<div id=\"additional-" + idx + "\">" + it + "</div>");
+                            });
+                        }
+                        if (appendContent.length > 0) {
+                            appendContent.forEach(function (it) {
+                                content.insertAdjacentHTML('beforeend', it);
+                            });
+                        }
+                    }).catch(function(re) {
+                    if (re && typeof re === "string") {
+                        alert(re);
+                    } else {
+                        alert("发生未知错误");
+                    }
+                })
+            } else {
+                alert("请求地址有误，请检查后重新进入");
+            }
+
+        });
+    </script>
+</div>
+</body>
+</html>

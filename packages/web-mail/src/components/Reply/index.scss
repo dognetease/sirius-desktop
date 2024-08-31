@@ -1,0 +1,235 @@
+.m-reply {
+  padding: 12px 15px;
+  box-shadow: inset 0px 0.5px 0px $Fill-4;
+  background: $white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  .ant-btn-primary[disabled],
+  .ant-btn-primary[disabled]:hover,
+  .ant-btn-primary[disabled]:focus,
+  .ant-btn-primary[disabled]:active {
+    background: #386ee7 !important;
+    opacity: 0.2;
+    border: 0;
+    color: #fff !important;
+    border-radius: 4px !important;
+  }
+  .u-reply {
+    display: flex;
+    &-input {
+      display: flex;
+      flex: 1 1;
+      background: $white-bg;
+      border-radius: 4px;
+      line-height: 40px;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      padding: 0 4px 0 12px;
+      cursor: pointer;
+    }
+    &-input.expand {
+      // background: #fff;
+      background-color: $white;
+      border: 0;
+      line-height: 28px;
+      height: 28px;
+    }
+    &-menu {
+      // position: relative;
+      border-right: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.07);
+      cursor: pointer;
+      width: 48px;
+      height: 16px;
+      line-height: 16px;
+      margin: 12px 10px 12px 0;
+      flex: none;
+      &-reply {
+        // position: relative;
+        svg {
+          padding-top: 2px;
+          vertical-align: top;
+        }
+      }
+      &-xiala {
+        margin: 0 12px 0 10px;
+        svg {
+          margin-top: -3px;
+        }
+      }
+    }
+    .expand .u-reply-menu {
+      margin: 6px 12px 6px 0;
+    }
+    &-textarea {
+      position: relative;
+      height: 156px;
+      padding: 12px;
+      // border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+      border-radius: 4px;
+      margin: 12px 0;
+      // background: #f4f4f5;
+      background-color: $white-bg;
+      .textarea {
+        font-size: 14px;
+        line-height: 22px;
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+        height: 134px;
+        overflow: auto;
+        padding: 0;
+        resize: none;
+        width: 100%;
+        outline: 0;
+        border: 0;
+        // background: #f4f4f5;
+        background-color: $white-bg;
+      }
+    }
+    &-content {
+      display: flex;
+      flex: 1;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.4);
+      overflow: hidden;
+      word-break: keep-all;
+      text-overflow: ellipsis;
+      height: 40px;
+      flex: 1 1 auto;
+      &-name {
+        flex: 0 1 auto;
+        min-width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      &-more {
+        flex: none;
+      }
+    }
+    .expand .u-reply-content {
+      height: 28px;
+    }
+    &-text {
+      cursor: pointer;
+      .text {
+        padding: 0 8px;
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      }
+    }
+    &-text-fast {
+      display: flex;
+      flex-wrap: wrap;
+      max-height: 40px;
+      overflow: hidden;
+      justify-content: flex-end;
+      padding-left: 12px;
+      .text {
+        flex: none;
+      }
+    }
+    .expand .u-reply-text {
+      line-height: 16px;
+    }
+    &-btn {
+      // position: relative;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      background-color: $white-bg;
+      text-align: center;
+      border-radius: 4px;
+      margin-left: 8px;
+      font-size: 12px;
+      color: $Text-5;
+      cursor: pointer;
+      user-select: none;
+      svg {
+        margin: 10px 0;
+      }
+    }
+    &-btn-svg {
+      svg {
+        margin: 8px 0;
+      }
+    }
+    &-btn-fast {
+      position: relative;
+      width: 40px;
+      height: 28px;
+      line-height: 28px;
+      // background-color: #f4f4f5;
+      background-color: $white-bg;
+      text-align: center;
+      border-radius: 4px;
+      margin-right: 8px;
+      font-size: 12px;
+      // color: #262a33;
+      color: $font-color-2;
+      cursor: pointer;
+      user-select: none;
+      svg {
+        margin: 2px 0;
+      }
+    }
+    &-expand {
+      position: absolute;
+      right: 22px;
+      bottom: 12px;
+      cursor: pointer;
+    }
+    .u-send-btn {
+      min-width: auto; //覆盖UI库默认样式.ant-btn
+      height: 28px;
+      width: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.m-edit {
+  display: none;
+  width: 400px;
+  min-height: 100px;
+  max-height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3px;
+  outline: 0;
+  border: 1px solid #a0b3d6;
+  font-size: 12px;
+  word-wrap: break-word;
+  overflow-x: hidden;
+  overflow-y: auto; //超过最大高度就出现滚动条
+  _overflow-y: visible;
+}
+
+.u-reply-tooltip-menu {
+  .ant-dropdown-menu-item {
+    .ant-dropdown-menu-title-content {
+      display: flex;
+      align-items: center;
+    }
+    svg {
+      vertical-align: text-bottom;
+    }
+    .u-status-menu-text {
+      margin-left: 5px;
+      color: #262a33;
+      // color: $font-color-2;
+    }
+    .u-reply {
+      display: flex;
+    }
+    // .u-reply-hover{
+    //     display: none;
+    // }
+  }
+}
+
+// 自定义ant menu 样式
+.ant-dropdown-menu-item-selected .u-status-menu-text {
+  color: #386ee7 !important;
+}
+
+.lang-en .u-reply-btn {
+  width: 60px !important;
+}

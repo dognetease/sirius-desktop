@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;">
+</head>
+<body style="width: 100%;margin: 0; padding: 0;" th:object="${data}">
+    <div>亲爱的<span th:text="${data.receiveUserName}"></span>：</div>
+    <br>
+    <div>&emsp;&emsp;您好！恭喜您于<span th:text="${data.joinDateStr}"></span>成功报名参加《企业邮箱全新改版，限时体验领福利》活动！</div>
+    <div>&emsp;&emsp;自今日截至到2022年11月27日24时，在新版企业邮箱web端累计签到2天，即可获得35天有道云笔记会员！</div>
+    <div>&emsp;&emsp;<strong>签到规则：</strong>发送1封邮件即可完成当天签到，发信包含回复，转发和写信。活动奖品每用户限领1次。</div>
+    <div>&emsp;&emsp;参加活动成功后，我们会在2022/11/28-2022/12/4内通过邮件发放有道云笔记会员兑换码至您的邮箱。</div>
+    <div>&emsp;&emsp;如有疑问，可联系kf@office.163.com。</div>
+    <br>
+    <div>&emsp;&emsp;祝您工作顺利！</div>
+    <br>
+    <div>&emsp;&emsp;网易企业邮箱</div>
+</body>
+</html>

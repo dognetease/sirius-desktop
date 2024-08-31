@@ -1,0 +1,143 @@
+.markting-label-wrapper {
+  display: flex;
+  align-items: center;
+  :global(.dropping) {
+    // background-color: red;
+    background-color: #fefefe;
+    transition: all 0.3s;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 24px;
+      background: $Brand-4;
+      left: -6px;
+      top: 0;
+    }
+  }
+  .label-prefix-title {
+    font-size: 14px;
+    color: $Text-5;
+    font-weight: 500px;
+    flex-shrink: 0;
+    padding-right: 12px;
+  }
+  .system-markting-label {
+    // margin-left: 12px;
+    padding: 0 12px;
+    background-color: $Fill-2;
+    height: 24px;
+    color: $Text-5;
+    font-size: 12px;
+    line-height: 22px;
+    border-radius: 16px;
+    border: solid 1px $Fill-2;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    svg {
+      margin-left: 3px;
+    }
+    &.checked {
+      color: $Brand-6;
+      border-color: $Brand-6;
+      font-weight: 500;
+    }
+    &.circle {
+      width: 24px;
+      box-sizing: border-box;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      svg {
+        margin-left: 0;
+      }
+    }
+    &.firstchild {
+      margin-right: 12px;
+    }
+  }
+  :global(.ant-tabs-nav) {
+    margin-bottom: 0 !important;
+  }
+  :global(.ant-tabs-tab) {
+    height: initial !important;
+    padding: 0 !important;
+    font-size: initial !important;
+    margin: 0 0 0 0 !important;
+    [role~='tab'] {
+      font-weight: 400 !important;
+      text-shadow: none !important;
+    }
+  }
+  :global(.ant-tabs-tab-btn) {
+    outline: none;
+    transition: none;
+  }
+  :global(.ant-tabs-ink-bar) {
+    display: none;
+  }
+  :global(.ant-tabs > .ant-tabs-nav .ant-tabs-nav-operations) {
+    display: inline-block !important;
+    visibility: visible !important ;
+  }
+  :global(.ant-tabs-nav-list) {
+    width: auto !important;
+  }
+  :global(.ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap) {
+    margin-right: 0px;
+  }
+}
+
+:global(.ant-tabs-dropdown-menu) {
+  .default-markting-drag-tab {
+    margin-right: 0 !important;
+  }
+  .system-markting-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.create-markting-rule-tip {
+  font-size: 14px;
+  color: $Text-5;
+}
+.user-markting-item {
+  font-size: 14px;
+  width: 170px;
+  overflow: hidden;
+  :global(.ant-dropdown-menu-title-content),
+  > span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+  }
+  .name {
+    flex: 1 1;
+    padding: 0 8px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  svg {
+    flex-shrink: 0;
+  }
+
+  :global(.ant-tabs > .ant-tabs-nav .ant-tabs-nav-operations) {
+    display: inline-block !important;
+    visibility: visible !important ;
+  }
+  :global(.ant-tabs-nav-list) {
+    width: auto !important;
+  }
+  :global(.ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap) {
+    margin-right: 0px;
+  }
+}

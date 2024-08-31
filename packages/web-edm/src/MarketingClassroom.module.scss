@@ -1,0 +1,82 @@
+.root {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  height: 32px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 16px;
+  // background-color: rgba($color: #fff, $alpha: 0.7);
+  background: var(--fill-1, #f8f9fa);
+  border-radius: 4px;
+
+  .title-area {
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    .icon {
+      width: 16px;
+      height: 16px;
+    }
+    .title {
+      @include c4-1-reg12;
+      color: $Text-5;
+      min-width: 78px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  .more-area {
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    .icon {
+      width: 16px;
+      height: 16px;
+    }
+    .title {
+      @include c4-1-reg12;
+      color: $Text-3;
+      &:hover {
+        color: $Brand-6;
+      }
+    }
+  }
+
+  .body-area {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    .title {
+      &:hover {
+        color: $Brand-6;
+      }
+      min-width: 78px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+      cursor: pointer;
+      @include c4-1-reg12;
+      color: $Text-3;
+    }
+  }
+}
+
+.line {
+  width: 1px;
+  height: 14px;
+  background: $Line-2;
+}

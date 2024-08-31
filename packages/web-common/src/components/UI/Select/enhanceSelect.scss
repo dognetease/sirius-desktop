@@ -1,0 +1,242 @@
+@import '../../../styles/waimao/varies.scss';
+
+$select: 'sirius-select';
+
+@mixin size($h) {
+  &.ant-select-single:not(.ant-select-customize-input) {
+    .ant-select-selector {
+      height: $h;
+    }
+  }
+
+  &.ant-select-single .ant-select-selector .ant-select-selection-placeholder {
+    line-height: $h;
+  }
+
+  &.ant-select-single:not(.ant-select-disabled) .ant-select-selector .ant-select-selection-placeholder {
+    color: $Text-2;
+  }
+}
+
+@mixin caret-style($height, $margin) {
+  &.ant-select-single:not(.ant-select-customize-input) {
+    .ant-select-selector .ant-select-selection-search-input {
+      height: $height;
+    }
+  }
+
+  &.ant-select-show-search:not(.ant-select-multiple):not(.ant-select-customize-input) {
+    .ant-select-selector input {
+      margin-top: $margin;
+    }
+  }
+}
+
+@mixin multiple-size($padding) {
+  &.ant-select-multiple {
+    .ant-select-selector {
+      padding-top: $padding;
+      padding-bottom: $padding;
+      padding-left: 12px;
+    }
+  }
+}
+
+.#{$select} {
+  &-small {
+    height: 32px;
+    @include size(32px);
+    @include caret-style(16px, 7px);
+    @include multiple-size(1px);
+
+    &.ant-select-single {
+      .ant-select-selector {
+        .ant-select-selection-item {
+          line-height: 30px;
+        }
+      }
+    }
+  }
+
+  &-large {
+    height: 36px;
+    @include size(36px);
+    @include caret-style(16px, 10px);
+    @include multiple-size(3px);
+
+    &.ant-select-single {
+      .ant-select-selector {
+        .ant-select-selection-item {
+          line-height: 34px;
+        }
+      }
+    }
+  }
+
+  &.ant-select:not(.ant-select-disabled) {
+    .ant-select-selector {
+      border-color: $Line-3;
+    }
+
+    .ant-select-selector:hover {
+      border-color: $Brand-5;
+    }
+  }
+
+  &.ant-select-disabled.ant-select:not(.ant-select-customize-input) {
+    .ant-select-selector {
+      background: $Fill-2;
+      border: 1px solid $Line-3;
+    }
+  }
+
+  &.ant-select-multiple {
+    &.ant-select-disabled {
+      .ant-select-selection-item {
+        background: $Fill-3;
+        border: none;
+        color: $Text-2;
+        line-height: 24px;
+      }
+    }
+
+    .ant-select-selection-search {
+      margin-inline-start: 0;
+    }
+  }
+
+  .ant-select-item-option-disabled {
+    color: $Text-1;
+  }
+
+  &.ant-select-focused:not(.ant-select-disabled) {
+    &.ant-select:not(.ant-select-customize-input) {
+      .ant-select-selector {
+        border-color: $Brand-5;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    background: $white-bg;
+    color: $Brand-6;
+    font-weight: 400;
+  }
+
+  .ant-select-item-option-active:not(.ant-select-item-option-disabled):not(.ant-select-item-option-selected) {
+    background-color: $Fill-2;
+    color: $Text-5;
+  }
+
+  .ant-select {
+    color: $Text-5;
+  }
+
+  .ant-select-arrow {
+    width: 16px;
+    height: 16px;
+    right: 8px;
+    top: 45%;
+  }
+
+  .ant-select-item-empty {
+    display: flex;
+    justify-content: center;
+    padding: 45px 0 41px;
+  }
+
+  &-loading {
+    width: 16px;
+    height: 16px;
+    animation: loading 0.8s linear infinite;
+  }
+
+  .ant-select-single {
+    .ant-select-selector {
+      .ant-select-selection-search {
+        caret-color: $Brand-6;
+      }
+    }
+  }
+
+  .ant-select:not(.ant-select-customize-input) {
+    .ant-select-selector .ant-select-selection-search-input {
+      caret-color: $Brand-6;
+    }
+  }
+
+  .ant-select-clear {
+    right: 7px;
+    top: 45%;
+    width: 16px;
+    height: 16px;
+
+    &:hover {
+      > svg {
+        path {
+          fill: $Fill-6;
+        }
+      }
+    }
+  }
+
+  .ant-select-disabled.ant-select:not(.ant-select-customize-input) {
+    .ant-select-selection-placeholder {
+      color: $Text-1;
+    }
+  }
+
+  .ant-select-item-option-disabled.ant-select-item-option-selected {
+    // background-color: #ffffff;
+    background-color: $white;
+  }
+
+  .ant-checkbox {
+    top: 2px;
+  }
+
+  /** 无边框 **/
+  .ant-select-single:not(.ant-select-disabled) {
+    &.ant-select-borderless {
+      .ant-select-selector .ant-select-selection-placeholder {
+        color: $Brand-6;
+      }
+    }
+  }
+
+  &.ant-select:not(.ant-select-customize-input) {
+    .ant-select-selector {
+      border-radius: 4px;
+      background-color: $white;
+    }
+  }
+
+  .ant-select-dropdown {
+    border-radius: 4px;
+    background-color: $white;
+  }
+
+  .ant-select-item {
+    color: $font-color-2;
+  }
+}
+
+/** 表单下的表现 **/
+.ant-form-item-has-error {
+  .sirius-select.ant-select:not(.ant-select-customize-input):not(.ant-select-disabled) {
+    .ant-select-selector .ant-select-selection-search-input {
+      caret-color: $Error-6;
+    }
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

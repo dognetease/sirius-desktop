@@ -1,0 +1,317 @@
+@import '@web-common/styles/variables.scss';
+.init {
+  background: $Fill-1;
+  height: 100%;
+  &-top {
+    height: 390px;
+    background: url('./assets/facebook-bc.png') center center no-repeat;
+    background-size: 1220px 390px;
+    background-color: #272d4d;
+    position: relative;
+    padding-top: 119px;
+    .title {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 44px;
+      color: #fff;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+    .desc {
+      font-weight: 400;
+      font-size: 12px;
+      height: 20px;
+      color: #ffffff;
+      text-align: center;
+      > span {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 36px;
+
+        > svg {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .search {
+      margin-top: 68px;
+      padding: 0 103px;
+    }
+  }
+
+  &-bottom {
+    margin: 20px 103px;
+    background: #fff;
+    border: 1px solid $Fill-3;
+    border-radius: 4px;
+    .title {
+      font-weight: bold;
+      font-size: 14px;
+      color: $Text-5;
+      padding: 20px 20px 0;
+    }
+
+    .descCard {
+      // max-width: 324px;
+      min-height: 160px;
+      padding: 20px;
+      display: flex;
+      // background: $Fill-1;
+      border-radius: 4px;
+      text-align: left;
+
+      .descContent {
+        padding-left: 15px;
+        flex: 1;
+      }
+
+      .descTitle {
+        font-weight: bold;
+        font-size: 16px;
+        color: $Text-5;
+      }
+
+      .descText {
+        padding-top: 8px;
+        font-size: 14px;
+        color: $Text-4;
+      }
+    }
+  }
+}
+
+.page {
+  background-color: $Fill-1;
+  padding: 20px 20px 0 20px;
+  height: 100%;
+  overflow: auto;
+
+  &-bread {
+  }
+
+  &-search {
+    margin-top: 13px;
+    width: 100%;
+  }
+
+  &-table {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 20px;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1px solid $Fill-3;
+    border-radius: 4px;
+
+    .filter {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .checkbox {
+        margin-right: 0;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .result {
+      :global {
+        .ant-table-row-selected {
+          background: $Brand-1;
+          &:hover {
+            background: $Brand-1;
+            td.ant-table-cell {
+              background: $Brand-1;
+            }
+          }
+          td.ant-table-cell {
+            background: $Brand-1;
+            &:hover {
+              background: $Brand-1;
+            }
+          }
+        }
+        td.ant-table-cell {
+          vertical-align: top;
+        }
+      }
+
+      .icon-wrapper {
+        width: 16px;
+        height: 16px;
+        flex: 0 0 auto;
+      }
+
+      .text-overflow {
+        display: block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      .company {
+        // max-width: 200px;
+        .title {
+          display: flex;
+          align-items: center;
+          font-weight: bold;
+          cursor: pointer;
+          &-wrapper {
+            padding-right: 5px;
+          }
+          em {
+            color: $Error-6;
+            font-style: normal;
+          }
+        }
+
+        .link {
+          display: flex;
+          align-items: center;
+          margin-top: 4px;
+          .text {
+            padding-left: 8px;
+            display: block;
+            box-sizing: border-box;
+            overflow: hidden;
+            max-height: 184px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            color: $Avatar-6;
+          }
+        }
+
+        .info {
+          margin-top: 4px;
+          &-extra {
+            display: flex;
+            align-items: center;
+            .text {
+              padding-left: 8px;
+              color: $Text-3;
+            }
+          }
+        }
+
+        .title,
+        .link,
+        .info {
+          line-height: 22px;
+        }
+      }
+
+      .information {
+        max-width: 400px;
+        padding-right: 22px;
+        height: 100%;
+        .translate {
+          display: inline-block;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 22px;
+          height: 22px;
+          &:hover {
+            border-radius: 4px;
+          }
+        }
+
+        overflow: hidden;
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        position: relative;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+
+      .op {
+        .marketing,
+        .marketing:hover {
+          border: 1px solid $Avatar-6;
+          color: $Avatar-6;
+          background: #fff;
+          width: 100px;
+          svg {
+            stroke: $Avatar-6;
+            fill: $Avatar-6;
+            path {
+              fill: $Avatar-6;
+            }
+          }
+
+          :global(.ant-divider) {
+            height: 17px;
+            border-color: $Fill-4;
+          }
+        }
+      }
+    }
+  }
+}
+
+.input {
+  border-radius: 4px;
+  .group {
+    width: 100%;
+    display: flex;
+    border-radius: 5px;
+    position: relative;
+    transition: border-color 0.3s ease;
+    align-items: center;
+    height: 60px;
+
+    & > *:first-child {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+
+    & > *:last-child {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &:hover {
+      border-color: #386ee7;
+    }
+
+    :global(.ant-input-affix-wrapper) {
+      border-width: 0 !important;
+      background-color: #fff;
+    }
+
+    :global(.ant-input-affix-wrapper) {
+      border-width: 0 !important;
+      background-color: #fff;
+    }
+
+    :global(.ant-input-affix-wrapper) {
+      padding: 4px 20px;
+      flex: 1;
+      height: 60px;
+      :global(.ant-input-prefix) {
+        margin-right: 8px;
+      }
+    }
+
+    :global(.ant-input-affix-wrapper-focused) .icon {
+      color: $Avatar-6;
+    }
+
+    .icon {
+      color: $Fill-7;
+    }
+    .real {
+    }
+    .btn {
+      width: 104px;
+      height: 60px;
+      background: $Avatar-6;
+    }
+  }
+}

@@ -1,0 +1,266 @@
+@import '../../../../../web/src/styles/varies';
+.modalWrap {
+  height: 524px;
+  display: flex;
+  flex-direction: column;
+  .title {
+    padding: 0 40px;
+    margin-top: 60px;
+    @include h4-med24;
+    color: var(--Text-6);
+  }
+  .content {
+    padding: 0 40px;
+    flex: 1;
+    margin-top: 40px;
+    @include sirius-scroll-show;
+    :global(.ant-form-item-explain) {
+      margin-top: 12px;
+    }
+    :global(.ant-form-item-has-error) .passwordWrap :global(.ant-input-affix-wrapper.ant-input-affix-wrapper-focused) {
+      border-color: $Error-6;
+    }
+    .accountWrap {
+      .inputWrap {
+        position: relative;
+        height: 40px;
+
+        &:global(.ant-select-focused:not(.ant-select-disabled) .ant-select-selector) {
+          box-shadow: none;
+          border: 1px solid $Brand-6;
+        }
+
+        :global(.ant-select-selector) {
+          height: 40px;
+          border: 1px solid $Line-3;
+          border-radius: 4px;
+        }
+
+        :global(.ant-select-selector .ant-select-selection-search .ant-select-selection-search-input) {
+          height: 38px;
+          @include h1-3-reg16;
+          color: $Text-5;
+        }
+        :global(.ant-select-selector .ant-select-selection-placeholder) {
+          @include p1-3-reg14;
+          color: $Text-2;
+          line-height: 38px;
+        }
+      }
+      .label {
+        @include h1-3-reg16;
+        color: $Text-3;
+      }
+    }
+    .passwordLabel {
+      color: $font-color-2;
+      @include p1-4-med14;
+    }
+    .passwordWrap {
+      position: relative;
+      height: 40px;
+      :global(.ant-input-affix-wrapper-focused) {
+        border-color: $Brand-6;
+      }
+      .password {
+        height: 40px;
+        &:global(.ant-input-affix-wrapper.ant-input-affix-wrapper-focused.ant-input-password) {
+          box-shadow: none;
+        }
+        &.hasSuffix {
+          padding-right: 134px;
+        }
+      }
+      .authTextWrap {
+        position: absolute;
+        top: 1px;
+        bottom: 1px;
+        right: 1px;
+        width: 132px;
+        background-color: #fff;
+        z-index: 2;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      .authText {
+        @include p1-3-reg14;
+        color: var(--Brand-6);
+        padding: 0 12px;
+      }
+      .authLine {
+        width: 1px;
+        height: 12px;
+        background-color: var(--Fill-5);
+      }
+    }
+    .settingWrap {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 12px;
+      padding-bottom: 40px;
+      .setting {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        .textLine {
+          flex: 1;
+          height: 1px;
+          background-color: var(--Line-3);
+        }
+        .text {
+          padding: 0 12px;
+          @include p1-3-reg14;
+          color: var(--Text-2);
+          display: flex;
+          align-items: center;
+          .iconWrap,
+          .icon {
+            line-height: 1;
+            width: 16px;
+            height: 16px;
+            color: #8d92a1;
+          }
+        }
+      }
+      .hostContainer {
+        margin-top: 16px;
+        padding: 12px 16px 16px;
+        background-color: var(--Fill-1);
+        :global(.ant-form-item) {
+          margin: 0;
+        }
+        .hostWrap {
+          display: flex;
+          :global(.ant-form-item-explain) {
+            margin-top: 0;
+            min-height: 0;
+          }
+          &:last-child {
+            margin-top: 24px;
+          }
+          .host {
+            flex: none;
+            width: 184px;
+          }
+          .ssl {
+            flex: none;
+            width: 80px;
+            :global(.ant-select-single.ant-select-show-arrow .ant-select-selection-item) {
+              padding-right: 0;
+            }
+          }
+          .ssl,
+          .port {
+            margin-left: 12px;
+          }
+        }
+      }
+      .settingErrorWrap {
+        margin-top: 12px;
+      }
+    }
+    .phoneVaildWrap {
+      .uPhone {
+        @include p1-3-reg14;
+        color: var(--font-color-2);
+        .blue {
+          color: var(--Brand-6);
+        }
+      }
+      .uInput {
+        margin-top: 8px;
+        position: relative;
+        height: 40px;
+        .uCodeInput {
+          height: 40px;
+        }
+        .uCodeText {
+          cursor: pointer;
+          position: absolute;
+          right: 1px;
+          top: 1px;
+          bottom: 1px;
+          padding: 0 12px;
+          border-radius: 4px;
+          height: 38px;
+          display: flex;
+          align-items: center;
+          background-color: #fff;
+          z-index: 2;
+          @include p1-3-reg14;
+          color: var(--Brand-6);
+        }
+      }
+      .errorWrap {
+        margin-top: 12px;
+      }
+    }
+  }
+  .footer {
+    position: relative;
+    // border-top: 1px solid #d7d8d9;
+    box-sizing: border-box;
+    padding: 0 40px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &::after {
+      content: ' ';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 1px;
+      background: #d7d8d9;
+      transform: scaleY(0.5);
+    }
+  }
+  .errorMsgWarp {
+    display: flex;
+    align-items: center;
+    .icon {
+      width: 16px;
+      height: 16px;
+      color: var(--Error-6);
+    }
+    .iconWrap {
+      width: 16px;
+      height: 16px;
+      line-height: 1;
+      background-size: 100%;
+    }
+    .text {
+      margin-left: 4px;
+      @include c4-3-reg12;
+      color: var(--Error-6);
+      .blue {
+        cursor: pointer;
+        color: var(--Brand-6);
+      }
+    }
+  }
+}
+
+.inputPopupWrap {
+  :global {
+    .rc-virtual-list-holder {
+      max-height: 296px !important;
+    }
+    .ant-select-item {
+      @include h1-3-reg16;
+      color: $Text-5;
+      padding: 5px 12px 3px;
+    }
+    .ant-select-item-option-active:not(.ant-select-item-option-disabled),
+    .ant-select-item-option-selected:not(.ant-select-item-option-disabled),
+    .ant-select-item-option-active,
+    .ant-select-item-option-selected {
+      background-color: $Fill-3;
+    }
+  }
+}

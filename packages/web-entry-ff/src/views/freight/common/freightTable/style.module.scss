@@ -1,0 +1,139 @@
+.date {
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+
+  .dateNum {
+    color: #272e47;
+    font-size: 24px;
+  }
+
+  .dateDur {
+    display: flex;
+    // justify-content: center;
+    width: 80px;
+    background: url(./arrowRight.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0 10px;
+    div {
+      width: 49px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      left: 14px;
+      top: 7px;
+      /* 品牌色-公用色/Brand-1 浅色-白底背景 */
+      background: #f2f5ff;
+      /* 常用/Brand-6 常规 */
+      border: 1px solid #4c6aff;
+      border-radius: 56px;
+      margin-left: 12px;
+    }
+  }
+}
+
+.limitDate {
+}
+.money {
+  color: #cb493d;
+}
+.tags {
+  padding-top: 8px;
+  .FASTEST {
+    color: #4759b2;
+    background: #deebfd;
+    border-color: #deebfd;
+  }
+  .EARLIEST {
+    color: #398e80;
+    background: #d6f7f1;
+    border-color: #d6f7f1;
+  }
+  .CHEAPEST {
+    color: #cb493d;
+    background: #ffe5e2;
+    border-color: #ffe5e2;
+  }
+
+  .AVAILABLE_BOOKING {
+    color: #d46b08;
+    background: #fff7e6;
+    border-color: #fff7e6;
+  }
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background: #f1f1f1;
+  z-index: 100;
+
+  & > td {
+    border-bottom: 1px solid #fff !important;
+  }
+
+  &:hover > td {
+    background: #f1f1f1 !important;
+  }
+
+  &_0 {
+    top: 50px;
+  }
+
+  &_1 {
+    top: 179px;
+  }
+
+  &_2 {
+    top: 308px;
+  }
+}
+
+.form {
+  padding-top: 25px;
+}
+
+.cargoCheck {
+  display: flex;
+  align-items: center;
+
+  .cargoCheckbox {
+    width: 90px;
+    margin-bottom: 24px;
+  }
+
+  .cargoPrice {
+    width: 100px;
+    margin-bottom: 24px;
+  }
+
+  .number {
+    color: #cb493d;
+  }
+}
+
+.cellContent {
+  position: relative;
+  height: 96px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+
+  p {
+    margin: 0;
+    padding-top: 10px;
+  }
+}
+
+.owner {
+  & > td {
+    background: #e6f4ff !important;
+  }
+
+  &:hover > td {
+    background: #e6f4ff !important;
+  }
+}

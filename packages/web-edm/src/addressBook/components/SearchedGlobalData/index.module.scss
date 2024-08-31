@@ -1,0 +1,21 @@
+.box {
+  display: flex;
+  align-items: center;
+  height: 46px;
+  width: 100%;
+  padding: 0 16px;
+  background: $Brand-1;
+  @include p1-3-reg14();
+
+  &-text {
+    margin-left: 9px;
+    color: $Text-5;
+  }
+
+  &-link {
+    color: $Brand-6;
+    margin-right: 0;
+    margin-left: auto;
+    cursor: pointer;
+  }
+}

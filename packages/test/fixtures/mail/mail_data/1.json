@@ -1,0 +1,100 @@
+{
+  "code": "S_OK",
+  "var": [
+    {
+      "fid": 110,
+      "subject": "邮件营销0830迭代__08月25日测试日报",
+      "tid": "0a8a2c2bf9aa2ebfkusn18a223abdb0",
+      "sentMailId": "AOEAfAA5F4rD0tpUVv5tTaoH",
+      "from": "\"高腾玉\" <gaotengyu@office.163.com>",
+      "id": "AO2ACAAsF8bEcQSa6aIUIKpa",
+      "tag": [
+        "工作汇报",
+        "测试"
+      ],
+      "receivedDate": "2023-08-25 20:00:08",
+      "priority": 3,
+      "antiVirusStatus": "NOT_VIRUS",
+      "size": 271987,
+      "encpwd": null,
+      "modifiedDate": "2023-08-25 20:00:08",
+      "ctrls": null,
+      "attachments": [
+        {
+          "filename": "picture.png",
+          "contentId": "1505998205.88.1692958327245.Hmail.gaotengyu@office.163.com",
+          "estimateSize": 17350,
+          "contentLength": 23744,
+          "isMsg": false,
+          "id": "3",
+          "contentLocation": null,
+          "encoding": "base64",
+          "contentType": "image/png",
+          "inlined": true,
+          "content": null
+        },
+        {
+          "filename": "picture.png",
+          "contentId": "1505998205.89.1692958327245.Hmail.gaotengyu@office.163.com",
+          "estimateSize": 21159,
+          "contentLength": 28954,
+          "isMsg": false,
+          "id": "4",
+          "contentLocation": null,
+          "encoding": "base64",
+          "contentType": "image/png",
+          "inlined": true,
+          "content": null
+        },
+        {
+          "filename": "picture.png",
+          "contentId": "1505998205.92.1692958469981.Hmail.gaotengyu@office.163.com",
+          "estimateSize": 51223,
+          "contentLength": 70096,
+          "isMsg": false,
+          "id": "5",
+          "contentLocation": null,
+          "encoding": "base64",
+          "contentType": "image/png",
+          "inlined": true,
+          "content": null
+        },
+        {
+          "filename": "picture.png",
+          "contentId": "1505998205.93.1692958469981.Hmail.gaotengyu@office.163.com",
+          "estimateSize": 47939,
+          "contentLength": 65602,
+          "isMsg": false,
+          "id": "6",
+          "contentLocation": null,
+          "encoding": "base64",
+          "contentType": "image/png",
+          "inlined": true,
+          "content": null
+        },
+        {
+          "filename": "picture.png",
+          "contentId": "1505998205.94.1692959286625.Hmail.gaotengyu@office.163.com",
+          "estimateSize": 27259,
+          "contentLength": 37304,
+          "isMsg": false,
+          "id": "7",
+          "contentLocation": null,
+          "encoding": "base64",
+          "contentType": "image/png",
+          "inlined": true,
+          "content": null
+        }
+      ],
+      "flags": {
+        "inlineAttached": true,
+        "attached": true
+      },
+      "sentDate": "2023-08-25 20:00:00",
+      "preferred": 0,
+      "summary": "hi，大家好，以下是邮件营销0830迭代测试进度日报！ 一、当前风险 暂无 二、测试进度 1、整体一轮进度66% 2、bug解决情况 总计缺陷26个，今日新增6，待解决9； 仪表盘：http://ji",
+      "label0": 0,
+      "to": "\"高鹏飞\" <gaopengfei01@office.163.com>,\"高腾玉\" <gaotengyu@office.163.com>,\"郭天龙\" <guotianlong@office.163.com>,\"韩旭\" <hanxu07@office.163.com>,\"何书芳\" <heshufang@office.163.com>,\"刘远光\" <liuyuanguang@office.163.com>,\"彭冠嵩\" <pengguansong@office.163.com>,\"孙望\" <sunwang01@office.163.com>,\"杨春贺\" <yangchunhe@office.163.com>,\"张宾\" <zhangbin16@office.163.com>,\"张彬彬\" <zhangbinbin03@office.163.com>,\"张坤持\" <wb.zhangkunchi01@office.163.com>,\"张青松\" <zhangqingsong@offi"
+    }
+  ]
+}

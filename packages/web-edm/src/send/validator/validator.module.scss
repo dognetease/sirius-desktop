@@ -1,0 +1,323 @@
+@import '@/styles/varies.scss';
+@import '@web-common/styles/variables.scss';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  // min-height: 600px;
+  gap: 8px;
+
+  .border {
+    width: 100%;
+    min-height: 36px;
+    padding: 0px 12px;
+    border-radius: 4px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .number {
+      color: $Warning-6;
+      text-align: right;
+      font-family: LX-numbers;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+    }
+
+    .border-header {
+      width: inherit;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 36px;
+
+      .left {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        @include c4-3-reg12;
+        color: $Text-5;
+      }
+
+      .right {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 4px;
+        .warning {
+          color: var(--warning-6, #ffb54c);
+          text-align: right;
+          @include c4-4-med12;
+        }
+      }
+    }
+  }
+}
+.body {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+  padding: 8px 0px;
+  border-top: 1px solid $Line-1;
+
+  .notice {
+    @include c4-3-reg12;
+    color: $Text-3;
+  }
+
+  .domain {
+    .do {
+      @include c4-3-reg12;
+      color: $Text-4;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .person {
+      flex-shrink: 0;
+      @include c4-3-reg12;
+      color: $Text-4;
+    }
+
+    gap: 16px;
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  color: $Text-2;
+  @include c4-3-reg12;
+
+  .success {
+    @include c4-3-reg12;
+    color: $Text-2;
+  }
+
+  .inner {
+    width: 100%;
+    background: $Fill-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    gap: 4px;
+  }
+  .action {
+    flex-shrink: 0;
+    cursor: pointer;
+    color: $Brand-6;
+    @include c4-3-reg12;
+  }
+  .dialog {
+    .title {
+      @include c4-3-reg12;
+      color: $Text-4;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.wrapper {
+  height: 100%;
+  border-radius: 0px 0px 4px 0px;
+  // border-left: 1px solid var(--line-2, #ebedf2);
+  // border-right: 1px solid var(--line-2, #ebedf2);
+  // display: flex;
+  // flex-direction: column;
+  width: 288px;
+  background: #f6f9ff;
+  overflow-y: auto;
+  @include sirius-scroll();
+  .validator {
+    border-radius: 0px 0px 4px 0px;
+  }
+  .header {
+    // display: flex;
+    // align-items: center;
+    padding: 12px;
+    background: linear-gradient(188deg, #d0dcff -13.13%, rgba(211, 222, 255, 0) 59.39%);
+    height: 211px;
+    position: relative;
+    .bg-icon {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+    }
+    &-title {
+      color: var(--text-6, #080b19);
+      @include h1-4-med16();
+      width: 64px;
+      height: 24px;
+      border-bottom: 6px solid #b7c3ff;
+      // margin-right: 12px;
+    }
+    &-count-wrap {
+      display: flex;
+      align-items: baseline;
+      margin-top: 10px;
+      margin-bottom: 6px;
+      .header-count {
+        color: var(--warning-6, #ffb54c);
+        font-family: LX-numbers;
+        font-weight: 400;
+        line-height: 48px;
+        font-size: 36px;
+        height: 48px;
+        overflow: hidden;
+      }
+      .header-count-success {
+        font-family: LX-numbers;
+        color: var(--success-6, #0fd683);
+      }
+      .header-count-warning {
+        font-family: LX-numbers;
+        color: var(--warning-6, #ffb54c);
+      }
+      .header-label {
+        color: var(--text-4, #545a6e);
+        @include c4-3-reg12();
+        margin: 0 4px 0 2px;
+      }
+      .header-info1 {
+        color: var(--text-5, #272e47);
+        @include c4-3-reg12();
+      }
+    }
+    .header-info2 {
+      @include c4-3-reg12();
+      color: var(--text-3, #747a8c);
+    }
+  }
+  .header2 {
+    background: #f6f9ff;
+  }
+  .content {
+    margin-top: -63px;
+    // flex: 1;
+    // @include sirius-scroll;
+    // overflow-y: auto;
+    // height: 0;
+    // background: var(--fill-1, #f8f9fa);
+    background: #f6f9ff;
+    padding: 16px 12px;
+    z-index: 2;
+    position: relative;
+  }
+}
+
+.success-result {
+  color: var(--text-2, #9fa2ad);
+  /* 灵犀桌面2.0/C4.3-Reg12 */
+  @include c4-3-reg12;
+}
+.sensitive-result {
+  &-info {
+    color: var(--text-3, #747a8c);
+    @include c4-3-reg12;
+    margin-bottom: 4px;
+  }
+  &-words {
+    border-radius: 2px;
+    background: var(--fill-1, #f8f9fa);
+    padding: 4px 8px;
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    color: var(--text-4, #545a6e);
+    /* 灵犀桌面2.0/C4.3-Reg12 */
+    @include c4-3-reg12;
+  }
+}
+.action-link {
+  color: var(--brand-6, #4c6aff);
+  /* 灵犀桌面2.0/C4.3-Reg12 */
+  @include c4-3-reg12;
+}
+
+.no-contact {
+  border-radius: 4px;
+  background: var(--warning-2, #fff0db);
+  color: var(--text-5, #272e47);
+  /* 灵犀桌面2.0/C4.3-Reg12 */
+  @include c4-3-reg12;
+  display: flex;
+  height: 36px;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.result-wrap {
+  margin-bottom: 12px;
+  .result-title {
+    color: var(--text-6, #080b19);
+    @include c4-4-med12;
+    display: flex;
+    align-items: center;
+    .result-icon {
+      margin-right: 4px;
+    }
+  }
+  & > div {
+    margin-bottom: 8px;
+  }
+  .openable-box {
+    border-radius: 2px;
+    background: var(--fill-1, #f8f9fa);
+    padding: 4px 8px;
+    .openable-item {
+      // display: flex;
+      // flex-wrap: wrap;
+      // align-items: center;
+      color: var(--text-4, #545a6e);
+      @include c4-3-reg12;
+      .mark {
+        color: var(--warning-6, #ffb54c);
+        margin-left: 6px;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block !important;
+}
+
+.open-icon {
+  path {
+    stroke: #c9cbd6 !important;
+  }
+}
+
+.count-line {
+  margin-top: -48px;
+}
+.count-scroll {
+  transition: all 0.8s ease-out;
+  transform: translateY(-100%);
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  margin-top: 0px;
+}

@@ -1,0 +1,260 @@
+@import '../../../styles/common.scss';
+
+@mixin commonBtn {
+  height: 32px;
+  min-width: 76px;
+  padding: 0 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-image: none;
+  box-shadow: none;
+  transition: $btn-transition;
+  @include p1-3-reg14;
+
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+
+    > * {
+      pointer-events: none;
+    }
+  }
+
+  &.inline {
+    display: inline-flex;
+  }
+}
+
+.modalCheckContentWrap {
+  display: flex;
+
+  .checkboxWrap {
+    flex: none;
+    width: 16px;
+    height: 16px;
+  }
+
+  .childrenWrap {
+    flex: 1;
+    display: flex;
+  }
+}
+
+.modalWrap {
+  left: $side-bar-width;
+  top: $tool-bar-height;
+}
+
+.modalTag {
+  :global(.ant-modal-content) {
+    border-radius: 8px;
+  }
+
+  :global(.ant-modal-header) {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+
+  :global(.ant-modal-close) {
+    top: 20px;
+    right: 20px;
+  }
+
+  :global(.ant-modal-title) {
+    line-height: 24px;
+    color: #272e47;
+  }
+
+  :global(.sirius-icon) {
+    font-size: 20px;
+    line-height: 20px;
+    color: $Fill-7;
+    vertical-align: -4px;
+  }
+
+  :global(.ant-modal-close-x) {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 12px;
+
+    &:hover {
+      background-color: #f6f7fa;
+      border-radius: 12px;
+      transition: background-color 0.3s ease-in-out;
+    }
+  }
+
+  :global(.ant-modal-footer .ant-btn:not(.ant-btn-primary)) {
+    border-radius: 4px;
+    color: #545a6e;
+    border-color: #e1e3e8;
+  }
+
+  :global(.ant-modal-footer .ant-btn.ant-btn-primary) {
+    border-radius: 4px;
+    border-color: #4c6aff;
+    background-color: #4c6aff;
+  }
+
+  :global(.ant-form-item-label > label) {
+    color: $Text-5;
+  }
+}
+
+.closeWrap {
+  // width: 24px;
+  // height: 24px;
+  // &:hover {
+  //   background-color: #F6F7FA;
+  //   border-radius: 12px;
+  // }
+}
+
+/** modal function **/
+:global(.ant-modal-confirm.sirius-confirm) {
+  :global(.ant-modal-content) {
+    border-radius: 8px;
+  }
+
+  :global(.ant-modal-confirm-body) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    :global(.ant-modal-confirm-title) {
+      color: #272e47;
+      line-height: 24px;
+      margin-left: 0px !important;
+    }
+
+    :global(.ant-modal-confirm-content) {
+      color: #747a8c;
+      line-height: 22px;
+      padding-left: 6px !important;
+    }
+  }
+
+  :global(.ant-modal-confirm-body > .sirius-icon + .ant-modal-confirm-title) {
+    display: flex;
+    flex: 1;
+    max-width: 332px;
+  }
+
+  :global(.ant-modal-confirm-body > .sirius-icon) {
+    margin-inline-end: 8px;
+    margin-top: 3px;
+  }
+
+  :global(.ant-modal-body) {
+    padding: 20px 20px 18px 20px;
+  }
+
+  :global(.ant-modal-close) {
+    top: 20px;
+    right: 20px;
+  }
+
+  :global(.ant-modal-close-x) {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  :global(.ant-modal-confirm-body .ant-modal-confirm-title + .ant-modal-confirm-content) {
+    margin-block-start: 8px;
+    flex-basis: 100%;
+  }
+
+  :global(.ant-modal-confirm-body > .sirius-icon + .ant-modal-confirm-title + .ant-modal-confirm-content) {
+    margin-inline-start: 26px;
+  }
+
+  /** 当前版本 4.16.13 不支持 confirm 自定义 footer，故维护 button 样式**/
+  :global(.ant-modal-confirm-btns .ant-btn) {
+    @include commonBtn();
+    background: #ffffff;
+    color: $Text-4;
+    border: 1px solid $Line-3;
+
+    &.disabled,
+    &[disabled] {
+      color: $Text-1;
+      border: 1px solid $Line-1;
+    }
+
+    &:not([disabled]):hover {
+      background-color: $Fill-1;
+    }
+
+    &:not([disabled]):active {
+      background-color: $Fill-3;
+    }
+  }
+
+  :global(.ant-modal-confirm-btns .ant-btn.ant-btn-primary) {
+    @include commonBtn();
+    background-color: $Brand-6;
+    color: #ffffff;
+    border: none;
+
+    &.disabled,
+    &[disabled] {
+      background-color: $Brand-3;
+    }
+
+    &:not([disabled]):hover {
+      background-color: $Brand-5;
+    }
+
+    &:not([disabled]):active {
+      background-color: $Brand-7;
+    }
+  }
+
+  :global(.ant-modal-confirm-btns) {
+    margin-top: 18px;
+
+    :global(.ant-btn + .ant-btn) {
+      margin-left: 12px;
+    }
+  }
+}
+
+.siConfirm {
+  font-size: 18px;
+  color: #ffb54c;
+}
+
+.siSuccess {
+  font-size: 18px;
+  color: #0fd683;
+}
+
+.siInfo {
+  font-size: 18px;
+  color: #4c6aff;
+}
+
+.siWarning {
+  font-size: 18px;
+  color: #fe5b4c;
+}
+
+.siError {
+  font-size: 18px;
+  color: #fe5b4c;
+}
+
+.deFooter {
+  display: flex;
+  justify-content: flex-end;
+
+  :global(.lx-btn + .lx-btn) {
+    margin-left: 12px;
+  }
+  :global(.lx-ui-btn + .lx-ui-btn) {
+    margin-left: 12px;
+  }
+}

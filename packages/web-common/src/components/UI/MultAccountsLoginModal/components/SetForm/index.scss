@@ -1,0 +1,43 @@
+.setform-span-container {
+  .ant-spin {
+    .ant-spin-dot {
+      .spin-label {
+        display: none;
+      }
+    }
+    .ant-spin-text {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 14px;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      margin-top: 25px;
+    }
+  }
+  .ant-spin-nested-loading > div > .ant-spin .ant-spin-text {
+    font-size: 14px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  }
+  input::placeholder {
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #a8aaad;
+  }
+  .ant-input {
+    border-radius: 4px !important;
+    .ant-input:focus,
+    .ant-input-focused {
+      border-color: #386ee7;
+      box-shadow: none;
+    }
+    .ant-input:hover {
+      border-color: #386ee7;
+    }
+    .ant-form-item-has-error :not(.ant-input-disabled):not(.ant-input-borderless).ant-input:focus {
+      box-shadow: none;
+    }
+  }
+}

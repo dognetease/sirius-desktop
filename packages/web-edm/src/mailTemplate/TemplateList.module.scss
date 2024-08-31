@@ -1,0 +1,250 @@
+.search-template-list {
+  padding: 9px 24px 16px;
+  background: #f4f6f7;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  .template-list {
+    padding: 0;
+  }
+  .search-history {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 16px;
+    align-content: stretch;
+    & > div {
+      flex-shrink: 1;
+    }
+    overflow: hidden;
+    .history-label {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      color: #7a8599;
+      margin-right: 4px;
+      white-space: nowrap;
+    }
+    .history-item-box {
+      display: flex;
+      align-items: center;
+      margin-right: -8px;
+      flex: 1;
+      width: 0;
+      overflow-x: hidden;
+    }
+    .history-item {
+      background: #ffffff;
+      border-radius: 75px;
+      padding: 4px 8px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: #4e5a70;
+      margin-right: 8px;
+      white-space: nowrap;
+      flex-shrink: 1;
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      &-item {
+        cursor: pointer;
+        max-width: 92px;
+        display: block;
+        flex: 1;
+        // width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      &:hover {
+        .history-item-icon {
+          display: inline-block;
+          flex-shrink: 1;
+        }
+      }
+    }
+    .history-item-icon {
+      display: none;
+      width: 8px;
+      height: 8px;
+      cursor: pointer;
+      margin-left: 8px;
+    }
+  }
+  .search-count {
+    display: flex;
+    align-items: center;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #7a8599;
+    margin-bottom: 8px;
+    .search-count-number {
+      color: #232d47;
+      margin: 0 6px;
+    }
+  }
+}
+.template-list {
+  padding: 16px 24px;
+  background: #f4f6f7;
+  flex: 1;
+  display: grid;
+  overflow-y: overlay;
+  grid-template-columns: repeat(auto-fill, 224px);
+  grid-template-rows: repeat(auto-fill, 224px);
+  // margin-right: -16px;
+  // margin-bottom: -16px;
+  // justify-content: space-between;
+  // grid-column-gap: 16px;
+  gap: 16px;
+  &-modal {
+    padding: 16px;
+    row-gap: 16px;
+    column-gap: 12px;
+    grid-template-columns: repeat(auto-fill, 190px);
+    grid-template-rows: repeat(auto-fill, 190px);
+  }
+  .template-wrapper {
+    // margin-right: 16px;
+    // margin-bottom: 16px;
+  }
+  .template-card {
+    border-radius: 4px;
+    width: 224px;
+    height: 224px;
+    background-color: #fff;
+    padding: 16px;
+    .template-title {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      color: #232d47;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .template-view {
+      border: 1px solid #eceff4;
+      border-radius: 4px;
+      height: 136px;
+      margin-top: 11px;
+      overflow: hidden;
+      &-modal {
+        width: 158px;
+        height: 102px;
+      }
+      position: relative;
+      .img-cover {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 10px;
+        color: #fff;
+        font-size: 12px;
+        line-height: 20px;
+        // word-break: break-all;
+        align-items: center;
+        & > div {
+          display: -webkit-box;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+        }
+      }
+      &:hover {
+        .img-cover {
+          display: flex;
+        }
+      }
+    }
+    .template-reply {
+      // display: none;
+      margin-top: 16px;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: #7a8599;
+    }
+    &:hover {
+      filter: drop-shadow(0px 4px 8px rgba(35, 45, 71, 0.08));
+      .template-op {
+        display: flex;
+      }
+      .template-reply {
+        display: none;
+      }
+    }
+    .template-op {
+      margin-top: 8px;
+      display: none;
+      // display: flex;
+      justify-content: space-around;
+      align-items: center;
+      :global(.ant-btn) {
+        min-width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  .template-card-modal {
+    width: 190px;
+    height: 190px;
+  }
+}
+.template-op-btn {
+  :global(.ant-btn) {
+    border: none;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: #4e5a70;
+    min-width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.no-result-box {
+  background: #f4f6f7;
+  flex: 1;
+  .no-result {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.hide-box {
+  display: none !important;
+}
+.block-box {
+  display: block;
+}
+.spin-wrapper {
+  // background-color: red;
+  flex: 1;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+}

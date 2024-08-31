@@ -1,0 +1,56 @@
+@import '../../../styles/common.scss';
+.#{$class-prefix}-page-header {
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+  height: 56px;
+  background-color: #ffffff;
+  padding: 8px 20px 0 16px;
+  // padding-right: 20px;
+  // padding-left: 20px;
+  &.bg-transparent {
+    background-color: transparent;
+  }
+  &.has-back-icon {
+    padding-left: 8px;
+  }
+  .page-header-left {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .page-header-back-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0;
+      padding: 0 8px;
+      cursor: pointer;
+      height: 100%;
+    }
+    .page-header-title {
+      @include h1-4-med16;
+      color: $Text-5;
+      margin-bottom: 0;
+    }
+    .page-header-title-extra {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 5px;
+    }
+    .page-header-subTitle {
+      margin-left: 8px;
+      @include c4-3-reg12;
+      color: $Text-3;
+      margin-bottom: 0;
+    }
+  }
+  .page-header-right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .page-header-extra {
+      margin-bottom: 0;
+    }
+  }
+}

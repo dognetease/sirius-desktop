@@ -1,0 +1,324 @@
+$siriusToolbarColor: #386ee7;
+@import '../../styles/varies.scss';
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.toolbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  width: 100%;
+  min-width: 1115px;
+  overflow-y: auto;
+  height: 47px;
+  // background: $siriusToolbarColor;
+  background: $Brand-6-bg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  .toolbarLeft {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  .toolbarRight {
+    display: flex;
+    align-items: center;
+  }
+  .toolbar-logo-wrap {
+    margin-left: 16px;
+    cursor: pointer;
+    display: flex;
+    .toolbar-logo {
+      cursor: pointer;
+      width: 150px;
+      height: 23px;
+      background: url(../../images/web_logo.svg) no-repeat;
+    }
+  }
+
+  .toolbar-item,
+  .toolbar-item-right {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    .toolbar-item-icon {
+      margin-right: 9px;
+    }
+    .toolbar-item-icon-wrap {
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-image: url(../../images/icons/toolbar_upgrade.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    .toolbar-item-triangle {
+      margin-left: 9px;
+    }
+  }
+  .toolbar-item:last-child {
+    margin-right: 9px;
+  }
+  .toolbar-item-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .toolbar-item-label-warning {
+    color: $Warning-6;
+  }
+  .toolbar-item-right {
+    // margin-right: 16px;
+    .toolbar-item-label {
+      margin-left: 0;
+    }
+  }
+  .toolbar-help-menu {
+    border-radius: 4px;
+    font-size: 14px;
+    color: #262a33;
+  }
+  .toolbar-divider {
+    height: 16px;
+    width: 1px;
+    top: auto;
+    margin: 0 16px;
+    background: #e1e6ed;
+    opacity: 0.2;
+  }
+
+  .toolbar-account {
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+    span {
+      display: flex;
+      align-items: center;
+    }
+    &-sender {
+      &-show-name {
+        margin-left: 4px;
+        max-width: 210px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+    &-open-icon {
+      transform: rotateZ(180deg);
+      transition: all 0.35s linear;
+      margin-left: 8px;
+      width: 8px;
+      height: 5px;
+      background-image: url('./../../images/account_up.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  .avatarInput {
+    display: none;
+    position: absolute;
+    z-index: -1;
+  }
+}
+.toolbar-account-inner {
+  :global {
+    .ant-tooltip-inner {
+      min-width: 328px;
+      border-radius: 4px !important;
+      // background: #fff !important;
+      // background-color: $white-hover-bg !important;
+      background-color: $white-tooltip !important;
+      color: $Text-3;
+      padding: 0 !important;
+      box-shadow: 0px 4px 10px rgba($label-1_3-r, $label-1_3-g, $label-1_3-b, 0.1) !important;
+    }
+    .ant-radio-wrapper {
+      align-items: flex-start;
+      padding: 10px 0 0 17px;
+      width: 100%;
+      border-radius: 4px;
+      &:hover {
+        background: $Fill-2_5;
+      }
+      span.ant-radio {
+        top: 0;
+        display: flex;
+        height: 40px;
+        align-items: center;
+      }
+    }
+  }
+  .toolbarMainAccountWrap {
+    display: flex;
+    flex-direction: row;
+    margin-left: 7px;
+  }
+  .toolbar-account-popover {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    .toolbar-account-single {
+      margin-top: 12px;
+      margin-left: 9px;
+    }
+    &-avatar {
+      display: flex;
+      justify-content: flex-start;
+    }
+    &-desc {
+      margin-left: 12px;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+    &-nickname {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      color: $Text-5;
+    }
+    &-companyname {
+      font-size: 12px;
+      color: $Text-3;
+      line-height: 16px;
+      margin-top: 4px;
+    }
+    &-id {
+      max-width: 210px;
+      margin-bottom: 4px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: $Text-3;
+    }
+    .shared-account-radio {
+      border-top: 1px solid $Fill-3;
+      padding: 0;
+    }
+    .toolbar-shared-account {
+      display: flex;
+      margin-left: 7px;
+      margin-bottom: 13px;
+
+      .avator {
+        width: 40px;
+        height: 40px;
+        position: relative;
+
+        .avatarLoadingWrap {
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          border-radius: 50%;
+          background-color: rgb(255, 255, 255);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 2;
+        }
+        .avatarLoading {
+          @include sirius-background-image(40px, 40px, url('@/images/icons/common/loading.svg'));
+          // @include sirius-spin-animation;
+          animation: spin 1s linear infinite;
+        }
+      }
+      &-field {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 12px;
+        font-size: 12px;
+        &-email {
+          max-width: 210px;
+          font-weight: 400;
+          line-height: 22px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          color: $Text-3;
+        }
+        &-nickname {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 22px;
+          color: #262a33;
+          display: flex;
+          .tagWrapper {
+            display: flex;
+            position: relative;
+            .sharedAccountTag {
+              display: block;
+              position: absolute;
+              top: 4px;
+              margin-left: 4px;
+              padding: 0 4px;
+              border: 0.5px solid $Success-6;
+              border-radius: 2px;
+              text-align: center;
+              width: 59px;
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 16px;
+              height: 16px;
+              -webkit-transform: scale(0.83);
+              transform: scale(0.83);
+              color: $Success-7;
+            }
+          }
+        }
+      }
+    }
+    .addbtn {
+      height: 64px;
+      background-color: #ffffff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+
+      &:hover {
+        background-color: $Fill-2;
+      }
+      .avator {
+        width: 40px;
+        height: 40px;
+        margin-right: 12px;
+        margin-left: 36px;
+        background-color: $Fill-2_5;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .right {
+        flex: 1;
+        font-family: 'PingFang SC';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        color: $Text-4;
+      }
+    }
+  }
+}
+:global(.ant-modal-mask) {
+  left: 0;
+}

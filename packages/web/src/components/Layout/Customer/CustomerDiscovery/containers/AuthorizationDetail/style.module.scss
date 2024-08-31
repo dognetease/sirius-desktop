@@ -1,0 +1,110 @@
+@import '../../common.module.scss';
+
+.wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+
+  .apply-detail {
+    color: #7a8599;
+
+    .label {
+      display: inline-block;
+      width: 55px;
+    }
+
+    .val {
+      display: inline;
+      word-break: break-all;
+      color: #232d47;
+      font-weight: 400;
+    }
+  }
+
+  .title {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.85);
+  }
+
+  .auth-record {
+    overflow: visible;
+    flex: 1;
+    min-height: 0;
+    // padding: 20px 0;
+
+    &.canEdit {
+      :global(.ant-table-tbody tr) {
+        cursor: pointer;
+      }
+    }
+
+    :global(.ant-table-cell) {
+      background: #fff;
+      border-color: #eef1f3;
+      padding-left: 0;
+    }
+
+    :global(.ant-table-cell.ant-table-selection-column td) {
+      background: #fff;
+      border-color: #eef1f3;
+    }
+
+    :global(.ant-table-row:hover td) {
+      background: #fff;
+      border-color: #eef1f3;
+    }
+
+    :global(.ant-table-header tr th) {
+      color: #4e5a70;
+      font-weight: 400;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .recordTitle {
+    padding-top: 40px;
+  }
+
+  // .nickName {
+  //   color: #396ee7;
+  //   padding: 0 5px;
+  // }
+}
+
+.link-btn-state0 {
+  color: #478e83;
+  background: #e6faf6;
+}
+
+.link-btn-state1 {
+  color: #478e83;
+  background: #e6faf6;
+}
+
+.link-btn-state2 {
+  color: #b16059;
+  background: #feeff1;
+}
+
+.title-state {
+  margin-left: 10px;
+}
+
+.state {
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+.relation-detail-item {
+  align-items: center;
+
+  .relation-desc {
+    padding-left: 12px;
+  }
+}

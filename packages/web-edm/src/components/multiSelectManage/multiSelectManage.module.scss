@@ -1,0 +1,109 @@
+.group-modal {
+  :global(.ant-modal-header) {
+    padding: 20px 24px;
+    .ant-modal-title {
+      font-weight: 500;
+      font-size: 16px;
+      height: 24px;
+      line-height: 24px;
+      color: #232d47;
+      font-family: 'PingFang SC';
+    }
+  }
+  :global(.ant-modal-body) {
+    padding: 8px 8px 0px 8px;
+    // height: 325px!important;
+    .ant-input-group {
+      .ant-input-affix-wrapper {
+        border: 1px solid rgba(76, 106, 255, 1);
+        padding: 5px 8px;
+      }
+    }
+  }
+}
+
+.content {
+  height: 290px;
+  overflow-y: scroll;
+  /* 设置滚动条的样式 */
+  &::-webkit-scrollbar {
+    width: 6px;
+    background: #fff;
+  }
+  /* 滚动槽 */
+  &::-webkit-scrollbar-track {
+    border-radius: 6px;
+  }
+  /* 滚动条滑块 */
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: rgba(38, 42, 51, 0.3);
+    padding: 4px;
+  }
+  .item,
+  .item1 {
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 2px;
+    // box-shadow: 0px 1px 0px #eceff4;
+    border-bottom: 1px solid #eceff4;
+    padding: 13px 16px;
+    position: relative;
+    background: #ffffff;
+    .btns {
+      display: none;
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      height: 20px;
+      line-height: 20px;
+      .editIcon {
+        margin-right: 24px;
+        cursor: pointer;
+      }
+      .deleteIcon {
+        cursor: pointer;
+      }
+    }
+    .item-name {
+      width: calc(100% - 60px);
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .inputBtn {
+      color: #4c6aff;
+      font-size: 12px;
+      cursor: pointer;
+    }
+  }
+  .item:hover {
+    background: #f4f6f7;
+    border-radius: 4px;
+    .btns {
+      display: block;
+    }
+  }
+  .notags {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #7a8599;
+  }
+}
+
+.err {
+  color: #fe5b4c;
+  font-size: 12px;
+  padding: 8px 8px 0px 8px;
+  .errText {
+    height: 20px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+  }
+}

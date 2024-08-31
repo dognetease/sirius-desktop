@@ -1,0 +1,97 @@
+.banner-layout {
+  // width: 944px;
+  position: relative;
+  height: 202px;
+  // background: #ffffff;
+  background-color: $white;
+  border-radius: 8px;
+  padding: 24px;
+  background-image: url('./img/linxi-work.png'), url('./img/bg.svg'); // 兜底
+  background-image: url('./img/linxi-work.png'), $banner-bg;
+  background-size: 383px auto, auto 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 385px 0%, 35px top;
+  margin-bottom: 20px;
+  cursor: pointer;
+  @media screen and (min-width: 1200px) {
+    & {
+      background-position: 80% 0%, right top;
+    }
+  }
+
+  h3 {
+    height: 32px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    // color: #262a33;
+    color: $font-color-2;
+    margin-bottom: 0;
+  }
+  p {
+    height: 22px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #7d8085;
+    margin-top: 4px;
+    margin-bottom: 0px;
+  }
+
+  .link-wrap {
+    // display: flex;
+    flex-wrap: wrap;
+    min-width: 302px;
+    max-width: 400px;
+    margin-left: -16px;
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .link-item {
+    position: relative;
+    top: 0;
+    min-width: 135px;
+    white-space: nowrap;
+    height: 32px;
+    background: $Fill-2_5;
+    flex-shrink: 0;
+    flex-grow: 0;
+    margin-top: 12px;
+    margin-left: 16px;
+    border-radius: 2px;
+    padding: 5px 18px 5px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 22px;
+    color: #386ee7;
+    display: inline-flex;
+    justify-content: space-between;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.12s;
+    &:hover {
+      transform: translate(0, -2px);
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+}
+
+.banner-waimao {
+  background-image: url('./img/disk.png');
+  background-color: $Link-2;
+  background-size: 341px auto;
+
+  @media screen and (min-width: 1200px) {
+    & {
+      background-position: 80% 20px, right top;
+    }
+  }
+}

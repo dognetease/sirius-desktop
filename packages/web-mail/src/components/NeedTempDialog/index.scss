@@ -1,0 +1,36 @@
+.modal-dialog {
+  .modal-content {
+    .modal-text {
+      .title {
+        font-family: 'PingFang SC';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        // color: #232d47;
+        color: $font-color-2;
+      }
+      .desc {
+        margin-top: 8px;
+        // color: #7a8599;
+        color: $Text-2;
+      }
+    }
+    .btns {
+      display: block;
+      text-align: right;
+      .cancel,
+      .save {
+        border: none;
+      }
+      .cancel {
+        background: $Fill-2_5;
+        color: $label-6_3;
+      }
+      .save-draft {
+      }
+    }
+    .confirm-btns {
+      display: block !important;
+    }
+  }
+}

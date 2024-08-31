@@ -1,0 +1,23 @@
+.fetching {
+  margin-top: 292px;
+  .percent {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #51555c;
+  }
+  .progress {
+    margin: 9px auto 17px auto;
+    width: 240px;
+    display: block;
+  }
+  .fetchingIntro {
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: $label-6_3;
+  }
+}

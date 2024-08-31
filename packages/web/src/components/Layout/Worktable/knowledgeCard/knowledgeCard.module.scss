@@ -1,0 +1,121 @@
+.knowledgeCardSwitchTabs {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 12px;
+  position: absolute;
+  height: 42px;
+  top: 25px;
+  left: 32px;
+  .tabItem {
+    color: #262a33;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include c4-1-reg12();
+    cursor: pointer;
+    &.active {
+      color: #386ee7;
+    }
+    &.gap {
+      margin-left: 22px;
+    }
+    .bottomLine {
+      width: 16px;
+      height: 0px;
+      border: 2px solid #386ee7;
+      position: absolute;
+      bottom: -1px;
+    }
+  }
+}
+.knowledgeCardContent {
+  width: 100%;
+  height: 100%;
+  overflow: overlay;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  :global {
+    .ant-tooltip-content .ant-tooltip-arrow {
+      display: block !important;
+    }
+
+    .ant-tooltip-content {
+      background: rgba(0, 0, 0, 0.8) !important;
+    }
+  }
+  // padding: 10px 32px 10px 32px;
+  .moreBtn {
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
+    height: 36px;
+    background-color: $Fill-3;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include p1-3-reg14();
+    color: $Text-4;
+
+    &:hover {
+      background-color: $Fill-2;
+    }
+    &:active {
+      background-color: $Fill-4;
+    }
+  }
+}
+.knowledgeCardInfoItem {
+  display: flex;
+  height: 38px;
+  background-color: #fff;
+  align-items: center;
+  justify-content: flex-start;
+  color: $Text-5;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+  .dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $Fill-5;
+    margin-right: 10px;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+  &:hover {
+    color: $Brand-6;
+  }
+  .itemTitle {
+    @include p1-3-reg14();
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .itemIcon {
+    position: absolute;
+    right: 7.5px;
+  }
+}
+.noDataComponent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  span {
+    @include c4-1-reg12();
+    color: #a8aaad;
+  }
+}

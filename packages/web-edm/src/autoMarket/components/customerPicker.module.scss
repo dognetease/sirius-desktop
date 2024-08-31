@@ -1,0 +1,93 @@
+.customer-picker {
+  :global(.ant-drawer-header) {
+    border-bottom: none;
+  }
+
+  :global(.ant-radio-wrapper) {
+    margin-right: 24px;
+  }
+
+  :global(.ant-drawer-footer) {
+    border-top: none;
+
+    :global(.ant-btn:not(.ant-btn-primary)) {
+      border-color: #f0f3f5;
+      background-color: #f0f3f5;
+    }
+
+    :global(.ant-btn-primary) {
+      background-color: #4c6aff;
+    }
+  }
+
+  .customer-type {
+    padding: 0px 24px;
+    .radio-group {
+      :global(.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):first-child) {
+        border-color: #4c6aff;
+      }
+      :global(.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)) {
+        color: #4c6aff;
+        border-color: #4c6aff;
+      }
+      :global(.ant-radio-button-wrapper:hover) {
+        color: #4c6aff;
+      }
+    }
+  }
+
+  &-body {
+    padding: 8px 24px;
+
+    .sub-title {
+      color: #7a8599;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      margin-bottom: 24px;
+    }
+
+    .form {
+      > :global(.ant-form-item) {
+        margin-bottom: 0;
+      }
+    }
+
+    .form-item-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      > :global(.ant-form-item) {
+        width: 100%;
+        margin-right: 16px;
+
+        &.customer-tag-op-type {
+          width: 156px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .website {
+    color: #9fa2ad;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  &-footer {
+    text-align: right;
+
+    :global(.ant-btn) {
+      margin-right: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

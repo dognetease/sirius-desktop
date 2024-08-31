@@ -1,0 +1,15 @@
+@import '../../../../web-common/src/styles/variables.scss';
+.desc-editor {
+  border: 1px solid #d9d9d9;
+
+  .tox-sidebar-wrap {
+    background-color: #fff;
+  }
+  .tox-edit-area {
+    margin: 8px 0px 8px 8px;
+  }
+}
+.desc-editor-limit {
+  border: 1px solid $Error-6;
+  border-radius: 5px;
+}

@@ -1,0 +1,46 @@
+.VListTreeCard-Wrap {
+  display: flex;
+  height: 36px;
+  cursor: pointer;
+  padding: 0 0 4px 0;
+  align-items: center;
+
+  &.active {
+    // background: #d1e0ffe6;
+    // background: $Brand-2;
+    background-color: rgba($Line-3-r, $Line-3-g, $Line-3-b, 1);
+
+    // &:hover {
+    //   // background: #d1e0ffe6;
+    //   background: $Brand-2-bg;
+    // }
+  }
+
+  &:hover {
+    background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+  }
+
+  .VListTreeCard-icon {
+    margin: 0 9px 0 6px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .VLExpand-wrap {
+    width: 15px;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+  }
+
+  .VLExpand-icon {
+    color: $Text-3;
+    font-size: 10px;
+  }
+
+  .vlist-tree-title-wrap {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}

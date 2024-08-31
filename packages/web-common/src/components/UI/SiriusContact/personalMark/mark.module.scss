@@ -1,0 +1,36 @@
+.siriusContactMarkContainer {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.markHover {
+    &:hover {
+      background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+      border-radius: 4px;
+    }
+  }
+  .markIcon {
+    width: 16px;
+    height: 16px;
+    background-image: url('../../../../../../web/src/images/icons/contact/mark.svg');
+    background-size: 100% 100%;
+    &.checked {
+      background-image: url('../../../../../../web/src/images/icons/contact/marked.svg');
+    }
+    &.group {
+      background-image: url('../../../../../../web/src/images/icons/contact/group_mark.svg');
+      &.checked {
+        background-image: url('../../../../../../web/src/images/icons/contact/group_marked.svg');
+      }
+    }
+    &.detailIcon {
+      background-image: url('../../../../../../web/src/images/icons/contact/detail_card_mask.svg');
+      &.checked {
+        background-image: url('../../../../../../web/src/images/icons/contact/marked.svg');
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.history-action-modal {
+  color: #7d8085;
+  :global(.ant-modal-body) {
+    padding: 0 0 16px;
+  }
+  :global(.ant-table) {
+    color: #51555c;
+  }
+  :global(.ant-table-thead th::before) {
+    display: none;
+  }
+  :global(.ant-table .ant-table-thead th) {
+    background: rgba(38, 42, 51, 0.04);
+  }
+  :global(.ant-table .ant-table-thead tr th:first-child),
+  :global(.ant-table tr td:first-child) {
+    padding-left: 24px;
+  }
+  :global(.ant-table-cell) {
+    padding: 12px;
+    font-size: 12px;
+    line-height: 1;
+    border-bottom: none;
+  }
+  :global(.ant-tabs-nav) {
+    padding-left: 12px;
+    margin: 0;
+    border-bottom: none;
+  }
+  .auto-reply-badge {
+    margin-left: 16px;
+    :global(.ant-badge-count) {
+      background: rgba(107, 169, 255, 0.1);
+      border-radius: 2px;
+      color: #6ba9ff;
+      box-shadow: none;
+    }
+  }
+}

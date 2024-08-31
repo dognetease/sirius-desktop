@@ -1,0 +1,30 @@
+.host-change-container {
+  display: flex;
+
+  .expand-icon {
+    background: url(../../../../web/src/images/icons/calender-icon-expand.png) center center no-repeat;
+    background-size: 8px;
+    height: 8px;
+    width: 8px;
+    display: inline-block;
+  }
+  $select_height: 20px;
+  :global(.ant-select-selection-item) {
+    line-height: $select_height !important;
+  }
+  :global(.ant-select-selector) {
+    height: $select_height !important;
+    border: none !important;
+    overflow: hidden;
+  }
+  :global(.ant-select) {
+    line-height: $select_height !important;
+  }
+  :global(.ant-select-arrow) {
+    margin-top: -8px !important;
+  }
+  .tooltip-icon {
+    width: 13px;
+    height: 13px;
+  }
+}

@@ -1,0 +1,19 @@
+.edit-auto-group {
+  .tip {
+    color: #7a8599;
+    @include p1-3-reg14();
+    margin-bottom: 8px;
+  }
+
+  .select {
+    width: 100%;
+  }
+
+  .rule-switch {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    @include p1-3-reg14();
+    color: #232d47;
+  }
+}

@@ -1,0 +1,248 @@
+@import '../../../../web/src/styles/varies.scss';
+$border-color: $Fill-4;
+@mixin eventOuter {
+  padding: 1px 8px;
+  width: 100%;
+  z-index: 9;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  .header {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    .headerBtn {
+      height: 28px;
+      line-height: 28px;
+      // background: #f4f4f5;
+      background-color: $white-bg;
+      border-radius: 29px;
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.7);
+      border: none;
+      outline: none;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0px;
+      cursor: pointer;
+      &:hover {
+        color: $Text-5;
+      }
+      .left {
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        background-size: 16px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('@/images/icons/calendarDetail/date-picker-arrow-left.svg');
+      }
+      .right {
+        display: inline-block;
+        height: 20px;
+        width: 20px;
+        background-size: 16px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 16px;
+        background-repeat: no-repeat;
+        background-position: center;
+        // background-image: url('@/images/icons/calendarDetail/date-picker-arrow-right.svg');
+      }
+    }
+    .headerTitle {
+      font-family: DIN Alternate;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      // color: #262a33;
+      color: $font-color-2;
+      margin-left: 16px;
+    }
+    .headerClose {
+      line-height: 16px;
+      height: 16px;
+      margin-left: auto;
+      cursor: pointer;
+    }
+  }
+  .gridContainer {
+    flex-grow: 1;
+    .indicator {
+      height: 100%;
+      background: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.2);
+      border-radius: 2px;
+      z-index: 2;
+      &-busy {
+        background: rgba($Error-6-r, $Error-6-g, $Error-6-b, 0.2);
+      }
+    }
+    .gridRowHeaderContainer {
+      .gridRowHeader {
+        .gridRowHeaderCell {
+          text-align: center;
+          color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+          font-size: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include borderHalfPx($border-color, 0, 1px, 1px, 1px, 0);
+          &::before {
+            width: 200%;
+            pointer-events: none;
+          }
+        }
+      }
+    }
+    .gridColHaederContainer {
+      .gridColHaeder {
+        .gridColHaederCell {
+          span {
+            position: absolute;
+            display: block;
+            left: 0;
+            right: 0;
+            line-height: 14px;
+            height: 12px;
+            bottom: -7px;
+            font-size: 12px;
+            font-family: DIN Alternate Bold;
+            color: #a8aaad;
+          }
+        }
+        @include borderHalfPx($border-color, 0, 0, 1px, 0, 0);
+        &::before {
+          width: 200%;
+        }
+      }
+      .nowTitle {
+        position: absolute;
+        font-family: DIN Alternate;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        color: #f74f4f;
+        text-align: center;
+        height: 20px;
+        line-height: 20px;
+      }
+    }
+    .gridCorner {
+      @include borderHalfPx($border-color, 0, 1px, 1px, 1px, 0);
+      z-index: 99;
+      background-color: $white;
+      &::before {
+        width: 200%;
+      }
+      span {
+        position: absolute;
+        text-align: center;
+        line-height: 14px;
+        height: 12px;
+        font-size: 12px;
+        bottom: 4px;
+        left: 0;
+        right: 0;
+        font-family: DIN Alternate Bold;
+        color: #a8aaad;
+      }
+    }
+    .grid {
+      .cell {
+        @include borderHalfPx($border-color, 0, 0, 1px, 1px, 0);
+        &::before {
+          width: 200%;
+        }
+      }
+    }
+    .nowLine {
+      position: absolute;
+      z-index: 99;
+      border-top: 1px solid #f74f4f;
+      &::before {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #f74f4f;
+        position: absolute;
+        content: '';
+        top: -5px;
+      }
+    }
+  }
+  .gridHeader {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .gridHeaderTitle {
+    width: 100%;
+    height: 16px;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3px;
+    margin-top: 16px;
+  }
+  .headerContent {
+    line-height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    width: auto;
+    max-width: calc(100% - 52px);
+  }
+  .eventOuter {
+    @include eventOuter;
+  }
+  .busyIcon {
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(@/images/busy.png) center center repeat;
+    background-size: 16px;
+    margin-left: 4px;
+  }
+}
+
+.timeContent {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  overflow: hidden;
+  .timeContentIn {
+    height: 100%;
+    position: relative;
+  }
+}
+
+.eventTimeOuter {
+  @include eventOuter;
+  position: absolute;
+  padding: 0px 1px 1px;
+  width: auto;
+  left: 0%;
+  right: 0%;
+}

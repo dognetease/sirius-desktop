@@ -1,0 +1,39 @@
+@import '@web-common/styles/variables.scss';
+.nation {
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    .add-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 108px;
+      height: 38px;
+      background: #f9fafb;
+      border-radius: 2px;
+      color: $Avatar-6;
+      border-width: 0;
+      > span {
+        margin-left: 8px;
+      }
+    }
+    .list-item {
+      width: 128px;
+      height: 38px;
+      background-color: #f9fafb;
+      border-radius: 2px;
+      margin-right: 16px;
+      color: #232d47;
+      align-items: center;
+      display: inline-flex;
+      padding: 9px 12px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: space-between;
+      .close-icon {
+        height: 16px;
+      }
+    }
+  }
+}

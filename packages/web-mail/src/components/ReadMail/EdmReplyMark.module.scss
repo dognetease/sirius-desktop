@@ -1,0 +1,53 @@
+.modalClass {
+  :global(.ant-modal-header) {
+    border-bottom: none;
+    padding: 20px 20px 10px 20px;
+  }
+  :global(.ant-modal-title) {
+    display: flex;
+    align-items: center;
+  }
+  .yiwen {
+    margin-right: 6px;
+    svg > path:first-child {
+      fill: $Warning-6;
+    }
+  }
+
+  :global(.ant-modal-body) {
+    padding: 0 20px 0 44px;
+    font-family: PingFang SC;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    color: $Text-3;
+  }
+  :global(.ant-modal-footer) {
+    border-top: none;
+    padding: 18px 20px;
+  }
+}
+.modalClassRightBottom {
+  position: absolute;
+  top: auto;
+  bottom: 20px;
+  right: 20px;
+}
+
+.modalShake {
+  animation: shake 1s;
+}
+@keyframes shake {
+  from,
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+  20%,
+  60% {
+    transform: translate3d(-0.5rem, 0, 0);
+  }
+  40%,
+  80% {
+    transform: translate3d(0.5rem, 0, 0);
+  }
+}

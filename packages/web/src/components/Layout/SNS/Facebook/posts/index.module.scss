@@ -1,0 +1,14 @@
+@import '@web-common/styles/variables.scss';
+
+.posts-wrap {
+  padding: 20px;
+  min-width: 930px;
+  min-height: 100%;
+  background-color: $Fill-2;
+  .main-content {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid $Fill-3;
+    border-radius: 4px;
+  }
+}

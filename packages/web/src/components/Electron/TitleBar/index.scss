@@ -1,0 +1,110 @@
+@import '../../../styles/varies';
+
+.title-bar-wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 999999;
+
+  &.un-main {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    height: $electron-title-bar-height;
+    background-color: #ffffff;
+    @include sirius-drag;
+    user-select: none;
+  }
+
+  &.gray-theme {
+    // background-color: rgba(38, 42, 51, 0.05);
+    background-color: $titlebar-bg;
+    backdrop-filter: blur(32px);
+  }
+}
+
+.title-bar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .btn-group-win {
+    @include sirius-no-drag;
+    display: flex;
+    .browser-btn {
+      width: 44px;
+      height: 32px;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        // background-color: #d3d4d6;
+        background-color: $Fill-5;
+      }
+
+      &.close-btn:hover {
+        // background-color: #f74f4f;
+        background-color: $Error-6;
+
+        > i {
+          background-image: url('../../../images/electron/icon_close_hover.svg');
+        }
+      }
+
+      > i {
+        display: block;
+        width: 12px;
+        height: 12px;
+        background-size: 100%;
+
+        &.min {
+          background-image: url('../../../images/electron/icon_min.svg');
+        }
+
+        &.max {
+          background-image: url('../../../images/electron/icon_max.svg');
+        }
+
+        &.un-max {
+          background-image: url('../../../images/electron/icon_un_max.svg');
+        }
+
+        &.close {
+          background-image: url('../../../images/electron/icon_close.svg');
+        }
+      }
+    }
+    &.image-window-btn .browser-btn {
+      height: 40px;
+    }
+  }
+}
+
+.is-mail-box .btn-group-win .browser-btn {
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  > i {
+    &.min {
+      background-image: url('../../../images/electron/icon_min_white.svg');
+    }
+
+    &.max {
+      background-image: url('../../../images/electron/icon_max_white.svg');
+    }
+
+    &.un-max {
+      background-image: url('../../../images/electron/icon_un_max_white.svg');
+    }
+
+    &.close {
+      background-image: url('../../../images/electron/icon_close_hover.svg');
+    }
+  }
+}

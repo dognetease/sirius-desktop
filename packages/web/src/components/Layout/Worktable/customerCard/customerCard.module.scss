@@ -1,0 +1,85 @@
+.grid-container {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.item {
+  flex-basis: 33%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+
+  &.leftBorder {
+    border-left: 1px solid $Line-1;
+  }
+
+  .leftIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .rightCont {
+    display: flex;
+    margin-left: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .text {
+      @include c4-1-reg12();
+      color: $Text-3;
+    }
+
+    .num {
+      font-family: 'LX-numbers';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      color: $Text-5;
+
+      &.clickable {
+        color: #386ee7;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.itemStyleallCustomer1,
+.itemStyleallCustomer2,
+.itemStyleallCustomer3,
+.itemStyleallCustomer4 {
+  background-color: $Brand-5;
+  filter: drop-shadow(0px 5px 10px rgba(112, 136, 255, 0.17));
+}
+
+.itemStylemyCustomer1 {
+  background: $Avatar-3;
+  filter: drop-shadow(0px 5px 10px rgba(255, 18, 18, 0.17));
+}
+
+.itemStylemyCustomer2 {
+  background: #27da90;
+  filter: drop-shadow(0px 5px 10px rgba(39, 218, 144, 0.26));
+}
+
+.itemStylemyCustomer3 {
+  background: #ffb54d;
+  filter: drop-shadow(0px 5px 10px rgba(245, 154, 17, 0.23));
+}
+
+.itemStylemyCustomer4 {
+  background: #33d0de;
+  filter: drop-shadow(0px 5px 10px rgba(51, 208, 222, 0.23));
+}

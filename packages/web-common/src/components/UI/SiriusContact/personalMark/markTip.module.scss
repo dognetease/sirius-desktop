@@ -1,0 +1,49 @@
+.personaMarkCheckboxWrap {
+  display: flex;
+  align-items: center;
+  .personalMarkCheckbox {
+    width: 16px;
+    height: 16px;
+  }
+  .personalMarkTip {
+    margin-left: 4px;
+    color: $Text-4;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .personalMarkTipIcon {
+    margin-left: 4px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+}
+
+.personalMarkTipContentWrap {
+  width: 322px;
+  :global(.ant-popover-inner) {
+    background-color: $white;
+  }
+  .personalMarkTipContent {
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+    .image {
+      width: 290px;
+      height: 192px;
+      background-image: url('../../../../../../web/src/images/icons/contact/no_personal_mark.png');
+      background-size: 100% 100%;
+    }
+    .txt {
+      margin-top: 8px;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: $Text-5;
+    }
+  }
+}

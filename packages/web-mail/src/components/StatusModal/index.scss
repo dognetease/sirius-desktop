@@ -1,0 +1,154 @@
+.u-item-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  color: #ffffff;
+  cursor: default;
+  background-size: cover;
+  margin-top: 2px;
+}
+.u-item-read-list-status-wrapper {
+  margin-left: 50px;
+  margin-top: -8px;
+  margin-bottom: 8px;
+  display: flex;
+  cursor: pointer;
+  .u-item-status {
+    line-height: 20px !important;
+  }
+  .u-item-read-down-icon {
+    margin-left: 4px;
+    display: flex;
+    align-items: center;
+    transition: all linear 0.35s;
+    &.u-item-read-down-icon-trans {
+      transform: rotate(180deg);
+    }
+  }
+}
+.u-item-readlist-table-wrapper {
+  margin-left: 50px;
+  margin-top: 8px;
+  .u-item-readlist-item-location {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+  }
+}
+.u-status-list {
+  .ant-list-item-meta-avatar {
+    margin-right: 0;
+  }
+  .ant-list-split .ant-list-header {
+    border-bottom: 0;
+    padding: 8px 0;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+  }
+  .u-suc {
+    position: absolute;
+    right: 12px;
+    // top: 8px;
+  }
+  .u-item-name {
+    color: var(--Text-5, #272e47);
+    flex: 1 1;
+    height: 22px;
+    max-width: 300px;
+    line-height: 22px;
+    overflow: hidden;
+    font-weight: 500;
+    margin-right: 12px;
+    cursor: default;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .u-item-status {
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  }
+  .ant-list-item-meta-title {
+    position: relative;
+    display: flex;
+    margin: 3px 0;
+    font-size: 14px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    font-weight: 400;
+  }
+  .ant-list-item-meta-description {
+    display: flex;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  }
+  .u-item-email {
+    flex: 1 1;
+    height: 16px;
+    line-height: 16px;
+    overflow: hidden;
+    margin-right: 12px;
+    cursor: default;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-size: cover;
+  }
+  .u-item-time {
+    color: var(--Text-2, #9fa2ad);
+    font-size: 12px;
+  }
+}
+.u-status {
+  .u-status-list-unPermission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    .icon {
+      width: 160px;
+      height: 160px;
+      background: url(../../../../web/src/images/no_permission.png) no-repeat center center;
+      background-size: cover;
+    }
+    .content {
+      margin: 20px 0px;
+    }
+  }
+  .u-status-learn {
+    margin: 0px 16px 0px 4px;
+    // color: #386ee7;
+    color: $brand-blue-2;
+    cursor: pointer;
+  }
+  .u-status-list-tips {
+    font-size: 12px;
+    height: 50px;
+    line-height: 50px;
+    background: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.1);
+    .u-status-list-contain {
+      color: $font-color-2;
+      padding: 0px 24px;
+      .ant-btn-primary {
+        width: 100px;
+      }
+    }
+    // opacity: 0.1;
+  }
+}
+.status-modal-wrap {
+  .ant-modal-body {
+    padding: 24px 0px;
+    padding-bottom: 4px;
+  }
+  .u-status-header,
+  .u-status-list {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}

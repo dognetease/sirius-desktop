@@ -1,0 +1,19 @@
+.sensitive-index {
+  position: relative;
+  width: 29px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  span {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    transform: scale(0.8);
+  }
+}

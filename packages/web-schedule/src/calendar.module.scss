@@ -1,0 +1,41 @@
+.guide {
+  position: absolute;
+  top: 42px;
+  right: 72px;
+  width: 24px;
+  height: 0px;
+}
+
+.guideElec {
+  right: 102px;
+}
+
+.guideTip {
+  :global(.ant-tooltip-content) {
+    width: 302px;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+  }
+  :global(.ant-tooltip-content .ant-tooltip-arrow) {
+    display: block;
+    width: 15px;
+    height: 15px;
+    top: -6.55px;
+  }
+  :global(.ant-tooltip-arrow-content) {
+    width: 10.6px;
+    height: 10.6px;
+    transform: translateY(7.5px) rotate(45deg);
+    box-shadow: none;
+    border-top-left-radius: 2px;
+  }
+}
+
+.know {
+  margin-left: 12px;
+  font-weight: 500px;
+  color: #5383fe;
+  cursor: pointer;
+}

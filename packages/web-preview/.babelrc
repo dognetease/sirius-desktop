@@ -1,0 +1,12 @@
+{
+  "presets": [
+    "@babel/preset-typescript",
+    "@babel/preset-env",
+    "@babel/preset-react" 
+  ],
+  "env": {
+    "production": {
+      "plugins": ["transform-remove-console"]
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "name": "env_def",
+  "version": "1.7.0",
+  "author": "shawn-ss <shawn_stone@163.com>",
+  "description": "env",
+  "license": "MIT",
+  "homepage": "",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "bundle",
+    "rollup"
+  ],
+  "bugs": {
+    "url": "s"
+  },
+  "scripts": {
+    "prepare": "yarn workspace support build && yarn workspace sirius-desktop bundle",
+    "compile:simple": "tsc -p tsconfig.json",
+    "compile": "rollup -c rollup.config.js && rollup -c rollup.d.config.js && rollup -c rollup.def.config.js",
+    "build": "node ./env_gen",
+    "build:simple": "yarn prepare && yarn gen:local:web && yarn compile:simple",
+    "build:web": "yarn build:local:web",
+    "build:local:web": "node ./env_gen local web",
+    "build:local:mac": "node ./env_gen local mac",
+    "build:local:win": "node ./env_gen local win",
+    "build:local:win32": "node ./env_gen local win32",
+    "build:test:web": "node ./env_gen test web",
+    "build:test:mac": "node ./env_gen test mac",
+    "build:test:win": "node ./env_gen test win",
+    "build:test:win32": "node ./env_gen test win32",
+    "gen": "yarn prepare && build_env ",
+    "lint": "yarn build && yarn lint:post-build",
+    "lint:post-build": "node dist/index.js lint ./ --ignore-pattern 'test/e2e/fixtures/lint'"
+  },
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "dependencies": {
+    "shelljs": "^0.8.3",
+    "tiny-glob": "^0.2.6",
+    "ts-jest": "^25.3.1",
+    "tslib": "^1.9.3",
+    "core-js": "3",
+    "regenerator-runtime": "^0.13.9"
+  },
+  "devDependencies": {
+    "@types/eslint": "^6.1.2",
+    "@types/fs-extra": "^9.0.1",
+    "@types/lodash": "^4.14.161",
+    "@types/node": "^14.11.1",
+    "@types/react": "^16.9.11",
+    "@types/rollup-plugin-json": "^3.0.2",
+    "yarn-deduplicate": "^2.1.1"
+  }
+}

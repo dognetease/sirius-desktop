@@ -1,0 +1,144 @@
+.custom-plan-drawer {
+  .timeline {
+    margin-top: 8px;
+    color: var(--text-5, #272e47);
+    .title {
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      &-right {
+        display: flex;
+        align-items: center;
+        margin-right: -8px;
+        color: var(--text-4, #545a6e) !important;
+        :global(.ant-checkbox-wrapper) {
+          color: var(--text-4, #545a6e) !important;
+        }
+      }
+      .remove {
+        display: flex;
+        align-items: center;
+        line-height: 22px;
+        cursor: pointer;
+        color: var(--text-4, #545a6e) !important;
+        filter: grayscale(100%);
+        &:hover {
+          color: rgba(76, 106, 255, 1);
+          filter: none;
+        }
+      }
+    }
+    .container {
+      display: flex;
+      width: 436px;
+      padding: 16px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      border-radius: 4px;
+      background: #f8f9fa;
+      .purpose {
+        font-size: 12px;
+        // color: #545a6e;
+        color: var(--text-4, #545a6e);
+        line-height: 20px;
+        // margin-top: 4px;
+      }
+      :global(.sirius-select-front) {
+        color: var(--text-5, #272e47);
+      }
+      :global(.sirius-select-ui-front) {
+        color: var(--text-5, #272e47);
+      }
+      .other-comp {
+        width: 100%;
+        .input {
+          margin-bottom: 12px;
+          &::placeholder,
+          textarea::placeholder {
+            color: var(--text-2, #9fa2ad);
+          }
+        }
+      }
+
+      :global(.ant-form-item) {
+        width: 100%;
+        margin-bottom: 0px;
+      }
+    }
+    .time {
+      display: flex;
+      .time-text {
+        display: inline-block;
+        height: 32px;
+        line-height: 32px;
+      }
+      :global(.ant-form-item-explain-error) {
+        position: relative;
+        left: -56px;
+      }
+      .time-input {
+        width: 94px;
+        margin: 0px 12px;
+      }
+    }
+    .interval {
+      padding-bottom: 0px;
+      :global(.ant-timeline-item-head-custom) {
+        margin-top: 5px;
+      }
+    }
+  }
+  :global(.ant-timeline-item) {
+    padding-bottom: 25px;
+  }
+  :global(.ant-timeline-item-content) {
+    margin-left: 22px;
+  }
+  :global(.ant-timeline-item-tail) {
+    border-left: 1px solid #e1e3e8;
+  }
+
+  .timeline-add {
+    margin-top: 0px;
+    color: #4c6aff;
+    cursor: pointer;
+  }
+  :global(.ant-drawer-body) {
+    padding-top: 0px;
+    &::-webkit-scrollbar {
+      opacity: 1;
+      display: block;
+      background-color: transparent;
+      width: 6px;
+      padding-right: 4px;
+      &:horizontal {
+        height: 6px;
+      }
+    }
+    /*滚动条两端方向按钮*/
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
+    /*滚动条中间滑动部分*/
+    &::-webkit-scrollbar-thumb {
+      background: #d4d4d6;
+      border-radius: 3px;
+      padding-right: 4px;
+      // right: 4px;
+      width: 6px;
+      opacity: 0;
+      &:hover {
+        background: #dddddd;
+      }
+    }
+    /*滚动条右下角区域*/
+    &::-webkit-scrollbar-corner {
+      display: none;
+    }
+  }
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

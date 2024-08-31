@@ -1,0 +1,67 @@
+@import '@web-common/styles/variables.scss';
+.title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  /* 中性色-文字/Text-5标题-重要信息 */
+  color: #232d47;
+}
+
+.list {
+  white-space: nowrap;
+  font-size: 0;
+  .item {
+    width: 180px;
+    display: inline-block;
+    margin-top: 12px;
+    margin-right: 16px;
+    vertical-align: top;
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
+    .imgWrapper {
+      width: 100%;
+      height: 180px;
+      background: #f9fafb;
+      padding: 10px;
+      .img {
+        height: 100%;
+        width: 100%;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+    }
+    .name {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      height: 22px;
+      color: #232d47;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: keep-all;
+      white-space: nowrap;
+      margin-top: 8px;
+      margin-bottom: 0px;
+    }
+    .price {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 24px;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: keep-all;
+      white-space: nowrap;
+      color: #232d47;
+      margin-top: 4px;
+      height: 24px;
+    }
+  }
+}

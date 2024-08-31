@@ -1,0 +1,55 @@
+.expand-wrapper,
+.fold-wrapper {
+}
+.fold-wrapper {
+  &:hover .fold-btn {
+    display: flex;
+  }
+}
+.expand-btn,
+.fold-btn {
+  width: 24px;
+  height: 62px;
+  // border: 1px solid #E1E6ED;
+  cursor: pointer;
+  position: absolute;
+  // border-radius: 0px 2px 2px 0px;
+  top: 49%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+// .isElectron {
+//     top: 53px !important;
+// }
+.expand-btn,
+.fold-btn {
+  &:hover {
+    color: #4c6aff;
+  }
+  align-items: center;
+  color: #8d92a1;
+}
+.expand-btn {
+  border-left: none;
+  z-index: 1;
+  background-image: url('../../../../web/src/images/icons/submenu-expand.svg');
+  display: flex;
+  :global {
+    .sirius-icon {
+      transform: translateX(-4px);
+    }
+  }
+}
+.fold-btn {
+  border-right: none;
+  z-index: 1;
+  background-image: url('../../../../web/src/images/icons/submenu-fold.svg');
+  right: 0px;
+  display: none;
+  :global {
+    .sirius-icon {
+      transform: translateX(4px);
+    }
+  }
+}

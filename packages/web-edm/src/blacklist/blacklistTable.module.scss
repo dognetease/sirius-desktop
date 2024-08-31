@@ -1,0 +1,45 @@
+.blacklist-table {
+  padding: 20px;
+  background: #fff;
+
+  .input-filter {
+    // border-color: transparent;
+    border-radius: 4px;
+    margin-bottom: 18px;
+    :global(.ant-input) {
+      font-size: 12px;
+      &::placeholder {
+        color: #7a8599;
+      }
+    }
+
+    :global(.ant-input-prefix) {
+      margin-right: 18px;
+    }
+  }
+
+  .opWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 1px solid #f0f3f5;
+    padding: 20px 0 12px;
+    .selectTip {
+      width: 80px;
+      font-size: 14px;
+      color: #232d47;
+      margin-right: 10px;
+      white-space: nowrap;
+    }
+  }
+
+  :global(.ant-spin-dot) {
+    transform: translate(-50%, -50%);
+    margin: 0 !important;
+  }
+
+  .highlight {
+    color: #386ee7;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,145 @@
+@import '../../../../web/src/styles/varies.scss';
+
+.mail-nickname-container {
+  :global {
+    .ant-modal-header {
+      border-bottom: none;
+    }
+    .ant-modal-body {
+      padding-right: 0;
+    }
+    .ant-modal-footer {
+      .ant-btn {
+        height: 32px;
+        border-radius: 4px;
+      }
+      .ant-btn-primary {
+        background-color: #386ee7;
+        border: 1px solid rgba(var(--Text-5-r), var(--Text-5-g), var(--Text-5-b), 0.16);
+      }
+    }
+    .ant-select {
+      width: auto;
+    }
+    .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector,
+    .ant-select:hover,
+    .ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+      border-color: $main-enhance-color;
+      box-shadow: none;
+    }
+
+    .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+      color: $main-enhance-color;
+      font-weight: 400;
+      background-color: transparent;
+    }
+
+    .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+      color: $main-enhance-color;
+      background: #ffffff;
+      font-weight: normal;
+    }
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+    .ant-form-item-label > label {
+      color: #7d8085;
+    }
+    .ant-input {
+      &:hover,
+      &:focus {
+        border-color: $main-enhance-color;
+        box-shadow: none;
+      }
+    }
+  }
+  .mail-nickname-content {
+    display: flex;
+    font-size: 14px;
+    flex-direction: column;
+    overflow-y: auto;
+    &-title {
+      margin-top: 40px;
+      margin-bottom: 16px;
+      // color: #262a33;
+      color: $font-color-2;
+      font-weight: 500;
+      font-size: 16px;
+    }
+    > label {
+      color: #7d8085;
+    }
+    .mail-sender-content {
+      &-select {
+        margin: 0 5px;
+        min-width: 280px;
+        border-radius: 4px;
+        // color: #262a33;
+        color: $font-color-2;
+      }
+    }
+    .mail-list-item {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      margin-bottom: 16px;
+
+      span {
+        &.mail-addr {
+          max-width: 243px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          word-break: break-all;
+        }
+        // color: #262a33;
+        color: $font-color-2;
+      }
+      &-input-field {
+        align-items: baseline;
+        flex-direction: row;
+        display: flex;
+        label {
+          color: #7d8085;
+        }
+      }
+      &-input {
+        width: 180px;
+        height: 32px;
+        // color: #262a33;
+        color: $font-color-2;
+        margin: 0 24px 0 12px;
+        border-radius: 4px;
+      }
+      &-addr {
+        flex-direction: column;
+        max-width: 400px;
+        &-item {
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          word-break: break-all;
+          &:first-child {
+            margin-top: 5px;
+          }
+          label {
+            color: #7d8085;
+          }
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
+.selectDropdown {
+  :global {
+    .ant-select-item-option {
+      font-size: 14px;
+    }
+    .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+      color: $main-enhance-color;
+      background: #ffffff;
+      font-weight: normal;
+    }
+  }
+}

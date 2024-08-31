@@ -1,0 +1,28 @@
+@import '@web-common/styles/variables.scss';
+
+.star-container {
+  position: relative;
+  min-height: 100%;
+  background: $Fill-1;
+  min-width: 852px;
+  padding: 16px;
+}
+
+.breadcrumbItem {
+  cursor: pointer;
+}
+
+.customs-body {
+  padding: 20px;
+  background: #ffffff;
+  /* 线条/Line-1 浅常规 */
+
+  border: 1px solid $Fill-3;
+  border-radius: 4px;
+  margin-top: 12px;
+
+  .customs-main {
+    padding-top: 32px;
+    width: 832px;
+  }
+}

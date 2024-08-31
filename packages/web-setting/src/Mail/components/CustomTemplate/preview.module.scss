@@ -1,0 +1,76 @@
+@import '@web-common/styles/variables.scss';
+
+.mail-template-preview-box {
+  width: 480px;
+  height: 480px;
+  background: $white;
+  border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+  box-sizing: border-box;
+  border-radius: 6px;
+  box-shadow: 0px 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 16px;
+    background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.04);
+    border-bottom: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+    margin-bottom: 0;
+    .contacts-title {
+      @include font-size(400, 14px, 16px);
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+    }
+    .mail-title {
+      // color: #262a33;
+      color: $font-color-2;
+      font-size: 14px;
+    }
+    .contacts-mail {
+      height: 28px;
+      border-radius: 14px;
+      background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+      margin: 4px 0;
+      font-family: 'PingFang SC';
+      font-size: 12px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 8px 0px;
+      cursor: default;
+      margin-right: 5px;
+      max-width: 365px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+  .content {
+    flex: 1;
+    overflow: auto;
+    background-color: #ffffff;
+  }
+}
+
+.modalTitle {
+  position: relative;
+  .toolTip {
+    position: absolute;
+    top: -13px;
+    left: 74px;
+    font-size: 12px;
+    background: #000000;
+    opacity: 0.8;
+    border-radius: 6px;
+    color: #ffffff;
+    padding: 12px 20px;
+    .closeBtn {
+      color: #5383fe;
+      cursor: pointer;
+      margin-left: 15px;
+    }
+  }
+}

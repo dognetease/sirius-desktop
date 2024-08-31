@@ -1,0 +1,32 @@
+.multipleOperation {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #ffffff;
+  padding-left: 19px;
+  margin-right: 1px;
+}
+
+.multipleOperationNew {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  // background-color: #ffffff;
+  background-color: $white;
+  padding-left: 23px;
+  margin-right: 1px;
+  color: $font-color-2;
+}
+.cancle {
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #386ee7;
+  cursor: pointer;
+  margin-right: 22px;
+}

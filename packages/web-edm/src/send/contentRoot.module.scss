@@ -1,0 +1,166 @@
+@import '@web/styles/varies.scss';
+// @import '../../../web/src/styles/varies.scss'
+
+.root {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+
+  .write-wrap {
+    width: 100%;
+
+    .back {
+      cursor: pointer;
+      height: 40px;
+      padding-left: 16px;
+
+      border-bottom: 1px solid $Line-1;
+
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 4px;
+
+      .title {
+        @include p1-3-reg14;
+        color: $Text-5;
+      }
+    }
+  }
+
+  .write-root {
+    background: $Fill-2;
+    padding: 16px 0px 16px 16px;
+    min-width: 490px;
+    max-width: 490px;
+    width: 490px;
+    position: relative;
+
+    &:hover {
+      .action-cover {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 100%);
+        pointer-events: none;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        border-radius: 4px;
+        width: 100%;
+        height: 100px;
+        z-index: 10;
+        visibility: visible;
+
+        .action-button {
+          pointer-events: all;
+          cursor: pointer;
+          width: 150px;
+          height: 40px;
+          border-radius: 4px;
+          background: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 4px;
+
+          .title {
+            @include h1-3-reg16;
+            color: $Text-5;
+          }
+        }
+      }
+    }
+    .action-cover {
+      visibility: hidden;
+    }
+
+    .write-empty {
+      cursor: pointer;
+      border-radius: 4px;
+      border: 2px dashed $Line-3;
+      background: $Fill-1;
+      height: 100%;
+      width: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .action {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        .icon {
+          width: 40px;
+          height: 40px;
+        }
+        .title {
+          @include h2-med18;
+          color: $Text-5;
+        }
+      }
+    }
+
+    .write-preview {
+      height: 100%;
+      width: 100%;
+    }
+
+    .content {
+      height: 100%;
+      background: #fff;
+      border-radius: 4px;
+      padding: 20px;
+      overflow-y: auto;
+      @include sirius-scroll();
+    }
+  }
+
+  .template-root {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 706px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @include sirius-scroll();
+  }
+}
+
+.save-confirm-header {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: rgba(38, 42, 51, 0.9);
+}
+.second-btns {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal {
+  :global {
+    .ant-modal-body {
+      padding: 0px;
+      background-color: transparent;
+      max-height: 612px;
+      height: 612px;
+    }
+
+    .ant-modal-content {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import '@web-common/styles/variables.scss';
+@import '@/styles/varies.scss';
+.modal-wrap-descriptions {
+  :global(.ant-modal-header) {
+    box-sizing: border-box;
+    height: 44px;
+    padding: 11px 24px;
+  }
+  :global(.ant-modal-close-x) {
+    height: 44px;
+    line-height: 44px;
+  }
+  :global(.ant-select-selector) {
+    border: 1px solid #d9d9d9 !important;
+  }
+  :global(.ant-upload-list-item-name) {
+    max-width: 300px;
+  }
+  :global {
+    .ant-modal-content {
+      border-radius: 6px;
+    }
+  }
+  :global(.ant-descriptions-row) {
+    display: flex;
+  }
+  :global(.ant-descriptions-item-label) {
+    flex: 1;
+  }
+  :global(.ant-descriptions-item-content) {
+    flex: 1;
+  }
+  .modal-content {
+    height: 248px;
+    overflow: scroll;
+    @include sirius-scroll();
+    .list-item {
+      padding-top: 12px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      color: #51555c;
+    }
+    :global(.ant-empty-normal) {
+      margin: 80px 0;
+    }
+  }
+}

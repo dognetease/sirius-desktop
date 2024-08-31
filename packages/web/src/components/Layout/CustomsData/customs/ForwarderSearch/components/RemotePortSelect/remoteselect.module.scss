@@ -1,0 +1,13 @@
+.label-flex {
+  display: inline-flex;
+  column-gap: 10px;
+
+  .text {
+    color: $Text-3;
+  }
+
+  .num {
+    margin-left: auto;
+    color: $Text-5;
+  }
+}

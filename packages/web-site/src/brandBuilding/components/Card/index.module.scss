@@ -1,0 +1,36 @@
+.container {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px 0;
+  margin-top: 16px;
+}
+
+.header {
+  padding: 0 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 3px;
+  height: 14px;
+  background: $Brand-6;
+  transform: translateY(-50%);
+}
+
+.title {
+  color: $Text-5;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.content {
+  padding: 0 20px;
+}

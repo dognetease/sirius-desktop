@@ -1,0 +1,21 @@
+{
+  "desc": "test user account",
+  "local": [
+    {
+      "pwd": "Qiyetest2",
+      "account": "dd14@lx.elysys.net"
+    }
+  ],
+  "test1": [
+    {
+      "pwd": "Qiyetest2",
+      "account": "dd06@lingxi.devtest.com"
+    }
+  ],
+  "test": [
+    {
+      "pwd": "Qiyetest1",
+      "account": "dd04@lx.elysys.net"
+    }
+  ]
+}

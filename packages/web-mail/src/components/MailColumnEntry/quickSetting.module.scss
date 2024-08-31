@@ -1,0 +1,35 @@
+.quickSettingTitle {
+  height: 22px;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  // color: #232d47;
+  color: $font-color-2;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+.itemIcon {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  background-size: 100% 100%;
+  &.setting {
+    background-image: url(@/images/icons/persoanalCenter/setting_icon.svg);
+  }
+}
+.drawer-wrap {
+  :global(.ant-drawer-content) {
+    background-color: $white;
+  }
+  :global(.ant-drawer-header) {
+    background-color: $white;
+  }
+  :global(.ant-drawer-title) {
+    color: $font-color-2;
+  }
+  :global(.ant-radio-wrapper) {
+    color: $font-color-2;
+  }
+}

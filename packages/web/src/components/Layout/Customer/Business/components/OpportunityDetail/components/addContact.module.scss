@@ -1,0 +1,19 @@
+.add-contact {
+  :global(.ant-modal-body) {
+    padding: 12px 24px 34px;
+  }
+
+  :global(.ant-modal-header) {
+    border-bottom: none;
+  }
+
+  :global(.ant-modal-footer) {
+    border-top: none;
+  }
+
+  .text {
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 4px;
+  }
+}

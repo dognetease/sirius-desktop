@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>请升级至最新版</title>
+    <script>
+      document.documentElement.style.fontSize = (window.innerWidth >= 750 ? 750 : window.innerWidth) / 7.5 + "px";
+    </script>
+    <style>
+      .compatible-msg {
+        font-size: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+      }
+      .compatible-msg .compatible-img {
+        width: 160px;
+        height: 160px;
+      }
+      .compatible-msg .compatible-desc {
+        font-size: 14px;
+        line-height: 18px;
+        color: #7D8085;
+        margin: 20px 0 0;
+      }
+      .compatible-msg .compatible-btn {
+        background: #386EE7;
+        border-radius: 4px;
+        width: 100px;
+        height: 32px;
+        font-size: 14px;
+        line-height: 32px;
+        color: #fff;
+        text-align: center;
+        margin: 36px auto 0;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="compatible-msg">
+      <img
+        class="compatible-img"
+        src="https://cowork-storage-public-cdn.lx.netease.com/lxbg/2021/11/23/ff764681b1484578b725ef83561e1417.png"
+        alt=""
+      />
+      <p class="compatible-desc">请升级至最新版灵犀办公查看该消息类型</p>
+      <div class="compatible-btn">立即升级</div>
+    </div>
+  </body>
+  <script>
+    const isAndroid = navigator.userAgent.indexOf("Android") > -1 || navigator.userAgent.indexOf("Adr") > -1;
+    window.addEventListener("DOMContentLoaded", () => {
+      const h5Bridge = url => {
+        try {
+          if (isAndroid) {
+            window.bridge.callNativeAsync(url);
+          } else {
+            window.webkit.messageHandlers.FLJSCallNative.postMessage(url);
+          }
+        } catch (error) {}
+      };
+      const btnDom = document.querySelector(".compatible-btn");
+      btnDom.onclick = () => {
+        window.open("https://hubble.netease.com/sl/aaag49", "_blank");
+      };
+    });
+  </script>
+</html>

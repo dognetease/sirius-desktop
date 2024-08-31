@@ -1,0 +1,82 @@
+.inquiry-card {
+  border-radius: 5px;
+  border: 1px solid $Line-1;
+  width: 32%;
+}
+.inquiry-card-header {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  height: 36px;
+}
+.inquiry-card-header-icon-unread {
+  color: $Brand-5;
+}
+.inquiry-card-header-icon-read {
+  color: $Fill-7;
+}
+.inquiry-card-header-text {
+  margin-left: 5px;
+  color: $Text-4;
+  font-family: PingFang SC;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+
+  overflow: hidden;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+}
+.inquiry-card-content {
+  overflow: hidden;
+  height: 140px;
+  padding: 12px;
+  border-top: 1px solid $Line-1;
+  border-bottom: 1px solid $Line-1;
+  color: $Text-5;
+  font-family: PingFang SC;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+.inquiry-card-footer {
+  padding: 8px 12px;
+  height: 36px;
+  background-color: $Fill-1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.inquiry-card-footer-time {
+  color: $Text-2;
+  font-family: PingFang SC;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.inquiry-card-footer-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.inquiry-card-footer-btn-text {
+  color: $Text-4;
+  font-family: PingFang SC;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.inquiry-card-footer-btn-icon {
+  color: $Fill-6;
+}

@@ -1,0 +1,29 @@
+@import '../../../../web/src/styles/varies';
+.team-exact {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px;
+  margin-top: 15px;
+  cursor: pointer;
+  p {
+    margin: 0;
+  }
+  .team-exact-icon {
+    width: 33px;
+    height: 33px;
+    background: url('../../../../web/src/images/icons/im/team.svg') 100% no-repeat;
+  }
+  .team-exact-text {
+    margin-left: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    .team-exact-num {
+      color: #386ee7;
+      line-height: 16px;
+    }
+  }
+}
+.team-exact-divider {
+  margin: 0 0 18px;
+}

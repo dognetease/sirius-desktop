@@ -1,0 +1,45 @@
+.display-wrapper {
+  padding: 0 2px !important;
+  line-height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: content-box;
+  width: 230px;
+  height: 24px;
+}
+.display-wrapper2 {
+  cursor: text;
+}
+.input-wrapper {
+  width: 230px;
+  height: 24px;
+  border: none;
+  color: #747a8c;
+  padding: 2px 2px;
+  // &:focus {
+  //     border: 1px solid #4C6AFF !important;
+  // }
+  // display: flex;
+  // align-items: center;
+  &:hover {
+    border: 1px solid #e1e3e8 !important;
+  }
+  .disabled-link {
+    color: #b7c3ff;
+    cursor: not-allowed;
+  }
+  :global(.ant-input-affix-wrapper) {
+    border: 1px solid #4c6aff !important;
+  }
+  :global(.ant-input) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+.input-wrapper2 {
+  &:hover {
+    border: 1px solid #4c6aff !important;
+  }
+}

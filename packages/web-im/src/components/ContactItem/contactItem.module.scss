@@ -1,0 +1,105 @@
+@import '../../../../web/src/styles/varies';
+
+$item-hover-gb: rgba(
+  $color: $Text-5,
+  $alpha: 0.08,
+);
+$item-selected-gb: rgba(
+  $color: $main-enhance-color,
+  $alpha: 1,
+);
+$write-contact-item-height: 28px;
+
+:global(.member-contact-tooltip) {
+  padding-top: 2px;
+  :global(.ant-tooltip-arrow) {
+    display: none;
+  }
+  :global(.ant-tooltip-inner) {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+    padding: 12px;
+  }
+  .main-title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    color: #ffffff;
+  }
+  .sub-title {
+    font-size: 12px;
+    line-height: 16px;
+    color: #ffffff;
+    opacity: 0.6;
+    margin-top: 8px;
+  }
+}
+
+.item {
+  height: $write-contact-item-height;
+  padding: 0 0 0 24px;
+  line-height: 16px;
+  cursor: pointer;
+
+  :global(.ant-list-item-meta-title) {
+    overflow: hidden;
+    margin: 0;
+    height: $write-contact-item-height;
+    line-height: $write-contact-item-height;
+    color: rgba($color: $main-font-color, $alpha: 0.9);
+    flex-direction: row;
+    display: flex;
+    & > span {
+      display: flex;
+    }
+  }
+  .item-title {
+    flex: 1;
+  }
+  .name-title-text {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0 10px 0 12px;
+    flex-shrink: 0;
+  }
+  .email-title-text {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba($color: $main-font-color, $alpha: 0.7);
+    word-break: break-all;
+  }
+  .contact-btn {
+    display: none;
+    background-color: #386ee7;
+    height: $write-contact-item-height;
+    width: 40px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: $Fill-2;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    &:active,
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+    }
+  }
+
+  .hit-text {
+    color: $main-enhance-color;
+  }
+
+  &:hover {
+    background-color: $item-hover-gb;
+    .contact-btn {
+      display: block;
+    }
+  }
+}
+.item-selected {
+  background-color: $Fill-1;
+}

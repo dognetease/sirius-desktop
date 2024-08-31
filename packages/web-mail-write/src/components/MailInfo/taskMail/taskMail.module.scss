@@ -1,0 +1,106 @@
+.btn-wrapper {
+  background: rgba($Brand-4-r, $Brand-4-g, $Brand-4-b, 0.08);
+  &:hover {
+    background: rgba($Brand-4-r, $Brand-4-g, $Brand-4-b, 0.2);
+  }
+}
+
+.close-end-time {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.add-end-time {
+  padding: 0 8px;
+  margin-left: 8px;
+  // background: #ffffff;
+  background-color: $white;
+  cursor: pointer;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  color: #386ee7;
+  border: 1px solid #386ee7;
+  border-radius: 4px;
+}
+.disabled-end-time {
+  color: #a8aaad;
+  border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+  cursor: not-allowed;
+  background: transparent;
+}
+
+.date-disabled {
+  padding: 6px 11px;
+  color: #a8aaad;
+  font-size: 12px;
+  width: 105px;
+  border: 1px solid #d9d9d9;
+}
+
+.reminder {
+  display: flex;
+  align-items: center;
+  :global {
+    .ant-select-disabled .ant-select-selector:hover {
+      border-color: #d9d9d9;
+    }
+  }
+}
+
+.follower-card {
+  left: 16px;
+  .triangle-icon {
+    position: absolute;
+    top: -12px;
+  }
+}
+
+.guide-card {
+  right: 16px;
+}
+
+.task-mail-card {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 16px;
+  border-radius: 8px;
+  width: 242px;
+  color: white;
+  background: #386ee7;
+  z-index: 1;
+  .title {
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .desc {
+    font-size: 12px;
+    padding-top: 8px;
+    padding-bottom: 12px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    .btn {
+      font-size: 12px;
+      height: 28px;
+      background: #386ee7;
+      color: white;
+      border-radius: 4px;
+      border: 1px solid white;
+    }
+    .task-btn {
+      background: white;
+      margin-left: 8px;
+      color: #386ee7;
+    }
+  }
+}
+
+.guide-card-wrapper {
+  position: relative;
+}
+
+.task-modal-btns {
+  flex-direction: row-reverse;
+}

@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 24px;
+  flex-wrap: wrap;
+  .card {
+    margin-right: 16px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.12s;
+    &:hover {
+      transform: translate(0, -2px);
+    }
+  }
+}

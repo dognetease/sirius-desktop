@@ -1,0 +1,102 @@
+@import './../../../../web/src/styles/varies.scss';
+.move-dir-modal {
+  :global(.ant-modal-header) {
+    border-bottom: 0;
+    background-color: $white;
+  }
+  :global(.ant-modal-content) {
+    background-color: $white;
+  }
+  :global(.ant-modal-body) {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 4px !important;
+  }
+  :global(.ant-btn-primary)[disabled] {
+    color: #fff !important;
+    background: #386ee7 !important;
+    border-color: #386ee7 !important;
+    opacity: 0.5;
+  }
+  :global(.ant-modal-footer) {
+    border-top: 1px solid $white-bg;
+    :global(.ant-btn) {
+      background-color: $white;
+    }
+    :global(.ant-btn-primary) {
+      background-color: #386ee7;
+    }
+  }
+}
+
+.move-dir-tree {
+  :global(.ant-tree-node-content-wrapper) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 32px;
+  }
+  :global(.ant-tree-iconEle) {
+    line-height: 32px !important;
+    height: 32px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-around;
+  }
+  :global(.ant-tree-switcher) {
+    line-height: 32px;
+  }
+  :global(.ant-tree-treenode) {
+    padding-bottom: 0 !important;
+  }
+  :global(.ant-tree-treenode-selected) {
+    // background-color: #386EE7 !important;
+    :global(.ant-tree-node-content-wrapper):global(.ant-tree-node-selected) {
+      background-color: #386ee7 !important;
+      color: white !important;
+      border-radius: 0 !important;
+    }
+  }
+  :global(.ant-tree-treenode):not(:global(.ant-tree-treenode-disabled)):not(:global(.ant-tree-treenode-selected)) :hover {
+    :global(.ant-tree-node-content-wrapper) {
+      // background-color: #f4f4f5;
+      background-color: $white-bg;
+    }
+  }
+  :global(.ant-tree-node-content-wrapper) {
+    white-space: nowrap;
+  }
+  :global(.ant-tree-treenode-disabled) {
+    :global(.ant-tree-node-content-wrapper) {
+      background: transparent;
+    }
+  }
+}
+
+.modal-title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+  // color: #000000;
+  color: $font-color-3;
+}
+
+.modal-tips {
+  padding-top: 8px;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  /* identical to box height, or 100% */
+  /* 字体及ICON颜色/icon颜色40% */
+  color: #a8aaad;
+  margin: 0;
+}
+
+.dir-tree-wrapper {
+  height: 300px;
+  @include sirius-scroll(4px, auto);
+  :global(.ant-tree) {
+    background-color: $white;
+  }
+}

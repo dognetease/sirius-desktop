@@ -1,0 +1,26 @@
+.msg-rector-wrapper {
+  width: 140px;
+  height: 140px;
+  border-radius: 140px;
+  box-sizing: border-box;
+  border: 15px solid $Success-6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.1);
+  transform-origin: left top;
+  background: #fff;
+  :global(.ant-progress-circle-trail) {
+    stroke: #fff;
+  }
+}
+
+.readed-Icon {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.all-Readed {
+  width: 16px !important;
+  height: 16px !important;
+}

@@ -1,0 +1,15 @@
+@import '../../../styles/varies.scss';
+
+.all-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.button-column {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  & > * {
+    margin-top: 10px;
+  }
+}

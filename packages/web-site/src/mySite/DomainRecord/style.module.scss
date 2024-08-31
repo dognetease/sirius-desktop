@@ -1,0 +1,379 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.container {
+  padding: 20px 16px;
+  background: #f6f7fa;
+  overflow-y: auto;
+  :global {
+    .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+      border-color: $Brand-6 !important;
+      box-shadow: none;
+    }
+    .ant-select-item .ant-select-item-option:hover {
+      background: $Fill-2 !important;
+    }
+    .ant-select-item-option-selected {
+      background: $Brand-1 !important;
+      color: $Brand-6 !important;
+    }
+  }
+}
+
+.domain-record-header {
+  flex: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+
+  .header-right {
+    display: flex;
+    align-items: center;
+
+    span {
+      color: $Text-4;
+      font-size: 14px;
+      line-height: 22px;
+      margin: 0 8px 0 5.5px;
+    }
+
+    div {
+      color: $Brand-6;
+      font-size: 14px;
+      line-height: 22px;
+      cursor: pointer;
+    }
+  }
+}
+
+.main {
+  background: #fff;
+  width: 100%;
+  min-width: 700px;
+  height: calc(100vh - 134px);
+  font-weight: 400;
+  color: $Text-5;
+  position: relative;
+
+  :global {
+    .ant-btn-primary {
+      background-color: #4c6aff;
+    }
+  }
+}
+
+.steps {
+  padding: 40px 0;
+
+  :global {
+    .ant-steps-item-title {
+      color: #272e47 !important;
+    }
+    .ant-steps-item-finish .ant-steps-item-title::after {
+      background-color: #4c6aff !important;
+    }
+    .ant-steps-item-finish .ant-steps-item-icon {
+      border-color: #4c6aff;
+    }
+    .ant-steps-item-custom .ant-steps-item-icon {
+      height: 0;
+    }
+    .ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon {
+      color: #4c6aff;
+    }
+    .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-icon {
+      background: #4c6aff;
+      border-color: #4c6aff;
+    }
+    .ant-steps-item-wait .ant-steps-item-icon {
+      border-color: #e1e3e8;
+    }
+    .ant-steps-item-wait .ant-steps-item-icon > .ant-steps-icon {
+      color: #545a6e;
+    }
+    .ant-steps-item-wait .ant-steps-item-container:hover .ant-steps-item-icon {
+      border-color: #4c6aff !important;
+      .ant-steps-icon {
+        color: #4c6aff !important;
+      }
+    }
+  }
+}
+
+.content {
+  width: 70%;
+  min-width: 430px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step-one {
+  .row {
+    display: flex;
+    min-width: 250px;
+    align-items: center;
+    margin-bottom: 24px;
+    .label {
+      width: 70px;
+      color: $Text-5;
+      font-size: 14px;
+      line-height: 22px;
+      margin-right: 12px;
+    }
+    p {
+      color: $Text-4;
+      font-size: 14px;
+      line-height: 22px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.step-two {
+  .label {
+    color: $Text-5;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 12px;
+  }
+  .question {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: $Brand-6;
+    font-size: 14px;
+    line-height: 22px;
+    svg {
+      margin-right: 4px;
+    }
+  }
+}
+
+.step-three {
+  :global {
+    .ant-input:focus,
+    .ant-input:hover {
+      border-color: $Brand-6 !important;
+      box-shadow: none;
+    }
+
+    .ant-input,
+    .ant-input-affix-wrapper {
+      border-color: $Line-3 !important;
+      color: $Text-5 !important;
+      box-shadow: none;
+    }
+
+    .ant-input::placeholder {
+      color: $Text-2 !important;
+    }
+
+    .ant-input-affix-wrapper:focus,
+    .ant-input-affix-wrapper-focused {
+      border-color: $Brand-6 !important;
+      box-shadow: none;
+    }
+
+    .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+      border-color: $Brand-6 !important;
+      box-shadow: none;
+    }
+  }
+  .input-error {
+    border-color: $Error-6 !important;
+    box-shadow: none;
+
+    :global {
+      .ant-input,
+      .ant-input:focus,
+      .ant-input:hover,
+      .ant-input-affix-wrapper:focus,
+      .ant-input-affix-wrapper-focused,
+      .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+        border-color: $Error-6 !important;
+        box-shadow: none;
+      }
+    }
+  }
+  .row {
+    display: flex;
+    min-width: 250px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+  }
+  .label {
+    width: 70px;
+    color: $Text-5;
+    font-size: 14px;
+    line-height: 32px;
+    margin-right: 12px;
+  }
+  .info-text {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 22px;
+    color: $Text-3;
+  }
+}
+
+.copy {
+  width: 318px;
+  height: 32px;
+  border: 1px solid $Line-2;
+  background: #f9fafb;
+  border-radius: 2px;
+  display: flex;
+  margin: 12px 0 8px;
+  .text {
+    flex: 1;
+    line-height: 20px;
+    padding: 5px 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #9fa2ad;
+  }
+  .btn {
+    width: 54px;
+    background: $Fill-2;
+    text-align: center;
+    line-height: 30px;
+    border-left: 1px solid $Line-2;
+    color: #545a6e;
+    cursor: pointer;
+  }
+}
+
+.bind-site-success {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .title {
+    font-size: 18px;
+    line-height: 26px;
+    color: $Text-5;
+    margin-top: 16px;
+    font-weight: 500;
+  }
+
+  .sub-title {
+    font-size: 16px;
+    line-height: 24px;
+    color: $Text-5;
+    margin-top: 16px;
+    font-weight: 500;
+  }
+
+  p {
+    width: 100%;
+    color: $Text-3;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 4px 0 0;
+    display: flex;
+    align-items: center;
+    span {
+      width: 70px;
+    }
+  }
+}
+
+.submit-btn,
+.submit-btn-disabled {
+  cursor: pointer;
+  color: #fff;
+  padding: 7px 24px;
+  background: $Brand-6;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background: $Brand-5;
+  }
+
+  &:active {
+    background: $Brand-7;
+  }
+}
+
+.submit-btn-disabled {
+  background: $Brand-3;
+
+  &:hover {
+    background: $Brand-3;
+  }
+
+  &:active {
+    background: $Brand-3;
+  }
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+}
+
+.normal-btn {
+  margin-left: 10px;
+  padding: 5px 17px;
+  font-size: 14px;
+  line-height: 22px;
+  color: $Text-4;
+  background: #fff;
+  border: 1px solid $Line-3;
+  border-radius: 4px;
+
+  &:hover {
+    background: $Fill-1;
+  }
+
+  &:active {
+    background: $Fill-3;
+  }
+}
+
+.form-item-info {
+  color: $Text-2;
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: 4px;
+}
+
+.form-item-error {
+  color: $Error-6;
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: 4px;
+}
+
+.step-three-error {
+  width: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: $Text-5;
+  padding: 6px 12px;
+  box-sizing: border-box;
+  background: $Error-1;
+  margin-bottom: 32px;
+}
+
+.question-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  .question-info {
+    color: $Text-2;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

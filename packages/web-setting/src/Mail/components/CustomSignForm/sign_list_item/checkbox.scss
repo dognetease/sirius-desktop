@@ -1,0 +1,18 @@
+@import '@web-common/styles/variables.scss';
+
+.icheckbox {
+  .ant-checkbox-group-item {
+    height: 22px;
+    margin-right: 0 !important;
+  }
+  .ant-checkbox-group-item + .ant-checkbox-group-item {
+    margin-top: 7px !important;
+  }
+  .ant-checkbox + span {
+    padding: 0 !important;
+    margin-left: 5px !important;
+    // color: #232d47 !important;
+    color: $font-color-2;
+    font-size: 14px !important;
+  }
+}

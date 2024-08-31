@@ -1,0 +1,67 @@
+@import '../../../../web/src/styles/varies';
+.msg-img-wrapper {
+  overflow: hidden;
+  :global(.ant-image) {
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 100%;
+    // @include borderHalfPx($Fill-3, 6px, 1px, 1px, 1px, 1px);
+    border: solid 0.5px $Fill-3;
+  }
+  :global(.ant-image) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  :global(.ant-image-img) {
+    object-fit: contain;
+    width: initial;
+    max-width: 100%;
+  }
+  :global(.ant-image-preview-img-wrapper) {
+    top: 46px !important;
+  }
+  :global(.ant-image-error) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-color: rgba($color: $Fill-2, $alpha: 1);
+    background-color: $Fill-2;
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  .msg-img {
+    max-width: 1200px;
+    // width: 100%;
+    max-height: 300px;
+    min-width: 120px;
+    min-height: 120px;
+    object-fit: cover;
+    &:global(.hidden) {
+      display: none;
+    }
+  }
+  .chat-img-preview-wrapper {
+    &:hover {
+      opacity: 0 !important;
+    }
+  }
+  .chat-img-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f5;
+  }
+  .chat-img-mask:global(.ant-image-mask) {
+    background: transparent;
+    &:hover {
+      background: transparent;
+    }
+  }
+}
+
+.wrapper-bg .msg-img-wrapper {
+  border-radius: 0;
+}

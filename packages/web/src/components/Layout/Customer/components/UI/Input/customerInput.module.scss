@@ -1,0 +1,13 @@
+:global {
+  .ant-input:focus,
+  .ant-input:hover,
+  .ant-input-focused {
+    // border-color: #386ee7;
+    border-color: red;
+  }
+  .ant-picker:focus,
+  .ant-picker:hover,
+  .ant-picker-focused {
+    border-color: #386ee7;
+  }
+}

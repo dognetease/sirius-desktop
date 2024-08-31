@@ -1,0 +1,91 @@
+@import '@web-common/styles/variables.scss';
+
+.follow-editor {
+  width: 100%;
+}
+.editor-wrap {
+  position: relative;
+  border-radius: 2px 6px 6px 6px;
+
+  .editor-footer {
+    height: 36px;
+    line-height: 36px;
+    padding: 0 11px;
+    background: $Fill-2;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    position: relative;
+  }
+  .editor-btns {
+    position: absolute;
+    top: 50%;
+    right: 11px;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    .exceeded-tip {
+      color: $Error-6;
+      margin-right: 8px;
+    }
+    .send-icon {
+      height: 16px;
+      line-height: 16px;
+    }
+    .file-input {
+      display: none;
+    }
+    .upload-line {
+      position: relative;
+      display: inline-block;
+      width: 1px;
+      height: 12px;
+      background-color: $Fill-4;
+      margin: 0 10px;
+    }
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    .sirius-spin-wrap {
+      width: auto;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      .sirius-spin-icon {
+        width: 16px;
+        height: 16px;
+        background-image: url(@/images/icons/facebook/loading.svg);
+        background-size: cover;
+        display: inline-block;
+        animation: spin 1s linear infinite;
+      }
+      .sirius-spin-label {
+        margin-left: 8px;
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        color: $Avatar-6;
+      }
+    }
+  }
+
+  :global(.ant-input) {
+    border-top-right-radius: 6px;
+    border-top-left-radius: 2px;
+    border: none !important;
+    background: $Fill-2;
+    resize: none;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  textarea::-webkit-input-placeholder {
+    color: $Text-3;
+  }
+}

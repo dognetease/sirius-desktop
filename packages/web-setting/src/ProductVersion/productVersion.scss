@@ -1,0 +1,176 @@
+@import '../../../web/src/styles/varies';
+.product-version-setting {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // background-color: #ffffff;
+  background-color: $white;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  .config-title {
+    flex: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    box-shadow: inset 0px -0.5px 0px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+    padding: 0 16px;
+    font-weight: 500;
+    // background-color: #ffffff;
+    background-color: $white;
+
+    .config-title-icon {
+      @include sirius-no-drag;
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+      // background-image: url('../../../web/src/images/icons/close_icon.svg');
+      background-size: 100% 100%;
+    }
+  }
+
+  .product-title {
+    @include font-size(500, 20px, 24px);
+    height: 24px;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+  .product-update {
+    text-align: center;
+    color: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.8);
+    height: 16px;
+    @include c4-1-reg12();
+  }
+  .product-warp {
+    width: 632px;
+    height: 100%;
+    padding: 0px 24px;
+    // padding: 20px;
+    .version-warp-content {
+      height: 540px;
+      overflow-y: auto;
+      .ant-collapse {
+        border: 0.5px solid rgba($font-color-2-r, $font-color-2-g, $font-color-2-b, 0.12);
+        position: relative;
+        border-radius: 6px;
+        // background-color: #ffffff;
+        background-color: $white;
+        .ant-collapse-content {
+          border-top: none;
+          background-color: $white;
+          color: $font-color-2;
+        }
+      }
+    }
+    .version-warp-content::-webkit-scrollbar {
+      display: none;
+    }
+    .title {
+      // font-weight: 500;
+      // color: #51555c;
+      color: $font-color-1;
+      &:hover {
+        // background: #ffffff !important;
+        background: $white !important;
+      }
+    }
+    .content {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 44px;
+      line-height: 44px;
+      .content-span-font {
+        font-size: 12px;
+      }
+      .content-span-flex {
+        flex: 3 !important;
+      }
+      .content-span {
+        flex: 2;
+        margin-left: 16px;
+        position: relative;
+        .content-span-icon {
+          width: 16px;
+          height: 16px;
+          margin-left: 4px;
+        }
+        .content-span-big {
+          width: 24px;
+          height: 24px;
+        }
+        .content-span-tag {
+          display: block;
+          position: absolute;
+          text-align: center;
+          height: 32px;
+          color: #ffffff;
+          padding: 0 8px;
+          border-radius: 16px;
+          top: -5px;
+          left: 10px;
+          background-color: #386ee7;
+          white-space: nowrap;
+          @include font-size(400, 20px, 32px);
+          transform: scale(0.5);
+          z-index: 2;
+        }
+        .content-span-inline {
+          display: block;
+          height: 18px;
+          line-height: 18px;
+        }
+      }
+      .content-span-func {
+        font-weight: 500;
+        // color: #262a33;
+        color: $font-color-2;
+      }
+      .anticon-up,
+      .anticon-down {
+        margin-left: 5px;
+        color: #7d8085;
+      }
+      &:hover {
+        // background: #f4f4f5;
+        background-color: $white-bg;
+      }
+    }
+    .content-collapse {
+      margin-bottom: 8px;
+      // .ant-collapse-header {
+      //     background: #FFFFFF;
+      // }
+    }
+    .ant-collapse > .ant-collapse-item {
+      border-bottom: none;
+    }
+    // .ant-collapse {
+    //     background: #FFFFFF;
+    // }
+    .content-row {
+      // background: #f0f0f0;
+      background-color: $white-hover-bg;
+    }
+    .ant-collapse-content-box {
+      padding: 0px;
+    }
+    .ant-collapse-header {
+      padding: 0px !important;
+    }
+  }
+  .product-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+    height: 52px;
+    line-height: 52px;
+    box-shadow: inset 0px 0.5px 0px rgba(0, 0, 0, 0.12);
+    padding-right: 24px;
+  }
+}

@@ -1,0 +1,141 @@
+/**
+ * Created by zh on 2023/3/17.
+ */
+.salesPitchCard {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  min-width: 150px;
+  background: #ffffff;
+  border: 1px solid #e1e3e8;
+  border-radius: 4px;
+  padding: 12px;
+  cursor: pointer;
+
+  &:hover {
+    &:not(.isAllDragging) {
+      .bottomBar {
+        opacity: 1;
+        transition: opacity linear 0.1s;
+      }
+    }
+  }
+
+  .isAllDragging {
+  }
+
+  &.isSelfDragging {
+    .bottomBar {
+      opacity: 1;
+      transition: opacity linear 0.1s;
+    }
+  }
+
+  .sceneContainer {
+    flex: 0 0 22px;
+    color: #272e47;
+  }
+
+  .scene {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    word-break: break-all;
+    text-align: justify;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    max-height: 44px;
+    flex: 0 0 22px;
+    color: #272e47;
+  }
+
+  .content {
+    margin-top: 8px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #747a8c;
+    flex: 1 1 auto;
+    overflow: hidden;
+  }
+
+  .bottomBar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 32px;
+    background: #e1e3e8;
+    will-change: bottom;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    cursor: default;
+  }
+
+  .baseHandleContainer {
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .baseHandleContainerReadMail {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4px;
+  }
+
+  .btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+      background: #ebedf2;
+    }
+
+    &.dragBtn {
+      position: absolute;
+      top: 4px;
+      left: 8px;
+      cursor: grab;
+
+      &.isDragDisabled {
+        display: none;
+      }
+    }
+  }
+
+  &.salesPitchCardReadMail {
+    background: #f8f9fa;
+    border-radius: 4px;
+    user-select: auto;
+
+    .sceneContainer {
+      display: flex;
+      align-items: flex-start;
+
+      .scene {
+        flex: 1;
+      }
+    }
+
+    .content {
+      -webkit-line-clamp: 3;
+    }
+  }
+}

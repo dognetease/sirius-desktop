@@ -1,0 +1,26 @@
+<th:block th:fragment="innerContent" xmlns:th="http://www.thymeleaf.org" th:object="${data}">
+     <div style="width: 100%; padding: 16px; box-sizing: border-box;" class="divNeteaseSiriusTask" th:attr="data-task-id=*{taskId}">
+          <div style="width: 100%;background: #FFFFFF; border: 1px solid #EFE9E6; box-sizing: border-box; box-shadow: 0px 2px 12px #EFF2F7; border-radius: 6px;">
+               <p class="qiyesu-task-title" style="display: flex; align-items: center; background: rgba(107, 169, 255, 0.08); border-radius: 6px 6px 0 0; height: 52px; padding-left: 20px; margin: 0; color: #262A33; font-size: 16px;">任务详情</p>
+               <div style="margin: 20px 20px 0 20px;" class="qiyesu-task-subject">
+                    <p style="height: 14px; line-height: 14px; font-size: 14px; color: #7D8085;">主题</p>
+                    <p style="margin-top: 8px; line-height: 20px; font-size: 16px; color: #262A33;" th:text="*{subjectName}"></p>
+               </div>
+               <div style="margin: 20px 20px 0 20px;" th:if="*{deadLine!=null && deadLine!=''}" class="qiyesu-task-deadline">
+                    <p style="height: 14px; line-height: 14px; font-size: 14px; color: #7D8085;">截止时间</p>
+                    <p style="margin-top: 8px; line-height: 20px; font-size: 16px; color: #262A33;" th:text="*{deadLine}"></p>
+               </div>
+               <div style="margin: 20px 20px 0 20px;" class="qiyesu-task-executorusers">
+                    <p style="height: 14px; line-height: 14px; font-size: 14px; color: #7D8085;">任务执行人</p>
+                    <p style="margin-top: 8px; line-height: 20px; font-size: 16px; color: #262A33;" th:text="*{executorUsers}"></p>
+               </div>
+               <div style="margin: 20px 20px 0 20px;" class="qiyesu-task-focususers">
+                    <p style="height: 14px; line-height: 14px; font-size: 14px; color: #7D8085;">受邀关注人</p>
+                    <p style="margin-top: 8px; line-height: 20px; font-size: 16px; color: #262A33;" th:text="*{focusUsers}"></p>
+               </div>
+               <div style="margin: 20px 20px 0 20px; border-top: 1px solid rgba(38, 42, 51, 0.16); display: flex; align-items: center; justify-content: center; padding: 15px 0 20px;" class="qiyesu-task-footer divNeteaseSiriusHidden">
+                    <p class="qiyesu-task-suptxt" style="font-size: 14px; line-height: 21px; color: #51555C; margin: 0;">温馨提醒：此任务提醒来自网易灵犀办公客户端，可<a href="https://hubble.netease.com/sl/aaagZX" style="color: #386EE7; text-decoration: none;">点此下载灵犀办公客户端</a>或升级灵犀办公至最新版本以查看完整信息，并支持在线完成任务及查看任务进度。</p>
+               </div>
+          </div>
+     </div>
+</th:block>

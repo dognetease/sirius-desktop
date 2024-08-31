@@ -1,0 +1,242 @@
+@import '@web-common/styles/variables.scss';
+
+.modal-title {
+  font-family: 'PingFang SC';
+  font-style: normal;
+
+  h3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #262a33;
+  }
+
+  p {
+    @include c4-1-reg12();
+    color: #a8aaad;
+    margin-top: 6px;
+    margin-bottom: 0;
+  }
+}
+.marketing-modal {
+  :global(.ant-modal-content) {
+    overflow: hidden;
+  }
+  :global(.ant-modal-close) {
+    top: 6px;
+  }
+  :global(.ant-modal-header) {
+    border-radius: 12px 12px 0 0;
+    padding-top: 21px;
+    padding-bottom: 10px;
+  }
+  :global(.ant-modal-body) {
+    padding: 0;
+  }
+  :global(.ant-modal-footer) {
+    border-radius: 0 0 12px 12px;
+  }
+}
+.back-btn {
+  border: none;
+  color: #262a33;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  margin: 3px 0 5px;
+  &:hover,
+  &:active,
+  &:focus {
+    border: none;
+    background: transparent;
+  }
+  svg {
+    margin-right: 6px;
+  }
+
+  > * {
+    vertical-align: middle;
+  }
+}
+
+.contents {
+  display: flex;
+  justify-content: space-between;
+
+  .step-list {
+    padding: 24px 0 0 24px;
+
+    section {
+      background: #f4f6f7;
+      border-radius: 8px;
+      padding: 26px 24px;
+      display: flex;
+
+      :global(.content) {
+        flex-grow: 1;
+      }
+
+      :global(.title) {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: #262a33;
+      }
+
+      :global(.description) {
+        color: #a8aaad;
+        font-size: 12px;
+        line-height: 16px;
+        margin-top: 8px;
+      }
+    }
+
+    :global(.active) {
+      background: #386ee7;
+      color: #ffffff;
+
+      :global(.icon-num) {
+        background: #ffffff;
+        color: #386ee7;
+      }
+
+      :global(.title) {
+        color: #ffffff;
+      }
+
+      :global(.description) {
+        color: #ffffff;
+      }
+
+      :global(.ant-btn) {
+        color: #386ee7;
+      }
+    }
+
+    section + section {
+      margin-top: 16px;
+    }
+
+    :global(.icon-num) {
+      width: 20px;
+      height: 20px;
+      @include c4-3-reg12();
+      display: inline-block;
+      background: $label-6_2;
+      color: #ffffff;
+      text-align: center;
+      border-radius: 50%;
+      margin-right: 12px;
+    }
+    :global(.ant-btn) {
+      border-color: #fff;
+      &[disabled],
+      &[disabled]:hover,
+      &[disabled]:focus,
+      &[disabled]:active {
+        color: #a8aaad;
+      }
+    }
+  }
+
+  .intro {
+    width: 310px;
+    min-height: 466px;
+    background: #f9fafb;
+    padding: 24px 32px;
+
+    h5 {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: #262a33;
+    }
+
+    h5::before {
+      width: 3px;
+      height: 14px;
+      background: #386ee7;
+      border-radius: 40px;
+      content: '';
+      display: inline-block;
+      margin-right: 4px;
+      margin-top: 2px;
+    }
+
+    p {
+      @include c4-3-reg12();
+      color: #7d8085;
+    }
+  }
+
+  .figure {
+    width: 223px;
+    height: 188px;
+    margin: 0 auto 24px;
+    background-image: url(../../../../images/whats-app-marketing.png);
+    background-size: 100%;
+  }
+}
+.step-item {
+  padding: 16px 24px;
+}
+.bindingSetting {
+  .title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: #262a33;
+    margin-bottom: 16px;
+  }
+  :global(.ant-btn-link) {
+    width: unset;
+    background: transparent;
+    border: none;
+    color: #386ee7;
+    &:hover {
+      color: #386ee7;
+    }
+  }
+  .arrow-icon {
+    height: 23px;
+    vertical-align: bottom;
+    width: 12px;
+    margin-left: 4px;
+  }
+
+  .step-list {
+    section {
+      background: #f4f6f7;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      padding: 26px 24px;
+
+      :global(.content) {
+        line-height: 28px;
+        flex-grow: 1;
+      }
+    }
+
+    section + section {
+      margin-top: 16px;
+    }
+
+    :global(.icon-num) {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      background: #386ee7;
+      color: #ffffff;
+      text-align: center;
+      border-radius: 50%;
+      margin-right: 12px;
+      @include c4-3-reg12();
+    }
+  }
+  .bind-btn {
+    min-width: 80px;
+    border: 1px solid #386ee7;
+    color: #386ee7;
+  }
+}

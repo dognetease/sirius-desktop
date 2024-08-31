@@ -1,0 +1,47 @@
+.ff-analyze {
+  .common-box {
+    margin-top: 16px;
+    .empty {
+      color: $Text-1;
+      font-weight: normal;
+    }
+  }
+  .table-title-required {
+    position: relative;
+    &::before {
+      display: inline-block;
+      color: #ff4d4f;
+      font-size: 14px;
+      line-height: 1;
+      content: '*';
+    }
+  }
+  .row-title {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 4px;
+  }
+  .add-btn {
+    padding-top: 10px;
+    padding-left: 12px;
+    padding-bottom: 16px;
+    color: #5a7fe2;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-block;
+  }
+  .table-col {
+    display: flex;
+    align-items: center;
+    color: red;
+    gap: 8px;
+    .empty {
+      width: 40px;
+    }
+  }
+  .max-width-cell {
+    max-width: 100px;
+  }
+}

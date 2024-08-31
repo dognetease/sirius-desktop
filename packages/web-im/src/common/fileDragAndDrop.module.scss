@@ -1,0 +1,28 @@
+@import '../../../web/src/styles/varies';
+.file-drag-and-drop {
+  position: relative;
+  // * {
+  //     pointer-events: none;
+  // }
+  .drop {
+    left: 0;
+    top: 56px;
+    width: 100%;
+    height: calc(100% - 56px);
+    // background: rgba(255, 255, 255, 0.9);
+    background-color: rgba($white-r, $white-g, $white-b, 0.9);
+    // background: transparent;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    padding: 16px;
+    padding-top: 0;
+    box-sizing: border-box;
+  }
+  .placeholder {
+    font-size: 14px;
+    color: #fff;
+  }
+}

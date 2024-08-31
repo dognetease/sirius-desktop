@@ -1,0 +1,15 @@
+@import '@web-common/styles/variables.scss';
+// @import '../../../web/src/styles/varies';
+
+.mail-config-encoding {
+  .selectDropdown {
+    .ant-select-item-option {
+      font-size: 14px;
+    }
+    .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+      // color: $main-enhance-color;
+      background: #ffffff;
+      font-weight: normal;
+    }
+  }
+}

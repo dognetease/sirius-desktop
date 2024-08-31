@@ -1,0 +1,152 @@
+.alert {
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 0;
+  animation: none;
+  position: absolute;
+  left: 50%;
+  .btnLeft {
+    margin-right: auto;
+  }
+  :global {
+    .ant-modal-close {
+      right: 16px;
+      top: 16px;
+      .ant-modal-close-x {
+        height: 16px;
+        width: 16px;
+        line-height: 16px;
+      }
+    }
+    .ant-modal-content {
+      border-radius: 6px;
+      box-shadow: none;
+      background-color: $white;
+      .ant-modal-body {
+        padding: 20px;
+        .ant-modal-confirm-body {
+          & > .anticon {
+            margin-right: 8px;
+            display: inline-flex;
+            align-items: center;
+            height: 24px; // 对应右侧行高
+          }
+          .ant-modal-confirm-title {
+            line-height: 20px;
+            color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+          }
+          .ant-modal-confirm-content {
+            margin-left: 30px;
+            margin-top: 16px;
+            color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.8);
+          }
+        }
+        .ant-modal-confirm-btns,
+        :local(.btns) {
+          display: flex;
+          width: 100%;
+          justify-content: flex-end;
+          margin-top: 16px;
+          align-items: center;
+          label.ant-checkbox-wrapper {
+            color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.8);
+          }
+          .ant-checkbox {
+            .ant-checkbox-inner {
+              border-radius: 2px;
+              height: 12px;
+              width: 12px;
+              &::after {
+                animation: none;
+                transition: none;
+              }
+            }
+          }
+          .ant-checkbox:not(.ant-checkbox-checked) {
+            .ant-checkbox-inner {
+              border: 1px solid $Text-1;
+            }
+          }
+          .ant-checkbox-checked {
+            .ant-checkbox-inner::after {
+              transform: rotate(45deg) scale(0.75) translate(-50%, -50%);
+              top: 4px;
+              left: 1px;
+              animation: none;
+              transition: none;
+            }
+            &::after {
+              animation: none;
+              transition: none;
+            }
+          }
+          button + button {
+            margin-left: 12px;
+          }
+          .ant-btn {
+            transition: none;
+            padding: 4px 20px;
+            border-radius: 4px;
+            height: 32px;
+            border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+            color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.8);
+            text-shadow: none;
+            box-shadow: none;
+            transition: none;
+            background-color: $white;
+            &:hover,
+            &:focus {
+              color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.8);
+              border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+            }
+            &.ant-btn-primary {
+              background: #386ee7;
+              border-color: #386ee7;
+              color: #ffffff;
+            }
+            &.ant-btn-dangerous {
+              background: #f74f4f;
+              color: #ffffff;
+              border-color: #f74f4f;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-custom-btns {
+    :global(.ant-modal-confirm-btns) {
+      display: none !important;
+    }
+  }
+  &-custom-content {
+    :global(.ant-modal-confirm-content) {
+      margin-left: 0 !important;
+    }
+  }
+  &-no-content {
+    :global(.ant-modal-confirm-content) {
+      display: none;
+    }
+  }
+  &-footer-border {
+    :global(.ant-modal-confirm-content) {
+      margin-bottom: 16px;
+    }
+    .btns,
+    :global(.ant-modal-confirm-btns) {
+      position: relative;
+      &::after {
+        content: ' ';
+        position: absolute;
+        height: 1px;
+        width: auto;
+        left: -24px;
+        right: -24px;
+        top: -18px;
+        background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+        transform: scale(1, 0.5);
+      }
+    }
+  }
+}

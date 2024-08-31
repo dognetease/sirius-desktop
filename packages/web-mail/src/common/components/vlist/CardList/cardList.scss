@@ -1,0 +1,18 @@
+@import '../../../../../../web/src/styles/varies';
+.cardlist-wrap {
+  position: relative;
+}
+.cardlist-fixed-top-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px 1px 4px -2px #0808082e;
+  // background-color: #fff;
+  background-color: $white;
+}
+
+.cardlist-scroll {
+  @include sirius-scroll;
+  outline: 0;
+}

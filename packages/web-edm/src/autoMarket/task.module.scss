@@ -1,0 +1,326 @@
+.containerWrapper {
+  height: 100%;
+  display: flex;
+  padding: 24px 0 20px;
+  // margin: 0 24px;
+  flex-direction: column;
+}
+
+.container {
+  position: relative;
+  padding: 0px 24px;
+  // height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-family: 'PingFang SC';
+  overflow-y: auto;
+  // background-color: #f5f6f7;
+
+  .breadcrumb {
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 14px;
+    :global(.ant-breadcrumb-link) {
+      cursor: pointer;
+      &:hover {
+        color: #4c6aff;
+      }
+    }
+    & > span {
+      vertical-align: middle;
+    }
+    & > span:last-child {
+      color: #262a33;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  .tableWrapper {
+    background: #fff;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  :global {
+    .ant-btn-primary {
+      background-color: #4c6aff;
+    }
+
+    .ant-input {
+      border: 1px solid #eceff4;
+      border-radius: 3px;
+
+      &::placeholder {
+        color: #a9b2c2;
+      }
+    }
+
+    .ant-select {
+      .ant-select-selector {
+        border: 1px solid #eceff4;
+        border-radius: 3px;
+      }
+
+      .ant-select-selection-placeholder {
+        color: #a9b2c2;
+      }
+    }
+
+    .ant-switch {
+      // background-color: #e1e6ed;
+    }
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: #232d47;
+  }
+
+  .search {
+  }
+
+  :global(.ant-list) {
+    overflow-y: auto;
+  }
+
+  :global(.ant-list-item) {
+    height: 96px;
+    border: 1px solid #f0f3f5;
+    border-radius: 4px;
+    padding: 20px 24px;
+  }
+
+  :global(.ant-list-item + .ant-list-item) {
+    margin-top: 12px;
+  }
+
+  .list-item {
+    display: flex;
+    font-size: 12px;
+    line-height: 20px;
+    color: #7a8599;
+
+    .list-item-title {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      color: #4e5a70;
+      margin-bottom: 12px;
+    }
+    .list-item-text {
+      color: #4e5a70;
+    }
+    .count {
+      font-family: 'LX-numbers';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      color: #4e5a70;
+    }
+
+    .column0 {
+      flex-basis: 72px;
+      :global {
+        .ant-switch {
+          width: 35px;
+          height: 20px;
+          .ant-switch-handle {
+            width: 16px;
+            height: 16px;
+          }
+        }
+        .ant-switch-checked {
+          background-color: #4c6aff;
+          .ant-switch-handle {
+            left: calc(100% - 18px);
+          }
+        }
+      }
+    }
+
+    .column1 {
+      flex-basis: 280px;
+    }
+
+    .column2 {
+      flex-basis: 100px;
+      padding: 0 20px;
+    }
+
+    .column3 {
+      flex-grow: 1;
+      padding-left: 15px;
+    }
+
+    .column4 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .btn-more {
+      cursor: pointer;
+      margin-bottom: 15px;
+    }
+
+    .btn-more-placeholder {
+      width: 16px;
+      height: 16px;
+      margin-bottom: 15px;
+    }
+
+    .title,
+    .sub-title {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .title {
+      color: #232d47;
+    }
+
+    .sub-title {
+      color: #4e5a70;
+    }
+
+    .trigger-count,
+    .exec-count {
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right: 4px;
+        vertical-align: text-bottom;
+      }
+    }
+
+    .trigger-count {
+      &::before {
+        background-image: url('@/images/icons/edm/autoMarket/mail.svg');
+      }
+    }
+
+    .exec-count {
+      // margin-left: 30px;
+
+      &::before {
+        background-image: url('@/images/icons/edm/autoMarket/execCount.svg');
+      }
+    }
+  }
+
+  .pagination {
+    text-align: right;
+    padding: 12px 0;
+    font-family: 'Roboto';
+
+    :global(.ant-pagination-item + .ant-pagination-item) {
+      margin-left: 8px;
+    }
+
+    :global(.ant-pagination-item:hover a) {
+      color: rgba(0, 0, 0, 0.85);
+    }
+
+    :global(.ant-pagination-item-active) {
+      background: #4c6aff;
+      border-color: #4c6aff;
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.custom-toast {
+  background: rgba(0, 0, 0, 0.9);
+}
+.custom-message {
+  color: #fff;
+  :global(.ant-message-notice-content) {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+    box-shadow: 0px 3px 14px 2px rgba(0, 0, 0, 0.05), 0px 8px 10px 1px rgba(0, 0, 0, 0.06), 0px 5px 5px -3px rgba(0, 0, 0, 0.1) !important;
+    height: auto !important;
+    color: #fff !important;
+  }
+
+  :global(.ant-message-success .anticon) {
+    vertical-align: sub;
+  }
+}
+.menu-more {
+  :global {
+    .ant-dropdown-menu-item:not(.ant-dropdown-menu-item-disabled) {
+      color: #232d47;
+    }
+  }
+}
+
+.table {
+  :global(.ant-table-header .ant-table-thead .ant-table-cell) {
+    background: #f6f7fa;
+    color: #747a8c;
+    font-weight: 400;
+    font-size: 14px;
+    border-bottom: none;
+  }
+
+  :global(.ant-table-header) {
+    border-radius: 8px;
+  }
+
+  :global(.ant-table-cell) {
+    &::before {
+      display: none;
+    }
+  }
+
+  .taskNameWrapper {
+    display: flex;
+    align-items: center;
+
+    .taskName {
+      // flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+    }
+  }
+
+  .tag {
+    margin: 0;
+  }
+
+  .taskTag {
+    white-space: nowrap;
+  }
+
+  .btn-link {
+    color: #4c6aff;
+  }
+}

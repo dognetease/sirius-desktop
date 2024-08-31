@@ -1,0 +1,72 @@
+@import '@web-common/styles/variables.scss';
+
+.container {
+  padding: 16px;
+
+  section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .mergeCompanyText {
+      color: $Text-3;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    .mergeCompanyQuery {
+      color: $Brand-6;
+      cursor: pointer;
+      margin-left: 4px;
+    }
+
+    .dataPicker {
+      width: 293px;
+    }
+
+    :global {
+      .ant-picker-range {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.dateSelectFoot {
+  display: flex;
+  column-gap: 8px;
+  padding: 12px 0;
+
+  .dateSelectItem {
+    text-align: center;
+    background: #f2f3f5;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 2px 12px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+
+    &:hover {
+      background: #e5e6eb;
+    }
+
+    &-selected {
+      background: $Avatar-6 !important;
+      color: #fff !important;
+    }
+  }
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 12px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: $Text-5;
+}

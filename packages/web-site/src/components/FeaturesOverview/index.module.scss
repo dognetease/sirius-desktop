@@ -1,0 +1,94 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.features-overview {
+  :global {
+    .ant-modal-body {
+      padding: 0 20px 16px;
+      max-height: 450px;
+      overflow-y: overlay;
+      overflow-x: hidden;
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background: $Fill-4;
+      }
+    }
+
+    .ant-modal-header {
+      border-bottom: none;
+      padding: 24px 20px 12px;
+    }
+    .ant-modal-title {
+      color: $Text-5;
+    }
+    .ant-modal-close {
+      top: 14px;
+    }
+    .ant-modal-close-x {
+      height: 44px;
+      line-height: 44px;
+      svg {
+        opacity: 1;
+      }
+    }
+
+    .ant-modal-footer {
+      border-top: none;
+      padding: 20px;
+
+      .ant-btn {
+        background: $Brand-6;
+
+        &:hover {
+          background: $Brand-5;
+        }
+
+        &:active {
+          background: $Brand-7;
+        }
+        &:first-child {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.features {
+  border: 1px solid #ebedf2;
+  border-bottom: none;
+  &-tr {
+    display: flex;
+    &-left {
+      width: 96px;
+      background: #f9fafb;
+      font-size: 14px;
+      color: #272e47;
+      border-right: 1px solid #ebedf2;
+      border-bottom: 1px solid #ebedf2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &-right {
+      flex: 1;
+      &-td {
+        min-height: 58px;
+        padding: 8px 20px;
+        border-bottom: 1px solid #ebedf2;
+        &-title {
+          color: #272e47;
+          font-size: 14px;
+          line-height: 22px;
+        }
+        &-desc {
+          color: #747a8c;
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

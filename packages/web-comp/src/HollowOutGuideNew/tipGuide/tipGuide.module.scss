@@ -1,0 +1,29 @@
+@import '../../styles/common.scss';
+
+.contentBox {
+  margin: 0;
+  padding: 8px 12px;
+  // background-color: $Text-5;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+  max-width: 372px;
+  position: relative;
+  .contentTitle {
+    color: #ffffff;
+    @include c4-3-reg12;
+    margin-right: 12px;
+  }
+  .contentCloakingBtn {
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+  }
+  .contentBtn {
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    color: $Brand-5;
+    @include c4-4-med12;
+    cursor: pointer;
+  }
+}

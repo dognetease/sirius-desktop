@@ -1,0 +1,23 @@
+.translate-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1px 12px;
+  gap: 8px;
+  line-height: 20px;
+  min-height: 32px;
+  /* 品牌色-公用色/Brand-1浅色-白底背景 */
+  background: #f2f5ff;
+  border-radius: 4px;
+  position: absolute;
+  // top: 8px;
+  // left: 50px;
+  z-index: 2;
+  color: #7a8599;
+  font-size: 12px;
+  :global(.ant-btn-sm) {
+    height: 24px;
+    line-height: 16px;
+  }
+}

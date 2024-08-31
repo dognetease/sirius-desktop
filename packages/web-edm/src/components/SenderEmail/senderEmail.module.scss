@@ -1,0 +1,93 @@
+.sender-email {
+  :global(.ant-select-selector) {
+    .sender-email-good-tag,
+    .sender-email-bad-tag {
+      display: none;
+    }
+  }
+  .empty-select {
+    :global(.ant-select-selector) {
+      border-color: #ff4d4f !important;
+    }
+  }
+  font-size: 12px;
+  .tip {
+    margin: -8px 0 16px 0px;
+    color: #545a6e;
+    white-space: nowrap;
+  }
+  .error-tip {
+    color: $Error-6;
+  }
+  .config {
+    color: $Brand-6;
+    margin-left: 4px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .more {
+    color: #4c6aff;
+    cursor: pointer;
+  }
+}
+.sender-email-good {
+  color: #0fd683;
+}
+.sender-email-bad {
+  color: #e5a344;
+}
+.sender-email-good-tag {
+  font-size: 12px;
+  color: #0fd683;
+  line-height: 16px;
+  padding: 2px 6px;
+  background-color: #d6f7f1;
+  border-radius: 2px;
+  margin-left: 4px;
+}
+.sender-email-bad-tag {
+  color: #cc913d;
+  background-color: #fff3e2;
+}
+.sender-email-worse-tag {
+  color: #cb493d;
+  background-color: #ffe5e2;
+}
+.sender-email-bad-tag,
+.sender-email-worse-tag {
+  font-size: 12px;
+  line-height: 16px;
+  padding: 2px 6px;
+  border-radius: 2px;
+  margin-left: 4px;
+}
+.sender-email-popover {
+  width: 348px;
+  font-size: 12px;
+}
+.sender-email-popover-content {
+  padding: 16px;
+  font-weight: 400;
+  .popover-title {
+    margin-bottom: 8px;
+    color: #545a6e;
+  }
+  .popover-desc {
+    margin-bottom: 8px;
+    color: #272e47;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  .popover-warn {
+    margin-top: 12px;
+    color: #e5a344;
+  }
+  .popover-icon {
+    width: 12px;
+    height: 12px;
+    color: #ffb54c;
+    margin-right: 5px;
+  }
+}

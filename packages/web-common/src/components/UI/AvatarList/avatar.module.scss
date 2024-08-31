@@ -1,0 +1,59 @@
+@import '../../../../../web/src/styles/varies.scss';
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.avatarWrapper {
+  cursor: pointer;
+  position: relative;
+  margin: 0 auto 16px;
+  width: 32px;
+  height: 32px;
+
+  &:first-child {
+    margin-top: 16px;
+  }
+  .avatarLoadingWrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  .avatarLoading {
+    @include sirius-background-image(24px, 24px, url('../../../../../web/src/images/icons/common/loading.svg'));
+    // @include sirius-spin-animation;
+    animation: spin 1s linear infinite;
+  }
+
+  .avatarLink {
+    position: absolute;
+    right: -4px;
+    bottom: 0;
+    width: 14px;
+    height: 14px;
+    z-index: 1;
+    background-image: url('../../../../../web/src/images/icons/setting/link_account.svg');
+    background-size: 100%;
+  }
+
+  .avatarRedDot {
+    border-radius: 10px;
+    background: $Error-6;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: -3px;
+    right: 0px;
+  }
+}

@@ -1,0 +1,152 @@
+@import '@web-common/styles/variables.scss';
+
+@import '../../../../../web/src/styles/varies';
+.mail-mode {
+  margin-bottom: 12px;
+  .radio-outer:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.radio-outer {
+  width: 632px;
+  height: 104px;
+  margin-bottom: 12px;
+  display: flex;
+  overflow: hidden;
+  background: $white;
+  border: 1px solid $Line-2;
+  border-radius: 4px;
+  .radio-left {
+    width: 336px;
+    padding: 12px 16px;
+    .title {
+      height: 32px;
+      line-height: 32px;
+      display: flex;
+      align-items: center;
+    }
+    .select-wrapper {
+      flex: 1;
+      display: inline-flex;
+      justify-content: flex-end;
+    }
+    .select-tip {
+      font-weight: 400;
+      font-size: 12px;
+      color: #7a8599;
+      margin-right: 8px;
+      white-space: nowrap;
+    }
+    .selectMode {
+      width: 130px;
+      font-size: 12px;
+      :global(.ant-select-selector) {
+        height: 28px;
+        border-radius: 4px;
+      }
+      :global(.ant-select-selection-item) {
+        line-height: 26px !important;
+        color: $Text-4;
+      }
+    }
+    .title2 {
+      @include c4-3-reg12();
+      // color: #7a8599;
+      color: $Text-3;
+      padding-left: 24px;
+      span {
+        white-space: nowrap;
+      }
+    }
+  }
+  .radio-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $Fill-1;
+    .radio-img1 {
+      width: 240px;
+      height: 72px;
+      background: url('@/images/mail/modeNormal.png') no-repeat; // 兜底
+      background: $mail-mode1 no-repeat;
+      background-size: 100%;
+    }
+    .radio-img2 {
+      width: 240px;
+      height: 72px;
+      background: url('@/images/mail/modeMerge.png') no-repeat; // 兜底
+      background: $mail-mode2 no-repeat;
+      background-size: 100%;
+    }
+  }
+}
+
+.selectDropdown {
+  :global {
+    .ant-select-item-option {
+      font-size: 14px;
+    }
+    .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+      color: $main-enhance-color;
+      background: #ffffff;
+      font-weight: normal;
+    }
+  }
+}
+
+.expand-icon {
+  background: url('@/images/icons/calender-icon-expand.png') center center no-repeat;
+  background-size: 8px;
+  height: 8px;
+  width: 8px;
+  display: inline-block;
+}
+
+.isQuick {
+  .radio-outer {
+    width: 424px;
+    height: 102px;
+    .radio-left {
+      width: 218px;
+      padding: 10px 12px;
+      .title {
+        height: 32px;
+        line-height: 32px;
+        display: flex;
+        align-items: center;
+      }
+      .select-wrapper {
+        height: 24px;
+        line-height: 24px;
+      }
+      .selectMode {
+        width: 102px;
+        font-size: 12px;
+        :global(.ant-select-selector) {
+          height: 24px;
+          padding: 0 6px;
+        }
+        :global(.ant-select-selection-item) {
+          line-height: 22px !important;
+          padding-right: 12px;
+          color: $Text-4;
+        }
+        :global(.ant-select-arrow) {
+          right: 6px;
+        }
+      }
+      .select-tip {
+        margin-right: 4px;
+      }
+    }
+    .radio-right {
+      .radio-img1,
+      .radio-img2 {
+        width: 182px;
+        height: 54px;
+      }
+    }
+  }
+}

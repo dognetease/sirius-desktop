@@ -1,0 +1,14 @@
+.customer-page-container {
+  position: relative;
+  height: 100%;
+  padding: 24px 24px 0;
+  // flex-direction: column;
+  // overflow-y: auto;
+  // min-width: 852px;
+  // min-height: 640px;
+  flex-direction: column;
+
+  :global(.create-customer-modal-wrap) {
+    // border: 1px solid red;
+  }
+}

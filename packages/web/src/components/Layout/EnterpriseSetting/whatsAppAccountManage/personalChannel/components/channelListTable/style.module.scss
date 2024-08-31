@@ -1,0 +1,70 @@
+.tableContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .channel-list-table {
+    flex: 1;
+
+    :global(.ant-table-thead > tr > th) {
+      color: $Text-3;
+    }
+
+    :global(.ant-table-tbody .ant-table-cell) {
+      color: $Text-5;
+    }
+
+    :global(.ant-table-row.even) {
+      background: #fff;
+
+      td {
+        background: inherit;
+      }
+    }
+
+    :global(.ant-table-row.odd) {
+      background: $Fill-1;
+
+      td {
+        background: inherit;
+      }
+    }
+  }
+
+  .pagination {
+    flex: 0 0 54px;
+    padding-top: 20px;
+    text-align: right;
+  }
+
+  .bind-whats-apps {
+    max-width: 256px;
+    word-break: break-word;
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .bindNum {
+    color: $Text-5;
+    font-style: normal;
+  }
+
+  .actionBtn {
+    color: $Brand-6;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.1s linear;
+
+    &:hover {
+      color: $Brand-4;
+    }
+  }
+
+  .divider {
+    border-color: $Line-3;
+  }
+}

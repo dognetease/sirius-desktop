@@ -1,0 +1,129 @@
+.mailDiscuss {
+  width: 400px;
+  height: 320px;
+  background: white;
+  // border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+  border: 0.5px solid rgba(#272e47, 0.2);
+  // box-shadow: 0px 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+  box-shadow: 0px 4px 8px rgba(#272e47, 0.1);
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.mailDiscuss,
+.mailDiscussNoWrap {
+  .header {
+    padding: 20px 16px 12px 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    // color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    color: rgba(#272e47, 0.9);
+    position: relative;
+    display: flex;
+    align-items: center;
+    .whatsDiscuss {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      text-align: right;
+      color: #386ee7;
+      position: absolute;
+      right: 16px;
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    flex: 1;
+    overflow-y: scroll;
+    .hasDiscuss {
+      padding: 0 8px;
+      .discussTyTitle {
+        margin-bottom: 0;
+        padding: 8px 12px 6px 12px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        // color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.6);
+        color: rgba(#272e47, 0.6);
+      }
+      .discussItem {
+        padding: 12px 14px 12px 12px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        cursor: pointer;
+        &:hover {
+          background: #f0f0f1;
+        }
+        .discussIcon {
+          margin-right: 8px;
+          width: 32px;
+          height: 32px;
+          border-radius: 999px;
+          border: none;
+          position: relative;
+          top: 0;
+          left: 0;
+        }
+        .discussTitle {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: #262a33;
+          flex: 1;
+        }
+        .right {
+          display: flex;
+          align-items: center;
+          svg {
+            position: relative;
+            top: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    .noDiscuss {
+      img {
+        position: relative !important;
+        top: 0;
+        left: 0;
+      }
+      .noDiscussYet {
+        margin-top: 4px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+        color: #51555c;
+      }
+    }
+  }
+
+  .footer {
+    padding: 8px 20px 20px 20px;
+    .startDiscuss {
+      width: 100%;
+      height: 40px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      color: #ffffff;
+      background: #386ee7;
+      // border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+      border: 1px solid rgba(#272e47, 0.2);
+      border-radius: 4px;
+      display: block;
+      box-sizing: border-box;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+}

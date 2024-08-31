@@ -1,0 +1,275 @@
+@import '../styles/common.scss';
+
+.siriusTabsUi {
+  &:global(.ant-tabs-small),
+  &:global(.lx-ant-tabs-small) {
+    :global {
+      .ant-tabs-nav,
+      .lx-ant-tabs-nav {
+        .ant-tabs-tab,
+        .lx-ant-tabs-tab {
+          padding: 2px 12px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  &:global(.ant-tabs-middle),
+  &:global(.lx-ant-tabs-middle) {
+    :global {
+      .ant-tabs-nav,
+      .lx-ant-tabs-nav {
+        .ant-tabs-tab,
+        .lx-ant-tabs-tab {
+          padding: 6px 12px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  &:global(.ant-tabs-default),
+  &:global(.lx-ant-tabs-default) {
+    :global {
+      .ant-tabs-nav,
+      .lx-ant-tabs-nav {
+        .ant-tabs-tab,
+        .lx-ant-tabs-tab {
+          height: 40px;
+          padding: 9px 14px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &:global(.ant-tabs-max),
+  &:global(.lx-ant-tabs-max) {
+    :global {
+      .ant-tabs-nav,
+      .lx-ant-tabs-nav {
+        .ant-tabs-tab,
+        .lx-ant-tabs-tab {
+          padding: 13px 16px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &:global(.ant-tabs-top),
+  &:global(.lx-ant-tabs-top) {
+    :global {
+      .ant-tabs-nav::before,
+      .lx-ant-tabs-nav::before {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &:global(.ant-tabs-left),
+  &:global(.lx-ant-tabs-left) {
+    :global {
+      .ant-tabs-nav,
+      .lx-ant-tabs-nav {
+        .ant-tabs-tab,
+        .lx-ant-tabs-tab {
+          width: 200px;
+        }
+
+        .ant-tabs-tab-active,
+        .lx-ant-tabs-tab-active {
+          background-color: $Brand-1;
+        }
+      }
+    }
+  }
+
+  &:global(.ant-tabs-card),
+  &:global(.lx-ant-tabs-card) {
+    :global {
+      .ant-tabs-nav,
+      .lx-ant-tabs-nav {
+        .ant-tabs-tab-remove:hover,
+        .lx-ant-tabs-tab-remove:hover {
+          color: $Brand-6;
+        }
+
+        .ant-tabs-tab,
+        .lx-ant-tabs-tab {
+          border: none;
+          background-color: #fff;
+        }
+
+        .ant-tabs-ink-bar,
+        .lx-ant-tabs-ink-bar {
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &:global(.ant-tabs-top),
+  &:global(.lx-ant-tabs-top) {
+    :global {
+      .ant-tabs-ink-bar,
+      .lx-ant-tabs-ink-bar {
+        background-color: transparent !important;
+
+        &::after {
+          content: '';
+          width: 24px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 50%;
+          background-color: #386ee7;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  :global {
+    .ant-tabs-nav-list,
+    .lx-ant-tabs-nav-list {
+      width: fit-content !important;
+      .ant-tabs-ink-bar,
+      .lx-ant-tabs-ink-bar {
+        background-color: $Brand-6;
+        // width: 24px;
+        // height: 2px;
+        // transform: translateX(-50%);
+      }
+    }
+
+    .ant-tabs-nav .ant-tabs-nav-wrap,
+    .lx-ant-tabs-nav .lx-ant-tabs-nav-wrap {
+      margin-right: 0 !important;
+    }
+
+    .ant-tabs-tab,
+    .lx-ant-tabs-tab {
+      // height: 40px;
+      padding: 9px 14px;
+      font-size: 14px;
+
+      &:hover {
+        color: $Brand-6;
+      }
+    }
+
+    .ant-tabs-tab-active,
+    .lx-ant-tabs-tab-active {
+      & [role='tab'] {
+        color: $Brand-6;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+:global {
+  .sirius-tabs-capsule {
+    :global(.ant-tabs-nav),
+    :global(.lx-ant-tabs-nav) {
+      :global(.ant-tabs-ink-bar),
+      :global(.lx-ant-tabs-ink-bar) {
+        display: none;
+      }
+
+      :global(.ant-tabs-tab),
+      :global(.lx-ant-tabs-tab) {
+        padding: 9px 20px;
+        @include p1-3-reg14();
+        border-radius: 20px;
+      }
+
+      :global(.ant-tabs-tab-active),
+      :global(.lx-ant-tabs-tab-active) {
+        background-color: $Brand-2;
+        color: $Brand-6;
+        border: 1px solid $Brand-6;
+      }
+
+      :global(.ant-tabs-tab) + :global(.ant-tabs-tab),
+      :global(.lx-ant-tabs-tab) + :global(.lx-ant-tabs-tab) {
+        margin: 0 0 0 12px;
+      }
+
+      // :global(.ant-tabs-tab-active) {
+      //   background-color: $Brand-6;
+      // }
+
+      :global(.ant-tabs-tab-active) :global(.ant-tabs-tab-btn),
+      :global(.lx-ant-tabs-tab-active) :global(.lx-ant-tabs-tab-btn) {
+        // color: #ffffff !important;
+        font-weight: 400;
+        text-shadow: none;
+      }
+    }
+    &.ant-tabs-small,
+    &.lx-ant-tabs-small {
+      .ant-tabs-nav,
+      .lx-ant-tabs-nav {
+        .ant-tabs-tab,
+        .lx-ant-tabs-tab {
+          padding: 2px 12px;
+        }
+      }
+    }
+
+    &.ant-tabs-middle,
+    &.lx-ant-tabs-middle {
+      .ant-tabs-nav,
+      .lx-ant-tabs-nav {
+        .ant-tabs-tab,
+        .lx-ant-tabs-tab {
+          padding: 5px 20px;
+        }
+      }
+    }
+
+    &.ant-tabs-default,
+    &.lx-ant-tabs-default {
+      .ant-tabs-nav,
+      .lx-ant-tabs-nav {
+        .ant-tabs-tab,
+        .lx-ant-tabs-tab {
+          padding: 9px 20px;
+        }
+      }
+    }
+
+    &.ant-tabs-max,
+    &.lx-ant-tabs-max {
+      .ant-tabs-nav,
+      .lx-ant-tabs-nav {
+        .ant-tabs-tab,
+        .lx-ant-tabs-tab {
+          padding: 9px 20px;
+        }
+      }
+    }
+  }
+}
+
+.white {
+  :global {
+    .ant-tabs-tab,
+    .lx-ant-tabs-tab {
+      background-color: $Fill-2;
+    }
+  }
+}
+
+.gray {
+  :global {
+    .ant-tabs-tab,
+    .lx-ant-tabs-tab {
+      background-color: #fff;
+    }
+  }
+}

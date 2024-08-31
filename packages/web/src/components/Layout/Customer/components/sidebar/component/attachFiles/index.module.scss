@@ -1,0 +1,52 @@
+.attachments {
+  display: flex;
+  gap: 4px;
+  font-size: 12px;
+}
+
+.attachment-item {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+  height: 24px;
+  padding: 0 4px;
+  background: rgba($Brand-4-r, $Brand-4-g, $Brand-4-b, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+
+  .attachment-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+  }
+}
+.more-attachment {
+  flex: none;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.06);
+  border-radius: 4px;
+  color: #386ee7;
+}
+.dropdown-overlay {
+  padding: 8px 0;
+  background: #fff;
+  border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+  box-shadow: 0px 42px 96px rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  font-size: 12px;
+  .attachment-item {
+    height: auto;
+    padding: 6px 12px;
+    background: none;
+    border-radius: 0;
+    &:hover {
+      background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.06);
+    }
+  }
+}

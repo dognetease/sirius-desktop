@@ -1,0 +1,120 @@
+@import '../../../web/src/styles/varies';
+.avatar {
+  width: 100%;
+  height: 100%;
+  background: #f00;
+}
+
+.default-avatar {
+  position: relative;
+  color: #fff;
+  font-size: 13px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  // overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  cursor: pointer;
+  background-size: 100% 100%;
+  // overflow: hidden;
+  @include sirius-no-drag();
+  &.sys {
+    background-image: url(../../../web/src/images/icons/im/lx_sys_avatar.svg);
+    background-size: 100% 100%;
+  }
+  &:global(.avatar-bg-0) {
+    background-color: $Avatar-1;
+  }
+  &:global(.avatar-bg-1) {
+    background-color: #aa90f4;
+  }
+  &:global(.avatar-bg-2) {
+    background-color: $Avatar-3;
+  }
+  &:global(.avatar-bg-3) {
+    background-color: #6ba9ff;
+  }
+  .hoverBg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 999px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  &:hover {
+    .hoverBg {
+      display: flex;
+    }
+  }
+}
+
+.team-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.team-avatar-color {
+  width: 100%;
+  height: 100%;
+  background-size: 18px 14px;
+  background-repeat: no-repeat;
+  background-image: url('../../../web/src/images/icons/im/v2/team-avatar.svg');
+  background-position: center;
+  border-radius: 50%;
+  &.size1 {
+    width: 40px;
+    background-size: 20px 16px;
+  }
+  &.size2 {
+    width: 36px;
+    width: 18px 14px;
+  }
+  &.size3 {
+    width: 32px;
+    width: 16px 13px;
+  }
+  &.size4 {
+    width: 28px;
+    width: 14px 11px;
+  }
+  &.size {
+    width: 20px;
+    width: 10px 8px;
+  }
+}
+
+.team-avatar-color0 {
+  background-color: $Avatar-1;
+}
+
+.team-avatar-color1 {
+  background-color: $Avatar-2;
+}
+
+.team-avatar-color2 {
+  background-color: $Avatar-3;
+}
+
+.team-avatar-color3 {
+  background-color: $Avatar-4;
+}
+
+.team-avatar-color4 {
+  background-color: $Avatar-5;
+}
+
+.team-avatar-color5 {
+  background-color: $Avatar-6;
+}
+
+.team-discuss-group {
+  background-image: url('../../../web/src/images/icons/im/discuss_group.svg');
+}

@@ -1,0 +1,169 @@
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>扫码登陆</title>
+</head>
+<style>
+    [hidden] {
+        display: none !important
+    }
+
+    html {
+        box-sizing: border-box
+    }
+
+    *,
+    :after,
+    :before {
+        box-sizing: inherit
+    }
+
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    }
+
+    html {
+        height: 100%;
+        background-color: rgb(133, 121, 121)
+    }
+
+    html body {
+        height: 100%;
+        color: #fff;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.5;
+        font-family: Helvetica Neue, Helvetica, Roboto, Segoe UI, Arial, sans-serif
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        background: #FFFFFF;;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .warning {
+        width: 48px;
+        height: 48px;
+        background-image: url(https://cowork-storage-public-cdn.lx.netease.com/common/2022/09/14/d8494b144b4045c29f17d43c4a4a27f2.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-bottom: 25px;
+    }
+    .content {
+        color: #232D47;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 40px;
+    }
+    .lingxi {
+        color: #4C6AFF;
+        text-decoration: none;
+    }
+    .button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 14px 30px;
+        gap: 10px;
+        width: 311px;
+        height: 48px;
+        /* 常用/Brand-6 常规 */
+        background: #4C6AFF;
+        border-radius: 8px;
+
+        color: #FFFFFF;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 10%;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="warning"></div>
+        <div class="content">
+            <span>请使用 <a class="lingxi" href="https://office.163.com/">网易灵犀办公</a> 扫描二维码</span>
+        </div>
+        <div class="button" onclick="getName()">
+            打开网易灵犀办公
+        </div>
+    </div>
+</body>
+<script>
+    let timer;
+    let hidden;
+    let visibilityChange;
+    function getSupportedProperty() {
+        if (typeof document === 'undefined') return;
+        if (typeof document.hidden !== 'undefined') {
+            hidden = 'hidden';
+            visibilityChange = 'visibilitychange';
+        } else if (typeof document.msHidden !== 'undefined') {
+            hidden = 'msHidden';
+            visibilityChange = 'msvisibilitychange';
+        } else if (typeof document.webkitHidden !== 'undefined') {
+            hidden = 'webkitHidden';
+            visibilityChange = 'webkitvisibilitychange';
+        }
+    };
+
+    getSupportedProperty();
+
+    if (typeof visibilityChange !== 'undefined') {
+        document.addEventListener(visibilityChange, () => {
+            if (hidden) {
+                clearTimeout(timer);
+            };
+        });
+    } else {
+        window.addEventListener('pagehide', () => {
+            clearTimeout(timer);
+        });
+    };
+
+    function getName() {
+        const ua = navigator.userAgent || '';
+        const isAndroid = /android/i.test(ua);
+        const isWechat = /micromessenger/i.test(ua);
+        const isIos = /iphone|ipod/i.test(ua);
+
+        const isIpad =
+            navigator.userAgent.match(/(iPad)/) ||
+            (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        const isOriginalChrome =
+            /chrome\/[\d.]/i.test(ua) && isAndroid && ua.indexOf('Version') < 0;
+        const iosUri = "https://lingxi.office.163.com/static_html/download_h5.html";
+        const androidUri = "lingxi://lx.office.163.com/main";
+        const downloadUri = "https://lingxi.office.163.com/static_html/download_h5.html";
+        if (isIos || isIpad) {
+            timer = setTimeout(() => {
+                evokeByLocation(downloadUri);
+            }, 3000);
+            evokeByLocation(iosUri);
+        } else if (isOriginalChrome) {
+            timer = setTimeout(() => {
+                evokeByLocation(downloadUri)
+            }, 3000);
+            evokeByLocation(androidUri);
+        } else if (isWechat) {
+            evokeByLocation(downloadUri);
+        }
+    };
+
+    function evokeByLocation(uri) {
+        window.location.href = uri;
+    };
+</script>
+
+</html>

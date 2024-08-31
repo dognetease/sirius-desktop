@@ -1,0 +1,95 @@
+@import '@/styles/varies';
+.item {
+  position: relative;
+  height: 72px;
+  overflow: hidden;
+  padding: 8px 16px;
+
+  &.normal {
+    height: 50px;
+  }
+
+  .hitText {
+    color: #386ee7;
+  }
+
+  :global {
+    .ant-list-item-meta {
+      &.p-right {
+        padding-right: 24px;
+      }
+    }
+    .ant-list-item-meta-avatar {
+      margin-right: 12px;
+    }
+
+    .ant-list-item-meta-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: keep-all;
+      white-space: nowrap;
+      width: auto;
+      margin-bottom: 2px;
+      line-height: 16px;
+      color: rgba(38, 42, 51, 0.9);
+    }
+
+    .ant-list-item-meta-description {
+      color: rgba(38, 42, 51, 0.5);
+    }
+  }
+
+  &-select {
+    background-color: $hover-menu-item-color;
+  }
+  &-checked {
+    background-color: $selected-menu-item-color;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    line-height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    white-space: nowrap;
+    width: auto;
+    margin-bottom: 2px;
+  }
+
+  .itemDelete {
+    background: url('@/images/icons/calendar_icon_close.png') center center no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+  }
+
+  .itemAvatarContainer {
+    display: flex;
+    align-items: center;
+
+    .itemAvatarCheckbox {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+
+      :global(.ant-checkbox) {
+        top: 0;
+      }
+    }
+
+    .itemAvatarWrap {
+      height: 32px;
+      width: 32px;
+    }
+  }
+
+  &:hover:not(.item-select):not(.item-select-disable) {
+    background: #f0f0f1;
+  }
+}

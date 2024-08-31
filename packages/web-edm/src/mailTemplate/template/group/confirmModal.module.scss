@@ -1,0 +1,32 @@
+.confirm-title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 16px;
+}
+.confirm-btn {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 32px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  span:first-child {
+    background: #ffffff;
+    border: 1px solid rgba(38, 42, 51, 0.2);
+    color: #262a33;
+    margin-right: 12px;
+  }
+  span:last-child {
+    background: #386ee7;
+    color: #ffffff;
+  }
+}

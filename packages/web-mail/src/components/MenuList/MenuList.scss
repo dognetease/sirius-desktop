@@ -1,0 +1,30 @@
+.list-menu-wrap {
+  .ant-menu-submenu {
+    padding: 0 24px;
+    clear: both;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    .ant-menu-submenu-expand-icon,
+    .ant-menu-submenu-arrow {
+      // color: rgba($color: $Text-2, $alpha: 1);
+      color: $Text-2;
+    }
+    .ant-menu-submenu-arrow::before,
+    .ant-menu-submenu-arrow::after {
+      width: 8px;
+      height: 1px;
+    }
+    .ant-menu-submenu-arrow::before {
+      transform: rotate(45deg) translateY(-3.5px);
+    }
+    .ant-menu-submenu-arrow::after {
+      transform: rotate(-45deg) translateY(3.5px);
+    }
+  }
+}

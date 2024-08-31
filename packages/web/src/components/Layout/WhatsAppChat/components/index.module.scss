@@ -1,0 +1,18 @@
+.chatDrawer {
+  height: 100%;
+  overflow: hidden auto;
+
+  .drawerBody {
+    height: 100%;
+  }
+
+  :global(.ant-drawer-body) {
+    padding: 0;
+  }
+
+  &.desktop {
+    :global(.ant-drawer-header) {
+      margin-top: 20px;
+    }
+  }
+}

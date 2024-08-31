@@ -1,0 +1,52 @@
+@import './../../../../web/src/styles/varies.scss';
+
+.modal {
+  :global(.ant-modal-header) {
+  }
+  :global(.ant-modal-content) {
+    background-color: $white;
+  }
+  :global(.ant-modal-body) {
+    //     padding: 24px;
+    //    font-size: 16px;
+    //    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    min-height: 393px;
+    .header {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      .title {
+        word-break: break-all;
+        font-weight: 500;
+        font-size: 16px;
+        margin-top: 12px;
+        margin-bottom: 32px;
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      }
+    }
+    .item-row {
+      margin-bottom: 16px;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      display: flex;
+      .desc {
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+        margin-right: 12px;
+      }
+      .content {
+        word-break: break-all;
+        flex: 1;
+      }
+    }
+  }
+  .modal-close {
+    @include icon();
+    background-image: url(@/images/icons/calendarDetail/close.png);
+  }
+}
+
+.spin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}

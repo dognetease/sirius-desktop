@@ -1,0 +1,6 @@
+node_modules/
+dist/
+output/
+releases/
+.idea/
+!extraResources/chrome-wa-extension/*

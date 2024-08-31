@@ -1,0 +1,22 @@
+.list-item {
+  &-header {
+    padding: 16px 16px 8px;
+    color: var(--text-3, #747a8c);
+    /* 灵犀桌面2.0/P1.4-Med14 */
+    font-family: PingFang SC;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+  }
+  &-content {
+    padding: 0 16px 16px;
+    margin-right: -12px;
+    margin-bottom: -12px;
+    .card-wrap {
+      display: inline-block;
+      margin-right: 12px;
+      margin-bottom: 12px;
+    }
+  }
+}

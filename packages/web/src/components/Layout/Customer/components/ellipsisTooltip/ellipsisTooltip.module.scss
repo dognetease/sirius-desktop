@@ -1,0 +1,24 @@
+.ellipsis-tooltip {
+  position: relative;
+  display: inline-flex;
+  max-width: 100%;
+  overflow: hidden;
+
+  &-content {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &-mirror {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+.base-color {
+  color: #fff;
+}

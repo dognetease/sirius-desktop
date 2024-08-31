@@ -1,0 +1,354 @@
+@import '@web-common/styles/variables.scss';
+
+.container {
+  min-width: 862px;
+  min-height: 100%;
+  background-color: $Fill-2;
+
+  &-inner {
+    background: url('https://cowork-storage-public-cdn.lx.netease.com/common/2023/11/30/1816183b774047eca0a41d002f7ae1b6.png') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .countup {
+    margin-top: 16px;
+  }
+
+  &-list {
+    padding: 0 16px 16px;
+  }
+
+  &-echar {
+    max-width: 1014px;
+    padding: 0 90px;
+    margin: 0 auto;
+  }
+
+  .header {
+    max-width: 1014px;
+    padding: 50px 90px 0;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 36px;
+      color: $Brand-6;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+  }
+}
+
+.indexContent {
+  padding: 5px 16px 0;
+  border: 1px solid $Line-1;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.introContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: $Text-5;
+  justify-content: center;
+}
+
+.brCountry {
+  margin: 12px 0 32px;
+
+  .item {
+    overflow: hidden;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 14px;
+    color: $Text-5;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+
+    &:not(.item-select):hover {
+      background: $Brand-1;
+    }
+
+    &-select {
+      background: $Avatar-6;
+      color: #ffffff;
+    }
+
+    .name {
+      word-break: keep-all;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding-right: 12px;
+    }
+
+    i {
+      display: block;
+      width: 18px;
+      height: 12px;
+      margin-left: 12px;
+      margin-right: 8px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      flex-shrink: 0;
+    }
+
+    .closeIcon {
+      position: absolute;
+      height: 16px;
+      right: 12px;
+      text-align: center;
+      line-height: 16px;
+    }
+  }
+}
+
+.bread {
+  background-color: $Fill-2;
+  padding-top: 16px;
+  padding-bottom: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+
+  :global {
+    .ant-breadcrumb-separator {
+      margin: 0 4px;
+      vertical-align: middle;
+    }
+
+    .ant-breadcrumb {
+      color: #1d2129;
+    }
+
+    .ant-breadcrumb a:hover {
+      color: $Avatar-6;
+    }
+  }
+}
+
+.filter-wrapper {
+  margin-top: 12px;
+  background: #ffffff;
+  border: 1px solid $Line-1;
+  border-radius: 4px;
+  padding: 16px;
+
+  .filter-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 32px;
+
+    .filter-group {
+      display: flex;
+      align-items: center;
+
+      & > .filterCheckBox {
+        margin-right: 20px;
+        line-height: 22px;
+
+        :global {
+          .ant-checkbox + span {
+            color: $Text-5;
+            padding-left: 6px;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    .reset-wrapper {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      color: #4c6aff;
+      cursor: pointer;
+    }
+
+    .reset-icon {
+      width: 16px;
+      height: 16px;
+      display: flex;
+      margin-left: 4px;
+    }
+
+    .show-more {
+      margin-left: 28px;
+      cursor: pointer;
+      user-select: none;
+      line-height: 22px;
+      color: $Brand-6;
+
+      .icon {
+        width: 16px;
+        height: 16px;
+        display: flex;
+        margin-left: 4px;
+      }
+
+      .show-text {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .label {
+      color: $Text-4;
+      width: 76px;
+      margin-right: 24px;
+    }
+
+    .checkBox {
+      padding-right: 50px;
+      display: flex;
+      align-items: center;
+
+      .checkboxText {
+        color: $Text-4;
+        font-size: 14px;
+        line-height: 22px;
+        padding-right: 18px;
+      }
+
+      :global {
+        .ant-switch {
+          min-width: 35px;
+          height: 20px;
+          line-height: 20px;
+
+          .ant-switch-handle {
+            width: 16px;
+            height: 16px;
+
+            &::before {
+              border-radius: 8px;
+              box-shadow: none;
+            }
+          }
+        }
+
+        .ant-switch-checked {
+          .ant-switch-handle {
+            left: calc(100% - 16px - 2px);
+          }
+        }
+      }
+    }
+  }
+}
+
+.search-input-wrapper {
+  position: relative;
+
+  &-tank {
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #f0f1f5;
+    border-radius: 4px;
+  }
+}
+
+.result-container {
+  background: #ffffff;
+  border: 1px solid $Line-1;
+  margin-top: 12px;
+  border-radius: 4px;
+  padding: 0 16px 16px;
+
+  .summary {
+    margin: 16px 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #7a8599;
+  }
+
+  .toolbar {
+    margin-bottom: 16px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+
+    .dropBtn {
+      background: $Fill-3;
+      border: 1px solid $Fill-4;
+    }
+
+    .marketGroup {
+      width: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .block-action {
+        // float: right;
+        border-radius: 2px;
+        cursor: pointer;
+        // font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        color: #ffffff;
+        background-color: $Avatar-6;
+        padding: 4px 12.5px;
+        border: none;
+      }
+
+      // .block-button {
+      //   background-color: #fff;
+      //   border: none;
+      //   margin-right: 10px;
+      // }
+    }
+  }
+}
+
+.pagination {
+  margin: 16px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.brResutl {
+  padding: 16px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(240, 241, 245);
+  border-radius: 4px;
+}
+
+.tabContnet {
+  :global {
+    .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn,
+    .ant-tabs-tab:hover {
+      color: #4c6aff;
+    }
+  }
+}
+.empty {
+  :global {
+    .ant-empty-image {
+      height: 130px;
+    }
+    .ant-empty-description {
+      @include p1-3-reg14;
+      color: $Text-3;
+    }
+    .ant-empty-footer {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

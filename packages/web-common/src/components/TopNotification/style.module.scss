@@ -1,0 +1,45 @@
+.alert {
+  :global {
+    .ant-alert-message {
+      color: #545a6e;
+      .link {
+        display: inline-block;
+        margin: 0 4px;
+      }
+      .icon-link {
+        vertical-align: sub;
+      }
+    }
+    .sirius-icon {
+      font-size: 16px;
+      display: flex !important;
+      align-items: center;
+    }
+  }
+  &.warning {
+    background-color: #fff8ed;
+    [class*='number'] {
+      color: #ffb54c;
+      display: inline-block;
+      margin: 0 4px;
+    }
+  }
+  &.error {
+    background-color: #ffefed;
+    [class*='number'] {
+      color: #fe5b4c;
+      display: inline-block;
+      margin: 0 4px;
+      font-family: 'LX-numbers';
+    }
+  }
+  a {
+    color: #3081f2;
+    cursor: pointer;
+    &:hover,
+    &:focus,
+    &:active {
+      text-decoration-line: underline;
+    }
+  }
+}

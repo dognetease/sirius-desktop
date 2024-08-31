@@ -1,0 +1,16 @@
+.manual-input {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .textarea {
+    flex-grow: 1;
+    resize: none;
+  }
+
+  .footer {
+    padding: 16px 20px;
+    flex-shrink: 0;
+    text-align: right;
+  }
+}

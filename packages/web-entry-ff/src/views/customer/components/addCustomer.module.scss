@@ -1,0 +1,38 @@
+.modal {
+  :global {
+    .ant-modal-header {
+      padding: 20px 20px;
+      border-bottom: none;
+    }
+
+    .ant-modal-body {
+      padding: 4px 20px 0;
+    }
+
+    .ant-modal-footer {
+      border-top: none;
+      padding: 8px 20px 18px;
+
+      .ant-btn-primary {
+        background: #4c6aff;
+
+        &:hover {
+          background: #7088ff;
+        }
+      }
+    }
+  }
+}
+
+.form {
+  :global {
+    .ant-form-item-label {
+      label {
+        color: #272e47;
+        &::before {
+          display: none !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,189 @@
+@import '@web-common/styles/variables.scss';
+@import '@/styles/varies.scss';
+.modal {
+  position: relative;
+  :global {
+    .ant-modal-footer {
+      padding: 0 24px 24px 24px;
+      border-top: none;
+    }
+    .ant-form-item-label > label:after {
+      margin-right: 12px;
+    }
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+
+    .ant-modal-header {
+      border-bottom: none;
+    }
+
+    .ant-modal-body {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      max-height: 520px;
+      padding-right: 4px;
+    }
+  }
+}
+.modalBox {
+  overflow: scroll;
+  max-height: 500px;
+  @include sirius-scroll();
+  padding-bottom: 68px;
+  padding-right: 12px;
+}
+
+.modalTop {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  color: $Text-5;
+}
+.modalPointer {
+  color: #4c6aff;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.modalEllipsis {
+  margin-top: 8px;
+  color: #4c6aff;
+  cursor: pointer;
+  // white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.modalTextColor {
+  color: $Text-5;
+}
+.form {
+  .roleBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .roleRight {
+      width: 210px;
+      padding: 12px;
+      height: 94px;
+      background: var(--fill-1, #f8f9fa);
+
+      .tipBox {
+        display: flex;
+        .modalTip {
+          display: flex;
+          align-items: center;
+          margin: 0 20px 0 8px;
+        }
+      }
+    }
+    .lineBox {
+      margin: 0 4px;
+      color: #e1e3e8;
+    }
+    .roleLeft {
+      width: 210px;
+      padding: 12px;
+      height: 94px;
+      background: var(--fill-1, #f8f9fa);
+    }
+  }
+  .oneLineItem {
+    margin-top: 10px;
+    :global {
+      .ant-form-item-label {
+        width: 120px;
+        text-align: left;
+        color: $Text-5;
+        margin-right: 10px;
+      }
+    }
+  }
+  .oneLineItem20 {
+    margin-top: 20px;
+    :global {
+      .ant-form-item-label {
+        // width: 120px;
+        text-align: left;
+        color: $Text-5;
+        margin-right: 10px;
+      }
+    }
+  }
+  .oneLineItem20Label {
+    :global {
+      .ant-form-item-label {
+        width: 74px;
+      }
+    }
+  }
+  .modalOpacity {
+    opacity: 0.6;
+    :global {
+      .ant-divider-horizontal {
+        margin: 20px 0;
+      }
+    }
+  }
+  .checkBoxStyle {
+    display: flex;
+    align-items: center;
+    margin: 12px 0 20px;
+    .checkBoxTip {
+      svg {
+        margin-top: 6px;
+      }
+    }
+  }
+
+  .grayText {
+    color: #747a8c;
+  }
+}
+.exampleModal {
+  :global {
+    .ant-modal-body {
+      padding: 0 60px;
+    }
+  }
+}
+.exampleImg {
+  width: 420px;
+  height: 420px;
+  img {
+    max-width: 420px;
+    max-height: 420px;
+  }
+  // background: url(./exampleImg.png) center center no-repeat;
+  // background-size: contain;
+}
+.modalFooter {
+  z-index: 11;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  .modalFooterRight {
+    display: flex;
+  }
+}
+.selectWidth {
+  width: 260px !important;
+}
+.optionItem {
+  width: auto;
+  .optionNameStyle {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

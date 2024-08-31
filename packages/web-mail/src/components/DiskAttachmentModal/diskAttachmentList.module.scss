@@ -1,0 +1,194 @@
+@import '../../../../web/src/styles/varies';
+@import '../../../../web/src/styles/varies';
+
+$border-radius: 8px;
+
+.disk-table {
+  min-height: 300px;
+
+  :global(.ant-table) {
+    height: 100%;
+  }
+
+  :global(.ant-table-thead > tr > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before) {
+    height: 0px;
+  }
+
+  :global(.ant-checkbox-inner) {
+    // border-radius: 50%;
+    border-color: #a8aaad;
+  }
+
+  :global(.ant-table-container) {
+    // background: #f4f4f5;
+    background-color: $white-bg;
+    height: 100%;
+  }
+  :global(.ant-table-header) {
+    border-top: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.01);
+    border-bottom: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.01);
+    height: 38px;
+    display: flex;
+    align-items: center;
+    & {
+      tr > th {
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+        // background: #ffffff;
+        background-color: $white !important;
+        border-bottom: none;
+        font-weight: normal;
+      }
+    }
+  }
+  :global(.ant-table-body) {
+    // @include sirius-scroll;
+    color: #7d8085;
+    // background: #ffffff;
+    background-color: $white;
+    border-radius: $border-radius;
+    overflow-y: auto !important;
+
+    tr > td {
+      border: none;
+      &:first-child {
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      }
+      padding: 14px 16px;
+    }
+    tr:hover {
+      td {
+        // background: #f0f0f1;
+        background-color: $white-hover-bg;
+      }
+    }
+  }
+
+  .name-column {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: PingFang SC;
+    .name-icon {
+      display: flex;
+    }
+
+    .rename-wrapper {
+      position: relative;
+      .rename-input {
+        height: 32px;
+        border-radius: 4px;
+        min-width: 211px;
+        font-size: 14px;
+        padding-right: 44px;
+
+        &:focus {
+          border-color: $main-enhance-color;
+          box-shadow: none;
+        }
+      }
+      .cancel-btn {
+        display: inline-block;
+        position: absolute;
+        right: 12px;
+        color: $main-enhance-color;
+        height: 100%;
+        font-size: 14px;
+        line-height: 32px;
+      }
+    }
+
+    .name-text {
+      overflow: hidden;
+      word-wrap: break-word;
+      white-space: normal;
+      text-overflow: ellipsis;
+      // display: flex;
+      align-items: center;
+      margin-left: 8px;
+      ::selection {
+        background: $Link-2;
+        color: unset;
+      }
+    }
+    .front-name {
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-break: break-all;
+    }
+    .share-external {
+      margin-left: 4px;
+      width: 32px;
+      height: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: $Brand-2;
+      border-radius: 2px;
+      font-size: 12px;
+      color: $main-enhance-color;
+    }
+  }
+
+  .empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 46px 0;
+    color: #000;
+    > span {
+      margin-top: 8px;
+    }
+  }
+
+  .bread {
+    overflow: hidden;
+    flex: 1;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    margin-left: 21px;
+
+    div,
+    span {
+      font-size: 14px;
+    }
+  }
+}
+
+.loadFail {
+  margin: 73px 0;
+  text-align: center;
+  .failImg {
+    width: 120px;
+    height: 120px;
+  }
+  .failIntro {
+    margin: 16px 0 0 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: #7d8085;
+  }
+  .reloadButton {
+    width: 100px;
+    height: 32px;
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #51555c;
+    background: white;
+    border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+    border-radius: 4px;
+  }
+}
+
+.disColumn {
+  color: #a8aaad !important;
+}

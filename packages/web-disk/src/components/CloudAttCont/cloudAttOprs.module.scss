@@ -1,0 +1,53 @@
+.oprsCont {
+  padding: 8px 0;
+  background: $white;
+  border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+  .popItem {
+    padding: 8px 16px;
+    font-size: 14px;
+    line-height: 1;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    white-space: nowrap;
+    text-align: left;
+    cursor: pointer;
+    &.renewalItem {
+      padding: 0;
+      .renewalItemCont {
+        padding: 8px 16px;
+      }
+    }
+    &:hover {
+      // background: #f0f0f1;
+      background-color: $white-hover-bg;
+    }
+    &:global(.ant-dropdown-menu-item-disabled) {
+      color: $Text-1;
+      background: $Fill-2_5;
+    }
+  }
+}
+.renewSupport {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: white;
+  .renewIknow {
+    margin-left: 24px;
+    color: $Brand-5;
+    cursor: pointer;
+  }
+}
+.renewSupportOverlay {
+  color: red;
+  :global(.ant-tooltip-arrow) {
+    display: block !important;
+    right: 6px !important;
+  }
+}
+.delModelCont {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #7d8085;
+}

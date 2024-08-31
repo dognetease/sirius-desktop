@@ -1,0 +1,285 @@
+@import '@web-common/styles/variables.scss';
+
+.country-filter {
+  display: inline-block;
+  font-family: 'Text-C2-Reg14';
+  font-size: 14px;
+  color: rgba(35, 45, 71, 1);
+
+  .body {
+    max-height: 114px;
+    overflow: auto;
+
+    &-hideLabel {
+      margin-left: 0;
+    }
+  }
+
+  .label {
+    display: inline-block;
+    width: 100px;
+    flex: 0 0 76px;
+    margin-right: 24px;
+    color: $Text-4;
+    line-height: 22px;
+  }
+
+  .continent-list {
+    .each {
+      margin-right: 20px;
+      height: 22px;
+      line-height: 22px;
+      user-select: none;
+      cursor: pointer;
+      color: rgba(35, 45, 71, 1);
+
+      &:hover {
+        color: rgba(76, 106, 255, 1);
+      }
+    }
+
+    .active {
+      color: rgba(76, 106, 255, 1);
+    }
+
+    :global {
+      .ant-checkbox-wrapper {
+        margin-right: 8px;
+      }
+
+      .ant-checkbox-wrapper + .ant-checkbox-wrapper {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .antd-input {
+    width: 160px;
+    margin-left: auto;
+    margin-right: 0px;
+    border: 1px solid #e1e6ed;
+    border-radius: 2px;
+
+    &:hover {
+      border-color: #386ee7;
+    }
+
+    :global {
+      .ant-input-group-addon {
+        padding-right: 0;
+      }
+    }
+  }
+
+  :global {
+    .ant-input-affix-wrapper {
+      border: none !important;
+    }
+
+    .ant-input-group-addon {
+      border: none;
+    }
+
+    .ant-input {
+      border: none;
+    }
+  }
+
+  .single-select {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    white-space: nowrap;
+    font-family: Text-C2-Reg14;
+    color: rgba(35, 45, 71, 1);
+
+    .body {
+      &-hideLabel {
+        margin-left: 0;
+      }
+
+      font-family: Text-C2-Reg14;
+      color: rgba(35, 45, 71, 1);
+
+      div {
+        cursor: pointer;
+
+        &:hover {
+          color: rgba(76, 106, 255, 1);
+        }
+      }
+    }
+
+    .single-row {
+      flex: auto;
+      display: flex;
+      align-items: center;
+
+      .body {
+        height: 22px;
+        overflow: hidden;
+        flex: auto;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 10px;
+
+        &-hideLabel {
+          margin-left: 0;
+        }
+
+        div {
+          height: 22px;
+          line-height: 22px;
+        }
+      }
+    }
+
+    .multi-row {
+      flex: auto;
+
+      .header {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 16px;
+      }
+
+      .body {
+        row-gap: 12px;
+        margin-left: 100px;
+        flex: auto;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 10px;
+
+        &-hideLabel {
+          margin-left: 0;
+        }
+
+        div {
+          height: 22px;
+        }
+      }
+    }
+  }
+
+  .multi-select {
+    .header {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .body {
+      font-family: Text-C2-Reg14;
+      color: rgba(35, 45, 71, 1);
+      display: flex;
+      column-gap: 10px;
+      row-gap: 12px;
+      flex-wrap: wrap;
+      margin-left: 100px;
+
+      &-hideLabel {
+        margin-left: 0;
+      }
+
+      :global {
+        .ant-checkbox-wrapper {
+          font-size: 14px;
+          font-family: Text-C2-Reg14;
+          height: 22px;
+          line-height: 22px;
+          margin-left: 0;
+          color: rgba(35, 45, 71, 1);
+        }
+      }
+
+      div {
+        height: 22px;
+      }
+    }
+
+    .multi-select-btn {
+      line-height: 22px;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+
+    .footer {
+      margin-left: 100px;
+
+      &-hideLabel {
+        margin-left: 0;
+      }
+
+      .btn {
+        width: 52px;
+        height: 30px;
+        line-height: 22px;
+        text-align: center;
+        font-family: Text-C2-Reg14;
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 20px;
+        color: rgba(35, 45, 71, 1);
+        border-radius: 2px;
+        box-sizing: border-box;
+        background-color: #fff;
+        border: 1px solid rgba(225, 230, 237, 1);
+
+        &:first-child {
+          color: #fff;
+          margin-right: 12px;
+          background-color: rgba(76, 106, 255, 1);
+          border: none;
+        }
+
+        &:disabled {
+          cursor: not-allowed;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  .multi-select-btn {
+    margin-right: 0;
+    line-height: 22px;
+    margin-left: auto;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    color: $Brand-6;
+
+    .icon {
+      display: flex;
+      width: 16px;
+      height: 16px;
+      margin-right: 4px;
+    }
+  }
+
+  .show-more {
+    margin-left: 28px;
+    cursor: pointer;
+    user-select: none;
+    line-height: 22px;
+    color: $Brand-6;
+
+    .icon {
+      // color: rgba(98, 110, 133, 1);
+      // font: 12px;
+      width: 16px;
+      height: 16px;
+      display: flex;
+      margin-left: 4px;
+    }
+
+    .show-text {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

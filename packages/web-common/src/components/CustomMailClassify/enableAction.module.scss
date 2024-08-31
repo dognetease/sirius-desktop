@@ -1,0 +1,8 @@
+.classify-enable {
+  margin-bottom: 0;
+  :global(.ant-checkbox-wrapper) {
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+  }
+}

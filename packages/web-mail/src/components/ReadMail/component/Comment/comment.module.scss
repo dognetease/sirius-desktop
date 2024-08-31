@@ -1,0 +1,42 @@
+.comment {
+  display: flex;
+  background: $Warning-1;
+  min-height: 32px;
+  padding: 6px 12px 6px 12px;
+  border-radius: 4px;
+  justify-content: space-between;
+  .desc {
+    display: flex;
+    .memo {
+      color: $font-color-2;
+      font-size: 12px;
+      margin-left: 6px;
+      white-space: break-spaces;
+      word-break: break-all;
+    }
+    .icon {
+      display: inline-flex;
+    }
+  }
+  .operate {
+    display: flex;
+    min-width: fit-content;
+  }
+  .btn {
+    font-size: 12px;
+    font-weight: 400;
+    color: $Brand-6;
+    cursor: pointer;
+  }
+  .del,
+  .edit {
+    margin-left: 16px;
+  }
+}
+.commentDelModal {
+  display: flex;
+  align-items: center;
+  .commentDelDesc {
+    margin-left: 10px;
+  }
+}

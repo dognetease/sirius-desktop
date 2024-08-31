@@ -1,0 +1,38 @@
+.buttonWrapper {
+  width: 119px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+
+  .text {
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-weight: 500;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+  }
+
+  .progressBar {
+    position: absolute;
+    max-width: 119px;
+    width: 0;
+    height: 40px;
+    background-color: #386ee7;
+    z-index: 2;
+    transition: width linear 0.1s;
+    border-radius: 4px;
+  }
+
+  .button {
+    position: absolute;
+    width: 119px;
+    height: 40px;
+    background-color: $Brand-4;
+    z-index: 1;
+  }
+}

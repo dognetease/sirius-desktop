@@ -1,0 +1,124 @@
+@import '../../../web/src/styles/varies.scss';
+.launchWrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 5000;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .launchContent {
+    width: 380px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .logo {
+      margin-top: 18px;
+      width: 80px;
+      height: 80px;
+      background-image: url('../../../web/src/images/favicon.png');
+      background-size: 100% 100%;
+    }
+    .logoEdm {
+      background-image: url('../../../web/src/images/favicon_edm.png');
+      background-size: 100% 100%;
+    }
+    .name {
+      margin-top: 16px;
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      /* identical to box height, or 140% */
+      text-align: center;
+      /* 字体及ICON颜色/主要文字100% */
+      color: #262a33;
+    }
+    .version {
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 16px;
+      /* identical to box height, or 133% */
+      text-align: center;
+      /* 字体及ICON颜色/次要文字80% */
+      color: #51555c;
+    }
+    .initStep {
+      margin-top: 152px;
+      width: 360px;
+      .initAccount {
+        font-family: 'PingFang SC';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #262a33;
+      }
+      .progressWrap {
+        margin-top: 12px;
+        width: 100%;
+        height: 6px;
+        background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+        border-radius: 4px;
+        .process {
+          border-radius: 4px;
+          height: 6px;
+          background: #386ee7;
+          transition: width 0.5s;
+        }
+      }
+      .txtWrap {
+        margin-top: 12px;
+        display: flex;
+        justify-content: space-between;
+        .initTxt {
+          font-family: PingFang SC;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 16px;
+          /* identical to box height, or 133% */
+          /* 字体及ICON颜色/不重要文字40% */
+          color: #a8aaad;
+        }
+        .initNum {
+          font-family: PingFang SC;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 16px;
+          /* identical to box height, or 133% */
+          text-align: center;
+          /* 字体及ICON颜色/主要文字100% */
+          color: #262a33;
+        }
+      }
+    }
+    .startBtn {
+      cursor: pointer;
+      background: $main-enhance-color;
+      border-radius: 8px;
+      margin-top: 112px;
+      width: 400px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+      /* identical to box height, or 100% */
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+}

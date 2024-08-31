@@ -1,0 +1,285 @@
+@import '@web-common/styles/variables.scss';
+@import '@web-common/styles/waimao/varies.scss';
+
+$facebook: fb;
+
+.container {
+  padding: 20px;
+  background-color: $Fill-2;
+  height: 100%;
+  min-width: 1044px;
+
+  .title {
+    color: $Text-5;
+    display: flex;
+    justify-content: space-between;
+
+    .page-manage {
+      font-weight: 500;
+      font-size: 16px;
+      display: inline-flex;
+      align-items: center;
+
+      > svg {
+        margin-left: 4px;
+      }
+    }
+
+    .acc-manage {
+      font-weight: 400;
+
+      > span {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+          color: $Brand-6;
+
+          > svg {
+            path,
+            circle {
+              stroke: $Brand-6;
+              fill: $Brand-6;
+            }
+          }
+        }
+
+        > svg {
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+
+  .#{$facebook}-header {
+    margin-top: 12px;
+    display: flex;
+    // min-width: 987px;
+    background-color: $base-bg;
+    padding: 23px 0;
+    border-radius: 4px;
+    border: 1px solid $Line-1;
+
+    .view-box {
+      flex: 1;
+      border-right: 1px solid #e1e6ed;
+      display: flex;
+      align-items: center;
+      padding: 0 37px;
+      cursor: default;
+      height: 54px;
+
+      &:last-child {
+        border: none;
+      }
+
+      .header-item {
+        display: flex;
+        align-items: center;
+
+        > svg {
+          padding-top: 4px;
+          flex-shrink: 0;
+        }
+
+        .right {
+          margin-left: 2px;
+          flex-grow: 1;
+          .count {
+            font-family: 'LX-numbers';
+          }
+
+          > p {
+            margin: 0;
+
+            &:first-child {
+              color: $Text-5;
+              font-weight: 400;
+              font-size: 22px;
+              line-height: 22px;
+            }
+
+            &:last-child {
+              color: $Text-3;
+              @include c4-1-reg12();
+              margin-top: 6px;
+              white-space: nowrap;
+            }
+          }
+
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  .search {
+    margin: 12px 0;
+    float: right;
+    :global {
+      .ant-input-affix-wrapper {
+        height: 36px;
+      }
+    }
+  }
+
+  .table {
+    padding: 20px 20px 0 20px;
+    clear: both;
+    background: $base-bg;
+    flex: 1;
+    border-radius: 4px;
+    border: 1px solid $Line-1;
+
+    .even {
+      background-color: $Fill-1;
+      :global {
+        .ant-table-cell-fix-right.ant-table-cell-fix-right-first {
+          background-color: $Fill-1;
+        }
+      }
+    }
+
+    .odd {
+      background-color: $base-bg;
+    }
+  }
+
+  .num-class {
+    > span {
+      color: $Text-5;
+      font-weight: 400;
+      font-family: 'LX-numbers';
+    }
+  }
+
+  .status {
+    color: $Error-6;
+  }
+
+  .action {
+    color: $Brand-6;
+    cursor: pointer;
+
+    :global {
+      .ant-divider-vertical {
+        height: 1em;
+        margin: 0 12px;
+      }
+    }
+    .re-auth {
+      > svg {
+        vertical-align: -3px;
+        margin-right: 6px;
+      }
+    }
+  }
+
+  .acc-class {
+    color: $Text-5;
+    display: flex;
+    align-items: center;
+
+    .text {
+      width: 170px;
+    }
+
+    > img {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      margin-right: 12px;
+    }
+  }
+
+  :global {
+    .ant-table {
+      border: none;
+      border-radius: 0;
+    }
+
+    .ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td {
+      background-color: $Fill-3 !important;
+    }
+
+    .ant-table-body .ant-table-row-hover {
+      background: $Fill-2_5;
+    }
+
+    .ant-table-body .ant-table-row-hover > td {
+      background: $Fill-2_5;
+    }
+
+    .ant-table-thead {
+      background: $Fill-2;
+      height: 44px;
+
+      > tr {
+        th.ant-table-cell {
+          color: $Text-3;
+        }
+      }
+    }
+
+    .ant-table-row {
+      height: 54px;
+    }
+  }
+
+  .header-desc {
+    max-width: 97px;
+  }
+}
+
+.container.enLang {
+  min-width: 1140px;
+  .header-desc {
+    max-width: 48px;
+  }
+}
+
+.toolTipOver {
+  :global {
+    .ant-tooltip-content .ant-tooltip-arrow {
+      display: none;
+    }
+
+    .ant-tooltip-content {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+}
+
+.fb-tooltips {
+  max-width: 283px;
+
+  .outer {
+    @include c4-1-reg12();
+
+    .know {
+      display: inline-block;
+      color: $Brand-5;
+      margin-left: 24px;
+      cursor: pointer;
+    }
+  }
+
+  :global {
+    .ant-tooltip-arrow {
+      display: block;
+    }
+  }
+}
+
+.fb-tips {
+  margin-left: 4px;
+  vertical-align: -3px;
+}
+
+.columns-padding {
+  padding-left: 8px;
+}

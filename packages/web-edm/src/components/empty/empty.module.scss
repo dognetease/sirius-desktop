@@ -1,0 +1,27 @@
+.empty-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-wrap {
+  width: 296px;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  color: rgba(38, 42, 51, 0.5);
+}
+
+.empty-img {
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  background: url(@/images/icons/edm/empty.png) 0 0 no-repeat;
+  background-size: 100%;
+  margin-bottom: 16px;
+}
+.empty-img-customs {
+  background: url(@/images/icons/edm/customs-empty.png) 0 0 no-repeat;
+  background-size: 100%;
+}

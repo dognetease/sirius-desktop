@@ -1,0 +1,36 @@
+.intellect {
+  width: 624px;
+  margin-bottom: 32px;
+  .intellect-title {
+    color: #272e47;
+    line-height: 22px;
+    height: 22px;
+    margin-bottom: 7px;
+  }
+  .intellect-content {
+    width: 100%;
+    // height: 237px;
+    background: #f9fafb;
+    /* 中性色-线条/Line-1 浅常规 */
+    border: 1px solid #f0f1f5;
+    border-radius: 4px;
+    padding: 20px;
+    .intellect-info {
+      color: #747a8c;
+      height: 16px;
+      line-height: 16px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      .intellect-info-more {
+        color: #4c6aff;
+        font-size: 12px;
+        line-height: 16px;
+        height: 16px;
+        display: flex;
+        margin-left: 8px;
+        cursor: pointer;
+      }
+    }
+  }
+}

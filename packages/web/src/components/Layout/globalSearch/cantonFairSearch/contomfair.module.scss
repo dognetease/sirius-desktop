@@ -1,0 +1,239 @@
+@import '@web-common/styles/variables.scss';
+$min-width: 1022px;
+$body-width: 980px;
+$select-width: 115px;
+
+.container {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 425px;
+  padding-bottom: 50px;
+  min-height: 100%;
+  background: $Fill-2;
+
+  .searchHeader {
+    height: 310px;
+    background-image: url(../../../../images/contomfair/home-top-banner.png);
+    background-size: 1580px 425px;
+    background-color: #2a46d4;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      height: 46px;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.05);
+      z-index: 1;
+    }
+
+    .back {
+      position: absolute;
+      z-index: 10;
+      width: 24px;
+      height: 24px;
+      left: 20px;
+      top: 32px;
+      border-radius: 36px;
+      background: url(../../../../images/contomfair/arrow.svg) center center no-repeat;
+      background-size: 16px;
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .headerBody {
+      width: $body-width;
+      position: relative;
+      margin: 0 auto;
+      height: 100%;
+      z-index: 2;
+
+      .textWrap {
+        text-align: left;
+        padding-top: 100px;
+        margin: 0 auto;
+        margin-bottom: 55px;
+
+        h1 {
+          font-weight: 600;
+          font-size: 40px;
+          line-height: 56px;
+          color: #ffffff;
+          margin-bottom: 18px;
+        }
+
+        .intro {
+          display: flex;
+
+          .introItem {
+            display: flex;
+            align-items: center;
+            padding-right: 40px;
+
+            .icon {
+              height: 16px;
+              width: 16px;
+              margin-right: 8px;
+              background-position: center;
+              background-size: contain;
+              background-repeat: no-repeat;
+              display: inline-block;
+
+              &-company {
+                background-image: url(../../../../images/contomfair/company.svg);
+              }
+
+              &-global {
+                background-image: url(../../../../images/contomfair/global.svg);
+              }
+
+              &-catalog {
+                background-image: url(../../../../images/contomfair/catalog.svg);
+              }
+            }
+
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            /* identical to box height */
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+
+  .filterWrapper {
+    background: #fff;
+    border-radius: 8px;
+    width: $body-width;
+    margin: 0 auto;
+    padding: 20px 28px;
+    margin-top: 12px;
+
+    .filterItem {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      margin-top: 16px;
+
+      .filterTitle {
+        width: 80px;
+        color: $Text-5;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        flex-shrink: 0;
+      }
+    }
+
+    .searchInputWrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .searchInput {
+        width: 260px;
+      }
+
+      .inputLabel {
+        width: 80px;
+        color: $Text-5;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        flex-shrink: 0;
+      }
+    }
+
+    .filterTitle {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      /* identical to box height, or 157% */
+
+      /* 中性色-文字/Text-5标题-重要信息 */
+
+      color: $Text-5;
+      margin-bottom: 12px;
+    }
+  }
+
+  .filterSwitchGroup {
+    display: flex;
+    row-gap: 16px;
+
+    .checkBox {
+      display: flex;
+      padding-right: 20px;
+      align-items: center;
+
+      .switch {
+        margin-right: 8px;
+      }
+
+      .checkboxText {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        /* identical to box height, or 157% */
+
+        text-align: center;
+
+        color: #000000;
+      }
+
+      :global {
+        .ant-switch {
+          min-width: 35px;
+          height: 20px;
+          line-height: 20px;
+
+          .ant-switch-handle {
+            width: 16px;
+            height: 16px;
+
+            &::before {
+              border-radius: 8px;
+              box-shadow: none;
+            }
+          }
+        }
+
+        .ant-switch-checked {
+          .ant-switch-handle {
+            left: calc(100% - 16px - 2px);
+          }
+        }
+      }
+    }
+  }
+
+  .searchResult {
+    width: $body-width;
+    margin: 0 auto;
+    margin-top: 12px;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+
+    .resultTitle {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      /* identical to box height, or 157% */
+
+      /* 中性色-文字/Text-5标题-重要信息 */
+
+      color: $Text-5;
+      margin-bottom: 16px;
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.edit-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+  border-bottom: 1px solid $Line-1;
+  .progress-item {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .progress-step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $Line-3;
+    border-radius: 100%;
+    color: $Text-2;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+  }
+  .progress-desc {
+    @include p1-3-reg14;
+    color: $Text-2;
+    margin-right: 16px;
+  }
+  .progress-cursor {
+    cursor: pointer;
+  }
+  .progress-line {
+    width: 92px;
+    height: 2px;
+    background-color: $Line-3;
+    margin-right: 16px;
+  }
+  .progress-complete {
+    .progress-step {
+      border-color: $Brand-6;
+    }
+    .progress-desc {
+      color: $Text-5;
+    }
+    .progress-line {
+      background-color: $Brand-6;
+    }
+  }
+  .progress-selected {
+    .progress-step {
+      background-color: $Brand-6;
+      color: #fff;
+      border-color: $Brand-6;
+    }
+    .progress-desc {
+      color: $Brand-6;
+    }
+  }
+}

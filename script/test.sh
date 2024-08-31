@@ -1,0 +1,15 @@
+curl 'https://mailhz.qiye.163.com/js6/read/readdata.jsp?action=download_attach&l=read&mode=download&part=4&sid=00rALC78tD7967K66hWRSC1NBEhr-abn&uid=shisheng%40office.163.com&mid=ADwANQCnE0OyJpqIbQfks4pP' \
+-H 'Connection: keep-alive' \
+-H 'sec-ch-ua: "Microsoft Edge";v="95", "Chromium";v="95", ";Not A Brand";v="99"' \
+-H 'sec-ch-ua-mobile: ?0' \
+-H 'sec-ch-ua-platform: "Windows"' \
+-H 'Upgrade-Insecure-Requests: 1' \
+-H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 Edg/95.0.1020.44' \
+-H 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9' \
+-H 'Sec-Fetch-Site: none' \
+-H 'Sec-Fetch-Mode: navigate' \
+-H 'Sec-Fetch-User: ?1' \
+-H 'Sec-Fetch-Dest: document' \
+-H 'Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6' \
+-H 'Cookie: mail_psc_fingerprint=e7cf54b40e9e3606d6a1cb57c5f70cea; nts_mail_user=luliao89@163.com:-1:1; _ntes_nnid=ed25bbdd859f53ff5bb99ac68452b3c3,1544944074181; _ntes_nuid=ed25bbdd859f53ff5bb99ac68452b3c3 ;qiye_uid=\"shisheng@office.163.com\"; QIYE_TOKEN=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiIwOWUwMDg1OS01MDE1LTQ2YmItYWJhZC1mMTk5NTdmMjNjZDAiLCJzdWIiOiJBdXRoIiwidXNlckluZm8iOnsiYXBwSWQiOiJzaXJpdXMiLCJ1c2VySWQiOiI1MDM2MzYyMzkiLCJpcCI6IjEyMC4yNDUuNjQuMTQ5IiwiZXhwaXJlcyI6NjA0ODAwfSwiZXhwIjoxNjQ2MjEyODM1fQ.tWmqOsJVgz2SSr4IWk3rgjN9iyGvKkX_XgnIEX4FARQ; QIYE_SESS=s_jBDVBnTbqdRMxP4MHz5ZuWLj8i8a_DxTDzSGUXIg2MrXh7lNG.9lawDdSIYILV9xgkQKWx7lvHV1ktZmvqMBxZDA8VVWE0EnkB4qpeJXP1._KHMas__a1RTIZ6Bkdl9XAH8DC4pIR0dJEPcHIVYoPsh.wQo6Y2W9SbptPVebi; Coremail=E2tY8-0SkQtJUKFNKQDW1P*j94lZA5DgTIWRt44OfV*yn*C9q19hwHtAYRAwGRp7BUBwczsFUfIOHJpdnJJFv-PIHPA-dTxqv17JsvYPQcVRhrTG9LoYUh0nf5pLVmHqBO6gjZ*FAs2yFDuc*JmxJCZtC4Ez1iaShrsW48dnKh0|%wm-2-hz' \
+--compressed -i

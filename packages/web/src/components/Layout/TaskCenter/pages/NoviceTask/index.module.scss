@@ -1,0 +1,227 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.novice-task {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #f6f7fa;
+}
+
+.container {
+  min-width: 1204px;
+}
+
+.banner {
+  flex-shrink: 0;
+  height: 120px;
+  background: linear-gradient(168deg, #e4eff9 8.4%, #eef3fa 91.22%);
+  .banner-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .content {
+    padding: 32px 0 28px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .banner-img {
+    background-image: url(../../../../../images/icons/edm/taskCenter/novice-task-banner.png);
+    width: 258px;
+    height: 120px;
+  }
+
+  .banner-title {
+    color: #272e47;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 6px;
+  }
+
+  .banner-content {
+    color: #545a6e;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.body {
+  padding: 20px 20px 26px;
+  background-color: #f6f7fa;
+
+  .content {
+    margin: 0 auto;
+    max-width: 1280px;
+  }
+}
+
+.title {
+  flex-shrink: 0;
+  color: #272e47;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 12px;
+  .knowledge {
+    color: #747a8c;
+    float: right;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    cursor: pointer;
+    &:hover {
+      color: #4c6aff;
+    }
+    svg {
+      vertical-align: text-top;
+      margin-right: 4px;
+    }
+  }
+}
+
+.notice {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 13px 12px;
+  border-radius: 4px;
+  background-color: $Brand-2;
+  margin-bottom: 12px;
+
+  .label {
+    display: flex;
+    padding: 2px 4px;
+    border: 0.5px solid $Error-6;
+    border-radius: 2px;
+    background-color: $Error-6;
+
+    span {
+      color: #ffffff;
+      font-size: 12px;
+      line-height: 12px;
+      transform: scale(0.83);
+    }
+  }
+
+  .description {
+    color: $Text-5;
+    font-size: 14px;
+    line-height: 22px;
+    margin-left: 8px;
+
+    .highlight {
+      color: $Error-6;
+    }
+  }
+
+  .rules {
+    color: $Brand-6;
+    font-size: 14px;
+    line-height: 22px;
+    margin-left: 8px;
+    cursor: pointer;
+  }
+
+  .stats {
+    padding: 4px 8px;
+    font-size: 12px;
+    height: auto;
+    line-height: 16px;
+    margin-left: auto;
+  }
+}
+
+.tasks {
+  :global {
+    .ant-timeline-item {
+      padding-bottom: 16px;
+      .ant-timeline-item-tail {
+        top: 40px;
+      }
+      .ant-timeline-item-head {
+        transform: translateY(20px);
+        left: -4px;
+        background: transparent;
+      }
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(auto-fill, 110px);
+}
+
+.task {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 18px 20px;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #ebedf2;
+  overflow: hidden;
+
+  .task-status {
+    color: #0dc076;
+    font-size: 16px;
+    line-height: 16px;
+    .task-status-text {
+      vertical-align: text-top;
+      margin-left: 4px;
+    }
+  }
+
+  .task-body {
+    flex-grow: 1;
+    overflow: hidden;
+    margin-right: 16px;
+
+    .task-title {
+      color: $Text-5;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 22px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-bottom: 4px;
+    }
+
+    .task-content {
+      height: 44px;
+      color: #747a8c;
+      font-size: 14px;
+      line-height: 22px;
+      display: -webkit-box;
+      overflow: hidden;
+      word-break: break-all;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .video-title {
+      color: #747a8c;
+      font-size: 12px;
+      cursor: pointer;
+      &:hover {
+        color: #4c6aff;
+      }
+      svg {
+        vertical-align: text-top;
+        margin-right: 4px;
+      }
+    }
+  }
+
+  .task-option {
+    flex-shrink: 0;
+  }
+}

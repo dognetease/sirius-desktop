@@ -1,0 +1,29 @@
+@import '@web-common/styles/variables.scss';
+.defaultCCModal-wrap {
+  .ant-modal-header {
+    border-bottom: none;
+  }
+  .ant-modal-body {
+    padding-top: 10px;
+  }
+  .ant-select-selector {
+    max-height: 130px;
+  }
+  .defaultCCModal-title {
+    font-size: 14px;
+    color: var(--text-5, #272e47);
+  }
+  .defaultCCModal-tip {
+    margin-top: 25px;
+    font-size: 14px;
+    color: var(--text-2, #9fa2ad);
+  }
+  .defaultCCModal-contactModel-wrap {
+    margin-top: 8px;
+  }
+  .defaultCCModal-footer {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

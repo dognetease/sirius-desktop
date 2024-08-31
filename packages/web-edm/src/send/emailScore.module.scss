@@ -1,0 +1,253 @@
+.email-score {
+  .f1 {
+    flex: 1;
+  }
+
+  .body {
+    position: relative;
+  }
+
+  .head {
+    height: 214px;
+    background: linear-gradient(180deg, #e4e9f8 0%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 8px;
+
+    &.inProgress {
+      background: #e4e9f8;
+    }
+
+    .title {
+      display: flex;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: #7a8599;
+      padding: 12px 16px;
+    }
+
+    .close {
+      display: flex;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #eee;
+      cursor: pointer;
+      justify-content: center;
+      align-items: center;
+      &::before {
+        content: '';
+        display: block;
+        width: 12px;
+        height: 2px;
+        background: #939cad;
+      }
+    }
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .content {
+    .scoreBgWrapper {
+      position: relative;
+      top: -160px;
+      height: 15px;
+    }
+    .scoreBg {
+      width: 180px;
+      height: 180px;
+    }
+
+    .scoreBg2 {
+      width: 146px;
+      height: 130px;
+      position: absolute;
+      top: 64px;
+      left: 50%;
+      margin-left: -75px;
+    }
+
+    .desc {
+      padding: 22px 0 12px;
+      font-size: 12px;
+      text-align: center;
+      color: #7a8599;
+    }
+
+    .tip {
+      padding: 22px 0 16px;
+      font-size: 12px;
+      text-align: center;
+      color: #fe7c70;
+    }
+
+    .button {
+      width: 200px;
+    }
+  }
+
+  .progress {
+    height: 155px;
+    padding: 28px 0;
+
+    .progressStage {
+      padding: 2px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: #c0c8d6;
+      transition: all 0.15s ease-in;
+
+      .progressIcon {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+      }
+
+      &.isDone {
+        // font-weight: bold;
+        font-size: 14px;
+        color: #232d47;
+      }
+
+      &.isChecking {
+        font-weight: bold;
+        font-size: 18px;
+        color: #232d47;
+        padding: 6px 0;
+      }
+
+      .progressText {
+        width: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+      }
+    }
+  }
+
+  .footer {
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0);
+    }
+
+    50% {
+      transform: rotate(180deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  :global(.ant-modal-body) {
+    padding: 0;
+  }
+
+  .spin :global(.ant-spin-dot) {
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+
+  .polling {
+    text-align: center;
+
+    &-img {
+      width: 96px;
+      height: 96px;
+      margin-bottom: 16px;
+      animation: spin 1s infinite linear;
+    }
+
+    &-tip {
+      color: #51555c;
+      font-size: 14px;
+      line-height: 21px;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.detailWrapper {
+  height: 200px;
+
+  .detail {
+    position: relative;
+    top: -165px;
+  }
+
+  .operate {
+    padding-top: 16px;
+    text-align: center;
+    .operateBtn {
+      width: 185px;
+      background: #4c6aff;
+      &:hover {
+        background: #4c6aff;
+      }
+      &.operateBtnGhost {
+        border-color: #4c6aff;
+        color: #4c6aff;
+        background: #fff;
+        &:hover {
+          background: #fff;
+        }
+      }
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.dotting {
+  display: inline-block;
+  width: 10px;
+  height: 2px;
+  padding-right: 2px;
+  border-left: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  background-color: currentColor;
+  background-clip: content-box;
+  box-sizing: border-box;
+  -webkit-animation: dot 2s infinite step-start both;
+  animation: dot 2s infinite step-start both;
+}
+.dotting::before {
+  content: '';
+}
+.dotting {
+  margin-left: 2px;
+  padding-left: 2px;
+}
+
+@-webkit-keyframes dot {
+  25% {
+    border-color: transparent;
+    background-color: transparent;
+  }
+  50% {
+    border-right-color: transparent;
+    background-color: transparent;
+  }
+  75% {
+    border-right-color: transparent;
+  }
+}
+@keyframes dot {
+  25% {
+    border-color: transparent;
+    background-color: transparent;
+  }
+  50% {
+    border-right-color: transparent;
+    background-color: transparent;
+  }
+  75% {
+    border-right-color: transparent;
+  }
+}

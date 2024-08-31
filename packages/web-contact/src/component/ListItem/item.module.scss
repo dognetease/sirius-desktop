@@ -1,0 +1,249 @@
+@import '../../../../web/src/styles/varies';
+@import '@web-common/styles/waimao/varies.scss';
+// $item-hover-gb: rgba( $color: $main-enhance-color, $alpha: 0.12, );
+// $item-selected-gb: rgba( $color: $main-enhance-color, $alpha: 1, );
+$item-hover-gb: rgba(
+  $color: $white-background-hover-color,
+  $alpha: 1,
+);
+$item-selected-gb: rgba(
+  $color: $selected-menu-item-color,
+  $alpha: 0.9,
+);
+.itemWrap {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.itemDragWrap {
+  // background-color: #ffffff;
+  background-color: $white;
+  padding: 0 12px;
+  width: 100%;
+  height: 100%;
+  transform: translate(0, 0);
+  z-index: 9999;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+.item {
+  flex: 1;
+  padding: 0 12px;
+  display: flex;
+  height: 100%;
+  border-radius: 6px;
+  position: relative;
+  align-items: center;
+  // background-color: #ffffff;
+  background-color: $white;
+  @include sirius-no-drag;
+  overflow: hidden;
+  // 列表中的项目一般存在固定高度，不允许超过边界 否则会引发样式问题
+  .itemContent {
+    margin-left: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include sirius-no-drag;
+    // 列表中的项目一般存在固定高度，不允许超过边界 否则会引发样式问题
+    overflow: hidden;
+    &.isOrg {
+      justify-content: center;
+    }
+    .titleWrap {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;
+      .titleTxt {
+        @include flex-ellipsis-text;
+        color: $Text-5;
+      }
+    }
+    .descWrap {
+      width: 100%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      .emailWrap {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        .emailTxtWrap {
+          @include flex-ellipsis-text;
+          color: $Text-3;
+        }
+      }
+    }
+  }
+  .itemAvatarWrap {
+    flex: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    &.paddingLeft {
+      padding-left: 38px;
+    }
+    .expandWrap {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      left: -10px;
+      top: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-50%);
+      .expandIcon {
+        color: $Text-3;
+        font-size: 10px;
+      }
+    }
+    .itemAvatarCheckbox {
+      display: flex;
+      margin-right: 8px;
+    }
+  }
+  .dragBtn {
+    flex: none;
+    width: 16px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../../../web/src/images/icons/contact/drag_btn.svg');
+    background-size: 16px 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: grab;
+  }
+  .sendIcon {
+    margin-left: 12px;
+    display: none;
+  }
+  .tag {
+    flex: none;
+    color: #386ee7;
+    background: $Link-2;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 16px;
+    height: 16px;
+    padding: 0 6px;
+    margin-left: 8px;
+  }
+  .position {
+    max-height: 36px;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 18px;
+    text-overflow: ellipsis;
+    margin-top: 8px;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* 行数 */
+    -webkit-box-orient: vertical;
+    color: $font-color-2;
+    p {
+      margin-bottom: 0;
+      text-indent: 8px;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: '•';
+        display: block;
+        left: -8px;
+      }
+    }
+  }
+  .hit-text {
+    color: $main-enhance-color;
+  }
+  &:hover {
+    // background-color: $item-hover-gb;
+    background-color: $white-hover-bg;
+    .sendIcon {
+      display: flex;
+    }
+  }
+  &.selected {
+    // background-color: $item-selected-gb;
+    // background-color: $Brand-2;
+    background-color: $Fill-4;
+  }
+}
+
+.dragLine {
+  position: relative;
+  top: -2px;
+  display: flex;
+  align-items: center;
+  .circle {
+    flex: none;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 1px solid $Brand-6;
+    box-sizing: border-box;
+  }
+  .line {
+    flex: 1;
+    height: 1px;
+    background-color: $Brand-6;
+  }
+}
+
+.item-fixed-header {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  right: 12px;
+  background-color: #ffffff;
+  // padding-bottom: 12px;
+  padding-left: 18px;
+  color: #737373;
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+}
+
+.item-header {
+  color: #737373;
+  background-color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding-left: 18px;
+  &-fixed {
+    border-bottom: 0.5px solid rgba($color: $main-enhance-color, $alpha: 0.2);
+  }
+  &-is-sticky {
+    &::before {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 8px;
+      top: 0;
+      bottom: 0;
+      background-color: #ffffff;
+      left: -8px;
+    }
+    &::after {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      content: '';
+      width: 8px;
+      top: 0;
+      background-color: #ffffff;
+      right: -8px;
+    }
+  }
+}

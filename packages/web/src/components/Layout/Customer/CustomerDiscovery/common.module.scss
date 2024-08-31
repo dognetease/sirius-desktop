@@ -1,0 +1,129 @@
+.flex1 {
+  flex: 1;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.link-btn {
+  color: #396ee7;
+  cursor: pointer;
+}
+
+.alr {
+  text-align: right;
+}
+
+:global(.customer-recommend-drawer .ant-drawer-body) {
+  display: flex;
+  flex-direction: column;
+  min-height: 0; // fix flex height
+}
+
+:global(.customer-recommend-drawer .ant-drawer-header) {
+  padding: 24px 24px 16px;
+
+  :global(.ant-drawer-close) {
+    top: 7px;
+  }
+}
+
+:global(.customer-recommend-drawer.drawer-is-in-windows .ant-drawer-header) {
+  padding-top: 55px;
+
+  :global(.ant-drawer-close) {
+    top: 37px;
+  }
+}
+
+.recommend-table :global(.ant-table-cell),
+:global(.customer-recommend-drawer .ant-drawer-title) {
+  :global(.ant-spin .ant-spin-dot > i) {
+    width: 14px;
+    height: 14px;
+  }
+
+  :global(.spin-label) {
+    display: none;
+  }
+}
+
+.recommend-table {
+  :global(.ant-table-header .ant-table-thead .ant-table-cell) {
+    background: #f9fafb;
+    color: #7a8599;
+    font-weight: 400;
+    font-size: 14px;
+    border-bottom: none;
+  }
+
+  :global(.ant-table-header) {
+    border-radius: 8px;
+  }
+
+  :global(.ant-table-cell) {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.domain-tag {
+  background: #ebf3fe;
+  color: #5968b2;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+// :global(.write-mail-wrap) {
+//   z-index: 2000;
+// }
+
+.special-tab {
+  :global(.ant-tabs-nav-list) {
+    :global(.ant-tabs-tab-btn) {
+      color: #7a8599;
+    }
+
+    :global(.ant-tabs-tab-active) {
+      :global(.ant-tabs-tab-btn) {
+        color: #386ee7;
+      }
+    }
+  }
+}
+
+:global(.pagination-wrap-hidden) {
+  display: none;
+}
+
+.mark-modal-title {
+  display: flex;
+  align-items: center;
+  span {
+    margin-left: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #232d47;
+  }
+}
+
+.mark-modal-content {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #7a8599;
+  padding: 0 10px;
+}

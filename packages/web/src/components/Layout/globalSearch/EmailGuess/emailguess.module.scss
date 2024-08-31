@@ -1,0 +1,231 @@
+@import '@web-common/styles/variables.scss';
+@import '@web-common/styles/waimao/varies.scss';
+
+.drawer {
+  :global {
+    .ant-drawer-wrapper-body {
+      background: url(../../../../images/globalSearch/aiKeywordsBackground.svg) center top no-repeat #f4f5f9;
+    }
+
+    .ant-drawer-header {
+      background-color: transparent;
+      padding: 24px;
+      padding-bottom: 20px;
+      height: auto;
+    }
+  }
+
+  .alert {
+    margin-bottom: 12px;
+    border: none;
+    color: $Text-5;
+    border-radius: 4px;
+    background-color: $Link-1;
+
+    :global {
+      .ant-alert-icon {
+        color: $Avatar-6;
+      }
+
+      .ant-alert-message {
+        color: $Text-5;
+      }
+    }
+  }
+
+  .form {
+    padding: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 120px rgba(14, 48, 89, 0.1);
+    backdrop-filter: blur(65px);
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+
+  .workspace {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    padding-bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1;
+    max-height: 518px;
+    &-validing {
+      overflow: visible;
+      padding-top: 8px;
+      padding-bottom: 0;
+      height: 470px;
+    }
+    .workspaceTitle {
+      @include h1-4-med16;
+      color: $Text-5;
+      margin-bottom: 8px;
+      flex-shrink: 0;
+    }
+
+    .workspaceInner {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .workspaceScroll {
+      overflow-y: scroll;
+      flex-grow: 12;
+      margin: auto -24px;
+      padding: 0 24px;
+      overflow-y: scroll;
+      flex-grow: 12;
+    }
+
+    .btns {
+      display: flex;
+      justify-content: center;
+      flex-shrink: 0;
+      border-top: 1px solid $Fill-4;
+      margin: 0 -24px;
+      padding: 20px 0;
+    }
+
+    .tip {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: $Text-5;
+      cursor: pointer;
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      .tipIcon {
+        margin-right: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 16px;
+        &:hover {
+          background-color: $Fill-2;
+          border-radius: 2px;
+        }
+        &-not-show {
+          svg {
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+
+    .guessEmailItem {
+      display: flex;
+      justify-content: space-between;
+      line-height: 22px;
+      padding-bottom: 12px;
+      padding-top: 12px;
+      align-items: center;
+      .guessEmailTag {
+        flex-shrink: 0;
+      }
+      .guessEmailText {
+        word-break: keep-all;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .bottomTip {
+      color: $Text-2;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      /* identical to box height, or 167% */
+      text-align: center;
+      margin-top: -12px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .empty {
+    margin-top: 100px;
+    &-result {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    :global {
+      .ant-empty-image {
+        height: 130px;
+      }
+
+      .ant-empty-description {
+        @include p1-3-reg14;
+        color: $Text-5;
+      }
+
+      .ant-empty-footer {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.inNewProgressWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .percentInfo {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: $Text-5;
+  }
+
+  // .color1 {
+  //     color: #386EE7
+  // }
+  .color {
+    color: $Avatar-6;
+  }
+
+  .tipsInfo {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: $Text-3;
+  }
+
+  .progress {
+    width: 320px;
+    line-height: 8px;
+    margin: 12px 0 14px 0;
+  }
+
+  .warnInfo {
+    width: 370px;
+    height: 192px;
+    background: $Fill-1;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $Fill-8;
+    padding: 24px 18px;
+
+    .warnInfoItem {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+
+      .warnInfoText {
+        margin-left: 15px;
+      }
+    }
+  }
+}

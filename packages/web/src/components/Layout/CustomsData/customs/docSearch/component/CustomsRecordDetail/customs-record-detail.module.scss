@@ -1,0 +1,103 @@
+@import '@web-common/styles/variables.scss';
+.wrapper {
+  padding: 20px;
+  padding-right: 56px;
+}
+.detailTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  line-height: 24px;
+  h2 {
+    color: $Text-5;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    margin-bottom: 0;
+  }
+
+  .switchHide {
+    display: flex;
+    align-items: center;
+
+    :global {
+      .ant-switch {
+        height: 20px;
+        line-height: 20px;
+        min-width: 35px;
+        outline: none;
+        background: #e1e6ed;
+        &-checked {
+          background-color: #337eff;
+        }
+        .ant-click-animating-node {
+          display: none !important;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+
+        .ant-switch-handle {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    .switchHideText {
+      color: $Text-5;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      margin-left: 12px;
+    }
+  }
+}
+
+.description {
+  margin-bottom: 12px;
+  .canSearch {
+    cursor: pointer;
+    color: $Avatar-6;
+  }
+  :global {
+    .ant-descriptions-title {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      color: $Text-5;
+      margin-bottom: 0;
+    }
+
+    .ant-descriptions-view {
+      border-color: $Fill-3;
+      border-radius: 0;
+
+      .ant-descriptions-row {
+        border-bottom-color: $Fill-3;
+      }
+
+      .ant-descriptions-item-label,
+      .ant-descriptions-item-content {
+        border-right-color: $Fill-3;
+        padding: 8px 12px;
+      }
+
+      .ant-descriptions-item-label {
+        color: $Text-3;
+        text-align: right;
+        width: 16%;
+      }
+
+      .ant-descriptions-item-content {
+        color: $Text-5;
+        width: 34%;
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.main-container {
+  display: flex;
+  flex: 1 1 0%;
+  overflow: hidden;
+  background: var(--white, white);
+}
+
+.left-menu {
+  width: 220px;
+  height: 100%;
+  padding: 22px;
+  border-right: 1px solid var(--line-2, #ebedf2);
+  background-image: url(./../../../images/icons/tab-loading/menu.svg);
+  background-repeat: repeat-y;
+  background-position-x: center;
+  background-position-y: 22px;
+}
+
+.right-content-wrap {
+  height: calc(100vh - 0px);
+  flex: 1 1 0%;
+  overflow: hidden;
+  background: var(--fill-2, #f6f7fa);
+  padding: 16px;
+}
+
+.right-content {
+  border-radius: 4px;
+  background-color: var(--white, #fff);
+  height: 100%;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.right-content-bg {
+  background-image: url(./../../../images/icons/tab-loading/content.svg);
+  background-repeat: repeat;
+  position: relative;
+  height: 100%;
+}
+
+.right-content-scan {
+  position: absolute;
+  width: 84px;
+  opacity: 0.8;
+  left: 0;
+  bottom: -100px;
+  top: -100px;
+  transform: rotateZ(10deg);
+  animation-name: loadingLeftToRight;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  background-color: white;
+  filter: blur(30px);
+}
+
+@keyframes loadingLeftToRight {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 100%;
+  }
+}

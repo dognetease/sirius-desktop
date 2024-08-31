@@ -1,0 +1,20 @@
+.customer-item {
+  padding: 22px 8px 8px;
+  color: #7d8085;
+  font-size: 12px;
+  line-height: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &.customerItemCheckall {
+  }
+
+  .label {
+    display: inline-block;
+    padding: 0 4px;
+    line-height: 20px;
+    margin-left: 4px;
+    border-radius: 2px;
+  }
+}

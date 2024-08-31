@@ -1,0 +1,98 @@
+.facebookDeliveryPage {
+  padding: 0px;
+  background-color: #f6f7fa;
+  height: 100%;
+  overflow: overlay;
+  position: relative;
+  .container {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 83px;
+    gap: 80px;
+    min-width: 1113px;
+    min-height: 600px;
+
+    .leftBlock,
+    .rightBlock {
+      flex: 1;
+    }
+    .leftBlock {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      .title {
+        color: #272e47;
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-family: PingFang SC;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        flex: 1;
+      }
+
+      .listWrapper {
+        flex: 1;
+        margin-top: 22px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 20px;
+        .listItem {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          gap: 8px;
+
+          .itemTitle {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 6px;
+            color: #272e47;
+            font-family: PingFang SC;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+          }
+          .itemContent {
+            color: #747a8c;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: PingFang SC;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+          }
+        }
+      }
+
+      .consultBtnWrapper {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 28px;
+      }
+    }
+
+    .rightBlock {
+      min-width: 613px;
+      min-height: 393px;
+      margin: 0 auto;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

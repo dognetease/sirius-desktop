@@ -1,0 +1,51 @@
+@import '../../web/src/styles/varies';
+.configSettingWrap {
+  .mailAndAccount {
+    .selectTab {
+      padding-top: 16px;
+      width: 220px;
+      cursor: pointer;
+      .tabItem {
+        &:hover {
+          background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+        }
+        @include sirius-no-drag;
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+        height: 40px;
+        @include font-size(400, 14px, 40px);
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &-select {
+          // background-color: rgba($color: #d2e0ff, $alpha: 0.9);
+          background-color: $Line-3;
+          &:hover {
+            // background-color: rgba($color: #d2e0ff, $alpha: 0.9);
+            background-color: $Line-3;
+          }
+        }
+        span {
+          display: flex;
+          align-items: center;
+        }
+        .item-remind {
+          display: block;
+          width: 8px;
+          height: 8px;
+          background-color: #f74f4f;
+          border-radius: 4px;
+          position: absolute;
+          right: 16px;
+          top: 16px;
+        }
+      }
+    }
+    .icon {
+      margin: 0 10px 0 18px;
+    }
+  }
+}
+.config-menu-wrap {
+  background-color: $white;
+}

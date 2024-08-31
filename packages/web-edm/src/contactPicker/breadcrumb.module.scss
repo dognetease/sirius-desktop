@@ -1,0 +1,19 @@
+.breadcrumb {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &-item {
+    line-height: 20px;
+  }
+
+  &-item.highlight {
+    color: #386ee7;
+    cursor: pointer;
+  }
+
+  svg {
+    margin: 0 8px;
+  }
+}

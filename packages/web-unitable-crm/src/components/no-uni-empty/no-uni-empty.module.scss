@@ -1,0 +1,29 @@
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > div {
+    margin-top: -12%;
+    text-align: center;
+  }
+}
+
+.text {
+  margin-top: 12px;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  color: #7a8599;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.btn {
+  margin-top: 24px;
+}

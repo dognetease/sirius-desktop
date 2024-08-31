@@ -1,0 +1,58 @@
+.pinned {
+  -webkit-app-region: no-drag;
+  color: #272e47;
+  box-sizing: border-box;
+  .title {
+    display: flex;
+    align-items: center;
+    .text {
+      font-family: PingFang SC;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 22px;
+    }
+    .icons {
+      margin-left: auto;
+      margin-right: 7px;
+      display: flex;
+      align-items: center;
+      column-gap: 9px;
+
+      .set {
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+      }
+      .toggle {
+        width: 16px;
+        height: 16px;
+        transform: rotate(0);
+        transition: transform ease-in-out 0.3s;
+        cursor: pointer;
+      }
+      .reverse {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .content {
+    font-family: PingFang SC;
+    font-size: 12px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 9px;
+    column-gap: 12px;
+    row-gap: 9px;
+
+    .each {
+      flex: 0 0 68px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      cursor: pointer;
+    }
+  }
+}

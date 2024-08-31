@@ -1,0 +1,105 @@
+.risk-reminder {
+  background: $Warning-1;
+  border-radius: 4px;
+  padding: 12px 15px 11px 13px;
+  font-size: 12px;
+  margin: 8px 0;
+  min-width: 300px;
+  box-sizing: border-box;
+  position: relative;
+  .btn-close {
+    cursor: pointer;
+    height: 14px;
+    position: absolute;
+    top: 13px;
+    right: 15.5px;
+  }
+  .intro {
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    display: flex;
+    align-items: center;
+    padding-right: 16px;
+    .warn {
+      width: 15px;
+      height: 15px;
+      display: flex;
+      align-items: center;
+    }
+    .text {
+      padding-left: 8px;
+    }
+  }
+  .funs {
+    margin-top: 3px;
+    padding-left: 23px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    .funBtn {
+      margin-right: 20px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      color: #386ee7;
+      cursor: pointer;
+      position: relative;
+      &:nth-last-child(1) {
+        margin-right: 0;
+      }
+    }
+    .funBtnNoWarn {
+      text-decoration-line: underline;
+      color: $Text-5;
+      margin-right: 1px;
+    }
+  }
+}
+
+.reminder-modal {
+  :global(.ant-modal) {
+    width: 400px !important;
+  }
+  :global(.ant-modal-body) {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    display: flex;
+    align-items: center;
+    .warn {
+      margin-right: 9px;
+      width: 19px;
+      height: 19px;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .intro {
+    margin: 8px 0 0 28px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: $label-6_3;
+  }
+  .footer {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.checkBL {
+  padding-left: 12px;
+  color: #5383fe;
+  cursor: pointer;
+}
+
+// 不能这样加全局样式啊大哥
+//:global(.ant-modal-mask) {
+//    left: 68px;
+//}

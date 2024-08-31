@@ -1,0 +1,44 @@
+.stat {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #fefefe;
+
+  .icon {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    margin-right: 12px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .content {
+    flex-grow: 1;
+    overflow: hidden;
+
+    .name {
+      color: #7d8085;
+      @include c4-1-reg12();
+      margin-bottom: 12px;
+    }
+
+    .title {
+      color: #262a33;
+      font-size: 22px;
+      line-height: 20px;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+
+    .sub-title {
+      min-height: 20px;
+      color: #7d8085;
+      @include c4-3-reg12();
+    }
+  }
+}

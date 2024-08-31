@@ -1,0 +1,98 @@
+@import '../../../../web/src/styles/varies.scss';
+
+.dropDown {
+  max-width: 332px;
+  padding: 24px;
+  border-radius: 6px;
+  border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+  box-shadow: 0px 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+  // @include borderHalfPx(rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12), 6px, 1px, 1px, 1px, 1px);
+  :global {
+    .ant-form-item {
+      margin-bottom: 8px;
+    }
+  }
+
+  .checkgroup {
+    :global {
+      .ant-checkbox-wrapper {
+        margin-bottom: 8px;
+
+        .ant-checkbox {
+          display: none;
+        }
+
+        .ant-checkbox + span {
+          background: #f5f5f5;
+          border-radius: 4px;
+          font-size: 12px;
+          color: #3c3f47;
+          padding: 8px 12px;
+          line-height: 14px;
+        }
+
+        &-checked {
+          .ant-checkbox + span {
+            background: #386ee7;
+            color: #ffffff;
+          }
+        }
+      }
+
+      .ant-radio-wrapper {
+        margin-bottom: 8px;
+
+        .ant-radio {
+          display: none;
+        }
+
+        .ant-radio + span {
+          background: #f5f5f5;
+          border-radius: 4px;
+          font-size: 12px;
+          color: #3c3f47;
+          padding: 8px 12px;
+          line-height: 14px;
+        }
+
+        &-checked {
+          .ant-radio + span {
+            background: #386ee7;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+
+    button {
+      outline: none;
+      border-radius: 4px;
+      border: none;
+      color: #51555c;
+      height: 32px;
+      padding: 8px 12px;
+      line-height: 16px;
+      font-size: 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 4px;
+      margin-right: 4px;
+
+      &.defaul {
+        @include borderHalfPx(rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.17), 4px, 1px, 1px, 1px, 1px);
+        background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.03);
+      }
+
+      &.primary {
+        background: #386ee7;
+        color: #ffffff;
+      }
+    }
+  }
+}

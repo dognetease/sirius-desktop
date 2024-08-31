@@ -1,0 +1,76 @@
+.locked {
+  margin: 8px 20px 20px 20px;
+  border: 0.5px solid #e1e3e8;
+  border-radius: 4px;
+  .lockedTitle {
+    padding: 16px 20px;
+    .encryptedMailText {
+      padding-right: 8px;
+      font-weight: bold;
+    }
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #272e47;
+    background: #edf0ff;
+    display: flex;
+    align-items: center;
+  }
+  .lockedCont {
+    padding: 16px 20px;
+    .enterArea {
+      font-weight: 400;
+      font-size: 14px;
+      color: #272e47;
+      display: flex;
+      align-items: center;
+
+      .pwInput {
+        margin: 0 12px 0 5px;
+        width: 160px;
+        height: 32px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+      }
+      .confPw {
+      }
+    }
+    .pwIs {
+      margin-top: 12px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      color: #272e47;
+    }
+    .pwRemark {
+      margin-top: 12px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      color: #fe5b4c;
+    }
+    .intro {
+      margin: 0;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      color: #747a8c;
+      .introBlue {
+        color: #386ee7;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.unlocked {
+  margin: 16px;
+  padding: 8px 12px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #272e47;
+  background: #edf0ff;
+  border-radius: 4px;
+}

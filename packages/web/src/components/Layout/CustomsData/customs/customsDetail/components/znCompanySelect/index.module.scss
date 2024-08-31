@@ -1,0 +1,104 @@
+.headerTitle {
+  font-weight: bold;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #272e47;
+}
+
+.itemCompanyListBox {
+  background-color: hsl(0, 0%, 100%);
+  padding: 4px 20px 20px;
+  height: calc(100% - 130px);
+  overflow: auto;
+  :global {
+    .ant-alert-info {
+      border: 0px;
+      background-color: rgba(76, 106, 255, 0.09);
+    }
+    .ant-checkbox-inner {
+      height: 18px;
+      border-radius: 9px;
+      width: 18px;
+    }
+
+    .ant-alert-icon {
+      color: #4c6aff;
+    }
+  }
+
+  .itemBox {
+    display: flex;
+    width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #eeedee;
+    padding: 16px;
+    margin-top: 12px;
+    position: relative;
+    &.checked {
+      border: 1px solid #4c6aff;
+    }
+    .countryRegion {
+      position: absolute;
+      right: 16px;
+      top: 12px;
+      color: $Text-3;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .itemLogo {
+      width: 75px;
+      height: 75px;
+      color: #fff;
+      background-color: #4c6aff;
+      border-radius: 4px;
+      text-align: center;
+      line-height: 75px;
+      margin-right: 16px;
+    }
+
+    .infoBoxleft {
+      width: calc(100% - 91px);
+
+      .infoBox {
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .infoText {
+        color: #747a8c;
+
+        .infoTextTop {
+          > span {
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+
+    .flexBox {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .moreStyle {
+    margin-top: 10px;
+    text-align: center;
+    color: #4c6aff;
+
+    > span {
+      cursor: pointer;
+    }
+  }
+}
+.buttonGroup {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 16px 24px;
+}

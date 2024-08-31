@@ -1,0 +1,36 @@
+.contact-picker {
+  :global(.ant-modal-body) {
+    padding: 0;
+    max-height: 300px;
+    overflow: scroll;
+  }
+
+  :global(.ant-table tr .ant-table-cell) {
+    padding: 6px 20px 6px 14px !important;
+
+    &:first-child {
+      padding-left: 24px !important;
+    }
+  }
+
+  :global(.ant-table tr th) {
+    color: #51555c;
+    font-weight: 500;
+    line-height: 24px;
+    background-color: #f6f6f7;
+  }
+
+  :global(.ant-table tr td) {
+    color: #51555c;
+    line-height: 24px;
+    border-bottom: none;
+  }
+
+  :global(.ant-table-cell::before) {
+    content: none !important;
+  }
+
+  :global(.ant-table-tbody > tr.ant-table-row:hover > td) {
+    background-color: #f4f6f7;
+  }
+}

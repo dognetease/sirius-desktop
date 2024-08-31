@@ -1,0 +1,156 @@
+@import '@web-common/styles/variables.scss';
+
+.purchasePart {
+  padding: 20px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 32px;
+    margin-bottom: 12px;
+
+    .title {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      color: $Text-5;
+    }
+
+    .datePick {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 32px;
+      width: 100%;
+    }
+
+    .showTipsWrapper {
+      margin-left: 12px;
+      cursor: pointer;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      color: #4c6aff;
+    }
+
+    .searchTipsText {
+      font-size: 12px;
+      line-height: 20px;
+      margin-left: 4px;
+    }
+  }
+
+  .textIntro {
+    color: $Text-3;
+  }
+
+  .g6Toolbarui {
+    margin: 12px auto 0px auto;
+    padding: 0;
+    // background-color: red;
+    width: 48px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: space-between;
+
+    // margin: o auto;
+    & > li {
+      width: 16px;
+      height: 16px;
+      display: flex;
+      border-radius: 2px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $Fill-4;
+      }
+    }
+  }
+}
+
+.phc {
+  position: fixed;
+  bottom: 20px;
+  width: 68.125%;
+  min-width: 872px;
+  right: 0px;
+  z-index: 2;
+
+  &-group {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 0 auto;
+  }
+}
+
+.productSearchTips {
+  :global {
+    .ant-popover-arrow {
+      opacity: 1;
+    }
+
+    .ant-popover-arrow-content {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .ant-popover-inner {
+      padding: 8px 12px;
+      border-radius: 4px;
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  .popContent {
+    font-size: 12px;
+    color: #fff;
+
+    .popClose {
+      color: $Brand-5;
+      font-size: 12px;
+      margin-left: 12px;
+      cursor: pointer;
+    }
+  }
+}
+
+.purchasePick {
+  width: 33%;
+  border-radius: 4px;
+}
+
+.purchaseIntro {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  justify-content: space-between;
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.purchaseItem {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+
+  .label {
+    color: $Text-3;
+  }
+}
+
+.purchaseValue {
+  width: calc(100% - 54px);
+}

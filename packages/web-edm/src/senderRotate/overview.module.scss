@@ -1,0 +1,154 @@
+.header-bg {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #a8aaad;
+  line-height: 14px;
+  padding: 16px 16px;
+  margin-top: 12px;
+}
+.header {
+  .title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  height: 22px;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  margin-bottom: 34px;
+  color: $Text-5;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.tab-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  align-items: flex-end;
+}
+
+.tabItem {
+  background: #fff;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 46px;
+  border-right: 1px solid $Line-1;
+
+  // &:first-of-type {
+  //   justify-content: flex-start;
+  // }
+  &:last-of-type {
+    // justify-content: flex-end;
+    border-right: none;
+  }
+
+  .left {
+    .tabItemIcon {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      background-size: 100%;
+    }
+    .statistics-icon {
+      width: 100%;
+      height: 100%;
+      background-repeat: round;
+      background-size: 100%;
+    }
+
+    .statistics-icon0 {
+      background-image: url(@/images/icons/edm/detail_tab_logo1.svg);
+    }
+
+    .statistics-icon1 {
+      background-image: url(@/images/icons/edm/detail_tab_logo2.svg);
+    }
+
+    .statistics-icon2 {
+      background-image: url(@/images/icons/edm/detail_tab_logo3.svg);
+    }
+
+    .statistics-icon3 {
+      background-image: url(@/images/icons/edm/edm-warm-up.svg);
+    }
+  }
+
+  .right {
+    margin-left: 12px;
+    position: relative;
+
+    .edmDetailSubTitle {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      position: absolute;
+      top: -22px;
+      left: 0px;
+      width: 120px;
+    }
+    .subTitle2 {
+      color: $label-2_3;
+    }
+    .subTitle3 {
+      color: $Warning-7;
+    }
+    .subTitle4 {
+      color: $Avatar-4;
+    }
+
+    .tabItemNum {
+      height: 24px;
+      line-height: 24px;
+      font-family: 'LX-numbers';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22px;
+      color: $Text-5;
+      margin-bottom: 6px;
+    }
+    .tabItemTitle {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      height: 16px;
+      line-height: 16px;
+      color: $Text-3;
+    }
+  }
+}
+
+.custom-datepicker-panel {
+  display: flex;
+
+  .left-side {
+    width: 82px;
+    padding: 10px 0 10px 16px;
+    border-right: 1px solid #eceff4;
+    @include c4-3-reg12();
+    color: #51555c;
+
+    ul {
+      list-style: none;
+    }
+  }
+}
+.custom-picker-range {
+  margin-bottom: 12px;
+  cursor: pointer;
+  &:hover {
+    color: #386ee7;
+    // background: #EBF1FD;
+  }
+}

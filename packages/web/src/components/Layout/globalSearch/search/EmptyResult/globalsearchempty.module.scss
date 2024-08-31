@@ -1,0 +1,35 @@
+@import '@web-common/styles/variables.scss';
+@import '@web-common/styles/waimao/varies.scss';
+// @import '@/styles/mixin.scss';
+
+.empty-normal {
+  background: url(../GrubProcess/grub-no-data.svg) center center no-repeat;
+  background-size: 138px 130px;
+  width: 138px;
+  height: 130px;
+  display: inline-block;
+}
+.emptyGrub {
+  background: url(./grub.png) center center no-repeat;
+  background-size: 130px 130px;
+  width: 130px;
+  height: 130px;
+  display: inline-block;
+}
+.empty {
+  :global {
+    .ant-empty-image {
+      height: 130px;
+    }
+    .ant-empty-description {
+      @include p1-3-reg14;
+      color: $Text-3;
+    }
+    .ant-empty-footer {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+.progress {
+}

@@ -1,0 +1,133 @@
+.page {
+  position: relative;
+  height: 100%;
+}
+
+.scroll-container {
+  height: 100%;
+  overflow: hidden auto;
+  padding: 24px 24px 72px;
+}
+
+.step-wrap {
+  margin-top: 36px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f3f5;
+
+  .steps {
+    width: 692px;
+    margin: 0 auto;
+  }
+}
+
+.step-desc {
+  margin-bottom: 32px;
+  color: #7a8599;
+}
+
+.file-upload-container {
+  margin: 76px auto 0;
+  padding: 0 24px;
+  width: 566px;
+  text-align: center;
+
+  :global(.ant-upload-drag) {
+    background: #fff;
+  }
+
+  :global(.ant-upload.ant-upload-drag .ant-upload-btn) {
+    padding: 32px 0;
+  }
+}
+
+.upload-file-card {
+  height: 64px;
+  margin: 0 24px;
+  padding: 0 24px;
+  background: #f9fafb;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
+
+  .file-name {
+    flex: 1;
+    min-width: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    padding-left: 12px;
+  }
+  svg {
+    flex: none;
+  }
+}
+
+p.upload-desc {
+  margin: 20px 0;
+  font-size: 12px;
+  line-height: 150%;
+  color: #7a8599;
+}
+
+.page-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 72px;
+  width: 100%;
+  padding: 0 24px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  &.show-border-top {
+    border-top: 1px solid #f0f3f5;
+  }
+}
+
+.step2 {
+  margin-top: 24px;
+}
+
+.mapping-tips {
+  position: relative;
+  padding: 12px 16px;
+  background: #fff8ed;
+  border-radius: 2px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #e5a344;
+  p {
+    margin: 0;
+    &:not(:first-child) {
+      margin-top: 4px;
+    }
+  }
+  svg {
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+}
+
+.result {
+  margin-top: 136px;
+  text-align: center;
+  color: #7a8599;
+  font-size: 14px;
+  line-height: 22px;
+  h3 {
+    margin: 16px 0 4px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    color: #000000;
+  }
+  p {
+    margin: 0 0 28px;
+  }
+}

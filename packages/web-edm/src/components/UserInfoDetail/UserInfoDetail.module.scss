@@ -1,0 +1,159 @@
+@import '@/styles/varies.scss';
+.wrap {
+  background-color: #fff;
+  padding: 16px;
+  border: 1px solid #f0f1f5;
+  border-radius: 4px;
+  margin-top: 12px;
+  .label {
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+
+    /* 文字/Text-5标题-正文 */
+
+    color: #272e47;
+    margin-bottom: 18px;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    :global(.ant-radio-button-wrapper-checked) {
+      border-color: $Brand-6 !important;
+      color: $Brand-6 !important;
+    }
+    :global(.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover) {
+      border-color: $Brand-6 !important;
+      color: $Brand-6 !important;
+    }
+    :global(
+        .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):before,
+        .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover:before
+      ) {
+      background-color: $Brand-6 !important;
+    }
+    :global(.ant-radio-button-wrapper:hover) {
+      color: $Brand-6 !important;
+    }
+    :global(.ant-radio-button-wrapper) {
+      border-color: $Line-3;
+      color: $Text-4;
+    }
+  }
+  .header2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+    .right {
+      display: flex;
+      align-items: center;
+    }
+    .my-radio {
+      margin-left: 12px;
+      cursor: pointer;
+      background: #f6f7fa;
+      border-radius: 16px;
+      padding: 0 12px;
+      height: 24px;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 24px;
+      /* identical to box height, or 167% */
+
+      /* 文字/Text-3次要信息 */
+
+      color: #747a8c;
+      &.active-radio {
+        background: #edf0ff;
+        border: 1px solid $Brand-6;
+        color: $Brand-6;
+      }
+    }
+  }
+  .content {
+    display: flex;
+    .echarts {
+      flex: 1;
+    }
+    .table {
+      width: 362px;
+      background: #ffffff;
+      /* 线条/Line-2 深-常规 */
+
+      border: 1px solid #ebedf2;
+      border-radius: 4px;
+      padding: 12px;
+      margin-left: 16px;
+      .show-more {
+        background: #ffffff;
+        /* 背景及分割线/16% */
+
+        border: 1px solid rgba(38, 42, 51, 0.16);
+        border-radius: 4px;
+        height: 32px;
+        line-height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-family: 'PingFang SC';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        /* identical to box height, or 114% */
+
+        text-align: center;
+
+        /* 字体及ICON颜色/主要文字100% */
+
+        color: #262a33;
+        margin-top: 6px;
+      }
+    }
+  }
+}
+
+.charts-wrap {
+  height: 322px;
+}
+
+.my-drawer {
+  :global(.ant-drawer-body) {
+    padding: 0 !important;
+  }
+}
+.drawer-wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  .drawer-header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    // padding: 16px 20px;
+    justify-content: space-between;
+    .close-icon {
+      cursor: pointer;
+    }
+  }
+  .drawer-content {
+    flex: 1;
+    height: 0;
+    overflow-y: auto;
+  }
+  .drawer-footer {
+    display: flex;
+    padding: 20px 0;
+    justify-content: flex-end;
+  }
+}

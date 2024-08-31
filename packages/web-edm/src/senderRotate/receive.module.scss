@@ -1,0 +1,14 @@
+.receive-wrap {
+  height: 310px;
+  background-color: $white;
+  padding: 16px;
+  margin-top: 16px;
+  .title {
+    color: $Text-5;
+    @include p1-4-med14;
+    margin-bottom: 4px;
+  }
+  .line {
+    height: 252px;
+  }
+}

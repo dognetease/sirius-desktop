@@ -1,0 +1,234 @@
+.com-mail-tag {
+  height: 20px;
+  line-height: 20px;
+  // background-color: rgba($color: $Warning-6, $alpha: 1);
+  background-color: #ffb54c;
+  color: #fff;
+  margin-right: 4px;
+  font-size: 12px;
+  border-radius: 2px;
+  padding: 0 4px;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &:hover {
+    .tag-extra {
+      display: flex;
+    }
+  }
+
+  .tag-extra {
+    margin: 0 2px;
+    padding: 0 3px;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    // background-color: rgba($color: $Warning-6, $alpha: 1);
+    background-color: $Warning-6;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.com-mail-tag-more {
+  // background-color: rgba($color: $Fill-2_5, $alpha: 1);
+  background-color: $Fill-2_5;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 1);
+  cursor: pointer;
+}
+
+.com-mail-tag-limit {
+  max-width: 54px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin checkboxdefault($color) {
+  .ant-checkbox .ant-checkbox-inner {
+    border: 1px solid $color;
+  }
+  .ant-checkbox-indeterminate .ant-checkbox-inner::after {
+    background-color: $color;
+  }
+  .ant-checkbox-checked .ant-checkbox-inner::after {
+    background-color: $color;
+  }
+  .mt-footer-menu-wrap .green .ant-checkbox .ant-checkbox-inner {
+    border: 1px solid $color;
+  }
+  .ant-checkbox-checked .ant-checkbox-inner {
+    background-color: $color;
+  }
+  .ant-checkbox-checked::after {
+    border: 1px solid $color;
+  }
+}
+
+.mt-footer-menu-wrap {
+  background-color: #fff;
+  max-height: 340px;
+  min-height: 10px;
+  width: 212px;
+  display: flex;
+  flex-direction: column;
+  // box-shadow: 0px 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+  box-shadow: 0px 4px 8px rgba(#272e47, 0.1);
+  border-radius: 5px;
+  // border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+  border: 0.5px solid rgba(#272e47, 0.2);
+
+  .mt-none {
+    // color: rgba($color: $Text-3, $alpha: 1);
+    color: #747a8c;
+    padding: 53px 0 32px 0;
+    text-align: center;
+  }
+
+  .mt-list {
+    flex: 1;
+    overflow-y: auto;
+    padding-top: 8px;
+  }
+
+  .mt-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 16px;
+    height: 30px;
+  }
+
+  .mt-list {
+    .mt-item {
+      cursor: pointer;
+
+      &:hover {
+        // background-color: rgba($color: $Fill-2_5, $alpha: 1);
+        background-color: #f0f2f7;
+      }
+    }
+  }
+
+  .mt-oper-wrap {
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+    margin-left: 2px;
+    cursor: pointer;
+    height: 20px;
+
+    .checkbox {
+      line-height: initial;
+    }
+  }
+
+  .mt-content-warp {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    // color: rgba($color: $Text-5, $alpha: 1);
+    color: #272e47;
+    cursor: pointer;
+    line-height: 30px;
+  }
+
+  .mt-footer-btns {
+    padding-bottom: 8px;
+
+    .mt-item:hover {
+      .mt-content-warp {
+        color: #386ee7;
+      }
+
+      .mt-oper-wrap {
+        .add-svg {
+          path {
+            fill: #386ee7 !important;
+          }
+        }
+        .delete-svg {
+          path {
+            stroke: #386ee7 !important;
+          }
+        }
+      }
+    }
+
+    .mt-content-warp {
+      color: #262a33;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .mt-line {
+    height: 1px;
+    margin: 15px 18px;
+    border-top: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+  }
+
+  .checkbox {
+    .ant-checkbox-inner {
+      display: none;
+    }
+
+    .ant-checkbox + span {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
+    .ant-checkbox-indeterminate .ant-checkbox-inner {
+      background-color: #fff;
+    }
+    .ant-checkbox-indeterminate .ant-checkbox-inner::after {
+      width: 9px;
+    }
+  }
+
+  .tag-icon {
+    vertical-align: middle;
+  }
+
+  .color1 {
+    $color: #6ba9ff;
+    @include checkboxdefault($color);
+  }
+
+  .color2 {
+    $color: #70ccab;
+    @include checkboxdefault($color);
+  }
+
+  .color3 {
+    $color: #aa90f4;
+    @include checkboxdefault($color);
+  }
+
+  .color4 {
+    $color: #f7a87c;
+    @include checkboxdefault($color);
+  }
+
+  .color5 {
+    $color: $Error-5;
+    @include checkboxdefault($color);
+  }
+
+  .color6 {
+    $color: $Text-2;
+    @include checkboxdefault($color);
+  }
+}

@@ -1,0 +1,121 @@
+@import '@web-common/styles/variables.scss';
+
+@import '../../../web/src/styles/varies';
+.setting-menu {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // background-color: #fff;
+  background-color: $white;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+}
+// .setting-menu-web {
+//   top: 48px !important;
+// }
+
+.web-wm-entry {
+  position: unset;
+}
+
+.config-title {
+  flex: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  box-shadow: inset 0px -0.5px 0px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+  padding: 0 16px;
+  font-weight: 500;
+  // background-color: #fff;
+  background-color: $white;
+  &-icon {
+    @include sirius-no-drag;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    background-image: url('../../../web/src/images/icons/close_icon.svg');
+    background-size: 100% 100%;
+  }
+}
+
+.config-content {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  margin: 24px 24px 0 24px;
+
+  .config-content-button {
+    margin-right: 15px;
+  }
+  &-wrap {
+    margin-top: 12px;
+    flex: 1;
+    @include sirius-scroll;
+  }
+  &-title {
+    flex: 1;
+    flex-grow: 10;
+    font-weight: 700;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  }
+  &-checkbox {
+    margin: 0 0 28px 0;
+    &-title {
+      color: $Text-5;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      @include p1-4-med14();
+      margin-bottom: 6px;
+    }
+
+    &-info {
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+      font-style: normal;
+      font-weight: normal;
+      @include c4-1-reg12();
+      display: flex;
+      align-items: center;
+      &-link {
+        margin-left: 4px;
+        color: $Text-2;
+        cursor: pointer;
+      }
+      .cache-path {
+        :global(.ant-input) {
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+      .cache-dir-link {
+        user-select: none;
+        font-size: 12px;
+      }
+    }
+    &-select {
+      width: 180px;
+    }
+  }
+}
+
+.beta-tag {
+  margin-left: 4px;
+  display: inline-block;
+  width: 35px;
+  height: 15px;
+  line-height: 15px;
+  text-align: center;
+  color: $white;
+  background-color: $Success-5;
+  border-radius: 2px;
+  i {
+    font-size: 12px;
+    transform: scale(0.83333);
+    font-style: normal;
+  }
+}

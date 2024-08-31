@@ -1,0 +1,13 @@
+.wrapper {
+  :global {
+    .ant-radio-button-wrapper-checked {
+      border-color: #4c6aff !important;
+      border-right-color: #4c6aff !important;
+      color: #4c6aff !important;
+    }
+
+    .ant-radio-button-wrapper:hover {
+      color: #4c6aff !important;
+    }
+  }
+}

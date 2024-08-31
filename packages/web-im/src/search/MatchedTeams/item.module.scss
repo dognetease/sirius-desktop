@@ -1,0 +1,44 @@
+@import '../../../../web/src/styles/varies';
+.team-info {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding: 16px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  p {
+    margin: 0;
+  }
+}
+
+.team-desc {
+  width: calc(100% - 44px);
+  .team-name-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .team-name {
+    padding-left: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    // color: $main-font-color;
+    color: $font-color-2;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .team-contain {
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.6);
+    font-size: 12px;
+    line-height: 16px;
+    padding-left: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.highlight {
+  color: $main-enhance-color;
+}

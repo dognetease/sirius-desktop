@@ -1,0 +1,10 @@
+.rule-item {
+  color: $Text-5;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 12px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

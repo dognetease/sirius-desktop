@@ -1,0 +1,49 @@
+@import '../../common.module.scss';
+
+.rule-detail {
+  min-height: 0; // fix flex height
+
+  :global(.ant-tabs-tab) {
+    padding: 12px 0 6px;
+  }
+
+  :global(.ant-tabs-ink-bar) {
+    background-color: transparent;
+    &::after {
+      content: '';
+      width: 12px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      background-color: #386ee7;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.table {
+  overflow: hidden;
+  flex: 1;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #232d47;
+  padding-bottom: 4px;
+}
+
+.operation {
+  text-align: right;
+}
+
+.rule-data-range {
+  margin-right: 5px;
+}
+
+.menu-item {
+  min-width: 80px;
+  color: #232d47;
+}

@@ -1,0 +1,56 @@
+.tab-content-wrap {
+  height: 500px;
+  border: 1px solid $Line-3;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+
+  .search {
+    padding: 16px 16px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .contact-paste {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+    .excel {
+      height: 64px;
+      display: flex;
+      align-items: center;
+      background: #f9fafb;
+      border-radius: 3px;
+      justify-content: flex-start;
+      gap: 16px;
+      padding: 0 16px;
+      width: 90%;
+      .content {
+        flex: 1;
+        min-width: 0;
+      }
+    }
+    textarea {
+      height: 100% !important;
+    }
+  }
+  .upload-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $Line-3;
+  }
+
+  .btn-box {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    border-top: 1px solid $Line-3;
+  }
+}

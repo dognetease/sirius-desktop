@@ -1,0 +1,28 @@
+@import '../../../../web/src/styles/varies';
+
+.wrap {
+  width: 476px;
+  height: 480px;
+  padding: 24px 38px;
+  box-sizing: border-box;
+  .title {
+    margin: 54px 0 46px 0;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 24px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  }
+  .subTitle {
+    @include p1-3-reg14();
+    color: $Text-2;
+    margin-bottom: 30px;
+  }
+  .noTip {
+    margin-top: 16px;
+    @include p1-3-reg14();
+    color: $Brand-6;
+    cursor: pointer;
+  }
+}

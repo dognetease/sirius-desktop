@@ -1,0 +1,32 @@
+@import '../../../../web/src/styles/varies';
+.empty-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  background-color: $white;
+  p {
+    margin-bottom: 0;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.4);
+  }
+  .empty-img {
+    // @include sirius-empty();
+  }
+  .empty-refesh-icon {
+    background: url(../../../../web/src/images/icons/sync.svg) center center no-repeat;
+    background-size: contain;
+    height: 16px;
+    width: 16px;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

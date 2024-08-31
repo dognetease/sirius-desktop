@@ -1,0 +1,289 @@
+.classify-item {
+  display: flex;
+  position: relative;
+  border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+  border-radius: 4px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background-color: $white;
+  .move {
+    display: flex;
+    align-items: center;
+    padding-right: 16px;
+    cursor: move;
+  }
+  .content {
+    overflow: hidden;
+    width: 100%;
+    .rule {
+      &-container {
+        width: 100%;
+      }
+      display: flex;
+      justify-content: space-between;
+      .rule-detail {
+        display: flex;
+        // color: #51555c;
+        color: $font-color-1;
+        line-height: 22px;
+        // padding-bottom: 8px;
+        .rule-phase {
+          padding-right: 8px;
+          font-weight: 500;
+        }
+        .rule-content {
+          flex: 1;
+          // color: #51555c;
+          color: $font-color-1;
+          flex-flow: wrap;
+          word-break: break-all;
+          .rule-item {
+            display: flex;
+            &:not(:first-child) {
+              position: relative;
+              left: -27px;
+              .prep {
+                margin-right: 12px;
+                color: $Text-2;
+              }
+            }
+            &-content {
+              flex: 1;
+            }
+          }
+        }
+        .action-fail {
+          display: flex;
+          align-items: center;
+        }
+      }
+      .rule-detail-phase {
+        margin-top: 3px;
+      }
+      .contact {
+        display: inline-flex;
+        box-sizing: border-box;
+        height: 24px;
+        padding: 2px 8px;
+        background: $Fill-2_5;
+        border-radius: 12px;
+        font-size: 12px;
+        margin: 0 4px;
+        margin-bottom: 5px;
+        .whole-name {
+          display: inline-block;
+          max-width: 150px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+      .subject,
+      .attachmentName {
+        margin-left: 5px;
+        &:not(:last-child)::after {
+          content: ',';
+        }
+      }
+      .tag {
+        display: inline-block;
+        color: #fff;
+        padding: 2px 3px;
+        border-radius: 12px;
+        font-size: 10px;
+        margin-left: 4px;
+        border-radius: 2px;
+        height: 16px;
+        line-height: 13px;
+      }
+    }
+    .operator {
+      padding-left: 8px;
+      display: flex;
+      z-index: 2;
+      .operator-icon {
+        cursor: pointer;
+      }
+      .unstart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 8px;
+        min-width: 52px;
+        height: 20px;
+        color: #ffaa00;
+        font-size: 12px;
+        background: $Warning-1;
+        border-radius: 2px;
+      }
+      .unable {
+        background: $Error-1;
+        color: #f74f4f;
+      }
+      .icon-word {
+        margin-right: 2px;
+      }
+    }
+    .apply-account {
+      // border-top: 1px solid $Fill-4;
+      padding-top: 8px;
+      font-size: 12px;
+      line-height: initial;
+      word-break: break-all;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      color: #7d8085;
+    }
+    .apply-line {
+      height: 1px;
+      background: $Fill-4;
+    }
+  }
+  .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    // background: #ffffff;
+    background: $white;
+    opacity: 0.6;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.operator-popover {
+  padding: 8px 0;
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 0 16px;
+    cursor: pointer;
+    width: 130px;
+    height: 30px;
+    &:hover {
+      background: #f0f0f1;
+    }
+  }
+  .disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    &:hover {
+      background: none;
+    }
+  }
+}
+
+.split-line {
+  margin: 4px 16px;
+  border-top: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+  transform: translate(-25%) scale(0.5);
+  width: 200%;
+}
+
+.rule-line {
+  margin-left: 0;
+  margin-top: 8px;
+}
+
+.operator-content {
+  :global(.ant-popover-inner .ant-popover-inner-content) {
+    padding: 0;
+  }
+}
+
+.move-target {
+  position: absolute;
+}
+
+.empty {
+  height: calc(100% - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #a8aaad;
+}
+
+.spinning {
+  height: 100%;
+  :global(.ant-spin-container) {
+    height: 100%;
+  }
+  & > div {
+    height: 100%;
+  }
+  & > div > :global(.ant-spin) {
+    height: 700px;
+    background: $white;
+  }
+}
+
+.select-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  .title {
+    flex: none;
+    font-weight: 500;
+    font-size: 14px;
+    margin-right: 8px;
+  }
+  .option-wrapper {
+    display: flex;
+    flex-flow: column;
+    max-height: 780px;
+    box-sizing: border-box;
+    padding: 8px 0;
+    .check-box {
+      display: flex;
+      flex-flow: column;
+    }
+    .option {
+      display: flex;
+      height: 32px;
+      align-items: center;
+      cursor: pointer;
+      padding-left: 4px;
+      &:hover {
+        background-color: #f0f0f1;
+      }
+    }
+  }
+  :global {
+    .ant-checkbox-wrapper {
+      height: 32px;
+      padding-bottom: 6px;
+      display: flex;
+      align-items: center;
+      width: 30px;
+      justify-content: center;
+      margin-left: 0;
+    }
+    .ant-select-dropdown {
+      padding: 0;
+    }
+    .ant-select-dropdown-empty {
+      color: #262a33;
+    }
+    .rc-virtual-list {
+      flex: 1;
+    }
+    .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+      border-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+    }
+    .ant-select-multiple .ant-select-selector {
+      padding: 1px 8px;
+    }
+    .ant-select-selection-item {
+      border-radius: 12px !important;
+      background: $Fill-2_5 !important;
+      -webkit-margin-end: 8px !important;
+      margin-inline-end: 8px !important;
+    }
+    .ant-select-multiple .ant-select-selection-placeholder {
+      left: 18px;
+    }
+  }
+}

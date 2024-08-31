@@ -1,0 +1,49 @@
+@import '../../../../web/src/styles/varies.scss';
+.timeZoneSelectWrap {
+  width: 100%;
+  color: var(--text-3, #747a8c);
+  height: 40px;
+  display: flex;
+  // .durationWrap{
+  //   display: flex;
+  .durationText {
+    margin-right: 4px;
+    // margin-left: 12px;
+  }
+  .durationTextExt {
+    height: 20px;
+    position: absolute;
+    top: 16px;
+    // font-size: 14px;
+    left: 0;
+  }
+  // }
+
+  :global(.ant-select-selector) {
+    padding: 0 !important;
+    align-self: center;
+  }
+  // :global(.ant-select-arrow){
+  //   line-height: 40px;
+  // }
+  :global(.ant-select-selector .ant-select-selection-item) {
+    height: 45px;
+    line-height: 45px;
+  }
+  .durationTag {
+    padding: 0 4px;
+    height: 16px;
+    display: inline-block;
+    // vertical-align: middle;
+    line-height: 16px;
+    background: rgba($color: #386ee7, $alpha: 0.2);
+    color: #386ee7;
+    border-radius: 2px;
+    margin: 0 4px;
+    font-size: 12px;
+    &.durationTagWarn {
+      background: rgba($color: #f74f4f, $alpha: 0.2);
+      color: #f74f4f;
+    }
+  }
+}

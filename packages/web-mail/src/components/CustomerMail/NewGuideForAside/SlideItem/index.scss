@@ -1,0 +1,26 @@
+.slide-item-container {
+  width: 280px;
+  height: 96px;
+  padding: 12px 22px;
+
+  .slide-item-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+
+    .slide-item-title {
+      font-size: 14px;
+      line-height: 22px;
+      color: #232d47;
+      margin-left: 5px;
+      font-weight: 500;
+    }
+  }
+
+  .slide-item-bottom {
+    font-size: 12px;
+    line-height: 20px;
+    text-align: justify;
+    color: $label-6_3;
+  }
+}

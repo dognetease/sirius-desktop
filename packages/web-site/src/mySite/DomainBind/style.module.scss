@@ -1,0 +1,331 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.container {
+  padding: 20px 16px;
+  width: 100%;
+  height: 100%;
+  background: #f6f7fa;
+  overflow-y: auto;
+
+  :global {
+    .ant-table {
+      color: $Text-5;
+    }
+  }
+
+  .header {
+    flex: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    .header-right {
+      display: flex;
+      align-items: center;
+
+      span {
+        color: $Text-4;
+        font-size: 14px;
+        line-height: 22px;
+        margin: 0 8px 0 5.5px;
+      }
+
+      div {
+        color: $Brand-6;
+        font-size: 14px;
+        line-height: 22px;
+        cursor: pointer;
+      }
+    }
+    :global(.lx-btn-primary) {
+      height: 28px;
+      margin-left: 20px;
+      padding: 0 12px;
+    }
+    :global(.lx-ui-btn-primary) {
+      height: 28px;
+      margin-left: 20px;
+      padding: 0 12px;
+    }
+  }
+}
+
+.main {
+  padding: 20px;
+  background: #fff;
+  width: 100%;
+  min-width: 700px;
+  min-height: calc(100% - 44px);
+  font-weight: 400;
+  color: $Text-5;
+  position: relative;
+
+  :global {
+    .ant-btn-primary {
+      background-color: #4c6aff;
+    }
+  }
+}
+
+.operation {
+  display: flex;
+  align-items: center;
+  &-divider {
+    height: 14px;
+    width: 0;
+    border-left: 1px solid $Line-3;
+    margin: 0 16px;
+  }
+}
+
+.checkInfo {
+  .copy {
+    width: 410px;
+  }
+}
+
+.record-modal {
+  p {
+    margin-bottom: 8px;
+    color: #747a8c;
+    line-height: 22px;
+  }
+  a {
+    color: #4c6aff;
+  }
+
+  :global {
+    .ant-btn-primary {
+      background-color: #4c6aff;
+    }
+    .ant-modal-confirm-content {
+      padding-left: 8px !important;
+    }
+    .ant-modal-content {
+      border-radius: 4px;
+    }
+  }
+}
+
+.empty-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span {
+    color: $Text-3;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 8px;
+  }
+}
+
+.submit-btn {
+  margin-top: 32px;
+  cursor: pointer;
+  color: #fff;
+  padding: 5px 24px;
+  background: $Brand-6;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background: $Brand-5;
+  }
+
+  &:active {
+    background: $Brand-7;
+  }
+}
+
+.status-1,
+.status-2,
+.status-3 {
+  display: flex;
+  align-items: center;
+  > span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+}
+
+.status-1 span {
+  background: $Warning-6;
+}
+.status-2 span {
+  background: $Brand-6;
+}
+.status-3 span {
+  background: $Success-6;
+}
+
+.footer {
+  margin-top: 53px;
+  color: #4c6aff;
+  display: flex;
+  align-items: center;
+  svg {
+    margin-right: 5px;
+  }
+  &-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  &-tag {
+    width: 48px;
+    height: 20px;
+    margin-left: 9px;
+    border-radius: 2px;
+    color: #8d92a1;
+    background: #d6f7f1;
+    text-align: center;
+    line-height: 20px;
+  }
+  :global(.lx-btn-primary) {
+    margin-left: auto;
+  }
+  :global(.lx-ui-btn-primary) {
+    margin-left: auto;
+  }
+}
+
+.cert-list-modal {
+  :global {
+    .ant-modal-header {
+      border-bottom: none;
+      padding: 24px 20px 0;
+    }
+
+    .ant-modal-title {
+      color: $Text-5;
+    }
+
+    .ant-modal-body {
+      padding: 16px 20px;
+    }
+
+    .ant-modal-footer {
+      border-top: none;
+    }
+  }
+
+  .cert-list {
+    width: 100%;
+    max-height: 300px;
+    overflow: auto;
+  }
+
+  .cert-list-item {
+    box-sizing: border-box;
+    padding: 8px 12px;
+    width: 100%;
+    height: 112px;
+    background: #f6f7fa;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .content-line {
+    display: flex;
+    height: 32px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    .content {
+      color: $Text-5;
+      font-size: 14px;
+      line-height: 22px;
+
+      span {
+        margin-left: 4px;
+        color: $label-6_3;
+        font-size: 12px;
+        line-height: 16px;
+        padding: 2px 6px;
+        background: $label-6_1;
+        border-radius: 2px;
+        &.active {
+          color: $label-2_3;
+          background: $label-2_1;
+        }
+      }
+
+      .cert-type {
+        color: $label-1_3;
+        font-size: 12px;
+        line-height: 16px;
+        padding: 2px 6px;
+        background: $label-1_1;
+      }
+    }
+  }
+
+  .content-label {
+    width: 70px;
+    color: $Text-3;
+    font-size: 14px;
+    line-height: 22px;
+    margin-right: 4px;
+    display: flex;
+    align-items: center;
+  }
+
+  .content-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .content-right {
+    color: $Text-3;
+    font-size: 12px;
+    line-height: 20px;
+    display: flex;
+
+    .cert-operator {
+      font-size: 14px;
+      line-height: 22px;
+      color: $Brand-6;
+      margin-left: 8px;
+      cursor: pointer;
+    }
+  }
+}
+
+.deploy-success {
+  :global {
+    .ant-modal-body {
+      padding: 36px 24px;
+    }
+  }
+
+  .deploy-success-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .deploy-success-title {
+    margin-top: 20px;
+    color: $Text-5;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .deploy-success-info {
+    margin-top: 4px;
+    color: $Text-3;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

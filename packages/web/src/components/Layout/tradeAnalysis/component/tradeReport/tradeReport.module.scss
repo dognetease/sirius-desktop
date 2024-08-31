@@ -1,0 +1,102 @@
+@import '@web-common/styles/variables.scss';
+
+.report {
+  &-content {
+    // padding: 16px;
+    border-radius: 4px;
+    border: 1px solid $Line-1;
+    background: #fff;
+    margin-top: 12px;
+  }
+
+  &-header {
+    display: flex;
+    // height: 32px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 16px 0;
+    // margin-bottom: 16px;
+  }
+
+  &-title {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+    color: $Text-5;
+    align-items: center;
+
+    :global {
+      .ant-tag {
+        display: block;
+      }
+    }
+
+    &-intro {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      color: $Text-4;
+    }
+  }
+
+  &-container {
+    padding: 16px;
+  }
+}
+
+.echars {
+  &-select {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    padding: 16px 16px 0;
+  }
+
+  &-record {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: $Text-3;
+  }
+
+  &-banner {
+    padding: 80px 16px;
+    background: url(../../../../../images/globalSearch/echarsBanner.png) center center no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+
+    img {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      width: 120px;
+      height: 17px;
+    }
+  }
+
+  &-bnr-title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 8px;
+
+    span {
+      color: $Warning-6;
+    }
+  }
+
+  &-intro {
+    text-align: center;
+    color: $Text-1;
+  }
+}
+
+.tag {
+  height: 20px;
+}

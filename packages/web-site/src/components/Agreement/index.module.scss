@@ -1,0 +1,81 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.agreement {
+  :global {
+    .ant-modal-body {
+      padding-top: 12px;
+      height: calc(100vh - 350px);
+      min-height: 540px;
+    }
+    .ant-modal-title {
+      color: $Text-5 !important;
+    }
+    .ant-modal-header {
+      border-bottom-color: rgb(240, 241, 244) !important;
+    }
+  }
+
+  .container {
+    color: $Text-5;
+    font-size: 14px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .time {
+      flex: 0;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      color: $Text-2;
+      margin-bottom: 8.5px;
+    }
+
+    .bold {
+      font-weight: 600;
+    }
+
+    .content {
+      overflow: auto;
+      flex: 1 1 auto;
+      margin-bottom: 18px;
+      line-height: 175%;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        width: 6px;
+        border-radius: 3px;
+        background: #e1e3e8 !important;
+      }
+
+      div {
+        margin-bottom: 4px;
+      }
+    }
+
+    .submit-btn {
+      align-self: center;
+      flex: 0;
+      background: $Brand-6;
+      border-radius: 4px;
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 22px;
+      padding: 5px 16px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+
+      &:hover {
+        background: $Brand-5;
+      }
+
+      &:active {
+        background: $Brand-7;
+      }
+    }
+  }
+}

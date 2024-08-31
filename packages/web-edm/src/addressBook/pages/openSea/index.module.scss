@@ -1,0 +1,89 @@
+.container {
+  background: #f9fafb;
+  height: 100%;
+  min-width: 800px;
+  overflow-y: auto;
+}
+.title {
+  font-style: normal;
+  color: #232d47;
+  margin-bottom: 20px;
+  @include h4-med24();
+}
+.filter {
+  background: #ffffff;
+  border-radius: 8px;
+}
+.actions {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  button + button {
+    margin-left: 10px;
+  }
+  :global {
+    .ant-btn {
+      min-width: 54px;
+      border-radius: 2px;
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
+  .gray {
+    background: #f0f3f5;
+    color: $label-6_3;
+    border-color: transparent;
+  }
+}
+.table {
+  // :global {
+  //     .ant-table-thead > tr > th {
+  //         background: #fff;
+  //         color: #7A8599;
+  //         font-family: 'PingFang SC';
+  //         font-style: normal;
+  //         font-weight: 400;
+  //         font-size: 14px;
+  //         line-height: 22px;
+  //         &::before {
+  //             display: none;
+  //         }
+  //     }
+  // }
+
+  .min-width-cell {
+    min-width: 110px;
+  }
+
+  .max-width-cell {
+    max-width: 200px;
+  }
+
+  .one-index {
+    z-index: 1;
+  }
+
+  .operate {
+    min-width: 150px;
+    max-width: 200px;
+  }
+}
+
+.company-name-cell:hover {
+  .company-search-icon-wrapper {
+    display: inline-flex;
+  }
+}
+
+.company-search-icon-wrapper {
+  display: none;
+  padding: 6px;
+  border-radius: 2px;
+  margin-left: 4px;
+  flex-shrink: 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f9fafb;
+  }
+}

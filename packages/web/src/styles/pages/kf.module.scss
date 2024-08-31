@@ -1,0 +1,11 @@
+.kfWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  .iframeWrap {
+    width: 100%;
+    height: 100%;
+  }
+}

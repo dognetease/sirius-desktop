@@ -1,0 +1,73 @@
+@import '@web-common/styles/waimao/varies.scss';
+.globalAdvertNotification {
+  width: 284px;
+  height: 160px;
+  background: #ffffff;
+  /* 线条/Line-1 浅常规 */
+  border: 1px solid $Line-1;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  .slide {
+    width: 100%;
+    height: 160px;
+    .content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .closeBtn {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  &:hover {
+    :global {
+      .ant-carousel .slick-dots {
+        background: rgba($Fill-8-r, $Fill-8-g, $Fill-8-b, 0.6);
+      }
+    }
+  }
+  :global {
+    .ant-carousel .slick-dots {
+      display: inline-flex !important;
+      align-items: flex-start;
+      padding: 10px 16px;
+      gap: 8px;
+      border-radius: 100px;
+      bottom: 41px;
+      margin: 0px auto;
+      width: auto;
+      position: relative;
+      height: 26px;
+      transform: translateX(-50%);
+      left: 50%;
+    }
+    .ant-carousel .slick-dots li {
+      width: 6px;
+      height: 6px;
+      margin: 0px;
+    }
+    .ant-carousel .slick-dots li.slick-active {
+      width: 15px;
+    }
+    .ant-carousel .slick-dots li.slick-active button {
+      width: 15px;
+    }
+    .ant-carousel .slick-dots li button {
+      width: 6px;
+      height: 6px;
+      border-radius: 87.5px;
+      &:hover {
+        background: #ffffff;
+        opacity: 1;
+      }
+    }
+  }
+}

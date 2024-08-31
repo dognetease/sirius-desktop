@@ -1,0 +1,92 @@
+@import '../../../web/src/styles/varies';
+// 导入样式常量
+@import '../common/style-constant/style-constant';
+.team-chat-head-wrapper {
+  height: $team-chat-head-height;
+  padding: 0 19px 0 16px;
+  box-sizing: border-box;
+  // background: #ffffff;
+  background-color: $white;
+  box-shadow: 0px 0.5px 0px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  .nickname {
+    font-family: PingFang;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    /* identical to box height, or 100% */
+    // color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    color: $Text-5;
+    padding-left: 8px;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    > span {
+      cursor: pointer;
+    }
+  }
+  .nickname-flex > span {
+    display: flex;
+    align-items: center;
+    .text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-wrap: normal;
+    }
+    .icon {
+      position: relative;
+      left: -6px;
+      width: 20px;
+      height: 20px;
+      border-radius: 2px;
+      cursor: pointer;
+      margin-left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        background: #f0f0f1;
+      }
+    }
+  }
+  .icon {
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+    border-radius: 6px;
+    padding: 4px;
+    cursor: pointer;
+    @include sirius-no-drag();
+    &:hover {
+      background: #f0f0f1;
+    }
+    &-selected {
+      background: #386ee7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:hover {
+        background: #386ee7;
+      }
+    }
+  }
+}
+
+.team-setting-drawer {
+  :global(.ant-drawer-content-wrapper) {
+    box-shadow: none !important;
+  }
+  :global(.ant-drawer-content) {
+    background-color: $white;
+  }
+  :global(.ant-drawer-body) {
+    padding: 0;
+    display: flex;
+  }
+}

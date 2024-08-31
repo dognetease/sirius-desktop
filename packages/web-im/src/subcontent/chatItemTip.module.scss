@@ -1,0 +1,49 @@
+@import '../../../web/src/styles/varies';
+.msg-item-tip {
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  /* identical to box height, or 100% */
+  text-align: center;
+  /* 文字颜色/40% */
+  // color: #a8aaad;
+  color: $calendar-1;
+  padding: 10px 0;
+}
+
+.edit {
+  padding: 0 4px;
+  color: $main-enhance-color;
+  cursor: pointer;
+}
+
+.recall-nick {
+  color: $main-enhance-color;
+  cursor: pointer;
+}
+
+.remove-member-msg-wrapper {
+  text-align: center;
+  padding: 0;
+  padding-bottom: 10px;
+  .content {
+    text-align: left;
+    background: #f4f4f5;
+    border-radius: 6px;
+    padding: 6px 12px;
+    line-height: 20px;
+    display: inline-block;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-size: 12px;
+    color: #7d8085;
+  }
+  .recall-nick {
+    padding: 0 3px;
+    &:first-of-type {
+      padding-left: 0;
+    }
+  }
+}

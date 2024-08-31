@@ -1,0 +1,144 @@
+@import '@web-common/styles/variables.scss';
+
+@mixin form-item-common() {
+  .form-item {
+    align-items: baseline;
+    font-size: 12px;
+    position: relative;
+    padding-right: 60px;
+    .click-btn {
+      position: absolute;
+      width: 50px;
+      // top: 35px;
+      color: #386ee7;
+      padding-left: 10px;
+    }
+    margin-bottom: 20px;
+  }
+  .form-item-country {
+    align-items: flex-start;
+    .ant-checkbox-wrapper {
+      margin-top: 15px;
+    }
+    .ant-checkbox-wrapper + .ant-checkbox-wrapper {
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+    .ant-checkbox-wrapper > span:last-child {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 6px;
+      padding-right: 6px;
+      box-sizing: border-box;
+      width: 120px;
+    }
+    .ant-checkbox-wrapper > .ant-checkbox {
+      top: 3px;
+    }
+  }
+}
+
+.search-box {
+  width: 100%;
+  min-height: 176px;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 20px 24px;
+  .title-wrap {
+    display: flex;
+    justify-content: space-between;
+    .title {
+      font-weight: 500;
+      color: #232d47;
+      margin-bottom: 24px;
+      &:last-child {
+        font-weight: 400;
+        color: $Avatar-6;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .senior-content {
+    padding: 24px;
+    > h3 {
+      font-size: 20px;
+      margin-bottom: 33px;
+    }
+
+    .ant-form-item-label {
+      > label {
+        font-size: 14px;
+        color: #7a8599;
+      }
+    }
+
+    @include form-item-common;
+  }
+
+  > input,
+  > span {
+    font-size: 12px;
+  }
+  .ant-picker {
+    padding: 6px 11px;
+  }
+  .ant-picker {
+    border-radius: 4px !important;
+  }
+
+  @include form-item-common;
+
+  .form-item-time {
+    align-items: center;
+    .ant-picker-range-separator {
+      // color: #A8AAAD;
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+  .check-all {
+    display: block;
+    .check-all-item {
+      margin-top: 0px;
+    }
+    .ant-checkbox-wrapper > span:last-child {
+      width: auto !important;
+    }
+    > span {
+      color: $Avatar-6;
+    }
+  }
+  .collapse-top {
+    padding-top: 0;
+    overflow: hidden;
+  }
+  .collapse-expand {
+    padding-top: 0;
+    overflow: visible;
+  }
+  .ant-form-item-label {
+    width: 94px;
+    color: #262a33;
+    opacity: 0.4;
+    height: 20px;
+    line-height: 20px;
+    label {
+      font-size: 12px;
+      height: auto;
+    }
+  }
+  .ant-form-item:last-child {
+    margin-bottom: 0;
+  }
+  .ant-checkbox-wrapper {
+    font-weight: 400;
+    color: #262a33;
+    opacity: 0.9;
+    height: 20px;
+    line-height: 20px;
+    align-items: flex-start;
+  }
+}

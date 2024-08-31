@@ -1,0 +1,235 @@
+const colors = require('colors');
+const nodePath = require('path');
+const pinyin = require('tiny-pinyin');
+const fs = require('fs');
+const ts = require('typescript');
+const { collectText, collectTranslated } = require('./transform-util');
+
+// 现有文件
+const OriginZh = require('../../api/src/utils/global_label/zh.json');
+const OriginZhWaimao = require('../../api/src/utils/global_label/waimao/zh.json');
+
+const currentJson = { ...OriginZhWaimao, ...OriginZh };
+
+// const originJson = require('./result.json');
+const originJson = {};
+const printer = ts.createPrinter({ newLine: ts.NewLineKind.CarriageReturnLineFeed });
+
+// 匹配中文正则
+const pattern = new RegExp('[\u4E00-\u9FA5]+');
+// 表情
+const pattern1 = /\[([\u4E00-\u9FA5]{1,4})\]/;
+// 注释
+const patternComment = /(\*\*)|(\/\/)/;
+
+const { SyntaxKind, factory } = ts;
+
+const filenames = [];
+/**
+ * todo:
+ * 1. 中文做key的处理
+ * 2. web-im/src/common/timeline.tsx、packages/web-mail/src/util.tsx 两个文件的替换
+ */
+
+// exports.set = set;
+
+function getNodeInfo(node) {
+  // 获取行列
+  const { line, character: col } = node.getSourceFile().getLineAndCharacterOfPosition(node.pos);
+  // 获取路径
+  const path = 'packages' + node.getSourceFile().fileName.split('packages')[1];
+
+  return {
+    line,
+    col,
+    path,
+  };
+}
+
+function translate(text) {
+  const result = String(text).trim().replace(/,/gi, '，');
+  const entry = Object.entries(currentJson).find(entry => entry[1] === result);
+  if (entry) {
+    return entry[0];
+  }
+  let key = pinyin.convertToPinyin(result.replace(/\r|\n/gi, '').substring(0, 7));
+  if (currentJson[key]) {
+    key += 'v16';
+  }
+  if (originJson[result] != null) {
+    collectTranslated({
+      key,
+      zh: result,
+      en: originJson[result],
+    });
+  } else {
+    collectTranslated({
+      key,
+      zh: result,
+      en: result,
+      noresult: true,
+    });
+  }
+  return key;
+}
+
+function unResolveCollect(key) {
+  collectTranslated({
+    key,
+    zh: '',
+    en: '',
+    noresult: true,
+  });
+}
+
+exports.transformer = function transformer(context) {
+  const visitor = function (node) {
+    const fileName = node.getSourceFile().fileName;
+    if (
+      (nodePath.extname(fileName).includes('ts') || // 解析ts
+        // && (
+        //   /\/sirius-desktop\/packages\/web-edm\/src\/addressBook\//.test(fileName)
+        // )
+        nodePath.extname(fileName).includes('tsx')) &&
+      // && !fileName.includes('packages/api') // api 中的中文先不做处理
+      // && !fileName.includes('FeedBack/feedbackContent.tsx')
+      ![
+        // 黑名单
+        'packages/api',
+        '/FeedBack/',
+        'ErrorBoundary.tsx',
+        'packages/web-common/src/utils/constant.ts',
+        'webmail_impl.ts',
+        'welcome_guide',
+        'Avatar',
+        'LxEditor',
+        'comp_preview',
+        'MultAccountsLoginModal',
+        'packages/web-common/src/components/UI/Button',
+        'web-im/src/common/timeline.tsx',
+        'packages/web-mail/src/util.tsx',
+      ].some(item => fileName.includes(item))
+      // && !fileName.includes('packages/web-mail/src/util.tsx')
+      // && !fileName.includes('web-im/src/common/timeline.tsx')
+    ) {
+      // console.log(colors.bgRed(fileName));
+      const baseExpression = text => {
+        // console.log('@@@', text);
+        const key = translate(text);
+
+        return factory.createConditionalExpression(
+          factory.createBinaryExpression(
+            factory.createTypeOfExpression(factory.createIdentifier('window')),
+            factory.createToken(ts.SyntaxKind.ExclamationEqualsEqualsToken),
+            factory.createStringLiteral('undefined')
+          ),
+          factory.createToken(ts.SyntaxKind.QuestionToken),
+          factory.createCallExpression(factory.createPropertyAccessExpression(factory.createIdentifier('window'), factory.createIdentifier('getLocalLabel')), undefined, [
+            factory.createStringLiteral(key),
+          ]),
+          factory.createToken(ts.SyntaxKind.ColonToken),
+          factory.createStringLiteral('')
+        );
+      };
+
+      // 带括号，(window && window.getLocalLabel({path: 'test', init: 'test'}))
+      const expressionWithBrackets = text => factory.createParenthesizedExpression(baseExpression(text));
+
+      // jsx text 部分
+      if (ts.isJsxText(node)) {
+        const text = node.getFullText();
+        if (text && text.length > 0 && pattern.test(text) && !pattern1.test(text)) {
+          filenames.push(node.getSourceFile().fileName);
+          // console.log(colors.bgBlue(text));
+          /**
+           * 路径：node.getSourceFile().fileName
+           * 文案：node.getFullText()
+           */
+          const { line, col, path } = getNodeInfo(node);
+          // collectText({
+          //   line,
+          //   col,
+          //   path,
+          //   text: text.replaceAll(',', '，'),
+          // });
+          // console.log(colors.bgYellow(fileName, '----test'));
+          // 替换全局方法
+          return factory.createJsxExpression(undefined, baseExpression(text));
+        }
+      } else if (
+        ts.isStringLiteral(node) &&
+        // && fileName.includes('SharePage/sharePage.tsx')
+        !ts.isLiteralTypeNode(node.parent) // 不能是类型节点
+      ) {
+        // 表达式部分的中文
+        const text = node.text || node.getFullText();
+        if (text && text.length > 0 && pattern.test(text) && !pattern1.test(text) && !patternComment.test(text)) {
+          const { line, col, path } = getNodeInfo(node);
+          filenames.push(node.getSourceFile().fileName);
+          if (ts.isJsxAttribute(node.parent)) {
+            return factory.createJsxExpression(undefined, baseExpression(text));
+          }
+          /**
+           * 例子： const conf = { test: '测试' }
+           */
+          if (
+            ts.isPropertyAssignment(node.parent) // 不能是key
+          ) {
+            if (node.parent.getChildren()[0] !== node) {
+              // 不能是中文 key
+              // console.log(colors.bgRed(text, key));
+              return baseExpression(text);
+            }
+            return node;
+          }
+
+          if (ts.isConditionalExpression(node.parent)) {
+            // console.log(colors.bgRed(text), line, col, path);
+            return expressionWithBrackets(text);
+          }
+
+          // 数组元素
+          if (ts.isArrayLiteralExpression(node.parent)) {
+            return baseExpression(text);
+          }
+
+          // return '测试'
+          if (ts.isReturnStatement(node.parent)) {
+            return baseExpression(text);
+          }
+
+          // 如果是函数调用
+          if (ts.isCallExpression(node.parent)) {
+            const parentSource = node.parent.getFullText();
+            if (!parentSource.includes('console')) {
+              // console 中的中文不处理
+              return baseExpression(text);
+            }
+            return node;
+          }
+
+          // 如果是字符串相加
+          if (ts.isBinaryExpression(node.parent)) {
+            return expressionWithBrackets(text);
+          }
+
+          return baseExpression(text);
+        }
+      }
+    }
+
+    return ts.visitEachChild(node, visitor, context);
+  };
+  return function (node) {
+    const sourceFile = ts.visitNode(node, visitor);
+    const filename = sourceFile.fileName;
+
+    // 替换完成之后覆盖文件
+    if (filename && filenames.includes(filename) && !filename.includes('web-im/src/common/timeline.tsx') && !filename.includes('packages/web-mail/src/util.tsx')) {
+      const result2 = printer.printFile(sourceFile);
+      // console.log(colors.bgRed(result2));
+      fs.writeFileSync(filename, result2, 'utf-8');
+    }
+    return sourceFile;
+  };
+};

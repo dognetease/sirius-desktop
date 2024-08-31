@@ -1,0 +1,67 @@
+@import '../../common.module.scss';
+
+.rule-detail {
+  min-height: 0; // fix flex height
+
+  :global(.ant-tabs-tab) {
+    padding: 12px 0 6px;
+  }
+}
+
+.table {
+  overflow: hidden;
+  flex: 1;
+
+  :global(.ant-table-body > table) {
+    padding: 0 10px;
+  }
+
+  :global(.ant-table-header thead th:first-child) {
+    text-indent: 10px;
+  }
+
+  :global(.ant-table-header thead th:last-child) {
+    text-indent: -10px;
+  }
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #232d47;
+  padding-bottom: 4px;
+}
+
+.operation {
+  text-align: right;
+}
+
+.nick-name {
+  font-weight: 500;
+  font-size: 14px;
+  color: #232d47;
+}
+
+.nick-email {
+  font-weight: 400;
+  font-size: 14px;
+  color: #4e5a70;
+}
+
+.search-line {
+  padding-bottom: 12px;
+}
+
+.search-btn {
+  text-align: right;
+}
+
+.state1 {
+  color: #478e83;
+  background: #e6faf6;
+}
+
+.state2 {
+  color: #b16059;
+  background: #feeff1;
+}

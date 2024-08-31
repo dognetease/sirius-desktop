@@ -1,0 +1,19 @@
+#attachmentArea {
+  padding-left: 16px;
+  .attachment-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    .card {
+      margin-right: 12px;
+      margin-bottom: 12px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.hide {
+  display: none;
+}

@@ -1,0 +1,67 @@
+.markting-rule-wrapper {
+  .rule-tip {
+    font-size: 14px;
+    color: $Text-5;
+    // padding-bottom: 12px;
+  }
+  :global(.ant-modal-body) {
+    padding: 8px 20px 0 !important;
+  }
+  :global(.ant-form) label {
+    font-size: 14px;
+    color: $Text-4;
+  }
+  .filter-entry {
+    padding: 0;
+    border-width: 0;
+    > div {
+      display: initial;
+    }
+  }
+  .markting-rule-form-name {
+    margin: 0;
+    :global(.ant-form-item-label) {
+      font-size: 14px;
+      line-height: 22px;
+      padding: 8px 0;
+      color: $Text-4;
+    }
+  }
+  .markting-rule4-contact {
+    :global(.ant-input-group) {
+      display: flex;
+    }
+    :global(.ant-input-group) :last-child {
+      border-top-right-radius: 2px !important;
+      border-bottom-right-radius: 2px !important;
+      border-right-width: 1px !important;
+      width: initial;
+      flex-grow: 1;
+    }
+  }
+  .markting-rule4-markting {
+    :global(.ant-input-group) :first-child {
+      border-top-left-radius: 2px !important;
+      border-bottom-left-radius: 2px !important;
+    }
+    :global(.ant-input-group) {
+      display: flex;
+    }
+    :global(.sirius-select) {
+      width: initial !important;
+      flex-grow: 1;
+    }
+    :global(.sirius-select-ui) {
+      width: initial !important;
+      flex-grow: 1;
+    }
+  }
+  .no-filter-error {
+    color: $Error-6;
+    margin: 0;
+    font-size: 14px;
+    line-height: 22px;
+    padding-top: 6px;
+    display: block;
+  }
+}

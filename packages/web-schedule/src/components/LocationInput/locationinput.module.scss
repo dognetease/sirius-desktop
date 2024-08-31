@@ -1,0 +1,22 @@
+.input {
+  padding: 0;
+  border: none;
+  outline: none;
+  line-height: 22px;
+  word-wrap: none;
+  white-space: nowrap;
+  word-break: keep-all;
+  overflow: hidden;
+  .inputValue:not(.inputValueDisabled) {
+    width: 100%;
+    cursor: pointer;
+    &:hover {
+      color: #386ee7;
+    }
+  }
+}
+
+.close {
+  cursor: pointer;
+  transform: scale(0.75, 0.75);
+}

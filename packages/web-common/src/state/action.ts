@@ -1,0 +1,48 @@
+// export const SHOW_WEB_WRITE_LETTER = 'SHOW_WEB_WRITE_LETTER';
+// export const MODIFY_SUBJECT = 'MODIFY_SUBJECT';
+// export const SHOW_WRITE_CONTACT = 'SHOW_WRITE_CONTACT';
+// export const FOCUS_SELECTOR = 'FOCUS_SELECTOR';
+// export const ADD_ITEM_TO_SELECTOR = 'ADD_ITEM_TO_SELECTOR';
+// export const ADD_ATTACHMENT = 'ADD_ATTACHMENT';
+// export const DELETE_ATTACHMENT = 'DELETE_ATTACHMENT';
+// export const CHANGE_MAIL_CONTENT = 'CHANGE_MAIL_CONTENT';
+// export const MODIFY_RECEIVER = 'MODIFY_RECEIVER';
+// export const CHANGE_CURRENT_MAIL = 'CHANGE_CURRENT_MAIL';
+// export const CLOSE_MAIL = 'CLOSE_MAIL';
+// export const WRITE_MAIL = 'WRITE_MAIL';
+// export const CLEAR_MAILS = 'CLEAR_MAILS';
+// export const CHANGE_ATTACHMNETS_STATUS = 'CHANGE_ATTACHMNETS_STATUS';
+// export const CHANGE_CURRENTMAIL_SIZE = 'CHANGE_CURRENTMAIL_SIZE';
+// export const CLEAR_ATTACGMENT = 'CLEAR_ATTACGMENT';
+// export const CHANGE_MAIL_INFO_STATUS = 'CHANGE_MAIL_INFO_STATUS';
+// export const CHANGE_ATTACHMNETS_ATTR = 'CHANGE_ATTACHMNETS_ATTR';
+// export const FOCUS_TITLE = 'FOCUS_TITLE';
+// export const ATTACHMENT_PREVIEW = 'ATTACHMENT_PREVIEW';
+// export const CHANGE_EDITOR_TOOLTIP = 'CHANGE_EDITOR_TOOLTIP';
+// export const REPLACE_RECEIVER = 'REPLACE_RECEIVER';
+// export const MAILE_EDIT_SHOW = 'MAILE_EDIT_SHOW';
+// export const AFTER_INIT = 'AFTER_INIT';
+// export const CONFERENCE_SETTING = 'CONFERENCE_SETTING';
+// export const CONFERENCE_CHANGE = 'CONFERENCE_CHANGE';
+// export const CONFERENCE_SHOW = 'CONFERENCE_SHOW';
+// export const UPDATE_MAIL_TAG_LIST = 'UPDATE_MAIL_TAG_LIST'
+
+/** 更新未读数量 读信、IM模块 */
+// export enum UpdateModuleUnread {
+//     UPDATE_IM_UNREAD = 'UPDATE_IM_UNREAD',
+//     ADD_IM_UNREAD = 'ADD_IM_UNREAD',
+//     DECREASE_IM_UNREAD = 'DECREASE_IM_UNREAD',
+
+//     UPDATE_MAILBOX_UNREAD = 'UPDATE_MAILBOX_UNREAD',
+//     ADD_MAILBOX_UNREAD = 'ADD_MAILBOX_UNREAD',
+//     DECREASE_MAILBOX_UNREAD = ' DECREASE_MAILBOX_UNREAD',
+// }
+
+export { attachmentDownloadAction, restartDownload } from './functionAction/attachmentFetchAction';
+
+/** 通讯录 */
+// export enum ContactActions {
+//     /** 从外部联系人新建通讯录 */
+//     CREATE_FORM_EXTERNAL = 'CREATE_FORM_EXTERNAL',
+//     CREATE_AFTER_FLAG = 'CREATE_AFTER_FLAG'
+// }

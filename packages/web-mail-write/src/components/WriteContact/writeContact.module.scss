@@ -1,0 +1,67 @@
+@import '../../../../web/src/styles/varies';
+$contact-item-height: 32px;
+:global {
+  .contact-tooltip {
+    z-index: 10000;
+    padding-top: 2px;
+    .ant-tooltip-arrow {
+      display: none;
+    }
+    .ant-tooltip-inner {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      border-radius: 6px;
+      padding: 10px 12px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
+
+.contact-tree-container {
+  :global(.sirius-contact-tree-container) {
+    :global(.ant-input-affix-wrapper) {
+      background-color: #fff;
+      border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.11);
+    }
+    :global(.treenode-btn) {
+      display: none;
+      background-color: #386ee7;
+      height: $contact-item-height;
+      min-width: 40px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: $Fill-2;
+      border: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    :global(.ant-tree-treenode) {
+      height: $contact-item-height;
+      .tree-node {
+        display: inline-block;
+        overflow: hidden;
+        width: 100%;
+        height: $contact-item-height;
+        font-size: 14px;
+        > span {
+          display: inline-block;
+        }
+      }
+      &:hover {
+        :global(.treenode-btn) {
+          display: inline-block;
+        }
+      }
+    }
+    :global(.ant-tree-switcher) {
+      line-height: $contact-item-height;
+    }
+    :global(.ant-tree-node-content-wrapper) {
+      height: $contact-item-height;
+      line-height: $contact-item-height;
+    }
+  }
+}

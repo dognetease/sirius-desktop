@@ -1,0 +1,93 @@
+@import '@web-common/styles/variables.scss';
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .title-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    .title {
+      @include h1-4-med16();
+      color: $Text-5;
+      margin-bottom: 0;
+    }
+    .sub-title {
+      @include p1-3-reg14();
+      color: $Text-3;
+      margin-bottom: 0;
+    }
+    .knowMore {
+      color: $Avatar-6;
+      cursor: pointer;
+    }
+  }
+  .search-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    .btn-text {
+      @include p1-3-reg14();
+      text-align: center;
+      color: $Text-5;
+      cursor: pointer;
+    }
+    .btn-color {
+      color: $Avatar-6;
+    }
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    .icon-animation {
+      width: 16px;
+      height: 16px;
+      animation: spin 2s linear infinite;
+    }
+  }
+}
+
+.toolTipOver {
+  :global {
+    .ant-tooltip-content .ant-tooltip-arrow {
+      display: none;
+    }
+
+    .ant-tooltip-content {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+}
+
+.fb-tooltips {
+  max-width: 283px;
+
+  .outer {
+    font-size: 12px;
+
+    .know {
+      display: inline-block;
+      color: $Brand-5;
+      margin-left: 24px;
+      cursor: pointer;
+    }
+  }
+
+  :global {
+    .ant-tooltip-arrow {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,135 @@
+@import '../../../../web/src/styles/varies';
+@import '@web-common/styles/waimao/varies.scss';
+
+.uReadWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  // background-color: #fff;
+  background-color: $white;
+
+  .mopContetn {
+    flex: 1;
+    // display: flex;
+    // justify-content: center;
+    margin-top: -6%;
+  }
+  .detailWrap {
+    display: flex;
+    justify-content: center;
+  }
+  .logoWrap {
+    margin-right: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .logoWrapIcon {
+      width: 140px;
+      height: 140px;
+
+      background-image: url('../../../../web/src/images/contact_multiple.png');
+      background-size: 100% 100%;
+    }
+  }
+  .numWrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px;
+    .num {
+      font-size: 56px;
+      font-weight: 700;
+      color: $Text-4;
+      margin-top: -24px;
+    }
+    .tip {
+      font-size: 14px;
+      height: 16px;
+      margin-top: -8px;
+      color: $Text-4;
+    }
+  }
+
+  .operWrap {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  .btnWrap {
+    padding: 5px 16px;
+    margin-left: 20px;
+    background-color: $white;
+    @include p1-3-reg14;
+    color: $Text-4;
+    border: 1px solid $Line-3;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover {
+      background-color: $Fill-2_5;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .user-select {
+    margin-right: 0;
+  }
+}
+
+.folder-svg-warp {
+  &.mop-floder-one {
+    .one {
+      transform: rotate(0deg);
+      transform-origin: 50% 50%;
+      transition: transform 0.5s;
+    }
+    .two {
+      transform: rotate(0deg);
+      transform-origin: 50% 50%;
+      transition: transform 0.5s;
+    }
+  }
+
+  &.mop-floder-two {
+    .one {
+      transform: rotate(-10deg);
+      transform-origin: 50% 50%;
+      transition: transform 0.5s;
+    }
+    .two {
+      transform: rotate(0deg);
+      transform-origin: 50% 50%;
+      transition: transform 0.5s;
+    }
+  }
+
+  &.mop-floder-three {
+    .one {
+      transform: rotate(10deg);
+      transform-origin: 50% 50%;
+      transition: transform 0.5s;
+    }
+    .two {
+      transform: rotate(-10deg);
+      transform-origin: 50% 50%;
+      transition: transform 0.5s;
+    }
+  }
+
+  &.mop-floder-four {
+    .one {
+      transform: rotate(-10deg);
+      transform-origin: 50% 50%;
+      transition: transform 0.5s;
+    }
+    .two {
+      transform: rotate(10deg);
+      transform-origin: 50% 50%;
+      transition: transform 0.5s;
+    }
+  }
+}

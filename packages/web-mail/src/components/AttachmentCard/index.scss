@@ -1,0 +1,203 @@
+.attachment-card {
+  height: 48px;
+  width: 266px;
+  // background: #ffffff;
+  background-color: $white;
+  border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  &.card:hover {
+    cursor: pointer;
+  }
+
+  &:not(.error):hover {
+    border: 0.5px solid #386ee7;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    font-size: 14px;
+    flex: 1;
+
+    .info-icon {
+      flex: 0 0 24px;
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    .info-right {
+      flex: 1 0 auto;
+      max-width: 206px;
+    }
+
+    .info {
+      .name {
+        margin-top: 6px;
+        margin-bottom: 2px;
+        max-width: 218px;
+        white-space: nowrap;
+        word-break: break-all;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-box-orient: vertical;
+        font-size: 14px;
+        line-height: 18px;
+        // color: #262a33;
+        color: $font-color-2;
+      }
+    }
+
+    .info-opacity {
+      opacity: 0.5;
+    }
+    .att-deleting {
+      font-size: 12px;
+      color: #386ee7;
+      line-height: 16px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      .ant-spin-dot {
+        > i {
+          width: 14px;
+          height: 14px;
+        }
+        .spin-label {
+          display: none;
+        }
+      }
+    }
+
+    .operate {
+      display: flex;
+      align-items: center;
+      line-height: 16px;
+      color: #7d8085;
+
+      .left-icon {
+        text-align: center;
+        width: 26px;
+
+        &.hide {
+          display: none;
+        }
+      }
+
+      .operate-item {
+        position: relative;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 24px;
+
+        .size {
+          max-width: 180px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 12px;
+          color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+        }
+
+        .item-box {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: $Fill-1;
+          right: 0;
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          color: #386ee7;
+          font-size: 12px;
+
+          .item-ope {
+            margin-left: 10px;
+            cursor: pointer;
+
+            &:not(.hidden):first-child {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .process-box {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+
+    .process {
+      border-bottom: 0.5px solid #386ee7;
+      border-bottom-left-radius: 4px;
+      box-sizing: border-box;
+      height: 4px;
+      background: #386ee7;
+    }
+  }
+
+  .netfolder-tag {
+    margin-left: 2px;
+    background: rgba($Warning-6-r, $Warning-6-g, $Warning-6-b, 0.16);
+    border-radius: 1px;
+    color: $Warning-6;
+    font-size: 12px;
+    padding: 2px 4px;
+    transform: scale(0.83);
+  }
+  .queue-tag {
+    margin-left: 2px;
+    background: rgba(56, 110, 231, 0.1);
+    border-radius: 1px;
+    color: #386ee7;
+    font-size: 12px;
+    padding: 2px 4px;
+    transform: scale(0.83);
+  }
+  // 不要放在全局，会有样式作用污染
+  .ant-dropdown {
+    z-index: 9999;
+  }
+}
+
+.error {
+  border: 0.5px solid #f74f4f;
+
+  .process-box {
+    .process {
+      border-bottom: 0.5px solid #f74f4f;
+      background: #f74f4f;
+    }
+  }
+}
+
+.operate-menu {
+  border: 0.5px solid $Fill-4;
+  border-radius: 6px;
+
+  .item {
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    height: 34px;
+  }
+  .separate-line {
+    margin: 4px 24px;
+    height: 1px;
+    background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+  }
+}

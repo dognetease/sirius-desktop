@@ -1,0 +1,133 @@
+.form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .addPersonalGroupBtn {
+    color: #386ee7;
+    cursor: pointer;
+  }
+  &.isFromPersonalOrg {
+    padding-top: 20px;
+    .content {
+      padding: 0 48px 0 20px;
+    }
+  }
+  .title {
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 30px;
+  }
+  .close {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url(../../../../web/src/images/icons/calendar_icon_close.png) center center no-repeat;
+    background-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    right: -28px;
+    top: 8px;
+  }
+  .add {
+    color: #386ee7;
+    cursor: pointer;
+    margin-left: 80px;
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+  .handleBtn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    .btnWrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &.isFromPersonalOrg {
+        padding-right: 20px;
+        border-top: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+        height: 52px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .cancelBtn {
+        margin-right: 12px;
+      }
+    }
+    //button {
+    //  outline: none;
+    //  min-width: 100px;
+    //  border: none;
+    //  background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+    //  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    //  border-radius: 4px;
+    //  line-height: 32px;
+    //  margin: 0 8px;
+    //  cursor: pointer;
+    //
+    //  &:hover {
+    //    opacity: .9;
+    //  }
+    //
+    //  &.mainBtn {
+    //    color: #FFFFFF;
+    //    background: #386EE7;
+    //  }
+    //
+    //}
+  }
+  :global {
+    .ant-form-item {
+      margin-bottom: 16px;
+      .ant-form-item-label {
+        width: 56px;
+        margin-right: 12px;
+        label {
+          color: #737373;
+          font-size: 14px;
+        }
+      }
+      .ant-form-item-explain {
+        font-size: 12px;
+        line-height: 16px;
+        min-height: 16px;
+        padding-left: 12px;
+        padding-top: 8px;
+        &.ant-form-item-explain-error {
+          color: #f74f4f;
+        }
+      }
+      .ant-input {
+        border-radius: 4px;
+        font-size: 12px;
+        padding: 6px 11px;
+        &:hover,
+        &:focus,
+        &-focused {
+          box-shadow: none;
+          border-color: #386ee7;
+        }
+      }
+    }
+    .ant-form-item-has-error .ant-input,
+    .ant-form-item-has-error .ant-input-affix-wrapper,
+    .ant-form-item-has-error .ant-input:hover,
+    .ant-form-item-has-error .ant-input-affix-wrapper:hover {
+      border-color: #f74f4f;
+    }
+    .ant-form-item-has-error .ant-input:focus,
+    .ant-form-item-has-error .ant-input-affix-wrapper:focus,
+    .ant-form-item-has-error .ant-input-focused,
+    .ant-form-item-has-error .ant-input-affix-wrapper-focused {
+      border-color: #f74f4f;
+      box-shadow: none;
+    }
+  }
+  .listItem {
+    margin-bottom: 12px;
+  }
+}

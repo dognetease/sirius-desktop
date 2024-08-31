@@ -1,0 +1,51 @@
+@import '../../common.module.scss';
+
+.drawer-title-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  padding-right: 10px;
+}
+
+.linkBtn {
+  color: #232d47;
+  font-size: 14px;
+  font-weight: 400;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+
+  & > span {
+    margin-left: 10px;
+  }
+}
+
+.operation {
+  display: inline-flex;
+  justify-content: right;
+  padding-right: 30px;
+}
+
+.holder {
+  position: relative;
+  min-height: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.email-list {
+  overflow: auto;
+}
+
+.ret-icon {
+  margin-right: 15px;
+  color: #396ee7;
+}
+
+.menu-item {
+  color: #232d47;
+}

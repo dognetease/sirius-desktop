@@ -1,0 +1,68 @@
+@import '../../../web/src/styles/varies';
+.tread-tree-drawer {
+  :global(.ant-drawer-body) {
+    padding: 0;
+    display: flex;
+  }
+  :global(.ant-drawer-content-wrapper) {
+    box-shadow: none !important;
+  }
+  :global(.ant-drawer-content) {
+    background-color: $white;
+  }
+  p,
+  h1 {
+    margin: 0;
+  }
+}
+
+.tread-wrapper {
+  @include sirius-scroll();
+  border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  .tread-msg-item {
+    padding: 10px 16px !important;
+    &.head {
+      background: $Fill-2_5;
+      margin-bottom: 10px;
+    }
+    &.my {
+      padding-left: 48px !important;
+    }
+    &.other {
+      padding-right: 48px !important;
+    }
+  }
+  .head {
+    flex-direction: row !important;
+    :global(.custom-msg-bubble) {
+      display: block !important;
+      position: initial !important;
+      padding-top: 0 !important;
+    }
+    :global(.custom-msg-from) {
+      display: block !important;
+      position: initial !important;
+      font-weight: bold;
+      // color: #262a33 !important;
+      color: $font-color-2 !important;
+      padding: 2px 0 8px;
+      .head-msg-time {
+        font-weight: normal;
+        padding-top: 4px;
+        color: #a8aaad;
+      }
+    }
+    :global(.custom-msgcontent) {
+      background: transparent !important;
+      padding: 0 !important;
+      color: $font-color-2;
+    }
+  }
+  & > :first-child {
+    :global(.custom-msg-bubble) {
+      margin: 0 0 0 8px;
+    }
+  }
+}

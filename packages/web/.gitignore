@@ -1,0 +1,8 @@
+node_modules/
+.cache/
+public
+.DS_Store
+/env.js
+*/fast_build/ignore-module.json
+*/pages-yingxiao/index.tsx
+*/temp/

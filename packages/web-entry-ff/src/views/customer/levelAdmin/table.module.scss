@@ -1,0 +1,9 @@
+.linkBtn {
+  cursor: pointer;
+  color: #4c6aff;
+  transition: all 0.2s;
+  user-select: none;
+  &:hover {
+    color: #4c6aff;
+  }
+}

@@ -1,0 +1,79 @@
+.maskWrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: 998;
+  .main {
+    display: inline-block;
+    position: relative;
+  }
+  .archerWrapper {
+    position: absolute;
+    border-radius: 6px;
+    box-shadow: 0 0 0 4000px rgba(0, 0, 0, 0.3);
+  }
+}
+.guideBobble {
+  // margin-top: 11px;
+  width: 280px;
+  padding: 16px;
+  background: $Brand-5;
+  border-radius: 6px;
+  // position: absolute;
+  // top: 100%;
+  // right: 0;
+  box-sizing: border-box;
+  white-space: normal;
+  .arrowUp {
+    width: 28px;
+    height: 7px;
+    position: absolute;
+    // right: 29px;
+    // top: -7px;
+  }
+  .title {
+    @include p1-4-med14;
+    color: #ffffff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .intro {
+    margin-top: 8px;
+    @include c4-3-reg12;
+    color: #ffffff;
+  }
+  .footer {
+    margin-top: 12px;
+    @include c4-3-reg12;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .footer-right {
+      display: flex;
+      align-items: center;
+    }
+    .skip {
+      cursor: pointer;
+    }
+    .butt {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 28px;
+      margin-left: 12px;
+      @include c4-1-reg12;
+      color: $Brand-6;
+      background: #ffffff;
+      border-radius: 4px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}

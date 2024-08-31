@@ -1,0 +1,25 @@
+.more {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(63, 70, 92, 0.4);
+
+    text-align: center;
+    color: #fff;
+    font-family: 'PingFang SC';
+    font-weight: 500;
+    font-size: 12px;
+  }
+}

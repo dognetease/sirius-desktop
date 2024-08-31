@@ -1,0 +1,226 @@
+@import '@web-common/styles/variables.scss';
+.search-progress-root {
+  @keyframes spin {
+    0% {
+      transform: rotate(0);
+    }
+
+    50% {
+      transform: rotate(180deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .spining {
+    animation: spin 1s infinite linear;
+  }
+
+  .highlight {
+    color: $Avatar-6;
+  }
+
+  :global {
+    .ant-progress {
+      line-height: 0;
+    }
+
+    .ant-progress-bg {
+      height: 6px !important;
+    }
+  }
+
+  &.maximize {
+    .search-progress {
+      :global(.ant-modal-body) {
+        padding: 0;
+      }
+
+      .content {
+        position: relative;
+        padding: 24px 24px 28px;
+
+        .picture {
+          display: block;
+          width: 130px;
+          height: 130px;
+          margin: 0 auto 6px;
+        }
+
+        .title {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 26px;
+          text-align: center;
+          margin-bottom: 12px;
+        }
+
+        .sub-title {
+          color: $Text-3;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 20px;
+          text-align: center;
+          margin-bottom: 18px;
+        }
+
+        .progress {
+          display: block;
+          width: 320px;
+          margin: 0 auto 26px;
+        }
+
+        .steps {
+          padding: 20px;
+          border-radius: 4px;
+          background-color: $Fill-2;
+          margin-bottom: 14px;
+
+          .step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 14px;
+
+            .name {
+              color: $Text-3;
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 16px;
+            }
+
+            .dashed {
+              height: 1px;
+              flex-grow: 1;
+              border-bottom: 1px dashed $Fill-5;
+              margin: 0 10px;
+            }
+
+            .icon {
+              display: flex;
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+
+        .operations {
+          text-align: center;
+
+          :global(.ant-btn) {
+            width: 100px;
+          }
+        }
+
+        .minimize-trigger {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &.minimize {
+    .search-progress {
+      padding-right: 6px;
+      padding-bottom: 10px;
+      padding-left: 4px;
+
+      :global(.ant-modal-body) {
+        padding: 0;
+      }
+
+      .content {
+        position: relative;
+        padding: 10px 22px 10px 10px;
+        display: flex;
+
+        .picture {
+          width: 98px;
+          height: 98px;
+        }
+
+        .body {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          margin-left: 16px;
+
+          .title {
+            color: $Text-5;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            margin: 8px 0;
+          }
+
+          .sub-title {
+            color: $Text-3;
+            font-size: 12px;
+            line-height: 16px;
+            margin-bottom: 6px;
+          }
+
+          .progress {
+            margin-bottom: 8px;
+          }
+
+          .footer {
+            display: flex;
+
+            .step {
+              flex-grow: 1;
+              display: flex;
+              align-items: center;
+
+              .name {
+                color: $Text-3;
+                font-size: 14px;
+                line-height: 22px;
+              }
+
+              .icon {
+                display: flex;
+                margin-left: 6px;
+              }
+            }
+
+            .stop {
+              color: $Avatar-6;
+              flex-shrink: 0;
+            }
+          }
+        }
+
+        .maximize-trigger {
+          position: absolute;
+          top: 16px;
+          right: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    :global {
+      .ant-modal-mask {
+        display: none;
+      }
+
+      .ant-modal-wrap {
+        top: 20px;
+        right: 14px;
+        bottom: auto;
+        left: auto;
+      }
+
+      .ant-modal-content {
+        box-shadow: 0px 4px 6px rgba(38, 42, 51, 0.1);
+      }
+    }
+  }
+}

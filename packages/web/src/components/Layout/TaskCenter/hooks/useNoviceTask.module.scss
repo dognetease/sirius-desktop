@@ -1,0 +1,40 @@
+.novice-task-overlay {
+  :global {
+    .ant-popover-arrow {
+      opacity: 1;
+    }
+
+    .ant-popover-arrow-content {
+      background-color: #4c6aff;
+    }
+
+    .ant-popover-inner {
+      background-color: #4c6aff;
+    }
+
+    .ant-popover-inner-content {
+      padding: 16px;
+      color: #ffffff;
+    }
+  }
+
+  .content-wrapper {
+    min-width: 120px;
+    max-width: 200px;
+  }
+
+  .content-body {
+    padding-bottom: 20px;
+  }
+
+  .content-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+
+  .quit {
+    cursor: pointer;
+  }
+}

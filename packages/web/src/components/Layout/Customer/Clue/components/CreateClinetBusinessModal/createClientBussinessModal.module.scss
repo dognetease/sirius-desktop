@@ -1,0 +1,89 @@
+@import '../../../../../../styles/varies.scss';
+.create-customer-modal-wrap {
+  :global(.ant-modal-header) {
+    border-bottom: none;
+  }
+  :global(.ant-modal-footer) {
+    padding: 24px 16px;
+    border-top: none;
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+  }
+  .modal-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: 14px;
+    line-height: 22px;
+    height: 22px;
+    color: #262a33;
+    margin-bottom: 16px;
+    &-left {
+      flex: 1;
+      font-size: 14px;
+      line-height: 22px;
+      color: #262a33;
+      font-weight: normal;
+    }
+    &-right {
+      flex: 1;
+      line-height: 22px;
+      font-weight: normal;
+      display: flex;
+      justify-content: space-between;
+      .add-btn {
+        cursor: pointer;
+        svg {
+          vertical-align: middle;
+          margin-right: 6px;
+        }
+      }
+    }
+    &-right-contact {
+      flex: 1;
+      line-height: 22px;
+      font-weight: normal;
+      text-align: left;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #51555c;
+    }
+  }
+  .modal-content {
+    max-height: 414px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    @include sirius-scroll();
+    &-client {
+      width: 360px; // 保证宽度
+      padding-right: 40px;
+      box-sizing: border-box;
+    }
+    &-contact {
+      width: 360px; // 保证宽度
+      box-sizing: border-box;
+    }
+  }
+
+  .handler-item {
+    font-size: 12px;
+    line-height: 20px;
+    color: #386ee7;
+    cursor: pointer;
+  }
+  .name-box {
+    padding-bottom: 0;
+  }
+  .business-title {
+    margin-top: 24px;
+    font-size: 14px;
+    height: 22px;
+    line-height: 22px;
+    font-weight: normal;
+  }
+}

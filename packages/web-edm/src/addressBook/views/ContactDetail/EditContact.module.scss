@@ -1,0 +1,18 @@
+.edit {
+  :global {
+    .ant-modal-header {
+      border: none;
+      padding-bottom: 12px;
+      padding-top: 20px;
+    }
+
+    .ant-modal-footer {
+      border: none;
+      padding-bottom: 20px;
+    }
+
+    .ant-modal-body {
+      padding-top: 8px;
+    }
+  }
+}

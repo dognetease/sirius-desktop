@@ -1,0 +1,84 @@
+.email-card {
+  display: flex;
+  padding: 0 20px 0 24px;
+  width: 100%;
+}
+.title {
+  border-left: 3px solid #4c6aff;
+  line-height: 1;
+  font-size: 16px;
+  margin-bottom: 16px;
+  padding-left: 10px;
+}
+.leftContainer {
+  width: 330px;
+  margin-right: 24px;
+  .countsNumber {
+    font-family: 'LX-numbers';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    color: $Brand-6;
+    width: 100%;
+    padding-left: 24px;
+    line-height: 28px;
+  }
+  .countsTitle {
+    @include c4-1-reg12();
+    color: $Text-3;
+    width: 100%;
+    padding-left: 24px;
+    margin-top: 6px;
+  }
+}
+.rightContainer {
+  width: 518px;
+  .grid-item {
+    width: 25%;
+  }
+}
+
+.grid-container {
+  background: #f6f7fa;
+  border-radius: 4px;
+  padding: 24px 40px;
+}
+
+.grid-item {
+  width: 50%;
+  padding: 4px 0;
+  display: inline-block;
+}
+
+.num {
+  font-family: 'LX-numbers';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  color: $Text-5;
+  width: 100%;
+  min-width: 60px;
+  line-height: 24px;
+
+  &.clickable {
+    color: #386ee7;
+    cursor: pointer;
+  }
+}
+
+.line {
+  width: 12px;
+  height: 2px;
+  background: #6ba9ff;
+  margin: 2px 0 4px;
+}
+
+.text {
+  @include c4-1-reg12();
+  color: $Text-3;
+  margin-top: 4px;
+  width: 100%;
+  min-width: 60px;
+  font-size: 14px;
+  line-height: 22px;
+}

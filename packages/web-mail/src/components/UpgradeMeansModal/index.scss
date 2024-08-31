@@ -1,0 +1,36 @@
+.upgradeModel {
+  .upgrade-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #262a33;
+  }
+  .upgrade-describe {
+    color: #7d8085;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+    display: none;
+  }
+}
+
+.UpgradeMeansSuccessModal {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .icon {
+      margin: 20px 0px;
+    }
+    .content {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+      color: #262a33;
+      margin-bottom: 10px;
+    }
+  }
+}

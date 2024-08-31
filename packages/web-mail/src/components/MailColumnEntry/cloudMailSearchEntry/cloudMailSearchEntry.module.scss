@@ -1,0 +1,16 @@
+@import 'src/styles/varies';
+.cloudMailSearchEntry {
+  margin: 8px 8px 0 8px;
+  padding: 12px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #272e47;
+  background: #edf0ff;
+  border-radius: 6px;
+  .showAll {
+    color: #4c6aff;
+    cursor: pointer;
+    @include sirius-no-drag;
+  }
+}

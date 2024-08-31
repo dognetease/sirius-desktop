@@ -1,0 +1,125 @@
+.site {
+  &:nth-child(3) {
+    margin-top: 12px;
+  }
+
+  .site-item {
+    background: #ffffff;
+    border-radius: 4px;
+
+    &-content {
+      display: flex;
+      align-items: center;
+      background: $Fill-1;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 12px;
+
+      .img {
+        width: calc((100% - 112px) * 30 / 100);
+        min-width: 215px;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+.add-site {
+  color: $Text-5;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: 4px;
+  }
+}
+
+.site-select {
+  :global {
+    .ant-select-item .ant-select-item-option {
+      width: 294px !important;
+    }
+  }
+}
+
+.site-option {
+  padding: 0;
+
+  .site-option-container {
+    display: flex;
+    align-items: center;
+    width: 326px;
+    margin: 12px 16px;
+    border-bottom: 1px solid $Line-1;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    img {
+      width: 76px;
+      border-radius: 1px;
+      margin-right: 12px;
+    }
+
+    .site-option-content {
+      display: flex;
+      flex-direction: column;
+      width: 180px;
+
+      .site-option-title {
+        max-width: 180px;
+        display: flex;
+        align-items: center;
+        color: $Text-5;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
+
+        div {
+          max-width: 124px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+
+        span {
+          padding: 2px 6px;
+          color: #398e80;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 16px;
+          margin-left: 8px;
+          background: $label-2_1;
+          border-radius: 2px;
+          flex-shrink: 0;
+        }
+
+        .offline-tag {
+          color: #4e5a70;
+          background: $label-6_1;
+        }
+      }
+
+      .site-option-host {
+        color: $Text-3;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        margin-top: 4px;
+        max-width: 180px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+
+    svg {
+      margin-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.smart-assistant-wrap {
+  margin-top: 8px;
+  border: 1px solid #e1e3e8;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 18px 14px 20px;
+  gap: 12px;
+  background: #fff;
+
+  .right-area {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .text-wrap {
+    .top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .title {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      color: #272e47;
+    }
+    .green {
+      color: #398e80;
+      background: #d6f7f1;
+      border-radius: 2px;
+      font-weight: normal;
+      font-size: 12px;
+      padding: 2px 6px;
+      line-height: 16px;
+    }
+    .bottom {
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 20px;
+      color: #747a8c;
+      margin-top: 4px;
+    }
+  }
+  :global {
+    // .ant-switch {
+    //   background-color: #E1E6ED;
+    // }
+    // .ant-switch {
+    //   width: 35px;
+    //   height: 20px;
+    //   .ant-switch-handle {
+    //     width: 16px;
+    //     height: 16px;
+    //   }
+    // }
+    // .ant-switch-checked {
+    //   background-color: #4C6AFF;
+    //   .ant-switch-handle {
+    //     left: calc(100% - 18px);
+    //   }
+    // }
+  }
+}

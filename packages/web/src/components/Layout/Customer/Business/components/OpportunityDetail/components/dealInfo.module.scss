@@ -1,0 +1,50 @@
+.deal-info {
+  :global(.ant-form-item-label) {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 4px;
+
+    label {
+      font-size: 12px;
+      line-height: 20px;
+      height: 20px;
+    }
+  }
+
+  :global(.ant-modal-body) {
+    padding: 20px 24px 8px 24px;
+  }
+
+  .currency {
+    margin-bottom: 16px;
+
+    :global(.ant-col) {
+      width: auto;
+      font-size: 12px;
+      min-height: 20px;
+      line-height: 20px;
+      margin-bottom: 0;
+    }
+
+    :global(.ant-form-item-control-input) {
+      min-height: 20px;
+    }
+  }
+
+  :global(.ant-col) {
+    position: relative;
+  }
+
+  :global(.ant-form-item-explain) {
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    font-size: 12px;
+    min-height: 20px;
+    line-height: 20px;
+  }
+
+  :global(.ant-row) {
+    margin-bottom: 16px;
+  }
+}

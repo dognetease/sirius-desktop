@@ -1,0 +1,5 @@
+@import '../../../../web/src/styles/varies';
+.teamlist-wrapper {
+  overflow: auto;
+  @include sirius-scroll();
+}

@@ -1,0 +1,549 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.my-domain {
+  width: 100%;
+  height: 100%;
+  background: $Fill-2;
+  padding: 20px 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+
+  :global {
+    .ant-spin-nested-loading > div > .ant-spin {
+      min-height: 300px;
+    }
+    .ant-table-thead th {
+      color: $Text-3 !important;
+      background: #f6f7fa;
+      font-weight: 400;
+      padding: 16px 11px !important;
+    }
+    .ant-table-tbody > tr > td {
+      color: $Text-5 !important;
+    }
+    .ant-table-row > td {
+      padding: 16px 11px !important;
+
+      &.ant-table-cell-fix-right {
+        padding-right: 0 !important;
+      }
+    }
+    .ant-table-tbody > tr.ant-table-row-selected > td,
+    .ant-table-tbody > tr.ant-table-row:hover > td {
+      background: $Fill-1 !important;
+    }
+  }
+
+  .my-domain-header {
+    flex: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-right {
+      display: flex;
+      align-items: center;
+
+      span {
+        color: $Text-4;
+        font-size: 14px;
+        line-height: 22px;
+        margin: 0 8px 0 5.5px;
+      }
+
+      div {
+        color: $Brand-6;
+        font-size: 14px;
+        line-height: 22px;
+        cursor: pointer;
+      }
+
+      :global(.lx-btn-primary) {
+        height: 28px;
+        margin-left: 20px;
+        padding: 0 12px;
+      }
+      :global(.lx-ui-btn-primary) {
+        height: 28px;
+        margin-left: 20px;
+        padding: 0 12px;
+      }
+    }
+  }
+
+  .my-domain-content {
+    flex: 1;
+    padding: 20px;
+    background: #ffffff;
+    position: relative;
+
+    .empty-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      span {
+        color: $Text-3;
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 8px;
+      }
+
+      button {
+        cursor: pointer;
+        color: #fff;
+        padding: 6px 12px;
+        background: $Brand-6;
+        border-radius: 4px;
+        margin-top: 16px;
+        border: none;
+        outline: none;
+
+        &:hover {
+          background: $Brand-5;
+        }
+
+        &:active {
+          background: $Brand-7;
+        }
+      }
+    }
+  }
+}
+
+.expire {
+  color: $Text-3;
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+
+  span {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background: $Fill-5;
+    margin-right: 8px;
+  }
+}
+
+.valid,
+.checking {
+  color: $Text-5;
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+
+  span {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background: $Success-6;
+    margin-right: 8px;
+  }
+}
+
+.checking {
+  span {
+    background: $Warning-6;
+  }
+}
+
+.error {
+  color: $Error-6;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.operator {
+  font-size: 14px;
+  line-height: 22px;
+  color: $Brand-6;
+  cursor: pointer;
+  margin-right: 16px;
+  white-space: nowrap;
+}
+
+.select-modal {
+  :global {
+    .ant-modal-body {
+      padding: 0 24px 18px;
+      margin-top: 12px;
+    }
+
+    .ant-modal-header {
+      border-bottom: none;
+      padding: 24px 24px 0;
+    }
+
+    .ant-modal-footer {
+      border-top: none;
+      padding-bottom: 18px;
+
+      .ant-btn:first-child {
+        background: #fff;
+        border: 1px solid $Line-3;
+        color: $Text-4;
+      }
+    }
+    .ant-form-item {
+      &:last-child {
+        margin-bottom: 0;
+        justify-content: flex-end;
+
+        .ant-form-item-control-input-content {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+
+    .ant-btn {
+      width: 64px;
+      height: 32px;
+      min-width: initial;
+      font-size: 14px;
+      border: none;
+      background: $Brand-6;
+
+      &:first-child {
+        background: $Fill-3;
+        color: $Text-4;
+
+        &:hover {
+          background: $Fill-4;
+        }
+
+        &:active {
+          background: $Fill-3;
+        }
+      }
+
+      &:hover {
+        background: $Brand-5;
+      }
+
+      &:active {
+        background: $Brand-7;
+      }
+    }
+
+    .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+      border-color: $Brand-6 !important;
+      box-shadow: none;
+    }
+    .ant-select-item-option-active {
+      background: #f6f7fa;
+    }
+  }
+}
+
+.info-title {
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-right: 6px;
+  }
+}
+
+.info-content {
+  padding-left: 24px;
+  color: $Text-3;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.select-container,
+.error-select-container {
+  padding-top: 0px;
+  width: 100%;
+}
+
+.error-select-container {
+  :global {
+    .ant-select-selector {
+      border-color: $Error-6 !important;
+    }
+  }
+}
+
+.error-tip {
+  color: $Error-6;
+  font-size: 14px;
+  line-height: 22px;
+  margin-top: 10px;
+}
+
+.btn-group {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .cancel-btn,
+  .submit-btn,
+  .submit-btn-disabled {
+    cursor: pointer;
+    color: #fff;
+    padding: 5px 24px;
+    background: $Brand-6;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    outline: none;
+
+    &:hover {
+      background: $Brand-5;
+    }
+
+    &:active {
+      background: $Brand-7;
+    }
+  }
+
+  .cancel-btn {
+    background: #fff;
+    border: 1px solid $Line-3;
+    color: $Text-4;
+    margin-right: 12px;
+
+    &:hover {
+      background: #fff;
+    }
+
+    &:active {
+      background: #fff;
+    }
+  }
+
+  .submit-btn-disabled {
+    background: $Brand-3;
+
+    &:hover {
+      background: $Brand-3;
+    }
+
+    &:active {
+      background: $Brand-3;
+    }
+  }
+}
+
+.disable-text {
+  color: $Fill-5;
+}
+
+.cert-link {
+  width: 298px;
+  display: block;
+  margin: 0 auto;
+}
+
+.cert-link-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .cert-link-button {
+    margin-top: 16px;
+    background: #fff;
+    line-height: 22px;
+    font-size: 14px;
+    color: $Text-4;
+    display: flex;
+    align-items: center;
+    padding: 5px 16px;
+    border: 1px solid $Line-3;
+    border-radius: 4px;
+
+    svg {
+      margin-right: 4px;
+    }
+
+    &:hover {
+      background: $Fill-1;
+    }
+
+    &:active {
+      background: $Fill-3;
+    }
+  }
+}
+
+.cert-modal {
+  :global {
+    .ant-modal-header {
+      border-bottom: none;
+      padding: 24px 20px 0;
+    }
+
+    .ant-modal-body {
+      padding-bottom: 34px;
+    }
+  }
+}
+
+.cert-list-modal {
+  :global {
+    .ant-modal-header {
+      border-bottom: none;
+      padding: 24px 20px 0;
+    }
+
+    .ant-modal-title {
+      color: $Text-5;
+    }
+
+    .ant-modal-body {
+      padding: 16px 20px;
+    }
+
+    .ant-modal-footer {
+      border-top: none;
+      padding-right: 20px;
+      padding-bottom: 16px;
+    }
+  }
+
+  .cert-list {
+    width: 100%;
+    max-height: 300px;
+    overflow: auto;
+  }
+
+  .cert-list-item {
+    box-sizing: border-box;
+    padding: 8px 12px;
+    width: 100%;
+    height: 112px;
+    background: #f6f7fa;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .content-line {
+    display: flex;
+    height: 32px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    .content {
+      color: $Text-5;
+      font-size: 14px;
+      line-height: 22px;
+
+      span {
+        margin-left: 4px;
+        color: $label-6_3;
+        font-size: 12px;
+        line-height: 16px;
+        padding: 2px 6px;
+        background: $label-6_1;
+        border-radius: 2px;
+        &.active {
+          color: $label-2_3;
+          background: $label-2_1;
+        }
+      }
+
+      .cert-type {
+        color: $label-1_3;
+        font-size: 12px;
+        line-height: 16px;
+        padding: 2px 6px;
+        background: $label-1_1;
+      }
+    }
+  }
+
+  .content-label {
+    width: 70px;
+    color: $Text-3;
+    font-size: 14px;
+    line-height: 22px;
+    margin-right: 4px;
+    display: flex;
+    align-items: center;
+  }
+
+  .content-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .content-right {
+    color: $Text-3;
+    font-size: 12px;
+    line-height: 20px;
+    display: flex;
+
+    .cert-operator {
+      font-size: 14px;
+      line-height: 22px;
+      color: $Brand-6;
+      margin-left: 8px;
+      cursor: pointer;
+    }
+  }
+}
+
+.deploy-success {
+  :global {
+    .ant-modal-body {
+      padding: 36px 24px;
+    }
+  }
+
+  .deploy-success-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .deploy-success-title {
+    margin-top: 20px;
+    color: $Text-5;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .deploy-success-info {
+    margin-top: 4px;
+    color: $Text-3;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .submit-btn {
+    cursor: pointer;
+    color: #fff;
+    padding: 5px 40px;
+    background: $Brand-6;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    outline: none;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 32px;
+
+    &:hover {
+      background: $Brand-5;
+    }
+
+    &:active {
+      background: $Brand-7;
+    }
+  }
+}

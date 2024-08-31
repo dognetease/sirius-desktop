@@ -1,0 +1,53 @@
+.remarketing-drawer {
+  :global(.ant-drawer-body) {
+    padding-top: 8px;
+    padding-bottom: 0;
+  }
+  .remarketing-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 20px;
+  }
+
+  .remarketing-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .remarketing-item {
+      padding: 16px;
+      background-color: $Fill-1;
+      border-radius: 4px;
+    }
+    .item-title {
+      position: relative;
+      @include p1-4-med14;
+      color: $Text-5;
+      &::before {
+        position: absolute;
+        top: 3px;
+        content: '';
+        width: 3px;
+        height: 15px;
+        background-color: $Brand-6;
+      }
+    }
+    .item-desc {
+      @include p1-3-reg14;
+      color: $Text-4;
+      margin: 12px 0 16px;
+    }
+    .item-btns {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+  }
+  .remarketing-close {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+  }
+}

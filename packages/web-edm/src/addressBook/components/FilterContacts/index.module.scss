@@ -1,0 +1,64 @@
+.filter {
+  &-header {
+    &-select {
+      height: 32px;
+      width: 109px;
+    }
+    &-text {
+      font-size: 14px;
+      color: #7a8599;
+      margin-left: 12px;
+    }
+  }
+
+  &-body {
+    background-color: #f9fafb;
+    padding: 24px;
+    margin-top: 12px;
+    border-radius: 4px;
+    &-row {
+      display: flex;
+      align-items: center;
+      margin-top: 12px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &-type {
+      // width: 100px;
+      flex: 0 0 100px;
+    }
+
+    &-logic {
+      // width: 85px;
+      flex: 0 0 85px;
+      margin-left: 16px;
+    }
+
+    // &-wrapper {
+    //   display: flex;
+    //   column-gap: 4px;
+    //   flex: auto;
+    // }
+
+    &-values {
+      width: 276px;
+      flex: 0 0 276px;
+      margin-left: 16px;
+    }
+
+    &-op {
+      flex: 0 0 32px;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #e1e6ed;
+      cursor: pointer;
+      background-color: #fff;
+      margin-left: 4px;
+    }
+  }
+}

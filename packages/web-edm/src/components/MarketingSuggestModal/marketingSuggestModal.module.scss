@@ -1,0 +1,110 @@
+@import '@/styles/varies.scss';
+.marketing-suggest-modal {
+  @keyframes modalLeave {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.1);
+    }
+  }
+  :global(.ant-zoom-leave.ant-zoom-leave-active) {
+    animation: modalLeave 0.2s ease-out;
+  }
+  :global(.ant-modal-body) {
+    padding: 0 !important;
+    max-height: initial !important;
+  }
+  .marketing-suggest {
+    display: flex;
+    flex-direction: column;
+  }
+  .modal-header {
+    width: 500px;
+    height: 184px;
+    border-radius: 8px 8px 0 0;
+    padding: 98px 35px 0;
+    color: $Text-5;
+    background-image: url('@/images/icons/edm/yingxiao/marketing_suggest_bg.png');
+  }
+  .modal-item-level1 {
+    @include h4-med24;
+    margin-bottom: 8px;
+  }
+  .modal-item-level2 {
+    @include h2-med18;
+    margin-bottom: 0;
+  }
+  .modal-item-level3 {
+    @include p1-4-med14;
+  }
+  .modal-count {
+    color: $Error-6;
+  }
+  .modal-operation {
+    color: $Brand-6;
+    cursor: pointer;
+  }
+  .modal-wrapper {
+    padding: 16px 20px 0 20px;
+    max-height: 348px;
+    display: flex;
+  }
+  .modal-content {
+    padding: 16px;
+    border-radius: 4px;
+    background-color: $Fill-2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .modal-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .modal-item-left {
+    display: flex;
+    align-items: center;
+    align-items: baseline;
+  }
+  .modal-item-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+  .modal-list {
+    margin-top: 16px;
+    @include sirius-scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+    .modal-item-left {
+      color: $Text-5;
+      @include p1-3-reg14;
+    }
+  }
+  .modal-box {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    .modal-item {
+      margin-top: 8px;
+    }
+  }
+  .modal-tag {
+    display: flex;
+  }
+  .modal-footer {
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 0;
+  }
+}

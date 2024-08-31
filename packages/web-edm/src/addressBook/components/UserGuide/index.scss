@@ -1,0 +1,90 @@
+.address-guide-for-aside-wrapper {
+  .new-guide-for-aside {
+    display: flex;
+    width: 910px;
+    height: 592px;
+  }
+
+  .new-guide-for-aside-left {
+    flex: 1 1 312px;
+    padding: 55px 16px 45px;
+
+    .ng-title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 22px;
+      font-weight: bold;
+
+      .ng-title-text {
+        font-size: 22px;
+        line-height: 28px;
+        color: #232d47;
+        margin-right: 4px;
+      }
+    }
+
+    .ng-slide-container {
+      margin: 22px 0 24px;
+    }
+
+    .ng-btn-footer {
+      text-align: center;
+
+      .ng-confirm-btn {
+        width: 236px;
+        height: 36px;
+      }
+    }
+  }
+
+  .new-guide-for-aside-right {
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+
+    flex: 0 0 598px;
+    width: 598px;
+    padding-top: 118px;
+    background: url('~@web-mail/components/CustomerMail/NewGuideForAside/Images/bg.png') no-repeat center center;
+    background-size: cover;
+
+    .new-guide-carousel-img-container {
+      width: 536px;
+      height: 356px;
+
+      .new-guide-carousel-img {
+        height: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .new-guide-carousel-dots {
+    bottom: -40px;
+
+    li {
+      width: auto;
+      height: auto;
+      margin-left: 7px;
+      margin-right: 7px;
+
+      &.slick-active {
+        width: auto;
+        height: auto;
+        opacity: 1;
+
+        button {
+          background: $Brand-6;
+        }
+      }
+
+      button {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        opacity: 1;
+        background: #fff;
+      }
+    }
+  }
+}

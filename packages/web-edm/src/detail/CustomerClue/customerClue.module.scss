@@ -1,0 +1,93 @@
+.record-clue-modal,
+.record-single-modal {
+  color: $Text-4;
+  @include p1-3-reg14;
+  :global(.ant-modal-header) {
+    padding: 20px 20px 12px;
+    border: none;
+  }
+  :global(.ant-modal-body) {
+    padding: 0 20px;
+  }
+  :global(.ant-modal-footer) {
+    padding: 18px 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .record-clue-btn {
+    margin-left: 12px;
+  }
+  .record-clue-strong {
+    color: $Text-5;
+    @include p1-4-med14;
+  }
+  .record-clue-switch {
+    margin-left: 10px;
+  }
+  .record-clue-flex-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .record-clue-flex-column {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+  }
+  .record-clue-Choose {
+    margin: 8px 0;
+  }
+  .record-clue-checkbox {
+    margin: 8px 0 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+  .record-clue-icon {
+    margin-left: 8px;
+    cursor: pointer;
+    circle,
+    path,
+    rect {
+      stroke: #fff;
+    }
+  }
+  .record-clue-result {
+    margin: 8px 0 20px;
+    background-color: $Fill-1;
+    border-radius: 4px;
+    padding: 23px 33px 28px 45px;
+    circle,
+    path,
+    rect {
+      stroke: $Warning-6;
+    }
+  }
+  .record-clue-quantity {
+    color: $Text-5;
+    @include h4-med24;
+  }
+  .record-clue-predict {
+    color: $Text-5;
+  }
+  .record-clue-divider {
+    height: 54px;
+    margin: 0 34px 0 45px;
+  }
+  .record-clue-bottom {
+    margin-bottom: 8px;
+  }
+  .record-clue-exist {
+    gap: 8px;
+  }
+  .record-single {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+  }
+}

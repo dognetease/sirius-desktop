@@ -1,0 +1,315 @@
+/**
+ * Cursor rule:
+ * 1. Only `showSearch` enabled
+ * 2. Only `open` is `true`
+ * 3. When typing, set `open` to `true` which hit rule of 2
+ *
+ * Accessibility:
+ * - https://www.w3.org/TR/wai-aria-practices/examples/combobox/aria1.1pattern/listbox-combo.html
+ */
+
+import * as React from 'react';
+import { useRef } from 'react';
+import KeyCode from 'rc-util/lib/KeyCode';
+import type { ScrollTo } from 'rc-virtual-list/lib/List';
+import MultipleSelector, { RefMultiSelectorProps } from './MultipleSelector';
+import type { LabelValueType, RawValueType, CustomTagProps } from '../interface/generator';
+import type { RenderNode, Mode } from '../interface';
+import useLock from '../hooks/useLock';
+
+export interface InnerSelectorProps {
+  prefixCls: string;
+  id: string;
+  mode: Mode;
+  inputRef: React.Ref<HTMLInputElement | HTMLTextAreaElement>;
+  placeholder?: React.ReactNode;
+  disabled?: boolean;
+  autoFocus?: boolean;
+  autoComplete?: string;
+  values: LabelValueType[];
+  showSearch?: boolean;
+  searchValue: string;
+  accessibilityIndex: number;
+  open: boolean;
+  tabIndex?: number;
+  maxLength?: number;
+
+  onInputKeyDown: React.KeyboardEventHandler<HTMLInputElement | HTMLTextAreaElement>;
+  onInputMouseDown: React.MouseEventHandler<HTMLInputElement | HTMLTextAreaElement>;
+  onInputChange: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
+  onInputPaste: React.ClipboardEventHandler<HTMLInputElement | HTMLTextAreaElement>;
+  onInputCompositionStart: React.CompositionEventHandler<HTMLInputElement | HTMLTextAreaElement>;
+  onInputCompositionEnd: React.CompositionEventHandler<HTMLInputElement | HTMLTextAreaElement>;
+}
+
+export interface RefSelectorProps {
+  focus: () => void;
+  blur: () => void;
+  scrollTo?: ScrollTo;
+  onKeyDown: React.KeyboardEventHandler;
+  getLastEnabledIndex: () => number;
+  getChosenList: () => RawValueType[];
+  setInputIndex: (index: number) => void;
+  clearChosenList: () => void;
+  setChosenValue: (values: RawValueType[]) => void;
+}
+
+export interface SelectorProps {
+  id: string;
+  prefixCls: string;
+  showSearch?: boolean;
+  open: boolean;
+  /** Display in the Selector value, it's not same as `value` prop */
+  values: LabelValueType[];
+  multiple: boolean;
+  mode: Mode;
+  searchValue: string;
+  activeValue: string;
+  inputElement: JSX.Element;
+
+  autoFocus?: boolean;
+  accessibilityIndex: number;
+  tabIndex?: number;
+  disabled?: boolean;
+  placeholder?: React.ReactNode;
+  removeIcon?: RenderNode;
+
+  // Tags
+  maxTagCount?: number | 'responsive';
+  maxTagTextLength?: number;
+  maxTagPlaceholder?: React.ReactNode | ((omittedValues: LabelValueType[]) => React.ReactNode);
+  tagRender: (props: CustomTagProps) => React.ReactElement;
+  /** Check if `tokenSeparators` contains `\n` or `\r\n` */
+  tokenWithEnter?: boolean;
+  // Motion
+  choiceTransitionName?: string;
+  onToggleOpen: (open?: boolean) => void;
+  /** `onSearch` returns go next step boolean to check if need do toggle open */
+  onSearch: (searchText: string, fromTyping: boolean, isCompositing: boolean) => boolean;
+  onSearchSubmit: (searchText: string) => void;
+  onSelect: (value: RawValueType, option: { selected: boolean }) => void;
+  onInputKeyDown?: React.KeyboardEventHandler<HTMLInputElement | HTMLTextAreaElement>;
+  onInputOrderChange?: (value: number) => void;
+  inputOrderExternal?: number;
+  onInputPaste?: (e: React.ClipboardEvent) => void;
+  /**
+   * @private get real dom for trigger align.
+   * This may be removed after React provides replacement of `findDOMNode`
+   */
+  domRef: React.RefObject<HTMLDivElement>;
+}
+
+const Selector: React.RefForwardingComponent<RefSelectorProps, SelectorProps> = (props, ref) => {
+  const inputRef = useRef<HTMLInputElement>(null);
+  const compositionStatusRef = useRef<boolean>(false);
+
+  const {
+    prefixCls,
+    open,
+    mode,
+    showSearch,
+    tokenWithEnter,
+
+    onInputPaste,
+    onSearch,
+    onSearchSubmit,
+    onToggleOpen,
+    onInputKeyDown,
+
+    domRef,
+  } = props;
+
+  const multiSelectorRef = useRef<RefMultiSelectorProps | null>(null);
+
+  // ======================= Ref =======================
+  React.useImperativeHandle(ref, () => ({
+    focus: () => {
+      // warn: 选中删除聚焦当前 input 框 跟双击编辑功能冲突
+      inputRef?.current?.focus();
+    },
+    blur: () => {
+      inputRef?.current?.blur();
+    },
+    onKeyDown: e => {
+      const { which } = e;
+      multiSelectorRef?.current?.onKeyDown(e);
+      if (which === KeyCode.LEFT || which === KeyCode.RIGHT || which === KeyCode.BACKSPACE) {
+        setTimeout(() => {
+          inputRef?.current?.focus();
+        });
+      }
+    },
+    getLastEnabledIndex: () => multiSelectorRef?.current?.getLastEnabledIndex() || 0,
+    getChosenList: () => multiSelectorRef?.current?.getChosenList() || [],
+    setInputIndex: (index: number) => {
+      multiSelectorRef?.current?.setInputIndex(index);
+    },
+    clearChosenList: () => {
+      multiSelectorRef?.current?.clearChosenList();
+    },
+    setChosenValue: (values: RawValueType[]) => {
+      multiSelectorRef?.current?.setChosenValue(values);
+    },
+  }));
+
+  // ====================== Input ======================
+  const [getInputMouseDown, setInputMouseDown] = useLock(0);
+
+  const onInternalInputKeyDown: React.KeyboardEventHandler<HTMLInputElement> = event => {
+    const { which } = event;
+
+    if (which === KeyCode.UP || which === KeyCode.DOWN) {
+      event.preventDefault();
+    }
+
+    if (onInputKeyDown) {
+      onInputKeyDown(event);
+    }
+
+    if (which === KeyCode.ENTER && mode === 'tags' && !compositionStatusRef.current && !open) {
+      // When menu isn't open, OptionList won't trigger a value change
+      // So when enter is pressed, the tag's input value should be emitted here to let selector know
+      onSearchSubmit((event.target as HTMLInputElement).value);
+    }
+
+    if (![KeyCode.SHIFT, KeyCode.TAB, KeyCode.BACKSPACE, KeyCode.ESC].includes(which)) {
+      onToggleOpen(true);
+    }
+  };
+
+  /**
+   * We can not use `findDOMNode` sine it will get warning,
+   * have to use timer to check if is input element.
+   */
+  const onInternalInputMouseDown: React.MouseEventHandler<HTMLInputElement> = () => {
+    setInputMouseDown(true);
+  };
+
+  // When paste come, ignore next onChange
+  const pastedTextRef = useRef<string | null>(null);
+
+  const triggerOnSearch = (value: string) => {
+    if (onSearch(value, true, compositionStatusRef.current) !== false) {
+      onToggleOpen(true);
+    }
+  };
+
+  const onInputCompositionStart = () => {
+    compositionStatusRef.current = true;
+  };
+
+  const onInputCompositionEnd: React.CompositionEventHandler<HTMLInputElement> = e => {
+    compositionStatusRef.current = false;
+
+    // Trigger search again to support `tokenSeparators` with typewriting
+    if (mode !== 'combobox') {
+      triggerOnSearch((e.target as HTMLInputElement).value);
+    }
+  };
+
+  const onInputChange: React.ChangeEventHandler<HTMLInputElement> = event => {
+    let {
+      target: { value },
+    } = event;
+
+    // Pasted text should replace back to origin content
+    if (tokenWithEnter && pastedTextRef.current && /[\r\n]/.test(pastedTextRef.current)) {
+      // CRLF will be treated as a single space for input element
+      const replacedText = pastedTextRef.current
+        .replace(/[\r\n]+$/, '')
+        .replace(/\r\n/g, ' ')
+        .replace(/[\r\n]/g, ' ');
+      value = value.replace(replacedText, pastedTextRef.current);
+    }
+
+    pastedTextRef.current = null;
+
+    triggerOnSearch(value);
+  };
+
+  const _onInputPaste: React.ClipboardEventHandler = e => {
+    const { clipboardData } = e;
+    const value = clipboardData.getData('text');
+    pastedTextRef.current = value;
+  };
+
+  const onClick = e => {
+    const { target } = e;
+    if (target !== inputRef.current && target === domRef) {
+      // debugger;
+      /**
+       * 这里会覆盖
+       *  */
+      // Should focus input if click the selector
+      const isIE = (document.body.style as any).msTouchAction !== undefined;
+      if (isIE) {
+        setTimeout(() => {
+          inputRef?.current?.focus();
+        });
+      } else {
+        inputRef?.current?.focus();
+      }
+    }
+  };
+
+  // todo 这里逻辑未考虑视窗滚动情况 y=target.scrollTop + offsetY;
+  const onMouseDown = event => {
+    const { target, details } = event;
+    const inputMouseDown = getInputMouseDown();
+    if (event.target !== inputRef.current && !inputMouseDown) {
+      event.preventDefault();
+    }
+
+    if (target === domRef.current) {
+      const { offsetX, offsetY: _offsetY } = event.nativeEvent;
+      const children = target.querySelectorAll(`.${prefixCls}-selection-item`);
+      const offsetY = _offsetY + target.scrollTop;
+      let i = 0;
+      for (; i < children.length; i += 1) {
+        const child = children[i];
+        if (
+          !(
+            (child.offsetLeft <= offsetX && child.offsetTop <= offsetY && child.offsetTop + child.offsetHeight >= offsetY) ||
+            child.offsetTop + child.offsetHeight <= offsetY
+          )
+        ) {
+          break;
+        }
+      }
+      multiSelectorRef?.current?.setInputIndex(children.length - i);
+      multiSelectorRef?.current?.clearChosenList();
+      setTimeout(() => {
+        inputRef?.current?.focus();
+      });
+    }
+
+    if ((mode !== 'combobox' && (!showSearch || !inputMouseDown)) || !open) {
+      if (open) {
+        onSearch('', true, false);
+      }
+      onToggleOpen();
+    }
+  };
+
+  // ================= Inner Selector ==================
+  const sharedProps = {
+    inputRef,
+    onInputKeyDown: onInternalInputKeyDown,
+    onInputMouseDown: onInternalInputMouseDown,
+    onInputChange,
+    onInputPaste: onInputPaste || _onInputPaste,
+    onInputCompositionStart,
+    onInputCompositionEnd,
+  };
+
+  return (
+    <div ref={domRef} className={`${prefixCls}-selector`} onClick={onClick} onMouseDown={onMouseDown}>
+      <MultipleSelector ref={multiSelectorRef} {...props} {...sharedProps} />
+    </div>
+  );
+};
+
+const ForwardSelector = React.forwardRef<RefSelectorProps, SelectorProps>(Selector);
+ForwardSelector.displayName = 'Selector';
+
+export default ForwardSelector;

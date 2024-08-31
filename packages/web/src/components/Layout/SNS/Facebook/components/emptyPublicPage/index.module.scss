@@ -1,0 +1,27 @@
+@import '@web-common/styles/variables.scss';
+
+$facebook: fb;
+
+.#{$facebook}-empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  .content {
+    color: $Text-5;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    @include h1-4-med16();
+  }
+
+  .desc {
+    color: $Text-3;
+
+    > span {
+      color: $Brand-6;
+      cursor: pointer;
+    }
+  }
+}

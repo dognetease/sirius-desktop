@@ -1,0 +1,22 @@
+.unfinishedDraftMailEntry {
+  margin: 8px;
+  padding: 6px 12px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  background: $Link-1;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .unsaveMail {
+    color: $Text-5;
+    .num {
+      color: $Avatar-6;
+    }
+  }
+  .clickToView {
+    color: $Avatar-6;
+    cursor: pointer;
+  }
+}

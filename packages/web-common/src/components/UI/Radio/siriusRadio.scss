@@ -1,0 +1,63 @@
+@import '../../../styles/common.scss';
+
+$radio-prefix: 'sirius-radio-ehc';
+
+.#{$radio-prefix} {
+  &.ant-radio-wrapper {
+    &:hover {
+      .ant-radio-inner {
+        border-color: $Brand-6;
+      }
+    }
+  }
+
+  .ant-radio-checked .ant-radio-inner::after {
+    background-color: #fff;
+    opacity: 0;
+    transition: none;
+    transform: none;
+    display: none;
+  }
+
+  .ant-radio-checked .ant-radio-inner {
+    border-width: 4px;
+    border-color: $Brand-6;
+    box-shadow: none;
+  }
+
+  .ant-radio-checked::after:not(.ant-radio-disabled) {
+    animation-fill-mode: none;
+    animation: none;
+    border: 1px solid $Brand-6;
+  }
+
+  .ant-radio-checked::after {
+    // 取消点击光晕
+    display: none;
+  }
+
+  .ant-radio:hover .ant-radio-inner {
+    border-color: $Brand-6;
+  }
+
+  .ant-radio-inner {
+    transition: none;
+    border-color: $Fill-5;
+    height: 14px;
+    width: 14px;
+  }
+
+  .ant-radio-disabled.ant-radio-checked .ant-radio-inner {
+    background-color: #fff;
+    border-color: $Brand-3 !important;
+  }
+
+  .ant-radio-disabled .ant-radio-inner {
+    background-color: $Fill-4;
+    border-color: $Fill-5 !important;
+  }
+
+  .ant-radio-checked .ant-radio-inner {
+    background-color: #fff;
+  }
+}

@@ -1,0 +1,82 @@
+.success-modal-wrap {
+  font-size: 12px;
+  color: $Text-3;
+
+  .success-tip {
+    text-align: center;
+  }
+
+  .modal-title {
+    @include h3-med20();
+    color: $Text-5;
+  }
+
+  :global(.sirius-icon) {
+    vertical-align: -0.125em;
+    font-size: 42px;
+    color: $Success-6;
+    height: 42px;
+    width: 42px;
+    line-height: 42px;
+    background-size: 42px;
+  }
+
+  .task-info {
+    display: flex;
+    height: 66px;
+    margin-bottom: 16px;
+    align-items: center;
+    line-height: 16px;
+    background: $Brand-1;
+    border-radius: 2px;
+  }
+
+  .task-info-item {
+    flex: 1;
+    position: relative;
+    font-size: 12px;
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 1px;
+      top: 7px;
+      width: 0;
+      height: 28px;
+      border-right: 1px solid $Line-3;
+    }
+  }
+
+  .task-info-title {
+    margin-bottom: 2px;
+    color: $Text-5;
+    @include h1-4-med16();
+  }
+
+  .success-tip-footer {
+    font-size: 12px;
+    em {
+      font-style: normal;
+      @include p1-4-med14();
+      color: $Text-4;
+    }
+  }
+
+  :global(.ant-modal-body) {
+    background: linear-gradient(180deg, rgba(76, 106, 255, 0.1) 0%, rgba(76, 106, 255, 0) 100%);
+    background-size: 100% 210px;
+    background-repeat: no-repeat;
+  }
+
+  :global(.ant-modal-confirm-body .anticon) {
+    display: none;
+  }
+
+  :global(.ant-modal-confirm-content) {
+    padding-left: 0 !important;
+    text-align: center;
+  }
+
+  :global(.ant-modal-confirm-btns) {
+    display: none;
+  }
+}

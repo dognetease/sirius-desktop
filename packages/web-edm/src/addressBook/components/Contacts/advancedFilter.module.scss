@@ -1,0 +1,71 @@
+.advanced-filter {
+  :global(.ant-modal-header) {
+    padding: 20px 24px;
+    border-bottom: 0;
+  }
+
+  :global(.ant-modal-body) {
+    padding: 20px 24px;
+    min-height: 352px;
+    border-bottom: 0;
+  }
+
+  :global(.ant-modal-footer) {
+    border-top: 0;
+  }
+
+  .title {
+    color: #232d47;
+    @include h1-4-med16();
+  }
+
+  .sub-title {
+    color: #a9b2c2;
+    @include c4-1-reg12();
+    margin-top: 4px;
+  }
+
+  .relation {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    &-text {
+      color: #7a8599;
+      @include p1-3-reg14();
+      margin-left: 12px;
+    }
+  }
+
+  .group {
+    margin-bottom: 13px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .group-title {
+    margin-bottom: 8px;
+  }
+
+  .group-content {
+    padding: 24px 24px 0 24px;
+    border-radius: 4px;
+    background-color: #f9fafb;
+  }
+
+  .form-list-item {
+    margin-bottom: 0;
+    padding-bottom: 24px;
+
+    :global(.ant-form-item) {
+      margin-bottom: 0;
+    }
+  }
+
+  .form-list-item-icon {
+    display: block;
+    cursor: pointer;
+  }
+}

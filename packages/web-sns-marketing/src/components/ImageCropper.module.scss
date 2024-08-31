@@ -1,0 +1,124 @@
+.image-cropper {
+  :global(.ant-modal-body) {
+    padding: 0;
+  }
+
+  .tip {
+    padding: 12px 20px;
+    background-color: $Warning-1;
+    display: flex;
+    align-items: center;
+
+    .icon {
+      margin-right: 6px;
+    }
+
+    .text {
+      color: $Text-4;
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-start;
+
+    .preview {
+      flex-shrink: 0;
+      padding: 36px;
+
+      .crop-wrapper {
+        width: 400px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .img {
+        width: 100%;
+        height: 100%;
+        max-width: 400px;
+        max-height: 400px;
+      }
+    }
+
+    .config {
+      flex-grow: 1;
+      padding: 36px;
+      height: 472px;
+      border-left: 1px solid $Line-2;
+
+      .title {
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+
+        .text {
+          color: $Text-5;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 22px;
+        }
+
+        .icon {
+          margin-left: 4px;
+        }
+      }
+
+      .aspects {
+        .item + .item {
+          margin-top: 16px;
+        }
+
+        .item {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+
+          .block {
+            border: 1px solid $Line-3;
+            background-color: $Fill-2;
+            margin-right: 8px;
+          }
+
+          .name {
+            color: $Text-4;
+            font-size: 14px;
+            line-height: 22px;
+          }
+        }
+
+        .item.active {
+          .block {
+            border-color: $Brand-6;
+          }
+
+          .name {
+            color: $Brand-6;
+          }
+        }
+      }
+    }
+  }
+}
+
+.crop-tooltip {
+  :global {
+    .ant-tooltip-arrow {
+      display: block !important;
+    }
+
+    .ant-tooltip-inner {
+      color: #ffffff;
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 400;
+
+      a {
+        margin-left: 12px;
+      }
+    }
+  }
+}

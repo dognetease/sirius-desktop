@@ -1,0 +1,270 @@
+@import '@web-common/styles/variables.scss';
+$input-height: 58px;
+
+.search-box {
+  position: relative;
+  border-radius: 4px;
+  background: #ffffff;
+  border: 1px solid $Line-1;
+  padding: 16px;
+
+  :global {
+    .ant-row.ant-form-item {
+      // width: 33.33%;
+      padding-right: 22px;
+      margin-right: 0;
+
+      .ant-form-item-label {
+        label {
+          font-weight: 400;
+          font-size: 14px;
+          color: $Text-3;
+          min-width: 70px;
+        }
+      }
+    }
+
+    .ant-checkbox-wrapper {
+      color: #272e47 !important;
+    }
+  }
+
+  :global {
+    .sirius-cascader-menu-item {
+      &:nth-child(2n) {
+        background: #f6f7fa;
+      }
+    }
+  }
+
+  &-init {
+    margin-bottom: 12px;
+
+    :global {
+      .ant-row.ant-form-item {
+        .ant-form-item-label {
+          label {
+            color: $Text-5;
+          }
+        }
+      }
+    }
+  }
+
+  .form {
+    row-gap: 16px;
+
+    &-hide {
+      .countrySelect,
+      .relationCountrySelect,
+      .containsExpress,
+      .viewStatus,
+      .divider {
+        display: none;
+      }
+    }
+
+    &-list {
+      .searchHistory {
+        display: none;
+      }
+    }
+
+    .divider {
+      width: 100%;
+      border-top: dashed 1px #e1e3e8;
+    }
+
+    .compactItem {
+      width: 66.6%;
+
+      .compactGroup {
+        display: flex;
+        border-radius: 4px;
+        border: 1px solid;
+        border-color: $Line-3;
+        height: 32px;
+        overflow: hidden;
+
+        &:hover {
+          border-color: $Brand-5;
+        }
+
+        :global {
+          .ant-select-selector {
+            border-radius: 4px 0 0 4px;
+            border: none;
+            box-shadow: none;
+          }
+        }
+      }
+
+      .searchType {
+        :global {
+          .ant-select-selector {
+            border-radius: 4px 0 0 4px;
+          }
+        }
+      }
+
+      .portSelect {
+        flex-grow: 1;
+      }
+
+      .portSplit {
+        border: none;
+        text-align: center;
+        padding: 0;
+        background: #fff;
+        width: 10px;
+        cursor: default;
+        pointer-events: none;
+      }
+    }
+
+    .select {
+      width: 33.3%;
+      padding-right: 0;
+
+      :global {
+        .sirius-cascader-select {
+          width: 100%;
+        }
+      }
+    }
+
+    .airLine {
+      :global {
+        .ant-select-selector {
+          border-radius: 0 4px 4px 0;
+        }
+      }
+    }
+
+    .firstPort {
+      width: calc((100% - 80px) / 2);
+
+      :global {
+        .ant-select-selector {
+          border-radius: 0;
+          border-right-width: 0;
+        }
+      }
+    }
+
+    .secondPort {
+      width: calc((100% - 80px) / 2);
+
+      :global {
+        .ant-select-selector {
+          border-radius: 0 4px 4px 0;
+        }
+      }
+    }
+
+    .peerItem {
+      width: calc((100% - 76px) * 0.63) !important;
+
+      &-s {
+        width: 33.3%;
+        padding-right: 1px !important;
+
+        &-init {
+          width: calc((100% - 76px) * 0.37);
+        }
+      }
+    }
+  }
+}
+
+.itemBox {
+  display: flex;
+  width: 66.6%;
+
+  .keywordInput {
+    width: 78%;
+  }
+}
+
+.searchHistory {
+  width: 66.6%;
+}
+
+.countrySelect,
+.relationCountrySelect,
+.containsExpress {
+  width: 33.3%;
+}
+
+.countrySelect {
+  :global {
+    .ant-form-item-control {
+      max-width: calc(100% - 70px);
+    }
+  }
+}
+
+.countryPeers {
+  width: auto !important;
+  max-width: 33.3%;
+}
+
+.viewStatus {
+  width: 50%;
+}
+
+.viewStatusPeers {
+  width: auto;
+}
+
+.formOp {
+  display: flex;
+  width: 33.3%;
+  margin-left: auto;
+  align-items: center;
+  justify-content: flex-end;
+
+  .formHidden {
+    margin-left: 16px;
+    color: $Brand-6;
+    cursor: pointer;
+  }
+}
+
+.label-flex {
+  display: flex;
+  column-gap: 10px;
+}
+
+.not-viewed {
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 0;
+    right: -6px;
+    border-radius: 50%;
+    // margin-left: 8px;
+    background: #df3e31;
+    // margin-left: 8px;
+  }
+}
+
+.airLineItem {
+  display: flex;
+  align-items: center;
+}
+
+.airLineTag {
+  border-radius: 2px;
+  background-color: #fe5b4c;
+  color: #fff;
+  padding: 1px 2px;
+  font-size: 10px;
+  line-height: 12px;
+  margin-left: 8px;
+}

@@ -1,0 +1,100 @@
+.bar {
+  width: 100%;
+  display: flex;
+
+  &-left {
+    flex: 1;
+    position: relative;
+    &-suffix {
+      width: 78px;
+      color: #000;
+      &-wrapper {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        width: 122px;
+        height: 42px;
+        border-left: 1px solid #e1e3e8;
+        padding-left: 16px;
+        margin-right: 11px;
+        margin: 9px 0;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+        svg {
+          transition: 0.15s;
+        }
+      }
+    }
+    &-popover {
+      position: absolute;
+      z-index: 10;
+      left: 0;
+      width: 100%;
+      top: 64px;
+      background: #fff;
+      color: #272e47;
+      box-shadow: 0px 8px 16px rgba(47, 83, 134, 0.12);
+      border-radius: 4px;
+      padding: 16px;
+      max-height: 226px;
+      overflow: auto;
+
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: repeat(auto-fill, 101px);
+      grid-gap: 10px;
+
+      &-item {
+        display: inline-block;
+        width: 101px;
+        height: 32px;
+        line-height: 30px;
+        text-align: center;
+        border: 1px solid #f0f1f5;
+        border-radius: 2px;
+        cursor: pointer;
+
+        &:hover {
+          background: #f0f2f7;
+        }
+        &:global(.selected) {
+          background-color: #edf0ff;
+          border-color: #f0f1f5;
+          color: #4c6aff;
+        }
+      }
+    }
+  }
+
+  :global {
+    .ant-input {
+      height: 60px;
+      border: 1px solid #4c6aff;
+      border-radius: 4px 0px 0px 4px !important;
+      padding: 4px 134px 4px 15px;
+      caret-color: #4c6aff;
+      color: $Text-5;
+      &::-webkit-input-placeholder {
+        color: $Text-2;
+      }
+    }
+    .ant-btn-primary {
+      height: 60px;
+      width: 128px;
+      padding: 0 32px;
+      background: #4c6aff;
+      font-size: 16px;
+      font-weight: 400;
+      border-radius: 0px 4px 4px 0px;
+      &:hover {
+        background: #7088ff;
+      }
+      &:active {
+        background: #445fe5;
+      }
+    }
+  }
+}

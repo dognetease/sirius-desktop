@@ -1,0 +1,185 @@
+@import '../../../web/src/styles/varies';
+.im-sessions-total {
+  height: 100%;
+  overflow-x: hidden;
+  margin-top: 0;
+  position: initial;
+  // 兼容chrome49设置height100%无效问题
+  display: flex;
+  flex-direction: column;
+  &::before {
+    content: none;
+  }
+  // 如果上面有一个置顶div
+  &:not(:first-child) {
+    margin-top: 8px;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 12px;
+      right: 12px;
+      content: '';
+      // width: 300px;
+      height: 1px;
+      // background-color: rgba($color: $Fill-4, $alpha: 1);
+      background-color: $Fill-4;
+      transform: scaleY(0.5);
+    }
+  }
+  // 兼容chrome49设置height100%无效问题
+  :global(.ant-tabs-content-holder),
+  :global(.ant-tabs-tabpane) {
+    display: flex;
+    flex-direction: column;
+  }
+  :global(.ant-tabs-nav) {
+    margin: 0 4px 12px 12px;
+    padding-left: 12px;
+    // background-color: #fff;
+    background-color: $white;
+    box-shadow: inset 0px -0.5px 0px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+    width: calc(100% - 24px);
+    &::before {
+      border: none;
+    }
+  }
+  :global(.ant-tabs) {
+    height: 100%;
+  }
+  :global(.ant-tabs-tab) {
+    padding: 12px 0 6px;
+  }
+  :global(.ant-tabs-tab-btn) {
+    // color: #7d8085;
+    color: $Text-3;
+  }
+  :global(.ant-tabs-tab-active) {
+    &::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 2px;
+      background: #386ee7;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  :global(.ant-tabs-tab-active .ant-tabs-tab-btn) {
+    color: #386ee7;
+  }
+  :global(.ant-tabs-ink-bar) {
+    display: none;
+  }
+  :global(.ant-tabs-content) {
+    height: 100%;
+  }
+}
+
+.im-sessions-wrap {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  @include sirius-scroll();
+  // background-color: #ffffff;
+  background-color: $white;
+  .list {
+    margin: 0;
+    padding: 0 6px 12px 12px;
+  }
+  .get-more-sessions {
+    width: 100%;
+    height: 1px;
+    overflow: hidden;
+    background-color: transparent;
+    font-size: 0;
+    line-height: 0;
+  }
+}
+
+.wait-contact-ready {
+  width: 100%;
+  padding: 0 50px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .session-loading-step {
+    padding-bottom: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: $font-color-2;
+  }
+  .session-loading-text {
+    padding-top: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #7d8085;
+  }
+  .ellipse {
+    display: inline-block;
+    width: 15px;
+    text-align: left;
+    padding-left: 1px;
+    &::after {
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: bottom;
+      -webkit-animation: ellipsis steps(4, end) 900ms infinite;
+      animation: ellipsis steps(4, end) 900ms infinite;
+      content: '\2026';
+      /* ascii code for the ellipsis character */
+      width: 0px;
+    }
+  }
+}
+
+.no-session {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+  .tips {
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height, or 129% */
+    /* 黑白灰/字体 50% */
+    color: $main-font-color;
+  }
+  .action {
+    cursor: default;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+    text-align: center;
+    /* 品牌色/企业邮蓝 */
+    color: $main-enhance-color;
+    // : #262a33;;
+    padding-top: 12px;
+  }
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}

@@ -1,0 +1,10 @@
+.quota-confirm-modal {
+  :global(.ant-modal-confirm-content) {
+    color: #7a8599;
+    @include p1-3-reg14();
+  }
+
+  .highlight {
+    color: $Brand-6;
+  }
+}

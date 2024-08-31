@@ -1,0 +1,51 @@
+.batchStrangerOpt {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  .optArea {
+    .top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .batchHead {
+        margin-right: 32px;
+        width: 140px;
+        height: 140px;
+      }
+      .strangerNumContainer {
+        .strangerNum {
+          margin-bottom: 8px;
+          font-weight: bold;
+          font-size: 56px;
+          line-height: 1;
+          color: #51555c;
+        }
+        .intro {
+          font-size: 14px;
+          line-height: 16px;
+          color: #51555c;
+        }
+      }
+    }
+    .opts {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      > span {
+        margin: 0 12px;
+        padding: 8px 26px;
+        background: #386ee7;
+        border-radius: 4px;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        color: #ffffff;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+    }
+  }
+}

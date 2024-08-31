@@ -1,0 +1,170 @@
+@import './../../../../web/src/styles/varies.scss';
+
+.modalWrapClassName {
+  :global(.ant-modal-header) {
+    border-bottom: 0;
+    height: 54px;
+    padding: 11px 24px 10px 24px;
+    border-bottom: 1px solid #e1e6ed;
+  }
+  :global(.ant-modal-title) {
+    font-weight: 400 !important;
+    color: #232d47 !important;
+  }
+  :global(.ant-select-selection-item) {
+    color: #232d47 !important;
+  }
+  :global(.ant-modal-body) {
+    padding: 0;
+    padding-bottom: 6px;
+  }
+  :global(.ant-modal) {
+    min-width: 793px;
+    padding-bottom: 6px;
+  }
+
+  h3 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #232d47;
+    padding-top: 24px;
+    padding-bottom: 12px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.templateModalLayout {
+  width: 907px !important;
+}
+.row-header-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: 500;
+  // color: #232d47;
+  color: $font-color-2;
+  font-size: 16px;
+  line-height: 2em;
+  margin-left: 4px;
+  margin-right: 10px;
+}
+
+.select {
+  border: 1px solid $Fill-3;
+  border-radius: 2px;
+  width: 96px;
+  :global(.ant-select-selection-item) {
+    font-weight: 400 !important;
+  }
+  :global(.ant-select-arrow) {
+    right: 6px;
+  }
+}
+.dropdown {
+  // background: linear-gradient(0deg, #ffffff, #ffffff), $Text-1;
+  background-color: $white;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  border: 1px solid $Fill-3;
+  :global(.ant-select-item-option-selected:not(.ant-select-item-option-disabled)) {
+    background: $Fill-2;
+    font-weight: 400;
+  }
+  :global(.ant-select-item) {
+    // color: #232d47;
+    color: $font-color-2;
+    padding: 5px 5px 5px 16px;
+  }
+}
+
+.layout {
+  display: flex;
+}
+.menu {
+  width: 116px;
+  padding-top: 7px;
+  padding-left: 12px;
+  padding-right: 11px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  // border-right: 1px solid #e1e6ed;
+  border-right: 1px solid $Fill-4;
+  .segement {
+    height: 1px;
+    background-color: $Fill-2_5;
+    margin: 8px 0;
+  }
+}
+.content {
+  position: relative;
+  flex-grow: 1;
+  height: 557px;
+  background: $Fill-1;
+  overflow: auto;
+  padding: 0 24px 0px 24px;
+  @include sirius-scroll;
+  h3 {
+    color: $font-color-2;
+  }
+}
+
+.template-list-wrap {
+  display: flex;
+  margin-left: -10px;
+  margin-right: -10px;
+  margin-bottom: -16px;
+  flex-wrap: wrap;
+  & > div {
+    width: 25%;
+    padding: 0 10px;
+  }
+}
+
+// 缺省图相关样式
+.saveAsTemplateImg {
+  text-align: center;
+  margin-bottom: 0;
+  img {
+    width: 100%;
+  }
+  p {
+    font-size: 14px;
+    line-height: 14px;
+    color: #a8aaad;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
+
+// 修复bug：http://jira.netease.com/browse/UNITABLE-1088
+@media screen and (max-width: 990px) {
+  .templateModalLayout {
+    width: 717px !important;
+    min-width: 717px !important;
+  }
+  .template-list-wrap {
+    display: flex;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: -16px;
+    flex-wrap: wrap;
+    & > div {
+      width: 33.3333333%;
+      padding: 0 10px;
+    }
+  }
+}
+
+@media screen and (max-height: 760px) {
+  .content {
+    height: 420px;
+  }
+}

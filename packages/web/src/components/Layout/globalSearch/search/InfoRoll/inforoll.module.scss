@@ -1,0 +1,33 @@
+@import '@web-common/styles/variables.scss';
+.wrapper {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  min-width: 100px;
+  height: 73px;
+  max-width: 600px;
+  overflow: hidden;
+
+  .item {
+    padding: 6px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    backdrop-filter: blur(2px);
+    border-radius: 28px;
+    min-width: 100px;
+    color: #ffffff;
+    margin-bottom: 6px;
+    float: right;
+    width: auto !important;
+    height: 32px;
+    max-width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    white-space: nowrap;
+  }
+}

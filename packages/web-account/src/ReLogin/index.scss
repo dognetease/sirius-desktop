@@ -1,0 +1,32 @@
+.u-login-window {
+  .ant-modal-content {
+    border-radius: 8px;
+  }
+  .u-login-title {
+    padding: 16px 0;
+    line-height: 20px;
+    font-size: 16px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  }
+  .u-login-user {
+    padding-bottom: 18px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #51555c;
+  }
+  .ant-modal-footer {
+    border-top: 0;
+    padding: 0 40px 40px;
+    .u-middle-btn {
+      width: 76px;
+      height: 34px;
+      border-radius: 4px;
+      margin-left: 20px;
+    }
+    .u-foot-warning {
+      float: left;
+      line-height: 34px;
+      color: #f74f4f;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+.normalAtt {
+  height: 100%;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  .head {
+    position: relative;
+    .tabTitle {
+      margin-top: 4px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1;
+      // color: #262a33;
+      color: $font-color-2;
+    }
+    .intro {
+      margin-top: 8px;
+      margin-bottom: 24px;
+      font-size: 12px;
+      line-height: 1;
+      // color: #a8aaad;
+      color: $calendar-1;
+    }
+    .uploadButt {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  .optArea {
+    padding: 12px 16px;
+    background: white;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 1px solid $Line-2;
+    .download,
+    .forward,
+    .filter {
+      margin-right: 12px;
+      min-width: 60px;
+      height: 32px;
+      border: 1px solid $Brand-6;
+      font-size: 14px;
+      color: $Brand-6;
+      line-height: 22px;
+      &:hover {
+        background: white;
+      }
+    }
+    .filter {
+      margin-right: 0;
+    }
+  }
+  .contentBody {
+    flex: 1;
+    .normalAttTable {
+      height: 100%;
+      :global(.ant-table-header) {
+        border-radius: 0;
+        margin-bottom: 0;
+      }
+      .hoverRow {
+        background-color: $white-hover-bg;
+      }
+      .sourceName {
+        cursor: pointer;
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+        &:hover {
+          color: #386ee7;
+        }
+      }
+    }
+  }
+  .timeTitle {
+    display: flex;
+    align-items: center;
+    .orderIcon {
+      padding-left: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .expireTimeTitle {
+    display: flex;
+    align-items: center;
+    .infoIcon {
+      margin-left: 4px;
+      opacity: 0.7;
+    }
+  }
+}
+
+.attTypeMenu {
+  font-size: 14px;
+  color: $Text-4;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  border: 0.5px solid $Line-2;
+  box-shadow: 0 4px 10px 0 rgba(47, 83, 134, 0.12);
+}
+
+.attTypeMenuItem {
+  width: 106px;
+  height: 32px;
+}
+.attTypeSubMenuItem {
+  width: 66px;
+  height: 32px;
+  background: white;
+}
+.itemActive {
+  color: #4c6aff;
+}
+.attTypeSubMenu {
+  font-size: 0;
+  border-radius: 4px;
+  border: 0.5px solid $Line-2;
+  box-shadow: 0 4px 10px 0 rgba(47, 83, 134, 0.12);
+}

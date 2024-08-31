@@ -1,0 +1,244 @@
+@import '../../web/src/styles/varies';
+.mail-wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  // border-top: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+  border-top: 0.5px solid $Line-3;
+  height: 100%;
+  .contact-wrapper {
+    flex-shrink: 0;
+    // background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.04);
+    background-color: $Fill-2;
+    position: relative !important;
+    height: 100%;
+    // margin-bottom: 44px;
+    &-hidden {
+      display: none;
+    }
+    &-freebusy {
+      background-color: #ffffff;
+    }
+    :global {
+      .react-resizable-handle-w {
+        top: 0;
+        bottom: 0;
+        transform: none;
+      }
+    }
+  }
+}
+.max {
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.mail-body {
+  // min-width: 740px;
+  min-width: 585px;
+  width: auto;
+  position: relative;
+  display: flex;
+  flex: 1 1;
+  &-in-resize {
+    &::after {
+      content: '';
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      background: transparent;
+    }
+  }
+}
+
+.mail-content {
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.contact-wrapper {
+  flex-shrink: 0;
+  background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.04);
+  position: relative !important;
+  height: 100%;
+  // margin-bottom: 44px;
+  &-hidden {
+    display: none;
+  }
+  &-freebusy {
+    background-color: #ffffff;
+  }
+  :global {
+    .react-resizable-handle-w {
+      top: 0;
+      bottom: 0;
+      transform: none;
+    }
+  }
+}
+
+.write-content {
+  height: 100%;
+}
+
+.divider-line {
+  // background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+  background-color: $Line-2;
+  width: 1px;
+  flex-shrink: 0;
+  // cursor: ew-resize;
+}
+
+.content-wrapper {
+  flex: 1;
+  overflow: auto;
+  // height: 100%;
+  height: calc(100% - 80px);
+  // 处理预览时候 收件人 主题等信息z-index 为100
+  // 上面的100没找到在哪，注释了101为了解决 SIRIUS-2945 一个Safari兼容问题，如果有问题可以放开101
+  // z-index: 101;
+  //平滑滚动
+  scroll-behavior: smooth;
+  position: relative;
+  .editor-container-emoji-tip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 1000;
+    img {
+      height: 44px;
+      width: 1026px;
+    }
+  }
+}
+
+.oper-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.oper-item {
+  margin-right: 16px;
+}
+
+.write-mail-editor-header {
+  // overflow: auto;
+  transform: scale(1);
+  min-height: 300px;
+  flex: 1;
+  background-color: #fff;
+  .drop-files {
+    background: rgba(0, 0, 0, 0.12) !important;
+  }
+  display: flex;
+  // flex-direction: column;
+  flex-direction: row;
+  overflow: hidden;
+  :global {
+    #writeMailEditorScroll {
+      margin-top: 80px;
+    }
+  }
+}
+
+.belowOperate {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: auto;
+}
+
+.drop-upload-tips {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #7d8085;
+  color: #262a33;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  font-size: 14px;
+  .text {
+    padding-top: 5px;
+  }
+}
+
+.attachment-drop {
+  position: absolute;
+  padding: 72px 16px 16px;
+  box-sizing: border-box;
+  height: calc(100% - 175px);
+  width: 100%;
+  background: rgba(0, 0, 0, 0.12) !important;
+  bottom: 46px;
+  &.visible {
+    display: flex;
+  }
+}
+
+.mail-remind-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .mail-remind-btns {
+    display: flex;
+  }
+  :global(.ant-checkbox-wrapper) {
+    color: $font-color-2;
+  }
+}
+
+.mail-remind-content {
+  display: flex;
+}
+
+.mail-remind-left {
+  margin-right: 10px;
+}
+
+.mail-remind-text {
+  margin-bottom: 16px;
+  // color: #262a33;
+  color: $font-color-2;
+  line-height: 1.5;
+}
+
+.topOperate {
+  padding: 16px;
+  // background: $white-bg;
+  background-color: $Fill-2;
+  // box-shadow: inset 0 -0.5px 0 rgba($color: $Text-5, $alpha: .12);
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.spinning-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  :global(.spin-label) {
+    display: none;
+  }
+  :global(.ant-spin-dot) {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,15 @@
+.client {
+  :global {
+    .ant-modal-header {
+      border: none;
+      padding-bottom: 12px;
+    }
+
+    .ant-modal-footer {
+      border: none;
+    }
+  }
+  &-select {
+    width: 100%;
+  }
+}

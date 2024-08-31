@@ -1,0 +1,161 @@
+@import '@web-common/styles/variables.scss';
+
+.container {
+  position: absolute;
+  bottom: -1px;
+  margin: 0 -8px;
+
+  :global {
+    .ant-tabs-nav {
+      margin-bottom: 0;
+    }
+
+    .ant-tabs {
+      overflow: visible;
+    }
+
+    .ant-tabs-tab {
+      background: transparent;
+      color: #fff;
+    }
+
+    .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab {
+      transition: none;
+    }
+
+    .ant-tabs-tab-btn {
+      transition: none;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .ant-tabs-nav-wrap {
+      margin-right: 0 !important;
+    }
+
+    // .ant-tabs > .ant-tabs-nav .ant-tabs-nav-list {
+    //   padding: 0 8px;
+    // }
+    .ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab {
+      background: transparent;
+      color: #fff;
+      border-radius: 4px 4px 0 0;
+      height: 46px;
+      line-height: 46px;
+      border: none;
+      max-width: 102px;
+    }
+
+    .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab,
+    .ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab {
+      background: transparent;
+      color: #fff;
+    }
+
+    .ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab-active {
+      background: #f5f6f7;
+      color: $Avatar-6;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 8px;
+        left: -8px;
+        bottom: 0;
+        background: url(../../../../../../images/contomfair/reverse-corner.svg) center center no-repeat;
+        background-size: 8px;
+      }
+
+      &::after {
+        position: absolute;
+        content: '';
+        width: 8px;
+        height: 8px;
+        right: -8px;
+        bottom: 0;
+        background: url(../../../../../../images/contomfair/reverse-corner.svg) center center no-repeat;
+        background-size: 8px;
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .tabDrop {
+    :global {
+      .ant-btn-default {
+        min-width: 0;
+        padding: 0;
+        border: none;
+      }
+
+      .ant-btn-icon-only {
+        // width: ;
+        padding: 12px 20px;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        height: 46px;
+      }
+
+      .ant-menu {
+        box-shadow: 0px 4px 10px 0px rgba(47, 83, 134, 0.12) !important;
+        padding: 4px 0;
+        border-radius: 4px;
+      }
+
+      .ant-menu-vertical > .ant-menu-item {
+        height: auto;
+        line-height: 24px;
+        padding: 4px 12px;
+        margin: 0 !important;
+
+        &:hover {
+          background-color: #f0f2f7;
+        }
+      }
+
+      .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+        background-color: transparent;
+      }
+
+      .ant-menu-title-content {
+        color: $Text-5;
+      }
+    }
+  }
+}
+
+.catalogListWrapper {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+
+  .catalogLabel {
+    width: 80px;
+    color: $Text-5;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    flex-shrink: 0;
+  }
+
+  .catalogList {
+    display: flex;
+    gap: 12px 40px;
+    flex-wrap: wrap;
+
+    .catalogItem {
+      cursor: pointer;
+      color: $Text-5;
+
+      &-selected {
+        color: $Avatar-6;
+      }
+    }
+  }
+}

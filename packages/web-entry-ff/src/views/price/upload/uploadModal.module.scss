@@ -1,0 +1,59 @@
+.upload {
+  &-success {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $Line-3;
+    padding: 10px 16px;
+    color: $Text-3;
+  }
+  &-file {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  &-info {
+    display: flex;
+    align-items: center;
+  }
+}
+.drap-wrap {
+  margin-top: 16px;
+  .standard {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .upload-field {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .title {
+    font-size: 12px;
+  }
+  .drag-box {
+    cursor: grab;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid $Line-3;
+    position: relative;
+    &-required {
+      position: relative;
+      &::before {
+        display: inline-block;
+        color: #ff4d4f;
+        font-size: 14px;
+        line-height: 1;
+        content: '*';
+      }
+    }
+    &-common {
+      cursor: initial;
+    }
+    &-table {
+      border: none;
+    }
+  }
+}

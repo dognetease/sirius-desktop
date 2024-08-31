@@ -1,0 +1,12 @@
+.feedback-modal {
+  :global(.ant-modal-close) {
+    top: 4px;
+  }
+  :global(.ant-modal-body) {
+    padding: 0;
+  }
+  :global(.ant-modal-content) {
+    border-radius: 4px;
+    width: 800px;
+  }
+}

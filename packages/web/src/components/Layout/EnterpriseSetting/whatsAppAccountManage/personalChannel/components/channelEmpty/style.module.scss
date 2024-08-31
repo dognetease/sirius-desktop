@@ -1,0 +1,43 @@
+.empty-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.empty-box {
+  width: 300px;
+}
+
+.empty-image {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  background: url('@web-common/images/empty.png') no-repeat center center;
+  background-size: contain;
+}
+
+.empty-title {
+  color: $Text-5;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 24px 0 12px;
+  text-align: center;
+}
+
+.empty-text {
+  margin: 0;
+  color: $Text-3;
+  font-size: 14px;
+  text-align: center;
+}
+
+.empty-link {
+  color: $Brand-6;
+  cursor: pointer;
+  transition: color linear 0.1s;
+
+  &:hover {
+    color: $Brand-4;
+  }
+}

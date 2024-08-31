@@ -1,0 +1,105 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.message {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: $Fill-2;
+  overflow: auto;
+  display: flex;
+
+  .chat-list-wrapper {
+    flex-shrink: 0;
+    width: 318px;
+    margin-right: 12px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .phone-select-wrapper {
+      flex-shrink: 0;
+      display: flex;
+      margin-bottom: 12px;
+
+      .phone-select {
+        flex-grow: 1;
+        margin-right: 8px;
+        overflow: hidden;
+      }
+
+      .refresh {
+        flex-shrink: 0;
+        cursor: pointer;
+      }
+    }
+
+    .chat-list-inner {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      padding: 8px;
+      border: 1px solid $Line-2;
+      background-color: #ffffff;
+    }
+
+    .search-input {
+      flex-shrink: 0;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .chat-list {
+      flex-grow: 1;
+      overflow: auto;
+    }
+  }
+
+  .chat-content {
+    flex-grow: 1;
+    height: 100%;
+    border: 1px solid $Line-2;
+    background-color: #ffffff;
+  }
+}
+
+.wa-sidebar-container {
+  position: relative;
+  background: #fff;
+  height: 100%;
+}
+
+.wa-sidebar {
+  overflow: hidden;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 50%;
+  left: -2px;
+  margin-top: -46px;
+  width: 16px;
+  height: 32px;
+
+  border-right: none;
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  border-left: none;
+  z-index: 1;
+  background-image: url(@/images/icons/submenu-right.svg);
+  transform: perspective(75px) rotateY(45deg);
+  border-radius: 0px 5px 5px 0px;
+  box-shadow: rgba(0, 0, 0, 0.078) 2px 0px 3px;
+
+  &.is-fold {
+    border-right: none;
+    right: -2px;
+    left: auto;
+    background-image: url(@/images/icons/submenu-left.svg);
+    transform: perspective(75px) rotateY(-45deg);
+    box-shadow: rgba(0, 0, 0, 0.078) -3px 1px 5px;
+    border-radius: 5px 0px 0px 5px;
+  }
+}

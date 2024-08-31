@@ -1,0 +1,118 @@
+@import '@web-common/styles/variables.scss';
+
+.container {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+
+  .title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+
+    /* 文字/Text-5标题-重要信息 */
+
+    color: $Text-5;
+    margin-bottom: 12px;
+  }
+
+  .hotTag {
+    height: 16px;
+    text-align: center;
+    /* 错误/Error-6常规 */
+    margin-left: 8px;
+    background: $Error-6;
+    border-radius: 8px;
+    color: #fff;
+    padding: 0 4px;
+    line-height: 16px;
+    margin-bottom: 12px;
+    font-size: 12px;
+  }
+
+  .list {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+
+    .activity {
+      width: 34%;
+      padding-top: 14%;
+      border-radius: 4px;
+      background-size: 100% 100% !important;
+
+      &-contomfair {
+        background: url('https://cowork-storage-public-cdn.lx.netease.com/common/2023/11/30/61b0537adb2547679e76ea9d28282f9b.png') center center no-repeat;
+        cursor: pointer;
+      }
+
+      &-br {
+        background: url('https://cowork-storage-public-cdn.lx.netease.com/common/2023/11/30/9096085ca2e247078ae5d3f4afffa058.png') center center no-repeat;
+        cursor: pointer;
+      }
+
+      &-tbd {
+        background: url(../../../../../images/contomfair/acttbd.png) center center no-repeat;
+      }
+
+      &-emailguess {
+        background: url('https://cowork-storage-public-cdn.lx.netease.com/common/2023/11/30/32881b11e1234704a1e3db7a4db6fd1c.png') center center no-repeat;
+        cursor: pointer;
+      }
+
+      &-video1 {
+        position: relative;
+        background: url('https://cowork-storage-public-cdn.lx.netease.com/common/2024/01/10/cae17527f21d43a381a2153e8180e3c9.png') center center no-repeat;
+        cursor: pointer;
+        &::after {
+          position: absolute;
+          content: '';
+          width: 15%;
+          padding-bottom: 15%;
+          background: url('../../../../../images/icons/IntelligentSearch/play_video.svg') no-repeat center center;
+          background-size: 100% 100%;
+          right: 14px;
+          bottom: 14px;
+          border-radius: 50%;
+        }
+        &:hover::after {
+          background: url('../../../../../images/icons/IntelligentSearch/play_video_hover.svg') no-repeat center center;
+          background-size: 100% 100%;
+        }
+      }
+
+      &-video2 {
+        position: relative;
+        background: url('https://cowork-storage-public-cdn.lx.netease.com/common/2024/01/10/9fb54d1da0ae41929530856ca37f5e40.png') center center no-repeat;
+        cursor: pointer;
+        &::after {
+          position: absolute;
+          content: '';
+          width: 15%;
+          padding-bottom: 15%;
+          background: url('../../../../../images/icons/IntelligentSearch/play_video.svg') no-repeat center center;
+          background-size: 100% 100%;
+          right: 14px;
+          bottom: 14px;
+          border-radius: 50%;
+        }
+        &:hover::after {
+          background: url('../../../../../images/icons/IntelligentSearch/play_video_hover.svg') no-repeat center center;
+          background-size: 100% 100%;
+        }
+      }
+
+      &-video3 {
+        background: url('https://cowork-storage-public-cdn.lx.netease.com/common/2023/12/01/291f6d29c9e4498ca4fd09612d7352d3.png') center center no-repeat;
+      }
+    }
+
+    .video {
+      width: 34%;
+      padding-top: 19%;
+      border-radius: 4px;
+      background-size: 100% 100% !important;
+    }
+  }
+}

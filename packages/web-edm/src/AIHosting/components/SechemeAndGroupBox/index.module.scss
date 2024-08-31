@@ -1,0 +1,62 @@
+.secheme-and-group-box {
+  // :global(.ant-radio-wrapper:not(:last-child)) {
+  //   margin-bottom: 12px;
+  // }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .form-item {
+    display: flex;
+    gap: 12px;
+    .form-label {
+      color: #272e47;
+      display: inline-block;
+      flex: none;
+    }
+    .form-input {
+      width: 100%;
+      flex: 1;
+    }
+    &:first-child .form-input {
+      overflow: hidden;
+    }
+    // .form-radio {
+    //   color: $Text-5;
+    //   @include p1-3-reg14;
+    //   width: 100%;
+    //   flex: 1;
+    // }
+    &:not(:last-child) .form-label {
+      margin-top: 5px;
+    }
+  }
+  .form-tip {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: $Text-3;
+    @include p1-3-reg14;
+  }
+  // .form-radio-set {
+  //   margin-top: 12px;
+  //   background-color: $Fill-2;
+  //   border-radius: 4px;
+  //   padding: 16px 12px;
+  // }
+  // .form-radio-set-item {
+  //   margin-bottom: 12px;
+  // }
+  // .form-radio-desc {
+  //   color: $Fill-6;
+  //   @include c4-1-reg12;
+  //   margin-left: 8px;
+  // }
+  // .form-radio-text {
+  //   color: $Text-3;
+  //   @include c4-1-reg12;
+  //   margin-top: 12px;
+  //   display: inline-block;
+  // }
+}

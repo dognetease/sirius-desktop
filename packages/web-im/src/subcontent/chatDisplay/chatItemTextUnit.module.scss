@@ -1,0 +1,28 @@
+@import '../../../../web/src/styles/varies';
+.emoji-link {
+  width: 20px;
+  vertical-align: top;
+}
+
+.edisk-link {
+  color: $main-enhance-color;
+  line-height: 20px;
+  display: block;
+  position: relative;
+  text-indent: 20px;
+  svg {
+    position: absolute;
+    left: 0;
+    top: 1px;
+  }
+}
+
+.edisk-link + span br:first-child,
+.edisk-link + span br:last-child {
+  display: none;
+}
+
+.mention-user-link {
+  color: $main-enhance-color;
+  cursor: pointer;
+}

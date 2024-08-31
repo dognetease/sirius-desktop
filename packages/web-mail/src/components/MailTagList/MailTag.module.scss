@@ -1,0 +1,342 @@
+@import '../../../../web/src/styles/varies';
+.mail-tag-wrapper {
+  // padding-top: 30px;
+
+  :global(.ant-collapse.ant-collapse-borderless) {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  :global(.ant-collapse-header) {
+    padding: 0 0 0 7px !important;
+    display: flex;
+    align-items: center;
+    height: 36px;
+    &:hover {
+      // background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+      background-color: rgba(#272e47, 0.08);
+    }
+  }
+  :global(.ant-collapse-item) {
+    border: none !important;
+  }
+  :global(.ant-collapse-arrow) {
+    margin-right: 9px !important;
+    display: inline-block !important;
+  }
+  :global(.ant-collapse-content-box) {
+    padding: 0px !important;
+  }
+}
+
+.content-wrapper {
+  margin-top: 8px;
+  margin-bottom: 12px;
+  color: #fff;
+  .tag-wrapper {
+    overflow: hidden; // 开启bfc
+    .content-tag-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4px;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      img {
+        width: 16px;
+        height: 16px;
+        margin-right: 4px;
+      }
+    }
+    margin-bottom: 4px;
+  }
+  .info-wrapper {
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.footer-wrapper {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  font-size: 12px;
+  .text-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    // margin-right: 12px;
+  }
+  .start-button {
+    color: #386ee7;
+    border: none;
+  }
+}
+
+.mail-tag-Disabled {
+  .tag-item {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .title {
+    &:hover {
+      background: none;
+      .title-add-btn {
+        display: none;
+      }
+    }
+  }
+  .tag-item {
+    &:hover {
+      background-color: none;
+    }
+  }
+  .title-add-btn {
+    &:hover {
+      background: none;
+    }
+  }
+  .tag-item:hover .menu-entry {
+    visibility: hidden;
+  }
+}
+
+.show-guide-popover {
+  height: 260px;
+  overflow: hidden;
+}
+
+.title {
+  padding: 0 8px 0 0px;
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  // color: #7d8085;
+  color: $Text-3;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 36px;
+  flex: 1 1 auto;
+  &:hover {
+    // background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+    .title-add-btn {
+      display: flex;
+    }
+  }
+}
+
+.tag-item {
+  padding: 0 12px 0 24px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  &:hover {
+    // background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+    background-color: rgba(#272e47, 0.08);
+  }
+}
+:global(.add-pdl) {
+  .tag-item {
+    padding-left: 36px;
+  }
+  .title {
+    // padding-left: 26px;
+  }
+  .mail-tag-wrapper {
+    :global(.ant-collapse-header) {
+      padding-left: 19px !important;
+    }
+  }
+  .empty-tip {
+    margin-left: 36px;
+  }
+}
+
+.tag-item-active {
+  // background-color: rgba($Link-2-r, $Link-2-g, $Link-2-b, 0.9);
+  // background-color: rgba(#d6e6fc, 0.9);
+  background-color: $Fill-4;
+}
+
+.tag-item-icon {
+  width: 10px;
+  height: 12px;
+}
+
+.title-add-btn {
+  display: flex;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    // background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+    background-color: rgba(#272e47, 0.08);
+  }
+}
+
+.tag-item-name {
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  // color: rgba(#272e47, 0.9);
+  margin: 0;
+  flex: 1;
+  flex-shrink: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-left: 11px;
+  // 解决window下，标签无法显示下划线的问题
+  padding-bottom: 1px;
+}
+
+.tag-item-menu {
+  width: 122px;
+  padding: 8px 0;
+  left: 249px;
+  top: 586px;
+  background: #ffffff;
+  /* 黑白灰/字体 20% */
+  // border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+  border: 0.5px solid rgba(#272e47, 0.2);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+.menu-item {
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 38px;
+  // color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  color: rgba(#272e47, 0.9);
+  // border-bottom: solid 0.5px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+  text-align: left;
+  padding-left: 16px;
+  cursor: pointer;
+  &:hover {
+    background: #f0f0f1;
+  }
+  // &:last-child {
+  //   border-bottom-width: 0;
+  // }
+}
+
+.menu-entry {
+  visibility: hidden;
+}
+
+.tag-item:hover .menu-entry {
+  visibility: visible;
+}
+
+.tag-item .more {
+  width: 24px;
+  height: 24px;
+  color: #272e47;
+  line-height: 18px;
+  text-align: center;
+  border-radius: 2px;
+  display: block;
+  font-size: 14px;
+
+  &:hover {
+    background: $Fill-5;
+  }
+}
+
+.tag-radio-list {
+  padding-top: 24px;
+
+  .label {
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #7d8085;
+    margin-bottom: 0;
+  }
+
+  .list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 16px 0 0;
+  }
+
+  .item {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.tag-modal-body {
+  position: relative;
+}
+.tag-modal-wrap {
+  :global(.ant-modal-footer) {
+    border-top: 1px solid $white-hover-bg;
+  }
+  :global(.ant-modal-body > input) {
+    background-color: $white;
+  }
+}
+
+.add-tag-error {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: $Error-6;
+  font-size: 12px;
+  margin: 0;
+}
+
+.empty-tip {
+  margin: 4px 16px 4px 24px;
+  padding: 12px;
+  /* 背景及分割线/4% */
+  // background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.04);
+  background-color: rgba(#272e47, 0.04);
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #7d8085;
+  .create-entry {
+    color: $main-enhance-color;
+    padding-top: 8px;
+    cursor: pointer;
+  }
+}
+
+.sub-title {
+  color: var(--text-5, #272e47);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.error-info {
+  color: var(--error-6, #fe5b4c);
+}

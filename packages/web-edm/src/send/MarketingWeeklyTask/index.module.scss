@@ -1,0 +1,226 @@
+.info-modal {
+  :global(.ant-modal-body) {
+    border-radius: 8px;
+    background: #f0f4ff;
+    padding: 0px;
+    height: 600px;
+  }
+  .background {
+    height: 276px;
+    position: relative;
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px 8px 0px 0px;
+    }
+    .contain {
+      position: absolute;
+      bottom: 0px;
+      padding: 0px 40px 8px 40px;
+      .tip {
+        color: #4b6ef0;
+        width: 76px;
+        height: 28px;
+        border: 1px solid rgba(122, 150, 255, 1);
+        border-radius: 2px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .title {
+        color: rgba(62, 104, 255, 1);
+        font-size: 26px;
+        font-weight: 500;
+        margin-bottom: 8px;
+        position: relative;
+        display: inline-block;
+        .title-per {
+          font-family: LX-numbers;
+          font-size: 48px;
+          font-weight: 400;
+          line-height: 65px;
+          letter-spacing: -0.02em;
+          text-align: left;
+          margin: 0px 5px;
+        }
+        .title-bkg {
+          width: 100%;
+          height: 8px;
+          opacity: 0.8;
+          position: absolute;
+          bottom: 4px;
+          background: #b3c8fd;
+        }
+      }
+      .des {
+        color: var(--text-3, #747a8c);
+        line-height: 180%;
+      }
+    }
+  }
+  .container {
+    padding: 16px 40px;
+    .title {
+      margin-bottom: 4px;
+      color: #333;
+      font-size: 16px;
+      position: relative;
+      .title-num {
+        font-size: 24px;
+        color: #3069f8;
+        font-family: LX-numbers;
+        line-height: 36px;
+      }
+      .title-text {
+        position: absolute;
+        bottom: 3px;
+      }
+    }
+    .detail {
+      color: var(--text-5, #272e47);
+      font-size: 16px;
+      line-height: 180%; /* 28.8px */
+    }
+  }
+  .footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .btn {
+      border-radius: 4px;
+      height: 36px;
+      width: 140px;
+      line-height: 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .close {
+      border: 1px solid var(--line-3, #e1e3e8);
+      background: #fff;
+      color: var(--text-4, #545a6e);
+      margin-right: 12px;
+    }
+    .mail {
+      background: var(--brand-6, #4c6aff);
+      color: var(--unnamed, #fff);
+    }
+  }
+}
+
+.success-modal {
+  :global(.ant-modal-body) {
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 1);
+    padding: 0px;
+    height: 600px;
+  }
+  .background {
+    height: 276px;
+    position: relative;
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px 8px 0px 0px;
+    }
+    .contain {
+      position: absolute;
+      top: 0px;
+      padding-top: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      .tip {
+        color: var(--label-33, #7a51cb);
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 4px;
+      }
+      .title {
+        font-family: PingFang SC;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 32px;
+        background: linear-gradient(99deg, #4b67fb 0%, #c26de0 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+  .container {
+    margin: 48px 40px 0px 36px;
+    .common {
+      font-size: 16px;
+      color: var(--text-5, #272e47);
+    }
+    .main {
+      margin-bottom: 20px;
+      line-height: 24px;
+    }
+    .detail {
+      line-height: 32px;
+      .detail-text {
+        padding-left: 16px;
+      }
+    }
+    .circle {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      background: var(--avatar-5, #a259ff);
+      margin-right: 8px;
+      margin-bottom: 2px;
+    }
+    .num {
+      color: var(--avatar-5, #a259ff);
+      font-family: LX-numbers;
+      font-size: 28px;
+      margin-left: 8px;
+      margin-right: 2px;
+    }
+    .day {
+      color: var(--avatar-5, #a259ff);
+      /* 灵犀桌面2.0/P1.4-Med14 */
+      font-family: PingFang SC;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 22px;
+    }
+  }
+  .footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .btn {
+      border-radius: 4px;
+      height: 36px;
+      width: 140px;
+      line-height: 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .mail {
+      background: var(--brand-6, #4c6aff);
+      color: var(--unnamed, #fff);
+    }
+  }
+}

@@ -1,0 +1,585 @@
+@import './../../../../web/src/styles/varies.scss';
+
+$siriusTabColor: #386ee7;
+$edmTabColor: #232d47;
+$siriusWebTabColor: $Fill-4;
+.tab-container,
+.tab-container-edm {
+  position: relative;
+  width: 100%;
+  height: 36px;
+  // background: $siriusTabColor;
+  background-color: $brand-blue-1;
+
+  &.float-dropdown-wrap {
+    :global(.ant-tabs-nav .ant-tabs-nav-add) {
+      @include sirius-no-drag;
+      z-index: 2;
+      position: fixed;
+      right: -1px;
+      width: 60px;
+      top: auto;
+    }
+  }
+  .tab-node-wrapper {
+    @include sirius-no-drag;
+    max-width: 160px;
+    width: 160px;
+    min-width: 60px;
+    position: relative;
+    // background: transparent;
+    // background: $siriusTabColor;
+    background-color: $brand-blue-1;
+    border-radius: 8px 8px 0px 0px;
+
+    &:first-child::before {
+      display: none;
+    }
+
+    &::after,
+    &::before {
+      content: ' ';
+      pointer-events: none;
+      position: absolute;
+      display: block;
+      height: 80%;
+      width: 100%;
+      bottom: 0;
+      z-index: 1;
+      opacity: 0;
+    }
+
+    .tab-close-icon {
+      path {
+        fill: rgba(255, 255, 255, 0.4);
+      }
+      &:hover > path {
+        fill: #fff;
+      }
+    }
+    .tab-close-web-icon {
+      path {
+        fill: $label-6_2;
+      }
+      &:hover > path {
+        fill: #626e85;
+      }
+    }
+    :global(.ant-tabs-tab:hover) {
+      background: rgba(255, 255, 255, 0.16) !important;
+    }
+    &.tab-node-pin {
+      min-width: 160px;
+    }
+    &.tab-node-dragging {
+      &::before,
+      &::after {
+        display: none;
+        width: 0;
+        visibility: hidden;
+      }
+    }
+    &:nth-last-child(3) {
+      :global(.ant-tabs-tab::after) {
+        position: absolute;
+        content: '';
+        width: 1px;
+        height: 16px;
+        top: 50%;
+        right: -1px;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background-color: #e1e6ed;
+        opacity: 0.2;
+      }
+    }
+    &:first-child {
+      :global(.ant-tabs-tab::before) {
+        opacity: 0;
+      }
+    }
+    &.tab-active {
+      // &::before {
+      //   display: none;
+      // }
+      .tab-close-icon {
+        path {
+          fill: rgba($Fill-6-r, $Fill-6-g, $Fill-6-b, 0.4);
+        }
+        &:hover > path {
+          fill: $Text-1;
+        }
+      }
+      .tab-close-web-icon {
+        path {
+          fill: $label-6_2;
+        }
+        &:hover > path {
+          fill: #626e85;
+        }
+      }
+      &::before {
+        box-shadow: 10px 0.25em 0 -3px $Fill-2;
+        left: -100%;
+        border-radius: 0 0 8px 0;
+        opacity: 1;
+      }
+      &::after {
+        box-shadow: -10px 0.25em 0 -3px $Fill-2;
+        right: -100%;
+        border-radius: 0 0 0 8px;
+        opacity: 1;
+      }
+    }
+    &.tab-active + .tab-node-wrapper {
+      // background: $Fill-2;
+      // border-radius: 9px 9px 9px 0;
+      &::before {
+        display: none;
+      }
+    }
+
+    :global(.ant-tabs-tab) {
+      width: 100%;
+      height: 32px !important;
+      // background: $siriusTabColor !important;
+      background-color: $brand-blue-1 !important;
+      border-radius: 8px 8px 0px 0px !important;
+      border: 0 !important;
+      transition: none;
+    }
+
+    :global(.ant-tabs-tab-active) {
+      background: $Fill-2 !important;
+      color: #262a33 !important;
+
+      &:hover {
+        background: $Fill-2 !important;
+      }
+      & > .tab-title {
+        opacity: 1;
+      }
+    }
+    :global(.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn) {
+      color: #232d47;
+      text-shadow: none;
+      & > .tab-title {
+        color: #232d47;
+      }
+    }
+    :global {
+      .ant-tabs-tab-remove {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 12px;
+        height: 14px;
+        cursor: pointer;
+        z-index: 2;
+        visibility: hidden;
+        // :hover {
+        //   fill: #fff;
+        // }
+      }
+      .ant-tabs-tab:hover .ant-tabs-tab-remove {
+        visibility: visible;
+      }
+      .ant-tabs-tab {
+        &::before {
+          position: absolute;
+          content: '';
+          width: 1px;
+          height: 16px;
+          top: 50%;
+          left: 1px;
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          background-color: #e1e6ed;
+          opacity: 0.2;
+        }
+      }
+    }
+    :global(.ant-tabs-tab-btn) {
+      width: 100%;
+      color: #ffffff;
+      opacity: 0.7;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-break: break-all;
+      margin-right: 10px;
+    }
+  }
+  .tabs {
+    z-index: 3;
+    height: 36px;
+    .tab-pane {
+      display: flex;
+      align-items: center;
+      .tab-title {
+        margin-left: 5px;
+        // margin-right: 10px;
+        font-weight: 400;
+        width: 100%;
+        opacity: 0.8;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        word-break: break-all;
+      }
+      .tab-icon {
+        height: 16px;
+        width: 16px;
+      }
+    }
+    .tab-pane-active {
+      .tab-title {
+        opacity: 1;
+        font-weight: 500;
+        color: $Text-5;
+      }
+    }
+    .transparent {
+      opacity: 0;
+    }
+    :global(.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab) {
+      margin-left: 0;
+    }
+    .menu-content {
+      display: flex;
+      flex-flow: column;
+      padding: 8px 0;
+      background: white;
+      border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+      border-radius: 4px;
+      box-shadow: 0 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+      box-sizing: border-box;
+      :global(.ant-dropdown-menu-item) {
+        padding: 0;
+        background: white !important;
+      }
+    }
+    .menu-link {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      box-sizing: border-box;
+      cursor: pointer;
+      padding: 8px 16px;
+      line-height: 16px;
+      font-size: 14px;
+      width: 100%;
+      &:hover {
+        background-color: #f0f0f1;
+      }
+    }
+    .msg-content-text {
+      margin-left: 8px;
+    }
+  }
+  .back-button-place {
+    // margin-right: 157px; // 是否要调整最大窗口个数
+  }
+  .tab-dropdown-a {
+    // position: absolute;
+    // top: 0;
+    //left: 0;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background: $siriusTabColor;
+    background-color: $brand-blue-1;
+    &:hover {
+      // background: $Brand-5;
+      background: rgba(255, 255, 255, 0.16);
+    }
+    &-float {
+      z-index: 2;
+      position: fixed;
+      right: 0;
+      left: auto;
+      bottom: 0;
+      top: auto;
+    }
+  }
+  .tab-dropdown-active {
+    background: $Fill-2;
+    &:hover {
+      background: $Fill-2;
+    }
+  }
+
+  .tab-window {
+    margin-right: 141px;
+    margin-bottom: 0;
+  }
+
+  .tab-mac {
+    // margin-left: 84px;
+    margin-bottom: 0;
+  }
+
+  :global(.ant-tabs-nav-list) {
+    width: 100%;
+    align-items: flex-end;
+    transform: none;
+  }
+  :global(.ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap) {
+    margin-right: 24px;
+  }
+
+  :global(.ant-tabs > .ant-tabs-nav .ant-tabs-nav-operations) {
+    visibility: hidden;
+    display: none;
+  }
+
+  :global(.ant-tabs-nav .ant-tabs-nav-add) {
+    @include sirius-no-drag;
+    padding: 0;
+    border: 0;
+    height: 24px;
+    min-width: 24px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    position: relative;
+    // background: $siriusTabColor;
+    background-color: $brand-blue-1;
+    border-radius: 50%;
+    margin-left: 8px;
+    transition: none;
+    &:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+  }
+}
+
+// 外贸版本覆盖样式
+.tab-container-edm {
+  // 外贸pc
+  background: $edmTabColor;
+
+  .tab-node-wrapper {
+    background: $edmTabColor;
+
+    :global(.ant-tabs-tab) {
+      background: $edmTabColor !important;
+    }
+
+    :global(.ant-tabs-tab-active) {
+      background: $Fill-2 !important;
+      color: #262a33 !important;
+
+      &:hover {
+        background: $Fill-2 !important;
+      }
+    }
+  }
+
+  .tab-dropdown-a {
+    background: unset;
+    &:hover {
+      background: unset;
+    }
+  }
+
+  :global(.ant-tabs-nav .ant-tabs-nav-add) {
+    background: $edmTabColor;
+  }
+}
+
+.web-comp {
+  border-top-left-radius: 8px;
+  background: $siriusWebTabColor;
+  .tab-node-wrapper {
+    background: $siriusWebTabColor;
+    :global(.ant-tabs-nav .ant-tabs-nav-add) {
+      background: $siriusWebTabColor;
+      &:hover {
+        background: rgba(255, 255, 255, 0.16);
+      }
+    }
+    :global(.ant-tabs-tab-btn) {
+      opacity: 1;
+    }
+    :global(.ant-tabs-tab:hover) {
+      // background: #eeeff2 !important;
+      background: $white-bg;
+    }
+    :global(.ant-tabs-tab) {
+      background: $siriusWebTabColor !important;
+      &::before {
+        background-color: $label-6_2;
+        opacity: 0.4;
+      }
+    }
+
+    &:nth-last-child(3) {
+      :global(.ant-tabs-tab::after) {
+        background-color: $label-6_2;
+        opacity: 0.4;
+      }
+      :global(.ant-tabs-tab-active::after) {
+        opacity: 0;
+      }
+    }
+    :global(.ant-tabs-tab-active) {
+      background: $Fill-2 !important;
+      color: #262a33 !important;
+      &::before {
+        opacity: 0;
+      }
+      &::after {
+        opacity: 0;
+      }
+      &:hover {
+        background: $Fill-2 !important;
+      }
+    }
+  }
+
+  :global(.ant-tabs-tab-btn) {
+    color: $label-6_3 !important;
+  }
+  .tab-node-pin {
+    color: $label-6_3 !important;
+  }
+  :global(.ant-tabs-nav .ant-tabs-tab-btn) {
+    svg {
+      filter: invert(46%) sepia(12%) saturate(482%) hue-rotate(189deg) brightness(96%) contrast(89%);
+    }
+  }
+
+  .tab-dropdown-a {
+    background: $siriusWebTabColor;
+    &:hover {
+      // background: $Brand-5;
+      background: rgba(255, 255, 255, 0.16);
+    }
+  }
+  :global(.ant-tabs-nav .ant-tabs-nav-add) {
+    background: $siriusWebTabColor;
+    &:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+  }
+  .tabs {
+    .tab-pane {
+      .tab-title {
+        color: $label-6_3;
+        opacity: 1;
+      }
+    }
+    .tab-pane-active {
+      .tab-title {
+        color: $Text-5;
+      }
+    }
+  }
+}
+.tab-dropdown-container {
+  .tab-menu {
+    border-radius: 4px;
+    width: 216px;
+    margin-top: -4px;
+    @include sirius-no-drag;
+    &-scroll-wrap {
+      max-height: 372px;
+      overflow-y: auto;
+    }
+    &-item {
+      min-height: 32px;
+      display: flex;
+      justify-content: center;
+      &-divider {
+        margin-bottom: 8px;
+        position: relative;
+        &::after {
+          position: absolute;
+          content: '';
+          height: 1px;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+          width: 192px;
+          bottom: -4px;
+          // background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+          background-color: rgba(#272e47, 0.12);
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      &:last-child::after {
+        height: 0;
+      }
+      &-txt {
+        width: 152px;
+        line-height: 22px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: inline-block;
+        word-break: break-all;
+      }
+      &:hover {
+        cursor: pointer;
+        // background: $Fill-2_5;
+        background-color: #f0f2f7;
+        .tab-menu-item-close-icon {
+          display: block;
+        }
+      }
+      &-close-icon {
+        height: 16px;
+        width: 16px;
+        display: none;
+      }
+      &-close-txt {
+        font-size: 14px;
+        font-weight: 400;
+        // color: $label-6_3;
+        color: #4e5a70;
+        &-red {
+          // color: $Error-6;
+          color: #fe5b4c;
+        }
+      }
+    }
+    :global(.ant-dropdown-menu-title-content) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+.tab-content {
+  top: 40px;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 36px;
+}
+.tab-hidden {
+  visibility: hidden;
+  position: absolute;
+}
+.tab-node-tip {
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 12px;
+  :global(.ant-tooltip-arrow) {
+    display: block;
+  }
+  &-cnt {
+    a {
+      color: #386ee7;
+    }
+  }
+}
+.tab-node-tip-hide {
+  display: none !important;
+}

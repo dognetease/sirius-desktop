@@ -1,0 +1,173 @@
+.task-card {
+  max-width: 588px;
+  margin: 20px auto;
+  background: #ffffff;
+  border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+  box-shadow: 0px 1.5px 5px $Fill-2_5;
+  border-radius: 8px;
+  min-width: 400px;
+  .task-header {
+    background: rgba($Brand-4-r, $Brand-4-g, $Brand-4-b, 0.08);
+    border-radius: 8px 8px 0 0;
+    box-sizing: border-box;
+    padding: 20px;
+    .card-title {
+      font-size: 16px;
+      line-height: 16px;
+      margin-bottom: 0;
+      color: #262a33;
+    }
+  }
+  .task-content {
+    padding: 20px 20px 4px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    .content-title {
+      font-size: 12px;
+      line-height: 12px;
+      color: #7d8085;
+      margin-bottom: 6px;
+    }
+    .content-details {
+      font-size: 14px;
+      line-height: 20px;
+      color: #262a33;
+      margin-bottom: 16px;
+    }
+    .task-complete-box {
+      position: relative;
+      .task-complete {
+        position: absolute;
+        right: 20px;
+        top: -55px;
+        width: 136px;
+        height: 76px;
+        background-image: url('../../../../web/src/images/taskcomplete.png');
+        background-size: 100%;
+        p {
+          position: absolute;
+          top: 30px;
+          margin: 0;
+          font-size: 12px;
+          line-height: 14px;
+          color: #f74f4f;
+          text-align: center;
+          transform: rotate(-15deg);
+          -ms-transform: rotate(-15deg);
+          -moz-transform: rotate(-15deg);
+          -webkit-transform: rotate(-15deg);
+          -o-transform: rotate(-15deg);
+        }
+      }
+    }
+    .task-err {
+      margin-bottom: 16px;
+      font-size: 14px;
+      color: #f74f4f;
+    }
+  }
+  .bottom-progress {
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 20px 0;
+    box-sizing: border-box;
+    border-top: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+  }
+  .task-operate {
+    display: flex;
+    background-color: #ffffff;
+    padding: 20px 0;
+    margin: 0 auto;
+    width: calc(100% - 40px);
+    justify-content: center;
+    border-top: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+    .operate-btn {
+      padding: 8px 10px;
+      border-radius: 4px;
+      font-size: 14px;
+      margin-right: 12px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      .operate-bell {
+        font-size: 14px;
+        margin-right: 5px;
+      }
+      .operate-check {
+        font-size: 13px;
+        margin-right: 5px;
+      }
+    }
+    .operate-btn-red {
+      background: $Error-1;
+      color: #f74f4f;
+      border: 0.5px solid $Error-2;
+    }
+    .operateBtnBlue {
+      background: #386ee7;
+      border: 0.5px solid #386ee7;
+      color: #ffffff;
+    }
+    .operateBtnLine {
+      background: #ffffff;
+      border: 1px solid #386ee7;
+      color: #386ee7;
+    }
+  }
+  .progress-box {
+    margin-top: 16px;
+  }
+  .progress {
+    margin-top: 16px;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .progress-user {
+      display: flex;
+      cursor: pointer;
+      transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      .item-user {
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        border: 1px solid #ffffff;
+        margin-left: -6px;
+        transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+      }
+      .item-user:nth-child(1) {
+        background: $Fill-4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+          display: inline-block;
+          background: #a8aaad;
+          width: 2.5px;
+          height: 2.5px;
+          border-radius: 50%;
+        }
+        i:nth-child(2) {
+          margin: 0 2.5px;
+        }
+      }
+    }
+    .progress-proportion {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-size: 14px;
+      color: #386ee7;
+      height: 16px;
+      line-height: 16px;
+    }
+  }
+}

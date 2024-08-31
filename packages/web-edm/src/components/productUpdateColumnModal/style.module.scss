@@ -1,0 +1,39 @@
+.product-update-column-modal {
+  :global(.ant-modal-header) {
+    border-bottom: none;
+  }
+
+  :global(.ant-modal-body) {
+    padding: 0;
+  }
+  :global(.ant-modal-footer) {
+    border-top: none;
+    padding: 15.5px 23.5px;
+  }
+  :global(.ant-checkbox-group-item + .ant-checkbox-group-item) {
+    margin-bottom: 20px;
+  }
+
+  .tip {
+    width: 544px;
+    height: 32px;
+    background: #f2f7fe;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 32px;
+    color: #232d47;
+    padding-left: 24px;
+    box-sizing: border-box;
+  }
+
+  .content {
+    display: flex;
+    padding: 24px;
+    .title {
+      width: 70px;
+      font-size: 14px;
+      color: #4e5a70;
+      flex-shrink: 0;
+    }
+  }
+}

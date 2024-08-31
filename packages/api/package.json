@@ -1,0 +1,98 @@
+{
+  "version": "1.7.2",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "watch": "rollup -c rollup.config.js -w",
+    "build:alone": "rollup -c rollup.config.js && rollup -c rollup.d.config.js",
+    "build:webpack": "yarn build && webpack build --config ./webpack.config.js ",
+    "build:webpackOnly": "webpack build --config ./webpack.config.js",
+    "build:devWebpack": "webpack build --config ./webpack.dev.config.js",
+    "build:devWebpackWm": " cross-env API_TARGET=EDM webpack build --config ./webpack.dev.config.js",
+    "build:bk_init": "build_env 'initScript=window.isBridgeWorker=true;' test --envFileName '' -indexFileName '' --implFileName 'gen/impl_bg_list.ts' && npm run build:account_bg && webpack build --config ./webpack.config.js",
+    "winBuild:bk_init": "build_env initScript=window.isBridgeWorker=true; test --envFileName  -indexFileName  --implFileName gen/impl_bg_list.ts && npm run winBuild:account_bg && webpack build --config ./webpack.config.js",
+    "build:account_bg": "build_env 'initScript=window.isAccountBg=true;' test --envFileName '' -indexFileName '' --implFileName 'gen/impl_account_bg_list.ts'",
+    "winBuild:account_bg": "build_env initScript=window.isAccountBg=true; test --envFileName  -indexFileName  --implFileName gen/impl_account_bg_list.ts",
+    "generateLangJson": "rm -rf ./langdist && node ./src/utils/generate-lang.js",
+    "buildBkInitNew": "node ./build-utils/build-bkinit-new.js",
+    "prepare": "echo 'done' ",
+    "build": "build_env '' dev --envFileName '' && yarn generateLangJson",
+    "winBuild": "build_env '' dev --envFileName",
+    "build:doc": "typedoc --tsconfig tsconfig.json",
+    "build:bundle": "rollup -c rollup.test.config.js -m inline",
+    "build:bundle.dev": "rollup -c rollup.d.config.js -m inline",
+    "pretest": "nohup node support/test/proxyServer.js &",
+    "test": " tsdx test",
+    "posttest": "curl -i http://localhost/quit",
+    "lint": "tsdx lint",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "name": "api",
+  "author": "",
+  "module": "dist/api.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/api.cjs.production.min.js",
+      "limit": "100 KB"
+    },
+    {
+      "path": "dist/api.esm.js",
+      "limit": "100 KB"
+    }
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@rollup/plugin-alias": "^3.1.5",
+    "@rollup/plugin-babel": "^5.2.3",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-multi-entry": "^4.0.0",
+    "@rollup/plugin-node-resolve": "^11.1.1",
+    "@rollup/plugin-replace": "^2.3.4",
+    "@size-limit/preset-small-lib": "^4.9.1",
+    "@types/node": "^14.14.27",
+    "@typescript-eslint/eslint-plugin": "^4.32.0",
+    "@typescript-eslint/parser": "^4.32.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "rollup": "^2.46.0",
+    "rollup-plugin-cleanup": "^3.2.1",
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-dts": "^3.0.1",
+    "rollup-plugin-javascript-obfuscator": "^1.0.4",
+    "rollup-plugin-node-polyfills": "^0.2.1",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "size-limit": "^4.9.1",
+    "tslib": "^2.1.0"
+  },
+  "dependencies": {
+    "@types/crypto-js": "^4.0.1",
+    "@types/lovefield": "^2.1.3",
+    "@types/tiny-async-pool": "^1.0.0",
+    "NIM": "file:../../modified_third_party/NIM",
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.10",
+    "crypto-js": "^4.0.0",
+    "dexie": "^3.0.3",
+    "env_def": "*",
+    "glob": "^7.1.6",
+    "html-entities": "^2.3.2",
+    "lodash": "^4.17.21",
+    "lokijs": "^1.5.12",
+    "regenerator-runtime": "^0.13.9",
+    "rollup-plugin-cleanup": "^3.2.1",
+    "rxjs": "^7.4.0",
+    "sanitize-html": "^2.3.3",
+    "terser-webpack-plugin": "4.1.0",
+    "tiny-async-pool": "^1.2.0",
+    "tiny-pinyin": "^1.3.2"
+  }
+}

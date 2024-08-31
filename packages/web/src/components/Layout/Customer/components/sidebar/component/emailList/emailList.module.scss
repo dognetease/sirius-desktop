@@ -1,0 +1,113 @@
+.email-list {
+  position: relative;
+  height: 100%;
+}
+.email-wrap {
+  position: absolute;
+  height: calc(100% - 32px);
+  width: 100%;
+}
+.email-list-scroller {
+  position: absolute;
+  top: 32px;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden auto;
+}
+.email-item {
+  display: flex;
+  padding: 16px 0 0;
+  &:hover {
+    background-color: $Fill-1;
+
+    .emailTitleIcon {
+      display: flex;
+      flex: 0 0 auto;
+    }
+  }
+}
+.fid-type {
+  flex: none;
+  margin-top: 4px;
+  margin-right: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 14px;
+  text-align: center;
+  line-height: 32px;
+  color: #fff;
+  font-weight: 500;
+  background-color: $Link-6;
+
+  &.sent {
+    background-color: $Success-6;
+  }
+}
+
+.email-header {
+  display: flex;
+  color: #7a8599;
+  font-size: 12px;
+  .from-to {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .sent-date {
+    flex: none;
+  }
+}
+
+.email-main {
+  border-bottom: 1px solid #f0f3f5;
+  flex: 1;
+  padding-bottom: 16px;
+  min-width: 0;
+}
+
+.email-title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: #232d47;
+  display: flex;
+}
+.emailTitleContent {
+  flex: 1 1 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.emailTitleIcon {
+  display: none;
+  :global(.sirius-icon) {
+    width: 16px !important;
+    height: 16px !important;
+    cursor: pointer;
+    margin-left: 12px;
+  }
+}
+.email-summary {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: $label-6_3;
+}
+
+.email-attach-file {
+  padding: 0 4px;
+  height: 24px;
+  line-height: 24px;
+  background: rgba($Brand-4-r, $Brand-4-g, $Brand-4-b, 0.2);
+  border-radius: 4px;
+
+  svg {
+    vertical-align: middle;
+  }
+}

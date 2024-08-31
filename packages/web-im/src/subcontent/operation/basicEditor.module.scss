@@ -1,0 +1,164 @@
+@import '../../../../web/src/styles/varies';
+:global(.mention-suggestions) {
+  position: absolute;
+  bottom: 100%;
+  left: 0 !important;
+  top: unset !important;
+  width: 100%;
+  background: #ffffff;
+  /* 黑白灰/字体 20% */
+  border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+  border-radius: 6px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 352px;
+  :global(.mention-suggestions-entry) {
+    display: table;
+    vertical-align: middle;
+  }
+  :global(.entry-checked) {
+    padding: 0 24px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    cursor: default;
+    /* 黑白灰/字体 90% */
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  }
+  :global(.entry-checked) {
+    color: #fff;
+    background-color: $main-enhance-color;
+    .allIcon {
+      border: solid 1px #ffffff !important;
+    }
+  }
+}
+
+:global(.editor-mention-text) {
+  color: $main-enhance-color;
+}
+
+.mention-item {
+  padding: 0 24px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  cursor: default;
+  /* 黑白灰/字体 90% */
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  &[aria-selected] {
+    color: #fff;
+    background-color: $main-enhance-color;
+    .allIcon {
+      border: solid 0.5px #fff;
+    }
+  }
+  .allIcon {
+    display: inline-block;
+    /* 主色/灵犀蓝 */
+    width: 32px;
+    height: 32px;
+    background: $main-enhance-color;
+    line-height: 32px;
+    color: #fff;
+    font-family: PingFang;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    /* identical to box height, or 100% */
+    color: #ffffff;
+    text-align: center;
+    border-radius: 32px;
+    border: solid 0.5px transparent;
+  }
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+  }
+  .mention-info {
+    padding-left: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .name {
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .email {
+    font-family: PingFang;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .highlight {
+    color: $main-enhance-color;
+  }
+}
+
+:global(.public-DraftEditorPlaceholder-inner) {
+  position: absolute;
+  left: 16px;
+  top: 10px;
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  /* identical to box height, or 100% */
+  /* 黑白灰/字体 20% */
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+  z-index: -1;
+}
+
+:global(.DraftEditor-root) {
+  height: 100%;
+  overflow-y: auto;
+  @include sirius-scroll();
+  :global(.DraftEditor-editorContainer),
+  [contenteditable],
+  [data-contents] {
+    height: 100%;
+  }
+}
+
+.mention-list-wrapper {
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  transform: translateY(-8px);
+  width: 360px;
+  overflow: auto;
+  // background: #ffffff;
+  background-color: $white;
+  border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+  border-radius: 4px;
+  z-index: 2;
+  @include sirius-scroll-hide();
+}
+
+.operations {
+  position: absolute;
+  bottom: 14px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #a8aaad;
+  > :not(button) {
+    margin: 0 1px;
+  }
+  .submit-btn {
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,122 @@
+@import '@web-common/styles/variables.scss';
+.modal-wrap {
+  :global(.ant-modal-header) {
+    box-sizing: border-box;
+    height: 44px;
+    padding: 11px 24px;
+    border-bottom: none;
+  }
+  :global(.ant-modal-close-x) {
+    height: 44px;
+    line-height: 44px;
+  }
+  :global(.ant-select-selector) {
+    border: 1px solid #d9d9d9 !important;
+  }
+  :global(.ant-upload-list-item-name) {
+    max-width: 300px;
+  }
+  :global {
+    .ant-modal-content {
+      border-radius: 6px;
+    }
+  }
+  .modal-content {
+    height: 100%;
+    :global(.ant-table) {
+      height: 250px !important;
+      overflow: scroll !important;
+      border: none !important;
+    }
+    // .list-item {
+    //     padding-top: 12px;
+    //     font-style: normal;
+    //     font-weight: 400;
+    //     font-size: 12px;
+    //     line-height: 20px;
+    //     color: #51555C;
+    // }
+    // .empty {
+    //     height: 100%;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     font-size: 16px;
+    // }
+  }
+  .selectAll {
+    margin-top: 12px;
+    // margin-bottom: 12px;
+    padding-left: 20px;
+    :global {
+      .ant-tabs-tab {
+        padding: 2px 8px !important;
+      }
+    }
+  }
+  .table {
+    padding: 0 12px;
+    :global {
+      .ant-table-cell {
+        vertical-align: top;
+      }
+      .ant-table-filter-column {
+        display: flex;
+        justify-content: flex-start;
+
+        .ant-table-column-title {
+          flex-grow: 0;
+          margin-right: 4px;
+        }
+      }
+      .ant-table-column-title,
+      .custom-column {
+        white-space: nowrap;
+      }
+      .ant-table-filter-trigger {
+        padding: 0;
+        width: 28px;
+        height: 28px;
+        justify-content: center;
+        margin-left: 2px;
+      }
+    }
+  }
+
+  .jobname {
+    color: #478e83;
+    font-size: 12px;
+  }
+  .iconWrapper {
+    display: flex;
+    align-items: center;
+  }
+  .emailIocn {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url(../../../../../../../images/icons/globalsearch/email.svg) center center no-repeat;
+    background-size: 16px;
+    // margin-top: 4px;
+    margin-right: 12px;
+  }
+  .phoneIocn {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url(../../../../../../../images/icons/globalsearch/phone.svg) center center no-repeat;
+    background-size: 16px;
+    // margin-top: 4px;
+    margin-right: 12px;
+  }
+}
+.checkGroup {
+  width: 208px;
+
+  label {
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    margin-left: 12px !important;
+  }
+}

@@ -1,0 +1,82 @@
+@import '../../../../web/src/styles/varies';
+
+.wrap {
+  width: 400px;
+  height: 236px;
+  padding: 0 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  .title {
+    margin-top: 24px;
+
+    .titleTxt {
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: #000000;
+    }
+
+    .titleTxt2 {
+      margin-top: 4px;
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 12px;
+      color: #a8aaad;
+    }
+  }
+
+  .content {
+    width: 100%;
+    flex: 1;
+    margin-top: 16px;
+    .item {
+      padding: 0 16px 0 24px;
+      margin-bottom: 12px;
+      width: 100%;
+      height: 64px;
+      background: #ffffff;
+      border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+      box-sizing: border-box;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        border-color: $main-enhance-color;
+      }
+      .loginIcon {
+        width: 28px;
+        height: 28px;
+        background-image: url('../../../../web/src/images/icons/login/switch_login.png');
+        background-size: 100%;
+      }
+      .registerIcon {
+        width: 28px;
+        height: 28px;
+        background-image: url('../../../../web/src/images/icons/login/switch_register.png');
+        background-size: 100%;
+      }
+      .label {
+        margin-left: 12px;
+        flex: 1;
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      }
+      .arrowRight {
+        width: 16px;
+        height: 16px;
+        background-image: url('../../../../web/src/images/icons/arrow-right.svg');
+        background-size: 100%;
+      }
+    }
+  }
+}

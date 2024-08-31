@@ -1,0 +1,94 @@
+.companyUploader {
+  :global {
+    .ant-modal-header {
+      padding: 20px 24px;
+      @include h1-4-med16();
+      border: none;
+    }
+    .ant-modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      border-top: none;
+    }
+    .ant-modal-body {
+      padding: 0 20px;
+    }
+  }
+}
+
+.btn {
+  display: inline-flex;
+}
+
+.uploadDragger {
+  height: 300px !important;
+  &:not(.ant-upload-disabled):hover {
+    border-color: #4c6aff;
+    .uploadTitle,
+    .uploadSub {
+      color: #4c6aff;
+    }
+    .uploadIcon {
+      svg {
+        path {
+          stroke: #4c6aff;
+        }
+      }
+    }
+  }
+}
+
+.uploadTitle {
+  margin: 20px 0 8px !important;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #9fa2ad;
+}
+
+.uploadSub {
+  color: #9fa2ad;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.uploadTip {
+  margin: 12px 0;
+  font-size: 14px;
+  line-height: 22px;
+  color: #747a8c;
+}
+
+.uploadResultFile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  :global {
+    .sirius-icon {
+      height: 35px !important;
+      width: 35px !important;
+    }
+  }
+}
+
+.uploadFileName {
+  margin-top: 7px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #272e47;
+}
+
+.uploadSuccess {
+  :global {
+    .ant-modal-confirm-title {
+      display: inline-block;
+    }
+  }
+}
+
+.downloadTmpl {
+  color: #4c6aff;
+  &:hover {
+    text-decoration: underline;
+  }
+}

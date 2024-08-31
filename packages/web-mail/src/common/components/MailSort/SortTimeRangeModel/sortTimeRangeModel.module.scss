@@ -1,0 +1,76 @@
+@import '../../../../../../web/src/styles/varies';
+.wrap {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  .title {
+    flex: none;
+    box-sizing: border-box;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .name {
+      display: flex;
+      align-items: center;
+      font-family: PingFang SC;
+      font-size: 16px;
+      line-height: 24px;
+      color: $Text-5;
+    }
+    .close {
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+      background-size: 100% 100%;
+      background-image: url('../../../../../../web/src/images/icons/contact_modal_close.svg');
+    }
+  }
+  .content {
+    margin-top: 8px;
+    padding: 0 25px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: $Text-5;
+    :global(.ant-space-item) {
+      margin-bottom: 12px;
+    }
+    :global(.ant-space-item:nth-last-child(1)) {
+      margin-bottom: 0;
+    }
+    :global(.ant-picker) {
+      margin-top: 8px;
+    }
+    :global(.ant-picker-focused) {
+      box-shadow: none;
+      border-color: $Avatar-6 !important;
+    }
+    :global(.ant-picker:hover) {
+      border-color: $Avatar-6 !important;
+    }
+    :global(.ant-picker-input > input) {
+    }
+  }
+  .footerArea {
+    padding: 24px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 16px;
+    .cancelBut,
+    .confirmBut {
+      min-width: unset;
+      width: 76px;
+      border: none;
+      letter-spacing: -1px;
+    }
+    .cancelBut {
+      background: $Fill-2_5;
+      color: $Text-4;
+    }
+    .confirmBut {
+      background: $Avatar-6;
+    }
+  }
+}

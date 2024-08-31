@@ -1,0 +1,146 @@
+@import '@web-common/styles/variables.scss';
+
+@import '@web-common/styles/waimao/varies.scss';
+
+.acc-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px;
+
+  :global {
+    .ant-table {
+      border: none;
+      border-radius: 4px;
+      .ant-table-row {
+        height: 54px;
+      }
+    }
+
+    .ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td {
+      background-color: $Fill-3 !important;
+    }
+  }
+
+  .even {
+    background-color: $Fill-1;
+  }
+
+  .odd {
+    background-color: $base-bg;
+  }
+  .add-FB-acc {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    @include p1-3-reg14();
+    color: #386ee7;
+    border: none;
+    &:hover {
+      background-color: $Brand-1;
+    }
+    > svg {
+      margin-right: 6px;
+    }
+  }
+
+  .faAccount {
+    display: flex;
+
+    > img {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: beige;
+      margin-right: 8px;
+    }
+  }
+
+  .numClass {
+    font-family: 'LX-numbers';
+    font-weight: 400;
+    color: $Text-5;
+  }
+
+  .action {
+    color: $Brand-6;
+    cursor: pointer;
+    white-space: nowrap;
+    :global {
+      .spin-label {
+        display: none;
+      }
+      .ant-spin {
+        margin-left: -10px;
+      }
+    }
+    .re-auth {
+      > svg {
+        vertical-align: -3px;
+        margin-right: 6px;
+      }
+    }
+  }
+
+  .bind-status {
+    color: $Error-7;
+  }
+}
+
+.fb-confirm {
+  :global {
+    .ant-modal-confirm-body {
+      > img {
+        vertical-align: -3px;
+      }
+    }
+
+    .ant-modal-confirm-title {
+      display: inline;
+    }
+  }
+}
+
+.acc-modal {
+  :global {
+    .ant-modal-body {
+      padding: 0;
+    }
+
+    .ant-modal-header {
+      padding: 24px 24px 12px 24px;
+
+      .ant-modal-title {
+        color: $Text-5;
+      }
+    }
+
+    .ant-modal-body {
+      max-height: 564px;
+      overflow-y: scroll;
+    }
+
+    th.ant-table-cell {
+      white-space: nowrap;
+    }
+  }
+
+  .notice {
+    padding: 12px 20px;
+    background: $Warning-1;
+    display: flex;
+    align-items: center;
+    color: $Text-4;
+
+    > img {
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+    }
+  }
+}
+
+.columns-padding {
+  padding-left: 8px;
+}

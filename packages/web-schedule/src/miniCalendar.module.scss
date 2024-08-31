@@ -1,0 +1,151 @@
+.miniCalendar {
+  width: 100%;
+  display: flex;
+  // min-width: 196px;
+  .miniDay {
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-family: DIN Alternate;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 28px;
+    align-items: center;
+    text-align: center;
+    // color: #51555c;
+    color: $font-color-1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .notMonth {
+    // color: #a8aaad;
+    color: $calendar-1;
+  }
+  .notMonth {
+    // color: #a8aaad;
+    color: $calendar-1;
+  }
+  .minidot {
+    width: 4px;
+    height: 4px;
+    // background-color: #a8aaad;
+    background-color: $calendar-1;
+    border-radius: 50%;
+    margin-top: -6px;
+  }
+  .weekNumberWrap {
+    background-color: $Fill-4;
+    // color: #545a6e;
+    color: $Text-4;
+    border-radius: 4px;
+    margin-top: 34px;
+    p {
+      height: 32px;
+      line-height: 32px;
+      font-weight: 700;
+      font-size: 12px;
+      margin: 0;
+      text-align: center;
+      width: 25px;
+    }
+  }
+  .today {
+    color: #386ee7;
+    .minidot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      margin-top: -6px;
+      background-color: #386ee7;
+    }
+  }
+  .todaySelected {
+    background: $Brand-6;
+    color: #ffffff;
+    .minidot {
+      width: 4px;
+      height: 4px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      margin-top: -6px;
+    }
+  }
+  .notTodaySelected {
+    background: $Brand-6;
+    color: #ffffff;
+    .minidot {
+      width: 4px;
+      height: 4px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      margin-top: -6px;
+    }
+  }
+  :global(.ant-picker-date-panel .ant-picker-content th) {
+    width: auto;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    // color: #a8aaad;
+    color: $calendar-1;
+    padding-bottom: 6px;
+  }
+  :global(.ant-picker-calendar) {
+    background: rgba(0, 0, 0, 0);
+  }
+  :global(.ant-picker-calendar .ant-picker-panel) {
+    background: rgba(0, 0, 0, 0);
+  }
+  :global(.ant-picker-panel) {
+    background: rgba(0, 0, 0, 0);
+  }
+  :global(.ant-picker-calendar .ant-picker-panel) {
+    border-top: 0;
+  }
+  :global(.ant-picker-cell) {
+    padding: 0px;
+  }
+  :global(.ant-picker-date-panel .ant-picker-content) {
+    height: 218px;
+  }
+}
+
+.miniHeader {
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  height: 20px;
+  display: flex;
+  // color: #000000;
+  color: $font-color-3;
+  .arrow {
+    display: inline-block;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    &.left {
+      margin-left: 6px;
+      background-image: url('@/images/icons/calendarDetail/date-picker-arrow-left.svg');
+      // background-image: url('../../../images/');
+    }
+    &.right {
+      margin-right: 13px;
+      // background-image: url('@/images/icons/calendarDetail/date-picker-arrow-right.svg');
+    }
+  }
+}
+
+.miniMonth {
+  min-width: 65px;
+}

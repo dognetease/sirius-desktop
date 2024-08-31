@@ -1,0 +1,85 @@
+@import '../../../styles/common.scss';
+.#{$class-prefix} {
+  &-tooltip {
+    .content-box {
+      margin: 0;
+      padding: 8px 12px;
+      background-color: rgba($font-color-3-r, $font-color-3-g, $font-color-3-b, 0.8);
+      border-radius: 4px;
+      max-width: 372px;
+      .content-title {
+        // color: #ffffff;
+        color: $white;
+        @include c4-3-reg12;
+      }
+    }
+    .ant-popover-inner {
+      background-color: rgba(0, 0, 0, 0);
+    }
+    .ant-popover-arrow::after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 30px;
+      height: 9px;
+      background-image: url('https://cowork-storage-public-cdn.lx.netease.com/common/2022/12/26/aa26f648ede94063b69e496954526fd5.png') !important;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      opacity: 0.9;
+    }
+    .ant-popover-arrow {
+      opacity: 1;
+      box-shadow: none !important;
+      width: 30px !important;
+      height: 9px !important;
+      overflow: visible;
+    }
+    .ant-popover-arrow-content {
+      display: none;
+    }
+    &.tooltiptopLeft,
+    &.tooltiptopRight,
+    &.tooltiptop {
+      padding-bottom: 13px;
+      .ant-popover-arrow {
+        bottom: 4.5px;
+      }
+    }
+    &.tooltipbottomLeft,
+    &.tooltipbottomRight,
+    &.tooltipbottom {
+      .ant-popover-arrow::after {
+        transform: rotate(180deg);
+        top: -0.5px;
+      }
+    }
+    &.tooltipleft,
+    &.tooltipleftTop,
+    &.tooltipleftBottom {
+      .ant-popover-arrow::after {
+        transform: rotate(270deg);
+        right: -10px;
+      }
+    }
+    &.tooltipright,
+    &.tooltiprightTop,
+    &.tooltiprightBottom {
+      .ant-popover-arrow::after {
+        transform: rotate(90deg);
+        left: -11px;
+      }
+    }
+    .ant-popover-inner-content {
+      padding: 0;
+    }
+  }
+}
+
+.lx-theme-dark .ant-popover-arrow {
+  filter: invert(100) hue-rotate(180deg);
+}
+.lx-theme-dark .extheme .ant-popover-arrow {
+  filter: none;
+}

@@ -1,0 +1,75 @@
+.modal {
+  :global {
+    .ant-modal-header {
+      border: none;
+      padding-bottom: 12px;
+      padding-top: 20px;
+    }
+
+    .ant-modal-body {
+      padding-top: 10px;
+    }
+
+    .ant-modal-footer {
+      border: none;
+      padding-bottom: 20px;
+    }
+  }
+  &-label {
+    color: #4e4e4e;
+  }
+
+  &-add {
+    margin-top: 22px;
+  }
+
+  &-value {
+    margin-top: 6px;
+    height: 38px;
+  }
+
+  .stop-tip {
+    color: #f74f4f;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .action-radio-group {
+    margin-top: 20px;
+  }
+
+  .sync-clue {
+    margin-top: 20px;
+    :global {
+      .ant-checkbox + span {
+        padding-left: 4px;
+      }
+    }
+    .checkedbox-inner {
+      display: flex;
+      align-items: center;
+    }
+
+    .sync-clue-tip {
+      margin-left: 4px;
+    }
+  }
+}
+
+.sync-clue-tooltip {
+  max-width: 336px !important;
+
+  :global {
+    .ant-tooltip-arrow {
+      display: block !important;
+    }
+
+    .ant-tooltip-inner {
+      color: #ffffff;
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 400;
+      padding: 8px 12px !important;
+    }
+  }
+}

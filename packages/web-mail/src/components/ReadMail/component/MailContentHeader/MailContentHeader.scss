@@ -1,0 +1,44 @@
+.mail-content-header-wrap {
+  margin: 8px 16px;
+  background: #f6f7fa;
+  border-radius: 5px;
+  overflow: hidden;
+
+  .mch-icon {
+    display: flex;
+    align-items: center;
+  }
+
+  .mch-head {
+    background: #f0f2f7;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  .mch-title {
+    margin-left: 8px;
+    color: #272e47;
+    font-size: 12px;
+    flex: 1;
+    height: 18px;
+  }
+
+  .mch-oper-wrap {
+    color: #4c6aff;
+    cursor: pointer;
+    font-size: 12px;
+  }
+
+  .mch-content {
+    padding: 20px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    width: 100%;
+  }
+  .mch-content-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

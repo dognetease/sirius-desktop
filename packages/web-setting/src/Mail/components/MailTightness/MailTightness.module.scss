@@ -1,0 +1,128 @@
+@import '@web-common/styles/variables.scss';
+
+.mail-layout-radio {
+  display: flex !important;
+  // width: 352px;
+  height: 112px !important;
+  .radio-card {
+    display: flex;
+    flex-flow: column;
+    cursor: pointer;
+    // width: 352px;
+    width: 194px;
+    height: 112px;
+    border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-right: 24px;
+    // &:hover {
+    //   border: 1px solid #386ee7;
+    // }
+    .radio-select {
+      height: 40px;
+      display: flex;
+      margin-left: 17px;
+      align-items: center;
+      font-size: 14px;
+      color: $Text-4;
+      :global {
+        .ant-radio {
+          top: 0;
+        }
+      }
+    }
+    &-desc {
+      width: 100%;
+      background: $Fill-1;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-flow: column;
+      &-con {
+        height: 70px;
+        // background: #ffffff;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        // flex-flow: column;
+        &-icon-wrap {
+          height: 100%;
+          width: 174px;
+          padding: 4px 0 0 26px;
+          background: $Fill-2_5;
+        }
+        &-blue-stick {
+          height: 100%;
+          width: 10px;
+          background: $Brand-4;
+          border-radius: 2px 0px 0px 2px;
+        }
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.isQuick {
+  .radio-card {
+    width: 136px;
+    height: 111px;
+    box-sizing: border-box;
+    margin-right: 8px;
+    &:last-child {
+      margin-right: 0px;
+    }
+    .radio-select {
+      display: flex;
+      align-items: center;
+      width: 136px;
+      height: 40px;
+      margin-left: 12px;
+    }
+    &-desc {
+      width: 100%;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $Fill-1;
+      .radio-img1,
+      .radio-img2,
+      .radio-img3 {
+        width: 104px;
+        height: 38px;
+      }
+    }
+  }
+}
+
+.radio-img1 {
+  width: 134px;
+  height: 48px;
+  background: url('@/images/mail/mailTightness1.jpg') no-repeat; // $mail-tightness1 兜底
+  background: $mail-tightness1 no-repeat;
+  // box-shadow: 0px 3.2px 8px rgba($label-1_3-r, $label-1_3-g, $label-1_3-b, 0.12);
+  box-shadow: $mail-tightness-shadow;
+  background-size: 100%;
+}
+.radio-img2 {
+  width: 134px;
+  height: 48px;
+  background: url('@/images/mail/mailTightness2.jpg') no-repeat; // $mail-tightness2 兜底
+  background: $mail-tightness2 no-repeat;
+  // box-shadow: 0px 3.2px 8px rgba($label-1_3-r, $label-1_3-g, $label-1_3-b, 0.12);
+  box-shadow: $mail-tightness-shadow;
+  background-size: 100%;
+}
+.radio-img3 {
+  width: 134px;
+  height: 48px;
+  background: url('@/images/mail/mailTightness3.jpg') no-repeat; // $mail-tightness3 兜底
+  background: $mail-tightness3 no-repeat;
+  // box-shadow: 0px 3.2px 8px rgba($label-1_3-r, $label-1_3-g, $label-1_3-b, 0.12);
+  box-shadow: $mail-tightness-shadow;
+  background-size: 100%;
+}

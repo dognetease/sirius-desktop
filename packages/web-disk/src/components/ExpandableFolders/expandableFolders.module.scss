@@ -1,0 +1,77 @@
+@import './../../../../web/src/styles/varies.scss';
+@mixin specWidth() {
+  width: calc(100% + 12px);
+}
+@mixin folderFlex() {
+  flex-basis: 306px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.expanableFolders {
+  margin-bottom: 18px;
+  font-family: PingFang SC;
+  :global(.spin-label) {
+    display: none;
+  }
+
+  // 可展开模式
+  .expandMode {
+    max-height: 256px;
+    overflow: hidden;
+    position: relative;
+    &.expaned {
+      max-height: unset;
+      height: unset;
+      .expandAndCollapse {
+        position: static !important;
+      }
+    }
+  }
+  // 分页模式
+  .pagingMode {
+    max-height: 256px;
+    overflow-y: scroll;
+  }
+
+  .folders {
+    margin-left: -6px;
+    @include specWidth();
+    display: flex;
+    flex-wrap: wrap;
+    .placeholder {
+      margin: 0 6px;
+      @include folderFlex();
+      height: 0;
+      opacity: 0;
+    }
+    .expandContainer {
+      @include specWidth();
+      height: 0;
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: wrap-reverse;
+      position: absolute;
+      bottom: 0;
+    }
+    .expandButton {
+      @include folderFlex();
+      margin: 6px;
+      height: 52px;
+      padding: 0 10px 0 18px;
+      background: $white;
+      border-radius: 6px;
+      font-size: 14px;
+      line-height: 16px;
+      // color: #7d8085;
+      color: $Text-3;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      cursor: pointer;
+      .actIntro {
+        margin-left: 5px;
+      }
+    }
+  }
+}

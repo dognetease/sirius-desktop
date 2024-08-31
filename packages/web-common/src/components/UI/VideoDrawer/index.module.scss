@@ -1,0 +1,237 @@
+@import '@/styles/varies';
+
+.videoDrawerWrapper {
+  z-index: 100;
+
+  &.isWindows {
+    &:not(.isWebWmEntry) {
+      :global(.ant-drawer-wrapper-body) {
+        padding-top: 32px;
+      }
+    }
+  }
+
+  :global {
+    .ant-drawer-header {
+      height: 52px;
+      padding: 14px 0 14px 24px;
+      border-bottom: 0.5px solid var(--line-3, #e1e3e8);
+    }
+    .ant-drawer-body {
+      position: relative;
+      padding: 0;
+      background: var(--fill-2, #f6f7fa);
+      height: calc(100% - 52px);
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  .loading {
+    animation: spin 1s linear infinite;
+  }
+}
+
+.videoDrawer {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  height: 100%;
+
+  .videoDrawerMainWrapper {
+    @include sirius-scroll;
+
+    flex: 1 1 924px;
+    height: 100%;
+    margin-right: 4px;
+  }
+
+  .videoDrawerMain {
+    padding: 24px;
+    background: var(--unnamed, #fff);
+    max-width: 1516px;
+    margin: 0 auto;
+    height: 100%;
+
+    .videoMainTitle {
+      margin: 24px 0 4px;
+      color: var(--text-5, #272e47);
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 26px;
+    }
+
+    .videoMainContent {
+      color: var(--text-4, #545a6e);
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px; /* 166.667% */
+      padding-bottom: 24px;
+    }
+  }
+
+  .videoDrawerAside {
+    flex: 0 0 288px;
+    padding: 16px 0;
+    background: var(--fill-2, #f6f7fa);
+    height: 100%;
+
+    .asideTitle {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 12px;
+      padding: 0 16px;
+
+      :global(.sirius-icon) {
+        width: 20px;
+        height: 20px;
+      }
+
+      .asideTitleIcon {
+        width: 20px;
+        height: 20px;
+        color: var(--success-6, #0fd683);
+      }
+
+      .asideTitleText {
+        color: var(--text-5, #272e47);
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+
+    .asideContent {
+      max-height: calc(100% - 34px);
+      margin-bottom: 12px;
+      margin-right: 4px;
+      padding: 0 12px 0 16px;
+
+      @include sirius-scroll;
+    }
+
+    .asideBottom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      height: 32px;
+      border-radius: 4px;
+      background: var(--unnamed, #fff);
+      cursor: pointer;
+
+      &:hover {
+        .asideBottomText {
+          color: var(--brand-5, #7088ff);
+        }
+      }
+
+      .asideBottomIconWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--brand-2, #eff2ff);
+
+        .asideBottomIcon {
+          color: var(--brand-6, #4c6aff);
+        }
+      }
+
+      .asideBottomText {
+        color: var(--brand-6, #4c6aff);
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+.videoBoxModal {
+  :global {
+    .ant-modal-body {
+      padding: 0 24px 24px;
+
+      video {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .ant-modal-header {
+      border-bottom: none;
+      padding: 20px 24px;
+    }
+  }
+}
+
+.relevantCard {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 12px;
+  cursor: pointer;
+  padding: 12px;
+
+  .cardImageContainer {
+    position: relative;
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 12px;
+
+    .cardImage {
+      width: 100%;
+      height: 100%;
+    }
+
+    .playIconBtn {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      display: flex;
+      width: 32px;
+      height: 32px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      background: rgba(35, 45, 71, 0.2);
+    }
+  }
+
+  .relevantTitle {
+    color: var(--text-5, #272e47);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: justify;
+  }
+
+  .relevantContent {
+    margin-bottom: 8px;
+    color: var(--text-4, #545a6e);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: justify;
+  }
+}

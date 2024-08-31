@@ -1,0 +1,244 @@
+@import '@web-common/styles/variables.scss';
+.aiHeader {
+  margin-bottom: 20px;
+  .aiHeaderTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .aiTitle {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+      width: 175px;
+      color: $Text-5;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .free {
+        width: 60px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        background: #3fde9c;
+        border-radius: 2px;
+        color: #ffffff;
+        font-size: 12px;
+      }
+    }
+    .aiUse {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      color: $Text-5;
+      // margin-right: 32px;
+      position: relative;
+      .closeIcon {
+        position: absolute;
+        cursor: pointer;
+        right: 0px;
+        top: 2px;
+        width: 12px;
+        // margin-left: 20px;
+        height: 20px;
+      }
+      .introText {
+        margin-right: 20px;
+      }
+    }
+  }
+  .intro {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: $Text-4;
+    margin-top: 8px;
+  }
+}
+.aiSeach {
+  // height: 282px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 120px rgba(14, 48, 89, 0.1);
+  // backdrop-filter: blur(65px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 12px;
+  // border: 1px solid $Fill-4;
+  margin-bottom: 24px;
+  .form {
+    padding: 24px 24px 1px;
+    .formItem {
+      margin-bottom: 24px;
+      label {
+        color: $Text-4;
+      }
+      .formInput {
+        border: 1px solid $Fill-4;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+.searchBtn {
+  text-align: center;
+  margin-bottom: 36px;
+  // margin-top: 24px;
+  .btn {
+    background: $Avatar-6;
+    padding: 5px 24px;
+    color: #ffffff;
+    box-shadow: 7px 6px 15px rgba(152, 173, 226, 0.25);
+  }
+}
+.resultTable {
+  max-height: 430px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 24px 10px;
+}
+.aiResultHeader {
+  .aiHeaderTop {
+    .aiTitle {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      color: $Text-5;
+    }
+  }
+  .checkPage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 64px;
+    .aiUse {
+      margin: 0;
+      color: $Text-3;
+    }
+    .icon {
+      display: flex;
+      cursor: pointer;
+      // line-height: 100%;
+      align-items: center;
+      justify-content: center;
+      height: 20px;
+    }
+  }
+  .rightHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.resultBody {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  .keyword {
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    padding: 8px 16px;
+    background: $Fill-2;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0 0px 12px 0;
+    width: 48%;
+    .keywordText {
+      margin-left: 9px;
+      width: calc(100% - 24px);
+      color: $Text-4;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    span {
+      // display: block;
+      width: 16px;
+      height: 16px;
+    }
+    .hoverIcon {
+      display: none;
+    }
+    &:hover {
+      .keywordText {
+        color: $Avatar-6;
+      }
+      .searchIcon {
+        display: none;
+      }
+      .hoverIcon {
+        display: block;
+      }
+    }
+  }
+}
+.loading {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: none;
+}
+.hideTable,
+.hideLength {
+  display: none;
+}
+.showLoading {
+  display: block;
+}
+.retry {
+  width: 78px;
+  height: 32px;
+  background: $Fill-2_5;
+  border-radius: 4px;
+  margin-left: 8px;
+  color: $Text-4;
+  text-align: center;
+  line-height: 32px;
+  cursor: pointer;
+}
+.aiPart {
+  :global(.ant-drawer-close) {
+    padding-top: 27px;
+    margin: 0 !important;
+  }
+  .aiFloatWindow {
+    cursor: pointer;
+    img {
+      width: 80px;
+    }
+    &-sm {
+      img {
+        width: 70px;
+      }
+    }
+  }
+  // background-image: url(@/images/globalSearch/aiKeywordsBackground.svg);
+}
+.picture {
+  animation: animation1 10s ease infinite;
+}
+.pictureJump {
+  animation: animation2 10s ease infinite;
+}
+@keyframes animation1 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    visibility: hidden;
+  }
+}
+
+@keyframes animation2 {
+  0% {
+    // opacity: ;
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}

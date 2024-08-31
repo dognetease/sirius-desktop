@@ -1,0 +1,63 @@
+.item {
+  height: 72px;
+  overflow: hidden;
+  padding: 8px 16px;
+  .hitText {
+    color: #386ee7;
+  }
+  :global {
+    .ant-list-item-meta-avatar {
+      margin-right: 12px;
+    }
+    .ant-list-item-meta-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: keep-all;
+      white-space: nowrap;
+      width: auto;
+      margin-bottom: 2px;
+      line-height: 16px;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    }
+    .ant-list-item-meta-description {
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+    }
+  }
+  &-select {
+    background: #386ee7;
+    color: #ffffff;
+    .hitText {
+      color: #ffffff;
+    }
+    :global {
+      .ant-list-item-meta-title,
+      .ant-list-item-meta-description {
+        color: #ffffff;
+      }
+    }
+  }
+  .subtitle {
+    font-size: 12px;
+    line-height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    white-space: nowrap;
+    width: auto;
+    margin-bottom: 2px;
+  }
+  .itemAvatar {
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffffff;
+    line-height: 32px;
+    text-align: center;
+  }
+  &:hover:not(.item-select):not(.item-select-disable) {
+    background: #f0f0f1;
+  }
+}

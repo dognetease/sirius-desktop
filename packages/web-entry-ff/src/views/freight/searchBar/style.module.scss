@@ -1,0 +1,35 @@
+.wrapper {
+  min-width: 1200px;
+  padding: 0 20px;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.tabContent {
+  height: 130px;
+}
+
+.searchFav {
+  padding-top: 10px;
+}
+
+.shipMaster {
+  height: 110px;
+  overflow: auto;
+  .tip {
+    color: #666;
+    padding-bottom: 5px;
+  }
+
+  .checkItem {
+    width: 130px;
+    padding: 5px 0;
+  }
+}
+
+.tips {
+  font-size: 12px;
+  position: absolute;
+  margin-top: 5px;
+  color: #bfbfbf;
+}

@@ -1,0 +1,87 @@
+// .client-common-wrap {
+//     input::-webkit-input-placeholder {
+//         font-size: 12px !important;
+//     }
+//     :global {
+//         .ant-input:hover {
+//             border-color: #386EE7;
+//         }
+//         .ant-input:focus,.ant-input-focused {
+//             box-shadow: none;
+//             border-color: #386EE7;
+//         }
+//         .ant-select-selection-placeholder {
+//             font-size: 12px !important;
+//         }
+//     }
+
+//     :global(.edm-table) {
+//         :global(.ant-table) {
+//           font-size: 14px;
+//           color: #262A33;
+//           border: 1px solid rgba(38, 42, 51, 0.08);
+//           border-radius: 8px;
+//           overflow: hidden;
+//         }
+//         :global(.ant-table-thead th) {
+//           background: #F9FAFC;
+//           color: #7D8085;
+//           font-weight: normal;
+//         }
+//         :global(.ant-table-thead > tr > th),
+//         :global(.ant-table-tbody > tr > td) {
+//           padding: 12px 8px;
+//           line-height: 20px;
+//           border-bottom: 0;
+//         }
+//         :global(.ant-table-thead tr th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before) {
+//             // 表头竖线
+//             // background-color: #fff;
+//             display: none;
+//         }
+//         :global(.ant-table-cell-fix-right),
+//         :global(.ant-table-cell-fix-left),
+//         :global(.ant-table-cell-fix-left-last) {
+//           &:after {
+//               bottom: 0;
+//           }
+//         }
+//     }
+//     // 统一修改表头高度
+//     :global {
+//       .ant-form-item-label > label {
+//         color: #51555C;
+//       }
+//     }
+
+//     // 弹框样式修改model
+//     :global(.ant-modal-header) {
+//         border-bottom: none;
+//     }
+//     :global(.ant-modal-footer) {
+//         padding: 24px 16px;
+//         border-top: none;
+//     }
+// }
+
+// .selectDropDown {
+//     :global(.ant-select-item-option-selected:not(.ant-select-item-option-disabled)) {
+//         font-weight: normal;
+//         font-size: 12px;
+//         background: #fff;
+//         color: #386ee7;
+//     }
+//     :global(.ant-select-item-option-selected:hover) {
+//         // background:rgba(0, 0, 0, 0.85);
+//         background: #F0F0F1;
+//     }
+//     :global(.ant-select-item-option-state) {
+//         display: none !important;
+//     }
+//     // :global(.ant-select-item-option-selected:hover) {
+//     // }
+//     :global(.ant-select-item-option) {
+//         color: #262A33;
+//         font-size: 12px;
+//     }
+// }

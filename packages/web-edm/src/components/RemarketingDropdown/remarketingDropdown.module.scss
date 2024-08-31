@@ -1,0 +1,60 @@
+.dropdown-button {
+  @include p1-3-reg14;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  border: 1px solid $Line-3;
+  border-radius: 4px;
+  overflow: hidden;
+  :global(.ant-btn) {
+    border-radius: 0;
+    border-color: $Line-3;
+    color: $Text-4;
+    border: none;
+    &:first-child {
+      padding: 4px 8px;
+      border-right: none;
+      min-width: 20px;
+      &::after {
+        position: absolute;
+        left: 70px;
+        top: 4px;
+        content: '';
+        width: 1px;
+        height: 24px;
+        background-color: $Line-3;
+        display: inline-block;
+      }
+    }
+    &:last-child {
+      width: 28px;
+      min-width: 28px;
+      border-left: none;
+      padding-left: 8px;
+      padding-right: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &:hover {
+      background-color: #fff;
+    }
+  }
+  &.gray {
+    :global(.ant-btn) {
+      color: $Text-4;
+      border-color: $Line-3;
+      &::after {
+        background-color: $Line-3;
+      }
+    }
+  }
+}
+
+.tool-tip-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 4px;
+}

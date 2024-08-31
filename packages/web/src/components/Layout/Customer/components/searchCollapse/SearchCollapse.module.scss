@@ -1,0 +1,10 @@
+.collapse-wrap {
+  height: 0px; // reslove auto lose efficacy
+  overflow: hidden;
+  transition: all 0.2s linear;
+  box-sizing: content-box;
+}
+.show {
+  padding-top: 16px;
+  overflow: visible;
+}

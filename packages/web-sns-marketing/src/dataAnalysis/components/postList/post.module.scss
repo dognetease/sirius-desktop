@@ -1,0 +1,158 @@
+.postList {
+  counter-reset: count;
+}
+
+.postWrapper {
+  &.postIndex0 {
+    .postCard::after {
+      background-color: #fe5b4c;
+      color: #fff;
+    }
+  }
+
+  &.postIndex1,
+  &.postIndex2 {
+    .postCard::after {
+      background-color: #ffb54c;
+      color: #fff;
+    }
+  }
+
+  &.postIndex2 {
+  }
+}
+
+.postCard {
+  position: relative;
+  // float: left;
+  width: 100%;
+  border: 1px solid #e1e3e8;
+  border-radius: 4px;
+  padding: 20px;
+  // margin-bottom: 20px;
+  // width: 366px;
+  // min-width: 270px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in;
+  page-break-inside: avoid;
+
+  &::after {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    counter-increment: count;
+    content: counter(count);
+    font-family: 'LX-numbers';
+    width: 32px;
+    height: 22px;
+    background-color: #f0f2f7;
+    border-radius: 0 0 4px 4px;
+    color: #b7bac2;
+    font-size: 16px;
+    z-index: 2;
+    right: 8px;
+    top: 0;
+  }
+
+  &:hover {
+    box-shadow: 0px 8px 16px 0px #2f53861f;
+  }
+
+  .header {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+
+    .account-avatar {
+      flex-shrink: 0;
+      margin-right: 12px;
+    }
+
+    .account-name-wrapper {
+      flex-grow: 1;
+      display: inline-flex;
+      flex-direction: column;
+      overflow: auto;
+
+      .account-name {
+        color: $Text-5;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .send-time-wrapper {
+        display: flex;
+        align-items: center;
+
+        .send-time {
+          color: $Text-3;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 22px;
+        }
+
+        .dot {
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          margin: 0 6px;
+          background-color: $Fill-7;
+        }
+      }
+    }
+  }
+
+  .content {
+    margin: 10px 0 16px;
+    min-height: 66px;
+    max-height: 252px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    color: #272e47;
+    -webkit-line-clamp: 11;
+    -webkit-box-orient: vertical;
+    line-height: 23px;
+
+    &.hasImage {
+      -webkit-line-clamp: 3;
+      height: 66px;
+    }
+  }
+
+  .img {
+    font-size: 0;
+    img {
+      width: 100%;
+      border-radius: 4px;
+    }
+  }
+
+  .state {
+    padding-top: 20px;
+    display: flex;
+
+    .stateCell {
+      flex: 1;
+      text-align: center;
+
+      .number {
+        color: #545a6e;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .label {
+        padding-top: 2px;
+        color: #747a8c;
+        font-size: 12px;
+      }
+    }
+  }
+}

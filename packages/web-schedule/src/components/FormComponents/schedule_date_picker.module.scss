@@ -1,0 +1,27 @@
+.react-datepicker-wrapper {
+  display: inline-block;
+}
+.header {
+  display: flex;
+  align-items: center;
+  .date {
+    margin: 0 auto;
+  }
+  .arrow {
+    display: inline-block;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    &.left {
+      margin-left: 13px;
+      background-image: url('@/images/icons/calendarDetail/date-picker-arrow-left.svg');
+    }
+    &.right {
+      margin-right: 13px;
+      // background-image: url('@/images/icons/calendarDetail/date-picker-arrow-right.svg');
+    }
+  }
+}

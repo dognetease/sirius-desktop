@@ -1,0 +1,141 @@
+.prompt {
+  padding: 12px 30px 12px 38px;
+  background: rgba($Warning-6-r, $Warning-6-g, $Warning-6-b, 0.06);
+  position: relative;
+  .warn {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 16px;
+    left: 15px;
+  }
+  .promptDetail {
+    margin: 0 28px 0 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #262a33;
+    display: inline-block;
+  }
+  .funs {
+    display: inline-block;
+    .funBtn {
+      margin-right: 20px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      color: #386ee7;
+      cursor: pointer;
+      position: relative;
+      &:nth-last-child(1) {
+        margin-right: 0;
+      }
+    }
+  }
+  .closeBtn {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    cursor: pointer;
+  }
+}
+
+.popoverOverlay {
+  width: 400px;
+  box-sizing: border-box;
+}
+.popoverTitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+}
+:global(.ant-popover-title) {
+  padding: 0;
+  border: none;
+}
+
+.popoverContent {
+  .popoverIntro {
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: $label-6_3;
+  }
+  .popoveButtons {
+    margin-top: 16px;
+    text-align: right;
+  }
+}
+
+.header {
+  padding: 20px 20px 8px 20px;
+  .modalTitle {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    // color: #262a33;
+    color: $font-color-2;
+  }
+  .modalIntro {
+    margin: 8px 0 0 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #7d8085;
+  }
+}
+.strangerArea {
+  height: 348px;
+  padding: 10px 0;
+  border-top: 0.5px solid $Fill-4;
+  // border-bottom: 1px solid $Fill-4;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  .selectAll {
+    padding: 0 25px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    .selectAllText {
+      margin: 0 0 0 13.5px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: #51555c;
+    }
+  }
+  .strangerItem {
+    padding: 0 25px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    .avatar {
+      margin-left: 13.5px;
+    }
+    .strangerMsgs {
+      margin-left: 8px;
+      .strangerName {
+        margin: 0;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #262a33;
+      }
+      .strangerEmail {
+        margin: 2px 0 0 0;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #7d8085;
+      }
+    }
+  }
+}
+
+:global(.ant-modal-mask) {
+  left: 68px;
+}

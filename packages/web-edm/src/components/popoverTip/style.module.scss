@@ -1,0 +1,67 @@
+.tip-popover {
+  :global(.ant-popover-arrow) {
+    opacity: 1;
+    width: 18px;
+    height: 18px;
+    :global(.ant-popover-arrow-content) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  :global(.slick-dots) {
+    :global(li.slick-active),
+    li {
+      width: 6px;
+      button {
+        height: 6px;
+        border-radius: 50%;
+        background: #e1e6ed;
+      }
+    }
+
+    :global(li.slick-active) button {
+      background: #c0c8d6;
+    }
+  }
+}
+
+.sync-send-email-tip-wrapper {
+  width: 400px;
+  padding: 20px;
+  .sync-send-email-tip {
+    // background:#eee;
+    height: 280px;
+
+    img {
+      width: 360px;
+      height: 180px;
+    }
+  }
+  .sync-send-email-tip68 {
+    height: 68px;
+  }
+
+  .sync-send-email-tip-op {
+    padding-top: 0px;
+    text-align: right;
+  }
+
+  .sync-send-email-tip-title {
+    color: #232d47;
+    font-weight: 500;
+    font-size: 14px;
+    padding-top: 12px;
+    // text-indent: -0.5em;
+  }
+
+  .syncSendEmailTipImg {
+    margin: 12px 0px;
+  }
+  .sync-send-email-tip-desc {
+    color: #4e5a70;
+    font-size: 12px;
+    padding-top: 4px;
+    // text-indent: 0.6em;
+  }
+}

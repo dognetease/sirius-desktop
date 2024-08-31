@@ -1,0 +1,67 @@
+$lingxi_blue: #386ee7;
+.wrapper {
+  display: flex;
+  padding: 38px;
+  flex-direction: column;
+  align-items: center;
+  .register-result {
+    padding-top: 10px;
+    padding-bottom: 48px;
+    display: flex;
+    &-text {
+      line-height: 60px;
+      font-size: 20px;
+      color: #333;
+      font-weight: 500;
+      margin-left: 16px;
+    }
+  }
+  .enter-email-btn {
+    width: 440px;
+    height: 48px;
+    line-height: 48px;
+    background-color: $lingxi_blue;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 36px;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    &.disable {
+      opacity: 0.3;
+    }
+    .loading-icon {
+      position: relative;
+      :global(svg) {
+        position: absolute;
+        top: 17px;
+      }
+    }
+  }
+  .other-services {
+    &-label {
+      font-size: 16px;
+      line-height: 16px;
+      color: #262a33;
+      font-weight: 500;
+      margin-bottom: 24px;
+      text-align: left;
+      user-select: none;
+    }
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 16px;
+      :global(.ant-checkbox-group-item) {
+        margin-right: 0;
+      }
+      :global(.ant-checkbox + span) {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+  }
+}

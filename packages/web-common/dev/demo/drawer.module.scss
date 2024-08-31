@@ -1,0 +1,16 @@
+.footer {
+  float: right;
+}
+
+.footerBtn {
+  border-radius: 2px;
+  border: none;
+  &:nth-child(1) {
+    background: #f0f2f7;
+    color: #545a6e;
+    margin-right: 16px;
+  }
+  &:nth-child(2) {
+    background: #4c6aff;
+  }
+}

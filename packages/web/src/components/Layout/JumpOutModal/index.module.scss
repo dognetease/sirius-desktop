@@ -1,0 +1,93 @@
+.container {
+  .title {
+    color: $Text-6;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .intro {
+    color: $Text-4;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 24px auto 0;
+    width: 512px;
+  }
+
+  .item-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 512px;
+    margin: 24px auto 0;
+
+    .item {
+      display: flex;
+      align-items: center;
+      width: 50%;
+
+      .icon {
+        width: 64px;
+        height: 64px;
+        margin-right: 8px;
+      }
+
+      .text {
+        color: $Text-5;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        margin-bottom: 0;
+      }
+
+      &:first-child {
+        margin-bottom: 16px;
+        .icon {
+          background: url(./images/1.png) center center no-repeat;
+          background-size: contain;
+        }
+      }
+      &:nth-child(2) {
+        margin-bottom: 16px;
+        .icon {
+          background: url(./images/2.png) center center no-repeat;
+          background-size: contain;
+        }
+      }
+      &:nth-child(3) {
+        .icon {
+          background: url(./images/3.png) center center no-repeat;
+          background-size: contain;
+        }
+      }
+      &:nth-child(4) {
+        .icon {
+          background: url(./images/4.png) center center no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+    padding: 18px 0;
+
+    .checkboxText {
+      color: $Text-3;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .buttonItem {
+      .cancelBtn {
+        margin-right: 8px;
+      }
+    }
+  }
+}

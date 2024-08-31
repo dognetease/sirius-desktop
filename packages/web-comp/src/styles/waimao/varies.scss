@@ -1,0 +1,388 @@
+@import '../variables.scss';
+$main-font-size: 14px;
+$sup-font-size: 16px;
+$sub-font-size: 12px;
+$side-bar-width: 68px;
+$side-bar-min-height: 640px;
+$min-window-height: 800px;
+$main-enhance-color: #386ee7;
+$main-font-color: #262a33;
+$input-border: 0.5px solid
+  rgba(
+    $color: $main-font-color,
+    $alpha: 0.11,
+  );
+$main-error-color: #f74f4f;
+$main-success-color: #5fc475;
+$main-warning-color: #ffaa00;
+$white-background-hover-color: #f0f0f1; // 白色背景下hover颜色
+$electron-title-bar-height: 32px;
+$electron-resource-title-bar-height: 40px;
+$border-color: #a8aaad;
+/** 第二列菜单背景色 */
+
+$normal-menu-item-color: #f6f7fb;
+$selected-menu-item-color: rgba(210, 224, 255, 0.9);
+$hover-menu-item-color: rgba(38, 42, 51, 0.08);
+
+/** 通讯录相关全局变量 */
+
+$contact-footer-height: 60px;
+$contact-item-height: 70px;
+$contact-item-department-height: 114px;
+$calendar-toolbar-height: 60px;
+
+/** Head和页签 */
+$layout-header-height: 54px;
+$layout-tags-height: 0px;
+
+/** 页面主体内容距离视窗顶部距离 */
+$main-offset-top-height: $layout-header-height + $layout-tags-height;
+
+/** 外贸通 2.0 UI 规范 */
+/** 品牌色 */
+/** 主色 Brand Color */
+// $Brand-1: #F2F5FF;
+// $Brand-2: #EDF0FF;
+// $Brand-3: #B7C3FF;
+// $Brand-4: #94A6FF;
+// $Brand-5: #7088FF;
+// $Brand-6: #4C6AFF;
+// $Brand-7: #445FE5;
+
+// /** 中性色 */
+// /** 线条 Line Color */
+// $Line-1: #F0F1F5;
+// $Line-2: #EBEDF2;
+// $Line-3: #E1E3E8;
+
+// /** 填充 Fill Color */
+// $Fill-1: #F8F9FA;
+// $Fill-2: #F6F7FA;
+// $Fill-2_5: #F0F2F7;
+// $Fill-3: #EBEDF2;
+// $Fill-4: #E1E3E8;
+// $Fill-5: #C9CBD6;
+// $Fill-6: #8D92A1;
+// $Fill-7: #6F7485;
+// $Fill-8: #3F465C;
+
+// /** 文字 Text Color */
+// $Text-1: #B7BAC2;
+// $Text-2: #9FA2AD;
+// $Text-3: #747A8C;
+// $Text-4: #545A6E;
+// $Text-5: #272E47;
+
+// /** 功能色 */
+// /** 头像 Avatar */
+// $Avatar-1: #6557FF;
+// $Avatar-2: #00CCAA;
+// $Avatar-3: #FE6C5E;
+// $Avatar-4: #00C4D6;
+// $Avatar-5: #A259FF;
+// $Avatar-6: #4C6AFF;
+
+// /** 链接 Link */
+// $Link-1: #F2F7FE;
+// $Link-6: #3081F2;
+
+// /** 成功 Success */
+// $Success-1: #E7FBF3;
+// $Success-6: #0FD683;
+
+// /** 警告/提醒 Warning/Notice */
+// $Warning-1: #FFF8ED;
+// $Warning-6: #FFB54C;
+
+// /** 错误 Error */
+// $Error-1: #FFEFED;
+// $Error-4: #FFBDB7;
+// $Error-5: #FE7C70;
+// $Error-6: #FE5B4C;
+// $Error-7: #E45244;
+
+// /** 标签 Label */
+// $label-1_1: #DEEBFD;
+// $label-1_2: #83B3F7;
+// $label-1_3: #4759B2;
+
+// $label-2_1: #D6F7F1;
+// $label-2_2: #66E0CC;
+// $label-2_3: #398E80;
+
+// $label-3_1: #EDE4FF;
+// $label-3_2: #BB98FE;
+// $label-3_3: #7A51CB;
+
+// $label-4_1: #FFF3E2;
+// $label-4_2: #FFB54C;
+// $label-4_3: #CC913D;
+
+// $label-5_1: #FFE5E2;
+// $label-5_2: #FE9D94;
+// $label-5_3: #CB493D;
+
+// $label-6_1: #E7EBF1;
+// $label-6_2: #C0C8D6;
+// $label-6_3: #4E5A70;
+
+// /** other */
+// $other-1: #24273B;
+
+$shadow-1: rgba(47, 83, 134, 0.12);
+
+$shadow-1: rgba(47, 83, 134, 0.12);
+
+$base-bg: #ffffff;
+
+@mixin sirius-scroll($marginRight: 4px, $xtype: hidden) {
+  overflow-y: auto;
+  overflow-y: overlay;
+  overflow-x: $xtype;
+  &::-webkit-scrollbar {
+    // display: none;
+    opacity: 0;
+    width: 6px;
+    background-color: transparent;
+    // background-color: transparent;
+  }
+  &:hover {
+    &::-webkit-scrollbar {
+      opacity: 1;
+      display: block;
+      background-color: transparent;
+      width: 6px;
+      padding-right: 4px;
+      &:horizontal {
+        height: 6px;
+      }
+    }
+    /*滚动条两端方向按钮*/
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
+    /*滚动条中间滑动部分*/
+    &::-webkit-scrollbar-thumb {
+      // background: #d4d4d6;
+      background: $scrollbar-thumb;
+      border-radius: 3px;
+      padding-right: 4px;
+      // right: 4px;
+      width: 6px;
+      opacity: 0;
+      &:hover {
+        // background: #dddddd;
+        background-color: $scrollbar-thumb-hover;
+      }
+    }
+    /*滚动条右下角区域*/
+    &::-webkit-scrollbar-corner {
+      display: none;
+    }
+  }
+}
+
+@mixin sirius-scroll-show {
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    opacity: 1;
+    display: block;
+    background-color: transparent;
+    width: 6px;
+    padding-right: 4px;
+    &:horizontal {
+      height: 6px;
+    }
+  }
+  /*滚动条两端方向按钮*/
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+  /*滚动条中间滑动部分*/
+  &::-webkit-scrollbar-thumb {
+    // background: #d4d4d6;
+    background: $scrollbar-thumb;
+    border-radius: 3px;
+    padding-right: 4px;
+    // right: 4px;
+    width: 6px;
+    opacity: 0;
+    &:hover {
+      // background: #dddddd;
+      background-color: $scrollbar-thumb-hover;
+    }
+  }
+  /*滚动条右下角区域*/
+  &::-webkit-scrollbar-corner {
+    display: none;
+  }
+}
+
+@mixin sirius-scroll-hide {
+  outline: 0;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  /*滚动条两端方向按钮*/
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+  /*滚动条中间滑动部分*/
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+  /*滚动条右下角区域*/
+  &::-webkit-scrollbar-corner {
+    display: none;
+  }
+}
+
+@mixin sirius-middle-grid {
+  background-color: #f4f5f9;
+}
+
+@mixin sirius-middle-grid-bg {
+  background-color: rgba(255, 255, 255, 0.6);
+  @media (prefers-color-scheme: dark) {
+    @include sirius-middle-grid;
+  }
+}
+
+@mixin ellipsis-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+}
+
+@mixin flex-ellipsis-text {
+  flex: 0 1 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin borderHalfPx($borderColor: #ddd, $borderRadius: 0, $borderTop: 0, $borderRight: 0, $borderBottom: 0, $borderLeft: 0, $borderStyle: solid) {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: calc(200% - 2px);
+    height: 200%;
+    border-radius: $borderRadius * 2;
+    border: $borderTop $borderStyle $borderColor;
+    border-right-width: $borderRight;
+    border-bottom-width: $borderBottom;
+    border-left-width: $borderLeft;
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform: scale(0.5, 0.5);
+    -webkit-transform: scale(0.5, 0.5);
+  }
+}
+
+@mixin borderHalfPxRound($borderColor: #ddd, $borderRadius: 0) {
+  @include borderHalfPx($borderColor, $borderRadius, 1px, 1px, 1px, 1px);
+  &::before {
+    z-index: -10;
+  }
+}
+
+@mixin borderTopHalfPx($borderColor: #ddd, $borderRadius: 0) {
+  @include borderHalfPx($borderColor, $borderRadius, 1px, 0, 0, 0);
+  // 解决before内容盖住div, 点击失效的问题 (例如：点击input无法focus)
+  &::before {
+    height: 0;
+    bottom: initial;
+  }
+}
+
+@mixin borderBottomHalfPx($borderColor: #ddd, $borderRadius: 0) {
+  @include borderHalfPx($borderColor, $borderRadius, 0, 0, 1px, 0);
+  &::after {
+    height: 0;
+    top: initial;
+  }
+}
+
+@mixin borderLeftHalfPx($borderColor: #ddd, $borderRadius: 0) {
+  @include borderHalfPx($borderColor, $borderRadius, 0, 0, 0, 1px);
+  &::before {
+    width: 0;
+    right: initial;
+  }
+}
+
+@mixin borderRightHalfPx($borderColor: #ddd, $borderRadius: 0) {
+  @include borderHalfPx($borderColor, $borderRadius, 0, 1px, 0, 0);
+  &::before {
+    width: 0;
+    left: initial;
+  }
+}
+
+@mixin icon {
+  width: 16px;
+  height: 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+@mixin sirius-drag {
+  -webkit-app-region: drag;
+}
+
+@mixin sirius-no-drag {
+  -webkit-app-region: no-drag;
+}
+
+@mixin sirius-background-image($width, $height, $url) {
+  width: $width;
+  height: $height;
+  background-size: 100%;
+  background-image: $url;
+}
+
+@mixin sirius-spin-animation {
+  animation: spin 1s linear infinite;
+}
+
+/** 空状态 */
+
+@mixin sirius-empty($type: search) {
+  height: 300px;
+  width: 300px;
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  // @if $type==search {
+  //     background-image: url(@web/images/empty/搜索为空.png);
+  // }
+  // @else if $type==message {
+  //     background-image: url(@web/images/empty/无消息.png);
+  // }
+  // @else if $type==network {
+  //     background-image: url(@web/images/empty/无网络.png);
+  // }
+  // @else if $type==doc {
+  //     background-image: url(@web/images/empty/无文档.png);
+  // }
+  // @else if $type==collect {
+  //     background-image: url(@web/images/empty/没有收藏.png);
+  // }
+  // @else if $type==future {
+  //     background-image: url(@web/images/empty/敬请期待.png);
+  // }
+}

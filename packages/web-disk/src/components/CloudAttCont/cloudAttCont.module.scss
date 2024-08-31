@@ -1,0 +1,154 @@
+.cloudAttCont {
+  height: 100%;
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  .head {
+    position: relative;
+    .tabTitle {
+      margin-top: 4px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1;
+      // color: #262a33;
+      color: $font-color-2;
+    }
+    .intro {
+      margin-top: 8px;
+      margin-bottom: 24px;
+      font-size: 12px;
+      line-height: 1;
+      // color: #a8aaad;
+      color: $calendar-1;
+    }
+    .uploadButt {
+      position: absolute;
+      right: 0;
+      top: 0;
+      // color: #272e47;
+      color: $Text-5;
+    }
+  }
+  .contentBody {
+    flex: 1;
+    overflow: hidden;
+    .cloudAttTable {
+      height: 100%;
+      .hoverRow {
+        // background: #f0f0f1;
+        background-color: $white-hover-bg;
+      }
+    }
+  }
+}
+
+// 过期时间标题部分，已抽成独立部分，可能会被复用
+.expireTimeTitle {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  .expireTime {
+    display: inline-flex;
+    align-items: center;
+  }
+  .infoIcon {
+    display: flex;
+    align-items: center;
+    margin-left: 4px;
+    opacity: 0.7;
+  }
+}
+
+// 过期时间popover
+.popoverContainer {
+  .headerWrapper {
+    height: 56px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0.5px 0px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+    .headerLeft {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      // color: #262a33;
+      color: $font-color-2;
+      flex: 1;
+    }
+    .headerCloseIcon {
+      width: 12px;
+      height: 12px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+  .contentWrapper {
+    font-size: 14px;
+    padding: 4px 20px 36px;
+    .featureInfo {
+      width: 402px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 2px;
+      .versionTitle {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #7d8085;
+      }
+      .versionItem {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #51555c;
+        .versionLabel {
+          position: relative;
+          .currentTag {
+            position: absolute;
+            padding: 0 4px;
+            height: 16px;
+            background: #386ee7;
+            border-radius: 8px;
+            color: #fff;
+            text-align: center;
+            line-height: 16px;
+            left: 28px;
+            top: -8px;
+            font-size: 10px;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+    .featureContentItem {
+      width: 402px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+      box-sizing: border-box;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      .featureType {
+        color: #262a33;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .spaceSize {
+        color: #51555c;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

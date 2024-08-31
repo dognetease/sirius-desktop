@@ -1,0 +1,59 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.container {
+  width: 292px;
+  // height: 192px;
+  height: fit-content;
+  overflow: auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 30px rgba(78, 86, 130, 0.2);
+
+  .card {
+    width: 120px;
+    height: 70px;
+    float: left;
+    margin-bottom: 12px;
+    background-color: $Fill-2;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px 8px 8px;
+    // padding: 8px;
+    .icon {
+      height: 24px;
+      width: 28px;
+    }
+    .title {
+      height: 22px;
+      line-height: 22px;
+      font-family: PingFang SC;
+      font-weight: 400;
+      font-size: 14px;
+      color: $Text-4;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+  .card:nth-child(2n + 1) {
+    margin-right: 12px;
+  }
+  .card:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+}
+
+.dotShow {
+  padding: 0 5px;
+  margin-left: 4px;
+  height: 16px;
+  min-width: 16px;
+  background: $Error-6;
+  border-radius: 100px;
+  font-family: PingFang SC;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #fff;
+}

@@ -1,0 +1,137 @@
+@import '../../../../web/src/styles/varies.scss';
+.classify-condition {
+  :global(.ant-select) {
+    margin-right: 8px;
+  }
+  :global(.ant-form-item) {
+    margin-bottom: 0;
+  }
+  :global(.ant-form-item-control-input-content) {
+    & > div {
+      min-height: 32px;
+    }
+  }
+  :global(.ant-select-selection-overflow-item) {
+    & > span > div {
+      padding-left: 8px;
+      margin: 2px 4px;
+      background-color: $Fill-2_5;
+      & > div {
+        // color: #262a33;
+        color: $font-color-2;
+      }
+    }
+  }
+  :global(.ant-space),
+  :global(.ant-space-item) {
+    min-width: 100%;
+  }
+  :global(.ant-space) {
+    &:first-child {
+      .classify-condition-item {
+        border-radius: 4px 4px 0 0;
+      }
+      .classify-condition-item-connect {
+        display: none;
+      }
+    }
+    &:last-child {
+      .classify-condition-item {
+        border-radius: 0px 0 4px 4px;
+      }
+    }
+  }
+  :global(.ant-space .ant-space-item) {
+    .classify-condition-item-radius {
+      border-radius: 4px;
+    }
+  }
+  :global(.ant-select-clear) {
+    color: $Fill-5;
+    &:hover {
+      color: $Fill-6;
+    }
+  }
+  :global(.ant-select-selection-item-remove) {
+    &:hover {
+      svg path {
+        stroke: #386ee7;
+        stroke-opacity: 1;
+      }
+    }
+  }
+  .classify-condition-head {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+  }
+  .classify-condition-title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    // color: #262a33;
+    color: $font-color-2;
+    margin-right: 8px;
+  }
+  .classify-condition-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .classify-condition-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    // background: #f4f4f5;
+    background-color: $white-bg;
+    padding: 8px 16px 8px 8px;
+    &-input {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      :global(.ant-select-selection-item) {
+        background-color: $Fill-2_5;
+        border-radius: 12px;
+        border: none;
+        margin: 2px 4px;
+        line-height: 24px;
+      }
+    }
+    &-input-mail {
+      :global(.ant-form-item-control-input-content) {
+        & > div:first-child > div:last-child {
+          top: 8px;
+        }
+      }
+    }
+    .classify-condition-item-connect {
+      margin: 10px 4px 0 0;
+      font-size: 12px;
+    }
+    .classify-condition-item-option {
+      :global(.ant-select-item-option:nth-child(4)) {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 9px;
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -5px;
+          width: calc(100% - 24px);
+          height: 0px;
+          border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+        }
+      }
+    }
+  }
+  .classify-condition-delete,
+  .classify-condition-add {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    flex: none;
+    margin: 10px 0 0 14px;
+  }
+}

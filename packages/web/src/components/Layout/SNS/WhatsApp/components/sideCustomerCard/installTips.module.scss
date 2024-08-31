@@ -1,0 +1,51 @@
+// @import '@/styles/mixin.scss';
+
+.tip-container {
+  padding: 20px 40px 0;
+  color: $Text-4;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  @include c4-3-reg12();
+  ul {
+    padding: 0;
+  }
+}
+.header {
+  @include h2-med18();
+  color: $Text-5;
+  margin-bottom: 26px;
+}
+
+.tip-item-header {
+  @include p1-4-med14();
+  color: $Text-5;
+  padding-bottom: 12px;
+
+  svg {
+    vertical-align: -3px;
+    margin-right: 4px;
+  }
+}
+
+.body li {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.install-steps h3 {
+  @include h2-med18();
+  color: $Text-5;
+}
+.install-steps li {
+  list-style: none;
+  margin-bottom: 8px;
+  span {
+    float: right;
+    color: $Avatar-3;
+  }
+  .active {
+    color: $Success-6;
+  }
+}

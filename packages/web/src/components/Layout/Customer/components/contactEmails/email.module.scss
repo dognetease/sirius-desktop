@@ -1,0 +1,79 @@
+.email {
+  padding: 12px 16px 12px 20px;
+  cursor: pointer;
+  .actions {
+    display: none;
+    padding-left: 40px;
+    padding-top: 8px;
+  }
+  &:hover {
+    background-color: #f4f6f7;
+    .actions {
+      display: block;
+    }
+    .title {
+      color: #386ee7 !important;
+    }
+  }
+
+  .overview {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      margin-right: 12px;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
+      &.received {
+        background-image: url(@/images/icons/customerDetail/received.png);
+      }
+
+      &.sent {
+        background-image: url(@/images/icons/customerDetail/sent.png);
+      }
+    }
+
+    .content {
+      flex-grow: 1;
+      overflow: hidden;
+    }
+
+    .title {
+      color: #262a33;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      margin-bottom: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .summary {
+      color: #51555c;
+      font-size: 12px;
+      line-height: 14px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .time {
+      flex-shrink: 0;
+      align-self: flex-start;
+      color: #7d8085;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: right;
+    }
+  }
+
+  .attachments {
+    margin-top: 12px;
+    padding-left: 40px;
+  }
+}

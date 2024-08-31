@@ -1,0 +1,47 @@
+:global(html) {
+  height: 100%;
+}
+:global(body) {
+  height: 100%;
+}
+.guide-page-wrap {
+  width: 100%;
+  height: 100vh;
+  background: $Fill-2;
+  text-align: center;
+
+  h4 {
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: #000000;
+  }
+  p {
+    margin-top: 4px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    line-height: 20px;
+    color: $Fill-7;
+  }
+  a {
+    margin-top: 24px;
+    display: inline-block;
+    width: 110px;
+    height: 40px;
+    left: 126px;
+    top: 374px;
+    line-height: 40px;
+    color: #ffffff;
+    background: #386ee7;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+  }
+}
+.logo-wrap {
+  text-align: center;
+  padding-top: calc(196 / 735 * 100vh);
+}

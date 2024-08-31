@@ -1,0 +1,153 @@
+@import 'src/styles/varies';
+.root {
+  position: relative;
+  height: 100%;
+  border-left: 1px solid var(--line-1, #f0f1f5);
+
+  .content {
+    height: 100%;
+    padding: 0px 16px 20px 16px;
+    width: 288px;
+    display: flex;
+    flex-direction: column;
+    @include sirius-scroll;
+
+    .question {
+      .question-top {
+        display: flex;
+        height: 48px;
+        background-color: #ffffff;
+
+        .question-icon {
+          margin-top: 19px;
+          width: 16px;
+          height: 20px;
+        }
+
+        .question-title {
+          margin-top: 18px;
+          margin-left: 4px;
+          color: var(--text-5, #272e47);
+          /* 灵犀桌面2.0/P1.4-Med14 */
+          font-family: PingFang SC;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 22px; /* 157.143% */
+        }
+      }
+
+      .question-content {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 8px;
+
+        .question-content-item {
+          position: relative;
+          display: inline-flex;
+          padding: 16px 12px;
+          align-items: center;
+          gap: 10px;
+          border-radius: 4px;
+          background: var(--link-1, #f2f7fe);
+          color: var(--text-5, #272e47);
+          font-family: PingFang SC;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px; /* 166.667% */
+
+          .question-content-item-mark {
+            position: absolute;
+            top: -6px;
+            left: 5px;
+          }
+        }
+      }
+
+      .recommend {
+        display: flex;
+        flex-direction: column;
+        padding: 12px;
+        gap: 12px;
+        border-radius: 4px;
+        background: var(--link-1, #f2f5ff);
+
+        .recommend-item {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+
+          .recommend-content {
+            flex-shrink: 0;
+            display: flex;
+            height: 16px;
+            width: 16px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            background: rgba(183, 195, 255, 0.5);
+
+            .recommend-number {
+              color: var(--text-5, #272e47);
+              /* 灵犀桌面2.0/C4.3-Reg12 */
+              font-family: PingFang SC;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 20px; /* 166.667% */
+            }
+          }
+
+          .recommend-detail {
+            color: var(--text-5, #272e47);
+            /* 灵犀桌面2.0/C4.3-Reg12 */
+            font-family: PingFang SC;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px; /* 166.667% */
+          }
+        }
+      }
+
+      .open-container {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        padding: 6px 12px;
+        background-color: #f8f9fa;
+        border-radius: 4px;
+        height: 32px;
+        margin-top: 8px;
+        margin-bottom: 6px;
+        cursor: pointer;
+
+        .open-container-title {
+          color: var(--brand-6, #4c6aff);
+          font-family: PingFang SC;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px; /* 166.667% */
+        }
+
+        .open-container-icon {
+          flex-shrink: 0;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  .op-icon {
+    position: absolute;
+    left: -24px;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: 0 auto;
+  }
+}

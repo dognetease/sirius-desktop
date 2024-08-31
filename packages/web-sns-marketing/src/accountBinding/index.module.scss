@@ -1,0 +1,118 @@
+.account-binding {
+  width: 100%;
+  height: 100%;
+  padding: 14px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: $Fill-2;
+  overflow: auto;
+
+  .header {
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 12px;
+
+    .title {
+      color: $Text-5;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      margin-right: 8px;
+    }
+
+    .sub-title {
+      color: $Text-3;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    .learn-more {
+      font-size: 12px;
+      margin-left: 4px;
+    }
+
+    .add-page {
+      margin-left: auto;
+    }
+  }
+
+  .body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 20px;
+    background: #ffffff;
+    border: 1px solid $Line-2;
+    border-radius: 4px;
+    overflow: auto;
+
+    .notice {
+      flex-shrink: 0;
+      font-size: 12px;
+      line-height: 20px;
+      padding: 6px 12px;
+      border: none;
+      background: $Warning-1;
+      border-radius: 4px;
+      margin-bottom: 13px;
+    }
+
+    .filter {
+      flex-shrink: 0;
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+
+      .page-name {
+        width: 200px;
+      }
+    }
+
+    .content {
+      position: relative;
+      flex-grow: 1;
+      overflow-y: auto;
+      margin-bottom: 16px;
+    }
+
+    .accounts {
+      display: flex;
+      flex-flow: wrap;
+      gap: 20px;
+    }
+
+    .loading {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .empty {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .empty-icon {
+        margin-bottom: 16px;
+      }
+
+      .empty-tip {
+        color: $Text-3;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: center;
+      }
+    }
+
+    .pagination {
+      flex-shrink: 0;
+    }
+  }
+}

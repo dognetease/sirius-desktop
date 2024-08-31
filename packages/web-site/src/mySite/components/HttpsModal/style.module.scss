@@ -1,0 +1,53 @@
+.https-modal {
+  :global {
+    .ant-modal-body {
+      padding: 0 24px 24px;
+      color: $Text-5;
+    }
+    .ant-modal-header {
+      border-bottom: none;
+      padding: 16px 24px 0;
+    }
+
+    .ant-modal-footer {
+      border-top: none;
+    }
+    .ant-checkbox-group-item {
+      margin-bottom: 21px;
+    }
+    .ant-form-item {
+      margin-bottom: 18px;
+      color: #545a6e;
+      &:last-child {
+        margin-bottom: 0;
+        .ant-form-item-control-input-content {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+    .ant-form-horizontal .ant-form-item-label {
+      text-align: left;
+      > label {
+        color: #272e47;
+      }
+    }
+    .ant-input {
+      font-size: 13px;
+      resize: none;
+      white-space: nowrap;
+      color: #545a6e;
+      border-color: $Line-2;
+      font-family: Consolas, Monaco, monospace;
+    }
+  }
+
+  .purchase-cert {
+    margin-bottom: 12px;
+    color: $Text-2;
+    > a {
+      color: $Brand-6;
+      margin-left: 8px;
+    }
+  }
+}

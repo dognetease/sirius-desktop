@@ -1,0 +1,28 @@
+.attachments {
+  display: flex;
+  align-items: center;
+
+  .item {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    color: #7d8085;
+    font-size: 12px;
+    line-height: 16px;
+    border-radius: 4px;
+    background: rgba(38, 42, 51, 0.06);
+    margin-right: 8px;
+
+    &:hover {
+      background-color: rgba(107, 169, 255, 0.2);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .filename {
+      margin-left: 4px;
+    }
+  }
+}

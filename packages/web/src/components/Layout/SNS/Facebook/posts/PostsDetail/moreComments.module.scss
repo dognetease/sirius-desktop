@@ -1,0 +1,27 @@
+@import '@web-common/styles/variables.scss';
+
+@import 'src/styles/varies';
+.post-more-modal-wrap {
+  :global(.ant-modal-header) {
+    border-bottom: none;
+    padding: 24px;
+  }
+  :global(.ant-modal-body) {
+    @include sirius-scroll;
+  }
+  .title {
+    @include c4-3-reg12();
+    color: rgba(38, 42, 51, 0.9);
+    font-style: normal;
+    margin-bottom: 4px;
+  }
+
+  .content {
+    margin-bottom: 20px;
+    min-height: 544px;
+  }
+
+  .comment-card-child {
+    padding-left: 36px;
+  }
+}

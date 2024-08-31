@@ -1,0 +1,151 @@
+.titleStyle {
+  display: flex;
+  justify-content: space-between;
+  .urlLink {
+    cursor: pointer;
+    color: $Brand-6;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+.detailBox {
+  padding: 20px;
+  padding-top: 0;
+
+  :global {
+    .ant-alert-info {
+      border: 0px;
+      background-color: rgba(76, 106, 255, 0.09);
+    }
+
+    .ant-alert-icon {
+      color: #4c6aff;
+    }
+  }
+  .iconCloseText {
+    color: #4c6aff;
+    cursor: pointer;
+  }
+  .detailTitle {
+    margin-top: 16px;
+    display: flex;
+
+    .excludePageSpan {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #e1e3e8;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+    .excludeViewedPageSpan:hover {
+      border: 1px solid #4c6aff;
+      color: #4c6aff;
+    }
+
+    .disablePageSpan {
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #d9d9d9;
+      border-radius: 2px;
+      cursor: pointer;
+      background-color: #f5f5f5;
+    }
+
+    .itemCompanyDetailName {
+      margin-right: 16px;
+      line-height: 32px;
+      color: #545a6e;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .detailInfoBox {
+    margin-top: 16px;
+    padding: 16px;
+    display: flex;
+    border-radius: 4px;
+    border: 1px solid #f0f1f5;
+    width: 100%;
+
+    .detailLogo {
+      width: 80px;
+      height: 80px;
+      color: #fff;
+      margin-right: 12px;
+      background-color: #4c6aff;
+      border-radius: 4px;
+      text-align: center;
+      line-height: 80px;
+    }
+
+    .detailInfo {
+      width: calc(100% - 92px);
+
+      .detailInfoName {
+        width: 100%;
+        display: inline-block;
+        color: #272e47;
+        margin-bottom: 6px;
+      }
+
+      .detailInfoItem {
+        color: #545a6e;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        > div {
+          width: 32%;
+          margin-bottom: 6px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  .detailListBox {
+    margin-top: 20px;
+
+    .detailListTop {
+      display: flex;
+      justify-content: space-between;
+
+      :golab {
+        .ant-tabs-tab {
+          background-color: #f6f7fa;
+        }
+      }
+    }
+
+    .pagination {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 8px;
+      justify-content: flex-end;
+      margin: 16px 0;
+    }
+
+    .tagPosition {
+      font-size: 12px;
+      display: inline-block;
+      padding: 0px 6px;
+      border: 1px solid #4c6aff;
+      border-radius: 2px;
+      color: #4c6aff;
+      margin-left: 4px;
+    }
+  }
+}

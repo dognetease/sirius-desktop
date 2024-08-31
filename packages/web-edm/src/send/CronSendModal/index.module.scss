@@ -1,0 +1,74 @@
+.cronSendModal {
+  :global(.ant-modal-body) {
+    padding: 20px;
+  }
+
+  :global(.ant-table.ant-table-middle .ant-table-thead > tr > th) {
+    padding: 11.5px 8px;
+    background: #f6f7fa;
+    color: #747a8c;
+    font-weight: 400;
+    border: none;
+    :before {
+      height: 0em;
+    }
+  }
+  :global(.ant-table-thead > tr > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan]):before) {
+    height: 0em;
+  }
+
+  :global(.ant-table.ant-table-middle .ant-table-tbody > tr > td) {
+    padding: 7px 8px;
+    border: none;
+  }
+
+  :global(.ant-table) {
+    height: 413px;
+    overflow-y: scroll;
+    /* 设置滚动条的样式 */
+    &::-webkit-scrollbar {
+      width: 6px;
+      background: #fff;
+    }
+    /* 滚动槽 */
+    &::-webkit-scrollbar-track {
+      border-radius: 6px;
+    }
+    /* 滚动条滑块 */
+    &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background: rgba(38, 42, 51, 0.3);
+      padding: 4px;
+    }
+  }
+
+  .dark-row {
+    background: #f9fafb !important;
+  }
+  .td-span {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 4px;
+  }
+  .pagination {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    :global(.ant-pagination-prev .ant-pagination-item-link) {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    :global(.ant-pagination-next .ant-pagination-item-link) {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

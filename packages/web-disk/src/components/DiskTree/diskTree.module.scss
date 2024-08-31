@@ -1,0 +1,119 @@
+@import './../../../../web/src/styles/varies.scss';
+
+.diskTree {
+  .nodeContent {
+    font-size: 14px;
+    line-height: 16px;
+    // color: #262a33;
+    color: $Text-5;
+    display: flex;
+    align-items: center;
+    .folderTitle {
+      flex: 1;
+      position: relative;
+      display: flex;
+      align-items: center;
+      > span {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        position: absolute;
+      }
+    }
+    .inputFolderTitle {
+      margin-right: 4px;
+      margin-left: 8px;
+      height: 28px;
+      border: 1px solid #386ee7;
+      border-radius: 4px;
+      flex: 1;
+    }
+    .cancel {
+      font-size: 12px;
+      line-height: 1;
+      color: #386ee7;
+    }
+  }
+  .cloud-att {
+    margin-top: 8.5px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: '';
+      height: 1px;
+      width: 90%;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -8.5px;
+      background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+    }
+  }
+  .normal-att {
+    margin-bottom: 8.5px;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      height: 1px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      bottom: -8.5px;
+      background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+    }
+  }
+  :global {
+    .ant-tree {
+      background: transparent;
+      .ant-tree-treenode {
+        padding: 0;
+        cursor: pointer;
+        &:hover {
+          background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+        }
+        &.gray {
+          background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+        }
+        &.ant-tree-treenode-selected {
+          // background: rgba($Link-2-r, $Link-2-g, $Link-2-b, 0.9) !important;
+          // background-color: $Brand-2-bg !important;
+          // background-color: rgba($tree-hover-r, $tree-hover-g, $tree-hover-b, 0.9) !important;
+          background-color: rgba($Line-3-r, $Line-3-g, $Line-3-b, 1) !important;
+          .ant-tree-node-selected {
+            // background-color: $Brand-2-bg !important;
+            // background-color: rgba($tree-hover-r, $tree-hover-g, $tree-hover-b, 0.9) !important;
+            background-color: rgba($Line-3-r, $Line-3-g, $Line-3-b, 1) !important;
+          }
+        }
+      }
+    }
+    .ant-tree-switcher {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .ant-tree-node-content-wrapper {
+      height: 36px;
+      display: flex;
+      align-items: center;
+      &:hover {
+        background: transparent;
+      }
+      &.ant-tree-node-selected {
+        background: transparent;
+      }
+      .ant-tree-title {
+        width: 100%;
+      }
+      .ant-tree-iconEle {
+        display: flex !important;
+        align-items: center !important;
+        &:empty {
+          display: none !important;
+        }
+      }
+    }
+  }
+}

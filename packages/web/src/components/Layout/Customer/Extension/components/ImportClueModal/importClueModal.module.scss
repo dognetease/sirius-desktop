@@ -1,0 +1,101 @@
+.modal-wrap {
+  :global(.ant-modal-header) {
+    box-sizing: border-box;
+    height: 44px;
+    padding: 11px 24px;
+  }
+  :global(.ant-modal-close-x) {
+    height: 44px;
+    line-height: 44px;
+  }
+  :global(.ant-select-selector) {
+    border: 1px solid #d9d9d9 !important;
+  }
+  // :global{
+  //     // .ant-upload-list-text-container {
+  //         // pointer-events: none;
+  //     // }
+  // }
+  :global(.ant-upload-list-item-name) {
+    max-width: 300px;
+  }
+  :global {
+    .ant-modal-content {
+      border-radius: 6px;
+    }
+  }
+}
+
+.modal-content {
+  .file-type-desc {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #a8aaad;
+  }
+  .label-type-desc {
+    text-align: left;
+    padding-left: 50px;
+  }
+  .download {
+    display: block;
+    margin-top: 12px;
+  }
+  .template-file-card {
+    width: 428px;
+    position: relative;
+    background: #fbfbfb;
+    border: 1px solid rgba(38, 42, 51, 0.07);
+    margin-bottom: 24px;
+    color: rgba(38, 42, 51, 0.9);
+    font-size: 12px;
+    padding: 10px 12px;
+    border-radius: 4px;
+    .card-wrap {
+      display: flex;
+      align-items: center;
+    }
+    .file {
+      flex: 1;
+    }
+    .file-name {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .file-size {
+      margin-top: 2px;
+      color: rgba(38, 42, 51, 0.5);
+    }
+    :global(.anticon-close-circle) {
+      color: rgba(0, 0, 0, 0.16);
+      font-size: 14px;
+    }
+    .progress {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 100%;
+      background: #386ee7;
+    }
+  }
+  .select-warp {
+    //  width: 100%;
+    width: 428px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 8px;
+    .title {
+      width: 50px;
+      display: inline-block;
+    }
+    :global(.ant-select) {
+      flex: 1;
+      overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,134 @@
+.product-setting-modal {
+  :global(.ant-modal-header) {
+    border-bottom: none;
+  }
+  :global(.ant-table-thead > tr > th) {
+    background: #f4f6f7;
+    color: #7a8599;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  :global(.ant-modal-body) {
+    padding-top: 0;
+    max-height: 410px;
+    overflow-y: scroll;
+    /* 设置滚动条的样式 */
+    &::-webkit-scrollbar {
+      width: 6px;
+      background: #fff;
+    }
+    /* 滚动槽 */
+    &::-webkit-scrollbar-track {
+      border-radius: 6px;
+    }
+    /* 滚动条滑块 */
+    &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background: rgba(38, 42, 51, 0.3);
+      padding: 4px;
+    }
+  }
+  :global(.ant-modal-footer) {
+    border-top: none;
+    padding: 15.5px 23.5px;
+  }
+  .search-outer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    .search {
+      width: 280px;
+    }
+  }
+  .add-wrapper {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 4px;
+    }
+  }
+
+  .empty-list {
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+  .sample-link {
+    display: block;
+    margin-top: 8px;
+  }
+
+  .add-product {
+    margin-top: 24px;
+  }
+
+  .choose-products-outer {
+    display: flex;
+    margin-bottom: 16px;
+    position: relative;
+
+    .title {
+      font-size: 14px;
+      line-height: 22px;
+      color: #a9b2c2;
+      flex-shrink: 0;
+    }
+
+    .choose-products {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      .product-item {
+        padding: 0 8px;
+        height: 20px;
+        background: #f4f6f7;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        .product-name {
+          max-width: 94px;
+          min-width: 36px;
+          line-height: 20px;
+          color: #4e5a70;
+          margin-right: 4px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .close {
+          cursor: pointer;
+          stroke: #939cad;
+          &:hover {
+            stroke: #4c6aff;
+          }
+        }
+      }
+    }
+  }
+
+  :global(.sirius-icon) {
+    width: 16px;
+    height: 16px;
+    background-size: 16px;
+    line-height: 16px;
+    vertical-align: -0.125em;
+    margin-left: 4px;
+  }
+
+  .notice {
+    margin-bottom: 12px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 4px;
+    background: $Warning-1;
+    border: none;
+
+    :global(.ant-alert-message) {
+      color: $Text-5;
+    }
+  }
+}

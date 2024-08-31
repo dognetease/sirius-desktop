@@ -1,0 +1,27 @@
+.slide-list-container {
+  position: relative;
+
+  .slide-list-item {
+    position: relative;
+    z-index: 2;
+    cursor: default;
+  }
+
+  .slide-list-bg-block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    border-left: 2px solid $Avatar-6;
+    background: $Fill-1;
+    border-radius: 0 4px 4px 0;
+    transition: top 0.2s;
+    will-change: top;
+    pointer-events: none;
+  }
+
+  .new-guide-for-aside-right {
+    flex: 0 0 598px;
+  }
+}

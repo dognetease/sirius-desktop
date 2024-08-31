@@ -1,0 +1,234 @@
+@import '@web-common/styles/waimao/varies.scss';
+.date-condition {
+  :global(.ant-drawer-header) {
+    border-bottom: none;
+  }
+  :global(.ant-drawer-body) {
+    @include sirius-scroll();
+  }
+
+  :global(.ant-drawer-footer) {
+    border-top: none;
+
+    :global(.ant-btn:not(.ant-btn-primary)) {
+      border-color: #f0f3f5;
+      background-color: #f0f3f5;
+    }
+
+    :global(.ant-btn-primary) {
+      background-color: #4c6aff;
+    }
+  }
+
+  &-body {
+    padding: 8px 24px;
+
+    // .form {
+    //   > :global(.ant-form-item) {
+    //     margin-bottom: 0;
+    //   }
+    // }
+
+    :global {
+      .ant-form-item {
+        margin-bottom: 16px; // 此值会影响错误提示
+        // 更改错误提示的大小
+        .ant-form-item-explain-success,
+        .ant-form-item-explain-error {
+          min-height: 16px;
+          line-height: 16px;
+          font-size: 12px;
+        }
+      }
+      .ant-form-item-with-help {
+        margin-bottom: 0px; // 此值会影响错误提示
+      }
+    }
+
+    .form-list-item {
+      display: inline-flex;
+    }
+
+    .form-item-date {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+      :global(.ant-form-item-label) {
+        padding-bottom: 0;
+      }
+      :globla(.ant-form-item-control-input) {
+        min-height: 22px;
+      }
+    }
+
+    .date-picker {
+      width: 100%;
+
+      :global {
+        .ant-picker-dropdown,
+        .ant-picker-panel {
+          width: 100%;
+        }
+
+        .ant-picker-date-panel,
+        .ant-picker-body .ant-picker-content {
+          width: 100%;
+          table-layout: auto;
+          padding: 8px 12px;
+
+          .ant-picker-body {
+            padding: 0;
+          }
+
+          tbody tr td {
+            // width: 80px !important;
+          }
+
+          thead tr th {
+            padding-left: 0;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .btns {
+      float: right;
+      padding-left: 8px;
+      display: flex;
+      gap: 10px;
+      height: 32px;
+      align-items: center;
+    }
+
+    .tip {
+      color: #7a8599;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+    .addSubWrap {
+      cursor: pointer;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      height: 20px;
+      .addSubIcon {
+        margin-right: 4px;
+        width: 12px;
+        height: 12px;
+        background-image: url(@/images/icons/im/add-icon-hover.svg);
+        background-size: 100%;
+      }
+
+      .addSubDisableIcon {
+        margin-right: 4px;
+        width: 12px;
+        height: 12px;
+        background-image: url(@/images/icons/im/add-icon-disabled.svg);
+        background-size: 100%;
+      }
+
+      .addSubTxt {
+        font-size: 12px;
+        font-family: 'PingFang SC';
+        font-style: normal;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &-footer {
+    text-align: right;
+
+    :global(.ant-btn) {
+      margin-right: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .festivalType {
+    padding-top: 10px;
+    .festivalTip {
+      padding-bottom: 5px;
+    }
+  }
+
+  :global {
+    .ant-picker-header {
+      padding-bottom: 6px;
+    }
+    .ant-picker-body {
+      padding-top: 16px;
+    }
+    .ant-picker-footer {
+      line-height: 48px;
+      .ant-picker-today-btn {
+        color: #4c6aff;
+      }
+    }
+
+    .edm-date-picker-dropdown-wrap .ant-picker-cell::before {
+      display: none;
+    }
+  }
+
+  :global(.ant-picker-cell-selected) {
+    .dateCell {
+      background: #165dff !important;
+      color: #fff !important;
+      .dateCellDay {
+      }
+
+      .dateCellExt {
+        color: #fff !important;
+      }
+    }
+  }
+
+  :global(.ant-picker-cell-in-view) {
+    text-align: center;
+    &:hover {
+      .dateCell {
+        background: #ebedf2;
+      }
+    }
+  }
+
+  .dateCell {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+
+    .dateCellDay {
+      font-family: 'LX-numbers' !important;
+    }
+
+    .dateCellExt {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 12px;
+      color: #747a8c;
+      display: flex;
+      padding: 0 5px;
+      scale: 0.8;
+      line-height: 1;
+      justify-content: center;
+    }
+
+    .dateCellEllips {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}

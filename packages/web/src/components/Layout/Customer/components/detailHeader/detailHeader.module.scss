@@ -1,0 +1,112 @@
+.detail-header {
+  position: relative;
+  padding: 20px 16px 8px;
+  display: flex;
+  align-items: center;
+
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+  }
+
+  .logo {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  .title {
+    color: #262a33;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-right: 8px;
+  }
+
+  .title-id {
+    flex-shrink: 0;
+    color: #a8aaad;
+    font-size: 12px;
+    line-height: 16px;
+    margin-right: 16px;
+  }
+
+  .prev,
+  .next {
+    flex-shrink: 0;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  .prev {
+    background-image: url(@/images/icons/customerDetail/prev.png);
+    margin-right: 8px;
+  }
+
+  .prev-disabled {
+    background-image: url(@/images/icons/customerDetail/prev-disabled.png);
+    cursor: not-allowed;
+  }
+
+  .next {
+    background-image: url(@/images/icons/customerDetail/next.png);
+    margin-right: 30px;
+  }
+
+  .next-disabled {
+    background-image: url(@/images/icons/customerDetail/next-disabled.png);
+    cursor: not-allowed;
+  }
+
+  .content {
+    position: relative;
+  }
+
+  .options {
+    position: absolute;
+    top: 20px;
+    right: 54px;
+    text-align: right;
+  }
+
+  // .mergeCompanyOption {
+  //   bottom: auto;
+  //   top: 20px;
+  //   right: 50px;
+  // }
+
+  .merge-company {
+    // display: flex;
+    // flex-direction: column;
+    &-title {
+      font-size: 15px;
+      line-height: 21px;
+      font-weight: 600;
+      color: #000000;
+    }
+
+    &-content {
+      font-size: 12px;
+      color: #747a8c;
+      // line-height: 17px;
+    }
+
+    &-query {
+      color: #4c6aff;
+      cursor: pointer;
+    }
+  }
+
+  .mergeCompany {
+    line-height: 22px;
+    color: #747a8c;
+    margin-bottom: 4px;
+  }
+}

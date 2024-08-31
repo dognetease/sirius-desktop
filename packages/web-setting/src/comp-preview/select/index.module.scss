@@ -1,0 +1,15 @@
+.comp-list-box {
+  display: flex;
+  margin: 20px 0;
+  gap: 20px;
+}
+
+.comp-list-title {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  // @include font-size(500, 20px, 34px);
+
+  color: #262a33;
+  margin: 20px 0 10px;
+}

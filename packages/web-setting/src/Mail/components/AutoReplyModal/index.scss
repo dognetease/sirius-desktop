@@ -1,0 +1,168 @@
+@import '@web-common/styles/variables.scss';
+
+.AutoReplyModal {
+  .ant-modal-body {
+    padding: 24px 0px 0px 0px !important;
+    .title {
+      padding: 0px 24px;
+      height: 20px;
+      @include font-size(500, 16px, 20px);
+
+      // color: #262a33;
+      color: $font-color-2;
+    }
+    .content-radio {
+      padding: 20px 24px 0px 24px;
+      // margin: 20px 0px;
+    }
+    .content-editor {
+      padding: 0px 24px;
+      margin-bottom: 5px;
+      &-limit {
+        // color: rgba($color: $Error-6, $alpha: 1);
+        color: $Error-6;
+        margin-top: 4px;
+        float: right;
+        height: 16px;
+        @include c4-1-reg12();
+      }
+
+      &-bottom {
+        height: 16px;
+        line-height: 16px;
+        margin-top: 4px;
+      }
+      &-mask {
+        height: calc(100% - 20px);
+        width: 632px;
+        position: absolute;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.04);
+      }
+    }
+    .content-time {
+      padding: 0px 24px;
+      .ant-form-item {
+        margin-bottom: 0px;
+      }
+      .content-time-date {
+        width: 136px;
+        display: inline-block;
+        margin-right: 6px;
+      }
+      .content-time-time {
+        width: 65px;
+        display: inline-block;
+        .react-datepicker-wrapper {
+          .ant-input {
+            width: 65px;
+            text-align: center;
+          }
+        }
+      }
+      .content-time-label {
+        display: inline-block;
+        height: 32px;
+        line-height: 32px;
+        margin-left: 20px;
+      }
+      .content-time-label::after {
+        content: ':';
+        position: relative;
+        top: -0.5px;
+        margin: 0 8px 0 2px;
+      }
+      .ant-input-disabled {
+        background-color: rgba(0, 0, 0, 0.04);
+      }
+    }
+    .autoReply-editor-limit {
+      border: 1px solid $Error-6;
+      border-radius: 5px;
+    }
+    .autoReply-editor {
+      .tox-sidebar-wrap {
+        background-color: #fff;
+      }
+      .tox-edit-area {
+        margin: 8px 0px 8px 8px;
+      }
+    }
+    .footer {
+      padding: 16px 24px;
+      // border-top: 1px solid #ddd;
+      border-top: 1px solid $Line-3;
+      .content-auto {
+        display: inline-block;
+        margin-bottom: 0px;
+        // color: #262a33;
+        color: $font-color-2;
+        .ant-form-item-control-input-content {
+          .ant-checkbox-wrapper {
+            line-height: 32px;
+            span {
+              font-size: 12px;
+              padding-left: 4px;
+            }
+            .ant-checkbox {
+              font-size: 14px;
+              margin-top: 6px;
+            }
+            .ant-checkbox-checked::after {
+              border: none;
+            }
+          }
+        }
+      }
+      .content-btn {
+        margin-bottom: 0px;
+        .btn-cancel {
+          // background: #f4f4f5;
+          background-color: $white-bg;
+          margin-right: 16px;
+        }
+        .btn-save {
+          background-color: #386ee7 !important;
+          height: 32px !important;
+          border-radius: 4px !important;
+        }
+      }
+    }
+  }
+}
+.change-model-confirm {
+  .ant-modal-body {
+    padding: 22px 20px;
+    .content {
+      display: flex;
+      margin-bottom: 18px;
+      .icon {
+        width: 20px;
+        height: 20px;
+        margin-top: 2px;
+        background: url(../../../../../web/src/images/autoReply_warn.svg) no-repeat center center;
+      }
+      .text {
+        font-family: 'PingFang SC';
+        font-style: normal;
+        @include h1-4-med16();
+        // color: #232d47;
+        color: $font-color-2;
+        margin-left: 8px;
+      }
+    }
+    .footer {
+      display: flex;
+      justify-content: right;
+      .cancel {
+        color: $label-6_3;
+        background: $Fill-2_5;
+        margin-right: 16px;
+      }
+      .confirm {
+        background: $Error-6;
+        color: #ffffff;
+      }
+    }
+  }
+}

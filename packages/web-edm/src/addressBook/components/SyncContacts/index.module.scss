@@ -1,0 +1,66 @@
+.btn {
+  width: 76px;
+  height: 32px;
+  border-radius: 4px;
+  @include p1-3-reg14();
+}
+
+.cancel {
+  background: #f0f3f5;
+  color: $label-6_3;
+  &:hover {
+    background: #f0f3f5;
+    color: $label-6_3;
+  }
+}
+
+.confirm {
+  background: $Brand-6;
+  color: #fff;
+  margin-left: 16px !important;
+  margin-right: 8px;
+  width: auto;
+  &:hover {
+    background: $Brand-6;
+    color: #fff;
+  }
+}
+
+.sync {
+  :global {
+    .ant-modal-header {
+      border: none;
+      padding-bottom: 12px;
+    }
+
+    .ant-modal-footer {
+      border: none;
+    }
+  }
+
+  &-header {
+    .header {
+      display: flex;
+      align-items: center;
+      &-icon {
+        margin-left: auto;
+        margin-right: 0;
+        cursor: pointer;
+      }
+    }
+    .tip {
+      margin-top: 4px;
+      font-size: 12px;
+      color: #a9b2c2;
+      &-color {
+        color: $Brand-6;
+      }
+    }
+  }
+
+  &-body {
+    &-label {
+      margin-bottom: 8px;
+    }
+  }
+}

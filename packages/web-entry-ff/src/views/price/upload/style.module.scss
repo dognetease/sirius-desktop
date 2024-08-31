@@ -1,0 +1,45 @@
+.ff-upload-wrap {
+  width: 100%;
+  height: 100%;
+  background: $Fill-2;
+  padding: 20px;
+  padding-bottom: 36px;
+  overflow-y: auto;
+
+  &-content {
+    width: 100%;
+    min-height: 100px;
+    margin-top: 20px;
+    border-radius: 4px;
+    background: #fff;
+    white-space: nowrap;
+    padding: 16px;
+    position: relative;
+  }
+
+  .breadcrumb {
+    cursor: pointer;
+  }
+
+  .bg-color {
+    background: #edf0ff;
+  }
+
+  .preview {
+    cursor: pointer;
+    color: $Link-6;
+    position: absolute;
+    right: 35px;
+    top: 30px;
+    &-disabled {
+      position: absolute;
+      right: 35px;
+      top: 30px;
+      color: $Text-1;
+      cursor: not-allowed;
+    }
+  }
+  .route-box {
+    margin-top: 12px;
+  }
+}

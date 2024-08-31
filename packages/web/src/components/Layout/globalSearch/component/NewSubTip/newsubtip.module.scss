@@ -1,0 +1,34 @@
+@import '@web-common/styles/variables.scss';
+
+.alert {
+  border: none;
+  margin-top: 12px;
+
+  .message {
+    color: $Text-5;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 20px;
+
+    .title {
+      font-weight: 500;
+      padding-right: 8px;
+    }
+
+    .text {
+      font-weight: 400;
+      margin-right: 24px;
+      .text2 {
+        color: $Brand-6;
+      }
+    }
+
+    .btn {
+      height: 24px;
+      line-height: 24px;
+      min-width: 52px;
+      font-size: 12px;
+      padding: 0 8px;
+    }
+  }
+}

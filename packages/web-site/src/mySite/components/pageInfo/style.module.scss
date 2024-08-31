@@ -1,0 +1,115 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.info {
+  flex: 1;
+  padding: 8px 0 14px;
+  background: #ffffff;
+  border-radius: 4px;
+  position: relative;
+
+  & > * {
+    position: absolute;
+    display: inline-block;
+  }
+
+  .steps {
+    position: static;
+    width: 84%;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    .step {
+      width: 20%;
+
+      .step-title {
+        font-size: 12px;
+        line-height: 20px;
+        color: $Text-5;
+        vertical-align: middle;
+      }
+
+      .sub-title {
+        font-size: 12px;
+        line-height: 16px;
+        color: $Text-3;
+      }
+
+      :global {
+        .ant-steps-item-container {
+          width: 100%;
+
+          .ant-steps-item-icon {
+            width: 100%;
+            margin: auto;
+          }
+
+          .ant-steps-item-content {
+            margin-top: -6px;
+            width: 100%;
+          }
+
+          .ant-steps-item-title {
+            line-height: initial;
+          }
+
+          .ant-steps-item-subtitle {
+            margin-bottom: 8px;
+          }
+
+          .ant-steps-item-tail {
+            margin-left: 50%;
+            &::after {
+              background: $Line-3;
+            }
+          }
+        }
+      }
+
+      &::global(.ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title) {
+        color: $Text-3;
+      }
+
+      .step-btn {
+        font-size: 12px;
+        line-height: 20px;
+        color: $Brand-6;
+        cursor: pointer;
+
+        &:global(.disable) {
+          color: $Text-3;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
+
+.product-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $Text-3;
+  top: 49px;
+  width: 100%;
+
+  img {
+    width: 102px;
+    height: 78px;
+    margin-bottom: 8px;
+  }
+}
+
+.info-index {
+  background: initial;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:global(.index-have-img-step) {
+    justify-content: flex-start;
+  }
+}

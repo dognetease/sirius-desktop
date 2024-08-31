@@ -1,0 +1,86 @@
+.template-card {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  height: 160px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  overflow: hidden;
+
+  .body {
+    flex-grow: 1;
+    overflow: hidden;
+
+    .create-template {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+
+      .create-template-image {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    .template-preview {
+      transform-origin: top left;
+      transform: scale(0.58);
+    }
+
+    .unsupported {
+      padding: 12px;
+      font-size: 12px;
+    }
+  }
+
+  .footer {
+    position: relative;
+    padding: 0 12px;
+    flex-shrink: 0;
+    height: 41px;
+    color: #262a33;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 40px;
+    border-top: 1px solid #e5e5e5;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .footer.create {
+    text-align: center;
+  }
+
+  .operations {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    bottom: -41px;
+    width: 100%;
+    height: 40px;
+    transition: bottom 0.2s;
+
+    :global(.ant-btn) {
+      padding: 0 4px;
+      width: 48px;
+      height: 24px;
+      min-width: 48px;
+      font-size: 12px;
+
+      &:first-child {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  &.entered .operations {
+    bottom: 0;
+  }
+}

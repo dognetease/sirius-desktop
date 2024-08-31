@@ -1,0 +1,25 @@
+.modal {
+  :global {
+    .ant-modal-close-x {
+      color: #fff;
+    }
+    .ant-modal-body {
+      background-image: url(../../images/newbieTaskBg.png);
+      background-repeat: no-repeat;
+      padding: 340px 28px 28px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+  }
+  .content {
+    color: #272e47;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: PingFang SC;
+  }
+  .action {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

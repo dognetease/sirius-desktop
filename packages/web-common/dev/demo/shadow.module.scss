@@ -1,0 +1,28 @@
+$shadow-mini: var(--shadow-mini, 0px 3px 3px 0px rgba(47, 83, 134, 0.08));
+$shadow-small: var(--shadow-small, 0px 4px 10px 0px rgba(47, 83, 134, 0.12));
+$shadow-large: var(--shadow-large, 0px 8px 16px 0px rgba(47, 83, 134, 0.12));
+$shadow-left: var(--shadow-left, -6px 0px 16px 0px rgba(47, 83, 134, 0.12));
+
+.mini {
+  width: 108px;
+  height: 44px;
+  box-shadow: $shadow-mini;
+}
+
+.small {
+  width: 108px;
+  height: 44px;
+  box-shadow: $shadow-small;
+}
+
+.large {
+  width: 108px;
+  height: 44px;
+  box-shadow: $shadow-large;
+}
+
+.left {
+  width: 108px;
+  height: 44px;
+  box-shadow: $shadow-left;
+}

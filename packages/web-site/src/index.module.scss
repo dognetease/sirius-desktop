@@ -1,0 +1,48 @@
+// @import '@web-common/styles/waimao/varies.scss';
+
+// .configSettingWrap{
+//     .mailAndAccount {
+//         .selectTab {
+//             padding-top: 16px;
+//             width: 220px;
+//             cursor: pointer;
+//             .tabItem {
+//                 &:hover{
+//                     background-color: rgba(38, 42, 51, 0.08);
+//                 }
+//                 @include sirius-no-drag;
+//                 color: rgba(38, 42, 51, 0.9);
+//                 font-size: 14px;
+//                 height: 40px;
+//                 line-height: 40px;
+//                 display: flex;
+//                 align-items: center;
+//                 position: relative;
+
+//                 &-select{
+//                     background-color: rgba($color: #D2E0FF, $alpha:  0.9);
+//                   &:hover{
+//                     background-color: rgba($color: #D2E0FF, $alpha:  0.9);
+//                   }
+//                 }
+//                 span {
+//                     display: flex;
+//                     align-items: center;
+//                 }
+//                 .item-remind{
+//                     display: block;
+//                     width: 8px;
+//                     height: 8px;
+//                     background-color: #F74F4F;
+//                     border-radius: 4px;
+//                     position: absolute;
+//                     right: 16px;
+//                     top: 16px;
+//                 }
+//             }
+//         }
+//         .icon {
+//             margin: 0 10px 0 18px;
+//         }
+//     }
+// }

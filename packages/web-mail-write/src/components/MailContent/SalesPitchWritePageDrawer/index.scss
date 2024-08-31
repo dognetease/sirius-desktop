@@ -1,0 +1,15 @@
+.salesPitchWritePageDrawer {
+  .ant-drawer-close {
+    display: none;
+  }
+
+  &.salesPitchWritePageDrawerInWindows {
+    .ant-drawer-content {
+      background: #f6f7fa;
+      .ant-drawer-wrapper-body {
+        padding-top: 40px;
+        position: relative;
+      }
+    }
+  }
+}

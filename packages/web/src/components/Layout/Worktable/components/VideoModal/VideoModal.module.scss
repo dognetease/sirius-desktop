@@ -1,0 +1,11 @@
+.videoModal {
+  :global {
+    .ant-modal-body {
+      padding: 0px;
+    }
+    .ant-modal-content {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+}

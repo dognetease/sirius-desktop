@@ -1,0 +1,263 @@
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>邮件详情</title>
+</head>
+<style>
+    [hidden] {
+        display: none !important
+    }
+
+    html {
+        box-sizing: border-box
+    }
+
+    *,
+    :after,
+    :before {
+        box-sizing: inherit
+    }
+
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    }
+
+    html {
+        height: 100%;
+        background-color: rgb(133, 121, 121)
+    }
+
+    html body {
+        height: 100%;
+        color: #fff;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.5;
+        font-family: Helvetica Neue, Helvetica, Roboto, Segoe UI, Arial, sans-serif
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(318.14deg, #CADBFF 2.91%, #F2F7FF 74.05%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header {
+        padding: 13px 14px;
+        background: #FFFFFF;
+        box-shadow: inset 0px -0.5px 0px #ECEFF4;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-title {
+        color: #333333;
+        font-size: 18px;
+        display: inline-block;
+        height: 32px;
+        line-height: 32px;
+        margin-left: 8px;
+        font-weight: 500;
+    }
+
+    .header-btn {
+        width: 70px;
+        height: 25px;
+        background: #4C6AFF;
+        border-radius: 4px;
+        font-size: 13px;
+        color: #FFFFFF;
+        line-height: 25px;
+        text-align: center;
+    }
+
+    .openApp {
+        display: none;
+        position: fixed;
+        top: 0px;
+        z-index: 10;
+        width: 100%;
+    }
+
+    .content-toast {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+        margin-top: 58px;
+    }
+
+    .content-text {
+        font-family: 'PingFang SC';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        padding-left: 30px;
+        color: #232D47;
+        width: 284px;
+    }
+
+    .content-img {
+        width: 100%;
+        background-image: url(https://cowork-storage-public-cdn.lx.netease.com/common/2022/08/16/7a72e3d22b6845d48af8596328ef6664.png);
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: contain;
+        z-index: 0;
+        flex: 1;
+        max-height: 75%;
+    }
+
+    .footer {
+        width: 268px;
+        height: 48px;
+        background: #4C6AFF;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5%;
+    }
+
+    .footer-text {
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: 500;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="openApp">
+            <div class="header">
+                <div style="display: flex;">
+                    <img style="width: 32px; height: 32px;"
+                        src="https://cowork-storage-public-cdn.lx.netease.com/common/2022/07/28/62cc6e1437ed4beba8ca979ab50c894c.png">
+                    <span class="header-title">网易灵犀办公</span>
+                </div>
+                <div class="header-btn" onclick="openApp()">打开App</div>
+            </div>
+        </div>
+        <div class="content-toast">
+            <div class="content-text">
+                <div>点击右上角...</div>
+                <div>选择浏览器打开访问</div>
+            </div>
+        </div>
+        <div class="content-img"></div>
+        <div class="footer" onclick="download()">
+            <span class="footer-text">
+                下载网易灵犀办公
+            </span>
+        </div>
+    </div>
+</body>
+<script>
+    const ua = navigator.userAgent || '';
+    const isAndroid = /android/i.test(ua);
+    const isWechat = /micromessenger/i.test(ua);
+    const isIos = /iphone|ipod/i.test(ua);
+
+    const isIpad =
+        navigator.userAgent.match(/(iPad)/) ||
+        (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    const isOriginalChrome =
+        /chrome\/[\d.]/i.test(ua) && isAndroid && ua.indexOf('Version') < 0;
+    console.log(isAndroid, isWechat, isIos, isIpad, isOriginalChrome);
+    let timer;
+    let hidden;
+    let visibilityChange;
+
+    function getSupportedProperty() {
+        if (typeof document === 'undefined') return;
+
+        if (typeof document.hidden !== 'undefined') {
+            hidden = 'hidden';
+            visibilityChange = 'visibilitychange';
+        } else if (typeof document.msHidden !== 'undefined') {
+            hidden = 'msHidden';
+            visibilityChange = 'msvisibilitychange';
+        } else if (typeof document.webkitHidden !== 'undefined') {
+            hidden = 'webkitHidden';
+            visibilityChange = 'webkitvisibilitychange';
+        }
+    };
+    getSupportedProperty();
+
+    if (typeof visibilityChange !== 'undefined') {
+        document.addEventListener(visibilityChange, () => {
+            if (hidden) {
+                clearTimeout(timer);
+            };
+        });
+    } else {
+        window.addEventListener('pagehide', () => {
+            clearTimeout(timer);
+        });
+    };
+
+    window.onload = function () {
+        var openApp = document.getElementsByClassName('openApp')[0]
+        var openToast = document.getElementsByClassName('content-toast')[0]
+        var contentImg = document.getElementsByClassName('content-img')[0]
+        if (!isWechat) {
+            if (isIos || isIpad) {
+                openApp.style.display = 'none'
+            } else {
+                openApp.style.display = 'block'
+            } 
+            openToast.style.display = 'none'
+            contentImg.style.marginTop = 'calc(58px + 2%)'
+        } else {
+            openApp.style.display = 'none'
+            openToast.style.display = 'flex'
+        }
+    }
+    function download() {
+        evokeByLocation("https://hubble.netease.com/sl/aaag53")
+    }
+    function openApp() {
+        let mid = getQueryVariable("mailId");
+        timer = setTimeout(() => {
+            evokeByLocation('https://hubble.netease.com/sl/aaag53');
+        }, 3000)
+        if (mid) {
+            if (isIos || isIpad) {
+                evokeByLocation("https://lingxi.office.163.com/static_html/download_h5.html?deeplink=sirius://mail/in-share-detail?mailId=" + mid);
+            } else {
+                evokeByLocation("lingxi://lx.office.163.com/mailDetail?mailId=" + mid);
+            }
+        } else {
+            if (isIos || isIpad) {
+                evokeByLocation("https://lingxi.office.163.com/static_html/download_h5.html");
+            } else {
+                evokeByLocation("lingxi://lx.office.163.com/main");
+            }
+        }
+  
+    }
+    function evokeByLocation(uri) {
+        window.location.href = uri;
+    }
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("?");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            if (pair[0] == variable) { return pair[1]; }
+        }
+        return (false);
+    }
+</script>
+
+</html>

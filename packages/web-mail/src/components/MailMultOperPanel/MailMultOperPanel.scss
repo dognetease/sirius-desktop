@@ -1,0 +1,164 @@
+.mail-mop-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  // background-color: #fff;
+  background-color: $white;
+
+  .mop-contetn {
+    flex: 1;
+    // display: flex;
+    // justify-content: center;
+    margin-top: -6%;
+  }
+  .detail-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .logo-wrap {
+    margin-right: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .num-wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 40px;
+  }
+  .num {
+    font-size: 56px;
+    font-weight: 700;
+    color: $Text-4;
+    margin-top: -24px;
+  }
+  .tip {
+    font-size: 14px;
+    height: 16px;
+    margin-top: -8px;
+    color: $Text-4;
+  }
+  .user-select {
+    margin-right: 0;
+  }
+
+  .oper-wrap .u-tool {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .u-tool-btn-text {
+    margin-top: 10px;
+  }
+}
+
+// 提取组件，所以提到外面
+.oper-wrap {
+  // margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  .u-tool {
+    width: auto;
+    justify-content: center;
+  }
+}
+.oper-item {
+  margin: 0 10px;
+}
+.omp-circle-btn {
+  -webkit-app-region: no-drag;
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  // background: rgba($color: $Fill-2, $alpha: 1);
+  background: $Fill-2;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    // background: rgba($color: $Fill-5, $alpha: 1);
+    background: $Fill-5;
+  }
+
+  svg {
+    transform: scale(1.35);
+  }
+}
+// 小尺寸按钮样式
+.mini {
+  .oper-item {
+    margin: 0 8px;
+  }
+  .omp-circle-btn {
+    width: 28px;
+    height: 28px;
+    svg {
+      transform: scale(1);
+    }
+  }
+}
+
+.folder-svg-warp {
+  &.mop-floder-one {
+    .one {
+      transform: rotate(0deg);
+      transform-origin: 50% 50%;
+      transition: transform 0.5s;
+    }
+    .two {
+      transform: rotate(0deg);
+      transform-origin: 50% 50%;
+      transition: transform 0.5s;
+    }
+  }
+
+  &.mop-floder-two {
+    .one {
+      transform: rotate(-10deg);
+      transform-origin: 50% 50%;
+      transition: transform 0.5s;
+    }
+    .two {
+      transform: rotate(0deg);
+      transform-origin: 50% 50%;
+      transition: transform 0.5s;
+    }
+  }
+
+  &.mop-floder-three {
+    .one {
+      transform: rotate(10deg);
+      transform-origin: 50% 50%;
+      transition: transform 0.5s;
+    }
+    .two {
+      transform: rotate(-10deg);
+      transform-origin: 50% 50%;
+      transition: transform 0.5s;
+    }
+  }
+
+  &.mop-floder-four {
+    .one {
+      transform: rotate(-10deg);
+      transform-origin: 50% 50%;
+      transition: transform 0.5s;
+    }
+    .two {
+      transform: rotate(10deg);
+      transform-origin: 50% 50%;
+      transition: transform 0.5s;
+    }
+  }
+}

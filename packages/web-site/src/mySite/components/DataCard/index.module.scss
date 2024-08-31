@@ -1,0 +1,88 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+@mixin common-data-card {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: $Fill-1;
+  border-radius: 4px;
+}
+
+.data-card {
+  @include common-data-card;
+
+  .data-block {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 20px 20px 20px 48px;
+    .inner {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      .title {
+        font-size: 14px;
+        line-height: 22px;
+        color: $Text-3;
+      }
+
+      .number {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        color: $Text-5;
+        margin: 8px 0 8px;
+        font-family: 'LX-numbers';
+      }
+
+      .detail {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: $Text-3;
+        display: flex;
+        align-items: center;
+        dd {
+          margin: 0 2px 0 4px;
+        }
+      }
+
+      .line {
+        margin: 0 11px 0 8px;
+      }
+
+      .green {
+        color: #0dc076;
+        margin-left: 4px;
+      }
+
+      .grey {
+        color: $Text-3;
+        margin-left: 4px;
+      }
+
+      .red {
+        color: $Error-6;
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .go-stat {
+    width: 44px;
+    margin-left: 5%;
+    text-align: right;
+
+    .link {
+      font-size: 14px;
+      line-height: 22px;
+      color: $Brand-6;
+    }
+  }
+}

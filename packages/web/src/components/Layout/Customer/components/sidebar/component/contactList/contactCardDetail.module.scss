@@ -1,0 +1,134 @@
+.contact-list {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden auto;
+
+  .emptyTip {
+    height: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+.contact-card {
+  border-radius: 4px;
+  border: 1px solid $Line-2;
+  background: #ffffff;
+
+  .simple {
+    display: flex;
+    align-items: center;
+    // width: 274px;
+    padding: 16px 20px;
+    // background: $Fill-1;
+
+    .main-contact-tag {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      color: $label-1_3;
+      display: inline-block;
+      margin-left: 8px;
+      padding: 0 4px;
+      background: $Brand-2;
+      border-radius: 2px;
+    }
+
+    .content {
+      flex-grow: 1;
+      overflow: hidden;
+
+      .contactHeader {
+        .title {
+          color: $Text-5;
+          font-family: PingFang SC;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          height: 24px;
+          line-height: 24px; /* 150% */
+          margin-bottom: 4px;
+          display: flex;
+          align-items: center;
+
+          .icon {
+            display: none;
+            :global(.sirius-icon) {
+              width: 16px;
+              height: 16px;
+            }
+          }
+
+          &:hover {
+            .icon {
+              margin-left: 8px;
+              display: block;
+              width: 16px;
+              height: 16px;
+              cursor: pointer;
+              flex: 0 0;
+            }
+          }
+        }
+        .tagList {
+          height: 28px;
+          line-height: 20px;
+          padding-bottom: 8px;
+        }
+      }
+      .contactRow {
+        margin-top: 8px;
+
+        .contactLine {
+          height: 22px;
+          line-height: 22px;
+          display: flex;
+
+          .contactLineTitle {
+            color: $Text-3;
+            width: 80px;
+            flex: 0 0 80px;
+          }
+          .contactLineContent {
+            color: $Text-5;
+            flex: 1 1;
+            min-width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            display: flex;
+            align-items: center;
+
+            .contentLink {
+              color: $Brand-6;
+              cursor: pointer;
+            }
+            .ellipsis {
+              flex: 1 1 auto;
+            }
+            .icon {
+              display: none;
+              :global(.sirius-icon) {
+                width: 16px;
+                height: 16px;
+              }
+            }
+
+            &:hover {
+              .icon {
+                display: block;
+                width: 16px;
+                height: 16px;
+                cursor: pointer;
+                flex: 0 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

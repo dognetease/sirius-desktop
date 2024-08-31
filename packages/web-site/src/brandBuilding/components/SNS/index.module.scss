@@ -1,0 +1,279 @@
+.container {
+  position: relative;
+  background: rgb(244, 248, 254);
+  height: 196px;
+
+  img {
+    position: absolute;
+    height: 196px;
+    right: 0;
+    top: 0;
+  }
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 196px;
+  top: 0;
+  left: 0;
+  margin-left: 30px;
+}
+
+.title {
+  color: $Text-5;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.more {
+  color: $Brand-6;
+}
+
+.sub-title {
+  color: $Text-4;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-top: 12px;
+}
+
+.list {
+  margin-top: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.split {
+  width: 1px;
+  height: 23px;
+  margin: 0 24px;
+  opacity: 0.2;
+  background: #b7c3ff;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-title {
+  color: $Text-5;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+
+  span {
+    width: 6px;
+    height: 6px;
+    background: $Brand-6;
+    border-radius: 50%;
+    margin: 0 9px 0 3px;
+  }
+}
+
+.item-info {
+  color: $Text-3;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 6px;
+}
+
+.btn-link,
+.btn-face {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 21px;
+  right: 16px;
+  color: $Text-5;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  padding: 7px 12px;
+  background: #fff;
+  border: 1px solid $Line-1;
+  border-radius: 21px;
+  cursor: pointer;
+
+  svg {
+    margin-right: 4px;
+  }
+}
+
+.btn-link {
+  right: 176px;
+}
+
+.account-list {
+  display: flex;
+  flex-flow: wrap;
+  gap: 16px;
+  position: relative;
+
+  .loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .account {
+    box-sizing: border-box;
+    width: calc(50% - 9px);
+    padding: 16px 20px;
+    border-radius: 4px;
+    background: $Fill-1;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+
+    .account-container {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      & > svg {
+        flex-shrink: 0;
+        width: 44px;
+        height: 44px;
+        margin-right: 18px;
+        border-radius: 50%;
+      }
+
+      .avatar {
+        flex-shrink: 0;
+        width: 44px;
+        height: 44px;
+        margin-right: 18px;
+        border-radius: 50%;
+      }
+
+      .user-name {
+        color: $Text-5;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
+        max-width: 130px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      .account-info-list {
+        display: flex;
+        align-items: center;
+        color: $Text-3;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+      }
+
+      span {
+        width: 1px;
+        height: 12px;
+        margin: 0 8px;
+        background: $Line-3;
+      }
+
+      .failed {
+        color: $Avatar-3;
+      }
+    }
+  }
+}
+
+.pagnation {
+  display: flex;
+  align-items: center;
+
+  .prev-disabled,
+  .prev,
+  .next-disabled,
+  .next {
+    box-sizing: border-box;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid $Line-1;
+    background: #fff;
+    cursor: pointer;
+
+    &:hover {
+      background: $Fill-2;
+    }
+  }
+
+  .next,
+  .next-disabled {
+    margin-left: 8px;
+  }
+
+  .next-disabled,
+  .prev-disabled {
+    cursor: not-allowed;
+
+    svg {
+      path {
+        stroke: #c9cbd6;
+      }
+    }
+  }
+}
+
+.create-btn {
+  position: absolute;
+  top: 16px;
+  right: 14px;
+  padding: 5px 12px 6px;
+  border-radius: 4px;
+  border: 1px solid $Line-3;
+  background: #fff;
+  color: $Text-4;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  height: 28px !important;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.bind-now {
+  display: flex;
+  align-items: center;
+  color: $Brand-6;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  height: 22px !important;
+  cursor: pointer;
+
+  svg {
+    path {
+      stroke: $Brand-6;
+    }
+  }
+}
+
+.platform-icon {
+  position: absolute;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  top: 28px;
+  left: 28px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

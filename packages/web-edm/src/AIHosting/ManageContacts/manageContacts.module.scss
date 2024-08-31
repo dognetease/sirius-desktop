@@ -1,0 +1,174 @@
+@import '@/styles/varies.scss';
+.manage-contacts {
+  // height: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  // 满足面包屑组件暂未支持的UI
+  .breadcrumb-item {
+    cursor: pointer;
+    &:hover {
+      color: $Brand-6;
+    }
+  }
+  // 开关UI改造
+  :global(.ant-switch-checked) {
+    background-color: #4c6aff;
+  }
+  .title {
+    color: #272e47;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 18px;
+    :global(.ant-select-selector) {
+      min-width: 112px;
+    }
+    .header-filter,
+    .header-operation {
+      display: flex;
+    }
+    .header-filter {
+      gap: 8px;
+      @include sirius-scroll;
+      overflow-y: hidden;
+      overflow-x: overlay;
+    }
+    .header-operation {
+      align-items: center;
+      justify-content: space-between;
+      .operation-desc {
+        font-size: 14px;
+        line-height: 22px;
+        color: #545a6e;
+        flex: none;
+      }
+      .operation-btns {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    }
+    .input {
+      max-width: 246px;
+      min-width: 146px;
+    }
+    button {
+      flex: none;
+      margin-left: 8px;
+    }
+  }
+  .table {
+    margin-top: 16px;
+  }
+  .table-astrict {
+    max-width: 220px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+  }
+  .table-gray {
+    color: $Text-1;
+  }
+  .table-flex {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-start;
+    .table-flex-no-wrap {
+      flex: none;
+    }
+  }
+  .pagination {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 16px 20px 24px;
+  }
+  .paginationN {
+    padding: 16px 20px 24px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .operation {
+    color: #4c6aff;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 12px;
+    &-item {
+      flex: none;
+      cursor: pointer;
+    }
+  }
+  .operate-record {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    .operate-record-left,
+    .operate-record-right {
+      padding: 3px;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &:hover {
+        background-color: $Fill-2_5;
+      }
+    }
+    .operate-record-right {
+      padding: 12px 3px 11px 3px;
+      svg path {
+        fill: $Brand-6;
+      }
+    }
+  }
+  :global(.ant-modal-header),
+  :global(.ant-modal-footer) {
+    border: none;
+  }
+  :global(.ant-modal-body) {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .modal-title {
+    margin: 0;
+  }
+  .modal-desc {
+    @include c4-3-reg12;
+    color: $Text-3;
+    margin: 0;
+  }
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .modal-dropdown-divider {
+    display: flex;
+    margin: 0 12px;
+  }
+  .modal-dropdown-create {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 12px;
+  }
+  .replyed {
+    color: #4c6aff;
+    cursor: pointer;
+  }
+}
+.manage-contact-task {
+  max-height: calc(100% + 20px);
+}
+.manage-contacts-height {
+  height: 100%;
+}

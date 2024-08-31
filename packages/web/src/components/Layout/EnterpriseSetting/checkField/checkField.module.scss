@@ -1,0 +1,26 @@
+@import '@web-common/styles/variables.scss';
+
+.page-container {
+  padding: 20px 24px;
+  :global(.ant-radio-wrapper:first-child) {
+    padding-right: 80px;
+  }
+}
+
+.page-title {
+  @include h3-med20;
+  // font-family: 'PingFang SC';
+  // font-style: normal;
+  // font-weight: 500;
+  // font-size: 20px;
+  // line-height: 28px;
+  color: #262a33;
+}
+.subtitle {
+  margin: 12px 0 20px;
+  @include c4-3-reg12;
+  // font-weight: 400;
+  // font-size: 12px;
+  // line-height: 20px;
+  color: $label-6_3;
+}

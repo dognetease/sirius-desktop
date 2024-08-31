@@ -1,0 +1,34 @@
+.quota {
+  .topbar-container {
+    color: #a8aaad;
+    @include c4-3-reg12();
+
+    .num {
+      color: #f7b48e;
+    }
+
+    .quota-guide {
+      color: $Brand-6;
+      user-select: none;
+      margin-left: 12px;
+      cursor: pointer;
+    }
+  }
+
+  .banner-container {
+    padding: 8px 12px;
+    @include c4-1-reg12();
+    border-radius: 4px;
+
+    .quota-tip {
+      color: #232d47;
+    }
+
+    .quota-guide {
+      color: $Brand-6;
+      user-select: none;
+      margin-left: 32px;
+      cursor: pointer;
+    }
+  }
+}

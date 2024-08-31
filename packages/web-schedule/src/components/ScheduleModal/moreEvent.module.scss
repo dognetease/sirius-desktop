@@ -1,0 +1,27 @@
+@import './right.module.scss';
+.eventOuter {
+  @include eventOuter;
+}
+
+.moreTitle {
+  padding-left: 4px;
+  height: 18px;
+  line-height: 18px;
+  display: inline-block;
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.6);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  cursor: pointer;
+  &:hover {
+    color: $main-enhance-color;
+  }
+}
+
+.close {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  background-image: url('@/images/icons/close_icon.svg');
+  background-size: 100% 100%;
+}

@@ -1,0 +1,80 @@
+@import '../../../styles/common.scss';
+.#{$class-prefix}-badge.ant-badge {
+  &.ant-badge-not-a-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .ant-scroll-number-only {
+    transform: scale(0.83);
+  }
+  .ant-badge-count {
+    height: 16px;
+    border-radius: 8px;
+    background-color: $Error-6;
+    box-shadow: none;
+    padding: 0 4px;
+    line-height: 16px;
+  }
+  .ant-badge-dot,
+  .ant-badge-status-dot {
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    background-color: $Error-6;
+    box-shadow: none;
+  }
+  .#{$class-prefix}-badge-intro {
+    height: 16px;
+    line-height: 16px;
+    border-radius: 8px;
+    background-color: $Error-6;
+    padding: 0 6px;
+    color: #fff;
+    .text {
+      display: inline-block;
+      transform: scale(0.83);
+      font-size: 12px;
+      vertical-align: top;
+    }
+  }
+}
+
+.#{$class-prefix}-badge.#{$class-prefix}-badge-not-number.ant-badge {
+  .ant-badge-multiple-words {
+    padding: 0 6px;
+  }
+}
+
+.#{$class-prefix}-badge.#{$class-prefix}-badge-single-number.ant-badge {
+  .ant-badge-count {
+    min-width: 16px;
+    width: 16px;
+  }
+}
+
+.#{$class-prefix}-badge.#{$class-prefix}-badge-dot-sm.ant-badge {
+  .ant-badge-dot,
+  .ant-badge-status-dot {
+    width: 6px;
+    height: 6px;
+    min-width: 6px;
+    background-color: $Error-6;
+    box-shadow: none;
+  }
+}
+
+.badge-comp-gray-block {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background: #c1c6ce;
+  margin-left: 35px;
+}
+
+.badge-comp-wrap {
+  display: flex;
+  .ant-badge-not-a-wrapper {
+    margin-right: 10px;
+  }
+}

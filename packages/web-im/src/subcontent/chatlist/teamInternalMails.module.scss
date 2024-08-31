@@ -1,0 +1,117 @@
+// 邮件讨论折叠区域样式
+@import '../../common/style-constant/style-constant';
+
+.team-mails-drawer {
+  :global(.ant-drawer-body) {
+    padding: 0;
+    display: flex;
+  }
+  :global(.ant-drawer-content-wrapper) {
+    box-shadow: none !important;
+    p {
+      margin: 0;
+    }
+    // 内容样式
+    .team-mail-list {
+      background: $white;
+      border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+      width: 100%;
+      box-sizing: border-box;
+      // padding: 16px;
+      display: flex;
+      flex-direction: column;
+      .team-mail-list-title {
+        padding: 16px 16px 0;
+        display: flex;
+        justify-content: space-between;
+        flex: 0 1;
+        .team-mail-list-title-left {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          // color: #262a33;
+          color: $font-color-2;
+        }
+        .team-mail-list-title-right {
+          cursor: pointer;
+        }
+      }
+      .team-mail-list-wrapper {
+        padding: 20px 16px 16px;
+        flex: 1;
+        overflow-y: auto;
+        .team-mail-list-item {
+          margin-bottom: 28px;
+          .team-mail-list-item-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 12px;
+            margin-bottom: 8px;
+            font-family: 'PingFang SC';
+            .team-mail-list-item-header-left {
+              display: flex;
+              align-items: center;
+              flex: 1;
+              margin-right: 36px;
+              flex-wrap: nowrap;
+              .user-avatar {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                margin-right: 8px;
+                flex-shrink: 0;
+              }
+              .username {
+                // flex: 1;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                // color: #262a33;
+                color: $font-color-2;
+                margin-right: 2px;
+                max-width: 142px;
+              }
+              .user-operator {
+                flex-shrink: 0;
+                color: #7d8085;
+              }
+            }
+            .team-mail-list-item-header-right {
+              color: #7d8085;
+            }
+          }
+          .test-card {
+            border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+            box-sizing: border-box;
+            border-radius: 6px;
+            height: 92px;
+          }
+        }
+      }
+      .team-list-empty {
+        flex: 1;
+        position: relative;
+        .empty-content {
+          position: absolute;
+          left: 0;
+          top: 218px;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          img {
+            width: 160px;
+          }
+          .empty-info {
+            margin-top: 20px;
+            color: #7d8085;
+            font-size: 14px;
+            line-height: 18px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

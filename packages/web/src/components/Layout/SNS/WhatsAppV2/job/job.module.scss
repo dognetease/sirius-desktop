@@ -1,0 +1,101 @@
+.job {
+  min-height: auto;
+  padding-bottom: 0;
+  padding-right: 24px;
+
+  .header {
+    margin-bottom: 16px;
+
+    .title {
+      display: inline-flex;
+      align-items: center;
+      width: calc(100% - 200px);
+
+      .title-text {
+        flex-shrink: 0;
+      }
+
+      .topbar-quota {
+        margin-left: 12px;
+      }
+
+      .refresh {
+        display: flex;
+        margin-left: 6px;
+        cursor: pointer;
+      }
+
+      .introduction {
+        display: flex;
+        font-size: 14px;
+        margin-left: 6px;
+      }
+    }
+  }
+
+  .header-button {
+    float: right;
+
+    .create-job-icon {
+      margin: 0 4px -3px 0;
+    }
+  }
+
+  .banner-quota {
+    min-height: 32px;
+    margin-bottom: 16px;
+  }
+
+  .filter {
+    :global(.ant-input-affix-wrapper) {
+      padding: 6px 11px;
+      width: 240px;
+    }
+
+    :global(.ant-picker) {
+      width: 240px;
+    }
+
+    :global(.ant-input-affix-wrapper),
+    :global(.ant-picker),
+    :global(.ant-select) {
+      margin-right: 8px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    .stat {
+      width: 100%;
+      margin-right: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .column-ranged-width {
+    min-width: 100px;
+    max-width: 200px;
+  }
+
+  .operations a {
+    margin-right: 12px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .pagination {
+    margin-bottom: 0;
+  }
+}

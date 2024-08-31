@@ -1,0 +1,303 @@
+# -*- Mode: Nginx -*-
+
+    error_page 400 = @customfor400;
+    error_page 404 = @customfor404;
+    error_page 440 /beian.html;
+
+    location ~ ^/(jy3/|jy5/|js5/|ios/|qiyeapp/|hmailAddrCopy/) {
+        if ($mail_realhost_1) {
+            break;
+            proxy_pass http://$mail_realhost_ip1;
+        }
+        error_page 500 = @backup;
+        error_page 502 = @backup;
+        error_page 504 = @backup;
+        error_page 400 = @customfor400;
+        error_page 404 = @customfor404;
+        error_page 440 /beian.html;
+    }
+    location ~ ^/m/ {
+        if ($mail_realhost_2) {
+            break;
+            proxy_pass http://$mail_realhost_ip2;
+        }
+        error_page 500 = @smartbackupcluster;
+        error_page 502 = @smartbackupcluster;
+        error_page 503 = @smartbackupcluster;
+        error_page 504 = @smartbackupcluster;
+        error_page 400 = @customfor400;
+        error_page 404 = @customfor404;
+        error_page 440 /beian.html;
+    }
+
+    location ~ ^/mail4app/ {
+        rewrite ^/mail4app/(.*)$ /js6/$1 last;
+    }
+    location ~ ^/js6/ {
+        if ($mail_realhost_1) {
+            break;
+            proxy_pass http://$mail_realhost_ip1;
+        }
+        error_page 500 = @wmbackupcluster;
+        error_page 502 = @wmbackupcluster;
+        error_page 503 = @wmbackupcluster;
+        error_page 504 = @wmbackupcluster;
+        error_page 400 = @customfor400;
+        error_page 404 = @customfor404;
+        error_page 440 /beian.html;
+    }
+
+    location @wmbackupcluster {
+        proxy_pass http://wm-backup-cluster;
+    }
+    location @smartbackupcluster {
+        proxy_pass http://smart-backup-cluster;
+    }
+
+    location @backup {
+        proxy_pass http://10.200.217.117:8080;
+    }
+
+    location @customfor400 {
+        return 400;
+    }
+
+    location @customfor404 {
+        return 404;
+    }
+
+    location ~ ^/schedulemanager/ {
+        break;
+        proxy_pass http://calendar-hz-hy;
+    }
+
+    location / {
+        root /etc/nginx/entmail-qy-web/;
+        proxy_intercept_errors on;
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-From-IP $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Remote-Port $remote_port;
+        proxy_set_header X-Request-Scheme $scheme;
+        proxy_pass http://$proxy_upstream$proxy_uri;
+    }
+
+    location /beian.html {
+        root /etc/nginx/entmail-qy-web/;
+        proxy_intercept_errors off;
+    }
+
+    location = /favicon.ico {
+        rewrite ^(.*)$ /static/root/favicon.ico break;
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-From-IP $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Remote-Port $remote_port;
+        proxy_set_header X-Request-Scheme $scheme;
+        proxy_pass http://entmail-static;
+    }
+
+    location /admin/ {
+        set $hmail_gray $cookie_bh;
+        if ($cookie_bh = "") {
+            set $hmail_gray $remote_addr;
+            proxy_pass http://qiye-admin-hz;
+            break;
+        }
+        if ($cookie_bh = "pre") {
+            proxy_pass http://qiye-admin-hz-pre;
+            break;
+        }
+        proxy_pass http://qiye-admin-hz;
+    }
+
+    location /static/ {
+        if ($cookie_bh = "pre") {
+            proxy_pass http://10.200.219.9;
+            break;
+        }
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-From-IP $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Remote-Port $remote_port;
+        proxy_set_header X-Request-Scheme $scheme;
+        proxy_pass http://entmail-static;
+    }
+
+    location /static/admin {
+        if ($cookie_bh = "pre") {
+            proxy_pass http://10.200.219.9;
+            break;
+        }
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-From-IP $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Remote-Port $remote_port;
+        proxy_set_header X-Request-Scheme $scheme;
+        proxy_pass http://entmail-static;
+    }
+
+    location /atthview {
+        proxy_pass http://calendar-ics-hz-hy;
+    }
+
+    location ~ ^/qiyeimage {
+        proxy_buffering on;
+        proxy_cache hd_cache;
+        proxy_cache_valid 200 304 12h;
+        proxy_cache_key $host$uri$is_args$args;
+        proxy_cache_bypass $is_args $args;
+        proxy_set_header Host nos.netease.com;
+
+        proxy_pass http://nos2-i.service.163.org;
+    }
+
+    location /resource {
+        rewrite ^/resource/(.*)$ /static/resource/$1 break;
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-From-IP $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Remote-Port $remote_port;
+        proxy_set_header X-Request-Scheme $scheme;
+        proxy_pass http://entmail-static;
+    }
+
+    location ~  ^/mailapp/qiyesettings {
+        proxy_pass http://qiyesettings-hz;
+    }
+    location /resourceapi {
+        proxy_pass http://oauth-resourceapi-hz;
+    }
+    location /mailapp/resourceapi {
+        rewrite ^/mailapp/(.*)$ /$1 break;
+        proxy_pass http://oauth-resourceapi-hz;
+    }
+    location /preview/nfpreview/ {
+        rewrite ^/preview(/.*)$  $1 break;
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-From-IP $remote_addr;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_pass http://nfpreview-web-hz;
+    }
+
+    location /preview/ {
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-From-IP $remote_addr;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_pass http://preview-web-hz;
+    }
+    location = /crossdomain.xml {
+        root /etc/nginx/entmail-qy-web/;
+    }
+
+    location /mailapp/qiyeurs {
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-From-IP $remote_addr;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        rewrite ^/mailapp/(.*)$ /$1 break;
+        proxy_pass http://qiyeurs-hz;
+    }
+
+    location /mailapp/commonweb {
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-From-IP $remote_addr;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        rewrite ^/mailapp/(.*)$ /$1 break;
+        proxy_pass http://commonweb-hz-hy;
+    }
+
+    location /commonweb/ {
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-From-IP $remote_addr;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_pass http://commonweb-hz-hy;
+    }
+
+    location /qiyeurs/ {
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-From-IP $remote_addr;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_pass http://qiyeurs-hz;
+    }
+
+    location /order/ {
+        set $order_host "mail-admin.lx-i.netease.com";
+        if ($cookie_bh = "pre") {
+            set $order_host "mail-admin-pre.lx-i.netease.com";
+        }
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        proxy_set_header Host $order_host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-From-IP $remote_addr;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        rewrite /order/(.*)$ /$1 break;
+        proxy_pass http://lx-inner-gateway-proxy;
+    }
+
+    location /orgsync/ {
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-From-IP $remote_addr;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_pass http://qiye-org-sync-hz;
+    }
+
+    location /qiyepush/open/ {
+        proxy_pass http://qiyepushhz;
+    }
+
+    location /miniapp/ {
+        add_header X-Cache 'from ntes_qiye';
+        proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-From-IP $remote_addr;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_pass http://qiye-miniapp;
+    }

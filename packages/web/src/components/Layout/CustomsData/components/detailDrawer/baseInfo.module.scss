@@ -1,0 +1,17 @@
+@import '@web-common/styles/variables.scss';
+.base-info {
+  padding: 12px 20px;
+  .box {
+    display: flex;
+    gap: 12px;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  .label-color {
+    color: #7a8599;
+  }
+  .link {
+    color: #386ee7;
+    cursor: pointer;
+  }
+}

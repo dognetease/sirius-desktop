@@ -1,0 +1,26 @@
+.oprsCont {
+  padding: 8px 0;
+  background: $white;
+  border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+  .popItem {
+    padding: 8px 16px;
+    font-size: 14px;
+    line-height: 1;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    white-space: nowrap;
+    text-align: left;
+    cursor: pointer;
+    &:hover {
+      // background: #f0f0f1;
+      background-color: $white-hover-bg;
+    }
+  }
+}
+.delModelCont {
+  //padding-left: 28px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #7d8085;
+}

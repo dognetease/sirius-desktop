@@ -1,0 +1,12 @@
+.readmail-comment-modal {
+  :global(.ant-modal-body) {
+    height: 133px;
+    padding: 0 20px;
+  }
+  :global(.ant-modal-footer) {
+    border: none;
+  }
+  :global(.ant-modal-header) {
+    border: none;
+  }
+}

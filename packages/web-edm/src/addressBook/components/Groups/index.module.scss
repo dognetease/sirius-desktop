@@ -1,0 +1,114 @@
+.groups {
+  .content {
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #ffffff;
+
+    .title-and-filter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 12px;
+    }
+
+    .title {
+      color: $Text-5;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .filter {
+      display: flex;
+      justify-content: space-between;
+    }
+    .search-input {
+      margin-right: 12px;
+    }
+
+    .group-name-cell {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .group-name-cell:hover .group-name-edit-wrapper {
+      display: inline-flex;
+    }
+
+    .group-name-cell:hover .group-top-button {
+      display: inline-flex;
+    }
+
+    .group-name-input {
+      width: 212px;
+      margin: -5px 0;
+    }
+
+    .group-system-tag {
+      margin-left: 10px;
+      margin-right: 0;
+    }
+
+    .group-top-button {
+      display: none;
+      margin-left: 10px;
+      margin-top: -3px;
+      margin-bottom: -3px;
+
+      &.active {
+        display: inline-flex !important;
+      }
+    }
+
+    .group-name-edit-wrapper {
+      display: none;
+      cursor: pointer;
+      margin-left: 2px;
+      margin-top: -3px;
+      margin-bottom: -3px;
+      border-radius: 2px;
+      padding: 6px;
+
+      &:hover {
+        background-color: #f9fafb;
+      }
+    }
+
+    .min-width-cell {
+      min-width: 100px;
+    }
+
+    .max-width-cell {
+      max-width: 200px;
+    }
+  }
+
+  .state {
+    position: relative;
+    padding-left: 22px;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      margin-top: -6px;
+      box-sizing: border-box;
+    }
+
+    &.successState::before {
+      border: solid 1px $Success-6;
+      background: linear-gradient(160.71deg, #80f7c6 17.75%, #36dc97 87.04%);
+    }
+
+    &.errorState::before {
+      background: $Warning-6;
+      background: linear-gradient(160.71deg, #e1e3e8 17.75%, #c4c4c4 87.04%);
+    }
+  }
+}

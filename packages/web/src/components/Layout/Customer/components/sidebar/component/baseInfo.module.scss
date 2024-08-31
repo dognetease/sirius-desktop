@@ -1,0 +1,87 @@
+.info-row {
+  display: flex;
+  margin-top: 12px;
+  height: auto;
+  min-height: 22px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #232d47;
+
+  label {
+    flex: none;
+    color: #7a8599;
+    min-width: 72px;
+    margin-right: 12px;
+  }
+
+  .row-value {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    .row-icon {
+      display: none;
+      cursor: pointer;
+      margin-left: 4px;
+      vertical-align: -2px;
+    }
+    &:hover {
+      .row-icon {
+        display: inline-block;
+      }
+    }
+  }
+}
+.socialHide {
+  .socialItem {
+    &:nth-child(n + 3) {
+      height: 0px;
+      margin: 0px;
+    }
+  }
+  .socialItemOuter {
+    &:nth-child(n + 3) {
+      height: 0px;
+      margin: 0px;
+    }
+  }
+}
+.socialItemOuter {
+  display: flex;
+}
+.socialItem {
+  height: 22px;
+  transition: height 0.3s;
+  line-height: 22px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+}
+.socialbtn {
+  height: 22px;
+  line-height: 22px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: $Text-2;
+  margin-bottom: 0px;
+  font-size: 12px;
+  height: 22px !important;
+  span {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    & > svg > path {
+      stroke: $Text-2;
+    }
+  }
+  &:hover {
+    color: $Brand-6;
+    & > span > svg > path {
+      stroke: $Brand-6;
+    }
+  }
+}

@@ -1,0 +1,130 @@
+@import '@/styles/varies';
+
+.upgradeModalContainer {
+  .upgradeModal {
+    position: relative;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 8px 16px 0 rgba(47, 83, 134, 0.12);
+    overflow: hidden;
+
+    .close {
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      cursor: pointer;
+
+      .closeIcon {
+        width: 24px;
+        height: 24px;
+        color: var(--fill-8, #3f465c);
+      }
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 128px;
+      background: url('./images/header-bg.png') no-repeat center center / cover;
+
+      .headerContent {
+        margin-top: 10px;
+
+        .logo {
+          width: 124px;
+          height: 18px;
+          margin: 0 auto;
+
+          &.logoLingxi {
+            background: url('./images/logoLingxi.png') no-repeat center center / contain;
+          }
+
+          &.logoWaimao {
+            background: url('./images/logoWaimao.png') no-repeat center center / contain;
+          }
+        }
+
+        .title {
+          max-width: 288px;
+          word-break: keep-all;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          color: var(--brand-6, #4c6aff);
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 32px;
+          margin: 8px auto 0;
+          text-align: center;
+        }
+      }
+    }
+
+    .main {
+      padding: 24px 0;
+
+      .mainTitle {
+        color: var(--text-5, #272e47);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        margin-bottom: 16px;
+        padding: 0 28px;
+      }
+
+      .mainContent {
+        @include sirius-scroll;
+        padding: 0 28px 0 24px;
+        margin-right: 4px;
+        max-height: 288px;
+        margin-bottom: 24px;
+
+        .contentItem {
+          display: flex;
+          max-height: 44px;
+          gap: 4px;
+          margin-bottom: 16px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .itemIcon {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            flex: 0 0 6px;
+            background: var(--brand-6, #4c6aff);
+            margin-top: 8px;
+          }
+
+          .itemText {
+            flex: 1 1 335px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-all;
+            text-align: justify;
+            color: var(--text-4, #545a6e);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+          }
+        }
+      }
+
+      .btnGroup {
+        display: flex;
+        gap: 10px;
+        padding: 0 28px;
+
+        & > button {
+          flex: 1;
+        }
+      }
+    }
+  }
+}

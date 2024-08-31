@@ -1,0 +1,211 @@
+@import '../../../../web/src/styles/varies';
+.chat-forward-modal {
+  background: #ffffff;
+  // border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+  border-radius: 6px;
+  padding-bottom: 0;
+  overflow: hidden;
+  p {
+    margin: 0;
+  }
+  :global(.ant-modal-body) {
+    padding: 0;
+  }
+  :global(.ant-modal-header) {
+    height: 42px;
+    padding: 0 24px;
+    background: $Fill-3;
+    border-radius: 1px;
+  }
+  :global(.ant-modal-title) {
+    height: 100%;
+    line-height: 42px;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  :global(.ant-modal-footer) {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 24px;
+    border-top: 1px solid $white-hover-bg;
+  }
+  :global(.ant-modal-close-x) {
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+  }
+}
+
+.modal-content-wrapper {
+  display: flex;
+  height: 388px;
+  overflow: auto;
+  ul,
+  li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .column {
+    flex: 1;
+    border-right: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+    height: 100%;
+    overflow: auto;
+    &:last-child {
+      border-right-width: 0;
+    }
+  }
+  .options-name {
+    padding: 16px 24px 4px;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    /* identical to box height, or 100% */
+    /* 文字颜色/40% */
+    color: #a8aaad;
+  }
+  .checked-count {
+    height: 28px;
+    line-height: 28px;
+    padding: 16px 24px 12px;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  }
+  .search-wrapper {
+    padding: 16px 12px 0 24px;
+    :global(.ant-input-affix-wrapper) {
+      background-color: $Fill-2;
+      font-size: 12px;
+      height: 28px;
+      border-radius: 24px;
+      border: none;
+      border: solid 0.5px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+    }
+    input[type='text'] {
+      font-size: 12px;
+      line-height: 12px;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      background: transparent;
+    }
+  }
+  .session-list li {
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    height: 42px;
+    &:hover {
+      // background-color: #f0f0f1;
+      background-color: $white-hover-bg;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+  .checkbox {
+    margin-right: 15px !important;
+  }
+  .session-name {
+    padding-left: 8px;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 14px;
+    /* identical to box height, or 100% */
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+  }
+  .checked-user-wrapper {
+    padding-top: 18px;
+  }
+  .checked-user-wrapper li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    height: 42px;
+    &:hover {
+      // background-color: #f0f0f1;
+      background-color: $white-hover-bg;
+    }
+  }
+  .remove-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    // background-image: url(../../../../web/src/images/icons/im/reply-close-icon.svg);
+  }
+}
+
+.footer-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btns {
+  .btn {
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.8);
+    display: inline-block;
+    background: #ffffff;
+    /* 字体及ICON颜色/20% */
+    border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 0 10px;
+    height: 34px;
+    line-height: 32px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  .create-session-btn {
+    padding-left: 30px;
+    background-image: url(../../../../web/src/images/icons/im/add-icon.svg);
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: 12px center;
+    visibility: hidden;
+  }
+  .cancel-btn,
+  .forward-btn {
+    min-width: 68px;
+    text-align: center;
+    margin-left: 16px;
+  }
+}
+
+.discuss {
+  font-size: 12px;
+  line-height: 50px;
+  color: #7d8085;
+  margin: 0;
+  .discuss-launch {
+    color: $main-enhance-color;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .discuss-icon {
+    font-size: 13px;
+    color: $Text-2;
+    margin-left: 5px;
+    cursor: pointer;
+    padding-top: 2px;
+  }
+}

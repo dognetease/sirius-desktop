@@ -1,0 +1,63 @@
+.schedules {
+  :global(.ant-table tr .ant-table-cell) {
+    padding: 10px 16px !important;
+    background-color: #ffffff;
+
+    &:first-child {
+      padding-left: 20px !important;
+    }
+
+    &:last-child {
+      padding-right: 20px !important;
+    }
+  }
+
+  :global(.ant-table tr.ant-table-placeholder .ant-table-cell) {
+    padding: 0 !important;
+  }
+
+  :global(.ant-table tr th) {
+    color: #7d8085;
+    font-weight: normal;
+    line-height: 22px;
+    border-top: 1px solid #eeeeef;
+    border-bottom: 1px solid #eeeeef;
+  }
+
+  :global(.ant-table tr td) {
+    line-height: 24px;
+    border-bottom: none;
+  }
+
+  :global(.ant-table-cell::before) {
+    content: none !important;
+  }
+
+  :global(.ant-table-tbody > tr.ant-table-row:hover > td) {
+    background-color: #f4f6f7;
+  }
+
+  :global(.ant-pagination) {
+    margin: 12px 20px 20px 20px;
+  }
+
+  .filter {
+    padding: 8px 20px;
+  }
+
+  .create-schedule {
+    padding-left: 30px;
+    background: url(@/images/icons/customerDetail/create-schedule.png) top 10px left 12px no-repeat;
+    background-size: 10px 10px;
+  }
+
+  .schedules-options span {
+    color: #386ee7;
+    margin-right: 8px;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

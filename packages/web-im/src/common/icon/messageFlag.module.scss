@@ -1,0 +1,24 @@
+.msg-status-sending {
+  animation: msgSendingAnimation;
+  animation-duration: 1500ms;
+  animation-timing-function: linear;
+  animation-delay: 100ms;
+  animation-iteration-count: infinite;
+}
+
+.icon {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes msgSendingAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

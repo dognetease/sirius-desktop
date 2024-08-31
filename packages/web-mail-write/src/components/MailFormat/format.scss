@@ -1,0 +1,324 @@
+.mailformat-wrap {
+  // box-sizing: content-box;
+  // display: flex;
+  // align-items: center;
+  // font-size: 12px;
+  // height: 16px;
+  // padding-top: 16px;
+  // padding-left: 16px;
+  // padding-bottom: 10px;
+  position: relative;
+  top: 12px;
+  left: 80px;
+  .ant-tooltip-content .ant-tooltip-arrow {
+    display: block;
+  }
+  .title {
+    margin-left: 4px;
+    cursor: pointer;
+  }
+  .click-target {
+    display: flex;
+  }
+  .text-blue {
+    // color: rgba($color: $Brand-4, $alpha: 1);
+    color: $Brand-4;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  .tooltip-wrap {
+    min-width: 320px;
+  }
+  .tooltip-format {
+    height: 0;
+    color: white;
+    position: relative;
+    top: 20px;
+  }
+}
+
+.mf-dialog {
+  // width: 600px;
+  display: none;
+  height: 176px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: -200px;
+  transition: bottom 1s, opacity 1s;
+  box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.12);
+  border-radius: 3px;
+  padding: 5px 22px;
+  z-index: 1;
+  opacity: 0;
+  &.hidden {
+    display: none;
+    bottom: -200px;
+    opacity: 0;
+  }
+  &.pre-show {
+    display: block;
+    bottom: -200px;
+    opacity: 0;
+  }
+  &.show {
+    display: block;
+    // animation: dialogshow 1s 1 linear ;
+    // bottom: 76px;
+    bottom: 44px;
+    opacity: 1;
+  }
+  &.pre-hidden {
+    display: block;
+    bottom: -200px;
+    opacity: 0;
+  }
+  .mf-dialog-head-wrap {
+    display: flex;
+    padding: 5px 0;
+  }
+  .mf-dialog-title {
+    flex: 1;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+    font-size: 16px;
+  }
+  .mf-dialog-oper-wrap {
+    width: 100px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .mf-dialog-contet-wrap {
+    display: flex;
+    margin-top: 10px;
+  }
+  .mf-dialog-imglist {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+  }
+  .mf-dialog-loadmore {
+    width: 72px;
+    height: 115px;
+    background-color: $Fill-3;
+    padding: 41px 24px;
+    font-size: 12px;
+  }
+  .mf-dialog-img {
+    width: 120px;
+    height: 115px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.12);
+  }
+  .mf-dialog-imgitem {
+    cursor: pointer;
+    transition: transform 0.4s;
+    margin-right: 24px;
+    &:hover {
+      transform: translate(0, -8px);
+    }
+  }
+  .btn-never {
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.7);
+    font-size: 16px;
+    &:hover {
+      color: #386ee7;
+    }
+  }
+  .btn {
+    cursor: pointer;
+  }
+}
+
+// .mf-spec-dialog {
+//     &.show {
+//         bottom: 44px;
+//     }
+// }
+
+.mailformat-modal {
+  .ant-modal-body {
+    padding: 0;
+  }
+  .ant-modal-header {
+    border-bottom: none;
+  }
+  .ant-modal-header {
+    padding: 24px 24px 12px 24px;
+  }
+}
+
+.mailformat-modal-wrap {
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  .mf-head {
+    width: 100%;
+    padding: 12px 24px 0 24px;
+    position: relative;
+    z-index: 10;
+    transition: box-shadow 0.3s;
+  }
+  .shadow {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+  }
+  .mf-tabs-warp {
+    display: flex;
+    font-size: 14px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.7);
+  }
+  .mf-tab {
+    margin-right: 24px;
+    cursor: pointer;
+    padding-bottom: 4px;
+    ::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      // background: rgba($color: $Text-2, $alpha: 1);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transition: width 0.5s color 0.5s;
+    }
+    &:hover {
+      // color: rgba($color: $Text-2, $alpha: 1);
+      color: $Text-2;
+    }
+    &.active {
+      // color: rgba($color: $Text-2, $alpha: 1);
+      color: $Text-2;
+      position: relative;
+      &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        // background: rgba($color: $Text-2, $alpha: 1);
+        background: $Text-2;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+  }
+  .mf-content {
+    height: 500px;
+    overflow: auto;
+    padding: 0 24px;
+    scroll-behavior: smooth;
+  }
+  .mf-img-block {
+    margin: 22px 0;
+    // overflow: scroll;
+  }
+  .mf-img-title {
+    font-size: 14px;
+    // color: rgba($color: $Text-5, $alpha: 1);
+    color: $Text-5;
+  }
+  .mf-img-list-wrap {
+    // margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .mf-img-list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: no-wrap;
+  }
+  .mf-img-wrap {
+    margin-right: 22px;
+    margin-top: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+    &.active {
+      .mf-img-oper-wrap {
+        display: block;
+      }
+    }
+  }
+  .mf-img-more {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+    width: 88px;
+    height: 250px;
+    background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.02);
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.7);
+    flex-shrink: 0;
+    // text-align: center;
+    // line-height: 250px;
+    margin-top: 12px;
+    cursor: pointer;
+    padding: 105px 30px;
+    &:hover {
+      // color: rgba($color: $Text-2, $alpha: 1);
+      color: $Text-2;
+      .mf-cicle {
+        // background-color: rgba($color: $Text-2, $alpha: 1);
+        background-color: $Text-2;
+      }
+    }
+  }
+  .mf-img-oper-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+    display: none;
+  }
+  .img-oper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+  }
+  .mf-img {
+    width: 180px;
+    height: 250px;
+  }
+  .mf-bg-img {
+    width: 180px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .mf-cicle-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  .mf-cicle {
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.6);
+  }
+  .mf-img-more-title {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+}
+
+.mailformat-icon-back {
+  margin-right: 13px;
+  width: 14px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.mailformat-modal-title-wrap {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}

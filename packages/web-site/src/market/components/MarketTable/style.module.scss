@@ -1,0 +1,106 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.box {
+  border: 1px solid #f0f1f5;
+  border-radius: 3px;
+  background: #fff;
+  padding: 20px;
+  white-space: nowrap;
+
+  :global {
+    .ant-table-thead > tr > th {
+      background: #f6f7fa;
+      color: #747a8c;
+      font-weight: 400;
+      font-size: 14px;
+      border-bottom: none;
+    }
+    .ant-table-tbody > tr > td {
+      border-bottom: none;
+    }
+    .ant-table-thead > tr > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+      display: none;
+    }
+    .ant-table-tbody > tr.ant-table-row:hover > td {
+      background: #f6f7fa !important;
+    }
+  }
+
+  .page {
+    display: flex;
+    align-items: center;
+    img {
+      width: 120px;
+      height: 66px;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+    .title {
+      color: $Text-5;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+    }
+    .url {
+      color: $Text-3;
+      font-size: 12px;
+    }
+  }
+
+  .operate {
+    color: #4c6aff;
+  }
+}
+
+.empty {
+  height: calc(100vh - 270px);
+  display: flex;
+  flex-direction: column;
+
+  .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    color: #232d47;
+    font-size: 16px;
+    margin: 36px 0 8px;
+  }
+
+  img {
+    width: 110px;
+  }
+  .button {
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 36px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    width: 112px;
+
+    outline: none;
+    border: none;
+    margin-top: 30px;
+
+    background: $Brand-6;
+
+    &:hover {
+      background: $Brand-5;
+    }
+
+    &:active {
+      background: $Brand-7;
+    }
+  }
+}
+
+.opt-menu {
+  :global {
+    .ant-dropdown-menu-item {
+      color: $Text-5;
+    }
+  }
+}

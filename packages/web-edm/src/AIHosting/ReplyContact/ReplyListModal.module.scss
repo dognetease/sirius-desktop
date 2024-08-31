@@ -1,0 +1,22 @@
+@import '../../../../web/src/styles/varies.scss';
+// packages/web-common/src/components/UI/SiriusContact/selectedList/index.module.scss
+// packages/web/src/styles/varies.scss
+.reply-list-modal {
+  :global(.ant-modal-body) {
+    padding: 16px 20px 20px;
+  }
+  .table {
+    height: 414px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    @include sirius-scroll-show;
+    :global(.ant-table-body) {
+      overflow: auto scroll;
+      max-height: 414px;
+    }
+  }
+  .pagination {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

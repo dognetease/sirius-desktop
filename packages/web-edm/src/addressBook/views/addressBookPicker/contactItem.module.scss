@@ -1,0 +1,60 @@
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 8px;
+  height: 48px;
+  line-height: 32px;
+  border-radius: 4px;
+
+  &.interactive {
+    cursor: pointer;
+  }
+
+  &.interactive:hover {
+    background-color: #f0f0f1;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+  }
+
+  :global(.ant-checkbox-wrapper) {
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+
+  .avatar {
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+
+  .content {
+    flex-grow: 1;
+    margin-right: 8px;
+    overflow: hidden;
+
+    .name {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+
+    .email {
+      color: rgba(38, 42, 51, 0.5);
+      @include c4-1-reg12();
+    }
+
+    .name,
+    .email {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  svg {
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,121 @@
+.cardWrapper {
+  position: relative;
+  padding: 18px;
+  background: #ffffff;
+  border-radius: 4px;
+  border: 1px solid $Line-3;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  .icon {
+    padding-right: 18px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .content {
+    min-width: 0;
+    flex: 1;
+    .head {
+      display: flex;
+      align-items: center;
+      padding-top: 8px;
+      .headContent {
+        min-width: 0;
+        overflow: hidden;
+        flex: 1;
+        display: flex;
+        align-items: center;
+      }
+      .taskName {
+        @include p1-4-med14();
+      }
+    }
+
+    .trigger {
+      padding-top: 6px;
+      font-size: 12px;
+      color: $Text-3;
+    }
+  }
+
+  .taskTypeHol {
+    color: $label-4_3;
+    background: $label-4_1;
+  }
+
+  .taskTypeNew {
+    color: $label-5_3;
+    background: $label-5_1;
+  }
+
+  .taskStatusClose {
+    color: $label-6_3;
+    background: $label-6_1;
+  }
+
+  .taskStatusNew {
+    color: $label-1_3;
+    background: $label-1_1;
+  }
+
+  // .taskStateTag {
+  //   margin-left: 10px;
+  // }
+
+  .execTag {
+    position: absolute;
+    background: #f2f5ff;
+    border-width: 1px 1px 0px 0px;
+    border-style: solid;
+    border-color: #e1e3e8;
+    box-shadow: 0px 1px 4px rgba(47, 83, 134, 0.12);
+    border-radius: 0px 2px 0px 4px;
+    color: #545a6e;
+    font-size: 12px;
+    right: 0;
+    top: 0;
+    padding: 1px 4px;
+
+    .number {
+      padding: 0 2px;
+      color: rgba(76, 106, 255, 1);
+    }
+  }
+
+  .taskStatusOpen {
+    color: $label-2_3;
+    background: $label-2_1;
+  }
+
+  .ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .showMore {
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+
+    &:hover {
+      background: $Fill-2;
+    }
+  }
+
+  :global(.ant-dropdown-open) {
+    background: $Fill-2 !important;
+  }
+}
+
+.menuItem {
+  @include p1-3-reg14();
+  text-align: left;
+  color: $Text-5;
+}

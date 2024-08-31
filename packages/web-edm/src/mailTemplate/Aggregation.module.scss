@@ -1,0 +1,82 @@
+.aggregation-box {
+  padding: 16px 0;
+  &.aggregation-box1 {
+    background-color: #f4f6f7;
+  }
+  .aggregation-line {
+    display: flex;
+    // align-items: center;
+    .aggregation-label {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 30px;
+      color: #4e5a70;
+      margin-right: 16px;
+      white-space: nowrap;
+    }
+    .aggregation-select {
+      &-line {
+        margin-right: -12px;
+        margin-bottom: -16px;
+        display: flex;
+        justify-content: flex-start;
+      }
+      &-line1 {
+        margin-top: 16px;
+      }
+      .select-item {
+        text-align: center;
+        cursor: pointer;
+        // display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4px 10px;
+        gap: 16px;
+        width: 82px;
+        height: 30px;
+        background: #f4f6f7;
+        border-radius: 2px;
+        margin-right: 12px;
+        margin-bottom: 16px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &.select-item-select {
+          padding: 0;
+        }
+        &.select-item-selected {
+          background: #f2f5ff;
+          /* 外贸-品牌蓝 */
+
+          border: 1px solid #4c6aff;
+          border-radius: 2px;
+          color: #4c6aff;
+        }
+      }
+      .select-item-whilte {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.aggregation-select-box {
+  // background-color: red;
+  :global(.ant-select-selector) {
+    border: none !important;
+  }
+  :global(.ant-select-arrow) {
+    color: #7d8085 !important;
+  }
+  :global(.ant-select-selection-placeholder) {
+    color: #232d47 !important;
+  }
+}
+// :global(.ant-select-dropdown.ant-select-dropdown-placement-bottomLeft) {
+//     width: 132px !important;
+// }
+.aggregation-option {
+  // background-color: red;
+}

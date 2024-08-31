@@ -1,0 +1,89 @@
+@import '../../../../web/src/styles/varies.scss';
+
+.footer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+
+  .create-group-btn {
+    color: $main-enhance-color;
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  .cancel-btn {
+    background-color: #f4f4f5;
+    border-color: #f4f4f5;
+  }
+}
+
+.choose-wrapper {
+  padding: 22px 21px;
+  max-height: 312px;
+  overflow: auto;
+
+  div.org-item {
+    height: 22px;
+    padding: 3px 0;
+    box-sizing: content-box;
+
+    &.new-create-org-item {
+      height: auto;
+    }
+  }
+
+  :global(.ant-checkbox-inner) {
+    border-color: #a8aaad !important;
+  }
+
+  .noDataWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .noDataImg {
+      width: 140px;
+      height: 140px;
+    }
+    .noDataTxt {
+      margin-top: 16px;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+    }
+  }
+}
+
+.new-create-org-item {
+  .new-group-label {
+    margin-bottom: 0;
+
+    .error {
+      border-color: $main-error-color;
+    }
+  }
+
+  .error-tips {
+    font-size: 12px;
+    line-height: 16px;
+    padding-top: 4px;
+    color: $main-error-color;
+    display: block;
+  }
+
+  .new-group-input {
+    height: 32px;
+    width: 420px;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 6px 11px;
+
+    &:focus {
+      border-color: $main-enhance-color;
+      box-shadow: none;
+    }
+  }
+}

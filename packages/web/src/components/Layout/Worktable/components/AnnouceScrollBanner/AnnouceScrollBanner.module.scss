@@ -1,0 +1,97 @@
+.annouceScrollBanner {
+  width: 100%;
+  margin-top: 18px;
+  height: 224px;
+  border: 1px solid $Line-1;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  &:hover {
+    :global {
+      .ant-carousel .slick-dots {
+        background: rgba(63, 70, 92, 0.6);
+      }
+    }
+    .toggleButton {
+      display: flex;
+    }
+  }
+  .slide {
+    width: 100%;
+    height: 224px;
+    background-color: #364d79;
+    font-size: 20px;
+    color: red;
+    .content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .toggleButton {
+    width: 52px;
+    height: 52px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(63, 70, 92, 0.6);
+    border-radius: 100px;
+    position: absolute;
+    top: 86px;
+    display: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    &.left {
+      left: 20px;
+    }
+    &.right {
+      right: 20px;
+    }
+    & > div {
+      width: 20px;
+      height: 20px;
+      scale: 1.5;
+    }
+  }
+
+  :global {
+    .ant-carousel .slick-dots {
+      display: inline-flex !important;
+      align-items: flex-start;
+      padding: 10px 12px;
+      gap: 8px;
+      border-radius: 100px;
+      bottom: 48px;
+      margin: 0px auto;
+      width: auto;
+      position: relative;
+      height: 28px;
+      transform: translateX(-50%);
+      left: 50%;
+    }
+    .ant-carousel .slick-dots li {
+      width: 8px;
+      height: 8px;
+      margin: 0px;
+    }
+    .ant-carousel .slick-dots li.slick-active {
+      width: 20px;
+    }
+    .ant-carousel .slick-dots li.slick-active button {
+      width: 20px;
+    }
+    .ant-carousel .slick-dots li button {
+      width: 8px;
+      height: 8px;
+      border-radius: 87.5px;
+      &:hover {
+        background: #ffffff;
+        opacity: 1;
+      }
+    }
+  }
+}

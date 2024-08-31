@@ -1,0 +1,43 @@
+.upload-attachment {
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  height: 16px;
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-bottom: 10px;
+  .title {
+    margin-left: 4px;
+    cursor: pointer;
+  }
+  .click-target {
+    display: flex;
+  }
+}
+
+.error-icon {
+  float: left;
+  margin-right: 8px;
+}
+.attachemnt-upload-btn0 {
+  position: relative;
+  height: 39px;
+  top: 39px;
+  width: 48px;
+  z-index: 1;
+}
+.attachemnt-upload-btn1 {
+  position: relative;
+  height: 39px;
+  top: 78px;
+  width: 48px;
+  z-index: 1;
+}
+.attachemnt-upload-btn2 {
+  position: relative;
+  height: 39px;
+  top: 117px;
+  width: 48px;
+  z-index: 1;
+}

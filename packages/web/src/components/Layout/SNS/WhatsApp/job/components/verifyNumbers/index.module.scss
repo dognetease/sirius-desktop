@@ -1,0 +1,64 @@
+// @import '@/styles/mixin.scss';
+
+.body h3 {
+  @include h2-med18();
+  color: $Text-5;
+  span {
+    color: $Brand-6;
+  }
+}
+
+.tips {
+  @include c4-3-reg12();
+  color: $Text-3;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spining {
+  animation: spin 1s infinite linear;
+}
+
+.step-header {
+  text-align: center;
+}
+
+.step-container {
+  background: $Fill-2;
+  border-radius: 4px;
+  padding: 20px 12px 20px 20px;
+  @include c4-1-reg12();
+  color: $Text-3;
+  .step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  .dashed {
+    flex: 1;
+    margin: 0 12px;
+    height: 0;
+    border: 1px dashed $Fill-5;
+  }
+}
+
+.operations {
+  text-align: right;
+  margin-top: 12px;
+}

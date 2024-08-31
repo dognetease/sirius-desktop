@@ -1,0 +1,179 @@
+.wrapper {
+  position: relative;
+  padding: 0 20px 20px;
+
+  .refresh {
+    position: absolute;
+    right: 21px;
+    top: -48px;
+    display: flex;
+    align-items: center;
+    background: #f6f7fa;
+    color: #747a8c;
+    border: 1px solid #f6f7fa;
+
+    :global .sirius-icon {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .warning {
+    padding: 6px 12px;
+    display: flex;
+    background-color: #fff8ed;
+
+    .text {
+      padding-left: 6px;
+      color: #272e47;
+      font-size: 12px;
+    }
+  }
+
+  .panel {
+    background: #fff;
+    margin-top: 12px;
+    border-radius: 4px;
+    border: 1px solid #f0f1f5;
+
+    .title {
+      font-weight: bold;
+      font-size: 14px;
+      color: #272e47;
+      padding: 16px 16px 8px;
+    }
+  }
+
+  .flex {
+    display: flex;
+    padding-left: 8px;
+    padding-bottom: 20px;
+
+    .cell {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      border-right: 1px solid #f0f1f5;
+      margin-right: 18px;
+
+      &:last-child {
+        border-right: none;
+        margin-right: 0;
+      }
+    }
+
+    .icon {
+      font-size: 0;
+      display: flex;
+      align-items: center;
+      padding-top: 8px;
+    }
+
+    .info {
+      flex: 1;
+      padding-left: 4px;
+      .number {
+        font-size: 22px;
+        color: #272e47;
+        font-weight: bold;
+        font-family: 'LX-numbers';
+      }
+
+      .label {
+        font-size: 12px;
+        color: #747a8c;
+      }
+    }
+  }
+
+  .list {
+    padding: 8px 16px;
+
+    &.gride {
+      column-count: 2;
+      column-gap: 4px;
+    }
+
+    .item {
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      border: 1px solid #f0f1f5;
+      border-radius: 4px;
+      margin-bottom: 8px;
+
+      .label {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        .labelText {
+          color: #747a8c;
+          font-size: 14px;
+          margin-left: 5px;
+        }
+      }
+
+      .number {
+        color: #272e47;
+        font-size: 16px;
+        font-family: 'LX-numbers';
+      }
+    }
+  }
+
+  .charWrapper {
+    margin-top: 12px;
+    border-radius: 4px;
+    border: 1px solid #f0f1f5;
+    background: #fff;
+
+    .content {
+      height: 328px;
+      // position: absolute;
+      // left: 0;
+      // top: 0;
+      // bottom: 0;
+      // right: 0;
+      display: flex;
+      flex-direction: column;
+
+      .title {
+        color: #272e47;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 20px 20px 0;
+      }
+
+      .desc {
+        padding: 4px 20px 0;
+        font-size: 12px;
+        color: #747a8c;
+      }
+
+      .chart {
+        position: relative;
+        flex: 1;
+        // background: orange;
+      }
+    }
+  }
+
+  .noData {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .noDataTip {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .noDataText {
+      font-size: 12px;
+      margin-top: 16px;
+      color: #747a8c;
+    }
+  }
+}

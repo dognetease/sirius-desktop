@@ -1,0 +1,32 @@
+.agreement-modal {
+  :global(.ant-modal-close) {
+    display: none;
+  }
+
+  :global(.ant-modal-body) {
+    p,
+    ul {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    ul {
+      padding: 8px 8px 8px 32px;
+      line-height: 24px;
+      border-radius: 4px;
+      background-color: #e9eef7;
+    }
+
+    li::marker {
+      color: #386ee7;
+    }
+  }
+
+  &-footer {
+    padding-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

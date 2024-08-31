@@ -1,0 +1,66 @@
+appId: com.netease.sirius-desktop-waimao-test1
+artifactName: 'sirius-desktop-${os}-${arch}-${version}.${ext}'
+asar: true
+compression: maximum
+copyright: 'Copyright 2021© Year Sirius Desktop'
+directories:
+  output: ../../releases-edm_test1
+files:
+  - 'dist/electron/**/*'
+  - 'node_modules'
+  - 'package.json'
+productName: 网易外贸通测试版1
+beforePack: './build-utils/before-pack.js'
+afterPack: './../v8-snapshot/hooks/after-pack.js'
+extraMetadata:
+  name: sirius-desktop-waimao-test1
+nsis:
+  oneClick: false
+  perMachine: true
+  allowToChangeInstallationDirectory: true
+  warningsAsErrors: false
+  allowElevation: false
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  deleteAppDataOnUninstall: true
+
+dmg:
+  sign: false
+  background: build_resource/dmg_background_waimao.png
+  window:
+    width: 600
+    height: 420
+  contents:
+    - type: link
+      path: /Applications
+      x: 458
+      y: 176
+    - type: file
+      x: 144
+      y: 176
+
+win:
+  target: nsis
+  icon: build_resource/icon_edm.png
+  signingHashAlgorithms:
+    - 'sha256'
+  signDlls: false
+  rfc3161TimeStampServer: http://timestamp.digicert.com
+  certificateFile: mycert.pfx
+  certificatePassword:
+
+mac:
+  identity: null
+  target: dmg
+  #type: development
+  type: distribution
+  icon: build_resource/icon_edm.png
+  category: public.app-category.tools
+
+fileAssociations:
+  ext:
+    - eml
+  name: eml
+  description: 'eml文件'
+  role: 'Viewer'
+  icon: 'build_resource/eml_edm'

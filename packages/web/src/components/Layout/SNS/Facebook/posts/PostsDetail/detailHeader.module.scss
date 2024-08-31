@@ -1,0 +1,53 @@
+@import '@web-common/styles/variables.scss';
+
+.header-wrap {
+  padding: 20px 20px 24px;
+  height: 24px;
+  line-height: 24px;
+  display: flex;
+  gap: 12px;
+  box-sizing: content-box;
+  .title {
+    color: $Text-5;
+    @include h1-4-med16();
+    margin: 0;
+  }
+  .handler-box {
+    background: #f9fafb;
+    border: 1px solid $Fill-3;
+    border-radius: 2px;
+    width: 48px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .prev {
+      width: 50%;
+      height: 100%;
+      background: url(@/images/icons/facebook/LeftOutlined.svg) no-repeat center center;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        right: 0;
+        width: 1px;
+        height: 12px;
+        background-color: $Fill-3;
+      }
+    }
+    .prev-disabled {
+      background: url(@/images/icons/facebook/LeftOutlinedDisabled.svg) no-repeat center center;
+      cursor: not-allowed;
+    }
+    .next {
+      width: 50%;
+      height: 100%;
+      background: url(@/images/icons/facebook/RightOutlined.svg) no-repeat center center;
+    }
+    .next-disabled {
+      background: url(@/images/icons/facebook/RightOutlinedDisabled.svg) no-repeat center center;
+      cursor: not-allowed;
+    }
+  }
+}

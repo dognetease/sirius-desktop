@@ -1,0 +1,90 @@
+@import '../../../../web/src/styles/varies.scss';
+.container {
+  height: 28px;
+  display: flex;
+  .solar-day {
+    font-family: 'DIN Alternate Bold';
+    font-size: 16px;
+    height: 16px;
+    line-height: 16px;
+    display: inline-block;
+    font-weight: bold;
+    &.solar-today {
+      color: #ffffff;
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      background-color: $Brand-6;
+      line-height: 24px;
+      text-align: center;
+      // margin-top: -6px;
+      // margin-left: -9px;
+      margin-right: -4px;
+      margin-top: -4px;
+    }
+  }
+  .lunar-day {
+    font-size: 12px;
+    padding-left: 12px;
+    height: 14px;
+    line-height: 14px;
+    vertical-align: text-top;
+    padding-top: 1px;
+  }
+}
+.visibleWeekNumberCell {
+  margin-left: 35px;
+}
+
+/** 全部日程弹出窗中不显示当前日期 */
+
+:global(.fc-more-popover-misc) {
+  .container {
+    display: none;
+  }
+}
+
+.timeGridContainer {
+  .timeWeek {
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    // color: #262a33;
+    color: $font-color-2;
+    margin-top: 10px;
+    padding-left: 2px;
+  }
+  .timeWeekDay {
+    margin-top: 12px;
+    padding-left: 2px;
+  }
+  .timeSolarDay {
+    font-family: DIN Alternate;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    // color: #262a33;
+    color: $font-color-2;
+  }
+  .timeLunarDay {
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 10px;
+    color: #a8aaad;
+    margin-left: 8px;
+  }
+}
+
+.timeGridToday {
+  .timeWeek {
+    color: $main-enhance-color;
+  }
+  .timeSolarDay {
+    color: $main-enhance-color;
+  }
+}

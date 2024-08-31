@@ -1,0 +1,43 @@
+@import '@web-common/styles/variables.scss';
+.filter-result {
+  $r-color: rgba(78, 90, 112, 1);
+  $r-font: PingFang SC;
+
+  font-family: $r-font;
+  color: $r-color;
+
+  .label {
+    display: inline-block;
+    width: 76px;
+    margin-right: 24px;
+  }
+
+  .box {
+    align-items: center;
+    column-gap: 12px;
+    padding: auto 8px;
+    color: $r-color;
+    background-color: #f4f6f7;
+    border-radius: 2px;
+    .wrapper {
+      display: flex;
+      align-items: center;
+      height: 30px;
+      line-height: 30px;
+      padding: 0 8px;
+      .content {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 180px;
+        color: rgba(76, 106, 255, 1);
+        text-overflow: ellipsis;
+      }
+      svg {
+        margin-left: 6px;
+        color: rgba(147, 156, 173, 1);
+        cursor: pointer;
+      }
+    }
+  }
+}

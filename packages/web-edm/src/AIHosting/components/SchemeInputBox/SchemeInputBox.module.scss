@@ -1,0 +1,66 @@
+.scheme-input-box {
+  .select {
+    min-width: 112px;
+    width: 100%;
+  }
+  .error-tip {
+    @include c4-3-reg12;
+    color: $Error-6;
+    display: block;
+    margin: 5px 0;
+  }
+}
+
+.scheme-input-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  .scheme-name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .scheme-tag {
+    @include c4-4-med12;
+    padding: 0 4px;
+    border-radius: 4px;
+    color: $label-1_3;
+    border: 1px solid $label-1_3;
+    transform: scale(0.8);
+    display: inline-block;
+    transform-origin: left;
+  }
+  .scheme-tag1 {
+    color: $label-1_3;
+    border: 1px solid $label-1_3;
+  }
+  .scheme-tag2 {
+    color: $label-3_3;
+    border: 1px solid $label-3_3;
+  }
+  .scheme-tag3 {
+    color: $label-2_3;
+    border: 1px solid $label-2_3;
+  }
+  .scheme-tag4 {
+    color: $label-4_3;
+    border: 1px solid $label-4_3;
+  }
+}
+
+.scheme-input-operation {
+  position: relative;
+  margin: 0 12px;
+}
+
+.scheme-input-create {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 12px;
+  color: $Text-4;
+  &:hover {
+    background-color: $Fill-2;
+  }
+}

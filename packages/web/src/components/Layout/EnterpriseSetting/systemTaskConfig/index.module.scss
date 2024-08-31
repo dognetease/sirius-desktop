@@ -1,0 +1,50 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.system-task-config {
+  padding: 24px;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+
+  .title {
+    color: $Text-5;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-bottom: 24px;
+  }
+
+  .config-list {
+    border: 1px solid #f0f1f5;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    overflow: auto;
+
+    .config {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #ffffff;
+      border-bottom: 1px solid #f0f1f5;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .name {
+        color: $Text-5;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 22px;
+      }
+
+      .switch {
+      }
+    }
+  }
+
+  .pagination {
+    text-align: right;
+  }
+}

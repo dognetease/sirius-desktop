@@ -1,0 +1,18 @@
+@import '@web-common/styles/variables.scss';
+
+.search-tab {
+  :global {
+    .ant-tabs-nav {
+      margin-bottom: 12px;
+    }
+
+    .ant-tabs-tab-active {
+      background-color: $Brand-6 !important;
+      border-color: $Brand-6 !important;
+
+      .ant-tabs-tab-btn {
+        color: #ffffff !important;
+      }
+    }
+  }
+}

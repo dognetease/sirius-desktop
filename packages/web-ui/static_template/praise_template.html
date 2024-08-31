@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  </head>
+</html>
+<body th:object="${data}" style="width:100%;margin: 0; padding: 0;">
+  <div
+    class="divNeteaseSiriusPraise"
+    th:attr="data-praise-id=*{id},data-source=${dataSource}"
+    contenteditable="false"
+    style="position: relative;margin: 0 auto;max-width: 588px;border-radius: 12px;background: url('https://cowork-storage.nos-jd.163yun.com/reward%2F2022%2F02%2F22%2F84aa392741404c44ba78b8c3af3f33e4?Signature=N08sbMa89Yy0YI6KQmwYfdNeyN07wzqoC29DNM2%2FaKg%3D&Expires=32503651199&NOSAccessKeyId=0cd796d04a3a45dba2ef94a2f2a0c218') no-repeat; background-size: cover;"
+  >
+    <img
+      src="https://cowork-storage.nos-jd.163yun.com/reward%2F2022%2F02%2F22%2F75343b0ac49c4d148734f4700c278357?Signature=LKJYQxt7UPA0QC5jgw8maLqt0PadZWu7Ov%2Fip3Jwgbk%3D&Expires=32503651199&NOSAccessKeyId=0cd796d04a3a45dba2ef94a2f2a0c218"
+      alt=""
+      style="position: absolute;z-index:1;top: 0;left: 0;width: 20%;max-width: 100px;height: auto;border-radius: 12px 0 0 0;"
+    />
+    <img
+      src="https://cowork-storage.nos-jd.163yun.com/reward%2F2022%2F02%2F22%2Fb3652394296144fdaf632074c05637b5?Signature=rd6EgCXTY%2FryJ%2FpkPPAj1vfe0dm3ZronMSk12bh0O8A%3D&Expires=32503651199&NOSAccessKeyId=0cd796d04a3a45dba2ef94a2f2a0c218"
+      alt=""
+      style="position: absolute;z-index:1;top: 0;right: 0;width: 13%;max-width: 70px;height: auto;border-radius: 0 12px 0 0;"
+    />
+    <img
+      src="https://cowork-storage.nos-jd.163yun.com/reward%2F2022%2F02%2F22%2F91201de5ac9b4fe6b59fb52a46068c42?Signature=%2FUdU6kOAp4%2BCrHj3wFI0q7LCkqpY3y6NAb92UuRL9PA%3D&Expires=32503651199&NOSAccessKeyId=0cd796d04a3a45dba2ef94a2f2a0c218"
+      alt=""
+      style="position: absolute;z-index:1;bottom: 0;left: 0;width: 30%;max-width: 90px;height: auto;border-radius: 0 0 0 12px;"
+    />
+    <img
+      src="https://cowork-storage.nos-jd.163yun.com/reward%2F2022%2F02%2F22%2Fd83514ae0cd44303b5bffd6a730622e7?Signature=kwxXPFqPcoX4jJT1O0g4g%2BISJp3RMF6We8vQsM2Kt74%3D&Expires=32503651199&NOSAccessKeyId=0cd796d04a3a45dba2ef94a2f2a0c218"
+      alt=""
+      style="position: absolute;z-index:1;bottom: 0;right: 0;width: 29%;max-width: 120px;height: auto;border-radius: 0 0 12px 0;"
+    />
+    <div style="position: relative;padding-bottom: 20px;z-index: 2;">
+      <div style="width: 223px;height: 195px;margin: 0 auto;">
+        <img th:if="*{medal.gifImageUrl}" th:src="*{medal.gifImageUrl}" alt="" style="width: 100%;height: 100%;" />
+      </div>
+      <p th:text="*{medal.name}" style="margin: 0;font-family: PingFang SC;font-style: normal;font-weight: 500;font-size: 20px;line-height: 28px;text-align: center;color: #232D47;"></p>
+      <div style="text-align: center;font-size: 14px;color: #4E5A70;margin: 22px 40px 0">
+        <span>表扬对象：</span>
+        <th:block th:if="*{winners!=null && winners.length>0}" th:each="item,itemStat:*{winners}">
+          <span th:text="${item.name}+(${itemStat.last}?'':'、')"></span>
+        </th:block>
+      </div>
+      <div style="margin: 16px 22px 0;height: 1px;background: linear-gradient(to right,rgba(191, 212, 255, 0) 0%,rgba(159, 186, 242, 0.5) 50%,rgba(191, 212, 255, 0) 100%);"></div>
+      <pre th:text="*{presentationWords}" style="width: auto;white-space: pre-wrap;font-family: PingFang SC;margin:16px 40px;font-size: 14px;line-height: 22px;text-align: center;color: #4E5A70;"></pre>
+      <div style="font-size: 12px;line-height: 18px;color: #4E5A70;text-align: center;margin-bottom: 16px;">颁奖人：<span th:text="*{presenter}"></span></div>
+      <div class="divNeteaseSiriusHidden" style="font-size: 13px;line-height: 20px;color: #51555C;margin: 0 28px;">
+        温馨提示：此表扬信来自网易灵犀办公客户端，<a href="https://hubble.netease.com/sl/aaagZ1" style="color:#386EE7;text-underline: none;text-decoration: none;">点此下载最新版客户端</a>查看完整信息，给TA点个赞吧！
+      </div>
+    </div>
+  </div>
+</body>

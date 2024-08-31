@@ -1,0 +1,125 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.create-seo-config {
+  :global {
+    .ant-modal-body {
+      padding: 56px 24px 24px;
+      background-image: url('https://cowork-storage-public-cdn.lx.netease.com/common/2023/03/07/2b2c1dc71bdf422d8f0593b81bec0c22.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    .ant-form {
+      p {
+        font-size: 14px;
+        color: $Text-5;
+      }
+    }
+
+    .ant-form-item {
+      margin: 17px 0 0 0;
+
+      .ant-form-item-control-input-content {
+        display: flex;
+        justify-content: flex-end;
+
+        .ant-input {
+          border-color: $Line-3;
+          caret-color: $Brand-6;
+          height: 98px;
+          padding: 5px 8px;
+          resize: none;
+
+          &::placeholder {
+            color: $Text-1;
+            font-size: 12px;
+          }
+
+          &::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+            margin-right: 4px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            border-radius: 12px;
+            -moz-border-radius: 12px;
+            -webkit-border-radius: 12px;
+            background-color: $Fill-5;
+            margin-right: 4px;
+          }
+
+          &::-webkit-scrollbar-track {
+            background-color: transparent;
+            margin-right: 4px;
+          }
+
+          &:hover {
+            border-color: $Brand-6;
+          }
+        }
+
+        .ant-btn {
+          width: 190px;
+          height: 32px;
+          min-width: initial;
+          font-size: 14px;
+          border: none;
+          margin: 0 auto;
+
+          background: $Brand-6;
+
+          &:hover {
+            background: $Brand-5;
+          }
+
+          &:active {
+            background: $Brand-7;
+          }
+        }
+      }
+
+      &:first-of-type {
+        height: 123px;
+      }
+
+      &:last-child {
+        margin: 0;
+        .ant-form-item-control-input-content {
+          margin-top: 53px;
+        }
+      }
+    }
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: 28px;
+  color: $Text-5;
+
+  span {
+    margin-right: 5px;
+    color: $Brand-6;
+  }
+}
+
+.sub-title {
+  font-size: 14px;
+  line-height: 22px;
+  color: $Text-4;
+  margin: 12px 0 32px;
+}
+
+.load-mask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.5);
+}

@@ -1,0 +1,82 @@
+@import '../../../web/src/styles/varies';
+.bannerWrap {
+  width: 360px;
+  height: 412px;
+  &.isElectron {
+    margin-top: calc(-1 * $electron-title-bar-height / 2);
+  }
+  :global(.slick-dots) {
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
+      margin-left: 6px;
+      width: 11px;
+      height: 2px;
+      background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+      border-radius: 0.5px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    li button {
+      display: none;
+    }
+    :global(.slick-active) {
+      width: 11px !important;
+      background: #386ee7 !important;
+      button {
+        display: none;
+      }
+    }
+  }
+}
+.itemWrap {
+  width: 360px;
+  height: 412px;
+  display: flex;
+  align-items: center;
+  .itemImg {
+    width: 360px;
+    height: 288px;
+  }
+  .itemTitle {
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #262a33;
+  }
+  .itemContent {
+    .itemContentLine {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 4px;
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 22px;
+      color: #51555c;
+    }
+    .separator {
+      margin: 0 10px;
+      width: 1px;
+      height: 14px;
+      background-color: $Fill-4;
+    }
+  }
+}
+.bannerWrapWaimao {
+  width: 480px;
+  .itemImg {
+    margin: 0 auto;
+  }
+}

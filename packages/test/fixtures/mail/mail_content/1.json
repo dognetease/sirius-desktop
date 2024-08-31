@@ -1,0 +1,99 @@
+{
+  "code": "S_OK",
+  "var": {
+    "fid": 1,
+    "subject": "[网络管理中心][关注等级:中]2023年08月26日电信北京杭州ZQOTN00070百G长传割接通知—R1",
+    "antispamInfo": {
+      "asMailType": "good"
+    },
+    "tid": "0a8a2eeb40232c19kusne4fe122011b",
+    "sentMailId": "null",
+    "from": [
+      "sa@corp.netease.com"
+    ],
+    "html": {
+      "filename": "ATT00001.html",
+      "contentId": null,
+      "estimateSize": 6294,
+      "contentLength": 6294,
+      "isMsg": false,
+      "id": "1",
+      "contentLocation": null,
+      "encoding": "base64",
+      "contentType": "text/html",
+      "inlined": false,
+      "content": "<HTML><HEAD>\n            <STYLE>\n                .table1 {table-layout: fixed;font-size:14px;width:100%;text-align:center;vertical-align: middle;\n                    border-top: 3px solid;border-bottom: 3px solid;border-collapse:collapse;}                   \n                .table1 td{height:38px;border:1px dashed;border-left:none;}\n                .table1 tr td:last-child{border-right:none;border-top: 1px dashed;text-align:left;padding-left:20px;\n                    padding-top:4px;padding-bottom:4px;}\n            </STYLE>   \n                </HEAD><BODY><IMG src=\"/js6/s?func=mbox:getMessageData&sid=V0MAD8K3t2GEAB2FiVCc-6s-NUu1QcWi&mid=AHgATgC5F-vE4Y*FVNO9fqpa&Part=2\"  alt=\"image1\" align=\"left\" height=\"70\" width=\"70\">\n                <BR>\n                <DIV style=\"text-align: center;font-size: 20px;\"><B>[关注等级:中]2023年08月26日电信北京杭州ZQOTN00070百G长传割接通知</B></DIV>\n                <DIV style=\"text-align: center;font-size: 18px;color: red;\">割接完成通知</DIV>\n             \n                <BR>\n                <P style=\"font-size:16px;margin-left:32px\">Hi，本次割接已按期完成，请知悉。</P>\n                <P style=\"float: left;font-size: 16px;font-weight: bolder;\">割接详情(Event Details)</P>\n                <TABLE class=\"table1\" cellpadding=\"0\">\n                    <TBODY>\n                        <TR>\n                            <TD width=\"40%\"><B>工单号(Ticket Number)</B></TD><TD>9182</TD>\n                        </TR>\n                        <TR>\n                            <TD width=\"40%\"><B>开始时间(Start Date/Time)</B></TD><TD>2023-08-26 00:00:00</TD>\n                        </TR>\n                        <TR>\n                            <TD width=\"40%\"><B>结束时间(End Date/Time)</B></TD><TD>2023-08-26 06:00:00</TD>\n                        </TR>\n                        <TR>\n                            <TD width=\"40%\"><B>割接方(Operate By)</B></TD><TD>运营商-电信</TD>\n                        </TR>\n                        <TR>\n                            <TD width=\"40%\"><B>冗余性(Redundancy)</B></TD><TD>R1</TD>\n                        </TR>\n                        <TR>\n                            <TD width=\"40%\"><B>操作类型(Operation Type)</B></TD><TD>线路割接(含光缆、端口或波分操作)</TD>\n                        </TR>\n                        <TR>\n                            <TD width=\"40%\"><B>影响范围(Influence Range)</B></TD><TD>E0-主体机房CR/RR层级操作/运营商重要操作</TD>\n                        </TR>\n                        <TR>\n                            <TD width=\"40%\"><B>割接影响(Direct Impact)</B></TD><TD>期间可能发生中断（1时长），网络有冗余，中断时流量倒换会导致延时或丢包现象，请业务根据既往经验进行评估,建议窗口期关注业务可用性</TD>\n                        </TR>\n                        <TR>\n                            <TD width=\"40%\"><B>割接原因/内容(Reason)</B></TD><TD>其它运营商割接</TD>\n                        </TR>\n                    </TBODY>\n                </TABLE>\n                <P style=\"float: left;font-size: 16px;font-weight: bolder;\">影响范围(Affected Services)</P>\n                <TABLE class=\"table1\" cellpadding=\"0\">\n                    <TBODY>\n                        <TR>\n                            <TD width=\"40%\" style=\"white-space: pre-line;\"><B>数据中心/线路编号(IDC/Line number)</B></TD><TD>北京杭州ZQOTN00070</TD>\n                        </TR>\n                        <TR>\n                            <TD width=\"40%\" style=\"white-space: pre-line;\"><B>涉及IP(Related IP)</B></TD><TD>北京-杭州互访业务IP</TD>\n                        </TR>\n                    </TBODY>\n                </TABLE>\n                <P style=\"float: left;font-size: 16px;font-weight: bolder;\">联系方式(Contact Information)</P>\n                <TABLE class=\"table1\" cellpadding=\"0\">\n                    <TBODY>\n                        <TR>\n                            <TD width=\"40%\"><B>电话(Phone)</B></TD><TD>SD: 020-85105555<BR>NOC: 0571-89853216</TD>\n                        </TR>\n                        <TR>\n                            <TD width=\"40%\"><B>邮箱(Email)</B></TD><TD>sa@corp.netease.com<BR>noc@service.netease.com</TD>\n                        </TR>\n                    </TBODY>\n                </TABLE>\n                <P style=\"font-size:16px;color: red;\">注：风险等级分为低、中、高三级，由割接时长、冗余性、操作类型、影响范围综合评估所得。</P>\n            \n            \n    </BODY></HTML>"
+    },
+    "priority": 3,
+    "attachments": [
+      {
+        "filename": "ATT00002.png",
+        "contentId": "image1",
+        "estimateSize": 16086,
+        "contentLength": 16086,
+        "isMsg": false,
+        "id": "2",
+        "contentLocation": null,
+        "encoding": "base64",
+        "contentType": "image/png",
+        "inlined": true,
+        "content": null
+      }
+    ],
+    "sentDate": "2023-08-26 06:58:02",
+    "cc": [
+      "hzwutong@corp.netease.com",
+      "caojie@corp.netease.com",
+      "keith@corp.netease.com",
+      "pengchao04@corp.netease.com",
+      "yingjun01@corp.netease.com",
+      "security@service.netease.com",
+      "op-bj@list.nie.netease.com",
+      "cloudsre@hz.netease.com",
+      "wb.chengkuawen@mesg.corp.netease.com",
+      "huang_wei@corp.netease.com",
+      "xinhe@corp.netease.com",
+      "huangy@corp.netease.com",
+      "wangzhongwei@corp.netease.com",
+      "tfssa@list.nie.netease.com",
+      "niops-m@list.nie.netease.com",
+      "sa@corp.netease.com",
+      "noc@service.netease.com",
+      "matrix.net@list.nie.netease.com",
+      "netops@list.n.netease.com",
+      "netad@list.n.netease.com"
+    ],
+    "headers": {
+      "Sender": null,
+      "Reply-To": null,
+      "List-Unsubscribe": null,
+      "Resent-From": null,
+      "Original_Account": null
+    },
+    "requestReadReceipt": false,
+    "to": [
+      "uu.sa@list.nie.netease.com",
+      "nsdn@list.nie.netease.com",
+      "op-sa@hz.netease.com",
+      "dba@hz.netease.com",
+      "appops@hz.netease.com",
+      "op-noc@hz.netease.com",
+      "op-m@hz.netease.com",
+      "all.sa@list.nie.netease.com",
+      "maintain@rd.netease.com",
+      "hz.ops@list.n.netease.com",
+      "tfssa@list.nie.netease.com",
+      "sys.bj@list.nie.netease.com",
+      "qiyeonupdate@office.163.com",
+      "op-music@hz.netease.com",
+      "urs-dev@list.nie.netease.com",
+      "op-pe@hz.netease.com",
+      "neteasepaywhtz@service.netease.com",
+      "yxre@list.nie.netease.com",
+      "hzyangyizai@corp.netease.com",
+      "hzxuxin3@corp.netease.com",
+      "chengshuhua@corp.netease.com",
+      "chenjiahui07@corp.netease.com"
+    ]
+  }
+}

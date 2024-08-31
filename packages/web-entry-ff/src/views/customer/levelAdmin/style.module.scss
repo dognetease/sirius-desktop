@@ -1,0 +1,89 @@
+.levle-admin {
+  width: 100%;
+  height: 100%;
+  background: $Fill-2;
+  padding: 20px 16px;
+  overflow-y: auto;
+
+  :global(.ant-tabs) {
+    overflow: visible;
+    :global(.ant-tabs-nav-wrap) {
+      overflow: visible;
+    }
+  }
+
+  &-header {
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-left {
+      font-size: 16px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      .price {
+        font-size: 14px;
+        font-weight: normal;
+      }
+    }
+    &-right {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .typeSelect {
+    padding: 12px 0 0;
+  }
+
+  .addBtn {
+    padding-bottom: 8px;
+  }
+
+  .gostBtn {
+    border: 1px solid #4c6aff;
+    color: #4c6aff;
+  }
+
+  .breadCrumbItem {
+    cursor: pointer;
+  }
+
+  &-content {
+    width: 100%;
+    min-height: 100px;
+    margin-top: 12px;
+    border-radius: 4px;
+    background: #fff;
+    white-space: nowrap;
+    padding: 0 16px 16px;
+
+    .dot-tab {
+      position: relative;
+      &::after {
+        position: absolute;
+        content: '未配置';
+        top: -16px;
+        right: -35px;
+        color: #fff;
+        background: #f9099f;
+        border-radius: 5px;
+        font-size: 12px;
+        padding: 0 5px;
+      }
+    }
+
+    :global {
+      .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn,
+      .ant-tabs-tab:hover {
+        color: #4c6aff;
+      }
+
+      .ant-tabs-ink-bar::after {
+        background-color: #4c6aff !important;
+      }
+    }
+  }
+}

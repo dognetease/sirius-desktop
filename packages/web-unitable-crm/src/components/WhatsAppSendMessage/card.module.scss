@@ -1,0 +1,75 @@
+.account {
+  position: relative;
+  padding: 16px 4px 16px 20px;
+  width: 276px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #f0f1f5;
+  border-radius: 4px;
+  height: 82px;
+  vertical-align: bottom;
+  cursor: pointer;
+  &.selected {
+    background: #f2f5ff;
+    border: 1px solid #b7c3ff;
+  }
+  .tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2px 6px;
+    border-radius: 2px 4px 2px 2px;
+  }
+  .label {
+    font-weight: 500;
+    color: #272e47;
+  }
+  .name {
+    color: #545a6e;
+  }
+  .time-tag {
+    display: inline-flex;
+    padding: 2px 6px;
+    align-items: center;
+    border-radius: 2px;
+    border: 0.5px solid var(--success-6, #0fd683);
+    color: var(--success-7, #0dc076);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    &-untime {
+      border: 0.5px solid var(--warning-6, #ffb54c);
+      color: var(--warning-6, #ffb54c);
+    }
+  }
+  &.personal {
+    .tag {
+      color: #4759b2;
+      background: #deebfd;
+      font-size: 12px;
+      line-height: 16px;
+    }
+    .tips {
+      color: #272e47;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 40px;
+    }
+  }
+  &.business {
+    .tag {
+      color: #cb493d;
+      background: #ffe5e2;
+      font-size: 12px;
+      line-height: 16px;
+    }
+    .tips {
+      color: #545a6e;
+      font-size: 12px;
+      line-height: 40px;
+    }
+  }
+  .text {
+    margin-left: 16px;
+  }
+}

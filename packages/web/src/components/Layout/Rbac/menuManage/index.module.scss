@@ -1,0 +1,96 @@
+@import '@web-common/styles/variables.scss';
+
+.menu-setting {
+  height: 100%;
+  padding: 24px;
+  overflow: hidden auto;
+}
+
+.page-header {
+  margin-bottom: 38px;
+  .page-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+  .current-user {
+    margin-top: 16px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    @include p1-4-med14();
+  }
+  .role-tag {
+    padding: 0 4px;
+    height: 20px;
+    @include c4-3-reg12();
+    background: rgba(56, 110, 231, 0.16);
+    border-radius: 2px;
+    color: #386ee7;
+    font-weight: normal;
+  }
+}
+
+.title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #262a33;
+}
+
+.sub-Text {
+  @include c4-3-reg12();
+  color: #a8aaad;
+  margin-top: 4px;
+}
+
+.menu-setting {
+  :global(.ant-tree-checkbox .ant-tree-checkbox-inner) {
+    border-color: rgb(168, 170, 173);
+  }
+
+  :global(.ant-tree-checkbox-checked:not(.ant-tree-checkbox-disabled) .ant-tree-checkbox-inner) {
+    background-color: #386ee7;
+    &::after {
+      background-color: #386ee7;
+    }
+  }
+  :global(.ant-tree-checkbox-inner) {
+    width: 14px;
+    height: 14px;
+    top: 1px;
+  }
+  :global(.ant-tree-checkbox-inner::after) {
+    top: 50%;
+    left: 27.5%;
+    width: 4px;
+    height: 6px;
+  }
+  :global(.ant-tree-checkbox-checked .ant-tree-checkbox-inner::after) {
+    border: 1.2px solid #fff;
+    border-top: 0;
+    border-left: 0;
+  }
+  :global(.ant-tree-checkbox-checked .ant-tree-checkbox-inner),
+  :global(.ant-tree-checkbox-indeterminate .ant-tree-checkbox-inner) {
+    border-color: #386ee7;
+  }
+  :global(.ant-tree-checkbox-checked .ant-tree-checkbox-inner::after) {
+    background: transparent;
+  }
+  :global(.ant-tree-checkbox-disabled.ant-tree-checkbox-checked .ant-tree-checkbox-inner) {
+    background: #d0d0d3;
+  }
+  :global(.ant-tree-checkbox-disabled.ant-tree-checkbox-checked .ant-tree-checkbox-inner::after) {
+    border-color: #fff;
+  }
+  :global(.ant-tree-checkbox-wrapper:hover .ant-tree-checkbox-inner) {
+    border-color: #386ee7;
+  }
+  :global(.ant-tree-checkbox-indeterminate .ant-tree-checkbox-inner::after) {
+    width: 8px;
+    height: 1.6px;
+    background-color: #386ee7;
+    left: 50%;
+  }
+}

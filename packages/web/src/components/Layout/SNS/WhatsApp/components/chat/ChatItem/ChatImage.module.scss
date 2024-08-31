@@ -1,0 +1,42 @@
+@import 'src/styles/varies';
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.chat-image {
+  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  border: 0.5px solid #ffffff;
+  border-radius: 8px;
+  background-color: #ffffff;
+  overflow: hidden;
+
+  .icon {
+    margin-right: 12px;
+  }
+
+  .text {
+    @include p1-3-reg14();
+    margin-right: 12px;
+  }
+
+  .trigger {
+    @include p1-3-reg14();
+    color: $Brand-6;
+    cursor: pointer;
+  }
+
+  .loading {
+    margin-left: 8px;
+    width: 16px;
+    height: 16px;
+    background-image: url(../../../../../../../../../web/src/images/icons/common/loading.svg);
+    background-size: cover;
+    animation: spin 1s linear infinite;
+  }
+}

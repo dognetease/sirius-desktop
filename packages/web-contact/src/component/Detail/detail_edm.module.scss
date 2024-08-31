@@ -1,0 +1,241 @@
+@import '../../../../web/src/styles/varies';
+.edm-container {
+  /* font-family: sans-serif; */
+  text-align: center;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  position: relative;
+
+  .operateWrap {
+    position: absolute;
+    right: 20px;
+    top: 24px;
+
+    display: flex;
+    align-items: flex-end;
+    .switchIcon {
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+      margin-right: 16px;
+      background-image: url('../../../../web/src/images/icons/contactDetail/customer_switch.svg');
+      background-size: 100%;
+    }
+    .closeIcon {
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+      background-image: url('../../../../web/src/images/icons/contactDetail/customer_close.png');
+      background-size: 100%;
+    }
+  }
+
+  .card-container {
+    width: 456px;
+    .header {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 24px 20px;
+
+      border-bottom: 1px solid $Fill-2_5;
+      height: 76px;
+
+      .avatar {
+        align-self: center;
+        justify-self: center;
+      }
+      &-field {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      &-tag {
+        line-height: 20px;
+        font-size: 12px;
+        color: $label-2_3;
+        margin-left: 8px;
+        background: $Success-1;
+        border-radius: 2px;
+        padding: 0 6px;
+        height: 20px;
+        margin-right: 50px;
+        flex: none;
+      }
+      .headerNameWrap {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        .headerName {
+          @include flex-ellipsis-text;
+          font-family: 'PingFang SC';
+          font-style: normal;
+          font-weight: 500;
+          color: #232d47;
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
+    }
+    .header-copy {
+      margin-left: 14px;
+      text-align: center;
+      cursor: pointer;
+      line-height: 22px;
+    }
+    .header-desc {
+      width: 100%;
+      margin-top: 4px;
+      overflow: hidden;
+    }
+
+    .bottom {
+      border-top: 1px solid $Fill-2_5;
+      border-radius: 0px 0px 4px 4px;
+      display: flex;
+      align-items: center;
+    }
+    .companyIcon {
+      width: 16px;
+      height: 16px;
+      background-image: url('../../../../web/src/images/icons/contactDetail/customer_company.svg');
+      background-size: 100%;
+    }
+    .labelWrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      margin-right: 8px;
+      overflow: hidden;
+      .labelIcon {
+        flex: none;
+      }
+      .header-label {
+        margin-left: 8px;
+        flex: 1;
+        text-align: left;
+        @include ellipsis-text;
+      }
+    }
+    .mg-l {
+      width: 16px;
+      height: 16px;
+      background-image: url('../../../../web/src/images/icons/contactDetail/customer_web_address.svg');
+      background-size: 100%;
+    }
+    .bottom > div {
+      display: flex;
+      align-items: center;
+      height: 54px;
+      justify-content: center;
+      border-right: 1px solid $Fill-2_5;
+      width: 100%;
+      min-width: 113px;
+      &:last-child {
+        border-right: none;
+      }
+      .bottom-link {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        cursor: pointer;
+        text-align: center;
+        color: $Avatar-6;
+      }
+    }
+
+    .flex-center {
+      display: flex;
+      align-items: center;
+    }
+
+    .detail {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+
+      padding: 20px 20px;
+    }
+    .detail .detail-row {
+      display: flex;
+      flex-direction: row;
+
+      margin-bottom: 12px;
+    }
+    .detail .detail-row:last-child {
+      margin-bottom: 0;
+    }
+    .detail-row-label {
+      text-align: start;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: #7a8599;
+      width: 72px;
+      overflow: hidden;
+    }
+    .detail-row-ent {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      color: #232d47;
+    }
+
+    .header-tag-yellow {
+      color: $Warning-7;
+      background: $Warning-1;
+    }
+  }
+}
+
+.customerSelectListWrap {
+  width: 196px;
+  padding: 16px 0;
+  border: 0.5px solid $Fill-2_5;
+  box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.16);
+  border-radius: 4px;
+  background: #ffffff;
+  :global(.ant-popover-inner) {
+    box-shadow: none;
+    border: none;
+  }
+}
+.customerSelectList {
+  @include sirius-scroll;
+  max-height: 32px * 5;
+  .customerSelectItem {
+    width: 196px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    height: 32px;
+    cursor: pointer;
+    &:hover {
+      background: $Fill-1;
+    }
+    .itemTxt {
+      flex: 1;
+      @include ellipsis-text;
+    }
+    .selectedIcon {
+      display: none;
+      width: 16px;
+      height: 16px;
+      background-image: url('../../../../web/src/images/icons/contactDetail/customer_selected.svg');
+      background-size: 100%;
+    }
+    &.selected {
+      background: $Fill-1;
+      .selectedIcon {
+        display: block;
+      }
+    }
+  }
+}

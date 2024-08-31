@@ -1,0 +1,83 @@
+.container {
+  padding: 24px;
+  background: #f4f6f7;
+  height: 100%;
+  overflow: auto;
+  min-width: 1100px;
+  .breadcrumb {
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 14px;
+    :global(.ant-breadcrumb-link) {
+      cursor: pointer;
+      &:hover {
+        color: $Brand-6;
+      }
+    }
+    & > span {
+      vertical-align: middle;
+    }
+    & > span:last-child {
+      color: #262a33;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  .basic-info {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    .job-name {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: #51555c;
+      margin-right: 8px;
+    }
+    .basic-info-text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      color: #7d8085;
+      .media-box {
+        // background: #dbf8c6;
+        padding: 5px;
+        margin-top: 10px;
+        max-width: 300px;
+        overflow: hidden;
+        word-wrap: break-word;
+        .img {
+          max-width: 100%;
+          max-height: 200px;
+        }
+        .text {
+          padding-top: 16px;
+        }
+      }
+    }
+    :global {
+      .ant-tag {
+        background: rgba(107, 169, 255, 0.1);
+        border-radius: 2px;
+        color: #6ba9ff;
+        font-size: 10px;
+        line-height: 16px;
+      }
+    }
+  }
+  .heading {
+    margin-top: 20px;
+    margin-bottom: 16px;
+    .stats-title {
+      color: #262a33;
+      @include h3-med20();
+    }
+  }
+  .stats {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

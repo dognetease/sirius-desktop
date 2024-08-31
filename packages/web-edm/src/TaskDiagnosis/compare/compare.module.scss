@@ -1,0 +1,210 @@
+.num-wrapper {
+  width: 100%;
+  // height: 160px;
+  // padding: 16px 16px;
+  border-radius: 4px;
+  background-color: $Fill-1;
+  .title {
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    height: 22px;
+    @include p1-3-reg14;
+    color: $Text-5;
+    margin: 0;
+    .line {
+      width: 3px;
+      height: 16px;
+      border-radius: 2px;
+      background-color: $Avatar-2;
+      margin-right: 6px;
+    }
+  }
+  .num-progress {
+    padding: 0 5px;
+    margin-top: 67px;
+    white-space: nowrap;
+    // margin-bottom: 44px;
+    .progress {
+      height: 2px;
+      width: 100%;
+      background-color: $Fill-4;
+      position: relative;
+      .percent {
+        position: absolute;
+        height: 2px;
+        top: 0;
+        left: 0;
+        background-color: $Success-6;
+        .start,
+        .info,
+        .end {
+          position: absolute;
+          @include c4-3-reg12;
+          color: $Text-3;
+          top: 7px;
+        }
+        .start {
+          left: -4px;
+        }
+        .info {
+          display: flex;
+          left: 0;
+          width: 100%;
+          justify-content: center;
+        }
+        .end {
+          right: -4px;
+        }
+      }
+      .value-circle {
+        border: 2px solid $Success-6;
+        border-radius: 4px;
+        width: 8px;
+        height: 8px;
+        position: absolute;
+        top: -3px;
+        background-color: #fff;
+        .value-circle-info {
+          font-family: DIN Alternate;
+          font-size: 24px;
+          font-weight: 700;
+          color: $Success-7;
+          height: 28px;
+          display: flex;
+          align-items: flex-end;
+          position: absolute;
+          top: -40px;
+          left: -50%;
+          transform: translateX(-50%);
+          margin: 0;
+          .unit {
+            @include c4-4-med12;
+            margin-left: 2px;
+          }
+        }
+      }
+    }
+  }
+}
+.progress-wrapper {
+  width: 100%;
+  // height: 160px;
+  // padding: 16px;
+  border-radius: 4px;
+  background-color: $Fill-1;
+  .title {
+    display: flex;
+    align-items: center;
+    height: 22px;
+    @include p1-3-reg14;
+    color: $Text-5;
+    margin: 0;
+    .line {
+      width: 3px;
+      height: 16px;
+      border-radius: 2px;
+      background-color: $Avatar-3;
+      margin-right: 6px;
+    }
+  }
+  .progress-list {
+    padding: 30px 24px 0px 0;
+    position: relative;
+    .progress-item {
+      display: flex;
+      margin-bottom: 3px;
+      .intro {
+        width: 80px;
+        display: flex;
+        justify-content: flex-end;
+        @include c4-3-reg12;
+        line-height: 28px;
+        padding-right: 8px;
+        margin: 0;
+        color: $Text-3;
+      }
+      .progress {
+        flex: 1 1;
+        :global(.ant-progress-inner) {
+          border-radius: 0;
+        }
+        :global(.ant-progress-bg) {
+          border-radius: 0 2px 2px 0 !important;
+        }
+      }
+      .progress-format {
+        color: $Text-3;
+        font-family: DIN Alternate;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+      }
+    }
+    .line {
+      position: absolute;
+      width: 1px;
+      background-color: #e1e3e8;
+      left: 80px;
+      top: 30px;
+      bottom: 27px;
+      margin: 0;
+    }
+  }
+}
+.bar-wrapper {
+  width: 100%;
+  // height: 230px;
+  // padding: 16px 16px 0 16px;
+  border-radius: 4px;
+  background-color: $Fill-1;
+  .title {
+    display: flex;
+    align-items: center;
+    height: 22px;
+    @include p1-3-reg14;
+    color: $Text-5;
+    margin: 0;
+    .line {
+      width: 3px;
+      height: 16px;
+      border-radius: 2px;
+      margin-right: 6px;
+    }
+  }
+  .bar {
+    height: 180px;
+  }
+}
+.multi-bar-wrapper {
+  width: 100%;
+  height: 100%;
+  // padding: 16px 16px 0 16px;
+  border-radius: 4px;
+  background-color: $Fill-1;
+  position: relative;
+  .title {
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 22px;
+    @include p1-3-reg14;
+    color: $Text-5;
+    margin: 0;
+    .line {
+      width: 3px;
+      height: 16px;
+      border-radius: 2px;
+      margin-right: 6px;
+      background-color: $Avatar-5;
+    }
+  }
+  .bar {
+    // height: 230px;
+    height: 100%;
+  }
+}

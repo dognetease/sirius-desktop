@@ -1,0 +1,113 @@
+@import '@web-common/styles/variables.scss';
+@import '@web-common/styles/mixin.scss';
+
+.event-content-item {
+  display: flex;
+  gap: 8px;
+  overflow: hidden;
+  width: 100%;
+  height: 32px;
+  background: #edf0ff;
+  padding: 0 6px;
+  border-radius: 4px;
+  align-items: center;
+
+  .event-content-summary {
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include c4-4-med12();
+    color: $Text-5;
+  }
+
+  .send-time {
+    @include c4-3-reg12;
+    color: $Text-3;
+  }
+
+  :global(.sirius-icon) {
+    height: 16px;
+    line-height: 16px;
+    width: 16px;
+    background-size: 16px;
+    vertical-align: -0.125em;
+  }
+
+  &:global(.LINKEDIN) {
+    background: #ebf5ff;
+  }
+}
+
+.post-preview {
+  padding: 26px 20px;
+  width: 280px;
+
+  .header {
+    color: $Text-2;
+    @include p1-3-reg14();
+    padding-bottom: 11px;
+    border-bottom: 1px solid $Line-1;
+  }
+
+  .sirius-icon {
+    height: 16px;
+    line-height: 16px;
+    width: 16px;
+    background-size: 16px;
+    vertical-align: -0.125em;
+  }
+
+  .post-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: $Text-5;
+    @include h1-4-med16();
+  }
+
+  .post-meta {
+    display: flex;
+    margin: 8px 0;
+  }
+
+  .creator {
+    font-size: 12px;
+  }
+
+  .date {
+    margin: 0 12px 0 8px;
+  }
+
+  .post-status {
+    width: 48px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    text-align: center;
+    color: $label-6_3;
+    background: $label-6_1;
+
+    &:global(.SUCCEED) {
+      color: $label-2_3;
+      background: $label-2_1;
+    }
+
+    &:global(.WAITING) {
+      color: $label-4_3;
+      background: $label-4_1;
+    }
+  }
+
+  .calendar-post-preview {
+    padding: 12px 0 8px;
+    border: none;
+    max-height: 360px;
+    overflow: hidden auto;
+  }
+}
+
+.error-tip {
+  color: $Error-6;
+}

@@ -1,0 +1,434 @@
+@import '@web-common/styles/variables.scss';
+@import '../../../web/src/styles/varies.scss';
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.wrap {
+  padding: 24px 24px 0;
+  .title {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .titleTxt {
+      font-family: PingFang SC;
+      font-style: normal;
+      @include font-size(500, 16px, 20px);
+      /* identical to box height, or 125% */
+
+      /* 字体及ICON颜色/主要文字100% */
+
+      // color: #262a33;
+      color: $font-color-2;
+    }
+    .addAccountTxt {
+      cursor: pointer;
+      font-style: normal;
+      font-weight: normal;
+      @include font-size(400, 14px, 16px);
+      /* identical to box height, or 114% */
+
+      text-align: right;
+
+      /* 主色/灵犀蓝 */
+
+      color: $main-enhance-color;
+    }
+  }
+  .item {
+    position: relative;
+    padding-right: 24px;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    height: 58px;
+    border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+    box-sizing: border-box;
+    border-radius: 4px;
+    &:hover {
+      .accountItemDel {
+        display: block;
+      }
+    }
+    &.currentItem {
+      margin-top: 0;
+      border: none;
+    }
+    .accountItemInput {
+      width: 16px;
+      height: 16px;
+      margin-left: 16px;
+    }
+    .itemAvatar {
+      position: relative;
+      margin-left: 16px;
+      .itemExpired {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-style: normal;
+        @include font-size(500, 12px, 14px);
+        /* identical to box height, or 117% */
+        color: #ffffff;
+      }
+      .currentIcon {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        box-sizing: border-box;
+        border: 1px solid #5fc375;
+        border-radius: 50%;
+        background-color: transparent;
+        z-index: 1;
+        i {
+          position: absolute;
+          bottom: 0;
+          right: -4px;
+          width: 16px;
+          height: 16px;
+          z-index: 2;
+          background-image: url('../../../web/src/images/icons/setting/success_account.svg');
+          background-size: 100%;
+        }
+      }
+    }
+    .itemInfoWrap {
+      margin-left: 8px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .itemName {
+        .accountItemNameDisplay {
+          font-style: normal;
+          @include font-size(500, 14px, 16px);
+          // color: #262a33;
+          color: $font-color-2;
+        }
+        .accountItemNameEmail {
+          margin-left: 4px;
+          font-style: normal;
+          font-weight: normal;
+          @include font-size(400, 12px, 14px);
+          /* identical to box height, or 117% */
+
+          /* 字体及ICON颜色/50% */
+
+          color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+        }
+      }
+      .itemCompany {
+        margin-top: 4px;
+        font-style: normal;
+        font-weight: normal;
+        @include font-size(400, 12px, 14px);
+        /* identical to box height, or 117% */
+
+        /* 字体及ICON颜色/50% */
+
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+      }
+    }
+    .accountItemRedo {
+      margin-right: 24px;
+    }
+    .accountItemDel {
+      position: absolute;
+      right: 24px;
+      bottom: 12px;
+      cursor: pointer;
+      display: none;
+      width: 16px;
+      height: 16px;
+    }
+  }
+  .currentAccount {
+    border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+    box-sizing: border-box;
+    border-radius: 4px;
+    .accountItemWrap {
+      padding-bottom: 12px;
+      position: relative;
+      &:hover {
+        // background: #f0f0f1;
+        background-color: $white-hover-bg;
+        .exitIcon {
+          display: block;
+        }
+      }
+      .infoWrap {
+        margin-top: 5px;
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: normal;
+        @include font-size(400, 12px, 16px);
+        // color: #51555c;
+        color: $font-color-1;
+        .infoLine {
+          display: flex;
+          align-items: center;
+          .company {
+            display: flex;
+          }
+          .mobileBindWrap {
+            display: flex;
+            margin-left: 38px;
+            .bindBtn {
+              cursor: pointer;
+              margin-left: 8px;
+              color: $main-enhance-color;
+            }
+          }
+        }
+        .aliasWrap {
+          display: flex;
+          margin-top: 12px;
+          .label {
+            flex: none;
+          }
+          .more {
+            margin-left: 8px;
+            color: $main-enhance-color;
+            cursor: default;
+          }
+        }
+      }
+      .exitIcon {
+        cursor: pointer;
+        display: none;
+        position: absolute;
+        right: 24px;
+        bottom: 12px;
+        width: 16px;
+        height: 16px;
+        background-image: url('../../../web/src/images/icons/setting/account_exit.svg');
+        background-size: 100%;
+      }
+    }
+    .mobileAccountWrap {
+      .mobileRow {
+        border-top: 0.5px solid $Fill-4;
+        align-content: center;
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+        height: 58px;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+      .mobileItem {
+        padding: 0 24px 0 48px;
+        box-sizing: border-box;
+        border-top: 0.5px solid $Fill-4;
+        height: 58px;
+        display: flex;
+        align-items: center;
+        &:hover {
+          // background: #f0f0f1;
+          background-color: $white-hover-bg;
+        }
+        .avatarWrap {
+          position: relative;
+          width: 32px;
+          height: 32px;
+          i {
+            position: absolute;
+            right: -4px;
+            bottom: 0;
+            width: 14px;
+            height: 14px;
+            z-index: 1;
+            background-image: url('../../../web/src/images/icons/setting/link_account.svg');
+            background-size: 100%;
+          }
+        }
+        .accountTxt {
+          margin-left: 8px;
+          font-style: normal;
+          @include font-size(500, 14px, 16px);
+          /* identical to box height, or 114% */
+
+          /* 字体及ICON颜色/次要文字80% */
+
+          // color: #51555c;
+          color: $font-color-1;
+        }
+        .labelIcon {
+          margin-left: 8px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 56px;
+          height: 20px;
+          background-color: rgba($Brand-4-r, $Brand-4-g, $Brand-4-b, 0.12);
+          border-radius: 2px;
+          font-style: normal;
+          font-weight: normal;
+          @include c4-1-reg12();
+          /* identical to box height, or 133% */
+
+          /* 默认头像颜色/默认头像-蓝 */
+
+          color: #6ba9ff;
+        }
+        .addBtn {
+          flex: 1;
+          display: flex;
+          justify-content: flex-end;
+          .addTxt {
+            cursor: pointer;
+            font-family: PingFang SC;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            color: $main-enhance-color;
+          }
+        }
+      }
+    }
+  }
+  .sharedAccountWrap {
+    .sharedRow {
+      border-top: 0.5px solid $Fill-4;
+      align-content: center;
+      width: 100%;
+      padding: 0;
+      box-sizing: border-box;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+    .sharedItem {
+      padding: 0 0 0 16px;
+      box-sizing: border-box;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      &:hover {
+        // background: #f0f0f1;
+        background-color: $white-hover-bg;
+      }
+      .avatarWrap {
+        position: relative;
+        width: 32px;
+        height: 32px;
+        margin-left: 8px;
+      }
+      .accountTxt {
+        margin-left: 8px;
+        font-style: normal;
+        @include font-size(500, 14px, 16px);
+
+        /* identical to box height, or 114% */
+
+        /* 字体及ICON颜色/次要文字80% */
+
+        // color: #51555c;
+        color: $font-color-1;
+      }
+      .labelIcon {
+        margin-left: 8px;
+        padding: 2px 4px;
+
+        /* 常用/白色 */
+
+        background: #ffffff;
+        /* 成功/Success-6常规 */
+
+        border: 0.5px solid $Success-6;
+        border-radius: 2px;
+        @include font-size(400, 10px, 12px);
+
+        /* identical to box height, or 120% */
+
+        /* 成功/Success-7点击 */
+
+        color: $Success-7;
+      }
+    }
+  }
+
+  .delWrap {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    .exitIcon {
+      width: 16px;
+      height: 16px;
+      color: $main-enhance-color;
+      background-image: url('../../../web/src/images/icons/setting/exit.svg');
+      background-size: 100%;
+    }
+    span {
+      margin-left: 4px;
+      font-style: normal;
+      font-weight: normal;
+      @include font-size(400, 14px, 16px);
+
+      color: $main-enhance-color;
+    }
+  }
+
+  .switchAccountWrap {
+    position: absolute;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    .switchIcon {
+      @include sirius-background-image(24px, 24px, url('../../../web/src/images/icons/common/loading.svg'));
+      margin-right: 8px;
+      // @include sirius-spin-animation;
+      animation: spin 1s linear infinite;
+    }
+    .switchTxt {
+      color: $main-enhance-color;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+}
+.labelContent {
+  padding: 0 24px 16px;
+  width: 400px;
+  max-height: 112px;
+  @include sirius-scroll;
+  background: #ffffff;
+  border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  .labelTxt {
+    margin-top: 16px;
+    font-style: normal;
+    font-weight: normal;
+    @include font-size(400, 14px, 16px);
+
+    color: #262a33;
+  }
+}

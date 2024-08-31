@@ -1,0 +1,12 @@
+@import 'src/styles/varies';
+
+.chat-messages {
+  @include sirius-scroll;
+
+  padding: 12px 24px;
+  overflow-y: auto;
+
+  .chat-message {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,23 @@
+.ff-price-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &-left {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  &-right {
+    display: flex;
+    align-items: center;
+  }
+  &-bottom {
+    width: 100%;
+  }
+  &-sub-title {
+    color: #747a8c;
+    font-size: 12px;
+    padding-top: 10px;
+    margin-left: 8px;
+    font-weight: normal;
+  }
+}

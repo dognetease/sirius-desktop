@@ -1,0 +1,37 @@
+@import '../../../../../web/src/styles/varies';
+.modalCheckContentWrap {
+  display: flex;
+  .checkboxWrap {
+    flex: none;
+    width: 16px;
+    height: 16px;
+  }
+  .childrenWrap {
+    flex: 1;
+    display: flex;
+  }
+}
+.modalWrapGlobal {
+}
+.modalWrap {
+  left: $side-bar-width;
+  top: $tool-bar-height;
+  :global(.ant-modal-header) {
+    background: $white;
+    border-bottom: 1px solid $white-hover-bg;
+  }
+  :global(.ant-modal-title) {
+    color: $font-color-2;
+  }
+}
+.confirmError {
+  :global(.ant-modal-confirm-title) {
+    margin-left: 28px !important;
+  }
+  .confirmErrorIcon {
+    position: relative;
+    top: 3px;
+    display: flex;
+    height: 0;
+  }
+}

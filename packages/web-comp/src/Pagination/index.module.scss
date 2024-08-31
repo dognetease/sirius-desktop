@@ -1,0 +1,188 @@
+@import '../styles/common.scss';
+.siriusPaginationUi {
+  :global(.ant-pagination-item-active),
+  :global(.lx-ant-pagination-item-active) {
+    font-weight: 400;
+    background-color: $Avatar-6 !important;
+    border-color: $Avatar-6 !important;
+
+    a {
+      color: #fff !important;
+    }
+  }
+
+  :global .ant-pagination-total-text,
+  :global .lx-ant-pagination-total-text {
+    margin-right: 12px;
+    color: $Text-4;
+    font-family: 'PingFang SC';
+  }
+
+  :global(.ant-pagination-item-link),
+  :global(.lx-ant-pagination-item-link) {
+    border-color: $Fill-4;
+    line-height: 28px;
+    // box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    min-width: 30px;
+  }
+  :global(.ant-pagination-prev:not(.ant-pagination-disabled)),
+  :global(.lx-ant-pagination-prev:not(.lx-ant-pagination-disabled)) {
+    button {
+      color: $Fill-7;
+    }
+  }
+  :global(.ant-pagination-next:not(.ant-pagination-disabled)),
+  :global(.lx-ant-pagination-next:not(.lx-ant-pagination-disabled)) {
+    button {
+      color: $Fill-7;
+    }
+  }
+  :global(.ant-pagination-prev),
+  :global(.lx-ant-pagination-prev) {
+    // box-sizing: border-box;
+    height: 30px;
+    min-width: 30px;
+  }
+  :global(.ant-pagination-next),
+  :global(.lx-ant-pagination-next) {
+    // box-sizing: border-box;
+    height: 30px;
+    min-width: 30px;
+  }
+
+  :global(.ant-pagination-item),
+  :global(.lx-ant-pagination-item) {
+    border-color: $Fill-4;
+    a {
+      color: $Text-4;
+    }
+    line-height: 28px;
+    // box-sizing: border-box;
+    height: 30px;
+    // width: 30px;
+    min-width: 30px;
+  }
+  :global(.ant-pagination-item:hover),
+  :global(.lx-ant-pagination-item:hover) {
+    border-color: $Brand-5;
+  }
+
+  :global(.ant-pagination-options-size-changer),
+  :global(.lx-ant-pagination-options-size-changer) {
+    &:hover {
+      border-color: $Brand-5;
+    }
+    box-shadow: none !important;
+
+    a {
+      color: $Text-4;
+    }
+  }
+
+  :global .ant-select:not(.ant-select-disabled):hover .ant-select-selector,
+  :global .lx-ant-select:not(.lx-ant-select-disabled):hover .lx-ant-select-selector {
+    border-color: $Brand-7;
+  }
+
+  :global(.ant-pagination-next:not(.ant-pagination-disabled):hover),
+  :global(.lx-ant-pagination-next:not(.lx-ant-pagination-disabled):hover) {
+    :global .ant-pagination-item-link,
+    :global .lx-ant-pagination-item-link {
+      border-color: $Brand-5;
+      color: $Avatar-6;
+    }
+  }
+
+  :global(.ant-pagination-prev:not(.ant-pagination-disabled):hover),
+  :global(.lx-ant-pagination-prev:not(.lx-ant-pagination-disabled):hover) {
+    :global .ant-pagination-item-link,
+    :global .lx-ant-pagination-item-link {
+      border-color: $Brand-5;
+      color: $Avatar-6;
+    }
+  }
+
+  :global(.ant-pagination-options-quick-jumper input),
+  :global(.lx-ant-pagination-options-quick-jumper input) {
+    &:hover {
+      border-color: $Brand-5;
+    }
+
+    box-shadow: none;
+  }
+
+  :global(.ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-link-icon)
+    :global(.lx-ant-pagination-jump-prev .lx-ant-pagination-item-container .lx-ant-pagination-item-link-icon) {
+    color: $Avatar-6;
+  }
+  :global(.ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-link-icon),
+  :global(.lx-ant-pagination-jump-next .lx-ant-pagination-item-container .lx-ant-pagination-item-link-icon) {
+    color: $Avatar-6;
+  }
+
+  :global .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector,
+  :global .lx-ant-select-focused:not(.lx-ant-select-disabled).lx-ant-select:not(.lx-ant-select-customize-input) .lx-ant-select-selector {
+    border-color: $Brand-5 !important;
+    box-shadow: none !important;
+  }
+
+  :global .ant-pagination.mini .ant-pagination-item,
+  :global .lx-ant-pagination.mini .lx-ant-pagination-item {
+    min-width: 24px;
+    // width: 24px;
+    height: 24px;
+    line-height: 22px;
+  }
+  :global .ant-pagination.mini .ant-pagination-item-link,
+  :global .lx-ant-pagination.mini .lx-ant-pagination-item-link {
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    line-height: 22px;
+  }
+
+  :global .ant-pagination-options,
+  :global .lx-ant-pagination-options {
+    .ant-select-selector,
+    .ant-pagination-options-quick-jumper,
+    .ant-pagination-options-quick-jumper input,
+    .lx-ant-select-selector,
+    .lx-ant-pagination-options-quick-jumper,
+    .lx-ant-pagination-options-quick-jumper input {
+      height: 30px;
+      line-height: 30px;
+    }
+
+    .ant-select-selector,
+    .ant-pagination-options-quick-jumper input,
+    .lx-ant-select-selector,
+    .lx-ant-pagination-options-quick-jumper input {
+      color: $Text-4;
+      border: 1px solid $Fill-4;
+    }
+
+    .ant-pagination-options-quick-jumper input,
+    .lx-ant-pagination-options-quick-jumper input {
+      box-shadow: none;
+
+      &:hover {
+        border-color: $Brand-5;
+      }
+
+      &:focus {
+        border-color: $Brand-7;
+        border-right-width: 1px !important;
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+  }
+  :global .ant-pagination-simple-pager,
+  :global .lx-ant-pagination-simple-pager {
+    input {
+      width: 50px;
+    }
+  }
+}

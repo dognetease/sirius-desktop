@@ -1,0 +1,138 @@
+.update-customer {
+  :global(.ant-drawer-header) {
+    border-bottom: none;
+  }
+
+  :global(.ant-drawer-footer) {
+    border-top: none;
+
+    :global(.ant-btn:not(.ant-btn-primary)) {
+      border-color: #f0f3f5;
+      background-color: #f0f3f5;
+    }
+
+    :global(.ant-btn-primary) {
+      background-color: #4c6aff;
+    }
+  }
+
+  &-body {
+    padding: 8px 24px;
+
+    .group-name {
+      color: #232d47;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 20px;
+      margin-bottom: 8px;
+    }
+
+    // .trigger-condition {
+    //   display: flex;
+    //   align-items: center;
+
+    //   .email-op-type {
+    //     width: 100px;
+    //   }
+
+    //   .space-text {
+    //     margin: 0 16px;
+
+    //     &:first-child {
+    //       margin-left: 0;
+    //     }
+
+    //     &:last-child {
+    //       margin-right: 0;
+    //     }
+    //   }
+    // }
+
+    .form-item-trigger-condition {
+      margin-bottom: 0;
+    }
+
+    .trigger-condition {
+      display: flex;
+      align-items: flex-start;
+
+      .email-op-days {
+        flex-grow: 1;
+      }
+
+      .email-op-type {
+        width: 100px;
+      }
+
+      .space-text {
+        flex-shrink: 0;
+        line-height: 32px;
+        margin: 0 16px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .customer-info {
+      padding: 20px 20px 0;
+      background-color: #f9fafb;
+      margin-bottom: 8px;
+
+      > :global(.ant-form-item) {
+        margin-bottom: 0;
+      }
+
+      :global(.ant-space) {
+        width: 100%;
+
+        :global(.ant-space-item) > span {
+          line-height: 32px;
+        }
+
+        :global(.ant-space-item:nth-child(1)),
+        :global(.ant-space-item:nth-child(3)) {
+          flex-shrink: 0;
+        }
+
+        :global(.ant-space-item:nth-child(2)) {
+          width: 120px;
+          flex-shrink: 0;
+        }
+
+        :global(.ant-space-item:nth-child(4)) {
+          flex-grow: 1;
+        }
+      }
+
+      .update-field-icon {
+        display: flex;
+        margin-top: 8px;
+      }
+    }
+
+    .tip {
+      color: #7a8599;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+
+  &-footer {
+    text-align: right;
+
+    :global(.ant-btn) {
+      margin-right: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

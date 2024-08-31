@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+for i in `find ./ -iname "*.png"`
+do
+echo $i;
+output=`curl -XPOST --fail -F "file=@$i" "http://storage.lx.netease.com/api/pub/file/upload?bizCode=lxbg-df1788e"`;
+echo "$i--$output ;" >> upload.txt ;
+ done

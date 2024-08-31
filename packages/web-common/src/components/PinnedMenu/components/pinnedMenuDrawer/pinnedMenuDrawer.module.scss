@@ -1,0 +1,77 @@
+.content {
+  color: #272e47;
+  font-family: PingFang SC;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  position: relative;
+  height: 100%;
+
+  .useful {
+    height: 124px;
+    padding: 0 20px;
+    .items {
+      margin-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 16px;
+      row-gap: 15px;
+    }
+  }
+
+  .all {
+    box-sizing: border-box;
+    height: calc(100% - 124px);
+    padding: 24px 0 0 0;
+
+    .group {
+      .box {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 16px;
+        row-gap: 15px;
+      }
+
+      margin-top: 24px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+:global(.lang-en) {
+  .content {
+    :global(.ant-tabs-tab) {
+      padding: 9px 0px !important;
+    }
+  }
+}
+
+:global {
+  .edmPinnedMenuDrawer {
+    div.ant-drawer-body {
+      padding: 0;
+    }
+  }
+
+  .edmPinnedMenuTabs {
+    height: 100%;
+    .ant-tabs-content-holder {
+      height: calc(100% - 56px);
+      overflow: auto;
+      margin-left: 20px;
+    }
+    .ant-tabs-tab {
+      padding: 9px 10px !important;
+    }
+
+    .ant-tabs-tab-btn {
+      text-overflow: ellipsis;
+      max-width: 90px;
+      overflow: hidden;
+    }
+  }
+}

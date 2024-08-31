@@ -1,0 +1,128 @@
+.content-editor {
+  padding: 8px 12px;
+  background: #ffffff;
+  border: 1px solid $Line-3;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+
+  .editor {
+    height: 212px;
+    overflow: auto;
+
+    :global {
+      .DraftEditor-root,
+      .DraftEditor-editorContainer,
+      .public-DraftEditor-content {
+        height: 100%;
+      }
+
+      .DraftEditor-root {
+        position: relative;
+      }
+
+      .public-DraftEditorPlaceholder-root {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        color: #bfbfbf;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 8px;
+
+    .remain-length {
+      color: $Text-3;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px;
+      margin-right: auto;
+
+      &-error {
+        color: $Error-6;
+      }
+    }
+
+    .ai-replace,
+    .ai-refine {
+      display: flex;
+      align-items: center;
+      padding: 2px 10px;
+      background-color: $Fill-2;
+      border-radius: 12px;
+      cursor: pointer;
+
+      &.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      &:hover {
+        background-color: $Fill-2_5;
+      }
+
+      .replace-icon,
+      .refine-icon {
+        margin-right: 4px;
+      }
+
+      .replace-text,
+      .refine-text {
+        color: $Text-5;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+
+    .separator {
+      width: 1px;
+      height: 12px;
+      background-color: $Line-2;
+      margin: 0 10px;
+    }
+
+    .emoji-wrapper {
+      position: relative;
+      z-index: 1;
+
+      & > div {
+        display: flex;
+      }
+    }
+
+    .emoji-trigger {
+      cursor: pointer;
+    }
+
+    .emoji-popper {
+      position: absolute;
+      top: 20px;
+      right: 0;
+    }
+  }
+}
+
+.content-editor.disabled {
+  background-color: $Fill-2;
+  cursor: not-allowed;
+
+  .emoji-trigger {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.hashtag {
+  color: #1ca782;
+}
+
+:global(.ant-form-item-has-error) .content-editor {
+  border-color: #fe5b4c;
+}

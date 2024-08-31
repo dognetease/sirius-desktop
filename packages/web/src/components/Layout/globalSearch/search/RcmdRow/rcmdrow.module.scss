@@ -1,0 +1,47 @@
+@import '@web-common/styles/variables.scss';
+@import '@web-common/styles/waimao/varies.scss';
+// @import '@/styles/mixin.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+
+  .tip {
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: $Brand-6;
+    padding-right: 8px;
+    flex-shrink: 0;
+    line-height: 30px;
+    align-self: flex-start;
+  }
+
+  .list {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    .item {
+      position: relative;
+      background: $Brand-1;
+      border-radius: 28px;
+      padding: 4px 12px 4px 36px;
+      @include p1-4-med14;
+      color: $Text-5;
+      cursor: pointer;
+      &::before {
+        content: '';
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        position: absolute;
+        background: url(./search.svg) center center no-repeat;
+        background-size: 16px;
+        left: 12px;
+        top: 7px;
+      }
+    }
+  }
+}

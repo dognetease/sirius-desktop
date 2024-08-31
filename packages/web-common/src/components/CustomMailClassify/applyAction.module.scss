@@ -1,0 +1,59 @@
+.classify-apply {
+  position: relative;
+  margin: 4px 0;
+  display: flex;
+  align-items: flex-start;
+  :global(.ant-form-item) {
+    margin-bottom: 0;
+    width: 100%;
+  }
+  :global(.ant-select-selection-item) {
+    background: $Fill-2_5;
+    border-radius: 12px;
+    border: none;
+    margin-right: 8px;
+  }
+  :global(.ant-select-selector) {
+    padding-left: 8px;
+  }
+  :global(.ant-checkbox-group) {
+    display: flex;
+    flex-direction: column;
+  }
+  :global(.ant-checkbox-wrapper) {
+    cursor: pointer;
+    line-height: 32px;
+    width: 100%;
+    padding: 0 14px;
+    &:hover {
+      background: #f0f0f1;
+    }
+  }
+  :global(.ant-form-item-explain) {
+    // fix SIRIUS-3713
+    // position: absolute;
+    // bottom: -24px;
+  }
+  :global(.ant-select-clear) {
+    color: $Fill-5;
+    &:hover {
+      color: $Fill-6;
+    }
+  }
+  :global(.ant-select-selection-search) {
+    margin-left: 2px;
+  }
+  .classify-apply-title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    // color: #262a33;
+    color: $font-color-2;
+    margin-right: 8px;
+    margin-top: 10px;
+    flex: none;
+  }
+  .classify-apply-select {
+    cursor: pointer;
+  }
+}

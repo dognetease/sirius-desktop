@@ -1,0 +1,106 @@
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  .tree-container {
+    position: relative;
+    flex: 0 0 150px;
+    height: 100%;
+    padding-top: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    &::after {
+      display: block;
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      opacity: 0.2;
+      background: #939cad;
+      transform: scaleX(0.5);
+    }
+
+    // .tree{
+    //   :global(.ant-tree-treenode){
+    //     padding: 0;
+    //     // 此处有些 hack. 主要是为了设置不同 margin-bottom
+    //     &:nth-child(1){
+    //       margin-bottom: 11px;
+    //     }
+    //     &:nth-child(2){
+    //       margin-bottom: 14px;
+    //     }
+    //     &:nth-child(3){
+    //       margin-bottom: 14px;
+    //     }
+    //     &:nth-child(4){
+    //       margin-bottom: 19px;
+    //     }
+    //     &:nth-child(5){
+    //       margin-bottom: 11px;
+    //     }
+    //     &:nth-child(6){
+    //       margin-bottom: 14px;
+    //     }
+    //     &:nth-child(7){
+    //       margin-bottom: 14px;
+    //     }
+    //   }
+    //   :global(.ant-tree-node-content-wrapper){
+    //     height: 22px;
+    //     min-height: unset;
+    //     margin-left: 8px;
+    //     padding: 0;
+    //   }
+    //   :global(.ant-tree-indent-unit){
+    //     width: 0;
+    //   }
+    //   :global(.ant-tree-title){
+    //     font-family: 'PingFang SC';
+    //     font-style: normal;
+    //     font-weight: 400;
+    //     font-size: 14px;
+    //     line-height: 22px;
+    //     color: #4E5A70;
+    //     display: inline-block;
+    //   }
+    //   :global(.ant-tree-switcher){
+    //     width: 8px;
+    //     height: 22px;
+    //   }
+    //   :global(.ant-tree-node-selected){
+    //     background: transparent;
+    //     :global(.ant-tree-title){
+    //       font-weight: 500;
+    //       color: #232D47;
+    //     }
+    //   }
+    //   :global(.ant-tree-iconEle){
+    //     display: inline-flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     width: initial;
+    //     height: 22px;
+    //   }
+    //   :global(.ant-tree-icon__customize){
+    //     margin-right: 4px;
+    //   }
+    // }
+  }
+  .grid-container {
+    flex: 1;
+    height: 100%;
+  }
+}
+
+.iframe-container {
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+}

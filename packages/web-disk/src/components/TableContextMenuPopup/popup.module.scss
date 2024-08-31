@@ -1,0 +1,40 @@
+.popup {
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+  background-clip: padding-box;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  left: 0px;
+  list-style-type: none;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  position: fixed;
+  text-align: left;
+  width: 132px;
+  top: 0px;
+  padding: 8px 0;
+  overflow: hidden;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  width: auto;
+  li {
+    clear: both;
+    color: rgba(0, 0, 0, 0.65);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+    margin: 0;
+    padding: 5px 16px;
+    transition: all 0.3s;
+    white-space: nowrap;
+    -webkit-transition: all 0.3s;
+    &:hover {
+      background-color: #f0f0f1;
+    }
+    i {
+      // margin-right: 8px;
+    }
+  }
+}

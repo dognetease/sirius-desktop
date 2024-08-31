@@ -1,0 +1,572 @@
+.validEmailAddress {
+  height: 100%;
+  :global(.ant-checkbox-wrapper + .ant-checkbox-wrapper) {
+    margin: 0;
+  }
+  .modalBody {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .action-area {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $Text-5;
+      padding: 10px 0px;
+      @include h1-4-med16;
+      background-color: $Fill-2;
+      border-radius: 4px;
+      width: 100%;
+      margin-top: 4px;
+      .color {
+        color: $Brand-6;
+      }
+    }
+    .tips {
+      line-height: 22px;
+      height: 44px;
+      color: #747a8c;
+      margin-bottom: 8px;
+    }
+    .title-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0px 8px;
+      .title {
+        color: $Text-5;
+        @include p1-4-med14;
+        padding-left: 6px;
+        position: relative;
+        &::before {
+          content: '';
+          width: 2px;
+          height: 14px;
+          background-color: $Brand-6;
+          position: absolute;
+          top: 4px;
+          left: 0;
+        }
+      }
+      .input {
+        width: 240px;
+      }
+    }
+    .parentList {
+      margin-bottom: 12px;
+      background-color: $Fill-1;
+      padding: 12px 16px;
+      border-radius: 4px;
+      :global(.ant-divider) {
+        margin: 12px 0 10px !important;
+      }
+      .parentBox {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        .parentAll {
+          color: $Text-5;
+          @include c4-4-med12;
+        }
+      }
+      .parentAllWrap {
+        position: relative;
+        line-height: 20px;
+      }
+      .parentSquare {
+        width: 10px;
+        height: 10px;
+        border: 1px solid $Line-3;
+        position: absolute;
+        left: 41px;
+        top: 29px;
+        border-radius: 2px;
+        transform: rotate(45deg);
+        background-color: $Fill-1;
+        &::after {
+          content: '';
+          width: 8px;
+          height: 16px;
+          display: inline-block;
+          position: absolute;
+          top: 0px;
+          left: 2px;
+          transform: rotate(45deg);
+          background-color: $Fill-1;
+        }
+      }
+      .parentGroup {
+        display: block;
+      }
+      .parentItem {
+        // margin: 0px 20px 10px 0px;
+      }
+    }
+    .childContainer {
+      position: relative;
+      border: 1px solid rgba(38, 42, 51, 0.06);
+      border-radius: 4px;
+      width: 100%;
+      flex-grow: 1;
+      .childTitle {
+        width: 100%;
+        padding: 0 0 0 16px;
+        height: 44px;
+        background: #f9fafb;
+        display: flex;
+        align-items: center;
+      }
+      .childTable {
+        width: 100%;
+        display: flex;
+        padding: 12px 0;
+        &:nth-child(2n) {
+          background-color: $Fill-1;
+        }
+      }
+      // .checkbox {
+      //   width: 20px;
+      //   padding-right: 16px;
+      // }
+      .contact {
+        width: 268px;
+        padding: 0 16px;
+        display: flex;
+        flex: none;
+        svg {
+          flex: none;
+          margin-top: 3px;
+        }
+      }
+      .handle-icon {
+        cursor: pointer;
+      }
+      .contact-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .dropdown {
+        position: relative;
+        width: 460px;
+        padding: 0 16px;
+        overflow: hidden;
+        height: 20px;
+        flex: none;
+        &-open {
+          height: inherit;
+        }
+      }
+      .dropdown-tag {
+        border-radius: 2px;
+        padding: 2px 6px;
+        background-color: $Fill-3;
+        color: $Text-5;
+        @include c4-1-reg12;
+      }
+      .dropdown-text {
+        padding: 2px 8px;
+        margin-left: -8px;
+      }
+      .dropdown-tag-red {
+        background-color: $Error-1;
+      }
+      .dropdown-unfold {
+        height: auto;
+      }
+      .dropdown-mirror {
+        display: flex;
+        gap: 4px;
+        position: absolute;
+        top: -100px;
+      }
+      .dropdown-content {
+        :global(.ant-tag) {
+          margin: 0;
+        }
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .dropdown-content-width {
+        width: 370px;
+      }
+      .fold {
+        color: $Text-3;
+        @include c4-3-reg12;
+        cursor: pointer;
+        flex: none;
+        position: absolute;
+        left: 400px;
+        top: 0;
+      }
+      .remark {
+        width: 80px;
+        padding: 0 16px;
+        flex: none;
+        .remarkItem {
+          display: flex;
+          align-items: center;
+          svg {
+            margin-right: 8px;
+          }
+        }
+      }
+      .remarks {
+        width: 80px;
+        padding: 0 16px;
+        flex: none;
+        color: $Brand-6;
+        @include p1-3-reg14;
+        line-height: 18px;
+        cursor: pointer;
+      }
+      .childList {
+        // height: 340px;
+        height: 100%;
+        overflow-y: auto;
+        padding-left: 16px;
+        // padding-top: 44px;
+        /* 设置滚动条的样式 */
+        &::-webkit-scrollbar {
+          opacity: 1;
+          display: block;
+          background-color: transparent;
+          width: 6px;
+          padding-right: 4px;
+          &:horizontal {
+            height: 6px;
+          }
+        }
+        /*滚动条两端方向按钮*/
+        &::-webkit-scrollbar-button {
+          display: none;
+        }
+        /*滚动条中间滑动部分*/
+        &::-webkit-scrollbar-thumb {
+          background: #d4d4d6;
+          border-radius: 3px;
+          padding-right: 4px;
+          // right: 4px;
+          width: 6px;
+          opacity: 0;
+          &:hover {
+            background: #dddddd;
+          }
+        }
+        /*滚动条右下角区域*/
+        &::-webkit-scrollbar-corner {
+          display: none;
+        }
+        .childCheck {
+          display: flex;
+        }
+      }
+      .childListEmpty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 16px;
+        color: $Text-3;
+        @include c4-1-reg12;
+        height: 100%;
+      }
+    }
+    .inProgressWrap {
+      // text-align: center;
+      // height: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // justify-content: center;
+      .stage-title {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1;
+        color: #000000;
+        margin: 8px 0 12px;
+      }
+      .valid-mail-table {
+        // min-height: 144px;
+        height: 322px;
+        border: 1px solid rgba(38, 42, 51, 0.06);
+        border-radius: 4px;
+
+        :global(.ant-table-tbody > tr > td) {
+          border-bottom: none;
+        }
+
+        :global(.ant-table) {
+          font-size: 12px;
+        }
+
+        :global(.ant-table-thead .ant-table-cell::before) {
+          display: none;
+        }
+
+        :global(.ant-table-filter-column .ant-table-filter-trigger) {
+          display: none;
+        }
+
+        :global(.ant-empty-normal) {
+          visibility: hidden;
+        }
+      }
+
+      .color {
+        color: #386ee7;
+      }
+
+      :global(.ant-modal-footer) {
+        border: none;
+        padding: 0 16px 10px;
+      }
+
+      .valid-mail-table {
+        min-height: 144px;
+        border: 1px solid rgba(38, 42, 51, 0.06);
+        border-radius: 4px;
+
+        :global(.ant-table-tbody > tr > td) {
+          border-bottom: none;
+        }
+
+        :global(.ant-table) {
+          font-size: 12px;
+        }
+
+        :global(.ant-table-thead .ant-table-cell::before) {
+          display: none;
+        }
+
+        :global(.ant-table-filter-column .ant-table-filter-trigger) {
+          display: none;
+        }
+      }
+
+      :global(.editable-cell-value-wrap) {
+        padding: 4px 8px;
+        cursor: pointer;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border: 1px solid transparent;
+        border-radius: 2px;
+      }
+
+      :global(.editable-cell) {
+        padding: 4px 0 !important;
+
+        :global(.ant-input) {
+          padding: 4px 8px;
+          font-size: 12px;
+          box-shadow: none;
+
+          &:focus {
+            border-color: #386ee7;
+          }
+        }
+      }
+
+      :global(.ant-table-row:hover .editable-cell-value-wrap) {
+        padding: 4px 8px;
+        border-color: #d9d9d9;
+      }
+    }
+
+    .inNewProgressWrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      .percentInfo {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+        color: #272e47;
+        margin: 7px 0px 12px 0px;
+      }
+      // .color1 {
+      //     color: #386EE7
+      // }
+      .color {
+        color: #4c6aff;
+      }
+      .tipsInfo {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+        color: #747a8c;
+      }
+      .progress {
+        width: 320px;
+        margin: 8px 0px 16px 0px;
+      }
+      .warnInfo {
+        width: 320px;
+        height: 192px;
+        background: #f8f9fa;
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #3f465c;
+        padding: 24px 18px;
+        .warnInfoItem {
+          display: flex;
+          align-items: center;
+          margin-bottom: 16px;
+          .warnInfoText {
+            margin-left: 15px;
+          }
+        }
+      }
+      .newBtns {
+        margin-top: 24px;
+        display: flex;
+        gap: 12px;
+        :global(.lx-btn) {
+          width: 154px;
+          margin: 0;
+        }
+        :global(.lx-btn > .anticon) {
+          vertical-align: -2px;
+        }
+        .btn-icon {
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+  :global(.ant-modal-footer) {
+    border-top: none;
+    padding: 16px 24px;
+  }
+  .footer-operation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $Text-3;
+    @include p1-3-reg14;
+  }
+  .footer-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    :global(.lx-btn) {
+      margin: 0;
+    }
+  }
+  .footer-operation-hide-modal {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 16px 20px;
+    width: 100%;
+    border-top: 1px solid $Line-2;
+  }
+}
+.minimizeModal {
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  width: 432px;
+  height: 122px;
+  background: #ffffff;
+  box-shadow: 0px 4px 6px rgba(38, 42, 51, 0.1);
+  border-radius: 8px;
+  z-index: 999;
+  overflow: hidden;
+  display: flex;
+  padding: 12px;
+  .minimizeContent {
+    flex: 1;
+    .percentInfo {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      line-height: 24px;
+      color: #272e47;
+      margin: 8px 0px 4px 0px;
+    }
+    .color {
+      color: #4c6aff;
+    }
+    .tipsInfo {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      height: 16px;
+      color: #747a8c;
+      margin-bottom: 8px;
+    }
+    :global(.lx-btn) {
+      color: #4c6aff;
+      border: 1px solid #4c6aff;
+      border-radius: 4px;
+      padding: 4px 10px;
+    }
+  }
+  .maximize {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.invalid-warning {
+  border-radius: 4px;
+  margin-top: 8px;
+  height: 32px;
+  .left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+    @include c4-3-reg12;
+    color: $Text-5;
+  }
+  .warning-icon {
+    margin-top: -2px;
+  }
+  .close-icon {
+    cursor: pointer;
+  }
+  background: rgba(255, 181, 76, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 0px 12px;
+}
+
+.hollow {
+  z-index: 9999;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .dropdown {
+    width: auto;
+  }
+}

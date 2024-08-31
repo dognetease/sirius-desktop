@@ -1,0 +1,27 @@
+.page {
+  height: 100%;
+  background: #f6f7fa;
+  header {
+    padding-top: 20px;
+    padding-left: 16px;
+    line-height: 22px;
+    @include p1-3-reg14;
+    color: var(--text-3, #747a8c);
+
+    svg {
+      vertical-align: -3px;
+    }
+
+    .curr {
+      @include p1-4-med14;
+      color: var(--text-5, #272e47);
+    }
+  }
+}
+.table-wrap {
+  margin: 14px 16px 0;
+  padding: 16px;
+  height: calc(100% - 42px);
+  overflow: hidden auto;
+  background: #fff;
+}

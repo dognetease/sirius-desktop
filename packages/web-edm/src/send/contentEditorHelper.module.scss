@@ -1,0 +1,72 @@
+.root {
+  position: relative;
+  height: 100%;
+
+  .content {
+    border-left: 1px solid $Line-2;
+    position: relative;
+    background: $Fill-1;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+
+    .item {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 36px;
+      background: #fff;
+      @include p1-3-reg14;
+      color: $Text-3;
+      border: 1px solid $Line-2;
+      border-top: none;
+    }
+
+    .item-selected {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 36px;
+      @include p1-4-med14;
+      color: $Text-5;
+    }
+  }
+  .op-icon {
+    position: absolute;
+    left: -24px;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin: 0 auto;
+  }
+
+  .red-dot {
+    right: 6px;
+    top: 2px;
+    position: absolute;
+
+    border-radius: 8px;
+    background: $Error-6;
+    display: inline-flex;
+    height: 16px;
+    min-width: 16px;
+    padding: 0px 4px;
+
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    color: #fff;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 11px;
+  }
+}

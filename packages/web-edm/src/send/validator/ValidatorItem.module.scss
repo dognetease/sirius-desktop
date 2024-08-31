@@ -1,0 +1,54 @@
+.wrap {
+  border-radius: 4px;
+  border: 1px solid var(--unnamed, #fff);
+  background: var(--unnamed, #fff);
+  padding: 0 12px;
+  cursor: pointer;
+  .header {
+    // height: 36px;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left-info {
+      color: var(--text-5, #272e47);
+      /* 灵犀桌面2.0/C4.3-Reg12 */
+      font-family: PingFang SC;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      max-width: 198px;
+      white-space: normal;
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      .right-number {
+        color: var(--warning-6, #ffb54c);
+        text-align: right;
+        font-family: LX-numbers;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        white-space: nowrap;
+      }
+      .right-btn {
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        display: flex;
+        margin-left: 4px;
+        align-items: center;
+      }
+      .hidden {
+        visibility: hidden;
+      }
+    }
+  }
+  .bottom {
+    border-top: 1px solid #f0f1f5;
+    padding: 8px 0;
+  }
+}

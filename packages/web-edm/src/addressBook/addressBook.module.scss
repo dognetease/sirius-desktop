@@ -1,0 +1,76 @@
+// .table {
+
+//   :global(.ant-table-thead .ant-table-cell) {
+//     color: #7a8599;
+//     font-weight: 400;
+//     font-size: 14px;
+//     background: #FFFFFF;
+//     border-bottom: 1px solid #F9FAFB;
+//   }
+
+//   :global(.ant-table-header) {
+//     border-radius: 8px;
+//   }
+
+//   :global(.ant-table-cell) {
+//     &::before {
+//       display: none;
+//     }
+//   }
+
+//   :global(.ant-spin-dot) {
+//     transform: translate(-50%, -50%);
+//     margin: 0 !important;
+//   }
+// }
+
+// .table-deep-head {
+
+//   :global(.ant-table-thead .ant-table-cell) {
+//     background: #F9FAFB;
+//   }
+// }
+
+.address-book {
+  a {
+    color: $Brand-6;
+  }
+
+  :global(.ant-btn) {
+    border-radius: 4px;
+    border-color: transparent;
+    background-color: $Fill-3;
+  }
+
+  :global(.ant-btn-primary) {
+    background-color: $Brand-6 !important;
+  }
+
+  :global(.ant-pagination-item-active) {
+    background-color: $Brand-6 !important;
+  }
+
+  :global(.ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)) {
+    box-shadow: none;
+    border-color: transparent;
+    background-color: $Brand-6 !important;
+  }
+
+  :global(.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn, .ant-tabs-tab:hover) {
+    color: $Brand-6 !important;
+  }
+
+  :global(.ant-select-item-option-selected:not(.ant-select-item-option-disabled)) {
+    color: $Brand-6;
+    font-weight: normal;
+    background: #f0f0f1;
+  }
+}
+
+.contactListContainer {
+  height: auto !important;
+  margin-bottom: 20px;
+  // border:solid 1px $Fill-3
+  border-radius: 4px;
+  background: #fff;
+}

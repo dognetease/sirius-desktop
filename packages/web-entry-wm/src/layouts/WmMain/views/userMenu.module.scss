@@ -1,0 +1,202 @@
+//@import '../../../styles/varies.scss';
+@import '@web-common/styles/waimao/varies.scss';
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.container {
+  width: 229px;
+  background-color: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 8px;
+
+  > li {
+    display: flex;
+    align-items: center;
+    height: 38px;
+    padding-left: 20px;
+    color: $label-6_3;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $Fill-2_5;
+    }
+
+    &:last-child {
+      border-top: 1px solid $Fill-2;
+    }
+
+    > span {
+      width: 100%;
+    }
+  }
+  .new-account {
+    display: inline-block;
+    margin-left: 8px;
+    border-radius: 2px;
+    padding: 1px 4px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #fff;
+    background: #ffb54c;
+  }
+
+  .uMenu {
+    > li {
+      display: flex;
+      align-items: center;
+      height: 38px;
+      padding-left: 20px;
+      color: $label-6_3;
+      cursor: pointer;
+
+      position: relative;
+
+      &:hover {
+        background-color: $Fill-2_5;
+
+        .liContainer {
+          display: block;
+        }
+      }
+      .liContainer {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: -88px;
+        border-radius: 4px;
+        width: 88px;
+        background-color: #fff;
+        list-style: none;
+        padding: 4px 0;
+        margin: 0;
+      }
+
+      > span {
+        width: 100%;
+      }
+    }
+
+    margin-bottom: 8px;
+  }
+
+  .logout {
+    height: 44px;
+  }
+}
+.accountContainer {
+  width: 100%;
+  height: auto;
+
+  .list {
+    height: auto;
+    max-height: 192px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    .accountItem {
+      height: 56px;
+      background-color: #ffffff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+
+      .avator {
+        width: 28px;
+        height: 28px;
+        margin-right: 8px;
+        margin-left: 8px;
+        position: relative;
+
+        .avatarLoadingWrap {
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          border-radius: 50%;
+          background-color: rgb(255, 255, 255);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 2;
+        }
+        .avatarLoading {
+          @include sirius-background-image(28px, 28px, url('@/images/icons/common/loading.svg'));
+          // @include sirius-spin-animation;
+          animation: spin 1s linear infinite;
+        }
+      }
+      .right {
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        .name {
+          color: $Text-5;
+          font-family: 'PingFang SC';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 12px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .email {
+          color: $Text-4;
+          font-family: 'PingFang SC';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      &:hover {
+        background-color: $Fill-2;
+      }
+    }
+  }
+  .addbtn {
+    height: 52px;
+    background-color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+
+    &:hover {
+      background-color: $Fill-2;
+    }
+    .avator {
+      width: 28px;
+      height: 28px;
+      margin-right: 8px;
+      margin-left: 8px;
+      background-color: $Fill-2_5;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .right {
+      flex: 1;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      color: $Text-4;
+    }
+  }
+}

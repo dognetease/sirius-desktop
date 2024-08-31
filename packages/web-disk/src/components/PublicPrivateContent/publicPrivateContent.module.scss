@@ -1,0 +1,127 @@
+.publicPrivateContent {
+  height: 100%;
+  padding: 16px 16px 24px 16px;
+  // background: #f4f4f5;
+  background-color: $white-bg;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .dragMask {
+    width: 100%;
+    height: 100%;
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    box-sizing: border-box;
+    * {
+      // 避免子元素触发ondragleave
+      pointer-events: none;
+    }
+    .dashArea {
+      width: 100%;
+      height: 100%;
+      border: 1px dashed rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .dragIntro {
+        font-family: PingFang HK;
+        font-weight: 500;
+        font-size: 14px;
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      }
+    }
+  }
+  .content-head {
+    width: 100%;
+    flex: none;
+    position: sticky;
+    top: 0;
+    display: flex;
+    // background: #f4f4f5;
+    background-color: $white-bg;
+  }
+  .rest-body {
+    width: 100%;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    :global(.os-host) {
+      height: 100%;
+    }
+    .folders-title {
+      margin-bottom: 6px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+    }
+    .fileTitle {
+      margin-bottom: 12px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+    }
+    .table-container {
+      height: unset;
+      :global(.spin-label) {
+        display: none;
+      }
+    }
+  }
+  h6 {
+    color: $font-color-2;
+  }
+}
+
+.staticContent {
+  background-color: #ff3164;
+  width: 100%;
+  height: 300px;
+}
+
+.empty-page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lock {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f5;
+  .lock-desc {
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+  }
+  .lock-deal {
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+    font-size: 10px;
+    a {
+      margin-left: 5px;
+      color: $Brand-5;
+    }
+  }
+}
+
+.restart {
+  color: #386ee7;
+  font-size: 12px;
+  cursor: pointer;
+}

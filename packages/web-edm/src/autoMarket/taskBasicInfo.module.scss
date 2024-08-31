@@ -1,0 +1,152 @@
+.container {
+  padding: 20px 24px 12px;
+  background: #fff;
+  border-radius: 8px;
+  min-height: 271px;
+
+  .head {
+    .title {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 20px;
+      color: #232d47;
+      vertical-align: middle;
+    }
+
+    .status {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 12px;
+      padding: 4px;
+      margin-left: 12px;
+      background: #ebf3fe;
+      border-radius: 2px;
+      color: #5968b2;
+      vertical-align: middle;
+    }
+
+    .desc {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      color: #a9b2c2;
+      margin-top: 10px;
+    }
+  }
+
+  .divider {
+    margin: 20px 0;
+  }
+
+  .body {
+    position: relative;
+    .btn-more {
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+    }
+    :global(.ant-descriptions-header) {
+      margin-bottom: 12px;
+      margin-top: 14px;
+    }
+
+    :global(.ant-descriptions-title) {
+      font-size: 14px;
+      line-height: 22px;
+      color: #232d47;
+    }
+
+    :global(.ant-descriptions-item) {
+      padding-bottom: 8px;
+    }
+
+    :global(.ant-descriptions-item-label) {
+      color: #4e5a70;
+    }
+
+    :global(.ant-descriptions-item-content) {
+      color: #7a8599;
+    }
+  }
+}
+
+.popover-content {
+  padding: 24px 24px 20px;
+  :global {
+    .ant-descriptions-header {
+      margin-bottom: 0;
+    }
+    .ant-descriptions-item-label {
+      margin-top: 12px;
+    }
+  }
+  :global(.ant-descriptions-item) {
+    padding-bottom: 4px;
+  }
+
+  :global(.ant-descriptions-item-label) {
+    font-size: 12px;
+    line-height: 20px;
+    color: #7a8599;
+  }
+
+  :global(.ant-descriptions-item-content) {
+    font-size: 12px;
+    line-height: 20px;
+    color: #232d47;
+  }
+  .task-multi-time {
+    :global(.ant-descriptions-item-content) {
+      display: block;
+    }
+  }
+}
+
+.email-content {
+  color: #232d47;
+  white-space: nowrap;
+  max-width: 90px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-right: 4px;
+}
+
+.btn-link {
+  min-width: unset;
+  padding: 0;
+  border: none;
+  color: #4c6aff;
+  cursor: pointer;
+
+  &:hover {
+    border: none;
+    background: transparent;
+  }
+}
+
+.open-email-content {
+  cursor: pointer;
+}
+
+.preview-email-subject {
+  line-height: 22px;
+  font-size: 18px;
+  font-weight: 500;
+  word-break: break-all;
+  margin-bottom: 12px;
+}
+
+.tag {
+  background: #deebfd;
+  color: #4759b2;
+  margin-left: 8px;
+  margin-right: 0;
+}
+
+.aiTag {
+  background: #ede4ff;
+  color: #7a51cb;
+}

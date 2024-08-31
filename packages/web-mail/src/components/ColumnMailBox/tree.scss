@@ -1,0 +1,352 @@
+@import '../../../../web/src/styles/varies';
+$mail-btn-back-color: rgba(
+  $color: $Text-5,
+  $alpha: 0.07,
+);
+$mail-btn-color: rgba(
+  $color: $Text-5,
+  $alpha: 0.9,
+);
+
+.edti-tree-wrap {
+  .ant-tree {
+    background: transparent;
+    font-size: 12px;
+
+    .ant-tree-treenode {
+      position: relative;
+      // padding: 6px 0 6px 9px;
+      height: 36px;
+      // overflow: hidden;
+      // font-weight: 500;
+      cursor: pointer;
+
+      .ant-tree-title {
+        display: flex;
+        position: relative;
+        flex: 1;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .leaf-node {
+        font-weight: 400;
+      }
+
+      .ant-tree-switcher {
+        width: 15px;
+        padding-left: 5px;
+        line-height: 36px;
+      }
+
+      .ant-tree-node-content-wrapper {
+        padding: 6px 0 6px 9px;
+        display: flex;
+        word-break: keep-all;
+        color: $mail-btn-color;
+        font-size: 14px;
+
+        // overflow: hidden;
+        &:hover {
+          background: none;
+        }
+
+        .ant-tree-iconEle {
+          margin: 0px 9px 0 0;
+          width: 16px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .ant-tree-node-content-wrapper.ant-tree-node-selected {
+        background: none;
+      }
+    }
+
+    .ant-tree-treenode:hover {
+      background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+    }
+
+    .ant-tree-treenode.ant-tree-treenode-selected {
+      // background: rgba($Link-2-r, $Link-2-g, $Link-2-b, 0.9);
+      background-color: $Line-2;
+    }
+
+    // .ant-tree-treenode-disabled {
+    //     opacity: 0.5;
+    // }
+  }
+
+  .ant-tree-switcher .ant-tree-switcher-icon,
+  .ant-tree-switcher .ant-select-tree-switcher-icon {
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+  }
+
+  .edit-tree-title-wrap {
+    flex: 1 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    padding-right: 12px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    display: flex;
+
+    .edit-tree-loading-wrap {
+      padding-right: 10px;
+      display: inline-block;
+    }
+
+    .edit-tree-input {
+      height: 28px;
+      border-radius: 4px;
+      border: 1px solid $Avatar-6;
+    }
+  }
+
+  .u-tree-dropmenu {
+    width: 200px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+    // 防止菜单被electron的拖动区域阻拦
+    -webkit-app-region: no-drag;
+
+    &.ant-dropdown {
+      // 防止遮挡 .ant-menu-submenu-popup
+      z-index: 1050;
+    }
+
+    .ant-menu-light .ant-menu-item:hover {
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    }
+
+    .ant-dropdown-menu {
+      padding: 8px 0;
+      border-radius: 6px;
+      // background-color: $Fill-3;
+      border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+      color: #262a33;
+    }
+
+    .ant-dropdown-menu-item {
+      padding: 8px 16px;
+    }
+
+    .ant-dropdown-menu-item-active {
+      background: #f0f0f1;
+      color: rgba(0, 0, 0, 0.85);
+    }
+
+    .ant-dropdown-menu-item-divider {
+      margin: 2px 16px;
+      background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+    }
+
+    .ant-menu {
+      padding: 8px 0;
+      border-radius: 6px;
+      // background-color: $Fill-3;
+      border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+      color: #262a33;
+    }
+
+    .ant-menu-item {
+      height: 36px;
+      line-height: 36px;
+      padding: 8px 16px;
+      clear: both;
+      margin: 0;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 22px;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .ant-menu-submenu {
+      padding: 0 16px;
+      clear: both;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 22px;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      .ant-menu-submenu-expand-icon,
+      .ant-menu-submenu-arrow {
+        // color: rgba($color: $Text-2, $alpha: 1);
+        color: $Text-2;
+        margin-right: -16px;
+      }
+
+      .ant-menu-submenu-arrow::before,
+      .ant-menu-submenu-arrow::after {
+        width: 8px;
+        height: 1px;
+      }
+
+      .ant-menu-submenu-arrow::before {
+        transform: rotate(45deg) translateY(-3.5px);
+      }
+
+      .ant-menu-submenu-arrow::after {
+        transform: rotate(-45deg) translateY(3.5px);
+      }
+    }
+
+    .ant-dropdown-menu-submenu {
+      .ant-dropdown-menu-submenu-title {
+        padding: 8px 16px;
+      }
+
+      .ant-dropdown-menu-submenu-expand-icon {
+        position: absolute;
+        right: 16px;
+      }
+    }
+
+    .ant-menu-submenu-title {
+      padding: 0;
+      margin: 0;
+    }
+
+    .ant-menu-vertical .ant-menu-item:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    .ant-menu-item-active {
+      background: #f0f0f1 !important;
+      color: rgba(0, 0, 0, 0.85);
+    }
+
+    .ant-menu-item-divider {
+      height: 0.5px;
+      margin: 4px 16px;
+      background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+    }
+
+    .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+      // background-color: $Fill-3;
+      // color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      background-color: #fff;
+
+      &::hover {
+        background: #f0f0f1;
+      }
+    }
+
+    .ant-dropdown-menu-item,
+    .ant-dropdown-menu-submenu-title {
+      transition: none;
+    }
+  }
+  .folder-input-cancel {
+    color: $Avatar-6;
+    font-size: 12px;
+    cursor: pointer;
+    &:hover {
+      font-weight: 600;
+    }
+  }
+}
+
+.folder-tree-wrap.folder-tree-draging {
+  .ant-tree-indent-unit {
+    width: 22px;
+  }
+}
+
+.folder-tree-wrap.on-drag {
+  .disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+
+    .MuiTreeItem-content {
+      cursor: not-allowed;
+    }
+  }
+}
+
+.add-pdl {
+  .ant-tree-treenode {
+    padding-left: 12px;
+  }
+  .add-folder-wrap {
+    padding-left: 36px;
+  }
+  .ct-folder-emptytip {
+    margin-left: 36px;
+  }
+}
+
+.mail-subtab-wrap {
+  display: flex;
+  border-bottom: 1px solid $Fill-4;
+  width: 100%;
+  height: 48px;
+  margin-bottom: 14px;
+  padding: 0 16px;
+  gap: 32px;
+
+  .mail-subtab {
+    // padding: 10px 3px;
+    position: relative;
+    font-size: 14px;
+    line-height: 14px;
+    color: $Text-4;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .subtab-number {
+    font-size: 12px;
+    color: $Text-4;
+    padding-left: 3px;
+  }
+
+  .subtab-active {
+    color: $Avatar-6;
+    font-weight: 600;
+    .subtab-number {
+      font-size: 14px;
+      color: $Avatar-6;
+    }
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      background-color: $Avatar-6;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 0);
+    }
+  }
+}
+
+.mail-subtab-average {
+  justify-content: space-between;
+  gap: initial;
+}
+
+.folder-tree-wrap {
+  .forbid-drop {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}

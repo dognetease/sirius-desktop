@@ -1,0 +1,147 @@
+@import '../../../../web/src/styles/varies';
+.container {
+  .err {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: #fff;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .title {
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .qrcode-container {
+    display: flex;
+    align-items: center;
+    .qrcode-wrapper {
+      width: 200px;
+      height: 200px;
+      padding: 12px;
+      position: relative;
+      .err-tip {
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .err-tip-text {
+          color: #fff;
+          font-size: 18px;
+          line-height: 1.5em;
+          word-break: break-all;
+          padding: 6px;
+        }
+        .err-act-btn {
+          margin-top: 24px;
+          user-select: none;
+          border-radius: 4px;
+          background-color: white;
+          height: 32px;
+          width: 80px;
+          color: $Avatar-6;
+          text-align: center;
+          font-size: 14px;
+          line-height: 32px;
+          cursor: pointer;
+        }
+        .success-icon {
+          width: 54px;
+          height: 54px;
+          background-image: url(./../../../icons/scan-success-icon.svg);
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+    .qrcode-tip {
+      margin-left: 20px;
+      width: 140px;
+      height: 175px;
+      background-image: url('./../../../icons/scan-phone-tip.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  .qrcode-login-tip {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    line-height: 14px;
+    color: #7d8085;
+    a {
+      color: $Avatar-6;
+    }
+  }
+
+  .qrcodeTip2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    .qrcodeTip2Text {
+      color: var(--text-3, #747a8c);
+      text-align: center;
+      font-size: 14px;
+    }
+    .qrcodeTip2Sep {
+      color: var(--line-2, #ebedf2);
+    }
+    .qrcodeTip2LinkContainer {
+      display: flex;
+      align-items: center;
+      cursor: default;
+    }
+    .qrcodeTip2Link {
+      color: var(--brand-6, #4c6aff);
+      text-align: center;
+      margin-right: 4px;
+    }
+    .qrcodeTip2Icon {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: url(./../../../icons/qr-login-icon.svg) center center no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .qrcode-login-err {
+    margin-top: 24px;
+    text-align: center;
+    color: $Error-6;
+  }
+}
+
+:global {
+  .appQrCodeContainer {
+    padding: 16px;
+    .appQrCode {
+      width: 112px;
+      height: 112px;
+      background: url(./../../../icons/app-qr-code.png) center center no-repeat;
+      background-size: cover;
+      margin-bottom: 4px;
+    }
+    .appDownText {
+      color: var(--text-3, #747a8c);
+      text-align: center;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+    }
+  }
+}

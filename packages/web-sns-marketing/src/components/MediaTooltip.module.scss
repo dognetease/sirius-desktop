@@ -1,0 +1,18 @@
+.media-tooltip {
+  :global {
+    .ant-tooltip-arrow {
+      display: block !important;
+    }
+
+    .ant-tooltip-inner {
+      color: #ffffff;
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 400;
+
+      a {
+        margin-left: 12px;
+      }
+    }
+  }
+}

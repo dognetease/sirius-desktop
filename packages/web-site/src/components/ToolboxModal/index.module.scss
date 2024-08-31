@@ -1,0 +1,61 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.toolbox-modal {
+  :global {
+    .ant-modal-body {
+      padding-top: 12px;
+    }
+  }
+}
+
+.toolbox {
+  height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  &-card {
+    width: 230px;
+    height: 72px;
+    padding: 12px 16px;
+    border-radius: 4px;
+    background: $Fill-1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background: $Fill-2;
+    }
+
+    &-center {
+      flex: 1;
+      margin-left: 16px;
+    }
+
+    &-item1 {
+      color: $Text-5;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+
+    &-item2 {
+      color: $Text-4;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+
+    > img {
+      width: 40px;
+      height: 40px;
+    }
+
+    & > svg {
+      path {
+        stroke: $Fill-7;
+      }
+    }
+  }
+}

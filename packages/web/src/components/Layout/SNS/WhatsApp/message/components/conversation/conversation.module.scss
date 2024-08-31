@@ -1,0 +1,81 @@
+.conversation {
+  position: relative;
+  padding: 16px 20px;
+  display: flex;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: '';
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    height: 1px;
+    transform: scaleY(0.5);
+    background-color: $Fill-4;
+  }
+
+  &:last-child::after {
+    display: none;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    background-color: #f9fafb;
+  }
+
+  .avatar {
+    flex-shrink: 0;
+    width: 34px;
+    height: 34px;
+    margin-top: 6px;
+    margin-right: 13px;
+  }
+
+  .content {
+    flex-grow: 1;
+    overflow: hidden;
+  }
+
+  .content-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+  }
+
+  .contact-name {
+    color: $Text-5;
+    @include p1-4-med14();
+  }
+
+  .contact-whatsApp {
+    color: $Text-3;
+    @include c4-1-reg12();
+    margin-left: 4px;
+  }
+
+  .conversation-time {
+    color: $Text-2;
+    @include c4-3-reg12();
+    margin-left: auto;
+  }
+
+  .message {
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .message-content {
+    color: $Text-4;
+    @include c4-3-reg12();
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

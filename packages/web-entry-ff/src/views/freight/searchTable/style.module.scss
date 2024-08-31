@@ -1,0 +1,42 @@
+.wrapper {
+  min-width: 1280px;
+  min-height: 100%;
+  background: #f0f2f5;
+}
+
+.search {
+  position: relative;
+  // display: flex;
+  // justify-content: center;
+  background: #fff;
+}
+.content {
+  padding: 0 15px 30px;
+  .fixedTable {
+    background: #fff;
+    min-width: 1140px;
+    margin: 15px auto 0;
+  }
+
+  .tableWrapper {
+    background: #fff;
+    min-width: 1140px;
+    margin: 15px auto 0;
+    padding: 10px;
+  }
+}
+
+.subscribe {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+.shareBtn {
+  position: absolute !important;
+  display: flex;
+  align-items: center;
+  right: 30px;
+  top: 7px;
+  z-index: 200;
+}

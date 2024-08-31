@@ -1,0 +1,144 @@
+.bg {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.avatar-editor-pop-up {
+  font-size: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.85);
+
+  .defaultAvatarBg {
+    border-radius: 50%;
+    width: 476px;
+    height: 476px;
+    font-size: 175px;
+    color: #fff;
+    text-align: center;
+    line-height: 476px;
+  }
+
+  .slider {
+    padding: 2px 0;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 66px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url('https://cowork-storage-public-cdn.lx.netease.com/lxbg/2021/10/08/325331ad2b744777a26ea101d4e5d5f8.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .sliderArea {
+      margin-top: 1px;
+      width: 156px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 999px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .sliderAction {
+      width: 22px;
+      height: 14px;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    :global {
+      .ant-slider {
+        width: 142px;
+        height: 14px;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        background: transparent;
+
+        .ant-slider-rail {
+          height: 100%;
+          background: transparent;
+          border-radius: 999px;
+        }
+
+        .ant-slider-track {
+          background: transparent;
+        }
+
+        .ant-slider-handle {
+          margin: 0;
+          width: 12px;
+          height: 12px;
+          background: white;
+          border: none;
+          box-shadow: none;
+          top: 1px;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background: $white;
+    position: relative;
+
+    .changePic,
+    .deletePic {
+      margin-left: 12px;
+      border: none;
+
+      &:hover {
+        cursor: pointer;
+        color: $Brand-7;
+      }
+      &.deletePic {
+        color: $Error-6;
+        margin-left: 0;
+        padding: 0 8px;
+      }
+    }
+
+    .leftArea {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .rightArea {
+      position: absolute;
+      right: 0;
+
+      .confirm {
+        margin-right: 24px;
+      }
+
+      .cancel {
+        margin-right: 16px;
+      }
+    }
+
+    .picInput {
+      display: none;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+}

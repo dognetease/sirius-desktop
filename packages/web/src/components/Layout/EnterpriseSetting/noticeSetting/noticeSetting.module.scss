@@ -1,0 +1,64 @@
+@import '@web-common/styles/variables.scss';
+
+.page-container {
+  padding: 20px 24px 70px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  // overflow: hidden auto;
+  position: relative;
+  :global(.ant-radio-wrapper:first-child) {
+    padding-right: 80px;
+  }
+  // checkbox
+  :global(.ant-checkbox-wrapper) {
+    align-items: flex-start;
+    margin-left: 12px;
+  }
+  :global {
+    .ant-table-tbody > tr:not(:last-child) > td {
+      border-bottom: 1px solid #f0f0f0;
+    }
+  }
+
+  .pageInner {
+    flex: 1;
+    overflow: auto;
+  }
+}
+
+.page-title {
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: #232d47;
+  margin-bottom: 4px;
+
+  @include font-size(500, 20px, 28px);
+}
+.subtitle {
+  margin: 0px 0 0px;
+  @include c4-3-reg12();
+  color: #7a8599;
+}
+
+.table-column-title {
+  color: $label-6_3;
+  @include p1-4-med14();
+  margin-bottom: 0px;
+}
+.table-column-content {
+  color: #7a8599;
+  @include c4-3-reg12();
+  margin-bottom: 0;
+}
+.module-name {
+  font-weight: 500;
+  font-size: 16px;
+  color: #232d47;
+  line-height: 1;
+  margin-top: 30px;
+  margin-bottom: 16px;
+}

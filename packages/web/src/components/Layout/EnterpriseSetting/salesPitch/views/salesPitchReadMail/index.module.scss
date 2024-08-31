@@ -1,0 +1,93 @@
+/**
+ * Created by zh on 2023/3/17.
+ */
+.salesPitchReadMailContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+
+  .salesPitchHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 32px;
+    margin-bottom: 12px;
+
+    .salesPitchInputContainer {
+      display: flex;
+      align-items: center;
+      flex: 1 0 240px;
+    }
+
+    .salesPitchSettingBtn {
+      flex: 0 0 16px;
+      width: 16px;
+      height: 16px;
+      background: url('../../images/setting.png') no-repeat center center;
+      background-size: cover;
+      margin: 0 14px;
+      cursor: pointer;
+    }
+
+    .salesPitchCreateBtn {
+      flex: 0 0 16px;
+      width: 16px;
+      height: 16px;
+      background: url('../../images/add.png') no-repeat center center;
+      background-size: cover;
+      cursor: pointer;
+    }
+  }
+
+  .salesPitchContent {
+    flex: 1;
+    margin-top: 4px;
+  }
+
+  .salesPitchListCommonContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .salesPitchError {
+    width: 110px;
+    height: 96px;
+    background: url('../../images/fetch-fail.png') no-repeat center center;
+    background-size: cover;
+    margin: 0 auto;
+  }
+
+  .salesPitchNoDataContainer {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 150px;
+    transform: translateX(-50%);
+    text-align: center;
+
+    .salesPitchNoDataBlock {
+      width: 98px;
+      height: 112px;
+      background: url('../../images/no-data.png') no-repeat center center;
+      background-size: cover;
+      margin: 0 auto 20px;
+    }
+  }
+
+  .salesPitchNoDataText {
+    font-size: 14px;
+    color: #747a8c;
+    margin-top: 20px;
+  }
+
+  .refreshText {
+    font-size: 14px;
+    color: #4c6aff;
+    margin-top: 12px;
+    cursor: pointer;
+  }
+}

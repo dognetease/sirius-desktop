@@ -1,0 +1,27 @@
+.reactDatepickerWrapper {
+  display: inline-block;
+}
+.header {
+  display: flex;
+  align-items: center;
+  .date {
+    margin: 0 auto;
+  }
+  .arrow {
+    display: inline-block;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    background-size: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    &.left {
+      margin-left: 13px;
+      background-image: url('https://cowork-storage-public-cdn.lx.netease.com/common/2023/09/15/a79df0300b6e49b8a79f41238aefabf3.svg');
+    }
+    &.right {
+      margin-right: 13px;
+      background-image: url('https://cowork-storage-public-cdn.lx.netease.com/common/2023/09/15/8ff6aa82d10c4265a0730397a429d1c2.svg');
+    }
+  }
+}

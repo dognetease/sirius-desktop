@@ -1,0 +1,52 @@
+// 文字
+@mixin font-size($font-weight, $font-size, $line-height, $font-family: 'PingFang SC') {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+// @H5_Med28
+@mixin h5-med28 {
+  @include font-size(500, 28px, 36px);
+}
+
+@mixin h4-med24 {
+  @include font-size(500, 24px, 32px);
+}
+
+@mixin h3-med20 {
+  @include font-size(500, 20px, 28px);
+}
+
+@mixin h2-med18 {
+  @include font-size(500, 18px, 26px);
+}
+
+@mixin h1-4-med16 {
+  @include font-size(500, 16px, 24px);
+}
+
+@mixin h1-3-reg16 {
+  @include font-size(400, 16px, 24px);
+}
+
+@mixin p1-4-med14 {
+  @include font-size(500, 14px, 22px);
+}
+
+@mixin p1-3-reg14 {
+  @include font-size(400, 14px, 22px);
+}
+
+@mixin c4-4-med12 {
+  @include font-size(500, 12px, 20px);
+}
+
+@mixin c4-3-reg12 {
+  @include font-size(400, 12px, 20px);
+}
+
+@mixin c4-1-reg12 {
+  @include font-size(400, 12px, 16px);
+}

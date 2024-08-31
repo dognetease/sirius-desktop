@@ -1,0 +1,158 @@
+.tabContainer {
+  display: flex;
+  height: 36px;
+  align-items: center;
+  line-height: 36px;
+  padding-left: 16px;
+  padding-right: 4px;
+  background-color: #fff;
+
+  .tabStartPin {
+    flex: 0 0 80px;
+  }
+
+  .tabNav {
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    -ms-overflow-style: none; /* Edge, Internet Explorer */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+    .tabitemActive {
+      color: #4c6aff !important;
+    }
+    .tabitem {
+      height: 26px;
+      padding: 5px 12px;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      color: #545a6e;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+        height: 14px;
+        right: 0;
+        width: 1px;
+        background-color: #e1e3e8;
+      }
+
+      .closetab {
+        display: none;
+        height: 16px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        // color: #4c6aff;
+        background: #f0f2f7;
+        border-radius: 2px;
+      }
+
+      &:not(:first-child):hover {
+        padding-right: 8px;
+
+        .closetab {
+          display: block;
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+
+  .dropdownButton {
+    flex: 0 0 26px;
+    margin-left: 10px;
+  }
+}
+
+.tabDropdownContainer {
+  border: 1px solid #eceff4;
+  /* 投影/投影1-下 */
+
+  box-shadow: 0px 4px 8px rgba(35, 45, 71, 0.1);
+
+  .tabMenu {
+    border-radius: 4px;
+    width: 180px;
+    .tabMenuScrollWrap {
+      max-height: 362px;
+      overflow-y: auto;
+    }
+    &-item {
+      min-height: 32px;
+      height: 38px;
+      display: flex;
+      justify-content: center;
+      &-divider {
+        margin-bottom: 8px;
+        position: relative;
+        &::after {
+          position: absolute;
+          content: '';
+          height: 1px;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+          width: 192px;
+          bottom: -4px;
+          background-color: rgba(38, 42, 51, 0.12);
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      &:last-child::after {
+        height: 0;
+      }
+      &-txt {
+        width: 152px;
+        line-height: 22px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: inline-block;
+        word-break: break-all;
+      }
+      &:hover {
+        cursor: pointer;
+        background: #f0f0f1;
+      }
+      &:not(:first-child):hover {
+        .tabMenuItemCloseIcon {
+          display: block;
+        }
+      }
+      .tabMenuItemCloseIcon {
+        display: none;
+
+        height: 16px;
+        width: 16px;
+      }
+      &-close-txt {
+        font-size: 14px;
+        font-weight: 400;
+        color: #4e5a70;
+        &-red {
+          color: #fe5b4c;
+        }
+      }
+    }
+    :global(.ant-dropdown-menu-title-content) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}

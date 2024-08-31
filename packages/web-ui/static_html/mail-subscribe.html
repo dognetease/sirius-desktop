@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title id="documentTitle">Subscription successful</title>
+</head>
+<style>
+    *{margin:0px; padding:0px;}
+    body{font: 14px/1.0 -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", "PingFang SC", "Noto Sans", "Noto Sans CJK SC", "Microsoft YaHei", "微软雅黑", sans-serif;word-wrap: break-word; color: #000; background:#F4F5F0;}
+    a{text-decoration:none;}
+    .main{width: 640px; height:auto; margin:20px auto 0px auto; background:#fff;box-shadow: 0 1px 6px rgba(124, 124, 124, 0.42);}
+    .main .top{padding:20px;}
+    .main .content{padding:15px 20px;}
+    .main .top #title {margin-bottom: 12px;}
+    .main .top p{line-height:28px;}
+    .main .content .f_component{padding: 6px 30px 12px 30px;color:#333;}
+    .main .content form{width:100%; border-top:1px solid #ddd;}
+    .main .content form input{border:none;}
+    .main .content form p.form_title{padding:20px 0px; font-size:16px;}
+    .main .content form ul li{list-style:none; padding:6px 0px; display: flex; align-items: center;}
+    .main .content form ul li.textarea-li { align-items: flex-start; flex-wrap: wrap;}
+    .main .content form ul li.textarea-li div { display: flex; align-items: center; }
+    .main .content form ul li label{padding-left:4px;}
+    .main .content form ul li textarea{display:block; margin:20px 0px; padding: 10px;}
+    .main .content form .btn_submit{display:block; background:#3E76A7; color:#fff;  font-size:15px; font-family:"微软雅黑"; letter-spacing: 2px; padding:6px 30px;border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; margin:0px auto 0px auto; cursor: pointer;}
+    .main .content form .btn_submit:hover{background:#659CCC;}
+    .main .content form .btn_submit.disabled{background:#AAA; cursor: not-allowed;}
+    .btn_close{display:block; border: none; background:#999; color:#fff;  font-size:15px; font-family:"微软雅黑"; letter-spacing: 2px; padding:6px 30px;border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; margin:130px auto 0 auto; cursor: pointer;}
+    .footer{width:640px;height: auto; margin:0px auto 0px auto;}
+    .footer .footer_title{display:block; margin:20px  auto 0px auto; text-align:center; color: #333; background: url(../images/Logo_mini.png) 0 0 no-repeat;}
+    .header { display: flex; align-items: center; justify-content: space-between; }
+    
+    @media screen and (max-width: 480px) {
+        html, body {
+            width: 100%;
+        }
+        .main {
+            width: auto;
+            margin: 15px 15px 0 15px;
+        }
+        .main .top {
+            position: relative;
+            padding: 45px 20px 0 20px;
+        }
+        .main .header {
+            display: block;
+        }
+        .main .top h2 {
+            text-align: center;
+            font-size: 28px;
+        }
+        .main .top p {
+            text-align: center;
+            font-size: 16px;
+            line-height: 150%;
+            margin: 7px 0;
+        }
+        .main .content {
+            padding-top: 5px;
+        }
+        .main .content form p.form_title {
+            font-size: 18px;
+            padding-top: 15px;
+            padding-bottom: 12px;
+        }
+        .main .content form ul li {
+            padding: 8px;
+        }
+        .main .content form ul li label {
+            font-size: 16px;
+            padding-left: 8px;
+        }
+        .main .content form ul li textarea {
+            font-size: 16px;
+            line-height: 18px;
+        }
+        #submit {
+            -webkit-appearance:none;
+            margin-top: 15px;
+        }
+    }
+</style>
+<body>
+<div class="main">
+    <div class="top">
+        <div class="header">
+            <h2 id='title'>Subscription successful</h2>
+        </div>
+        <div class="result" style="display: none;">
+            <p>We suggest you move this email to a new folder for easy access and retrieval in the future.</p>
+            <input id='close' type="button" name="submit" value="Closed" class="btn_close">
+        </div>
+        <p id='subtitle'>Thank you for subscribing to my email.</p>
+    </div>
+    <!-- <div class="content">
+        <form action="" method="post">
+            <p id='formTitle' class="form_title">Please select from the following content that you may be interested in</p>
+            <ul id='ul'>
+                <li><input type="checkbox" class="reason_radio" name="reason" value="Shipping information" id="check_one" data-i="1"/><label id='label1' for="check_one">Shipping information</label></li>
+                <li><input type="checkbox" class="reason_radio" name="reason" value="Latest shipping rates" id="check_two" data-i="2"/><label id='label2' for="check_two">Latest shipping rates</label></li>
+                <li class="textarea-li">
+                    <div>
+                        <input class="reason_radio" type="checkbox" for="reason" name="reason" value="其他" id="check_end" data-i="3"/>
+                        <label for="check_end">Other content of interest</label>
+                    </div>
+                    <textarea maxlength="500" name="reason_input" id="reason" style="display:none;border:solid 1px #aaa;width:100%" rows="5"></textarea>
+                </li>
+            </ul>
+            <input id='submit' type="button" name="submit" value="Submitted" class="btn_submit disabled">
+        </form>
+    </div> -->
+</div>
+</body>
+</html>
+<script>
+    const queryStringToObject = url =>
+        [...new URLSearchParams(url.split('?')[1])].reduce(
+            (a, [k, v]) => ((a[k] = v), a),
+            {}
+        );
+    var options = [];
+    var others;
+
+    function submitSuccessHandler() {
+        document.querySelector('.content').style.display = "none";
+        document.querySelector('#subtitle').style.display = "none";
+        document.querySelector('.result').style.display = "block";
+    }
+    // submitSuccessHandler();
+    (function() {
+        var _reasons = document.querySelectorAll('.reason_radio');
+        var _reason = null;
+        for(var i=0,len=_reasons.length; i<len; i++){
+            _reason = _reasons[i];
+            _reason.addEventListener('change', selectReason, false);
+        }
+
+        var _submit = document.getElementById('submit');
+        _submit.addEventListener('click', formSubmit);
+    })();
+
+    function selectReason(e){
+        var elem = e.target;
+        var id = +elem.getAttribute('data-i');
+        var _otherReason = document.getElementById("reason");
+        var _submit = document.getElementById('submit');
+        if(id===3){
+            if (e.target.checked) {
+                _otherReason.style.display="block";
+                _otherReason.focus();
+            } else {
+                _otherReason.style.display="none";
+            }   
+        }
+        if (e.target.checked) {
+            options.push({
+                id,
+                value: elem.value
+            })
+        } else {
+            options = options.filter(item => item.id !== id)
+        }
+        if(options.length > 0){
+            _submit.classList.remove('disabled');
+        } else {
+            _submit.classList.add('disabled');
+        }
+    }
+
+    function formSubmit(e){
+        var elem = e.target;
+        var isDisabled = elem.className.indexOf('disabled') > -1;
+        if(isDisabled){ return; }
+        if (options.some(option => option.id === 3)){
+            if(document.getElementById("reason").value){
+                others = document.getElementById("reason").value;
+            }else {
+                others = document.getElementById('check_end').value;
+            }
+        }
+        const searchParams = new URLSearchParams(location.href);
+        const payload = {others: others || '', ...queryStringToObject(location.href)};
+        // console.log('payload', payload)
+        let queryString = new URLSearchParams(payload).toString()
+        options.forEach(option => {
+            queryString += '&options=' + option.id
+        })
+        console.log('queryString', queryString)
+        fetch("/edm-readmail/api/pub/edm/subscribe/question?" + queryString)
+            .then(res => {
+                // console.log('res', res)
+                submitSuccessHandler();
+            })
+    }
+    document.getElementById('close').addEventListener("click", function() {
+        window.close();
+    })
+</script>

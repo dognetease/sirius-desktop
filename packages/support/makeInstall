@@ -1,0 +1,38 @@
+#!/usr/bin/env node
+const shell = require('shelljs');
+const path = require('path');
+shell.echo("install new build to environment");
+const dist = 'dist/build_env.js';
+const fs = require('fs');
+
+const windowCmdContent = `@IF EXIST "%~dp0\\node.exe" (
+  "%~dp0\\node.exe"  "%~dp0\\..\\..\\..\\support\\dist\\build_env" %*
+) ELSE (
+  @SETLOCAL
+  @SET PATHEXT=%PATHEXT:;.JS;=;%
+  node  "%~dp0\\..\\..\\..\\support\\dist\\build_env" %*
+)`;
+
+shell.chmod('755', dist);
+const files = shell.ls(dist);
+for (let j of files) {
+    const n = j.replace(/^dist\//, "").replace(/\.js$/, "");
+    const nj = path.resolve(process.cwd(), j);
+    for (let i of ['api', 'env']) {
+        const symbol = '../' + i + '/node_modules/.bin/' + n;
+        const ns = path.resolve(process.cwd(), symbol);
+        console.log("from " + symbol + " to " + nj);
+        shell.ln('-sf', nj, ns);
+        if(windowCmdContent) {
+          fs.writeFileSync(ns + '.cmd', windowCmdContent,{ encoding: 'utf-8' });
+        }
+
+        const folderSymbol = '../' + i + '/src/gen';
+        const nfs = path.resolve(process.cwd(), folderSymbol);
+        shell.mkdir('-p', nfs);
+        // const src = "./gen_" + i;
+        // const nsrc =path.resolve(process.cwd(), src);
+        // console.log("from " + folderSymbol + " to " + src);
+        // shell.ln('-sf', nsrc, nfs);
+    }
+}

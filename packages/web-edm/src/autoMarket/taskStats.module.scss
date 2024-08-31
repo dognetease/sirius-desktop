@@ -1,0 +1,173 @@
+.container {
+  .tabs-box {
+    display: inline-flex;
+    gap: 8px;
+    width: 100%;
+    overflow: auto;
+    .box {
+      padding: 5px 20px;
+      line-height: 22px;
+      font-weight: 500;
+      font-size: 14px;
+      margin-top: 20px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .active {
+      background: #edf0ff;
+      border: 0.5px solid #4c6aff;
+      border-radius: 16px;
+      color: #4c6aff;
+    }
+  }
+
+  .tabs {
+    font-size: 14px;
+    line-height: 22px;
+    color: #7a8599;
+
+    :global(.ant-tabs-nav) {
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+    :global(.ant-tabs-nav-wrap) {
+      overflow-x: auto;
+    }
+    :global(.ant-tabs-nav-list) {
+      overflow-x: auto;
+    }
+
+    :global(.ant-tabs-tab) {
+      padding: 0 0 8px;
+
+      &:hover {
+        color: #7a8599;
+      }
+    }
+
+    :global(.ant-tabs-tab + .ant-tabs-tab) {
+      margin-left: 24px;
+    }
+
+    :global(.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn) {
+      color: #232d47 !important;
+      font-weight: 500;
+    }
+
+    :global(.ant-tabs-ink-bar) {
+      background-color: transparent;
+      text-align: center;
+
+      &::after {
+        display: inline-block;
+        content: '';
+        width: 28px;
+        height: 2px;
+        background-color: #4c6aff;
+        transform: translateY(-14px);
+      }
+    }
+  }
+
+  .card-tab {
+    > :global(.ant-tabs-nav) {
+      margin-bottom: 0;
+
+      :global {
+        .ant-tabs-nav-wrap {
+          margin-right: 0;
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+          overflow-x: auto;
+        }
+        .ant-tabs-tab + .ant-tabs-tab {
+          margin-left: 0 !important;
+        }
+        .ant-tabs-tab {
+          padding: 17px 20px 10px;
+          height: 100px !important;
+          background-color: #f9fafb !important;
+          align-items: flex-start;
+
+          &:nth-last-child(2) {
+            border-right-color: transparent !important;
+          }
+        }
+        .ant-tabs-tab-active {
+          background-color: #fff !important;
+        }
+      }
+    }
+
+    .sub-tabs {
+      background-color: #fff;
+      padding: 0 8px;
+      border-bottom: 0.5px solid #eaeaeb;
+
+      :global(.ant-tabs-nav) {
+        margin-bottom: 0;
+      }
+
+      :global(.ant-tabs-tab) {
+        padding: 11px 8px;
+        margin-left: 0;
+      }
+
+      :global(.ant-tabs-ink-bar) {
+        background-color: transparent;
+
+        &::after {
+          content: '';
+          width: 12px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 50%;
+          background-color: #386ee7;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  .tab-item {
+    display: flex;
+    align-items: flex-start;
+
+    .tab-icon {
+      width: 28px;
+      height: 28px;
+      margin-right: 10px;
+      margin-top: 8px;
+    }
+
+    .tab-item-text {
+      font-size: 12px;
+      line-height: 16px;
+      color: #7a8599;
+    }
+
+    .tab-item-count {
+      font-family: 'DIN Alternate';
+      font-size: 22px;
+      line-height: 20px;
+      color: #232d47;
+      margin: 8px 0 10px;
+    }
+
+    .tab-item-extra {
+      font-size: 12px;
+      line-height: 16px;
+      color: #7a8599;
+    }
+  }
+  .table {
+    :global(.ant-table-thead > tr > th) {
+      background-color: #fff;
+      &::before {
+        display: none !important;
+      }
+    }
+  }
+}

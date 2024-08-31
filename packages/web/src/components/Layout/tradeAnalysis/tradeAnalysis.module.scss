@@ -1,0 +1,130 @@
+@import '@web-common/styles/variables.scss';
+
+.container {
+  min-width: 862px;
+  min-height: 100%;
+  background-color: $Fill-2;
+
+  &-list {
+    padding: 16px;
+  }
+
+  .header {
+    background: url(../../../images/globalSearch/tradeIndex.png) center center no-repeat;
+    background-size: 1220px 390px;
+    background-color: #272d4d;
+    height: 390px;
+    position: relative;
+
+    .headerInner {
+      max-width: 1014px;
+      padding: 0 90px;
+      margin: 0 auto;
+    }
+
+    .textWrap {
+      padding-top: 80px;
+      text-align: center;
+      padding-bottom: 48px;
+
+      h1 {
+        text-align: center;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 44px;
+        /* identical to box height, or 138% */
+        color: #ffffff;
+        margin-bottom: 16px;
+      }
+    }
+
+    .introWrapper {
+      display: flex;
+      justify-content: center;
+      gap: 36px;
+
+      .introItem {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        /* identical to box height, or 167% */
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+
+        .introText {
+          padding-left: 8px;
+        }
+      }
+    }
+  }
+
+  .hotKey {
+    max-width: 1040px;
+    padding: 0 103px;
+    margin: 18px auto;
+    // background-color: #fff;
+
+    &-title {
+      padding: 20px;
+      background: linear-gradient(180deg, #fff1eb 0%, rgba(255, 255, 255, 0) 100%);
+      font-weight: 500;
+      // margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    :global {
+      .ant-table-thead {
+        tr {
+          th {
+            background-color: $Fill-1 !important;
+            color: #747a8c !important;
+          }
+        }
+      }
+
+      .ant-table-tbody {
+        .odd {
+          &:hover {
+            background-color: #f6f7fa !important;
+          }
+        }
+
+        tr {
+          &:hover {
+            background-color: #f6f7fa !important;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .search-comp {
+    width: 100%;
+  }
+
+  .search-input-wrapper {
+    position: relative;
+
+    &-tank {
+      padding: 16px;
+      background: #fff;
+      border: 1px solid #f0f1f5;
+      border-radius: 4px;
+    }
+  }
+}
+
+.sum {
+  margin-bottom: 0;
+
+  &-percent {
+    margin-bottom: 0;
+    color: $Text-3;
+    font-size: 12px;
+  }
+}

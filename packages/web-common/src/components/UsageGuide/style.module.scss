@@ -1,0 +1,44 @@
+.userGuidePopover {
+  padding-top: 0 !important;
+  z-index: 10;
+  :global {
+    // .ant-popover-arrow {
+    //   opacity: 1;
+    // }
+
+    .ant-popover-inner {
+      border-radius: 4px;
+    }
+  }
+
+  &.hasCoverImg {
+  }
+}
+
+.guideBtn {
+  cursor: pointer;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.fixedPosition {
+  position: fixed !important;
+  left: 62px !important;
+  bottom: 28px !important;
+  top: auto !important;
+
+  :global {
+    .ant-popover-arrow {
+      opacity: 1;
+      bottom: 55px;
+    }
+  }
+}

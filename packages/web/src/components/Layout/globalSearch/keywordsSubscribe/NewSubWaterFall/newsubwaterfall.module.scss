@@ -1,0 +1,421 @@
+@import '@web-common/styles/variables.scss';
+
+.empty {
+  :global {
+    .ant-empty-image {
+      height: 130px;
+    }
+
+    .ant-empty-footer {
+      display: flex;
+      justify-content: center;
+      margin-top: 12px;
+    }
+  }
+
+  .image {
+    background: url(./asset/empty.png) center center no-repeat;
+    background-size: 130px;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+  }
+}
+
+.emptyContainer {
+  background: #ffffff;
+  border: 1px solid #f0f1f5;
+  border-radius: 4px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    /* identical to box height, or 133% */
+    color: #000000;
+    margin-bottom: 8px;
+  }
+
+  .subTitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #000000;
+  }
+}
+
+.cardWrapper {
+  // padding: 20px;
+  background: #fff;
+  border: 1px solid $Line-1;
+  border-radius: 4px;
+  // min-width: 404px;
+  max-width: 491px;
+  position: relative;
+
+  .cardInner {
+    cursor: pointer;
+    padding: 20px;
+
+    &-ignore {
+      filter: blur(10px);
+    }
+  }
+
+  .cardWrapperIgnoreMask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 4px;
+    z-index: 1;
+
+    .cardWrapperIgnoreBlock {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+
+      p {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 28px;
+        display: flex;
+        align-items: center;
+        color: $Text-5;
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  .cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    .headerRcmd {
+      padding: 4px 8px;
+      background: $Brand-1;
+      border-radius: 4px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      color: $Brand-6;
+      word-break: break-all;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      em {
+        color: $Error-6;
+        font-style: normal;
+      }
+    }
+
+    .headerAction {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+
+      .headerActionDislike {
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+        background: url(./asset/dislike.svg) center center no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  .infoBlock {
+    border-bottom: 1px solid #ebedf2;
+    padding: 16px 0;
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    &.baseInfoBlock {
+      display: flex;
+      gap: 12px;
+
+      .baseInfo {
+        h2 {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 26px;
+          /* 文字/Text-6特殊标题 */
+          color: #080b19;
+        }
+
+        p {
+          margin-top: 8px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          /* 文字/Text-4正文-弱 */
+          color: $Text-4;
+          overflow: hidden;
+          word-break: break-all;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+
+          -webkit-line-clamp: 2;
+          box-orient: vertical;
+          -webkit-box-orient: vertical;
+          /*! autoprefixer: off */
+          em {
+            color: $Error-6;
+            font-style: normal;
+          }
+        }
+
+        .medias {
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          margin-top: 8px;
+        }
+      }
+
+      .baseInfoImg {
+        margin-left: auto;
+        flex-shrink: 0;
+        width: 60px;
+        height: 60px;
+
+        img {
+          border: 1px solid #ebedf2;
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+
+    &.baseInfoDescBlock {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      p.baseInfoDescLine {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+
+        .baseInfoDescIcon {
+          margin-right: 12px;
+          display: inline-flex;
+          align-items: center;
+        }
+
+        .baseInfoDescText {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          word-break: break-all;
+          white-space: nowrap;
+        }
+
+        a {
+          /* 常用/Brand-6常规 */
+          color: $Brand-6;
+        }
+      }
+    }
+
+    &.productBlock {
+      p.productBlockTitle {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        /* identical to box height, or 157% */
+        /* 文字/Text-5标题-正文 */
+        color: $Text-5;
+        margin-bottom: 8px;
+      }
+
+      .productList {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 0;
+
+        .productItem {
+          width: 140px;
+          display: inline-block;
+          margin-right: 16px;
+          vertical-align: top;
+
+          .productImage {
+            background-color: $Fill-1;
+            border-radius: 4px 4px 0px 0px;
+            width: 100%;
+            height: 122px;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+
+          .productIntro {
+            width: 100%;
+            border-radius: 0px 0px 4px 4px;
+            border: 1px solid #f0f1f5;
+            border-top: none;
+            padding: 8px;
+            color: $Text-5;
+            &-hide {
+              display: none;
+            }
+            .name {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 22px;
+              margin-bottom: 4px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: break-spaces;
+              display: -webkit-box;
+              -webkit-line-clamp: 3;
+              box-orient: vertical;
+              -webkit-box-orient: vertical;
+            }
+
+            .price {
+              font-family: 'LX-numbers';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &.customBlock {
+      p.customTitle {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        /* identical to box height, or 157% */
+        /* 文字/Text-5标题-正文 */
+        color: $Text-5;
+        margin-bottom: 8px;
+      }
+
+      p.customData {
+        margin-bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .label {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          color: $Text-3;
+        }
+
+        .text {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 22px;
+          color: $Text-5;
+        }
+      }
+    }
+  }
+}
+
+@mixin waterfallBase {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.waterFallWrapper {
+  text-align: center;
+  .ghostList {
+    opacity: 0;
+    pointer-events: none;
+    position: relative;
+    height: 1px;
+    @include waterfallBase;
+
+    .ghostCol {
+      width: 0;
+      flex: 1;
+    }
+  }
+
+  .waterFallList {
+    @include waterfallBase;
+    .waterFallCol {
+      display: flex;
+      gap: 12px;
+      flex-direction: column;
+      width: 0;
+      flex: 1;
+    }
+  }
+
+  .loadMore {
+    margin: 0 auto;
+    margin-top: 28px;
+    opacity: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    /* 文字/Text-5标题-正文 */
+    color: $Text-5;
+    gap: 12px;
+    height: 30px;
+    min-width: 1px;
+    .loadingIcon {
+      width: 29px;
+      height: 29px;
+      animation-name: spin;
+      animation-duration: 1500ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    &-loading,
+    &-end {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

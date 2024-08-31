@@ -1,0 +1,158 @@
+.todo-mail-modal {
+  .ant-modal-body {
+    padding: 0 !important;
+  }
+  .ant-modal-footer {
+    padding: 0 !important;
+    border-top: 1px solid $white-hover-bg;
+  }
+}
+
+.modal-body {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0 4px 24px;
+  .option-item {
+    width: 92px;
+    height: 98px;
+    // background: #f4f4f5;
+    background-color: $white-bg;
+    border-radius: 8px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    img {
+      display: block;
+      width: 32px;
+      height: 32px;
+      margin: 20px auto 12px;
+    }
+    p {
+      margin: 0;
+      text-align: center;
+      font-weight: 400;
+      font-size: 14px;
+      color: $font-color-2;
+    }
+  }
+  .option-item-active {
+    border: 1px solid #386ee7;
+  }
+}
+
+.todo-mail-modal-footer {
+  display: flex;
+  padding: 0 24px;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  color: $font-color-2;
+  .ant-checkbox-disabled + span {
+    color: $Text-1;
+  }
+  .ant-checkbox-wrapper {
+    color: $font-color-2;
+  }
+  .btn-box {
+    display: flex;
+    .btn {
+      width: 64px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .cancel-btn {
+      background: $white;
+      color: $font-color-2;
+      border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+      margin-right: 12px;
+    }
+    .submit-btn {
+      background: #386ee7;
+      color: #ffffff;
+    }
+  }
+}
+
+.schedule-box {
+  margin: 4px 0 20px;
+  .ant-input {
+    background: $white;
+    color: $font-color-2;
+  }
+  .schedule-title {
+    font-size: 14px;
+    // color: #262a33;
+    color: $font-color-2;
+    margin-left: 24px;
+  }
+  .date-picker {
+    width: 116px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    margin-left: 8px;
+  }
+  .time-picker {
+    width: 56px;
+    padding: 4px 8px;
+    margin-left: 8px;
+    border-radius: 4px;
+  }
+  .date-picker,
+  .time-picker {
+    &:hover,
+    &-focused,
+    &:focus,
+    &:active {
+      border-color: #386ee7;
+      box-shadow: none;
+    }
+  }
+}
+.todo-mail-tip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 20px 10px;
+  // background: #f4f4f5;
+  background-color: $white-bg;
+  height: 36px;
+  border-radius: 4px;
+  padding: 0 6px 0 12px;
+  img {
+    margin-right: 8px;
+  }
+  .todo-mail-tip-time {
+    font-weight: 400;
+    font-size: 12px;
+    // color: #262a33;
+    color: $font-color-2;
+    margin-right: 8px;
+  }
+  .todo-mail-tip-time-overdue {
+    color: #f74f4f;
+  }
+  .todo-mail-tip-changebtn {
+    font-weight: 400;
+    font-size: 12px;
+    color: #386ee7;
+    cursor: pointer;
+  }
+  .todo-mail-tip-donebtn {
+    cursor: pointer;
+    width: 79px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #386ee7;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 12px;
+  }
+}

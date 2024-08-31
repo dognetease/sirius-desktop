@@ -1,0 +1,32 @@
+.tag {
+}
+
+.GENERATING,
+.FINISH_GENERATE,
+.WAITING {
+  background: #deebfd;
+  color: #4759b2;
+}
+
+.PENDING,
+.SUCCEED {
+  background: #d6f7f1;
+  color: #398e80;
+}
+
+.DELETED {
+  background: #e7ebf1;
+  color: #4e5a70;
+}
+
+.FAILED_GENERATE,
+.FAILED,
+.EXPIRES {
+  background: #ffe5e2;
+  color: #cb493d;
+}
+
+.PAUSE {
+  background: #fff3e2;
+  color: #cc913d;
+}

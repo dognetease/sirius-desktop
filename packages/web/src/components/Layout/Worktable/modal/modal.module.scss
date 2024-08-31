@@ -1,0 +1,156 @@
+.worktable-modal {
+  :global(.ant-modal-header) {
+    display: none;
+  }
+  :global(.ant-modal-content) {
+    overflow: hidden;
+  }
+  :global(.ant-modal-body) {
+    padding: 0;
+  }
+
+  .header {
+    position: relative;
+    padding: 12px 0;
+    border: 1px solid #eceff4;
+  }
+
+  .modal-title {
+    padding-left: 20px;
+    @include h1-4-med16();
+    color: #262a33;
+  }
+
+  .sub-text {
+    margin: 8px 0 0 20px;
+    @include c4-3-reg12();
+    color: #a8aaad;
+  }
+
+  .header-actions {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+  }
+
+  .content {
+    display: flex;
+  }
+  .filter-sidebar {
+    flex: none;
+  }
+}
+
+.filter-row {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 104px;
+}
+
+.action-btn {
+  box-sizing: border-box;
+  border: 1px solid #ffffff;
+  background: #f4f6f7 center center no-repeat;
+  background-size: 16px;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.u-refresh {
+  background-image: url(@/images/icons/common/sync.svg);
+  &:hover {
+    background-image: url(@/images/icons/common/sync_hover.svg);
+  }
+}
+
+.close-icon {
+  background-image: url(@/images/icons/edm/card-fold.svg);
+  &:hover {
+    background-image: url(@/images/icons/edm/card-fold.svg);
+  }
+}
+.action-btn + .action-btn {
+  margin-left: 8px;
+}
+
+.filter-sidebar {
+  width: 210px;
+  min-height: 200px;
+  padding: 12px 16px;
+  background: #f9fafb;
+  border-right: 1px solid #eceff4;
+
+  :global(.ant-picker-range) {
+    padding: 4px 8px;
+  }
+  :global(.ant-picker-range-separator) {
+    padding: 0 4px;
+  }
+}
+
+.filter-row {
+  label {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #7d8085;
+    display: inline-block;
+  }
+}
+// .filter-row + .filter-row {
+//   margin-top: 12px;
+// }
+// .filter-item + .filter-item {
+//   margin-top: 8px;
+// }
+.filter-item {
+  width: 100%;
+}
+
+.body {
+  flex: 1;
+  padding: 12px 16px;
+}
+
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  grid-row-gap: 16px;
+}
+
+.num-card {
+  padding: 6px 12px;
+  height: 72px;
+  max-width: 124px;
+}
+
+.custom-datepicker-panel {
+  display: flex;
+
+  .left-side {
+    width: 82px;
+    padding: 10px 0 10px 16px;
+    border-right: 1px solid #eceff4;
+    @include c4-3-reg12();
+    color: #51555c;
+
+    ul {
+      list-style: none;
+    }
+  }
+}
+.custom-picker-range {
+  margin-bottom: 12px;
+  cursor: pointer;
+  &:hover {
+    color: #386ee7;
+    // background: #EBF1FD;
+  }
+}

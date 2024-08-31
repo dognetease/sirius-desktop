@@ -1,0 +1,33 @@
+.template-library-menu-item {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 34px;
+  width: 92px;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  border-radius: 4px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 4px;
+
+  .mi-title {
+    width: 56px;
+    height: 16px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    // color: #232d47;
+    color: $font-color-2;
+    margin-left: 4px;
+  }
+  &.active {
+    background: rgba($Brand-6-r, $Brand-6-g, $Brand-6-b, 0.12);
+    .mi-title {
+      color: $Brand-6;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}

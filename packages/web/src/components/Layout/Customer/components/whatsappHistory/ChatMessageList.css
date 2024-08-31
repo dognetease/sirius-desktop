@@ -1,0 +1,6 @@
+.chat-container {
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+  background: url(./bg-chat.png) #e4dcd4;
+}

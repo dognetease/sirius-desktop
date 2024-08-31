@@ -1,0 +1,114 @@
+.ai-hosting-introduce {
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  min-width: 910px;
+  .box {
+    position: relative;
+    display: flex;
+    min-width: 910px;
+    max-width: 1028px;
+    margin-top: 156px;
+    flex-grow: 1;
+  }
+  .info {
+    width: 432px;
+    padding-top: 30px;
+    flex-shrink: 0;
+    .title {
+      color: $Text-5;
+      @include h5-med28;
+      margin-bottom: 14px;
+    }
+    .desc {
+      color: $Text-5;
+      @include h2-med18;
+      line-height: 12px;
+      margin-bottom: 14px;
+      border-bottom: 7px solid #c4f6e3;
+      display: inline-block;
+    }
+    .content {
+      color: $Text-4;
+      @include p1-3-reg14;
+      margin-bottom: 42px;
+      a {
+        cursor: pointer;
+        color: $Brand-6;
+        display: inline-flex;
+        align-items: center;
+      }
+    }
+    .steps {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      gap: 32px;
+      .step-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        .step-item-icon {
+          width: 32px;
+          height: 32px;
+          border-radius: 16px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 0;
+          background-color: $Link-1;
+        }
+        .step-title {
+          @include p1-4-med14;
+          color: $Text-4;
+          font-weight: 500;
+          margin: 0;
+        }
+      }
+    }
+    .btns {
+      margin-top: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 498px;
+    }
+    .btn {
+      padding-left: 8px;
+      padding-right: 8px;
+      margin-left: 12px;
+    }
+    .video-btn {
+      background: $Brand-1;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .btn-content {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: $Text-5;
+    }
+    .btn-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $Fill-3;
+    }
+  }
+  .bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 548px;
+    height: 548px;
+    flex-shrink: 0;
+  }
+}

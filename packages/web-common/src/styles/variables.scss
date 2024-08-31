@@ -1,0 +1,573 @@
+// 品牌色-主色
+$Brand-7: var(--Brand-7, #445fe5);
+$Brand-7-r: var(--Brand-7-r, 68);
+$Brand-7-g: var(--Brand-7-g, 95);
+$Brand-7-b: var(--Brand-7-b, 229);
+
+$Brand-6: var(--Brand-6, #4c6aff);
+$Brand-6-r: var(--Brand-6-r, 76);
+$Brand-6-g: var(--Brand-6-g, 106);
+$Brand-6-b: var(--Brand-6-b, 255);
+
+$Brand-6-bg: var(--Brand-6-bg, #4c6aff);
+$Brand-6-bg-r: var(--Brand-6-bg-r, 76);
+$Brand-6-bg-g: var(--Brand-6-bg-g, 106);
+$Brand-6-bg-b: var(--Brand-6-bg-b, 255);
+
+$Brand-5: var(--Brand-5, #7088ff);
+$Brand-5-r: var(--Brand-5-r, 112);
+$Brand-5-g: var(--Brand-5-g, 136);
+$Brand-5-b: var(--Brand-5-b, 255);
+
+$Brand-4: var(--Brand-4, #94a6ff);
+$Brand-4-r: var(--Brand-4-r, 148);
+$Brand-4-g: var(--Brand-4-g, 166);
+$Brand-4-b: var(--Brand-4-b, 255);
+
+$Brand-3: var(--Brand-3, #b7c3ff);
+$Brand-3-r: var(--Brand-3-r, 183);
+$Brand-3-g: var(--Brand-3-g, 195);
+$Brand-3-b: var(--Brand-3-b, 255);
+
+$Brand-2: var(--Brand-2, #edf0ff);
+$Brand-2-r: var(--Brand-2-r, 237);
+$Brand-2-g: var(--Brand-2-g, 240);
+$Brand-2-b: var(--Brand-2-b, 255);
+
+$Brand-2-bg: var(--Brand-2-bg, #edf0ff);
+$Brand-2-bg-r: var(--Brand-2-bg-r, 237);
+$Brand-2-bg-g: var(--Brand-2-bg-g, 240);
+$Brand-2-bg-b: var(--Brand-2-bg-b, 255);
+
+$Brand-1: var(--Brand-1, #f2f5ff);
+$Brand-1-r: var(--Brand-1-r, 242);
+$Brand-1-g: var(--Brand-1-g, 245);
+$Brand-1-b: var(--Brand-1-b, 255);
+
+// 中性色-线条
+$Line-3: var(--Line-3, #e1e3e8);
+$Line-3-r: var(--Line-3-r, 225);
+$Line-3-g: var(--Line-3-g, 227);
+$Line-3-b: var(--Line-3-b, 232);
+
+$Line-2: var(--Line-2, #ebedf2);
+$Line-2-r: var(--Line-2-r, 235);
+$Line-2-g: var(--Line-2-g, 237);
+$Line-2-b: var(--Line-2-b, 242);
+
+$Line-1: var(--Line-1, #f0f1f5);
+$Line-1-r: var(--Line-1-r, 240);
+$Line-1-g: var(--Line-1-g, 241);
+$Line-1-b: var(--Line-1-b, 245);
+
+// 中性色-填充色
+$Fill-8: var(--Fill-8, #3f465c);
+$Fill-8-r: var(--Fill-8-r, 63);
+$Fill-8-g: var(--Fill-8-g, 70);
+$Fill-8-b: var(--Fill-8-b, 92);
+
+$Fill-7: var(--Fill-7, #6f7485);
+$Fill-7-r: var(--Fill-7-r, 111);
+$Fill-7-g: var(--Fill-7-g, 116);
+$Fill-7-b: var(--Fill-7-b, 133);
+
+$Fill-6: var(--Fill-6, #8d92a1);
+$Fill-6-r: var(--Fill-6-r, 141);
+$Fill-6-g: var(--Fill-6-g, 146);
+$Fill-6-b: var(--Fill-6-b, 161);
+
+$Fill-5: var(--Fill-5, #c9cbd6);
+$Fill-5-r: var(--Fill-5-r, 201);
+$Fill-5-g: var(--Fill-5-g, 203);
+$Fill-5-b: var(--Fill-5-b, 214);
+
+$Fill-4: var(--Fill-4, #e1e3e8);
+$Fill-4-r: var(--Fill-4-r, 225);
+$Fill-4-g: var(--Fill-4-g, 227);
+$Fill-4-b: var(--Fill-4-b, 232);
+
+$Fill-3: var(--Fill-3, #ebedf2);
+$Fill-3-r: var(--Fill-3-r, 235);
+$Fill-3-g: var(--Fill-3-g, 237);
+$Fill-3-b: var(--Fill-3-b, 242);
+
+$Fill-2_5: var(--Fill-2_5, #f0f2f7);
+$Fill-2_5-r: var(--Fill-2_5-r, 240);
+$Fill-2_5-g: var(--Fill-2_5-g, 242);
+$Fill-2_5-b: var(--Fill-2_5-b, 247);
+
+$Fill-2: var(--Fill-2, #f6f7fa);
+$Fill-2-r: var(--Fill-2-r, 246);
+$Fill-2-g: var(--Fill-2-g, 247);
+$Fill-2-b: var(--Fill-2-b, 250);
+
+$Fill-1: var(--Fill-1, #f8f9fa);
+$Fill-1-r: var(--Fill-1-r, 248);
+$Fill-1-g: var(--Fill-1-g, 249);
+$Fill-1-b: var(--Fill-1-b, 250);
+
+// 中性色-字色
+$Text-6: var(--Text-6, #080b19);
+$Text-6-r: var(--Text-6-r, 8);
+$Text-6-g: var(--Text-6-g, 11);
+$Text-6-b: var(--Text-6-b, 25);
+
+$Text-5: var(--Text-5, #272e47);
+$Text-5-r: var(--Text-5-r, 39);
+$Text-5-g: var(--Text-5-g, 46);
+$Text-5-b: var(--Text-5-b, 71);
+
+$Text-4: var(--Text-4, #545a6e);
+$Text-4-r: var(--Text-4-r, 84);
+$Text-4-g: var(--Text-4-g, 90);
+$Text-4-b: var(--Text-4-b, 110);
+
+$Text-3: var(--Text-3, #747a8c);
+$Text-3-r: var(--Text-3-r, 116);
+$Text-3-g: var(--Text-3-g, 122);
+$Text-3-b: var(--Text-3-b, 140);
+
+$Text-2: var(--Text-2, #9fa2ad);
+$Text-2-r: var(--Text-2-r, 159);
+$Text-2-g: var(--Text-2-g, 162);
+$Text-2-b: var(--Text-2-b, 173);
+
+$Text-1: var(--Text-1, #b7bac2);
+$Text-1-r: var(--Text-1-r, 183);
+$Text-1-g: var(--Text-1-g, 186);
+$Text-1-b: var(--Text-1-b, 194);
+
+// 功能色-头像
+$Avatar-1: var(--Avatar-1, #6557ff);
+$Avatar-1-r: var(--Avatar-1-r, 101);
+$Avatar-1-g: var(--Avatar-1-g, 87);
+$Avatar-1-b: var(--Avatar-1-b, 255);
+
+$Avatar-2: var(--Avatar-2, #00ccaa);
+$Avatar-2-r: var(--Avatar-2-r, 0);
+$Avatar-2-g: var(--Avatar-2-g, 204);
+$Avatar-2-b: var(--Avatar-2-b, 170);
+
+$Avatar-3: var(--Avatar-3, #fe6c5e);
+$Avatar-3-r: var(--Avatar-3-r, 254);
+$Avatar-3-g: var(--Avatar-3-g, 108);
+$Avatar-3-b: var(--Avatar-3-b, 94);
+
+$Avatar-4: var(--Avatar-4, #00c4d6);
+$Avatar-4-r: var(--Avatar-4-r, 0);
+$Avatar-4-g: var(--Avatar-4-g, 196);
+$Avatar-4-b: var(--Avatar-4-b, 214);
+
+$Avatar-5: var(--Avatar-5, #a259ff);
+$Avatar-5-r: var(--Avatar-5-r, 162);
+$Avatar-5-g: var(--Avatar-5-g, 89);
+$Avatar-5-b: var(--Avatar-5-b, 255);
+
+$Avatar-6: var(--Avatar-6, #4c6aff);
+$Avatar-6-r: var(--Avatar-6-r, 76);
+$Avatar-6-g: var(--Avatar-6-g, 106);
+$Avatar-6-b: var(--Avatar-6-b, 255);
+
+// 功能色-链接
+$Link-7: var(--Link-7, #2b74d9);
+$Link-7-r: var(--Link-7-r, 43);
+$Link-7-g: var(--Link-7-g, 116);
+$Link-7-b: var(--Link-7-b, 217);
+
+$Link-6: var(--Link-6, #3081f2);
+$Link-6-r: var(--Link-6-r, 48);
+$Link-6-g: var(--Link-6-g, 129);
+$Link-6-b: var(--Link-6-b, 242);
+
+$Link-5: var(--Link-5, #599af5);
+$Link-5-r: var(--Link-5-r, 89);
+$Link-5-g: var(--Link-5-g, 154);
+$Link-5-b: var(--Link-5-b, 245);
+
+$Link-4: var(--Link-4, #83b3f7);
+$Link-4-r: var(--Link-4-r, 131);
+$Link-4-g: var(--Link-4-g, 179);
+$Link-4-b: var(--Link-4-b, 247);
+
+$Link-3: var(--Link-3, #accdfa);
+$Link-3-r: var(--Link-3-r, 172);
+$Link-3-g: var(--Link-3-g, 205);
+$Link-3-b: var(--Link-3-b, 250);
+
+$Link-2: var(--Link-2, #d6e6fc);
+$Link-2-r: var(--Link-2-r, 214);
+$Link-2-g: var(--Link-2-g, 230);
+$Link-2-b: var(--Link-2-b, 252);
+
+$Link-1: var(--Link-1, #f2f7fe);
+$Link-1-r: var(--Link-1-r, 242);
+$Link-1-g: var(--Link-1-g, 247);
+$Link-1-b: var(--Link-1-b, 254);
+
+// 功能色-成功
+$Success-7: var(--Success-7, #0dc076);
+$Success-7-r: var(--Success-7-r, 13);
+$Success-7-g: var(--Success-7-g, 192);
+$Success-7-b: var(--Success-7-b, 118);
+
+$Success-6: var(--Success-6, #0fd683);
+$Success-6-r: var(--Success-6-r, 15);
+$Success-6-g: var(--Success-6-g, 214);
+$Success-6-b: var(--Success-6-b, 131);
+
+$Success-5: var(--Success-5, #3fde9c);
+$Success-5-r: var(--Success-5-r, 63);
+$Success-5-g: var(--Success-5-g, 222);
+$Success-5-b: var(--Success-5-b, 156);
+
+$Success-4: var(--Success-4, #6fe6b5);
+$Success-4-r: var(--Success-4-r, 111);
+$Success-4-g: var(--Success-4-g, 230);
+$Success-4-b: var(--Success-4-b, 181);
+
+$Success-3: var(--Success-3, #9fefcd);
+$Success-3-r: var(--Success-3-r, 159);
+$Success-3-g: var(--Success-3-g, 239);
+$Success-3-b: var(--Success-3-b, 205);
+
+$Success-2: var(--Success-2, #cff7e6);
+$Success-2-r: var(--Success-2-r, 207);
+$Success-2-g: var(--Success-2-g, 247);
+$Success-2-b: var(--Success-2-b, 230);
+
+$Success-1: var(--Success-1, #e7fbf3);
+$Success-1-r: var(--Success-1-r, 231);
+$Success-1-g: var(--Success-1-g, 251);
+$Success-1-b: var(--Success-1-b, 243);
+
+// 功能色-警告/提醒
+$Warning-7: var(--Warning-7, #e5a344);
+$Warning-7-r: var(--Warning-7-r, 229);
+$Warning-7-g: var(--Warning-7-g, 163);
+$Warning-7-b: var(--Warning-7-b, 68);
+
+$Warning-6: var(--Warning-6, #ffb54c);
+$Warning-6-r: var(--Warning-6-r, 255);
+$Warning-6-g: var(--Warning-6-g, 181);
+$Warning-6-b: var(--Warning-6-b, 76);
+
+$Warning-5: var(--Warning-5, #ffc470);
+$Warning-5-r: var(--Warning-5-r, 255);
+$Warning-5-g: var(--Warning-5-g, 196);
+$Warning-5-b: var(--Warning-5-b, 112);
+
+$Warning-4: var(--Warning-4, #ffd394);
+$Warning-4-r: var(--Warning-4-r, 255);
+$Warning-4-g: var(--Warning-4-g, 211);
+$Warning-4-b: var(--Warning-4-b, 148);
+
+$Warning-3: var(--Warning-3, #ffe1b7);
+$Warning-3-r: var(--Warning-3-r, 255);
+$Warning-3-g: var(--Warning-3-g, 225);
+$Warning-3-b: var(--Warning-3-b, 183);
+
+$Warning-2: var(--Warning-2, #fff0db);
+$Warning-2-r: var(--Warning-2-r, 255);
+$Warning-2-g: var(--Warning-2-g, 240);
+$Warning-2-b: var(--Warning-2-b, 219);
+
+$Warning-1: var(--Warning-1, #fff8ed);
+$Warning-1-r: var(--Warning-1-r, 255);
+$Warning-1-g: var(--Warning-1-g, 248);
+$Warning-1-b: var(--Warning-1-b, 237);
+
+// 功能色-错误
+$Error-7: var(--Error-7, #e45244);
+$Error-7-r: var(--Error-7-r, 228);
+$Error-7-g: var(--Error-7-g, 82);
+$Error-7-b: var(--Error-7-b, 68);
+
+$Error-6: var(--Error-6, #fe5b4c);
+$Error-6-r: var(--Error-6-r, 254);
+$Error-6-g: var(--Error-6-g, 91);
+$Error-6-b: var(--Error-6-b, 76);
+
+$Error-5: var(--Error-5, #fe7c70);
+$Error-5-r: var(--Error-5-r, 254);
+$Error-5-g: var(--Error-5-g, 124);
+$Error-5-b: var(--Error-5-b, 112);
+
+$Error-4: var(--Error-4, #ffbdb7);
+$Error-4-r: var(-- Error-4-r, 255);
+$Error-4-g: var(--Error-4-g, 189);
+$Error-4-b: var(--Error-4-b, 183);
+
+$Error-2: var(--Error-2, #ffdedb);
+$Error-2-r: var(--Error-2-r, 255);
+$Error-2-g: var(--Error-2-g, 222);
+$Error-2-b: var(--Error-2-b, 219);
+
+$Error-1: var(--Error-1, #ffefed);
+$Error-1-r: var(--Error-1-r, 255);
+$Error-1-g: var(--Error-1-g, 239);
+$Error-1-b: var(--Error-1-b, 237);
+
+// 功能色-标签
+$label-1_3: var(--label-1_3, #4759b2);
+$label-1_3-r: var(--label-1_3-r, 71);
+$label-1_3-g: var(--label-1_3-g, 89);
+$label-1_3-b: var(--label-1_3-b, 178);
+
+$label-1_2: var(--label-1_2, #83b3f7);
+$label-1_2-r: var(--label-1_2-r, 131);
+$label-1_2-g: var(--label-1_2-g, 179);
+$label-1_2-b: var(--label-1_2-b, 247);
+
+$label-1_1: var(--label-1_1, #deebfd);
+$label-1_1-r: var(--label-1_1-r, 222);
+$label-1_1-g: var(--label-1_1-g, 235);
+$label-1_1-b: var(--label-1_1-b, 253);
+
+$label-2_3: var(--label-2_3, #398e80);
+$label-2_3-r: var(--label-2_3-r, 57);
+$label-2_3-g: var(--label-2_3-g, 142);
+$label-2_3-b: var(--label-2_3-b, 128);
+
+$label-2_2: var(--label-2_2, #66e0cc);
+$label-2_2-r: var(--label-2_2-r, 102);
+$label-2_2-g: var(--label-2_2-g, 224);
+$label-2_2-b: var(--label-2_2-b, 204);
+
+$label-2_1: var(--label-2_1, #d6f7f1);
+$label-2_1-r: var(--label-2_1-r, 214);
+$label-2_1-g: var(--label-2_1-g, 247);
+$label-2_1-b: var(--label-2_1-b, 241);
+
+$label-3_3: var(--label-3_3, #7a51cb);
+$label-3_3-r: var(--label-3_3-r, 122);
+$label-3_3-g: var(--label-3_3-g, 81);
+$label-3_3-b: var(--label-3_3-b, 203);
+
+$label-3_2: var(--label-3_2, #bb98fe);
+$label-3_2-r: var(--label-3_2-r, 187);
+$label-3_2-g: var(--label-3_2-g, 152);
+$label-3_2-b: var(--label-3_2-b, 254);
+
+$label-3_1: var(--label-3_1, #ede4ff);
+$label-3_1-r: var(--label-3_1-r, 237);
+$label-3_1-g: var(--label-3_1-g, 228);
+$label-3_1-b: var(--label-3_1-b, 255);
+
+$label-4_3: var(--label-4_3, #cc913d);
+$label-4_3-r: var(--label-4_3-r, 204);
+$label-4_3-g: var(--label-4_3-g, 145);
+$label-4_3-b: var(--label-4_3-b, 61);
+
+$label-4_2: var(--label-4_2, #ffb54c);
+$label-4_2-r: var(--label-4_2-r, 255);
+$label-4_2-g: var(--label-4_2-g, 181);
+$label-4_2-b: var(--label-4_2-b, 76);
+
+$label-4_1: var(--label-4_1, #fff3e2);
+$label-4_1-r: var(--label-4_1-r, 255);
+$label-4_1-g: var(--label-4_1-g, 243);
+$label-4_1-b: var(--label-4_1-b, 226);
+
+$label-5_3: var(--label-5_3, #cb493d);
+$label-5_3-r: var(--label-5_3-r, 203);
+$label-5_3-g: var(--label-5_3-g, 73);
+$label-5_3-b: var(--label-5_3-b, 61);
+
+$label-5_2: var(--label-5_2, #fe9d94);
+$label-5_2-r: var(--label-5_2-r, 254);
+$label-5_2-g: var(--label-5_2-g, 157);
+$label-5_2-b: var(--label-5_2-b, 148);
+
+$label-5_1: var(--label-5_1, #ffe5e2);
+$label-5_1-r: var(--label-5_1-r, 255);
+$label-5_1-g: var(--label-5_1-g, 229);
+$label-5_1-b: var(--label-5_1-b, 226);
+
+$label-6_3: var(--label-6_3, #4e5a70);
+$label-6_3-r: var(--label-6_3-r, 78);
+$label-6_3-g: var(--label-6_3-g, 90);
+$label-6_3-b: var(--label-6_3-b, 112);
+
+$label-6_2: var(--label-6_2, #c0c8d6);
+$label-6_2-r: var(--label-6_2-r, 192);
+$label-6_2-g: var(--label-6_2-g, 200);
+$label-6_2-b: var(--label-6_2-b, 214);
+
+$label-6_1: var(--label-6_1, #e7ebf1);
+$label-6_1-r: var(--label-6_1-r, 231);
+$label-6_1-g: var(--label-6_1-g, 235);
+$label-6_1-b: var(--label-6_1-b, 241);
+
+// 功能色-日历
+$calendar-6: var(--calendar-6, #6ba9ff);
+$calendar-6-r: var(--calendar-6-r, 107);
+$calendar-6-g: var(--calendar-6-g, 169);
+$calendar-6-b: var(--calendar-6-b, 255);
+
+$calendar-5: var(--calendar-5, #70ccab);
+$calendar-5-r: var(--calendar-5-r, 112);
+$calendar-5-g: var(--calendar-5-g, 204);
+$calendar-5-b: var(--calendar-5-b, 171);
+
+$calendar-4: var(--calendar-4, #aa90f4);
+$calendar-4-r: var(--calendar-4-r, 170);
+$calendar-4-g: var(--calendar-4-g, 144);
+$calendar-4-b: var(--calendar-4-b, 244);
+
+$calendar-3: var(--calendar-3, #f7a87c);
+$calendar-3-r: var(--calendar-3-r, 247);
+$calendar-3-g: var(--calendar-3-g, 168);
+$calendar-3-b: var(--calendar-3-b, 124);
+
+$calendar-2: var(--calendar-2, #f77c7c);
+$calendar-2-r: var(--calendar-2-r, 247);
+$calendar-2-g: var(--calendar-2-g, 124);
+$calendar-2-b: var(-- calendar-2-b, 124);
+
+$calendar-1: var(--calendar-1, #a8aaad);
+$calendar-1-r: var(--calendar-1-r, 168);
+$calendar-1-g: var(--calendar-1-g, 170);
+$calendar-1-b: var(--calendar-1-b, 173);
+
+// 白色
+$white: var(--white, #ffffff);
+$white-r: var(--white-r, 255);
+$white-g: var(--white-g, 255);
+$white-b: var(--white-b, 255);
+
+$white-bg: var(--white-bg, #f4f4f5);
+$white-hover-bg: var(--white-hover-bg, #f0f0f1);
+$white-tooltip: var(--white-tooltip, #ffffff);
+$white-transparent: var(--white-transparent, transparent);
+$white-wrap: var(--white-wrap, #f6f7fa);
+$white-modal: var(--white-modal, #ffffff);
+$white-header-bg: var(--white-header-bg, #eee);
+// 黑色
+$font-color: var(--font-color, #080b19);
+$font-color-1: var(--font-color-1, #51555c);
+
+$font-color-2: var(--font-color-2, #262a33);
+$font-color-2-r: var(--font-color-2-r, 38);
+$font-color-2-g: var(--font-color-2-g, 42);
+$font-color-2-b: var(--font-color-2-b, 51);
+
+$font-color-3: var(--font-color-3, #000000);
+$font-color-3-r: var(--font-color-3-r, 0);
+$font-color-3-g: var(--font-color-3-g, 0);
+$font-color-3-b: var(--font-color-3-b, 0);
+
+$sidebar-hover: var(--sidebar-hover, #272e47);
+$sidebar-hover-r: var(--sidebar-hover-r, 39);
+$sidebar-hover-g: var(--sidebar-hover-g, 46);
+$sidebar-hover-b: var(--sidebar-hover-b, 71);
+
+// 主题蓝
+$brand-blue: var(--brand-blue, #386ee7);
+$brand-blue-1: var(--brand-blue-1, #386ee7);
+$brand-blue-2: var(--brand-blue-2, #386ee7);
+$brand-bg: var(--brand-bg, #d2e0ff);
+$brand-bg-r: var(-- brand-bg-r, 210);
+$brand-bg-g: var(--brand-bg-g, 224);
+$brand-bg-b: var(--brand-bg-b, 255);
+
+$tree-hover: var(--tree-hover, #d6e6fc);
+$tree-hover-r: var(--tree-hover-r, 214);
+$tree-hover-g: var(--tree-hover-g, 230);
+$tree-hover-b: var(--tree-hover-b, 252);
+
+// 其他
+$other-1: #24273b !default;
+// 投影 box-shadow
+$shadow-special: 0px 1px 0px rgba(0, 0, 0, 0.1) !default;
+$shadow1-down: 0px 4px 10px rgba(47, 83, 134, 0.1) !default;
+$shadow-small: 0px 4px 10px rgba(47, 83, 134, 0.1) !default;
+$shadow2-down: 0px 7px 16px rgba(47, 83, 134, 0.1) !default;
+// 前缀
+$class-prefix: lx;
+// 圆角
+$round-corner-20: 20px !important;
+$round-corner-12: 12px !important;
+$round-corner-8: 8px !important;
+$round-corner-4: 4px !important;
+$round-corner-2: 2px !important;
+$side-bar-width: 68px;
+$tool-bar-height: 47px;
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+// 图标，图片
+$sidebar-mailbox: var(--sidebar-mailbox);
+$sidebar-mailbox-enhance: var(--sidebar-mailbox-enhance);
+$sidebar-schedule: var(--sidebar-schedule);
+$sidebar-schedule-enhance: var(--sidebar-schedule-enhance);
+$sidebar-contact: var(--sidebar-contact);
+$sidebar-contact-enhance: var(--sidebar-contact-enhance);
+$sidebar-im: var(--sidebar-im);
+$sidebar-im-enhance: var(--sidebar-im-enhance);
+$sidebar-disk: var(--sidebar-disk);
+$sidebar-disk-enhance: var(--sidebar-disk-enhance);
+$sidebar-apps: var(--sidebar-apps);
+$sidebar-apps-enhance: var(--sidebar-apps-enhance);
+
+$sidebar-jump-out-trade-acquisition: var(--sidebar-jump-out-trade-acquisition);
+$sidebar-jump-out-trade-acquisition-enhance: var(--sidebar-jump-out-trade-acquisition-enhance);
+$sidebar-jump-out-mail-marketing: var(--sidebar-jump-out-mail-marketing);
+$sidebar-jump-out-mail-marketing-enhance: var(--sidebar-jump-out-mail-marketing-enhance);
+$sidebar-jump-out-waimao-website: var(--idebar-jump-out-waimao-website);
+$sidebar-jump-out-waimao-website-enhance: var(--idebar-jump-out-waimao-website-enhance);
+$sidebar-jump-out-big-data: var(--sidebar-jump-out-big-data);
+$sidebar-jump-out-big-data-enhance: var(--sidebar-jump-out-big-data-enhance);
+$sidebar-jump-out-media-marketing: var(--sidebar-jump-out-media-marketing);
+$sidebar-jump-out-media-marketing-enhance: var(--sidebar-jump-out-media-marketing-enhance);
+
+$mail-refresh: var(--mail-refresh);
+$add-member: var(--add-member);
+$logo-qiye: var(--logo-qiye);
+$logo-qq: var(--logo-qq);
+$logo-163: var(--logo-163);
+$logo-other: var(--logo-other);
+$logo-gmail: var(--logo-gmail);
+$logo-outlook: var(--logo-outlook);
+$logo-microsoft: var(--logo-microsoft);
+$logo-microsoft-global: var(--logo-microsoft-global);
+$logo-tencent-qiye: var(--logo-tencent-qiye);
+
+$mail-mode1: var(--mail-mode1);
+$mail-mode2: var(--mail-mode2);
+$mail-layout1: var(--mail-layout1);
+$mail-layout2: var(--mail-layout2);
+$mail-layout3: var(--mail-layout3);
+$mail-tightness1: var(--mail-tightness1);
+$mail-tightness2: var(--mail-tightness2);
+$mail-tightness3: var(--mail-tightness3);
+$arrow-left: var(--arrow-left);
+$arrow-right: var(--arrow-right);
+$fc-settings-button: var(--fc-settings-button);
+$banner-bg: var(--banner-bg);
+$close-left: var(--close-left);
+$close-right: var(--close-right);
+$im-unread: var(--im-unread);
+// 特殊模块
+$sidebar-label-focus-color: var(--sidebar-label-focus-color, #ffffff);
+$titlebar-bg: var(--titlebar-bg, rgba(38, 42, 51, 0.05));
+$gray-light-bg: var(--gray-light-bg, #f4f4f5);
+$brand-light-bg: var(--brand-light-bg, #e0eaff);
+$brand-bg: var(--brand-bg, #ceddfd);
+$gray-bg: var(--gray-bg, #ebebeb);
+$im-chat: var(--im-chat, #f4f4f5);
+$im-my-chat: var(--im-my-chat, #d6e6fc);
+$scrollbar-thumb: var(--scrollbar-thumb, #d4d4d6);
+$scrollbar-thumb-hover: var(--scrollbar-thumb-hover, #dddddd);
+// 线条
+$border-line-2-dark: var(--border-line-2-dark, none);
+$mail-tightness-shadow: var(--mail-tightness-shadow, 0px 3.2px 8px rgba(71, 89, 178, 0.12));
+// 图片 filter
+$img-invert: var(--img-invert, none);
+
+// @function var-to-rgba($var, $opacity) {
+//   $varStr: str-slice($var, 2);
+//   @return rgba(var(--#{$varStr}-r), var(--#{$varStr}-g), var(--#{$varStr}-b), $opacity);
+// }
+// 投影
+$shadow-mini: var(--shadow-mini, 0px 3px 3px 0px rgba(47, 83, 134, 0.08));
+$shadow-small: var(--shadow-small, 0px 4px 10px 0px rgba(47, 83, 134, 0.12));
+$shadow-large: var(--shadow-large, 0px 8px 16px 0px rgba(47, 83, 134, 0.12));
+$shadow-left: var(--shadow-left, -6px 0px 16px 0px rgba(47, 83, 134, 0.12));

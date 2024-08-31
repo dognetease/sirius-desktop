@@ -1,0 +1,74 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.generate-tip {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 4px;
+  overflow: auto;
+
+  &.generating {
+    background-color: #e6eaff;
+
+    .icon {
+      animation: spin 1s infinite linear;
+    }
+  }
+
+  &.success {
+    background-color: #e4f7ef;
+  }
+
+  &.error {
+    background-color: $Error-1;
+  }
+
+  &.warn {
+    background-color: $Warning-1;
+  }
+
+  .icon {
+    flex-shrink: 0;
+    margin-right: 6px;
+  }
+
+  .content {
+    flex-grow: 1;
+    flex-wrap: wrap;
+    color: $Text-5;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .carousel {
+    flex-shrink: 0;
+    color: $Text-5;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-left: 6px;
+  }
+
+  .retry {
+    flex-shrink: 0;
+    color: $Brand-6;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    cursor: pointer;
+    margin-left: 6px;
+  }
+}

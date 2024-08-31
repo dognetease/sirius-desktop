@@ -1,0 +1,66 @@
+Auto-merging packages/web-mail/src/util.tsx
+Auto-merging packages/web-mail/src/types.ts
+Auto-merging packages/web-mail/src/state/slice/mailReducer/mailReducer.ts
+CONFLICT (content): Merge conflict in packages/web-mail/src/state/slice/mailReducer/mailReducer.ts
+Auto-merging packages/web-mail/src/state/slice/mailReducer/mailManageThunks.ts
+Auto-merging packages/web-mail/src/readMailPage.tsx
+Auto-merging packages/web-mail/src/mailBox.tsx
+CONFLICT (content): Merge conflict in packages/web-mail/src/mailBox.tsx
+Auto-merging packages/web-mail/src/components/mailBoxEventHander/mailBoxEventHander.tsx
+Auto-merging packages/web-mail/src/components/mailBoxEventHander/customerMailBoxEventHandler.tsx
+Auto-merging packages/web-mail/src/components/ReadMail/content/Content.tsx
+CONFLICT (content): Merge conflict in packages/web-mail/src/components/ReadMail/content/Content.tsx
+Auto-merging packages/web-mail/src/components/ReadMail/Header.tsx
+CONFLICT (content): Merge conflict in packages/web-mail/src/components/ReadMail/Header.tsx
+Auto-merging packages/web-mail/src/components/MainReadMail/MainReadMail.tsx
+Auto-merging packages/web-mail/src/components/MailTab/MailTab.tsx
+CONFLICT (content): Merge conflict in packages/web-mail/src/components/MailTab/MailTab.tsx
+Auto-merging packages/web-mail/src/components/MailList/MailListLong.tsx
+CONFLICT (content): Merge conflict in packages/web-mail/src/components/MailList/MailListLong.tsx
+Auto-merging packages/web-mail/src/components/MailList/MailList.tsx
+CONFLICT (content): Merge conflict in packages/web-mail/src/components/MailList/MailList.tsx
+Auto-merging packages/web-mail/src/components/MailColumnEntry/index.tsx
+CONFLICT (content): Merge conflict in packages/web-mail/src/components/MailColumnEntry/index.tsx
+Auto-merging packages/web-mail/src/components/CustomerMail/ColumnCustomerMailList/index.tsx
+Auto-merging packages/web-mail/src/components/CustomerMail/ColumnCustomer/index.tsx
+Auto-merging packages/web-mail/src/common/constant.ts
+CONFLICT (content): Merge conflict in packages/web-mail/src/common/constant.ts
+Auto-merging packages/web-mail/src/common/components/vlistCards/MailCard/defaultComs.tsx
+CONFLICT (content): Merge conflict in packages/web-mail/src/common/components/vlistCards/MailCard/defaultComs.tsx
+Auto-merging packages/web-mail/src/common/components/vlistCards/MailCard/MailCardLong.tsx
+CONFLICT (content): Merge conflict in packages/web-mail/src/common/components/vlistCards/MailCard/MailCardLong.tsx
+Auto-merging packages/web-mail/src/common/components/vlistCards/MailCard/MailCard.tsx
+CONFLICT (content): Merge conflict in packages/web-mail/src/common/components/vlistCards/MailCard/MailCard.tsx
+Auto-merging packages/web-mail/src/common/components/vlistCards/MailCard/MailCard.scss
+Auto-merging packages/web-mail/src/common/components/MailMenu/mailMenuConifg/MailListMenuConfig.tsx
+CONFLICT (content): Merge conflict in packages/web-mail/src/common/components/MailMenu/mailMenuConifg/MailListMenuConfig.tsx
+Auto-merging packages/web-mail/src/common/components/MailMenu/mailMenuConifg/DefaultMailMenuConfig.tsx
+CONFLICT (content): Merge conflict in packages/web-mail/src/common/components/MailMenu/mailMenuConifg/DefaultMailMenuConfig.tsx
+Auto-merging packages/web-mail-write/src/components/Selector/selector.tsx
+Auto-merging packages/web-edm/src/components/editor/editor.tsx
+Auto-merging packages/web-common/src/components/UI/LxPopover/LxPopover.tsx
+Auto-merging packages/support/src/def/mail.ts
+CONFLICT (content): Merge conflict in packages/support/src/def/mail.ts
+Auto-merging packages/support/src/def.ts
+Auto-merging packages/api/src/utils/global_label/zh.json
+Auto-merging packages/api/src/utils/global_label/waimao/zh.json
+Auto-merging packages/api/src/utils/global_label/en.json
+Auto-merging packages/api/src/impl/logical/mail/mail_impl.ts
+Auto-merging packages/api/src/impl/logical/mail/mail_entry_helper.ts
+Auto-merging packages/api/src/impl/logical/mail/mail_content_handler.ts
+CONFLICT (content): Merge conflict in packages/api/src/impl/logical/mail/mail_content_handler.ts
+Auto-merging packages/api/src/impl/logical/mail/mail_content_db_handler.ts
+Auto-merging packages/api/src/impl/logical/mail/mail_action_store_model.ts
+CONFLICT (content): Merge conflict in packages/api/src/impl/logical/mail/mail_action_store_model.ts
+Auto-merging packages/api/src/impl/logical/contact/contact_dbl.ts
+CONFLICT (content): Merge conflict in packages/api/src/impl/logical/contact/contact_dbl.ts
+Removing packages/api/src/impl/logical/contact/contact_const.ts
+Auto-merging packages/api/src/config.ts
+Auto-merging packages/api/src/bridge/config/config.ts
+Auto-merging packages/api/src/api/logical/mail.ts
+CONFLICT (content): Merge conflict in packages/api/src/api/logical/mail.ts
+Auto-merging packages/api/src/api/data/tables/mail.ts
+CONFLICT (content): Merge conflict in packages/api/src/api/data/tables/mail.ts
+
+
+

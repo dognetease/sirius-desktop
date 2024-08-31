@@ -1,0 +1,92 @@
+.oneRecord,
+.over30Record,
+.noOpenRecord {
+  margin: 8px 16px;
+  padding: 8px 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  background: #f6f7fa;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.oneRecord {
+  .oneRecordText {
+    padding-left: 6px;
+  }
+}
+
+.over30Record {
+  .over30RecordText {
+    padding-left: 6px;
+  }
+}
+
+.noOpenRecord {
+  .noOpenRecordText {
+    padding-left: 6px;
+  }
+}
+
+.multiRecords {
+  margin: 8px 16px;
+  background: #f6f7fa;
+  border-radius: 4px;
+  .openRecordTitle {
+    padding: 8px 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #272e47;
+    display: flex;
+    align-items: center;
+    .openText {
+      padding-left: 6px;
+      .openBut {
+        padding: 0 8px;
+        color: #4c6aff;
+        cursor: pointer;
+      }
+    }
+  }
+  .openRecordTable {
+    padding: 6px 0 4px 0;
+    border-top: 0.5px solid #e1e3e8;
+    .openRecordList {
+      :global(.ant-table-body) {
+        overflow-y: auto !important;
+      }
+      :global(th) {
+        padding: 4px !important;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #747a8c;
+      }
+      :global(th:nth-child(1)) {
+        padding-left: 16px !important;
+      }
+      :global(th:nth-last-child(1)) {
+        padding-right: 16px !important;
+      }
+    }
+    .openRecordRow {
+      :global(td) {
+        padding: 4px !important;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #272e47;
+        background: #f6f7fa !important;
+      }
+      :global(td:nth-child(1)) {
+        padding-left: 16px !important;
+      }
+      :global(td:nth-last-child(1)) {
+        padding-right: 16px !important;
+      }
+    }
+  }
+}

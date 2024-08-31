@@ -1,0 +1,54 @@
+.file-list {
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  background-color: $Fill-2;
+
+  .title {
+    color: $Text-5;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+    .input {
+      width: 220px;
+    }
+
+    .search-icon {
+      color: $Fill-6;
+      font-size: 16px;
+    }
+  }
+
+  .table-wrapper {
+    padding: 20px;
+    border: 1px solid $Line-1;
+    border-radius: 4px;
+    background-color: #fff;
+
+    :global(.ant-table-cell-ellipsis.ant-table-cell-fix-left-last .ant-table-cell-content) {
+      overflow: visible;
+    }
+
+    :global(.ant-pagination) {
+      margin: 20px 0 0;
+    }
+
+    .max-width-cell {
+      max-width: 25vw;
+      padding: 0 10px;
+    }
+
+    .file-card {
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+.tree {
+  .node-list {
+    padding-bottom: 6px;
+    transition: width 0.3s ease-in-out;
+    .node {
+      margin-bottom: 4px;
+      min-height: 36px;
+      .title-wrapper {
+        user-select: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        .title {
+          font-family: 'PingFang SC';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 36px;
+          color: #4e5a70;
+          display: inline-flex;
+          align-items: center;
+        }
+        .title-icon {
+          margin-right: 4px;
+          display: inline-flex;
+          align-items: center;
+        }
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &.has-children.is-expanded {
+        margin-bottom: 0px;
+      }
+      &.selected > .title-wrapper {
+        background: #f2f6ff;
+        border-radius: 4px;
+      }
+      &:not(.has-children):hover > .title-wrapper {
+        background: #f4f6f7;
+        border-radius: 4px;
+      }
+      .node-type-expand {
+      }
+      .node-type-normal {
+      }
+    }
+  }
+  .indent {
+    height: 1px;
+    width: 16px;
+  }
+  .icon {
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.2s ease;
+    height: 8px;
+    width: 8px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../../../../images/caret-down.svg');
+  }
+  .caret-wrapper {
+    height: 22px;
+    margin-right: 8px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .caret-down {
+    @extend .icon;
+    transform: rotate(0deg);
+  }
+  .caret-right {
+    @extend .icon;
+    transform: rotate(-90deg);
+  }
+}

@@ -1,0 +1,48 @@
+.modal {
+  :global(.ant-modal-header) {
+  }
+  :global(.ant-modal-body) {
+    .title {
+      display: flex;
+      align-items: center;
+    }
+    .content {
+      font-weight: normal;
+      padding-left: 28px;
+      margin-top: 16px;
+      font-size: 14px;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.8);
+    }
+    .hidden {
+      display: none;
+    }
+    font-size: 16px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    font-weight: 500;
+  }
+  :global(.ant-modal-footer) {
+    padding: 24px;
+    padding-top: 0;
+    border: none;
+    :global(.ant-btn) {
+      border-radius: 4px;
+    }
+  }
+  :global(.ant-modal-footer .ant-btn + .ant-btn) {
+    margin-left: 16px;
+  }
+}
+
+.can-delete {
+  :global(.ant-modal-footer) {
+    :global(.ant-btn):first-child {
+      display: none;
+    }
+  }
+}
+
+.input {
+  height: 32px;
+  border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+  border-radius: 4px;
+}

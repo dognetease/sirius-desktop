@@ -1,0 +1,107 @@
+.realListPager {
+  &.hidePageItem {
+    :global {
+      li.ant-pagination-item,
+      li.ant-pagination-jump-next,
+      li.ant-pagination-jump-prev,
+      li.ant-pagination-simple-pager {
+        display: none;
+      }
+    }
+  }
+
+  &.hideQuickJumper {
+    :global {
+      .ant-pagination-options-quick-jumper {
+        display: none;
+      }
+    }
+  }
+
+  &.miniSize {
+    :global {
+      .ant-pagination-item-link {
+        height: 24px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &.simple {
+    padding-right: 8px !important;
+    padding-left: 0 !important;
+
+    :global {
+      .sirius-select-small {
+        height: 30px;
+      }
+
+      .sirius-select-ui-small {
+        height: 30px;
+      }
+
+      .ant-pagination-simple-pager {
+        height: 30px;
+      }
+
+      .ant-pagination-next,
+      .ant-pagination-prev {
+        border: 1px solid $Fill-4;
+      }
+
+      .ant-pagination-next:not(.ant-pagination-disabled):hover,
+      .ant-pagination-prev:not(.ant-pagination-disabled):hover {
+        border-color: $Brand-5;
+      }
+    }
+  }
+
+  display: flex;
+  align-items: center;
+
+  :global {
+    .ant-pagination-options {
+      display: flex;
+      align-items: center;
+    }
+
+    .ant-pagination-options-quick-jumper {
+      position: relative;
+    }
+  }
+}
+
+.pageSeletcOption {
+  min-width: 106px !important;
+}
+
+.pageSizeSelectSmall {
+  :global {
+    .ant-select-selector {
+      padding: 0 6px !important;
+    }
+
+    .ant-select-selection-item {
+      padding-right: 0px !important;
+    }
+
+    .ant-select-arrow {
+      display: none;
+    }
+  }
+}
+
+.pageSelect {
+  :global {
+    .ant-select-selector {
+      padding: 0 6px !important;
+    }
+
+    .sirius-select-front {
+      text-align: center;
+    }
+    .sirius-select-ui-front {
+      text-align: center;
+    }
+  }
+}

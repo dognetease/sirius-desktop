@@ -1,0 +1,92 @@
+.clue-picker {
+  :global(.ant-drawer-header) {
+    border-bottom: none;
+  }
+
+  :global(.ant-drawer-footer) {
+    border-top: none;
+
+    :global(.ant-btn:not(.ant-btn-primary)) {
+      border-color: #f0f3f5;
+      background-color: #f0f3f5;
+    }
+
+    :global(.ant-btn-primary) {
+      background-color: #4c6aff;
+    }
+  }
+
+  &-body {
+    padding: 8px 24px;
+
+    .sub-title {
+      color: #7a8599;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      margin-bottom: 24px;
+    }
+
+    .form-item-email-relation {
+      margin-bottom: 0;
+    }
+
+    .email-relation {
+      display: flex;
+      align-items: flex-start;
+
+      .email-days {
+        width: 120px;
+      }
+
+      .email-type {
+        width: 120px;
+      }
+
+      .space-text {
+        line-height: 32px;
+        margin: 0 16px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .form-item-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      > :global(.ant-form-item) {
+        width: 100%;
+        margin-bottom: 0;
+        margin-right: 16px;
+
+        &.customer-tag-op-type {
+          width: 156px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &-footer {
+    text-align: right;
+
+    :global(.ant-btn) {
+      margin-right: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

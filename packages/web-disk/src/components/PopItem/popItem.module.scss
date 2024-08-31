@@ -1,0 +1,43 @@
+@import './../../../../web/src/styles/varies.scss';
+
+.pop-item {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 0px 16px;
+  height: 30px;
+  position: relative;
+  &:hover {
+    background: #f0f0f1;
+  }
+  &-divider {
+    height: 30px;
+    margin-bottom: 4px;
+    &::after {
+      position: absolute;
+      content: '';
+      height: 1px;
+      width: calc(100% - 32px);
+      background-color: #f0f0f1;
+      bottom: -4px;
+      transform: scaleY(0.5);
+    }
+  }
+
+  &-disabled {
+    &:hover {
+      background: unset;
+      // cursor: not-allowed;
+    }
+    .text {
+      color: $Text-2;
+    }
+
+    svg {
+      path {
+        stroke: $Text-2;
+      }
+    }
+  }
+}

@@ -1,0 +1,224 @@
+.strangerBlk {
+  padding: 0 4px 0 12px;
+  background: white;
+  position: relative;
+  z-index: 1;
+  // 单个陌生人
+  .single {
+    width: 100%;
+    border-radius: 6px;
+    padding: 8px 0 12px 0;
+    box-sizing: border-box;
+    border-bottom: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+    &:hover {
+      background: #f0f0f1;
+    }
+    .markTitle {
+      padding: 0 14px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      line-height: 20px;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+      .mark {
+        font-weight: 500;
+        color: #262a33;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .strangerItem {
+      .itemContent {
+        margin-bottom: 14px;
+        padding: 0 8px 0 12px;
+        display: flex;
+        align-items: center;
+        .headPic {
+          margin-right: 12px;
+          width: 32px;
+          height: 32px;
+          border-radius: 999px;
+          background: red;
+        }
+        .msg {
+          margin: 0 5px 0 12px;
+          flex: 1;
+          .name {
+            margin-bottom: 2px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            color: #262a33;
+          }
+          .email {
+            margin: 0;
+            font-size: 12px;
+            line-height: 16px;
+            color: #7d8085;
+            cursor: pointer;
+            display: flex;
+            align-content: center;
+          }
+        }
+        .mailExchangeArea {
+          width: 24px;
+          height: 24px;
+          border-radius: 4px;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &:hover {
+            background: #f0f0f1;
+          }
+        }
+      }
+      .opts {
+        display: flex;
+        > span {
+          height: 18px;
+          font-size: 14px;
+          line-height: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #262a33;
+          flex: 1;
+          cursor: pointer;
+          position: relative;
+          &:hover {
+            color: #386ee7;
+          }
+          &:after {
+            content: '';
+            width: 1px;
+            height: 18px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+          }
+          &:nth-last-child(1) {
+            &:after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  // 多个陌生人
+  .multi {
+    padding: 16px 2px 16px 12px;
+    display: flex;
+    border-radius: 6px;
+    border-bottom: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+      background: #f0f0f1;
+      border: none;
+    }
+    .markImportance {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      color: #262a33;
+      flex: 1;
+    }
+    .right {
+      display: inline-flex;
+      align-items: center;
+      .headPics {
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        flex: 1;
+        &.two {
+          .headPic {
+            margin: 0 4px;
+            &:nth-child(1) {
+              margin-left: 0;
+            }
+            &:nth-last-child(1) {
+              margin-right: 0;
+            }
+          }
+        }
+        &.three {
+          .headPic {
+            position: relative;
+            &:nth-child(1) {
+              right: -16px;
+              z-index: 3;
+            }
+            &:nth-child(2) {
+              right: -8px;
+              z-index: 2;
+            }
+            &:nth-child(3) {
+              z-index: 1;
+            }
+          }
+        }
+        &.moreThanThree {
+          .headPic {
+            position: relative;
+            &:nth-child(1) {
+              right: -16px;
+              z-index: 3;
+            }
+            &:nth-child(2) {
+              right: -8px;
+              z-index: 2;
+            }
+          }
+        }
+        .more {
+          width: 32px;
+          height: 32px;
+          font-weight: 500;
+          font-size: 14px;
+          color: #262a33;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #f4f4f5;
+          border-radius: 999px;
+          &.moreThan99 {
+            width: unset;
+            padding: 0 9px;
+          }
+        }
+      }
+      .arrowRight {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+// 通栏布局下按钮
+.longBtn {
+  width: 160px;
+  height: 20px;
+  line-height: 20px;
+  margin-right: 4px;
+  .low,
+  .normal,
+  .high {
+    width: 48px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #262a33;
+    font-size: 12px;
+    font-weight: 400;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+  }
+  .normal {
+    margin: 0 8px;
+  }
+}

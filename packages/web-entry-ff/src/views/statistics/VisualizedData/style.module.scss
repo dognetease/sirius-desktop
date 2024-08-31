@@ -1,0 +1,22 @@
+.head {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 20px;
+}
+
+.title {
+  flex: 1;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.linkBtn {
+  cursor: pointer;
+  color: #1890ff;
+  transition: all 0.2s;
+  user-select: none;
+  margin-left: 20px;
+  &:hover {
+    color: #40a9ff;
+  }
+}

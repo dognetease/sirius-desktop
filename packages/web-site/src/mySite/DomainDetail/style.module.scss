@@ -1,0 +1,232 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.container {
+  padding: 20px 16px;
+  width: 100%;
+  height: 100%;
+  background: #f6f7fa;
+  overflow-y: auto;
+
+  :global {
+    .ant-breadcrumb {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.main {
+  background: #fff;
+  width: 100%;
+  min-width: 700px;
+  min-height: calc(100vh - 134px);
+  font-weight: 400;
+  padding-bottom: 40px;
+  color: $Text-5;
+  position: relative;
+
+  :global {
+    .ant-btn-primary {
+      background-color: #4c6aff;
+    }
+  }
+}
+
+.steps {
+  padding: 40px 0;
+
+  :global {
+    .ant-steps-item-title {
+      color: #272e47 !important;
+    }
+    .ant-steps-item-finish .ant-steps-item-title::after {
+      background-color: #4c6aff !important;
+    }
+    .ant-steps-item-finish .ant-steps-item-icon {
+      border-color: #4c6aff;
+    }
+    .ant-steps-item-custom .ant-steps-item-icon {
+      height: 0;
+    }
+    .ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon {
+      color: #4c6aff;
+    }
+    .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-icon {
+      background: #4c6aff;
+      border-color: #4c6aff;
+    }
+    .ant-steps-item-wait .ant-steps-item-icon {
+      border-color: #e1e3e8;
+    }
+    .ant-steps-item-wait .ant-steps-item-icon > .ant-steps-icon {
+      color: #545a6e;
+    }
+    .ant-steps-item-wait .ant-steps-item-container:hover .ant-steps-item-icon {
+      border-color: #4c6aff !important;
+      .ant-steps-icon {
+        color: #4c6aff !important;
+      }
+    }
+  }
+}
+
+.content {
+  width: 60%;
+  min-width: 430px;
+  margin: 0 auto;
+}
+
+.tip {
+  margin-bottom: 32px;
+  padding: 0 12px;
+  height: 32px;
+  background: rgba(214, 230, 252, 0.5);
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 36px;
+  color: #272e47;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.row {
+  margin-bottom: 20px;
+  display: flex;
+  font-weight: 400;
+  .label {
+    width: 108px;
+    text-align: right;
+    padding-right: 18px;
+  }
+  .required {
+    color: $Avatar-3;
+  }
+  .error-tip {
+    color: $Error-6;
+    margin-top: 8px;
+  }
+  & > div:last-child {
+    color: $Text-4;
+  }
+  :global {
+    .ant-radio-wrapper {
+      color: $Text-4;
+    }
+    .ant-input {
+      border-color: $Line-3;
+      &::-webkit-input-placeholder {
+        color: #9fa2ad;
+      }
+    }
+  }
+}
+
+.light-text {
+  color: #9fa2ad;
+  margin-right: 4px;
+}
+
+.checkInfo {
+  .copy {
+    width: 410px;
+  }
+}
+
+.copy {
+  width: 318px;
+  height: 32px;
+  border: 1px solid $Line-2;
+  background: #f9fafb;
+  border-radius: 2px;
+  display: flex;
+  .text {
+    flex: 1;
+    line-height: 20px;
+    padding: 5px 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #9fa2ad;
+  }
+  .btn {
+    width: 54px;
+    background: $Fill-2;
+    text-align: center;
+    line-height: 30px;
+    border-left: 1px solid $Line-2;
+    color: #545a6e;
+    cursor: pointer;
+  }
+}
+
+.copy-suffix {
+  margin-left: 5px;
+  line-height: 32px;
+  color: #545a6e;
+}
+
+.record-modal {
+  p {
+    margin-bottom: 8px;
+    color: #747a8c;
+    line-height: 22px;
+  }
+  a {
+    color: #4c6aff;
+  }
+
+  :global {
+    .ant-btn-primary {
+      background-color: #4c6aff;
+    }
+    .ant-modal-confirm-content {
+      padding-left: 8px !important;
+    }
+    .ant-modal-content {
+      border-radius: 4px;
+    }
+  }
+}
+
+.bind-site-success {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    font-size: 18px;
+    line-height: 26px;
+    color: $Text-5;
+    margin: 20px 0 4px;
+  }
+
+  span {
+    color: $Text-3;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.submit-btn {
+  margin-top: 32px;
+  cursor: pointer;
+  color: #fff;
+  padding: 5px 24px;
+  background: $Brand-6;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background: $Brand-5;
+  }
+
+  &:active {
+    background: $Brand-7;
+  }
+}

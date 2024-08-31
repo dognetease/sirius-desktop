@@ -1,0 +1,81 @@
+// 群内邮件按钮
+.grouped-inner-mail-btn {
+  position: absolute;
+  left: 16px;
+  bottom: 8px;
+  box-sizing: border-box;
+  // padding: 0 8px;
+  height: 28px;
+  min-width: 104px; // 固定宽，防止抖动
+  box-sizing: border-box;
+  // color: #262a33;
+  color: $font-color-2;
+  font-size: 12px;
+  background-color: $white;
+  border-radius: 4px;
+  // overflow: hidden;
+  border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+  &.grouped-inner-mail-btn-checked {
+    border: none;
+  }
+  .grouped-inner-mail {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    border-radius: 4px;
+    &:hover {
+      cursor: pointer;
+      // background-color: #f4f4f5;
+      background-color: $white-bg;
+    }
+    &.grouped-inner-mail-checked {
+      background-color: rgba($Link-2-r, $Link-2-g, $Link-2-b, 0.7);
+      color: #386ee7;
+      border: none;
+    }
+  }
+}
+
+// 群内邮件提示
+.grouped-inner-mail-tooltip {
+  :global(.ant-tooltip.ant-tooltip-placement-topLeft) {
+    left: 0 !important;
+    width: 100% !important;
+  }
+  :global(.ant-tooltip-content) {
+    width: 100% !important;
+    background-color: $white !important;
+  }
+  :global(.ant-tooltip-arrow) {
+    display: block;
+    left: 50%;
+  }
+  :global(.ant-tooltip-inner) {
+    font-size: 14px;
+    color: #fff;
+    font-family: 'PingFang SC';
+    line-height: 18px;
+    white-space: nowrap;
+    padding: 0 !important;
+    // width: 240px;
+    .tooltip-wrapper {
+      padding: 10px 12px;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      .tooltip-info {
+        margin-right: 24px;
+      }
+      .tooltip-btn {
+        color: #5383fe;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,190 @@
+@import '@web-common/styles/variables.scss';
+
+.mail-template-list-modal {
+  color: hsl(222, 15%, 17%);
+  height: 496px;
+  overflow: hidden;
+  // 覆盖ant组件样式
+  .ant-modal-body {
+    padding: 0 !important;
+  }
+  .ant-tooltip {
+    max-width: none;
+  }
+  .ant-modal-header {
+    border: none;
+    padding: 20px 20px 7px;
+  }
+  .ant-tabs-nav {
+    padding: 0 20px;
+    margin-bottom: 0 !important;
+  }
+  .ant-tabs {
+    overflow: visible;
+  }
+  .ant-tabs-tab-btn {
+    color: $font-color-2;
+  }
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: #386ee7;
+  }
+  .ant-tabs-ink-bar {
+    color: #386ee7;
+  }
+  .ant-modal-body {
+    border-radius: 8px;
+  }
+  // 自定义样式
+  .add-temp-btn {
+    color: #386ee7;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .tab-body-box {
+    width: 716px;
+    height: 396px;
+    overflow-y: scroll;
+    padding: 16px 0 20px 20px;
+    // background: #f4f4f5;
+    background-color: $white-bg;
+    scrollbar-width: none !important; // firefox下滚动条不显示
+    -ms-overflow-style: none !important; // IE下滚动条不显示
+    border-radius: 6px;
+    .tab-body-topDesc {
+      height: 16px;
+      @include font-size(400, 14px, 16px);
+      // color: #51555c;
+      color: $font-color-1;
+      margin-bottom: 16px;
+    }
+    .tab-body {
+      display: flex;
+      flex-wrap: wrap;
+      &::-webkit-scrollbar {
+        display: none !important; // chrome滚动条不显示
+      }
+      .tab-body-tailDesc {
+        width: 100%;
+        margin-bottom: 0;
+        // color: #a8aaad;
+        color: $calendar-1;
+        @include font-size(400, 12px, 14px);
+        height: 14px;
+        text-align: center;
+        margin-top: 40px;
+      }
+      .tab-nodoc {
+        width: 100%;
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+        .nodoc-txt {
+          @include font-size(400, 14px, 20px);
+
+          height: 20px;
+          text-align: center;
+          // color: #a8aaad;
+          color: $calendar-1;
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+  .tab-item {
+    width: 160px;
+    height: 160px;
+    margin: 0 12px 12px 0;
+    border-radius: 4px;
+    background-color: #ffffff;
+    position: relative;
+    // border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 200%;
+      height: 200%;
+      border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+      -webkit-transform-origin: 0 0;
+      -webkit-transform: scale(0.5, 0.5);
+      transform: scale(0.5, 0.5);
+      border-radius: 4px;
+    }
+    .tab-body-content {
+      height: 108px;
+      width: 136px;
+      margin: 12px 0 0 12px;
+      background-size: 100% 100%;
+    }
+    .tab-body-btn {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 160px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 200%;
+        height: 0;
+        border-top: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+        -webkit-transform-origin: 0 0;
+        -webkit-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5);
+        border-radius: 4px;
+      }
+    }
+    .tab-body-btn-grey,
+    .tab-body-btn-primary {
+      height: 24px;
+      padding: 0 12px;
+      border-radius: 4px;
+      @include font-size(400, 12px, 24px);
+      margin-bottom: 0px;
+      cursor: pointer;
+    }
+    .tab-body-btn-grey {
+      background: rgba(255, 255, 255, 0.3);
+      color: #7d8085;
+      // border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+      border: 1px solid rgba(#272e47, 0.16);
+      margin-right: 4px;
+    }
+    .tab-body-btn-primary {
+      background: #386ee7;
+      color: #ffffff;
+    }
+    .tab-body-title {
+      width: 136px;
+      margin: 0 12px;
+      font-size: 14px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #262a33;
+    }
+  }
+  .loading-box {
+    width: 100%;
+    height: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    flex-direction: column;
+  }
+}
+
+.mail-template-list-tooltip {
+  .ant-tooltip {
+    max-width: none;
+  }
+}

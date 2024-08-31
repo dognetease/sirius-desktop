@@ -1,0 +1,8 @@
+@import '@web-common/styles/variables.scss';
+.country-name {
+  vertical-align: middle;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}

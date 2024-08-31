@@ -1,0 +1,18 @@
+.sorter {
+  :global(.ant-select-selector) {
+    border-radius: 4px !important;
+    border-color: transparent !important;
+    background-color: $Fill-3 !important;
+  }
+
+  :global(.ant-select-selection-placeholder) {
+    color: rgba(38, 42, 51, 0.8) !important;
+    line-height: 30px !important;
+  }
+
+  :global(.ant-select-clear) {
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: $Fill-3 !important;
+  }
+}

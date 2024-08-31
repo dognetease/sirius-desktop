@@ -1,0 +1,78 @@
+.container {
+  min-height: 100%;
+  padding: 20px;
+  background: #f4f4f5;
+  .content {
+    min-height: 100%;
+    background: #ffffff;
+    border: 1px solid $Line-2;
+    border-radius: 4px;
+    padding: 28px 30px;
+    .banner {
+      background: #f9fafb;
+      border-radius: 4px;
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 13px 0 13px 50px;
+      .text {
+        margin-right: 46px;
+        ul {
+          color: $Text-4;
+          padding-left: 14px;
+          li + li {
+            margin-top: 12px;
+          }
+        }
+      }
+    }
+    .main {
+      padding-left: 50px;
+    }
+    .title {
+      font-style: normal;
+      @include h1-4-med16();
+      color: #262a33;
+      margin-bottom: 12px;
+    }
+    .step-list {
+      font-size: 14px;
+      line-height: 30px;
+      color: $Text-5;
+      > div {
+        margin-bottom: 32px;
+      }
+      :global {
+        .ant-tag {
+          margin-right: 6px;
+          background: $Fill-2;
+          border-radius: 100px;
+        }
+      }
+      .step1 {
+        .install-btn {
+          width: 120px;
+          height: 36px;
+          border-radius: 4px;
+        }
+        .export {
+          width: 16px;
+          height: 16px;
+          margin-left: 8px;
+          vertical-align: sub;
+        }
+      }
+      .step2 {
+        .picture2 {
+          margin-top: 12px;
+        }
+      }
+      .step3 {
+        .picture3 {
+          margin-top: 14px;
+        }
+      }
+    }
+  }
+}

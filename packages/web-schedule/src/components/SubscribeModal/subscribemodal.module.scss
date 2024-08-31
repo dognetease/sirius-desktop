@@ -1,0 +1,172 @@
+@import '../../../../web/src/styles/varies.scss';
+$modal-header-height: 52px;
+.modal {
+  :global(.ant-modal-close-x) {
+    height: $modal-header-height;
+    width: $modal-header-height;
+    line-height: $modal-header-height;
+  }
+  .header {
+    height: $modal-header-height;
+    line-height: 1;
+    padding: 20px 16px 16px 16px;
+    // color: #000000;
+    color: $font-color-3;
+    font-size: 16px;
+    // background: #ffffff;
+    background-color: $white;
+    width: 100%;
+    box-shadow: inset 0px -0.5px 0px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+    border-radius: 6px 6px 0 0;
+  }
+}
+
+.content {
+  display: flex;
+  height: 448px;
+  overflow: hidden;
+  :global(.ant-tree) {
+    background: transparent;
+    font-size: 14px;
+    :global(.ant-tree-treenode) {
+      padding: 2px 12px;
+      color: $Fill-8;
+      overflow: hidden;
+      min-height: 32px;
+      :global(.ant-tree-indent-unit) {
+        width: 12px;
+      }
+      :global(.ant-tree-switcher) {
+        width: 15px;
+        padding-left: 5px;
+        line-height: 28px;
+      }
+      :global(.ant-tree-node-content-wrapper) {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        word-break: keep-all;
+        flex: 1;
+        min-height: 28px;
+        line-height: 28px;
+        &:hover {
+          background: none;
+        }
+      }
+      :global(.ant-tree-node-content-wrapper.ant-tree-node-selected) {
+        background: none;
+      }
+    }
+    :global(.ant-tree-treenode.ant-tree-treenode-selected) {
+      background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1) !important;
+    }
+    :global(.ant-tree-treenode) {
+      &:hover {
+        background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+      }
+    }
+  }
+  .col {
+    // flex: 50%;
+    position: relative;
+    &:first-of-type {
+      width: 280px;
+      &::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 1px;
+        background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+        transform: scale(0.5, 1);
+      }
+    }
+    .contactWrap {
+      display: flex;
+      align-items: center;
+      height: 40px;
+    }
+    .contactAvatar {
+      flex: none;
+      margin-right: 8px;
+      width: 28px;
+      height: 28px;
+    }
+  }
+}
+
+.searchInput {
+  font-size: 12px;
+  border-radius: 14px;
+  :global {
+    .ant-input {
+      font-size: 12px;
+    }
+    .anticon.anticon-close-circle.ant-input-clear-icon {
+      font-size: 14px;
+    }
+  }
+}
+
+.emptyImg {
+  width: 200px !important;
+  height: 128px !important;
+}
+
+.catalog {
+  padding: 0 16px;
+  .catalogCard {
+    // border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    @include borderHalfPxRound(rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16), 4px);
+    .metaContainer {
+      max-width: 284px;
+      p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        margin-bottom: 4px;
+        font-size: 14px;
+        line-height: 16px;
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+        &.subdesc {
+          color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+          font-size: 12px;
+          line-height: 14px;
+          margin-bottom: 0;
+        }
+      }
+    }
+    .buttonContainer {
+      display: flex;
+      justify-content: center;
+      button {
+        outline: none;
+        // width: 36px;
+        height: 20px;
+        font-size: 12px;
+        line-height: 12px;
+        padding: 1px 5px;
+        cursor: pointer;
+        border-radius: 2px;
+        border: 1px solid #386ee7;
+        color: #386ee7;
+        // background-color: #ffffff;
+        background-color: $white;
+        &.primary {
+          color: #ffffff;
+          background: #386ee7;
+        }
+      }
+    }
+  }
+}

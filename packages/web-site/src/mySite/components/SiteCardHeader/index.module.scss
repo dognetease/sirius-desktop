@@ -1,0 +1,311 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+@mixin common-btn {
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  color: $Brand-6;
+  border: 1px solid $Brand-7;
+
+  &:hover {
+    color: $Brand-5;
+    border: 1px solid $Brand-5;
+  }
+}
+
+.site-card-header {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+
+    &-left {
+      font-weight: 500;
+      font-size: 14px;
+      color: $Text-5;
+      line-height: 22px;
+      padding-right: 8px;
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      a {
+        font-weight: 400;
+        font-size: 13px;
+        margin-left: 10px;
+      }
+      .custom-site-tag {
+        border-radius: 2px;
+        font-weight: 400;
+        font-size: 12px;
+        text-align: center;
+        padding: 2px 6px;
+        color: $label-3_3;
+        background: $label-3_1;
+        white-space: nowrap;
+      }
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+
+      .edit-day {
+        font-size: 12px;
+        line-height: 16px;
+        color: $Text-3;
+      }
+
+      .edit-btn {
+        @include common-btn;
+        width: 52px;
+        height: 24px;
+        font-size: 12px;
+        line-height: 24px;
+        margin-left: 12px;
+      }
+
+      .edit-btn-big {
+        @include common-btn;
+        width: 88px;
+        height: 24px;
+        font-size: 12px;
+        line-height: 24px;
+        margin-left: 12px;
+      }
+
+      .opt-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        width: 52px;
+        height: 24px;
+        border: 1px solid $Line-3;
+        margin-left: 12px;
+        border-radius: 4px;
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+        color: $Text-5;
+        cursor: pointer;
+
+        &:hover {
+          background: $Fill-3;
+        }
+
+        &:active {
+          background: $Fill-3;
+        }
+      }
+
+      :global(.ant-select-selector) {
+        height: 24px;
+        margin-left: 12px;
+      }
+
+      .add-product {
+        @include common-btn;
+        width: 64px;
+        height: 24px;
+        font-size: 12px;
+        line-height: 24px;
+        margin-left: 12px;
+      }
+    }
+  }
+  .index-url {
+    font-size: 12px;
+    line-height: 16px;
+    margin: 12px 0 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 20px;
+
+    a {
+      color: $Text-3;
+    }
+
+    .leftContainer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+      .splitLine {
+        width: 1px;
+        height: 10px;
+        background: $Line-2;
+      }
+      .youhuaTip {
+        color: $Text-5;
+        /* 全部/Text-C1-Med12 */
+        font-family: PingFang SC;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .outer-site-id {
+    color: $Text-4;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    svg {
+      margin-left: 4px;
+    }
+  }
+
+  .service-period {
+    font-size: 12px;
+    color: #9fa2ad;
+    text-align: right;
+    white-space: nowrap;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+}
+
+.opt-menu {
+  :global {
+    .ant-dropdown-menu-item {
+      color: $Text-5;
+    }
+    .ant-divider-horizontal {
+      width: calc(100% - 16px);
+      min-width: auto;
+      margin: 0 8px;
+      border-color: $Line-1;
+    }
+  }
+}
+
+.confirm {
+  :global {
+    .ant-btn-primary {
+      margin-left: 12px !important;
+      background: $Brand-6;
+      &:hover {
+        background: $Brand-5;
+      }
+      &:active {
+        background: $Brand-7;
+      }
+    }
+  }
+}
+
+.select-modal {
+  :global {
+    .ant-modal-body {
+      padding: 0 24px 18px;
+      margin-top: 12px;
+    }
+    .ant-modal-header {
+      border-bottom: none;
+      padding: 24px 24px 0;
+    }
+  }
+
+  .btn-group {
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+.siteCardHeaderPopover {
+  z-index: 999 !important;
+  :global {
+    .ant-popover-arrow {
+      opacity: 1 !important;
+    }
+  }
+}
+
+.siteConfigOptimizationPanel {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 25px;
+  .header {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    padding: 0px 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: $Text-5;
+    /* 全部/Text-P1-Med16 */
+    font-family: PingFang SC;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    padding-top: 24px;
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .item {
+      width: 100%;
+      height: 65px;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px 20px;
+      background-color: #ffffff;
+      &:hover {
+        background-color: $Fill-2;
+      }
+      .left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 4px;
+        .title {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 6px;
+          color: $Text-5;
+          /* 全部/Text-C2-Med14 */
+          font-family: PingFang SC;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+        }
+        .subTitle {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          margin-left: 22px;
+          color: $Text-3;
+          /* 全部/Text-C1-Reg12 */
+          font-family: PingFang SC;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+        }
+      }
+      .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

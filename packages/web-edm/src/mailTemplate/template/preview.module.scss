@@ -1,0 +1,114 @@
+.preview {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 74px;
+    background: #ffffff;
+    // border-bottom: 1px solid #ECEFF4;
+    box-shadow: 0px 1px 0px #eceff4;
+    padding: 24px;
+    // margin-bottom: 12px;
+    .title {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+      color: #232d47;
+      display: flex;
+      align-items: center;
+      .icon {
+        margin-right: 4px;
+        cursor: pointer;
+      }
+    }
+  }
+  .data {
+    height: 142px;
+    background: #ffffff;
+    // border: 1px solid #F0F3F5;
+    // border-radius: 4px;
+    padding: 16px 0px;
+    margin: 12px 24px 0px;
+    .dataTitle {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      line-height: 22px;
+      color: #272e47;
+      font-weight: 500;
+      margin-bottom: 16px;
+      .dataIcon {
+        width: 2px;
+        height: 16px;
+        background: #4c6aff;
+        margin-right: 5px;
+      }
+    }
+    .dataItem {
+      width: 100%;
+      height: 72px;
+      border-radius: 4px;
+      padding: 6px 12px;
+      .dataLabel {
+        font-size: 12px;
+        height: 20px;
+        line-height: 20px;
+        color: #7d8085;
+        margin-bottom: 8px;
+      }
+      .dataValue {
+        font-family: 'LX-numbers';
+        font-size: 24px;
+        line-height: 32px;
+        display: flex;
+        align-items: center;
+        color: #232d47;
+      }
+    }
+  }
+  .templateDesc {
+    margin: 12px 24px 0px;
+    .templateDescTitle {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      line-height: 22px;
+      color: #272e47;
+      font-weight: 500;
+      margin-bottom: 16px;
+      .dataIcon {
+        width: 2px;
+        height: 16px;
+        background: #4c6aff;
+        margin-right: 5px;
+      }
+    }
+  }
+  .content {
+    margin: 24px 18px 70px 24px;
+    flex: 1;
+  }
+  .footer {
+    width: 100%;
+    height: 64px;
+    padding: 16px 24px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    box-shadow: 0px -1px 0px #eceff4;
+    .buttons {
+      display: flex;
+      .button {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

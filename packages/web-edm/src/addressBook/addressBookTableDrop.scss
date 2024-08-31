@@ -1,0 +1,24 @@
+div.__address_antd_dropdown:not(.address_contact_dropdown) {
+  ul.__address_antd_dropdown.ant-dropdown-menu-light {
+    max-height: 200px;
+    overflow: auto;
+    li.__address_antd_dropdown {
+      &:nth-child(even) {
+        background-color: $Fill-2;
+      }
+      &:nth-child(odd) {
+        border-color: #fff;
+      }
+    }
+  }
+}
+
+.address_contact_dropdown {
+  .ant-dropdown-menu-item {
+    padding: 8px 12px;
+  }
+
+  .ant-dropdown-menu-item:not(.ant-dropdown-menu-item-danger) {
+    color: $Text-5;
+  }
+}

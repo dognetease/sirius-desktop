@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+const shell = require('shelljs');
+const path = require('path');
+shell.echo("install new build to environment");
+const dist = 'dist/db.bundle.min.js*';
+
+// shell.chmod('755', dist);
+const files = shell.ls(dist);
+for (let j of files) {
+    const n = j.replace(/^dist\//, "");
+    const toFolder = path.resolve(process.cwd(), "../web/public/worker/");
+    shell.mkdir('-p', toFolder);
+    const toPath = path.resolve(toFolder, n);
+    shell.cp('-rf', j, toPath);
+    // for (let i of ['api', 'web', 'electron', 'web_worker']) {
+    //     const symbol = '../' + i + '/node_modules/.bin/' + n;
+    //     const ns = path.resolve(process.cwd(), symbol);
+    //     console.log("from " + symbol + " to " + nj);
+    //     shell.ln('-sf', nj, ns);
+    //
+    //     const folderSymbol = '../' + i + '/src/gen';
+    //     const nfs = path.resolve(process.cwd(), folderSymbol);
+    //     shell.mkdir('-p',nfs);
+    //     // const src = "./gen_" + i;
+    //     // const nsrc =path.resolve(process.cwd(), src);
+    //     // console.log("from " + folderSymbol + " to " + src);
+    //     // shell.ln('-sf', nsrc, nfs);
+    // }
+}

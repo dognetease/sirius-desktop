@@ -1,0 +1,76 @@
+@import '@web-common/styles/variables.scss';
+
+.box {
+  padding: 10px 12px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  background-color: $Fill-1;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 20px;
+  }
+
+  .title {
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    color: $Text-4;
+  }
+
+  .nums {
+    font-weight: 700;
+    color: $Text-5;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 20px;
+    width: calc(100% - 88px);
+  }
+
+  .link {
+    color: $Brand-6;
+
+    cursor: pointer;
+  }
+
+  .number {
+    font-family: 'DIN Alternate';
+  }
+}
+
+.hover {
+  &:hover {
+    background: var(--fill-25-hover, #f0f2f7);
+  }
+}
+
+.bg-color0 {
+  background: rgba($color: #6ba9ff, $alpha: 0.1);
+}
+
+.bg-color1 {
+  background: rgba($color: #8dd6bc, $alpha: 0.1);
+
+  :global(.ant-select-selector) {
+    background-color: #f4fbf8 !important;
+  }
+}
+
+.bg-color2 {
+  background: rgba($color: #f7a87c, $alpha: 0.1);
+
+  :global(.ant-select-selector) {
+    background-color: #fef6f2 !important;
+  }
+}
+
+.bg-color3 {
+  background: rgba($color: #ffaa00, $alpha: 0.1);
+}

@@ -1,0 +1,21 @@
+.customer-tree-container {
+  padding-bottom: 16px !important;
+
+  .edti-tree-wrap {
+    .ant-tree {
+      .ant-tree-list {
+        .ant-tree-treenode {
+          .ant-tree-node-content-wrapper {
+            padding-right: 8px;
+            flex: 1 1 auto;
+            width: 100px;
+
+            .ant-tree-title {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+}

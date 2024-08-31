@@ -1,0 +1,9 @@
+.handler-item {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 20px;
+  cursor: pointer;
+  &:hover {
+    color: #386ee7;
+  }
+}

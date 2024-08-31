@@ -1,0 +1,273 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    .multi-shadow {
+      position: absolute;
+      right: -6px;
+      bottom: -6px;
+      z-index: 0;
+      background: #f8f9fa;
+      border: 1px solid #ebedf2;
+      box-shadow: 0px 3px 7px rgba(47, 83, 134, 0.08);
+      border-radius: 4px;
+      height: 78px;
+      width: 100%;
+    }
+
+    .body-area {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      border-radius: 4px;
+
+      .top-color {
+        position: relative;
+        height: 78px;
+        left: 2px;
+        width: 4px;
+        flex-shrink: 0;
+        border-radius: 4px 0 0 4px;
+      }
+
+      .basic-item {
+        width: 312px;
+        height: 78px;
+        box-shadow: 0px 4px 10px 0px rgba(47, 83, 134, 0.12);
+
+        position: relative;
+        background: $Fill-1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 16px;
+        z-index: 10;
+        background: #ffffff;
+        border-radius: 0 4px 4px 0;
+
+        .use-multi {
+          width: 32px;
+          height: 32px;
+          position: absolute;
+          bottom: 0px;
+          z-index: 1;
+          right: 0px;
+        }
+
+        .header {
+          // min-height: 88px;
+          // max-height: 88px;
+          // height: 88px;
+          z-index: 1;
+
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          width: 100%;
+
+          .header-area {
+            position: absolute;
+            left: 50%;
+            top: -13px;
+            transform: translateX(-50%);
+            max-width: 100%;
+            color: $Text-5;
+            @include p1-4-med14;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            background-color: $Link-2;
+            border-radius: 40px;
+            padding: 2px 18px;
+          }
+        }
+
+        .add-footer {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 4px;
+          cursor: pointer;
+          color: $Brand-6;
+          width: 100%;
+          @include c4-3-reg12;
+        }
+
+        .footer {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+
+          .mail-content {
+            width: 280px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            color: $Text-4;
+            @include c4-1-reg12;
+          }
+
+          .button {
+            height: 16px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+
+            color: $Text-5;
+            @include c4-1-reg12;
+          }
+        }
+      }
+    }
+    .footer-area {
+      width: 312px;
+      margin: 8px 0 10px 4px;
+      color: $Text-3;
+      @include c4-1-reg12;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  .round-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .round-name {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 8px;
+    }
+
+    .round-index {
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      background: $Brand-6;
+      text-align: center;
+      color: #fff;
+      @include c4-3-reg12;
+    }
+
+    .round-mail-select {
+      position: absolute;
+      bottom: 18px;
+      @include c4-1-reg12;
+      padding: 2px 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 2px;
+      color: $Text-5;
+      background-color: $Fill-3;
+    }
+
+    .round-mail-select-expand {
+      right: 34px;
+    }
+    .round-mail-select-expand-no {
+      left: 52px;
+    }
+  }
+
+  .plans {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    padding-top: 13px;
+  }
+}
+
+.sep-line {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .line {
+    height: 12px;
+    width: 1px;
+    background: $Brand-3;
+  }
+
+  .h-line {
+    height: 20px;
+    width: 331px;
+    border: 1px solid $Brand-3;
+    border-radius: 8px;
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .bottom-circle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.footer-sep-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .top-circle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .h-line {
+    height: 20px;
+    width: 331px;
+    border: 1px solid $Brand-3;
+    border-radius: 8px;
+    border-top: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .line {
+    height: 12px;
+    width: 1px;
+    background: $Brand-3;
+  }
+}
+
+.send-time {
+  padding: 2px 6px;
+  gap: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $Fill-3;
+  border-radius: 10px;
+
+  .time-title {
+    @include c4-1-reg12;
+    color: $Text-3;
+    flex-shrink: 0;
+  }
+}

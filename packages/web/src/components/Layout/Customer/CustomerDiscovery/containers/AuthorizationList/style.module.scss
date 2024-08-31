@@ -1,0 +1,133 @@
+@import '../../common.module.scss';
+
+.rule-table {
+  min-height: 0; // fix flex height
+}
+
+.search {
+  padding-bottom: 20px;
+}
+
+.table {
+  overflow: hidden;
+
+  :global(.rule-table-finished) {
+    opacity: 0.4;
+  }
+}
+
+.empty {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #47484c;
+}
+
+.talbe-cell-num {
+  white-space: nowrap;
+
+  .num {
+    margin-right: 12px;
+    color: #396ee7;
+    cursor: pointer;
+  }
+}
+
+.tag-success {
+  color: #478e83;
+  background: #e6faf6;
+}
+
+.tag-error {
+  color: #be565e;
+  background: #feeff1;
+}
+
+.tag-warning {
+  color: #cca266;
+  background: #fffbe6;
+}
+
+.tag-default {
+  background: #f0f3f5;
+  color: #4e5a70;
+}
+
+:global(.ant-tag) {
+  font-weight: 400;
+  font-size: 12px;
+  border: none;
+  border-radius: 2px;
+}
+
+.drawerTitle {
+  .title {
+    font-weight: 500;
+    font-size: 20px;
+    color: #232d47;
+    margin-right: 8px;
+  }
+
+  .tag {
+    margin-right: 20px;
+  }
+
+  :global(.ant-checkbox + span) {
+    color: #232d47;
+    font-weight: 400;
+  }
+
+  :global(.ant-spin .ant-spin-dot > i) {
+    width: 14px;
+    height: 14px;
+  }
+
+  :global(.spin-label) {
+    display: none;
+  }
+}
+
+.quick-auth-title {
+  font-weight: 500;
+  font-size: 14px;
+  color: #000000;
+  padding-bottom: 16px;
+}
+
+.quick-auth-card {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 4px;
+  margin-bottom: 16px;
+
+  .accDetail {
+    flex: 1;
+    padding: 0 12px;
+  }
+
+  .accName {
+    font-weight: 500;
+    font-size: 14px;
+    color: #232d47;
+  }
+
+  .accEmail {
+    font-weight: 400;
+    font-size: 12px;
+    color: #7a8599;
+  }
+}
+
+.accNickname {
+  font-weight: 500;
+  font-size: 14px;
+  color: #232d47;
+}
+
+.accNickEmail {
+  font-weight: 400;
+  font-size: 14px;
+  color: #232d47;
+}

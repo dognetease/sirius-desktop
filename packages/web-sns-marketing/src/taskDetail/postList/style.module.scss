@@ -1,0 +1,65 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.wrapper {
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #f0f1f5;
+  border-radius: 4px;
+
+  .title {
+    color: #272e47;
+    font-weight: bold;
+    padding-bottom: 16px;
+  }
+
+  .post-content {
+    max-width: 260px;
+  }
+
+  :global .ant-table-thead > tr > th,
+  :global .ant-table-tbody > tr > td,
+  :global .ant-table tfoot > tr > th,
+  :global .ant-table tfoot > tr > td {
+    min-width: 120px;
+  }
+
+  .account-cell {
+    display: flex;
+    align-items: center;
+
+    .account-avatar {
+      margin-right: 8px;
+    }
+
+    .account-name {
+    }
+  }
+
+  .comment-count-cell {
+    display: flex;
+    align-items: center;
+
+    .comment-count {
+      color: $Text-5;
+      font-weight: 400;
+      font-family: 'LX-numbers';
+    }
+
+    .un-read-comment-count {
+      color: $Error-6;
+      font-weight: 400;
+      font-family: 'LX-numbers';
+      margin-left: 6px;
+    }
+  }
+
+  .number {
+    font-size: 14px;
+    color: #272e47;
+    font-family: 'LX-numbers';
+  }
+
+  :global .ant-table-thead :global .ant-table-cell {
+    color: #747a8c;
+  }
+}

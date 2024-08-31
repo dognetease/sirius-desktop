@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>陌生人安全提醒</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        #container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .content-container {
+            background-color: white;
+        }
+
+        h1 {
+            color: #262A33;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 26px;
+            padding: 14px 18px 12px 18px;
+        }
+
+        p {
+            color: #51555C;
+            font-size: 16px;
+            line-height: 26px;
+            padding: 0px 18px 0px 18px;
+            margin-bottom: 12px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+            body {
+                background: none;
+            }
+
+            .content-container {
+                width: 100%;
+                height: 100%;
+            }
+
+            #container {
+
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            body {
+                background: url("./assets/bg.jpg") 50%/cover no-repeat fixed;
+            }
+
+            #container {
+                background: rgba(251, 251, 251, 0.2);
+                backdrop-filter: blur(28px);
+                min-height: 724px;
+            }
+
+            .content-container {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin-left: -188px;
+                margin-top: -362px;
+                width: 375px;
+                /*margin: 178px auto 0 auto;*/
+                height: 724px;
+                overflow-y: scroll;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div class="loading"></div>
+    <div class="error"></div>
+    <div class="content-container">
+        <h1>什么是陌生人安全提醒？</h1>
+        <p>
+            功能开启后，如果来信方不是通讯录联系人（包括个人和企业通讯录），打开或回复邮件时将会进行安全提醒，提醒样式如下图，可以一键将发信人添加至个人通讯录，添加至黑名单或从回复对象中移除。<br/>
+            功能关闭后，邮件详情页或回复页将不再显示陌生人安全提醒。<br/>
+            注意：如果企业管理员在后台设置“强制开启”，用户将无法在客户端自行关闭此功能。
+        </p>
+        <div>
+            <img src="assets/hint_sample.png"/>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("readystatechange", function (ev) {
+            // console.log(ev);
+            // if (document.readyState !== "complete") return;
+            const containerEl = document.getElementById('container');
+            const height = window.innerHeight || document.documentElement.clientHeight ||
+                document.body.clientHeight;
+            containerEl.style.height = height + "px";
+        });
+    </script>
+</div>
+</body>
+</html>

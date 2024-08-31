@@ -1,0 +1,76 @@
+@import '@web-common/styles/variables.scss';
+
+.fb-post-table {
+  // :global(.ant-table-thead > tr > th),
+  :global(.ant-table-tbody > tr > td) {
+    padding: 8px 8px;
+  }
+
+  .ant-table {
+    border: none;
+    border-radius: 0;
+  }
+
+  .even {
+    background-color: $Fill-1;
+    :global {
+      .ant-table-cell-fix-right.ant-table-cell-fix-right-first {
+        background-color: $Fill-1;
+      }
+    }
+  }
+  .odd {
+    background-color: #fff;
+  }
+
+  :global(.ant-table-tbody > tr.ant-table-row-selected > td),
+  :global(.ant-table-tbody > tr.ant-table-row:hover > td) {
+    background: $Fill-3;
+  }
+
+  .color {
+    color: $Avatar-6;
+    cursor: pointer;
+  }
+  .commmet-text {
+    color: $Text-5;
+    font-weight: 400;
+    padding-right: 5px;
+    font-family: LX-numbers;
+  }
+  .new-comment {
+    color: $Error-6;
+    font-weight: 400;
+    font-family: LX-numbers;
+  }
+
+  .img-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 4.75px;
+    overflow: hidden;
+    position: relative;
+    .mask {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transition-property: all;
+      transition-duration: 0.1s;
+      background: #000;
+      opacity: 0;
+      top: 0px;
+      cursor: pointer;
+    }
+    &:hover > .mask {
+      opacity: 0.7;
+    }
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

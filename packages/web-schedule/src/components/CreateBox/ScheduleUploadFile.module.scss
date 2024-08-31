@@ -1,0 +1,97 @@
+@import '../../../../web-common/src/styles/variables.scss';
+.btnOut {
+  display: flex;
+  align-items: center;
+  .btn {
+    :global(.ant-btn) {
+      color: $Brand-6;
+      font-size: 12px;
+      font-weight: 400;
+      span {
+        height: 22px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  .tip {
+    display: inline-block;
+    margin-left: 12px;
+    color: $Text-2;
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+.fileList {
+  width: 100%;
+  .fileItem {
+    width: 195px;
+    display: inline-flex;
+    height: 46px;
+    align-items: center;
+    background-color: $Fill-1;
+    border-radius: $round-corner-4;
+    padding: 12px;
+    margin-top: 16px;
+    position: relative;
+
+    &:nth-child(2n) {
+      margin-left: 16px;
+    }
+
+    .attachmentLogo {
+      height: 20px;
+      width: 20px;
+    }
+    .attachmentName {
+      margin-left: 8px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      font-weight: 400;
+      font-size: 14px;
+      color: $Text-4;
+    }
+    .closeIcon {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      cursor: pointer;
+    }
+    .progressBox {
+      position: absolute;
+      height: 8px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      border-radius: $round-corner-4;
+      overflow: hidden;
+
+      .progress {
+        position: absolute;
+        height: 4px;
+        bottom: 0px;
+        left: 0px;
+        width: 0%;
+        background-color: $Brand-5;
+        &Done {
+          transition: all 3s !important;
+          width: 100% !important;
+          opacity: 0;
+        }
+        &ing {
+          animation: progressing 25s ease 1s 1 normal;
+          animation-fill-mode: forwards;
+        }
+        @keyframes progressing {
+          from {
+            width: 0%;
+          }
+          to {
+            width: 95%;
+          }
+        }
+      }
+    }
+  }
+}

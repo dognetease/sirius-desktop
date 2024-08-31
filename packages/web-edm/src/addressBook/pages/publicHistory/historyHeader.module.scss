@@ -1,0 +1,24 @@
+.header {
+  height: 90px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 17px 0px 20px 20px;
+  box-sizing: border-box;
+
+  .moduleTitle {
+    /** 规范中没有提及 **/
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+  }
+
+  .linkBtn {
+    cursor: pointer;
+  }
+}

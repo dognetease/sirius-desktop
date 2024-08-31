@@ -1,0 +1,165 @@
+@import './../../../../web/src/styles/varies.scss';
+$bg-color: $Fill-1;
+
+.container {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding: 0;
+  height: 100%;
+  //background-color: $Fill-1;
+  //background-color: $bg-color;
+  // .search {
+  //     border-radius: 24px;
+  // }
+  .searchContainer {
+    height: 52px;
+    display: flex;
+    align-items: center;
+    .search-button {
+      flex: 1;
+      margin: 16px 12px 14px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      // background-color: #fff;
+      background-color: $white;
+      border-radius: 24px;
+      border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.11);
+      padding: 6px 8px 6px;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.3);
+      outline: none;
+      cursor: pointer;
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 16px;
+      /* identical to box height, or 133% */
+
+      text-align: right;
+
+      /* 字体及ICON颜色/不重要文字40% */
+      color: #a8aaad;
+      .searchIcon {
+        width: 16px;
+        height: 16px;
+        // background-image: url('@/images/icons/search.svg');
+        background-size: 100% 100%;
+      }
+      .searchTips {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+      }
+      &:hover {
+        border-color: $main-enhance-color;
+        color: $main-enhance-color;
+        .searchIcon {
+          width: 16px;
+          height: 16px;
+          // background-image: url('@/images/icons/search_hover.svg');
+          background-size: 100% 100%;
+        }
+      }
+      > span {
+        margin-left: 4px;
+      }
+    }
+    .u-refresh {
+      margin-right: 12px;
+      box-sizing: border-box;
+      border: 1px solid $white;
+      background: #ffffff url(../../../../web/src/images/icons/common/sync.svg) center center no-repeat; // 防止 $mail-refresh 不生效的兜底
+      background: $white $mail-refresh center center no-repeat;
+      background-size: 16px;
+      width: 28px;
+      height: 28px;
+      border-radius: 14px;
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+      &:hover {
+        // background-image: url('@/images/icons/common/sync_hover.svg');
+        border-color: $main-enhance-color;
+      }
+    }
+  }
+  .options {
+    // margin-top: 16px;
+    .option-item {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      // margin-top: 4px;
+      padding: 0 24px;
+      height: 36px;
+      color: $main-font-color;
+      font-size: 14px;
+      line-height: 16px;
+      //background-color: $normal-menu-item-color;
+      &:hover {
+        background-color: $hover-menu-item-color;
+      }
+      &.selected {
+        background-color: $selected-menu-item-color;
+      }
+      .option-text {
+        margin-left: 8px;
+        pointer-events: none;
+      }
+    }
+    // .option-action {
+    //     background: $Fill-4;
+    //     border-radius: 16px;
+    //     color: #386EE7;
+    // }
+  }
+
+  .treeContainer {
+    flex: 1;
+    overflow-y: auto;
+    :global(.os-host) {
+      height: 100%;
+    }
+  }
+
+  .spaceUsage {
+    padding-top: 22px;
+    padding-bottom: 8px;
+  }
+
+  .volume-wrapper {
+    margin-bottom: 24px;
+    padding: 0 16px;
+    .volume {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      line-height: 1;
+      margin-bottom: 8px;
+      .type {
+        // color: #262a33;
+        color: $font-color-2;
+      }
+      .desc {
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+      }
+    }
+    .percent {
+      height: 4px;
+      // background: #ffffff;
+      background-color: $white;
+      border-radius: 3px;
+      .percentDesc {
+        border-radius: 3px;
+        height: 4px;
+        background: $Brand-5;
+      }
+    }
+    .warn .percentDesc {
+      background: $main-error-color;
+    }
+  }
+}

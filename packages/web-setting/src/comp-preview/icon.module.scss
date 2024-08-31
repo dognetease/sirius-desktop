@@ -1,0 +1,26 @@
+.icon-box {
+  display: flex;
+  flex-wrap: wrap;
+  .icon-item {
+    width: 150px;
+  }
+  .icon-svg {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    &:hover {
+      background-color: #afafaf;
+    }
+  }
+  .icon-txt {
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

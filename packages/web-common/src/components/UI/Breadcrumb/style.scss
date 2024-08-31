@@ -1,0 +1,45 @@
+@import '../../../styles/common.scss';
+.#{$class-prefix}-breadcrumb.ant-breadcrumb {
+  height: 22px;
+  .#{$class-prefix}-breadcrumb-item {
+    display: inline-block;
+    height: 22px;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: top;
+    padding: 0 4px;
+    color: $Text-3;
+    @include p1-3-reg14;
+    a {
+      color: $Text-3;
+    }
+  }
+  & > span:first-child .#{$class-prefix}-breadcrumb-item {
+    background: none;
+    color: $Text-3;
+  }
+  .#{$class-prefix}-breadcrumb-item:hover {
+    background: $Fill-2_5;
+    border-radius: 2px;
+    color: $Avatar-6;
+  }
+  & > span:last-child .#{$class-prefix}-breadcrumb-item {
+    color: $Text-5;
+    @include p1-4-med14;
+    background: none;
+  }
+  a:hover {
+    color: $Avatar-6;
+  }
+}
+
+.#{$class-prefix}-breadcrumb-arrow-separator.ant-breadcrumb {
+  .ant-breadcrumb-separator {
+    margin: 0 2px 0 0;
+    display: inline-flex;
+    align-items: center;
+    height: 22px;
+  }
+}

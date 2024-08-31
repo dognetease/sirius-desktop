@@ -1,0 +1,40 @@
+.operation {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  margin-top: 8px;
+
+  .text {
+    color: $Text-3;
+    font-size: 12px;
+    font-weight: 400;
+    margin-right: 12px;
+  }
+
+  .number {
+    color: $Text-3;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 12px;
+  }
+
+  .add-btn {
+    :global {
+      .ant-btn {
+        background-color: $Brand-6;
+        color: #ffffff;
+        border-radius: 4px;
+        padding: 4px 16px;
+
+        &:disabled {
+          background-color: $Brand-3;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .mode-btn {
+    margin-right: 20px;
+  }
+}

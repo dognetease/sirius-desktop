@@ -1,0 +1,161 @@
+@import './../../../../web/src/styles/varies.scss';
+
+// confirm
+:global(.disk-error) {
+  :global(.ant-modal-content) {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: none;
+  }
+  &.upload-error {
+    :global(.ant-modal-body) {
+      padding-bottom: 0;
+    }
+  }
+  :global(.ant-modal-body) {
+    padding: 24px;
+  }
+  :global(.ant-modal-confirm-body > :first-child) {
+    float: left;
+  }
+  :global(.ant-modal-confirm-title) {
+    display: block;
+    margin-left: 28px;
+    line-height: 20px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  }
+  //:global(.ant-modal-confirm-content) {
+  //    margin: 0 0 0 28px;
+  //}
+  :global(.ant-btn) {
+    border-radius: 4px;
+  }
+  :global(.ant-btn + .ant-btn) {
+    margin-left: 8px;
+  }
+  .error-icon {
+    position: absolute;
+  }
+}
+
+:global(.disk-error.upload-error) {
+  :global(.ant-modal-footer) {
+    padding: 24px;
+  }
+}
+
+// <Modal>
+:global(.disk-error-modal) {
+  padding: 0;
+  &.single-file {
+    :global(.ant-modal-footer) {
+      border: none;
+    }
+  }
+  :global(.ant-modal-content) {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: none;
+  }
+  :global(.ant-modal-body) {
+    padding: 0 24px 0 52px;
+  }
+  :global(.ant-modal-confirm-body > :first-child) {
+    float: left;
+  }
+  :global(.ant-modal-header) {
+    padding: 28px 24px 0;
+    border: none;
+    border-radius: 8px; // why
+  }
+  :global(.ant-modal-confirm-title) {
+    display: block;
+    margin-left: 28px;
+    line-height: 20px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  }
+  :global(.ant-btn) {
+    border-radius: 4px;
+  }
+  :global(.ant-btn + .ant-btn) {
+    margin-left: 16px;
+  }
+  :global(.ant-modal-footer) {
+    padding: 24px;
+  }
+  .error-icon {
+    position: absolute;
+  }
+}
+
+.error-box {
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.8);
+  margin-top: 16px;
+  .error-info {
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.8);
+  }
+  .highlight {
+    color: $main-error-color;
+  }
+  .ok {
+    color: $main-success-color;
+  }
+}
+
+.upload-fail-content {
+  .upload-fail-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  }
+  .upload-error-icon {
+    position: absolute;
+    left: 24px;
+  }
+  .upload-file-list {
+    max-height: 100px;
+    margin: 8px -16px 0 -8px;
+    @include sirius-scroll;
+  }
+  .upload-file-item {
+    height: 28px;
+    border-radius: 4px;
+    padding: 8px;
+    position: relative;
+    font-size: 12px;
+    line-height: 12px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: auto;
+    margin-right: 10px;
+    &:hover {
+      background-color: #f4f4f5;
+      .remove-icon {
+        display: block;
+      }
+    }
+    .upload-file-size {
+      color: $main-warning-color;
+    }
+    .remove-icon {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      right: 12px;
+      bottom: 6px;
+      display: none;
+      cursor: pointer;
+    }
+  }
+}

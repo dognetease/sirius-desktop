@@ -1,0 +1,374 @@
+@import '../../../web/src/styles/varies';
+
+$labelColor: #262a33;
+$emailAddressColor: #262a33;
+$smallTipFontSize: 12px;
+$largeMargin: 32px;
+
+.registerContainer {
+  position: relative;
+  flex: 1;
+  margin: 56px 0;
+  padding: 0 30px;
+  width: 100%;
+  min-width: 420px;
+  max-width: 540px;
+  max-height: 600px;
+  min-height: 528px;
+  text-align: left;
+  border: 1px solid $Fill-3;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  .registerWrap {
+    width: 100%;
+    max-width: 400px;
+    .backWrap {
+      position: absolute;
+      top: 32px;
+      left: 37px;
+      cursor: pointer;
+
+      .backIcon {
+        float: left;
+        width: 24px;
+        height: 24px;
+        border-radius: 24px;
+        background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.07);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+          width: 24px;
+          height: 24px;
+          background-image: url('../../../web/src/images/icons/login/back.svg');
+          background-size: 100%;
+        }
+        &:hover {
+          :global(i) {
+            background-image: url('../../../web/src/images/icons/login/back-hover.svg');
+          }
+        }
+      }
+
+      .anticon svg {
+        font-size: 11px;
+      }
+
+      .back {
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 24px;
+        color: #7d8085;
+        margin-left: 12px;
+      }
+    }
+    .wrap {
+      .title {
+        margin-bottom: 46px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 24px;
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      }
+      .content {
+        height: 304px;
+      }
+    }
+    .createTeamWrap {
+      height: 100%;
+      padding-top: 80px;
+      overflow-y: auto;
+      .title {
+        font-size: 24px;
+        line-height: 24px;
+        color: #262a33;
+      }
+      .subTitle {
+        margin-top: 16px;
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 14px;
+        color: #7d8085;
+      }
+      :global(.ant-radio-wrapper:not(:first-child)) {
+        margin-left: 21px;
+      }
+      .group {
+        margin-top: 24px;
+        &.small {
+          margin-top: 12px;
+        }
+        &.large {
+          margin-top: $largeMargin;
+        }
+        .at-text {
+          padding-left: 8px;
+          padding-right: 8px;
+        }
+        .label {
+          margin-bottom: 12px;
+          display: flex;
+          align-items: center;
+          color: $labelColor;
+          line-height: 22px;
+          > b {
+            color: #f74f4f;
+            margin-right: 3px;
+          }
+          span {
+            font-family: PingFang SC;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 14px;
+            color: #51555c;
+          }
+          .label-text {
+            flex: 0 0 auto;
+            line-height: 22px;
+          }
+          .email-address {
+            color: $emailAddressColor;
+            line-height: 22px;
+            flex: 1;
+            white-space: normal;
+            word-break: break-all;
+            .custom-host {
+              user-select: none;
+              margin-left: 4px;
+            }
+          }
+        }
+        .teamName {
+        }
+        .domainPrefixWrap {
+          display: flex;
+          align-items: center;
+          position: relative;
+          .prefixTxt {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            z-index: 2;
+            width: 30px;
+            height: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid $Text-1;
+            color: #262a33;
+            font-family: PingFang SC;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 16px;
+            /* identical to box height, or 100% */
+
+            /* 黑白灰/字体 90% */
+
+            color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+          }
+          .domainPrefix {
+            width: 206px;
+            padding-left: 43px;
+          }
+          .domainSuffixTxt {
+            margin-left: 8px;
+            font-family: PingFang SC;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 16px;
+            color: #262a33;
+          }
+
+          :global(.ant-input-affix-wrapper) {
+            padding: 4px 12px;
+          }
+        }
+        :global(.ant-input-affix-wrapper) {
+          height: 48px;
+          border-radius: 8px;
+          font-size: 16px;
+          color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+          padding: 4px 16px;
+        }
+        :global(.ant-input-affix-wrapper:hover, .ant-input-affix-wrapper:focus, .ant-input-affix-wrapper-focused) {
+          box-shadow: 0 0 0 0px #ffffff;
+          border: solid 1px $main-enhance-color;
+        }
+      }
+      .submitBtn {
+        user-select: none;
+        margin-top: 32px;
+        width: 100%;
+        height: 48px;
+        background: #386ee7;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        line-height: 48px;
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        cursor: pointer;
+
+        color: #ffffff;
+
+        &.disabled {
+          opacity: 0.3;
+        }
+
+        .loading-icon {
+          position: relative;
+          :global(svg) {
+            position: absolute;
+            top: 17px;
+          }
+        }
+      }
+      .tip {
+        &.small-tip {
+          font-size: $smallTipFontSize;
+          margin-top: 6px;
+          line-height: 14px;
+        }
+        margin-top: 8px;
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 22px;
+        color: #7d8085;
+      }
+      .errorWrap {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 16px;
+        .errorIcon {
+          flex: none;
+          margin-top: 2px;
+        }
+        .errorText {
+          margin-left: 5px;
+          height: 36px;
+          word-break: break-word;
+          flex: 1;
+          overflow: hidden;
+          font-size: 14px;
+          line-height: 18px;
+          color: #f74f4f;
+        }
+      }
+    }
+    .createAccountWrap {
+      height: 404px;
+      .title {
+        font-size: 24px;
+        line-height: 24px;
+        color: #262a33;
+      }
+      .subTitle {
+        margin-top: 16px;
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 14px;
+        color: #7d8085;
+      }
+      .nameWrap {
+        margin-top: 46px;
+      }
+      .mailWrap {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        .mailInput {
+          flex: 1;
+        }
+        .mailSuffixTxt {
+          flex: none;
+          margin-left: 8px;
+          font-family: PingFang SC;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 16px;
+          color: #262a33;
+        }
+      }
+      :global(.ant-input-affix-wrapper) {
+        height: 48px;
+        border-radius: 8px;
+        font-size: 16px;
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+        padding: 4px 16px;
+      }
+      :global(.ant-input-affix-wrapper:hover, .ant-input-affix-wrapper:focus, .ant-input-affix-wrapper-focused) {
+        box-shadow: 0 0 0 0px #ffffff;
+        border: solid 1px $main-enhance-color;
+      }
+      .submitBtn {
+        margin-top: $largeMargin;
+        width: 100%;
+        height: 48px;
+        background: #386ee7;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        cursor: pointer;
+
+        color: #ffffff;
+      }
+      .preBtn {
+        margin-top: 16px;
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: #386ee7;
+        cursor: pointer;
+        text-align: center;
+      }
+      .errorWrap {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 16px;
+        .errorIcon {
+          flex: none;
+          margin-top: 2px;
+        }
+        .errorText {
+          margin-left: 5px;
+          height: 36px;
+          word-break: break-word;
+          flex: 1;
+          overflow: hidden;
+          font-size: 14px;
+          line-height: 18px;
+          color: #f74f4f;
+        }
+      }
+    }
+  }
+}

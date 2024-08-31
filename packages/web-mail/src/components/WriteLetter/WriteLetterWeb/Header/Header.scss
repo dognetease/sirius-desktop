@@ -1,0 +1,116 @@
+.header {
+  padding-top: 4px;
+  padding-left: 4px;
+  display: flex;
+  // border-bottom: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+  .operate {
+    display: flex;
+    // flex-flow: row-reverse;
+    box-sizing: border-box;
+    cursor: move;
+    width: 116px;
+    padding-right: 18px;
+    .handle {
+      flex: 1;
+    }
+    .operate-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      width: 43px;
+      div {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  .tabs-box {
+    display: flex;
+    flex: 1;
+    height: 40px;
+    width: calc(100% - 116px);
+    .tab {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      box-sizing: border-box;
+      border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      border-bottom: none;
+      // justify-content: center;
+      // padding: 11px 12px;
+      .tab-icon {
+        margin-right: 8px;
+        position: relative;
+        top: 3px;
+      }
+      .tab-text {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        .tab-item {
+          padding: 0 12px;
+          display: inline-block;
+          max-width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          word-break: break-all;
+        }
+      }
+      .tab-close-icon {
+        display: flex;
+        cursor: pointer;
+        padding-right: 12px;
+      }
+    }
+    .active {
+      background: $Fill-2;
+      min-width: 120px;
+    }
+  }
+}
+
+.modal-dialog .ant-modal-content {
+  padding: 0;
+  .ant-modal-body {
+    padding: 20px;
+  }
+}
+
+.modal-content {
+  display: flex;
+  .modal-icon {
+    margin-right: 8px;
+    margin-top: 2px;
+  }
+  .modal-text {
+    flex: 1;
+    .title {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    }
+    .desc {
+      font-weight: normal;
+      margin-bottom: 16px;
+      font-size: 14px;
+      line-height: 20px;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.8);
+    }
+    .btns {
+      display: flex;
+      justify-content: space-between;
+      .cancel {
+        margin-right: 12px;
+      }
+    }
+  }
+}

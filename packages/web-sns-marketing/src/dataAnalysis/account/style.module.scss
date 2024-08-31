@@ -1,0 +1,35 @@
+.wrapper {
+  padding: 4px 16px 16px;
+  background-color: #f6f7fa;
+  height: 100%;
+  overflow: auto;
+
+  .panel {
+    margin-top: 12px;
+  }
+
+  .close {
+    cursor: pointer;
+  }
+
+  .tips {
+    padding: 6px 12px;
+    color: #272e47;
+    font-size: 12px;
+    background: rgba(76, 106, 255, 0.09);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    :global .sirius-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    :global .ant-space-item {
+      line-height: 1;
+    }
+  }
+}

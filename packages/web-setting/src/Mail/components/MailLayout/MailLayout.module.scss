@@ -1,0 +1,124 @@
+@import '@web-common/styles/variables.scss';
+
+.mail-layout-radio {
+  display: flex !important;
+  // width: 352px;
+  // height: 172px;
+  height: 144px !important;
+  .radio-card {
+    display: flex;
+    flex-flow: column;
+    cursor: pointer;
+    width: 194px;
+    height: 144px;
+    border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-right: 24px;
+    // &:hover {
+    //   border: 1px solid #386ee7;
+    // }
+    .radio-select {
+      height: 40px;
+      display: flex;
+      margin-left: 17px;
+      align-items: center;
+      font-size: 14px;
+      color: $Text-4;
+      :global {
+        .ant-radio {
+          top: 0;
+        }
+      }
+    }
+    &-desc {
+      width: 100%;
+      background: $Fill-1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-flow: column;
+      &-con {
+        width: 146px;
+        height: 102px;
+        background-size: 146px 80px;
+        // background: #ffffff;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        // flex-flow: column;
+        &-icon-wrap {
+          height: 80px;
+          width: 138px;
+          padding: 4px 0 0 26px;
+          background: $Fill-2_5;
+        }
+        &-blue-stick {
+          height: 80px;
+          width: 10px;
+          background: $Brand-4;
+          border-radius: 2px 0px 0px 2px;
+        }
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.isQuick {
+  .radio-card {
+    box-sizing: border-box;
+    width: 136px;
+    height: 132px;
+    margin-right: 8px;
+    &:last-child {
+      margin-right: 0;
+      color: red;
+    }
+    .radio-select {
+      display: flex;
+      height: 40px;
+      align-items: center;
+      margin-left: 12px;
+    }
+    &-desc {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $Fill-1;
+      width: 134px;
+      height: 112px;
+      &-con {
+        width: 108px;
+        height: 60px;
+        background-size: 108px 60px;
+        &-icon-wrap {
+          height: 100%;
+          padding: 2px 0 0 16px;
+        }
+        &-blue-stick {
+          height: 100%;
+          width: 8px;
+          background: $Brand-4;
+        }
+      }
+    }
+  }
+}
+
+.layout-img1 {
+  background: url('@/images/mail/fullColumn.png') center no-repeat; // 兜底
+  background: $mail-layout1 center no-repeat;
+}
+
+.layout-img2 {
+  background: url('@/images/mail/zuoyoufenlan.png') center no-repeat; // 兜底
+  background: $mail-layout2 center no-repeat;
+}
+
+.layout-img3 {
+  background: url('@/images/mail/UpDownSettingIcon.png') center no-repeat; // 兜底
+  background: $mail-layout3 center no-repeat;
+}

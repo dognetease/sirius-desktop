@@ -1,0 +1,52 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--white, white);
+  z-index: 4;
+  -webkit-app-region: drag;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-app-region: no-drag;
+}
+
+.lockIcon {
+  width: 140px;
+  height: 140px;
+  background-image: url('./../../images/icons/big-lock.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.lockTitle {
+  margin-top: 24px;
+  color: var(--Text-6, #080b19);
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.lockTip {
+  margin-top: 8px;
+  color: var(--Text-3, #747a8c);
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.btnWrapper {
+  margin-top: 40px;
+  :global(.ant-btn) {
+    height: 40px;
+  }
+}

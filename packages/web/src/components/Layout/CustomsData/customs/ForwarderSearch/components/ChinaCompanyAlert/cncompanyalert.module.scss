@@ -1,0 +1,17 @@
+.tableTip {
+  border: none;
+  color: $Text-5;
+  border-radius: 4px;
+  background-color: $Link-1;
+  width: 100%;
+
+  :global {
+    .ant-alert-icon {
+      color: $Avatar-6;
+    }
+
+    .ant-alert-message {
+      color: $Text-5;
+    }
+  }
+}

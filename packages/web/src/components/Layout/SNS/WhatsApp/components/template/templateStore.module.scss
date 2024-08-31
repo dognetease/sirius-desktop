@@ -1,0 +1,34 @@
+@import 'src/styles/varies';
+
+.template-store {
+  :global(.ant-modal-header) {
+    padding: 20px 24px 12px;
+  }
+
+  .title {
+    line-height: 16px;
+  }
+
+  .sub-title {
+    color: #51555c;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    margin-top: 20px;
+  }
+
+  :global(.ant-modal-content) {
+    overflow: hidden;
+  }
+
+  :global(.ant-modal-body) {
+    display: grid;
+    grid-gap: 12px;
+    grid-template-rows: repeat(auto-fit, 160px);
+    grid-template-columns: repeat(auto-fit, 160px);
+    padding: 20px;
+    max-height: 400px;
+    background-color: #f4f4f5;
+    overflow: auto;
+  }
+}

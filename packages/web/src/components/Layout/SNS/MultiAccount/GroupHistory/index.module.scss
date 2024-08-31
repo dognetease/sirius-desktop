@@ -1,0 +1,36 @@
+.main-content {
+  margin: 14px 16px 0 0;
+  padding: 16px;
+  height: calc(100% - 42px);
+  overflow: hidden auto;
+  background: #fff;
+
+  .main-header {
+    display: flex;
+    margin-bottom: 12px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-right {
+    display: flex;
+    gap: 12px;
+
+    .dropdown-target {
+      width: 16px;
+
+      svg {
+        vertical-align: 2;
+      }
+    }
+  }
+}
+
+.refresh-icon {
+  cursor: pointer;
+  margin-left: 8px;
+
+  svg {
+    vertical-align: -2px;
+  }
+}

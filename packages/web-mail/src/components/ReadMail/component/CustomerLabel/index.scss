@@ -1,0 +1,64 @@
+.tag-label {
+  font-size: 12px;
+  min-width: 58px !important;
+  // 我的客户
+  &.my-customer-label {
+    height: 17px;
+    width: 58px;
+    background: url(../../../../../../web/src/images/icons/edm/myCustomer.svg) 100% 100% no-repeat;
+  }
+  // 同事客户
+  &.colleague-customer-label {
+    height: 17px;
+    width: 58px;
+    background: url(../../../../../../web/src/images/icons/edm/colleagueCustomer.svg) 100% 100% no-repeat;
+  }
+  // 公海客户
+  &.openSea-customer-label {
+    height: 17px;
+    width: 58px;
+    background: url(../../../../../../web/src/images/icons/edm/openSeaCustomer.svg) 100% 100% no-repeat;
+  }
+  // 我的客户联系人
+  &.my-customer-contact-label {
+    height: 17px;
+    width: 68px;
+    min-width: 68px;
+    background: url(../../../../../../web/src/images/icons/edm/myCustomerContact.svg) 100% 100% no-repeat;
+  }
+  // 我的线索
+  &.my-clue-label {
+    height: 17px;
+    width: 58px;
+    background: url(../../../../../../web/src/images/icons/edm/myClue.svg) 100% 100% no-repeat;
+  }
+  // 同事线索
+  &.colleague-clue-label {
+    height: 17px;
+    width: 58px;
+    background: url(../../../../../../web/src/images/icons/edm/colleagueClue.svg) 100% 100% no-repeat;
+  }
+  // 公海线索
+  &.openSea-clue-label {
+    height: 17px;
+    width: 58px;
+    background: url(../../../../../../web/src/images/icons/edm/openSeaClue.svg) 100% 100% no-repeat;
+  }
+  // 我的线索联系人
+  &.my-clue-contact-label {
+    height: 17px;
+    width: 68px;
+    min-width: 68px;
+    background: url(../../../../../../web/src/images/icons/edm/myClueContact.svg) 100% 100% no-repeat;
+  }
+
+  &.clue-label {
+    background: $Warning-1;
+    color: $Warning-7;
+  }
+
+  &.enterprise-label {
+    background: $label-3_1;
+    color: $label-3_3;
+  }
+}

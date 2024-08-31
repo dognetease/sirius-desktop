@@ -1,0 +1,27 @@
+.clientConfirm {
+  .ant-modal-body {
+    padding: 20px;
+  }
+  .ant-modal-confirm-body > :first-child {
+    float: left;
+    margin-top: 3px;
+  }
+  .ant-modal-confirm-title {
+    display: block;
+    margin-left: 26px !important;
+    line-height: 20px;
+    font-size: 16px;
+    color: #3c3f47;
+    line-height: 1.5;
+    width: 90%;
+  }
+  .ant-modal-confirm-content {
+    margin-left: 26px;
+    font-size: 14px;
+    color: #7d8085;
+    line-height: 20px;
+  }
+  .ant-modal-confirm-btns {
+    margin-top: 16px;
+  }
+}

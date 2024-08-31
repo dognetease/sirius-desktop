@@ -1,0 +1,293 @@
+//@import "../../styles/varies.scss";
+@import '@web-common/styles/waimao/varies.scss';
+.navigate {
+  display: flex;
+  flex-direction: row;
+  height: 54px;
+  // min-width: 1342px;
+  min-height: 54px;
+  max-height: 54px;
+  background-color: #373b52;
+  // z-index: 2;
+  color: #fff;
+
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 40px;
+
+    > svg {
+      margin-left: 30px;
+      cursor: pointer;
+    }
+
+    .title {
+      line-height: 16px;
+      height: 16px;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      text-align: right;
+      margin-left: 14px;
+    }
+  }
+
+  .topMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .topItem {
+      cursor: pointer;
+      height: 54px;
+      padding: 16px 20px;
+      background: #373b52;
+      position: relative;
+      white-space: nowrap;
+      > span {
+        opacity: 0.9;
+      }
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      &:hover {
+        background-color: #292c40;
+        > span {
+          opacity: 1;
+        }
+      }
+
+      &-selected {
+        background: #292c40;
+
+        > span {
+          opacity: 1;
+          font-weight: 500;
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          bottom: 0;
+          left: 0;
+          background-color: #4c6aff;
+        }
+      }
+
+      .dotShow {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: -4px;
+          right: -9px;
+          width: 6px;
+          height: 6px;
+          background-color: #df3e31;
+          border-radius: 50%;
+        }
+      }
+
+      .activities {
+        position: relative;
+
+        &::before {
+          content: '展会';
+          position: absolute;
+          padding: 3px 6px;
+          top: -14px;
+          right: -17px;
+          line-height: 10px;
+          height: 16px;
+          background-color: #df3e31;
+          border-radius: 24px;
+          font-size: 10px;
+          color: #fff;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .menuRight {
+    display: flex;
+    align-items: center;
+    padding-right: 18px;
+    margin-left: auto;
+
+    .toolsIcon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px;
+      height: 100%;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #292c40;
+      }
+
+      :global {
+        .ant-badge-count {
+          background: #df3e31;
+          box-shadow: none;
+
+          &-sm {
+            border-radius: 100px;
+            font-size: 10px;
+            height: 14px;
+            line-height: 14px;
+          }
+        }
+
+        .ant-badge {
+          &-multiple-words {
+            padding: 0px 3px 2px;
+          }
+        }
+      }
+    }
+
+    .divider {
+      background-color: #fff;
+      height: 2em;
+      opacity: 0.2;
+      margin: 0px 20px;
+    }
+
+    .avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+}
+
+.overlay {
+  width: 229px;
+
+  :global {
+    .ant-popover-content {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: -15px;
+        right: 20px;
+        border-color: transparent;
+        border-width: 8px;
+        border-style: solid;
+        border-bottom-color: $Fill-3;
+      }
+    }
+
+    .ant-popover-arrow-content {
+      background-color: $Fill-3;
+    }
+  }
+
+  .userInfo {
+    height: 73px;
+    background-color: $Fill-3;
+    padding: 18px 20px;
+
+    .name {
+      font-weight: 500;
+      color: $Text-5;
+    }
+
+    .email {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .des {
+        font-weight: 400;
+        color: $Text-4;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 12px;
+      }
+
+      > svg {
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+.toolTipOver {
+  top: 50px !important;
+
+  :global {
+    .ant-tooltip-content .ant-tooltip-arrow {
+      display: block;
+    }
+
+    .ant-tooltip-content {
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+}
+
+.backOldVersion {
+  height: 28px;
+  padding: 6px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  &:hover {
+    opacity: 0.8;
+  }
+  > svg {
+    color: #fff;
+    margin-right: 4px;
+  }
+
+  &.no-border {
+    font-size: 14px;
+    border: none;
+  }
+}
+
+.dropOverlay {
+  top: 54px !important;
+}
+
+.beta-icon {
+  position: absolute;
+  top: -9px;
+  margin-left: 4px;
+}
+
+.beta-icon.scale-icon {
+  > svg {
+    transform: scale(1.1);
+  }
+}
+
+.pr-beta-icon {
+  position: relative;
+  padding-right: 33px;
+}
+
+.spe.pr-beta-icon {
+  padding-right: 22px;
+}

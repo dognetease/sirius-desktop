@@ -1,0 +1,127 @@
+.search {
+  padding: 24px;
+  min-width: 930px;
+  min-height: 100%;
+  background-color: #f9fafc;
+
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    .title {
+      color: #262a33;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+
+    .topbar-quota {
+      margin-left: 12px;
+    }
+  }
+
+  .filter {
+    padding: 12px 16px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    margin-bottom: 16px;
+
+    :global(.ant-form-item) {
+      margin-right: 12px;
+    }
+
+    .is-all-match-form-item {
+      display: inline-flex;
+      align-items: center;
+
+      :global(.ant-form-item) {
+        margin-right: 0;
+      }
+
+      :global(.ant-checkbox + span) {
+        padding-left: 8px;
+        padding-right: 4px;
+      }
+    }
+
+    :global(.ant-select-selector) {
+      border: 1px solid rgba(38, 42, 51, 0.11);
+    }
+
+    .search-submit {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+
+  .table {
+    padding: 12px 16px;
+    border-radius: 8px;
+    background-color: #ffffff;
+
+    .operations {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    :global {
+      table tr th.ant-table-selection-column,
+      table tr td.ant-table-selection-column {
+        padding-left: 16px;
+        padding-left: 6px;
+      }
+
+      .ant-table-thead > tr > th,
+      .ant-table-tbody > tr > td,
+      .ant-table tfoot > tr > th,
+      .ant-table tfoot > tr > td {
+        padding: 11px 16px;
+      }
+    }
+
+    :global(.ant-table-thead .ant-table-cell) {
+      color: #7a8599;
+      @include p1-3-reg14();
+      background: #f9fafb;
+      border-bottom: 1px solid #f9fafb;
+    }
+
+    :global(.ant-table-header) {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    :global(.ant-table-cell) {
+      &::before {
+        display: none;
+      }
+    }
+
+    :global(.ant-space-item) {
+      display: inline-flex;
+    }
+
+    :global(.ant-spin-dot) {
+      transform: translate(-50%, -50%);
+      margin: 0 !important;
+    }
+
+    :global(.ant-table-placeholder .ant-table-cell) {
+      border-bottom-color: transparent;
+    }
+  }
+}
+
+.quota-confirm-modal {
+  :global(.ant-modal-confirm-content) {
+    color: #7a8599;
+    @include p1-3-reg14();
+  }
+
+  .highlight {
+    color: $Brand-6;
+  }
+}

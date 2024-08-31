@@ -1,0 +1,118 @@
+{
+  "name": "网易外贸通助手",
+  "description": "网易外贸通助手",
+  "version": "1.3.3",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "dist/background.js"
+  },
+  "icons": {
+    "128": "images/128.png",
+    "48": "images/48.png",
+    "20": "images/20.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/js/DATracker.globals.1.6.12.8.js"],
+      "matches": ["<all_urls>"]
+    },
+    {
+      "resources": ["dist/inject-script.js"],
+      "matches": [
+        "https://*.alibaba.com/*",
+        "https://*.amazon.com/*"
+      ]
+    },
+    {
+      "resources": ["dist/whatsappInject.js"],
+      "matches": ["https://web.whatsapp.com/*"]
+    }, 
+    {
+      "resources": [
+        "DATracker.js",
+        "static/css/content.css",
+        "images/not-login.png",
+        "images/company-empty.png",
+        "images/magnifier.png"
+      ],
+      "matches": [ "*://*/*" ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "js": [
+        "dist/content.js"
+      ],
+      "matches": [
+        "\u003Call_urls>"
+      ]
+    },
+    {
+      "matches": [
+        "https://*.alibaba.com/*",
+        "https://*.amazon.com/*"
+      ],
+      "css": [
+        "static/css/content.css"
+      ]
+    },
+    {
+      "js": [
+        "message-reminder.js"
+      ],
+      "matches": [
+        "\u003Call_urls>"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "exclude_matches": [
+        "*://localhost/*"
+      ],
+      "js": [
+        "static/js/content.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://web.whatsapp.com/*"],
+      "all_frames": true,
+      "js": [
+        "dist/whatsappContentScript.js",
+        "static/js/content.js"
+      ],
+      "css": [
+        "static/css/content.css"
+      ]
+    },
+    {
+      "matches": ["*://waimao-pre.office.163.com/*", "*://waimao-classic.office.163.com/*","*://waimao.office.163.com/*","https://waimao.cowork.netease.com/*","https://*.cowork.netease.com/*", "https://su-desktop-web.cowork.netease.com:8000/*"],
+      "all_frames": true,
+      "js": ["dist/waimaoContentScript.js"]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "storage",
+    "browsingData",
+    "declarativeNetRequest",
+    "declarativeNetRequestWithHostAccess",
+    "declarativeNetRequestFeedback"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [
+    "\u003Call_urls>"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [{
+        "id": "1",
+        "enabled": true,
+        "path": "rules.json"
+    }]
+  }
+}

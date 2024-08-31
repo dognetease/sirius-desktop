@@ -1,0 +1,107 @@
+.write-mail-wrap {
+  position: fixed;
+  overflow: hidden;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  .container {
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
+    .write {
+      flex: 1;
+      overflow: auto;
+      position: relative;
+      // border-top: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  .draggable {
+    overflow: hidden;
+  }
+
+  .draggable-hide {
+    // display: none;
+  }
+
+  .draggable-animate {
+    // translate: scale(0);
+    transition: width 0.35s, height 0.35s, top 0.35s, left 0.35s;
+  }
+}
+
+.write-letter-resize {
+  z-index: 100;
+  .custom-component-s {
+    position: absolute;
+    cursor: row-resize;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+  }
+  .custom-component-n {
+    position: absolute;
+    cursor: row-resize;
+    top: 0;
+    width: 100%;
+    height: 1px;
+  }
+  .custom-component-w {
+    position: absolute;
+    cursor: col-resize;
+    left: 0;
+    width: 1px;
+    height: 100%;
+  }
+  .custom-component-e {
+    position: absolute;
+    cursor: col-resize;
+    right: 0;
+    width: 1px;
+    height: 100%;
+  }
+  .custom-component-se {
+    position: absolute;
+    cursor: se-resize;
+    right: 0;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+  }
+  .custom-component-sw {
+    position: absolute;
+    cursor: sw-resize;
+    bottom: 0;
+    left: 0;
+    width: 4px;
+    height: 4px;
+  }
+  .custom-component-ne {
+    position: absolute;
+    cursor: ne-resize;
+    right: 0;
+    top: 0;
+    width: 4px;
+    height: 4px;
+  }
+  .custom-component-nw {
+    position: absolute;
+    cursor: nw-resize;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 4px;
+  }
+}

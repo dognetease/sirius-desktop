@@ -1,0 +1,118 @@
+.container {
+  position: relative;
+  padding: 24px 0px 24px 24px;
+  height: 100%;
+  overflow-y: overlay;
+  min-height: 100% !important;
+  background: #f4f4f5;
+  min-width: 852px;
+  min-height: 640px;
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background: #f4f4f4;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f4f4f4;
+    border-radius: 2px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #f4f4f4;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+  }
+
+  .bread-crumb {
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    margin-bottom: 14px;
+    padding-right: 24px;
+    justify-content: space-between;
+
+    .bread-crumb-item {
+      cursor: pointer;
+      &:hover {
+        color: $Brand-6;
+      }
+      font-size: 14px;
+      color: #51555c;
+    }
+    .clickable-crumb:hover {
+      color: #386ee7;
+      cursor: pointer;
+    }
+
+    .bread-crumb .bread-crumb-item:last-child,
+    .bread-crumb .bread-crumb-active {
+      font-size: 20px;
+      color: #262a33;
+      font-weight: 500;
+    }
+    .video-tip {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      color: $Brand-6;
+      @include c4-1-reg12;
+      cursor: pointer;
+      span {
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .detail-container {
+    height: 100%;
+    // padding-right: 24px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      // display: none;
+      opacity: 0;
+      width: 6px;
+      background-color: transparent;
+      height: 6px;
+      // background-color: transparent;
+    }
+    &:hover {
+      &::-webkit-scrollbar {
+        opacity: 1;
+        display: block;
+        background-color: transparent;
+        width: 6px;
+        padding-right: 4px;
+        &:horizontal {
+          height: 6px;
+        }
+      }
+      /*滚动条两端方向按钮*/
+      &::-webkit-scrollbar-button {
+        display: none;
+      }
+      /*滚动条中间滑动部分*/
+      &::-webkit-scrollbar-thumb {
+        background: #d4d4d6;
+        border-radius: 3px;
+        padding-right: 4px;
+        // right: 4px;
+        width: 6px;
+        opacity: 0;
+        &:hover {
+          background: #dddddd;
+        }
+      }
+      /*滚动条右下角区域*/
+      &::-webkit-scrollbar-corner {
+        display: none;
+      }
+    }
+  }
+
+  .detail-common-container {
+    height: 100%;
+    overflow-y: visible;
+  }
+}

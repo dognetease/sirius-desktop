@@ -1,0 +1,68 @@
+.wrapper {
+  padding: 10px 20px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  padding: 10px 0 20px;
+}
+
+.title {
+  flex: 1;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.linkBtn {
+  cursor: pointer;
+  color: #1890ff;
+  transition: all 0.2s;
+  user-select: none;
+
+  &:hover {
+    color: #40a9ff;
+  }
+}
+
+.operate {
+  display: flex;
+  padding-bottom: 20px;
+
+  .searchForm {
+    flex: 1;
+    padding: 0 10px;
+  }
+
+  .opBtn {
+  }
+}
+
+.TERMINAL_CLIENT {
+  color: #4759b2;
+  background: #deebfd;
+  border-color: #deebfd;
+}
+.POTENTIAL_CLIENT {
+  color: #398e80;
+  background: #d6f7f1;
+  border-color: #d6f7f1;
+}
+.CO_LOADER {
+  color: #cb493d;
+  background: #ffe5e2;
+  border-color: #ffe5e2;
+}
+
+:global(.ant-modal-mask) {
+  left: 0;
+}
+
+.routeSearchList {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.breadcrumb {
+  cursor: pointer;
+}

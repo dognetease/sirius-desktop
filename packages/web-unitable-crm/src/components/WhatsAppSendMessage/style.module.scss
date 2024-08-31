@@ -1,0 +1,56 @@
+.clue-modal-wrap {
+  :global(.ant-modal-header) {
+    border-bottom: none;
+    padding: 20px 20px 12px;
+  }
+  :global(.ant-modal-body) {
+    padding: 0 20px 16px;
+  }
+  :global(.ant-modal-footer) {
+    padding: 10px 24px 24px;
+    border-top: none;
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+  }
+  .content {
+    :global(.ant-form-item) {
+      margin-bottom: 16px;
+    }
+  }
+  :global(.ant-form-item-label > label) {
+    font-size: 12px;
+    font-weight: normal;
+  }
+  :global(.ant-modal-footer .ant-btn + .ant-btn) {
+    margin-left: 8px;
+  }
+  .warn-tag {
+    padding: 2px 6px;
+    display: inline-block;
+    margin-left: 4px;
+    background: #fff3e2;
+    border-radius: 2px;
+    color: #cc913d;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .action-group {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .card-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .account-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+.hide {
+  display: none;
+}

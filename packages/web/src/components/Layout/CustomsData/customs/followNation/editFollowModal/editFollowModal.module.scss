@@ -1,0 +1,74 @@
+@import '@web-common/styles/variables.scss';
+.nation-modal {
+  .item {
+    display: flex;
+    align-items: center;
+
+    .selected {
+      width: 63px;
+      display: inline-block;
+    }
+
+    .nationArea {
+      display: flex;
+      flex-wrap: wrap;
+      // justify-content: space-between;
+    }
+
+    :global(.ant-tag) {
+      width: 122px;
+      background-color: #f4f6f7;
+      height: 30px;
+      line-height: 30px;
+      font-size: 14px;
+      color: $label-6_3;
+      margin-bottom: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 16px;
+      /* 边距懒得算，css函数代替 */
+      // margin-right: calc(12% / 3);
+
+      :global(.ant-tag-close-icon) {
+        font-size: 12px;
+        line-height: 1px;
+      }
+    }
+
+    :global(.ant-tag:nth-child(3n)) {
+      margin-right: 0;
+    }
+    // :global(.ant-tag:last-child){
+    //     margin-right: auto;
+    // }
+    // :global(.ant-tag:nth-last-child(-n+3)){
+    //     margin-bottom: 0;
+    // }
+  }
+
+  :global(.ant-modal-footer) {
+    border-top-width: 0;
+  }
+
+  :global(.ant-modal-header) {
+    border-bottom-width: 0;
+  }
+
+  :global(.ant-modal-footer) {
+    padding: 14px 24px;
+
+    :global(.ant-btn) {
+      background-color: #f0f3f5;
+      border-radius: 4px;
+      color: $label-6_3;
+      border: none;
+    }
+
+    :global(.ant-btn.ant-btn-primary) {
+      background-color: $Avatar-6;
+      border-radius: 4px;
+      color: #fff;
+    }
+  }
+}

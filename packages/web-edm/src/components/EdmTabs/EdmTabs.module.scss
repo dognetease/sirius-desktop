@@ -1,0 +1,27 @@
+.wrap {
+  display: flex;
+  margin-right: -12px;
+  .item {
+    cursor: pointer;
+    margin-right: 12px;
+    border-radius: 16px;
+    background: var(--fill-2, #f6f7fa);
+    color: var(--text-5, #272e47);
+    /* 灵犀桌面2.0/C4.3-Reg12 */
+    font-family: PingFang SC;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    &.active {
+      border-radius: 16px;
+      border: 1px solid var(--brand-6, #4c6aff);
+      background: var(--brand-2, #eff2ff);
+      color: var(--brand-6, #4c6aff);
+      font-weight: 500;
+    }
+  }
+}

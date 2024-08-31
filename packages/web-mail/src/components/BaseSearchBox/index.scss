@@ -1,0 +1,135 @@
+.base-search-context-menu,
+.base-search-associate-menu {
+  pointer-events: auto !important;
+
+  .advanced-search-icon {
+    margin-right: 8px;
+
+    &:hover {
+      path,
+      circle {
+        stroke: #f5f5f5 !important;
+      }
+    }
+  }
+
+  .advanced-search-item {
+    .ant-dropdown-menu-title-content {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.base-search-context-menu {
+  li.ant-dropdown-menu-item-selected {
+    background: #f4f4f5;
+    color: #272e47;
+  }
+
+  .search-all-item {
+    .ant-dropdown-menu-title-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .ant-dropdown-menu-item {
+    width: 100%;
+  }
+
+  .ant-dropdown-menu-title-content {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .search-all-enter {
+    color: #a8aaad;
+  }
+
+  .highlight {
+    color: #386ee7;
+    width: 100px;
+    flex-grow: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.base-search-associate-menu {
+  pointer-events: auto !important;
+  margin-top: 2px;
+
+  .associate-title {
+    padding: 0;
+    &:hover {
+      background-color: #fff;
+    }
+    .associate-item-title {
+      color: #262a33;
+      font-size: 14px;
+      line-height: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      cursor: auto;
+      padding: 10px 16px;
+    }
+    .associate-item-clear {
+      color: #386ee7;
+      cursor: pointer;
+    }
+  }
+
+  .associate-item {
+    padding: 7px 18px;
+    .ant-dropdown-menu-title-content {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+
+      .associate-item-icon {
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+
+      .associate-item-content {
+        flex: 1 1 104px;
+        width: 104px;
+        margin: 0 8px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .associate-item-type {
+        flex-grow: 0;
+        flex-shrink: 0;
+      }
+
+      .associate-item-delete {
+        display: none;
+        width: 16px;
+        height: 16px;
+        // background-image: url('../../../../web/src/images/icons/close_icon.svg');
+        background-size: 100% 100%;
+      }
+    }
+
+    &:hover {
+      .associate-item-type {
+        display: none;
+      }
+
+      .associate-item-delete {
+        display: block;
+      }
+    }
+  }
+}

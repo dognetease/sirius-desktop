@@ -1,0 +1,79 @@
+@import '../../../../web/src/styles/varies';
+.member-item {
+  display: flex;
+  align-items: center;
+  height: 42px;
+  padding: 0 16px 0 24px;
+  cursor: pointer;
+  > :nth-child(1) {
+    margin-right: 12px;
+  }
+  > :nth-child(2) {
+    margin-right: 8px;
+  }
+  .unchecked {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+    border-radius: 8px;
+    border: 1.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.3);
+  }
+  .member-avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    margin: 0 8px 0 12px;
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    line-height: 28px;
+  }
+  .member-name {
+    font-size: 14px;
+    line-height: 14px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.transfer-member-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  // height: 388px;
+  flex: 1;
+  @include sirius-scroll;
+  position: relative;
+  align-content: flex-start;
+  padding: 7px 0;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .divider-line {
+    width: 1px;
+    height: calc(100% - 14px);
+    background-color: #e7e8e9;
+    position: absolute;
+    left: 300px;
+  }
+}
+
+.transfer-footer {
+  padding: 8px 24px;
+  border-radius: unset;
+  box-shadow: 0px -0.5px 0px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+  display: flex;
+  justify-content: flex-end;
+  .ant-btn {
+    width: 68px;
+    height: 34px;
+    border-radius: 4px;
+    margin-left: 16px;
+  }
+  .ant-btn-primary {
+    background-color: #386ee7;
+  }
+}

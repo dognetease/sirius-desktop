@@ -1,0 +1,117 @@
+.msg-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 0;
+  padding-right: 30px;
+  position: relative;
+  .msg-item-checked-mask {
+    position: absolute;
+    left: -16px;
+    right: -16px;
+    top: -1px;
+    width: calc(100% + 32px);
+    height: calc(100% + 1px);
+    z-index: 1;
+  }
+  &.msg-item-checked {
+    background: $Fill-1;
+    .msg-item-checked-mask {
+      border-right: 16px solid $Fill-1;
+      border-left: 16px solid $Fill-1;
+      border-top: 1px solid $Fill-1;
+    }
+  }
+  .msg-checkbox {
+    margin: 6px 9px 0 0;
+    :global(.ant-checkbox .ant-checkbox-inner) {
+      width: 14px;
+      height: 14px;
+      border-color: #a8aaad;
+      border-radius: 100%;
+      &::after {
+        // 以下三行覆盖waimao.scss的公共样式
+        border-width: 2px;
+        width: 6px;
+        height: 9px;
+        left: 18%;
+        transform: rotate(45deg) scale(0.8) translate(-60%, -60%);
+      }
+    }
+    :global(.ant-checkbox-checked .ant-checkbox-inner) {
+      border-color: #386ee7;
+    }
+    :global(.ant-checkbox-checked::after) {
+      border: none;
+    }
+  }
+  .msg-checkbox-my {
+    margin-left: -30px;
+  }
+  &.my {
+    padding-left: 30px;
+    padding-right: initial;
+    flex-direction: row-reverse;
+  }
+  .msg-bubble {
+    margin: 0 8px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative;
+    &:global(.reverse) {
+      flex-direction: row-reverse;
+    }
+    &:global(.team-msg) {
+      padding-top: 20px;
+    }
+    &.type-file {
+    }
+    //  :global(.type-custom) {
+    //     width: 100%;
+    // }
+  }
+  .msg-bubble .wrapper-bg {
+    padding: 8px 12px;
+    line-height: 22px;
+    // background-color: #f4f4f5;
+    background-color: $im-chat;
+    border-radius: 6px;
+    word-break: break-all;
+    color: $font-color-2;
+    &.my {
+      // background: $Link-2;
+      background-color: $im-my-chat;
+    }
+  }
+  // 图片wrapper
+  :global(.type-image) {
+    // max-width: calc(100% - 150px);
+  }
+  .msg-from-info {
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height, or 100% */
+    /* 文字颜色/60% */
+    // color: #7d8085;
+    color: $Text-3;
+    padding-bottom: 8px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .my .msg-from-info {
+    text-align: right;
+  }
+}

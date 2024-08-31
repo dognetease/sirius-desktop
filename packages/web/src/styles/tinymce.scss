@@ -1,0 +1,145 @@
+div.tox-tinymce {
+  border: none;
+}
+.editor-container.editor-container-edm div.tox {
+  .tox-editor-header {
+    border-bottom: none;
+  }
+}
+div.tox {
+  .tox-collection--toolbar .tox-collection__item--enabled,
+  .tox-tbtn--enabled {
+    background-color: $Link-2;
+  }
+  .tox-collection--list .tox-collection__item--enabled,
+  .tox-tbtn--enabled {
+    color: #386ee7;
+  }
+  .tox-tbtn--bespoke .tox-tbtn__select-label {
+    width: max-content;
+  }
+  .tox-toolbar__primary,
+  .tox-toolbar__overflow {
+    background: none;
+  }
+  .tox-editor-header {
+    border-top: 1px solid $Fill-3;
+    // border-bottom: 1px solid $Fill-3;
+    box-shadow: inset 0px -0.5px 0px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+    position: fixed;
+    background: white;
+    top: 0;
+    width: 100%;
+  }
+  .tox-collection--toolbar,
+  .tox-collection--list {
+    .tox-collection__item--active {
+      background-color: #f0f0f1;
+    }
+  }
+  .tox-tbtn:hover {
+    background: #f0f0f1;
+  }
+  &.tox-tinymce-aux .tox-toolbar__overflow {
+    border: 0.5px solid $Fill-3;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 8px $Fill-3;
+    border-radius: 4px;
+  }
+  &:not([dir='rtl']) .tox-toolbar__group:not(:last-of-type) {
+    border: none;
+    // &::after {
+    //   content: '|';
+    //   color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+    //   width: 1px;
+    //   position: relative;
+    //   right: -3px;
+    //   top: -2px;
+    // }
+  }
+  .tox-collection__item-icon svg,
+  .tox-tbtn svg {
+    &.fillnone {
+      fill: none;
+    }
+  }
+}
+
+.toolbar-tooltip-wrap {
+  position: absolute;
+  height: 0;
+  top: 0;
+  left: 0;
+}
+
+.toolbar-tooltip {
+  white-space: nowrap;
+  word-break: keep-all;
+  position: absolute;
+  z-index: 992;
+  padding: 10px 12px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: center;
+  color: #ffffff;
+  // width: max-content;
+}
+
+.signature-editor,
+.signature-editor2,
+.mail-template-editor,
+.autoReply-editor,
+.desc-editor {
+  .tox.tox-tinymce {
+    // border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+    border-radius: 4px;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    .tox-editor-header {
+      position: unset;
+      border-top: none;
+    }
+  }
+}
+
+.signature-editor,
+.signature-editor2,
+.autoReply-editor,
+.desc-editor {
+  .tox.tox-tinymce {
+    border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+  }
+}
+
+.mail-template-editor {
+  .tox.tox-tinymce {
+    border-top: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+    // border-bottom: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+  }
+}
+
+.template-editor {
+  .tox.tox-tinymce {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    .tox-editor-header {
+      position: unset;
+      border-top: none;
+    }
+  }
+}
+
+.ai-text-color {
+  .ai-btn-text-count {
+    margin-left: 5px;
+  }
+  .tox-tbtn__select-label,
+  .tox-collection__item-label {
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    color: transparent !important;
+    background: linear-gradient(91.21deg, #35a8fc 1.04%, #436bfa 50.51%, #a274ff 107.67%);
+  }
+}

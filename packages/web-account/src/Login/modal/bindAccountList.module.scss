@@ -1,0 +1,63 @@
+@import '../../../../web/src/styles/varies';
+.wrap {
+  width: 476px;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .title {
+    height: 64px;
+    width: 100%;
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height, or 114% */
+
+    /* 黑白灰/字体 90% */
+
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  }
+  .content {
+    width: 100%;
+    flex: 1;
+    @include sirius-scroll;
+    .item {
+      margin: 8px 24px 0;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      background: #ffffff;
+      /* 背景及分割线/8% */
+      border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+      box-sizing: border-box;
+      border-radius: 8px;
+      &:hover {
+        background: #f0f0f1;
+        cursor: pointer;
+      }
+      .avatarWrap {
+        margin-left: 20px;
+        margin-right: 12px;
+        flex: none;
+        width: 36px;
+        height: 36px;
+      }
+      .account {
+        flex: 1;
+      }
+      .arrowRight {
+        margin-right: 12px;
+        width: 16px;
+        height: 16px;
+        background-image: url('../../../../web/src/images/icons/arrow-right.svg');
+        background-size: 100%;
+      }
+    }
+  }
+}

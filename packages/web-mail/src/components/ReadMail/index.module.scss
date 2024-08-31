@@ -1,0 +1,99 @@
+.attachment-header {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 12px;
+  .title {
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+    flex: none;
+    margin-right: 8px;
+  }
+  .end-text {
+    flex: none;
+    color: #51555c;
+  }
+  .name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #51555c;
+    display: flex;
+    align-items: center;
+  }
+  .check {
+    cursor: pointer;
+    color: #386ee7;
+    margin-left: 8px;
+    flex: none;
+  }
+}
+.updownReplay {
+  margin-bottom: 30px;
+}
+.wrapper {
+  margin: 0 20px;
+  height: 44px;
+  padding: 8px 12px 8px 8px;
+  // background: #ebedf2;
+  background-color: $Fill-3;
+  border-radius: 4px;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  .close {
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+  }
+  :global {
+    .ant-input {
+      border-radius: 4px;
+    }
+    .ant-input-affix-wrapper {
+      background-color: $white;
+    }
+    .ant-input {
+      color: $font-color-2;
+      background-color: $white;
+    }
+  }
+}
+.operate {
+  background: $white;
+  display: flex;
+  align-items: center;
+  width: 64px;
+  justify-content: space-between;
+  font-size: 12px;
+  color: $font-color-2;
+  .nextPrev {
+    cursor: pointer;
+  }
+}
+
+.search-input {
+  :global {
+    .ant-input {
+      font-size: 12px;
+    }
+  }
+}
+.commentWrap {
+  margin-top: 16px;
+}
+.readIcon {
+  width: 78px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 35px;
+  background-color: $Brand-2;
+  font-family: PingFang SC;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  color: $Text-5;
+  margin-top: 10px;
+}

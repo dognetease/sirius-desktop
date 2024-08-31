@@ -1,0 +1,46 @@
+appId: com.netease.sirius-desktop
+artifactName: "sirius-desktop-${os}-${arch}-${version}.${ext}"
+asar: true
+compression: maximum
+copyright: "Copyright 2021© Year Sirius Desktop"
+directories:
+  output: ../../releases-update
+files:
+  - "dist/electron/**/*"
+  - "node_modules"
+  - "package.json"
+productName: 网易灵犀办公
+beforePack: './build-utils/before-pack.js'
+afterPack: './../v8-snapshot/hooks/after-pack.js'
+publish:
+  - provider: "generic"
+    publishAutoUpdate: true
+    url: 'https://lingxi.office.163.com/${version}/${os}/${arch}'
+
+nsis:
+  oneClick: true
+  perMachine: true
+  allowToChangeInstallationDirectory: false
+  warningsAsErrors: false
+  allowElevation: false
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  deleteAppDataOnUninstall: true
+
+win:
+  target: nsis
+  icon: build_resource/icon.png
+  signingHashAlgorithms:
+      - "sha256"
+  signDlls: false
+  rfc3161TimeStampServer: http://timestamp.digicert.com
+  certificateFile: mycert.pfx
+  certificatePassword:
+
+fileAssociations:
+  ext: 
+    - eml
+  name: eml
+  description: 'eml文件'
+  role: 'Viewer'
+  icon: 'build_resource/eml'

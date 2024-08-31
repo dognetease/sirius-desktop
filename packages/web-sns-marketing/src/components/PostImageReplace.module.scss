@@ -1,0 +1,203 @@
+.post-image-replace {
+  :global(.ant-modal-body) {
+    padding: 0;
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+
+    .ai-quota {
+      margin-left: 8px;
+    }
+  }
+
+  .body {
+    display: flex;
+    align-items: flex-start;
+    height: 435px;
+
+    .origin {
+      flex-grow: 1;
+      height: 100%;
+      padding: 16px 36px 0;
+      overflow: auto;
+      border-right: 1px solid $Line-2;
+
+      .header {
+        margin-bottom: 8px;
+
+        .title {
+          color: $Text-5;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 22px;
+        }
+      }
+
+      .option {
+        width: 100%;
+        height: 146px;
+        border-radius: 4px;
+        background-color: $Fill-2;
+        overflow: auto;
+
+        .image {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      .form {
+        margin-top: 16px;
+      }
+
+      .radio-form-item {
+        margin-bottom: 6px;
+      }
+
+      .replace-style-label {
+        display: flex;
+        align-items: center;
+
+        .label {
+          flex-shrink: 0;
+        }
+
+        .replace-style-tooltip {
+          flex-shrink: 0;
+          margin-left: 4px;
+        }
+      }
+    }
+
+    .result {
+      flex-shrink: 0;
+      width: 609px;
+      height: 100%;
+      padding: 16px 36px;
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+
+      .generate-tip {
+        flex-shrink: 0;
+        margin-bottom: 12px;
+      }
+
+      .header {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+
+        .title {
+          color: $Text-5;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 22px;
+        }
+
+        .regenerate {
+          display: flex;
+          align-items: center;
+
+          .desc {
+            color: $Text-3;
+            font-size: 12px;
+            line-height: 16px;
+            font-weight: 400;
+            margin-right: 4px;
+          }
+
+          .trigger {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            color: $Brand-6;
+
+            .icon {
+              margin-right: 4px;
+            }
+
+            .text {
+              font-size: 12px;
+              line-height: 16px;
+              font-weight: 400;
+            }
+          }
+
+          .trigger.disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+          }
+        }
+      }
+
+      .options {
+        flex-grow: 1;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: space-between;
+        gap: 16px 0;
+        overflow: auto;
+
+        .option {
+          position: relative;
+          width: 260px;
+          height: 148.5px;
+          border: 2px solid $Line-3;
+          border-radius: 4px;
+          overflow: hidden;
+          cursor: pointer;
+
+          &.active {
+            border: 2px solid $Brand-6;
+          }
+
+          .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          .checkbox {
+            position: absolute;
+            right: -2px;
+            bottom: -2px;
+          }
+        }
+
+        .placeholder {
+          width: 260px;
+          height: 148.5px;
+          border-radius: 4px;
+          background: linear-gradient(89.88deg, #f5f7fa 0.12%, #eeeff4 50.22%, #f5f6fa 99.9%);
+        }
+      }
+
+      .empty {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .empty-icon {
+          margin-bottom: 12px;
+        }
+
+        .empty-tip {
+          color: $Text-3;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}

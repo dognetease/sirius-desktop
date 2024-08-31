@@ -1,0 +1,25 @@
+.alert {
+  font-size: 12px;
+  border: none;
+  padding: 7px 23px;
+  background-color: $Warning-1;
+
+  :global(.anticon) {
+    color: $Warning-6;
+  }
+
+  &.disabled {
+    color: $Text-3;
+    background-color: $Fill-2;
+
+    :global(.anticon) {
+      color: $Text-3;
+    }
+  }
+
+  .remaining-time {
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+  }
+}

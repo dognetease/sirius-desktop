@@ -1,0 +1,514 @@
+@mixin icon-improve() {
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  background-size: 20px;
+}
+
+.edm-table {
+  .ant-table {
+    font-size: 14px;
+    color: #262a33;
+    // border: 1px solid rgba($color: $Text-5, $alpha: 0.08);
+    border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+
+    .ant-table-header {
+      table {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+    }
+
+    .ant-table-body {
+      table {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+    }
+  }
+
+  .ant-table-thead th {
+    background: #f9fafc;
+    color: #7d8085;
+    font-weight: normal;
+  }
+
+  .ant-table-thead > tr > th,
+  .ant-table-tbody > tr > td {
+    padding: 12px 8px;
+    line-height: 20px;
+    border-bottom: 0;
+  }
+
+  .ant-table-thead tr th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+    // 表头竖线
+    // background-color: #fff;
+    display: none;
+  }
+
+  .ant-table-cell-fix-right,
+  .ant-table-cell-fix-left,
+  .ant-table-cell-fix-left-last {
+    &:after {
+      bottom: 0;
+    }
+  }
+
+  .ant-table-tbody > tr.ant-table-row-selected > td,
+  .ant-table-tbody > tr.ant-table-row:hover > td {
+    background: #f0f0f1;
+  }
+
+  .ant-table-ping-right:not(.ant-table-has-fix-right) .ant-table-container::after {
+    box-shadow: none;
+  }
+
+  td.ant-table-column-sort {
+    background-color: inherit;
+  }
+
+  /** table sorter **/
+  .ant-table-column-sorter-up.active,
+  .ant-table-column-sorter-down.active {
+    color: #7d8085;
+  }
+
+  .ant-table-column-sorter-up,
+  .ant-table-column-sorter-down {
+    font-size: 10px;
+  }
+
+  /** global table **/
+}
+
+/* global checkbox */
+.ant-checkbox.ant-checkbox-checked span.ant-checkbox-inner {
+  border-color: transparent;
+}
+
+.ant-checkbox:not(.ant-checkbox-checked):not(.ant-checkbox-indeterminate) span.ant-checkbox-inner {
+  border-color: #a8aaad;
+}
+
+.ant-checkbox-inner {
+  width: 14px;
+  height: 14px;
+}
+
+.ant-checkbox-inner::after {
+  top: 50%;
+  left: 27.5%;
+  width: 4px;
+  height: 6px;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner::after {
+  border: 1.2px solid #fff;
+  border-top: 0;
+  border-left: 0;
+}
+
+.ant-checkbox-checked span.ant-checkbox-inner .ant-checkbox-indeterminate span.ant-checkbox-inner {
+  border-color: #386ee7;
+}
+
+.ant-checkbox-checked .ant-checkbox-inner::after {
+  background: transparent;
+}
+
+.ant-checkbox-disabled.ant-checkbox-checked .ant-checkbox-inner {
+  background: #d0d0d3;
+}
+
+.ant-checkbox-disabled.ant-checkbox-checked .ant-checkbox-inner::after {
+  border-color: #fff;
+}
+
+.ant-checkbox-wrapper:hover .ant-checkbox-inner {
+  border-color: #386ee7;
+}
+
+.ant-checkbox-indeterminate .ant-checkbox-inner::after {
+  width: 8px;
+  height: 1.6px;
+}
+
+/* global checkbox */
+
+/* global raido */
+.ant-radio-checked {
+  .ant-radio-inner {
+    border-color: #386ee7;
+    background: #386ee7;
+  }
+
+  .ant-radio-inner::after {
+    background-color: #fff;
+  }
+}
+
+/* global input-number */
+.ant-input-number:not(.ant-input-number-disabled):hover {
+  border-color: #386ee7;
+}
+
+.ant-input-number:focus,
+.ant-input-number-focused {
+  border-color: #386ee7;
+  box-shadow: none;
+}
+
+/* global switch */
+.ant-switch-checked {
+  background-color: $Brand-6;
+}
+
+/* 菜单样式*/
+.edm-menu.ant-menu {
+  background-color: transparent;
+  margin: 0 8px;
+  border-right: none;
+
+  .ant-menu-item {
+    margin-top: 0;
+    height: 36px;
+    line-height: 36px;
+  }
+
+  .ant-menu-item-active {
+    color: #386ee7;
+    background: transparent;
+  }
+
+  .ant-menu-item-selected {
+    // background: rgba($color: $Link-2, $alpha: 0.5);
+    background: rgba($Link-2-r, $Link-2-g, $Link-2-b, 0.5);
+    color: #386ee7;
+  }
+
+  .ant-menu-item > svg {
+    vertical-align: middle;
+  }
+
+  .ant-menu-item-active > svg,
+  .ant-menu-item-selected > svg {
+    color: #386ee7;
+  }
+
+  .ant-menu-item-group-title {
+    padding: 8px 16px 8px 20px;
+    color: #999;
+    font-size: 12px;
+  }
+
+  .ant-menu-item-group-list .ant-menu-item {
+    padding: 0 16px 0 20px;
+  }
+
+  .ant-menu-item .ant-menu-item-icon + span {
+    margin-left: 8px;
+  }
+}
+
+.pagination-wrap {
+  color: #7d8085;
+  float: right;
+  display: flex;
+  height: 56px;
+  // line-height: 56px;
+  box-sizing: border-box;
+  align-items: center;
+
+  .ant-pagination-item {
+    border-radius: 4px;
+    border: none;
+    line-height: 24px;
+
+    a {
+      padding: 0 10px;
+      color: #7d8085;
+    }
+  }
+
+  .ant-pagination-item-active {
+    background: #386ee7;
+    border-color: #386ee7;
+    margin: 0 4px;
+  }
+
+  .ant-pagination-item-active a {
+    color: #ffffff;
+    padding: 0 6px;
+  }
+
+  .ant-select-item {
+    border-radius: 4px;
+    min-width: 20px;
+  }
+
+  .ant-select-item-option-selected {
+    background-color: #f0f0f1;
+
+    .ant-select-item-option-content {
+      color: #386ee7;
+      font-weight: normal;
+    }
+  }
+
+  .ant-pagination-options {
+    .ant-select:not(.ant-select-focused) {
+      .ant-select-selector {
+        background: #f4f6f7;
+        color: #7d8085;
+        border-color: transparent;
+        border-radius: 4px;
+        align-items: center;
+      }
+    }
+
+    .ant-select-selection-item {
+      color: #7d8085;
+    }
+
+    .ant-select-selection-search {
+      color: #7d8085;
+    }
+  }
+}
+
+.edm-steps {
+  .ant-steps-item-icon {
+    width: 24px;
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+    margin: 4px 16px 0 0;
+  }
+
+  .ant-steps-icon {
+    font-family: LX-numbers;
+  }
+
+  .ant-steps-item-title {
+    color: #232d47 !important;
+  }
+
+  .ant-steps-item-description {
+    color: #7a8599 !important;
+  }
+
+  .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-icon {
+    background: $Avatar-6;
+    border-color: transparent;
+  }
+
+  .ant-steps-item-wait .ant-steps-item-icon {
+    border-color: #e1e6ed;
+  }
+
+  .ant-steps-item-wait .ant-steps-item-icon > .ant-steps-icon {
+    color: $label-6_3;
+  }
+
+  .ant-steps-item-finish .ant-steps-item-icon {
+    border-color: $Avatar-6;
+  }
+
+  .ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon {
+    color: $Avatar-6;
+  }
+
+  .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+    background-color: $Avatar-6;
+  }
+
+  .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+    border-color: #e1e6ed;
+  }
+
+  .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-description,
+  .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-description {
+    color: #7a8599;
+  }
+
+  .ant-steps-item-title::after {
+    height: 2px;
+  }
+}
+
+.waimao-table {
+  .ant-table {
+    border-radius: 4px;
+
+    .ant-table-header {
+      table {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+      }
+    }
+
+    .ant-table-body {
+      table {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+    }
+  }
+
+  .ant-table-head > tr > th {
+    height: 54px;
+    background: $Fill-1;
+    font-size: 14px;
+    font-weight: 400;
+    color: #232d47;
+  }
+
+  .ant-table-tbody > tr > td {
+    color: #232d47;
+  }
+
+  .ant-table-thead tr th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before {
+    // background-color: #fff;
+    display: none;
+  }
+}
+
+.waimao-popover {
+  .ant-popover-title {
+    font-weight: 500;
+    padding: 12px 16px 8px;
+    border-bottom: none;
+  }
+
+  .ant-popover-inner-content {
+    color: #7a8599;
+  }
+
+  .ant-popover-arrow {
+    opacity: 1;
+  }
+}
+
+.waimao-tabs {
+  color: #7a8599;
+
+  .ant-tabs-tab.ant-tabs-tab-active {
+    font-weight: 500;
+  }
+
+  .ant-tabs-nav {
+    margin-bottom: 16px !important;
+    border-bottom: none !important;
+  }
+
+  .ant-tabs-nav .ant-tabs-tab {
+    padding: 12px 0 !important;
+    height: 46px !important;
+  }
+
+  .ant-tabs-nav .ant-tabs-nav-list .ant-tabs-ink-bar {
+    bottom: 5px;
+  }
+
+  .ant-tabs-ink-bar {
+    height: 2px;
+    background: transparent;
+  }
+
+  .ant-tabs-ink-bar::after {
+    content: ' ';
+    position: absolute;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: #386ee7;
+    width: 10px;
+    transform: translateX(-50%);
+  }
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.no-permission-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .text {
+    margin-top: 8px;
+    // color: rgba($color: $Text-5, $alpha: 0.5);
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+  }
+}
+
+.sirius-no-permission {
+  width: 160px;
+  height: 160px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../images/icons/edm/empty.png');
+}
+
+.web-wm-entry-container {
+  /**
+        该类下的样式可以解决在renderContainer组件渲染的内容的样式问题，但是会引起
+        某些独立页面的样式问题，如readMail等，所以使用类名来限定影响范围
+    */
+  .page-content-layout {
+    height: 100% !important;
+  }
+
+  .sirius-middle-grid {
+    background: #fff;
+  }
+
+  .sirius-middle-grid-web {
+    &.react-resizable {
+      position: relative !important;
+      height: 100%;
+    }
+  }
+}
+
+.waimao-sidebar {
+  .anticon {
+    .sirius-icon {
+      opacity: 0.5;
+
+      &[class*='-enhance'] {
+        opacity: 1;
+      }
+
+      &.sirius-icon-mailbox {
+        background-image: url(../images/icons/sidebar/mailbox2.svg);
+        @include icon-improve();
+
+        &.sirius-icon-mailbox-enhance {
+          background-image: url(../images/icons/sidebar/mailbox2_enhance.svg);
+        }
+      }
+
+      &.sirius-icon-im {
+        background-image: url(../images/icons/sidebar/message2.svg);
+        @include icon-improve();
+
+        &.sirius-icon-im-enhance {
+          background-image: url(../images/icons/sidebar/message2_selected.svg);
+        }
+      }
+    }
+  }
+}

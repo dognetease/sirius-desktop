@@ -1,0 +1,16 @@
+.ant-select-tree {
+  .ant-select-tree-node-content-wrapper {
+    color: $label-6_3;
+  }
+  .ant-select-tree-node-content-wrapper.ant-select-tree-node-selected {
+    background-color: $Fill-1;
+    color: $Avatar-6;
+  }
+  .ant-select-tree-node-content-wrapper:hover {
+    background-color: $Fill-1;
+  }
+  &.ant-select-dropdown {
+    box-shadow: 0px 4px 10px rgba($label-1_3-r, $label-1_3-g, $label-1_3-b, 0.1);
+    border-radius: 4px;
+  }
+}

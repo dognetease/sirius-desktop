@@ -1,0 +1,63 @@
+.vscrollbar-readmail {
+  position: relative;
+  height: 12px;
+  width: 100%;
+
+  .track {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    // background-color: #ccc;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .thumb {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 20px;
+    border-radius: 6px;
+    background-color: #d4d4d6;
+
+    cursor: pointer;
+    &:hover {
+      background: #dddddd;
+    }
+  }
+
+  &.vst_inWindow {
+    height: 12px;
+    .track {
+      height: 12px;
+    }
+    .thumb {
+      border-radius: 12px;
+    }
+  }
+  .scrollAn {
+    transition: left 200ms ease-in-out;
+  }
+
+  &.show {
+    opacity: 1;
+  }
+  &.hidden {
+    opacity: 0 !important;
+  }
+}
+
+.vscrollbar-wrap-readmail {
+  .horizontal {
+    opacity: 0;
+  }
+  &:hover {
+    .horizontal {
+      opacity: 1;
+    }
+  }
+}

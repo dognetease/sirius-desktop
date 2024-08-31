@@ -1,0 +1,277 @@
+@import '../../../web/src/styles/varies';
+// $item-hover-gb: rgba( $color: $main-enhance-color, $alpha: 0.12, );
+// $item-selected-gb: rgba( $color: $main-enhance-color, $alpha: 1, );
+$item-hover-gb: rgba(
+  $color: $white-background-hover-color,
+  $alpha: 1,
+);
+$item-selected-gb: rgba(
+  $color: $selected-menu-item-color,
+  $alpha: 0.9,
+);
+
+.item {
+  height: $contact-item-height;
+  border-radius: 6px;
+  position: relative;
+  margin: 0 12px;
+  padding-top: 16px;
+  align-items: flex-start;
+  @include sirius-no-drag;
+  // 列表中的项目一般存在固定高度，不允许超过边界 否则会引发样式问题
+  overflow: hidden;
+  .sendIcon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    margin-top: -8px;
+    display: none;
+  }
+  .tag {
+    color: #386ee7;
+    background: $Link-2;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 16px;
+    height: 16px;
+    padding: 0 6px;
+    margin-left: 8px;
+  }
+  :global(.ant-list-item) {
+    align-items: flex-start;
+    padding-top: 16px;
+  }
+  :global(.ant-list-item-meta-avatar) {
+    margin-left: 12px;
+    margin-right: 12px;
+    // margin-top: 4px;
+    height: 32px;
+    // width: 32px;
+    // overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .item-avatar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      color: #ffffff;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    &:hover {
+      .item-avatar {
+        // display: none;
+      }
+      .item-avatar-checkbox {
+        // display: flex;
+      }
+    }
+    .all-checkbox-hidden {
+      // display: none;
+    }
+  }
+  :global(.ant-list-item-meta-title) {
+    overflow: hidden;
+    word-break: keep-all;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 14px;
+    line-height: 1;
+    margin-bottom: 0;
+    // color: rgba($color: $main-font-color, $alpha: 0.9);
+    color: $font-color-2;
+  }
+  :global(.ant-list-item-meta-description) {
+    .email-list {
+      @include ellipsis-text();
+      font-size: 12px;
+      height: 16px;
+      line-height: 16px;
+      margin: 8px 0;
+      max-width: 100%;
+      &-tag {
+        max-width: calc(100% - 42px);
+      }
+      //   display: block;
+      //   overflow: hidden;
+      //   word-break: keep-all;
+      //   text-overflow: ellipsis;
+      //   height: 16px;
+      //   margin-top: 2px;
+    }
+  }
+  .position {
+    //max-height: 36px;
+    //overflow: hidden;
+    font-size: 12px;
+    line-height: 18px;
+    //text-overflow: ellipsis;
+    // margin-top: 8px;
+    //word-break: break-all;
+    //display: -webkit-box;
+    //-webkit-line-clamp: 2;
+    /* 行数 */
+    //-webkit-box-orient: vertical;
+    p {
+      margin-bottom: 0;
+      text-indent: 8px;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: '•';
+        display: block;
+        left: -8px;
+      }
+    }
+  }
+  .item-avatar-checkbox {
+    display: flex;
+    margin-right: 5px;
+  }
+  .all-checkbox-show {
+    display: flex !important;
+  }
+  &-checked {
+    .item-avatar-checkbox {
+      display: flex !important;
+    }
+    .item-avatar {
+      // display: none !important;
+    }
+  }
+  .hit-text {
+    color: $main-enhance-color;
+  }
+  &-selected {
+    background-color: $item-selected-gb !important;
+    color: #ffffff;
+    :global(.ant-list-item-meta-description) {
+      line-height: 1;
+    }
+    //  :global(.ant-checkbox-checked) {
+    //      :global(.ant-checkbox-inner) {
+    //         border-color: #ffffff;
+    //     }
+    // }
+  }
+  &-search {
+    .item-avatar {
+      display: flex !important;
+    }
+  }
+  &-department.item-search {
+    height: $contact-item-department-height;
+  }
+  &-hover {
+    background-color: $item-hover-gb;
+    .item-avatar-checkbox {
+      display: flex;
+    }
+    .item-avatar {
+      display: none;
+    }
+  }
+  &:hover {
+    background-color: $item-hover-gb;
+    &:not(.item-selected) {
+      :global(.ant-list-item-meta-content) {
+        padding-right: 30px;
+      }
+      .sendIcon {
+        display: inline-block;
+      }
+    }
+  }
+  &-im {
+    &:hover {
+      background: #f0f0f1;
+    }
+    &.item-hover {
+      background: #f0f0f1;
+    }
+  }
+}
+
+.item-fixed-header {
+  position: absolute;
+  top: 0;
+  left: 12px;
+  right: 12px;
+  background-color: #ffffff;
+  // padding-bottom: 12px;
+  padding-left: 18px;
+  color: #737373;
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+}
+
+.item-header {
+  color: #737373;
+  background-color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  padding-left: 18px;
+  &-fixed {
+    border-bottom: 0.5px solid rgba($color: $main-enhance-color, $alpha: 0.2);
+  }
+  &-is-sticky {
+    &::before {
+      display: block;
+      position: absolute;
+      content: '';
+      width: 8px;
+      top: 0;
+      bottom: 0;
+      background-color: #ffffff;
+      left: -8px;
+    }
+    &::after {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      content: '';
+      width: 8px;
+      top: 0;
+      background-color: #ffffff;
+      right: -8px;
+    }
+  }
+}
+
+.tooltip-overlay {
+  :global(.ant-tooltip-content) {
+    // height: 38px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 6px;
+    font-size: 14px;
+    box-shadow: none;
+
+    :global(.ant-tooltip-inner) {
+      box-shadow: none;
+      padding: 10px 12px;
+      // height: 18px;
+      line-height: 18px;
+      border-radius: 6px;
+      background: transparent;
+    }
+
+    :global(.ant-tooltip-arrow) {
+      display: none;
+    }
+
+    :global(.ant-tooltip-inner) {
+      min-width: 68px;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,302 @@
+// import {SystemApi} from '../../../api/system/system';
+// // import lf, {Database, schema} from "lovefield";
+// import {apis} from '../../../config';
+// import {api} from '../../../api/api';
+// import {
+//   column,
+//   DBCollection,
+//   DBError,
+//   DBList,
+//   DBMap,
+//   DBWaitConnect,
+//   DeleteConfig,
+//   executeConfig,
+//   identity,
+//   insertConfig,
+//   NewDBApi,
+//   SelectConfig,
+//   tableConfig,
+//   tableIndex,
+// } from '../../../api/data/new_db';
+// import {PopUpMessageInfo, resultObject, User} from '../../../api/_base/api';
+// import {EventApi, SystemEvent} from '../../../api/data/event';
+// import {util} from '../../../api/util/index';
+// import initDBData from '../../../api/data/db_tables';
+// import {lf} from '../../../api/data/lovefield';
+// import {DataTrackerApi} from '../../../api/data/dataTracker';
+//
+// class NewDBApiImpl implements NewDBApi {
+//   name: string;
+//   private db: DBMap;
+//   systemApi: SystemApi;
+//   eventApi: EventApi;
+//   dataTracker: DataTrackerApi;
+//   protected initDBData: DBMap=initDBData;
+//
+//   constructor() {
+//     this.name=apis.newDbApiImpl;
+//     this.db=util.cloneDeep(this.initDBData);
+//     this.systemApi=api.getSystemApi();
+//     this.eventApi=api.getEventApi();
+//     this.dataTracker=api.requireLogicalApi('dataTrackerApiImp') as DataTrackerApi;
+//   }
+//
+//   createDB(name: DBList, version: number, user?: User | null): identity<lf.schema.Builder> {
+//     let maskName=this.getDBName(name, user);
+//     let schemaBuilder=window.lf.schema.create(maskName, version);
+//     this.setDBSchemaBuilder(name, schemaBuilder);
+//     return schemaBuilder;
+//   }
+//
+//   getDBName(name: DBList, user?: User | null): string {
+//     user=user || this.systemApi.getCurrentUser();
+//     const usrSign=user?.accountMd5;
+//     return name + '_' + (usrSign || 'all');
+//   }
+//
+//   setDBInstance(name: DBList, dbInstance: identity<lf.Database>) {
+//     this.db[name].dbInstance=dbInstance;
+//   }
+//
+//   setDBWaitConnectList(name: DBList, waitConnectList: DBWaitConnect[]) {
+//     this.db[name].waitConnectList=waitConnectList;
+//   }
+//
+//   setDBConnecting(name: DBList, isConnecting: boolean) {
+//     this.db[name].isConnecting=isConnecting;
+//   }
+//
+//   setDBSchemaBuilder(name: DBList, schemaBuilder: identity<lf.schema.Builder>) {
+//     this.db[name].schemaBuilder=schemaBuilder;
+//   }
+//
+//   setDBConnectErrorTimes(name: DBList, count?: number) {
+//     const times=this.db[name].errorTimes || 0;
+//     this.db[name].errorTimes=count===undefined ? times + 1: count;
+//     this.setDBConnecting(name, false);
+//   }
+//
+//   resetDB(name: DBList) {
+//     this.db[name]=util.cloneDeep(this.initDBData[name]);
+//     console.warn('resetDB', this.db[name]);
+//   }
+//
+//   getDB(name: DBList): DBCollection<lf.schema.Builder, lf.Database> {
+//     return this.db[name];
+//   }
+//
+//   connect(name: DBList): Promise<identity<lf.Database>> {
+//     let myDB=this.getDB(name);
+//     let schemaBuilder=myDB.schemaBuilder;
+//     let dbInstance=myDB.dbInstance;
+//     if (!schemaBuilder) {
+//       schemaBuilder=this.initDb(name);
+//     }
+//     if (schemaBuilder) {
+//       if (dbInstance) {
+//         return Promise.resolve(dbInstance);
+//       } else if (myDB.isConnecting) {
+//         return new Promise<identity<lf.Database>>((r, j)=>{
+//           let callback=(callbackInstance?: identity<lf.Database>, ex?: any)=>{
+//             if (callbackInstance) {
+//               r(callbackInstance);
+//             } else {
+//               j('no db found , because ' + ex);
+//             }
+//           };
+//           let waitConnectList=myDB.waitConnectList;
+//           waitConnectList.push(callback);
+//           this.setDBWaitConnectList(name, waitConnectList);
+//         });
+//       } else {
+//         this.setDBConnecting(name, true);
+//         return schemaBuilder.connect().then((dbInstance)=>{
+//           // console.log(name + ' content DB success');
+//           this.setDBInstance(name, dbInstance);
+//           if (myDB.waitConnectList.length > 0) {
+//             for (let item of myDB.waitConnectList) {
+//               item(dbInstance);
+//             }
+//             this.setDBWaitConnectList(name, []);
+//           }
+//           this.setDBConnecting(name, false);
+//           this.setDBConnectErrorTimes(name, 0);
+//           return dbInstance;
+//         }).catch(ex=>{
+//           if (myDB.waitConnectList.length > 0) {
+//             for (let item of myDB.waitConnectList) {
+//               item(undefined, ex);
+//             }
+//             this.setDBWaitConnectList(name, []);
+//           }
+//           this.setDBConnecting(name, false);
+//           this.handleDbError(name, ex);
+//           return Promise.reject('connecting failed:' + ex);
+//         });
+//       }
+//     } else {
+//       throw new Error('schema not available , what happened');
+//     }
+//   }
+//
+//   createTable(config: tableConfig, schemaBuilder: lf.schema.Builder) {
+//     //创建table
+//     let table=schemaBuilder.createTable(config.name);
+//     //添加列
+//     table=this.addColumns(table, config.columns);
+//     //添加主键
+//     if (config.primaryKey) {
+//       table=table.addPrimaryKey(config.primaryKey.columns as string[], config.primaryKey.autoInc);
+//     }
+//     //添加可为空的列
+//     if (config.nullable) table=table.addNullable(config.nullable);
+//     //添加唯一
+//     if (config.unique) table=table.addUnique(config.unique.name, config.unique.columns);
+//     //添加索引
+//     if (config.index) {
+//       let indexArr: tableIndex[]=[];
+//       if (!Array.isArray(config.index)) {
+//         indexArr.push(config.index);
+//       }
+//       indexArr.forEach(item=>{
+//         table=table.addIndex(item.name || '', item.columns, item.unique, item.order);
+//       });
+//     }
+//   }
+//
+//   addColumns(table: identity<lf.schema.TableBuilder>, columns: column[]) {
+//     columns.forEach(item=>{
+//       table=table.addColumn(item.name, item.type);
+//     });
+//     return table;
+//   }
+//
+//   select(config: SelectConfig): Promise<resultObject[]> {
+//     return this.connect(config.dbName).then((dbInstance)=>{
+//       const table: lf.schema.Table=dbInstance.getSchema().table(config.tableName);
+//       let select=dbInstance.select().from(table);
+//       if (config.where) {
+//         select=select.where(config.where(table));
+//       }
+//       if (config.orderBy) {
+//         config.orderBy.forEach(item=>{
+//           let column=table[item.columnName];
+//           select=select.orderBy(column, item.desc);
+//         });
+//       }
+//       return select.exec();
+//     });
+//   }
+//
+//   execute(config: executeConfig): Promise<resultObject[]> {
+//     return this.connect(config.dbName).then((dbInstance)=>{
+//       const res=config.callback(dbInstance);
+//       return res.exec();
+//     });
+//   }
+//
+//   delete(config: DeleteConfig): Promise<resultObject[]> {
+//     return this.connect(config.dbName).then((dbInstance)=>{
+//       const table=dbInstance.getSchema().table(config.tableName);
+//       let query=dbInstance.delete().from(table);
+//       if (config.where) {
+//         query=query.where(config.where(table));
+//       }
+//       return query.exec();
+//     });
+//   }
+//
+//   addRows(table: identity<lf.schema.Table>, rows: resultObject[]): lf.Row[] {
+//     return rows.map(item=>table.createRow(item));
+//   }
+//
+//   insertOrReplace(config: insertConfig): Promise<resultObject[]> {
+//     return this.connect(config.dbName).then((dbInstance)=>{
+//       let table=dbInstance.getSchema().table(config.tableName);
+//       let rows=this.addRows(table, config.rows);
+//
+//       return dbInstance.insertOrReplace().into(table).values(rows).exec().catch((reason)=>{
+//         console.error('error when insert db', reason);
+//         return [];
+//       });
+//     });
+//   }
+//
+//   close(name: DBList): void {
+//     let db=this.getDB(name);
+//     if (db.dbInstance) {
+//       db.dbInstance.close();
+//       this.resetDB(name);
+//     }
+//   }
+//
+//   watchLogin(ev: SystemEvent): void {
+//
+//     if (ev && ev.eventData) {
+//       console.warn('current User !!!!!', ev.eventData);
+//     } else {
+//       Object.keys(this.db).forEach(name=>{
+//         console.log('close db', name);
+//         this.close(name as DBList);
+//       });
+//     }
+//   }
+//
+//   initDb(name: DBList, user?: User | undefined | null) {
+//     let db=this.getDB(name);
+//     if (db.using=='dexie') return;
+//     let schemaBuilder=this.createDB(name, db.version, user);
+//     db.tables.forEach(item=>{
+//       this.createTable(item, schemaBuilder);
+//     });
+//     return schemaBuilder;
+//   }
+//
+//   init(): string {
+//     this.eventApi.registerSysEventObserver('login', {
+//       name: 'dbLoginOb',
+//       func: this.watchLogin.bind(this),
+//     });
+//     return this.name;
+//   }
+//
+//   private handleDbError(name: DBList, error?: DBError) {
+//     const myDB=this.getDB(name);
+//     this.setDBConnectErrorTimes(name);
+//     if (myDB.errorTimes >= 2) {
+//       this.deleteDB(name);
+//     }
+//     console.error(name + ' DB error :', error, myDB);
+//     this.dataTracker.track('occur_contactLocalDB_crash');
+//     // const dbName = myDB.name as DBList;
+//     // if (dbConfs && dbConfs[dbName] && dbConfs[dbName].deletable) {
+//     //   myDB.dbInstance?.delete();
+//     //   this.initDb(dbName, this.systemApi.getCurrentUser());
+//     // }
+//   }
+//
+//   deleteDB(name: DBList) {
+//     const dbName=this.getDBName(name);
+//     this.eventApi.sendSysEvent({
+//       eventName: 'error',
+//       eventLevel: 'error',
+//       eventStrData: '',
+//       eventData: {
+//         popupType: 'toast',
+//         popupLevel: 'error',
+//         title: '应用错误，重新加载中...',
+//         code: 'PARAM.ERR',
+//       } as PopUpMessageInfo,
+//       eventSeq: 0,
+//     });
+//     window.indexedDB.deleteDatabase(dbName).onsuccess=()=>{
+//       util.reload();
+//     };
+//   }
+// }
+//
+// let newDBApi: NewDBApi=new NewDBApiImpl();
+//
+// api.registerDataNewDbApi(newDBApi);
+//
+// export default newDBApi;

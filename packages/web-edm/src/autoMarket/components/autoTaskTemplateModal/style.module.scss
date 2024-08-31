@@ -1,0 +1,145 @@
+@import 'src/styles/varies';
+
+.edm-sendbox-modal {
+  :global(.ant-modal-header) {
+    padding: 24px;
+    border-bottom: none;
+  }
+
+  :global(.ant-modal-close-x) {
+    width: 72px;
+  }
+
+  :global(.ant-modal-body) {
+    padding: 12px 4px;
+  }
+
+  :global(.ant-modal-footer) {
+    border-top: none;
+    padding-bottom: 20px;
+    :global(.ant-btn:not(.ant-btn-primary)) {
+      border-color: #f0f3f5;
+      background-color: #f0f3f5;
+    }
+
+    :global(.ant-btn-primary) {
+      background-color: #4c6aff;
+    }
+  }
+
+  .sendbox-list {
+    @include sirius-scroll;
+
+    padding: 0 20px;
+    max-height: 487px;
+    margin-bottom: 12px;
+    overflow-y: auto;
+  }
+
+  .sendbox-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    // padding: 20px;
+    // border-radius: 4px;
+    // background-color: #f9fafb;
+    margin-bottom: 12px;
+    cursor: pointer;
+
+    // &:last-child {
+    //   margin-bottom: 0;
+    // }
+
+    .radio {
+      flex-shrink: 0;
+      margin-right: 12px;
+    }
+
+    .content {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      border: 1px solid #e1e3e8;
+      padding: 16px 0;
+      border-radius: 4px;
+    }
+
+    .icon {
+      padding: 0 14px;
+      font-size: 0;
+    }
+
+    .taskInfo {
+      position: relative;
+      flex: 1;
+      .linkBtn {
+        cursor: pointer;
+        position: absolute;
+        font-size: 14px;
+        color: #4c6aff;
+        right: 16px;
+        top: 0;
+      }
+    }
+
+    .title {
+    }
+
+    .name {
+      font-weight: bold;
+      font-weight: 500;
+      font-size: 14px;
+      color: #272e47;
+    }
+
+    .desc {
+      font-size: 12px;
+      color: #747a8c;
+      padding: 6px 0;
+    }
+  }
+
+  .taskTypeHol {
+    color: #cc913d;
+    background: #fff3e2;
+  }
+
+  .taskTypeNew {
+    color: #cb493d;
+    background: #ffe5e2;
+  }
+
+  .taskTypeOld {
+    color: #7a51cb;
+    background: #ede4ff;
+  }
+
+  .taskTypeFix {
+    color: #4759b2;
+    background: #deebfd;
+  }
+
+  .taskStatusClose {
+    color: #4e5a70;
+    background: #e7ebf1;
+  }
+
+  .taskStatusNew {
+    color: #4759b2;
+    background: #deebfd;
+  }
+
+  .taskStateTag {
+    margin-left: 10px;
+  }
+
+  .taskStatusOpen {
+    color: #398e80;
+    background: #d6f7f1;
+  }
+
+  .pagination {
+    padding-right: 24px;
+    text-align: right;
+  }
+}

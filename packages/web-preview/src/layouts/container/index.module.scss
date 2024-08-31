@@ -1,0 +1,32 @@
+@import '../../styles/varies.scss';
+.sirius-container {
+  -webkit-app-region: drag;
+  margin: 1px 1px 0 1px;
+  .root-wrap {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    overflow: visible !important;
+    &.whiteBg {
+      border-top: none;
+      background-color: #ffffff;
+    }
+  }
+  .root-drag-ele {
+    height: 60px;
+  }
+  .resource-tab {
+    height: $electron-resource-title-bar-height;
+  }
+}
+
+.sirius-loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+}

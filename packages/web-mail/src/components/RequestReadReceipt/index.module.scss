@@ -1,0 +1,41 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // margin: 8px 20px;
+  margin: 8px 16px 8px 16px;
+  height: 40px;
+  padding: 0 10px;
+  // background: #f4f4f5;
+  background-color: $white-bg;
+  border-radius: 4px;
+  // color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  font-size: 14px;
+  // color: #51555c;
+  color: $font-color-1;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  .desc {
+    display: flex;
+    align-items: center;
+    .descText {
+      margin-left: 8px;
+    }
+  }
+  .btn {
+    box-sizing: border-box;
+    padding: 2px 8px;
+    height: 24px;
+    border-radius: 4px;
+    border: 1px solid $Brand-6;
+    color: $Brand-6;
+    cursor: pointer;
+  }
+  .nosend {
+    border: 1px solid $Line-3;
+    // background: #ffffff;
+    background-color: $white;
+    color: $Text-4;
+    margin-left: 8px;
+  }
+}

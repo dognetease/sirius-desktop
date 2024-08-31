@@ -1,0 +1,76 @@
+@import '../../../../../styles/varies.scss';
+
+.create-customer-modal-wrap {
+  :global(.ant-modal-header) {
+    border-bottom: none;
+  }
+  :global(.ant-modal-body) {
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+  :global(.ant-modal-footer) {
+    padding: 24px 16px;
+    border-top: none;
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+  }
+  .modal-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: 14px;
+    line-height: 22px;
+    height: 22px;
+    color: #262a33;
+    margin-bottom: 16px;
+    padding: 0 20px;
+    &-left {
+      flex: 1;
+      font-size: 14px;
+      line-height: 22px;
+      color: #262a33;
+      font-weight: normal;
+    }
+    &-right {
+      flex: 1;
+      line-height: 22px;
+      font-weight: normal;
+      display: flex;
+      justify-content: space-between;
+      .add-btn {
+        cursor: pointer;
+        svg {
+          vertical-align: middle;
+          margin-right: 6px;
+        }
+      }
+    }
+    &-right-contact {
+      flex: 1;
+      line-height: 22px;
+      font-weight: normal;
+      text-align: left;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #51555c;
+    }
+  }
+  .modal-content {
+    max-height: 414px;
+    min-height: 414px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    @include sirius-scroll();
+    &-contact {
+      width: 400px; // 保证宽度
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+  }
+}

@@ -1,0 +1,183 @@
+@import '../../../../web/src/styles/varies';
+.graphic-msg-wrapper {
+  // width: Min(540px, 100%);
+  max-width: 540px;
+  min-width: 370px;
+  border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+  box-sizing: border-box;
+  border-radius: 4px;
+  overflow: hidden;
+  .header {
+    line-height: 20px;
+    padding: 12px 16px;
+    &.in-win {
+      font-weight: bold;
+    }
+    &.in-mac {
+      font-weight: 500;
+    }
+  }
+  .main {
+    padding: 0 16px;
+    background-color: $white;
+    .markdown-hr {
+      height: 0;
+      margin: 8px 0;
+      border-top: solid 0.5px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+      overflow: hidden;
+      line-height: 0;
+    }
+    .img-module-wrapper + .markdown-hr,
+    .graphic-buttons + .markdown-hr {
+      margin-top: 0;
+    }
+    .img-module-wrapper {
+      position: relative;
+      width: 100%;
+      margin: 12px 0;
+      > img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+        &.enable-click {
+          cursor: pointer;
+        }
+        &.visible {
+          display: block;
+        }
+      }
+      .placeholder-wrap {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        overflow: hidden;
+        background: #f4f4f5;
+      }
+      .graphic-img-tips {
+        position: absolute;
+        font-size: 14px;
+        color: #fff;
+        background-color: #262a33;
+        border-radius: 4px;
+        line-height: 24px;
+        padding: 0 10px;
+        white-space: nowrap;
+        margin-top: -30px;
+        transform: translate(-50%, 0px);
+        // margin-left: -50%;
+      }
+    }
+    .graphic-buttons {
+      padding: 16px 0;
+      display: flex;
+      align-items: baseline;
+      // 竖直方向
+      &.direction-column {
+        flex-direction: column;
+        .graphic-button {
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+        :last-child {
+          margin-bottom: 0;
+        }
+      }
+      // 水平方向
+      &.direction-row {
+        flex-direction: row;
+        align-items: baseline;
+        .graphic-button {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .graphic-button {
+      margin: 0 12px 6px;
+      padding: 0 20px;
+      min-width: 82px;
+      &:first-child {
+        margin-left: 0;
+        margin-right: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &.default {
+        background-color: transparent;
+        border: solid 1px $main-enhance-color;
+        color: $main-enhance-color;
+      }
+      &.full-blue {
+        background-color: $main-enhance-color;
+        border: solid 1px $main-enhance-color;
+        color: #fff;
+      }
+      &.red {
+        background-color: transparent;
+        border: solid 1px $main-error-color;
+        color: $main-error-color;
+      }
+      &.full-red {
+        background-color: $main-error-color;
+        border: solid 1px $main-error-color;
+        color: #fff;
+      }
+      &.gray {
+        background-color: #fff;
+        border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+        color: #7d8085;
+      }
+      &.full-gray {
+        background-color: #f4f4f5;
+        color: #262a33;
+        border-color: transparent;
+      }
+    }
+  }
+  .mention {
+    color: $main-enhance-color;
+    cursor: pointer;
+  }
+  .markdown-text {
+    font-size: 14px;
+    line-height: 22px;
+    color: $font-color-2;
+    p {
+      display: inline-block !important;
+    }
+  }
+  .main .markdown-text:first-child {
+    padding-top: 16px;
+  }
+  .main-no-bg .markdown-text:first-child {
+    padding-top: 0;
+  }
+  .footer-note {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 4px 0;
+    color: #a8aaad;
+    &:last-child {
+      padding-bottom: 12px;
+    }
+  }
+  .custom-bold {
+    font-weight: 500 !important;
+  }
+  .custom-bold-in-win {
+    font-weight: bold !important;
+  }
+}
+
+.graphic-msg-wrapper-border {
+  border-radius: 4px 4px 0 0;
+}

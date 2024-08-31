@@ -1,0 +1,58 @@
+.empty-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    display: flex;
+    width: 680px;
+    text-align: left;
+    align-items: flex-end;
+  }
+
+  .paragraph {
+    flex-grow: 1;
+    margin-right: 70px;
+  }
+
+  .picture {
+    width: 280px;
+    height: 280px;
+  }
+
+  .h1 {
+    color: $Text-5;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .h2 {
+    color: $Text-5;
+    @include h1-4-med16();
+  }
+
+  .h3 {
+    color: $Text-5;
+    @include c4-4-med12();
+    display: flex;
+    align-items: center;
+
+    &::before {
+      display: inline-block;
+      flex-shrink: 0;
+      content: '';
+      width: 12px;
+      height: 12px;
+      border: 3px solid $Brand-2;
+      border-radius: 50%;
+      background-color: $Brand-6;
+      margin-right: 8px;
+    }
+  }
+
+  .text {
+    color: $Text-3;
+    @include c4-3-reg12();
+  }
+}

@@ -1,0 +1,99 @@
+@import '@web-common/styles/variables.scss';
+
+.wrapper {
+  border-radius: 4px;
+  :global {
+    .ant-dropdown {
+      min-width: 100px;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid #ebedf2;
+    }
+    .ant-btn-group {
+      width: 100%;
+    }
+    .ant-btn {
+      min-width: 77px;
+      text-shadow: none;
+      width: 100%;
+      border-right: none !important;
+      border-top-left-radius: 4px !important;
+      border-bottom-left-radius: 4px !important;
+      background-color: $Brand-6;
+      &:hover {
+        z-index: 0 !important;
+      }
+      &:not([disabled]):hover {
+        background-color: $Brand-5;
+      }
+    }
+    .ant-dropdown-trigger {
+      border-top-right-radius: 4px !important;
+      border-bottom-right-radius: 4px !important;
+      border-top-left-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+      min-width: auto;
+      border-left: 1px solid rgba(255, 255, 255, 0.2) !important;
+      margin-left: 0 !important;
+    }
+  }
+  &.link {
+    :global {
+      .ant-btn {
+        background-color: transparent;
+        color: $Brand-6;
+        &:not([disabled]):hover {
+          background-color: transparent;
+        }
+        &:not(.ant-dropdown-trigger) {
+          padding-right: 0;
+        }
+      }
+      .ant-dropdown-trigger {
+        width: fit-content;
+        border-left: none !important;
+      }
+    }
+  }
+  &.default {
+    border: 1px solid $Brand-6;
+    :global {
+      .ant-btn {
+        color: $Brand-6;
+        background-color: transparent;
+        &:not([disabled]):hover {
+          background-color: transparent;
+        }
+      }
+      .ant-dropdown-trigger {
+        border-left: 1px solid $Brand-6 !important;
+      }
+    }
+  }
+}
+
+.downTriangle {
+  display: inline-flex !important;
+  &.white {
+    svg {
+      color: #fff;
+      stroke: #fff;
+      fill: #fff;
+      path {
+        fill: #fff;
+        fill-opacity: 1;
+      }
+    }
+  }
+  &.brand {
+    svg {
+      color: $Brand-6;
+      stroke: $Brand-6;
+      fill: $Brand-6;
+      path {
+        fill: $Brand-6;
+        fill-opacity: 1;
+      }
+    }
+  }
+}

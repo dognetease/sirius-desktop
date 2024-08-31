@@ -1,0 +1,71 @@
+.preview-container {
+  // position: absolute;
+  // top: 46px;
+  // left: 0;
+  // bottom: 0;
+  // width: 100%;
+  background: #ffffff;
+  // z-index: 2;
+  .scroller {
+    // position: absolute;
+    // left: 0;
+    // top: 0;
+    // bottom: 72px;
+    // width: 100%;
+    // width: 100%;
+    overflow-y: auto;
+  }
+  .preview-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0px 20px;
+    // gap: 24px;
+    // min-width: 1104px;
+    height: 520px;
+    // padding: 0 32px;
+  }
+  .preview-pc,
+  .preview-mobile {
+    display: flex;
+    box-sizing: border-box;
+  }
+  iframe {
+    flex: 1;
+    height: 100%;
+    border: none;
+    min-width: 200px;
+  }
+  .preview-pc {
+    width: 542px;
+    padding: 50px 25px;
+    background: url(@/images/icons/edm/pc-outline.svg) no-repeat;
+    // background-size: contain;
+  }
+  .preview-mobile {
+    width: 250px;
+    // padding: 46px 29px;
+    padding: 40px 25px 47px 25px;
+    background: url(@/images/icons/edm/mobile-outline.svg) no-repeat;
+    // background-size: contain;
+  }
+}
+
+.btn-group {
+  text-align: right;
+  padding: 20px 24px;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.modal-wrap {
+  z-index: 10000;
+  :global(.ant-modal-content) {
+    min-width: 898px;
+  }
+  :global(.ant-modal-header) {
+    border-bottom: none;
+  }
+}

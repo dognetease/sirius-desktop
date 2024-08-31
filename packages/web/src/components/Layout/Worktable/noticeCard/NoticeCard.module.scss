@@ -1,0 +1,54 @@
+@import 'src/styles/varies';
+.clearAllNoticeBtn {
+  width: 108px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  @include p1-3-reg14();
+  color: $Text-4;
+  border: 1px solid $Line-3;
+  border-radius: 2px;
+  cursor: pointer;
+  &:hover {
+    background-color: $Fill-1;
+  }
+  &:active {
+    background-color: $Fill-3;
+  }
+}
+.noticeContainer {
+  width: 100%;
+  height: 100%;
+  padding: 12px 18px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.noticeScrollContainer {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  @include sirius-scroll;
+  box-sizing: border-box;
+  .emptyData {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    span {
+      @include c4-1-reg12();
+      color: $Text-2;
+      margin-top: 16px;
+    }
+  }
+  .loadingMore {
+    width: 100%;
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

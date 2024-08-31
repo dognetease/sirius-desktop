@@ -1,0 +1,42 @@
+.temp-add-container {
+  box-sizing: border-box;
+  width: 170px;
+  height: 200px;
+  border: 0.5px solid $Fill-3;
+  background: #ffffff;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  .icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url('./imgs/add.svg');
+  }
+
+  &:hover {
+    box-shadow: 0px 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+    border: 1px solid $Brand-6;
+    background: $Fill-1;
+    cursor: pointer;
+    .title {
+      color: $Brand-6;
+    }
+    .icon {
+      background-image: url('./imgs/add_active.svg');
+    }
+  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .title {
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #7a8599;
+    margin-top: 10px;
+  }
+}

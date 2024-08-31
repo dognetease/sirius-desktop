@@ -1,0 +1,69 @@
+@import 'src/styles/varies';
+
+.chat-editor {
+  position: relative;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+
+  :global(.DraftEditor-root) {
+    @include sirius-scroll;
+
+    flex-grow: 1;
+    overflow-y: auto;
+
+    :global(.DraftEditor-editorContainer),
+    [contenteditable],
+    [data-contents] {
+      height: 100%;
+    }
+
+    :global(.public-DraftEditorPlaceholder-inner) {
+      position: absolute;
+      top: 12px;
+      left: 20px;
+      color: #b7bac2;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      pointer-events: none;
+    }
+  }
+
+  .operations {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+
+    .operation {
+      font-size: 14px;
+      margin-right: 16px;
+      cursor: pointer;
+
+      &.disabled {
+        opacity: 0.3;
+        cursor: default;
+      }
+
+      &:last-of-type {
+        margin-right: auto;
+      }
+    }
+
+    .exceeded-tip {
+      font-size: 12px;
+      line-height: 16px;
+      color: #fe5b4c;
+      margin-right: 8px;
+    }
+
+    .send {
+      background-color: #4c6aff;
+    }
+  }
+
+  .file-input {
+    display: none;
+  }
+}

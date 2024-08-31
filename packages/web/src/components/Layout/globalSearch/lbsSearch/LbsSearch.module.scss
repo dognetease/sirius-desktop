@@ -1,0 +1,195 @@
+@import '@web-common/styles/variables.scss';
+
+.container {
+  padding: 16px;
+  background: $Fill-2;
+  min-width: 1151px;
+  min-height: 100%;
+
+  .title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $Text-5;
+    margin-bottom: 12px;
+  }
+
+  .map {
+    border: 1px solid $Fill-3;
+    border-radius: 4px;
+    padding: 20px;
+    background-color: #ffffff;
+    position: relative;
+    padding-bottom: 0;
+    z-index: 1;
+  }
+
+  .inputRow {
+    display: flex;
+    padding: 20px 0;
+
+    .label {
+      color: $Text-5;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+  }
+
+  .mapSearchWrapper {
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+
+    .mapSearch {
+      height: 32px;
+      border: 1px solid $Fill-4;
+      border-radius: 2px;
+      font-size: 14px;
+      line-height: 22px;
+      outline: none;
+      padding: 0 12px;
+      width: 310px;
+
+      &::placeholder {
+        color: $Text-2;
+      }
+
+      &:hover {
+        border-color: $Avatar-6;
+      }
+    }
+
+    .typeSelect {
+      width: 111px;
+
+      :global {
+        .ant-select-selector {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          border-right-color: transparent;
+
+          &:hover {
+            border-right-color: $Brand-5;
+          }
+        }
+      }
+
+      &:global {
+        &.ant-select-focused {
+          .ant-select-selector {
+            border-right-color: $Brand-5;
+          }
+        }
+      }
+    }
+
+    .portSelect {
+      width: 310px;
+
+      &-hidden {
+        display: none;
+      }
+    }
+
+    &-compact {
+      .portSelect {
+        :global {
+          .ant-select-selector {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+        }
+      }
+
+      .mapSearch {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        // border-left-color: $Brand-5;
+      }
+    }
+  }
+
+  .storeType {
+    color: $Text-3;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .radiusSearchWrapper {
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    input {
+      &::placeholder {
+        color: $Text-2;
+      }
+    }
+  }
+
+  .table {
+    border: 1px solid $Fill-3;
+    border-radius: 4px;
+    padding: 20px;
+    background-color: #ffffff;
+    margin-top: 12px;
+
+    :global {
+      .ant-table-tbody {
+        .ant-table-row {
+          &:nth-child(even) {
+            background: $Fill-1;
+          }
+        }
+      }
+
+      .ant-empty {
+        margin: 32px 8px;
+      }
+
+      .ant-table-tbody > tr > td {
+        border-bottom: none;
+      }
+
+      .ant-table-thead {
+        .ant-table-cell {
+          font-size: 14px;
+          line-height: 22px;
+          color: $Text-3;
+          background-color: $Fill-2;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .tableTip {
+    margin-bottom: 8px;
+    border: none;
+    color: $Text-5;
+    border-radius: 4px;
+    background-color: $Link-1;
+
+    :global {
+      .ant-alert-icon {
+        color: $Avatar-6;
+      }
+
+      .ant-alert-message {
+        color: $Text-5;
+      }
+    }
+  }
+
+  .footer {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}

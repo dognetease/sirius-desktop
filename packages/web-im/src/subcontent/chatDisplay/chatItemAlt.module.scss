@@ -1,0 +1,58 @@
+@import '../../../../web/src/styles/varies';
+.card-wrapper {
+  display: flex;
+  .card-content {
+    border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 8px 12px 0;
+    width: 560px;
+    > :last-child {
+      padding-bottom: 8px;
+    }
+    .card-header {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 14px;
+      // color: $main-font-color;
+      color: $font-color-2;
+      padding-bottom: 8px;
+    }
+    .card-body {
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 22px;
+      // color: $main-font-color;
+      color: $font-color-2;
+      padding-bottom: 4px;
+      word-break: break-all;
+    }
+    .card-footer {
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 18px;
+      color: #a8aaad;
+    }
+    .card-note {
+      color: $Text-2;
+      font-size: 14px;
+      word-break: break-all;
+    }
+    .username {
+      color: $main-enhance-color;
+      padding-right: 2px;
+      cursor: pointer;
+    }
+    .link {
+      color: $main-enhance-color;
+      padding-left: 2px;
+      cursor: pointer;
+    }
+  }
+  .card-occupied {
+    width: 145px;
+    flex: none;
+  }
+}

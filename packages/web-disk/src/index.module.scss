@@ -1,0 +1,31 @@
+.content {
+  padding: 24px;
+  height: 100%;
+  background: #f4f4f5;
+}
+
+.disk-content {
+  height: 100%;
+  background-color: $white-bg;
+  :global(.ant-spin-nested-loading) {
+    height: 100%;
+  }
+  :global(.ant-spin-container) {
+    height: 100%;
+  }
+}
+
+.disk-transfer-list {
+  position: absolute;
+  right: 36px;
+  bottom: 36px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.page-content-wm {
+  height: 100%;
+}
+.disk-main-wrap {
+  background-color: $white-bg;
+}

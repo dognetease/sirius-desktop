@@ -1,0 +1,77 @@
+@import '../../../../../web/src/styles/varies';
+
+.siriusMessageInfo {
+  :global(.ant-message-notice-content) {
+    border-radius: 4px !important;
+    border: 1px solid var(---Brand-3-, #b7c3ff) !important;
+    background: var(---Brand-1-, #f2f5ff) !important;
+
+    /* shadow-small */
+    box-shadow: 0px 4px 10px 0px rgba(47, 83, 134, 0.12) !important;
+  }
+
+  :global(.anticon) {
+    background-image: none !important;
+
+    svg {
+      visibility: visible !important;
+    }
+  }
+}
+
+.siriusMessageSuccess {
+  :global(.ant-message-notice-content) {
+    border-radius: 4px !important;
+    border: 1px solid var(---Success-3, #9fefcd) !important;
+    background: var(---Success-1, #e7fbf3) !important;
+
+    /* shadow-small */
+    box-shadow: 0px 4px 10px 0px rgba(47, 83, 134, 0.12) !important;
+  }
+
+  :global(.anticon) {
+    // background-image: none !important;
+
+    // >svg {
+    //   visibility: visible !important;
+    // }
+  }
+}
+
+.siriusMessageError {
+  :global(.ant-message-notice-content) {
+    border-radius: 4px !important;
+    border: 1px solid var(---Error-3, #ffbdb7) !important;
+    background: var(---Error-1, #ffefed) !important;
+
+    /* shadow-small */
+    box-shadow: 0px 4px 10px 0px rgba(47, 83, 134, 0.12) !important;
+  }
+
+  :global(.anticon) {
+    background-image: none !important;
+
+    > svg {
+      visibility: visible !important;
+    }
+  }
+}
+
+.siriusMessageWarn {
+  :global(.ant-message-notice-content) {
+    border-radius: 4px !important;
+    border: 1px solid var(---Warning-3, #ffe1b7) !important;
+    background: var(---Warning-1, #fff8ed) !important;
+
+    /* shadow-small */
+    box-shadow: 0px 4px 10px 0px rgba(47, 83, 134, 0.12) !important;
+  }
+
+  :global(.anticon) {
+    background-image: none !important;
+
+    > svg {
+      visibility: visible !important;
+    }
+  }
+}

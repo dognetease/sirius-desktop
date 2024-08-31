@@ -1,0 +1,76 @@
+#!/usr/bin/env node
+/* eslint-disable @typescript-eslint/camelcase */
+const shell = require('shelljs');
+const path = require('path');
+const jsYAML = require('js-yaml');
+const fs = require('fs');
+const commandUtils = require('./build-utils/command-utils/index');
+
+const argvInfo = commandUtils.getCommandArgvInfo() || {};
+console.log('-'.repeat(20));
+console.log(`argvInfo: `, argvInfo);
+console.log('-'.repeat(20));
+
+const { config } = require('env_def');
+const buildWinPortal = config('electronWinPortal') === 'true';
+
+const os = argvInfo.os || config('os');
+const profile = config('profile');
+const isEdm = profile && profile.includes('edm');
+
+const scriptMap = {
+  local: 'electron-builder-dev.yml',
+  local2: 'electron-builder-dev.yml',
+  test: 'electron-builder-test.yml',
+  test1: 'electron-builder-test1.yml',
+  test2: 'electron-builder-test2.yml',
+  edm_test: 'electron-builder-edm_test.yml',
+  edm_test1: 'electron-builder-edm_test1.yml',
+  dev: 'electron-builder-dev.yml',
+  prev: 'electron-builder-prev.yml',
+  prod: 'electron-builder.yml',
+  edm_dev: 'electron-builder-edm_dev.yml',
+  edm_prod: 'electron-builder-edm.yml',
+  edm_test_prod: 'electron-builder-edm_test_prod.yml',
+  test_prod: 'electron-build-test_prod.yml',
+};
+
+const platform = {
+  mac: '--x64 --mac -p always',
+  win: '--x64 --win -p always',
+  win32: '--ia32 --win -p always',
+  macArm: '--arm64 --mac -p always', //M1芯片的版本
+};
+
+function generateEdmBuildConfig(configFile) {
+  const configFilePath = path.resolve(__dirname, './' + configFile);
+  const buildConfigInfo = jsYAML.load(fs.readFileSync(configFilePath, 'utf8').toString());
+  if (buildConfigInfo.extraMetadata) {
+    buildConfigInfo.extraMetadata.version = config('version');
+    buildConfigInfo.extraMetadata.description = '网易外贸通客户端';
+  }
+  const newBuildConfigInfo = jsYAML.dump(buildConfigInfo, { lineWidth: -1 });
+  const newFileFolderPath = path.resolve(__dirname, './build-utils/.temp');
+  if (!fs.existsSync(newFileFolderPath)) {
+    fs.mkdirSync(newFileFolderPath);
+  }
+  const tempFileName = `edm-build-config-${new Date().getTime()}.yml`;
+  const filePath = path.resolve(newFileFolderPath, './' + tempFileName);
+  fs.writeFileSync(filePath, newBuildConfigInfo);
+  return tempFileName;
+}
+
+const buildCmd = (stage, os) => {
+  const flag = platform[os];
+  let configFile = argvInfo.config || scriptMap[stage];
+  if (isEdm && configFile) {
+    const tempFileName = generateEdmBuildConfig(configFile);
+    configFile = './build-utils/.temp/' + tempFileName;
+  }
+  return `electron-builder ${flag} ${buildWinPortal && ['win', 'win32'].includes(os) ? 'portable' : ''} --config ${configFile}`;
+};
+
+shell.echo('make electron package for ', profile, os);
+const cmd = buildCmd(profile, os);
+shell.echo('build package with cmd : \n"' + cmd + '"');
+shell.exec(cmd);

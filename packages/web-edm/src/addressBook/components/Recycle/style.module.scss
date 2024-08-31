@@ -1,0 +1,60 @@
+.container {
+  .alert {
+    background: $Warning-1;
+    border-radius: 4px;
+    border: none;
+    color: #232d47;
+  }
+
+  .max-width-cell {
+    max-width: 200px;
+  }
+
+  .content {
+    background: #fff;
+    margin-top: 12px;
+
+    :global(.ant-pagination) {
+      margin-right: 20px;
+    }
+
+    :global(.ant-spin-dot) {
+      transform: translate(-50%, -50%);
+      margin: 0 !important;
+    }
+  }
+
+  .linkBtn {
+    @include p1-3-reg14();
+    color: $Brand-6;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .linkBtnDanger {
+    color: $Error-6;
+  }
+
+  .delTip {
+    color: rgba(255, 181, 76, 1);
+    // margin-left: 20px;
+  }
+
+  .operation {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .selectTip {
+    width: 65px;
+    font-size: 14px;
+    color: #232d47;
+    margin-right: 10px;
+    white-space: nowrap;
+  }
+
+  .btn {
+    border: none;
+  }
+}

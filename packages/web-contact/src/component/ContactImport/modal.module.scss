@@ -1,0 +1,217 @@
+@import '../../../../web/src/styles/varies.scss';
+// @import '../../../../web/src/styles/mixin.scss';
+
+@import '@web-common/styles/waimao/varies.scss';
+.importWrap {
+  width: 480px;
+  .selectOptionWrap {
+    display: flex;
+    align-items: center;
+  }
+}
+.titleWrap {
+  padding: 24px 24px 16px 24px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  .title {
+    @include h1-4-med16;
+    color: $Text-5;
+    flex: 1;
+  }
+  .close {
+    margin-left: 8px;
+    flex: none;
+    cursor: pointer;
+  }
+  .titleLine {
+    display: flex;
+    align-items: center;
+  }
+  .subTitle {
+    @include c4-3-reg12;
+    color: $Text-2;
+  }
+}
+.contentWrap {
+  padding: 12px 24px;
+  .row {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    &:first-child {
+      margin-top: 0;
+    }
+    &.downloadRow,
+    &.fileError {
+      margin-top: 4px;
+    }
+    .label {
+      flex: none;
+      width: 140px;
+      @include p1-3-reg14;
+      color: $Text-4;
+    }
+    .value {
+      flex: 1;
+      overflow: hidden;
+      &.downloadWrap {
+        @include c4-1-reg12;
+        color: $Text-2;
+        .downloadTxt {
+          color: $Brand-6;
+          cursor: pointer;
+        }
+      }
+      &.fileErrorWrap {
+        @include c4-1-reg12;
+        color: $Error-6;
+      }
+      .selectWrap {
+        width: 100%;
+      }
+      .uploadInput {
+        &.errorInput {
+          border-color: $Error-6;
+          &:hover {
+            border-color: $Brand-6;
+          }
+        }
+        cursor: pointer;
+        &:hover {
+          color: $Brand-6;
+          :global(.ant-input-suffix) {
+            color: $Brand-6;
+          }
+        }
+        :global(.ant-input) {
+          cursor: pointer;
+        }
+        :global(.ant-input-suffix) {
+          @include c4-3-reg12;
+          color: $Text-3;
+        }
+      }
+      :global(.ant-select-selector) {
+        background-color: $white;
+      }
+    }
+  }
+}
+.selectRenderWrap {
+  .dividerWrap {
+    margin: 0 12px;
+  }
+  .addItemWrap {
+    cursor: pointer;
+    padding: 0 12px;
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include p1-3-reg14;
+    color: $Text-4;
+    &:hover {
+      // background-color: #f0f2f7;
+      background-color: $white-hover-bg;
+    }
+  }
+}
+
+.footerWrap {
+  padding-right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 64px;
+  .cancel {
+    background-color: $white;
+  }
+  .sureBtn {
+    margin-left: 16px;
+  }
+}
+.addPersonalOrgWrap {
+  .content {
+    margin: 16px 24px;
+  }
+}
+.importStatusWrap {
+  .titleWrap {
+    background: $white;
+    box-shadow: inset 0px -0.833333px 0px $Line-2;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 44px;
+    .txt {
+      margin-top: 16px;
+      @include h1-4-med16;
+      color: $Text-5;
+    }
+    .txt2 {
+      margin-top: 4px;
+      @include c4-3-reg12;
+      color: $Text-3;
+    }
+    .statusIcon {
+      width: 48px;
+      height: 48px;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      &.error {
+        background-image: url('../../../../web/src/images/icons/contact/warn.svg');
+      }
+      &.success {
+        background-image: url('../../../../web/src/images/icons/contact/success.svg');
+      }
+      &.progress {
+        background-image: url('../../../../web/src/images/icons/contact/progress.svg');
+      }
+    }
+  }
+  .statusFooterWrap {
+    overflow: hidden;
+    .importStatusBtn {
+      margin: 48px 24px 20px 24px;
+      height: 40px;
+      background-color: $Brand-6;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include p1-4-med14;
+      color: #ffffff;
+      cursor: pointer;
+      &.disabled {
+        background-color: $Brand-3;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.importSelectBtn {
+  @include sirius-no-drag;
+  position: relative;
+  right: -6px;
+  width: 90px;
+  height: 24px;
+  border-radius: 4px;
+  @include c4-1-reg12;
+  color: $Text-4;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    // background-color: #f0f2f7;
+    background-color: $white-bg;
+  }
+  &.selected {
+    color: $Brand-6;
+    background-color: $Fill-2_5;
+  }
+}

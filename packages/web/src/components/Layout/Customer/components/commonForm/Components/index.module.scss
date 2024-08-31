@@ -1,0 +1,105 @@
+.pictures-wall {
+  // border: 1px solid red;
+  :global(.ant-upload-list-picture-card-container) {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    overflow: hidden;
+    :global(.ant-upload-list-item) {
+      padding: 0;
+      border: 1px solid #dcddde;
+      overflow: hidden;
+      border-radius: 4px;
+      :global(.ant-upload-list-item-actions) {
+        width: 60px;
+        text-align: center;
+      }
+      :global {
+        .ant-btn {
+          width: auto;
+          min-width: auto;
+          background-color: transparent;
+        }
+        .ant-btn:hover {
+          width: auto;
+          min-width: auto;
+          background-color: transparent;
+        }
+      }
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+  :global(.ant-upload-select-picture-card) {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+}
+
+.upload-btn {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: 56px;
+  // background-color: #E5E5E7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .mask {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-radius: 56px;
+    // background-color: #000;
+    background-image: url('../../../../../../images/icons/edm/camera.svg');
+  }
+  &:hover .mask {
+    width: 56px;
+    height: 56px;
+  }
+}
+// 新建logo
+.logo-uploader {
+  :global {
+    .ant-upload-select-picture-card {
+      width: auto;
+      height: auto;
+      border: none;
+      border-radius: 56px;
+      margin-right: 0px;
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.cascaser-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .select-item {
+    width: 48%;
+    &:nth-child(-n + 2) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.telephone {
+  display: flex;
+  padding-bottom: 0;
+  align-items: flex-start;
+
+  :global(.form-item-telephones) {
+    margin-bottom: 16px !important;
+  }
+  :global(.ant-form-item-with-help) {
+    margin-bottom: 0px !important; // 此值会影响错误提示
+  }
+}

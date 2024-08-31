@@ -1,0 +1,72 @@
+.strangerList {
+  padding: 22px 0 0 12px;
+  height: 100%;
+  box-sizing: border-box;
+  background: $Fill-2;
+  position: relative;
+  // 标题
+  .markTitle {
+    margin-bottom: 12px;
+    font-size: 12px;
+    line-height: 1;
+    color: #7d8085;
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
+    .mark {
+      font-weight: 500;
+      font-size: 16px;
+      color: #262a33;
+      display: flex;
+      align-items: center;
+    }
+    .thin {
+      font-weight: 100;
+    }
+    .questionIcon {
+      margin-left: 2px;
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+  // 已标记全部
+  .markedAll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .markedAllCenter {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      color: #51555c;
+      .markedAllLogo {
+        margin: 0 auto 23px auto;
+        width: 54px;
+        height: 54px;
+        display: block;
+      }
+    }
+  }
+}
+
+.spinlogo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.remarks {
+  padding: 2px 4px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+  box-sizing: border-box;
+  .remark {
+    margin-bottom: 8px;
+    &:nth-last-child(1) {
+      margin-bottom: 0;
+    }
+  }
+}

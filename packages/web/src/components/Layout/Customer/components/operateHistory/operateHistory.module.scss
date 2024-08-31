@@ -1,0 +1,73 @@
+.operate-history {
+  padding: 12px 24px 20px 20px;
+
+  :global(.ant-timeline li:last-child) {
+    padding-bottom: 0;
+  }
+
+  :global(.ant-timeline-item-head) {
+    top: 5px;
+  }
+
+  :global(.ant-timeline-item-tail) {
+    top: 15px;
+  }
+
+  :global(.ant-timeline-item-content) {
+    top: 0;
+    margin-left: 20px;
+  }
+
+  .operate-time {
+    color: #51555c;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 4px;
+  }
+
+  .operate-content {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 22px;
+
+    .operate-text {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      overflow: hidden;
+      margin-right: 30px;
+
+      .operate-name {
+        color: #262a33;
+        font-weight: 500;
+        margin-right: 12px;
+        flex-shrink: 0;
+        cursor: pointer;
+
+        &:hover {
+          color: #386ee7;
+        }
+      }
+
+      .operate-desc {
+        color: #51555c;
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    .operate-detail {
+      flex-shrink: 0;
+      color: #386ee7;
+      cursor: pointer;
+    }
+  }
+
+  .pagination {
+    margin-top: 20px;
+    text-align: right;
+  }
+}

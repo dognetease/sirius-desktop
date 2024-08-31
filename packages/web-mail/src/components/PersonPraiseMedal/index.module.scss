@@ -1,0 +1,353 @@
+.personalMedal {
+  z-index: 1200;
+
+  :global(.ant-modal-header) {
+    background: none;
+    border-bottom: none;
+  }
+
+  :global(.ant-modal-content) {
+    height: 480px;
+    background: url('https://cowork-storage-public-cdn.lx.netease.com/common/2022/03/03/32c75d9ff4bb40f8b7b6ff24627c3a9f.png');
+    background-size: cover;
+  }
+
+  :global(.ant-modal-close) {
+    right: 15px;
+  }
+
+  :global(.ant-modal-close-x) {
+    width: 15px;
+  }
+}
+
+:global(.header-popover-container) {
+  z-index: 1300;
+}
+
+:global(.header-popover-container .ant-popover-arrow) {
+  opacity: 1;
+}
+
+.header {
+  display: flex;
+  font-size: 16px;
+  justify-content: space-between;
+
+  .headerRight {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #51555c;
+    margin-right: 20px;
+    font-weight: normal;
+
+    svg {
+      margin-left: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+.popContentWrap {
+  width: 343px;
+  background: #fff;
+  border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.11);
+  box-sizing: border-box;
+  box-shadow: 0px 12px 32px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+  border-radius: 8px;
+  padding: 16px 16px 24px;
+
+  .steps {
+    display: flex;
+    margin-bottom: 20px;
+
+    &:nth-of-type(2) {
+      margin-bottom: 10px;
+    }
+
+    span {
+      font-size: 14px;
+      line-height: 20px;
+      color: #51555c;
+
+      &:first-child {
+        width: 18px;
+        height: 18px;
+        background: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.1);
+        border-radius: 50%;
+        text-align: center;
+        font-size: 12px;
+        line-height: 18px;
+        margin-right: 10px;
+        margin-top: 2px;
+      }
+
+      &:last-child {
+        flex: 1;
+      }
+    }
+  }
+
+  .imgInfo {
+    width: 310px;
+    height: 95px;
+    margin: 0 auto 10px;
+    background: url('https://cowork-storage-public-cdn.lx.netease.com/common/2022/03/03/11d7210497004627bfc7394368625b7d.png');
+    background-size: cover;
+  }
+
+  .btn {
+    width: 88px;
+    height: 32px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 32px;
+    background: #386ee7;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}
+
+.medalContent {
+  display: flex;
+  height: 426px;
+
+  .medalContentLeft {
+    width: 382px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .carouselWrap {
+      :global(.slick-dots) {
+        li {
+          width: 6px;
+          height: 6px;
+          margin: 0 4.5px;
+
+          button {
+            height: 100%;
+            border-radius: 50%;
+            background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+          }
+        }
+
+        :global(.slick-active) {
+          button {
+            background: #386ee7;
+          }
+        }
+      }
+    }
+
+    .switchWrap {
+      display: flex;
+      align-items: center;
+      width: 336px;
+      position: absolute;
+      bottom: 48px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      svg {
+        cursor: pointer;
+      }
+
+      .switchList {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        height: 70px;
+        margin: 0 22px;
+        overflow-x: hidden;
+
+        .switchItem {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 52px;
+          height: 52px;
+          margin-right: 17px;
+          flex-shrink: 0;
+          box-sizing: border-box;
+          cursor: pointer;
+          border-radius: 50%;
+          background: #fff;
+          opacity: 0.5;
+
+          &.switchItemsChange {
+            border: 1px solid $Brand-3;
+            box-shadow: 0px 4px 6px rgba(111, 155, 255, 0.14);
+            opacity: 1;
+          }
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+
+          img {
+            width: 43px;
+            height: 43px;
+          }
+        }
+      }
+    }
+  }
+
+  .medalContentRight {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 0 20px 48px 0;
+    overflow-y: hidden;
+
+    &:hover {
+      overflow-y: auto;
+      overflow-y: overlay;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 0;
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background: rgba(163, 163, 206, 0.6);
+    }
+
+    .praiseLetter {
+      margin: 0 17px 12px 0;
+
+      .time {
+        display: inline-block;
+        padding: 2px 8px;
+        font-size: 14px;
+        line-height: 22px;
+        color: #262a33;
+        background: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.1);
+        border-radius: 15px;
+        margin-bottom: 9px;
+      }
+
+      .presentationWords {
+        margin-bottom: 12px;
+
+        div {
+          display: flex;
+          font-size: 14px;
+          line-height: 22px;
+
+          span {
+            width: 57px;
+            color: #7d8085;
+          }
+
+          pre {
+            flex: 1;
+            color: #262a33;
+            white-space: pre-wrap;
+            margin: 0;
+          }
+        }
+
+        .svgWrap {
+          margin-left: 57px;
+
+          svg {
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .presenter {
+        display: flex;
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 12px;
+
+        span {
+          &:first-child {
+            width: 57px;
+            color: #7d8085;
+          }
+
+          &:last-child {
+            flex: 1;
+            color: #262a33;
+          }
+        }
+      }
+
+      .operator {
+        display: flex;
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 12px;
+
+        span {
+          width: 57px;
+          color: #7d8085;
+        }
+
+        .operatorName {
+          display: flex;
+          flex: 1;
+          font-size: 14px;
+          color: #262a33;
+          overflow: hidden;
+          cursor: pointer;
+
+          div {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+
+    .praiseLetterNone {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+
+      span {
+        font-size: 14px;
+        line-height: 22px;
+        color: #a8aaad;
+        position: relative;
+
+        &:after {
+          top: 50%;
+          right: -40px;
+          position: absolute;
+          content: '';
+          width: 30px;
+          height: 1px;
+          background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+        }
+
+        &:before {
+          position: absolute;
+          top: 50%;
+          left: -40px;
+          content: '';
+          width: 30px;
+          height: 1px;
+          background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+        }
+      }
+    }
+  }
+}

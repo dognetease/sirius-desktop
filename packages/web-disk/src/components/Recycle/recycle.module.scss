@@ -1,0 +1,77 @@
+@import './../../../../web/src/styles/varies.scss';
+.container {
+  // padding: 20px 24px;
+  // overflow: hidden;
+  // position: relative;
+  padding: 5px 24px 0;
+  height: 100%;
+  // background: #f4f4f5;
+  background-color: $white-bg;
+  display: flex;
+  flex-direction: column;
+  .title {
+    margin-top: 6px;
+    // color: #262a33;
+    color: $font-color-2;
+    font-weight: 500;
+    font-size: 20px;
+    // &:hover{
+    //     color:#386ee7
+    // }
+  }
+  .desc {
+    display: block;
+    font-size: 12px;
+    color: #a8aaad;
+    margin-top: 4px;
+  }
+  .tab {
+    margin-top: 14px;
+  }
+  .tab-name {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 14px;
+    .tab-link {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 2px;
+      width: 10px;
+      background-color: $main-enhance-color;
+    }
+  }
+  :global(.ant-tabs .ant-tabs-nav) {
+    height: 30px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    :global(.ant-tabs-ink-bar) {
+      display: none;
+    }
+    :global(.ant-tabs-tab .ant-tabs-tab-btn) {
+      color: #51555c;
+      font-size: 14px;
+      line-height: 16px;
+      font-family: PingFang SC;
+      font-style: normal;
+    }
+    :global(.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn) {
+      color: $main-enhance-color;
+      font-weight: 500;
+      .tab-link {
+        display: block;
+      }
+    }
+  }
+}
+:global(.ant-tabs-top > .ant-tabs-nav::before) {
+  border-bottom: none;
+}
+.ant-tabs-ink-bar {
+  width: 2px;
+}

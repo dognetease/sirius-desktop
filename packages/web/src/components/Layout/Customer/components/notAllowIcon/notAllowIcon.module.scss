@@ -1,0 +1,35 @@
+.customer-button {
+  padding-right: 5px;
+  display: flex;
+  align-items: center;
+}
+:global(.customer-button-content) {
+  background: #ffffff;
+  /* 黑白灰/字体 20% */
+  border: 0.5px solid rgba(38, 42, 51, 0.2);
+  box-sizing: border-box;
+  /* 投影样式 */
+  box-shadow: 0px 4px 8px rgba(38, 42, 51, 0.1);
+  border-radius: 8px;
+  width: 336px;
+}
+.customer-popconfirm {
+  :global(.ant-popover-inner-content) {
+    padding: 12px 16px;
+  }
+  .title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: #232d47;
+  }
+  .content {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    color: #7a8599;
+  }
+  :global(.ant-btn-sm) {
+    font-size: 12px;
+  }
+}

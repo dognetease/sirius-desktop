@@ -1,0 +1,10 @@
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .chart-wrapper {
+    height: 320px;
+    width: 239px;
+  }
+}

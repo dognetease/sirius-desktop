@@ -1,0 +1,389 @@
+@import '../../../../web/src/styles/varies';
+.ics-card {
+  margin: 40px auto;
+  width: 420px;
+  // border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+  box-sizing: border-box;
+  // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  background-color: #fff;
+  .action-icon {
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20px;
+    width: 20px;
+    margin-right: 8px;
+    display: inline-block;
+    &-accept {
+      background-image: url(../../../../web/src/images/icons/calendarDetail/accept.png);
+    }
+    &-attentive {
+      background-image: url(../../../../web/src/images/icons/calendarDetail/attentive.png);
+    }
+    &-reject {
+      background-image: url(../../../../web/src/images/icons/calendarDetail/reject.png);
+    }
+  }
+
+  .loading-icon {
+    background: url(../../../../web/src/images/icons/ics/ics_icon_loading.png) center center no-repeat;
+    background-size: 48px 48px;
+    width: 100%;
+    height: 280px;
+    cursor: pointer;
+  }
+
+  .ics-card-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0px 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+    border-radius: 8px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 200%;
+      height: 200%;
+      border-radius: 16px;
+      border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+      transform-origin: 0 0;
+      -webkit-transform-origin: 0 0;
+      transform: scale(0.5, 0.5);
+      -webkit-transform: scale(0.5, 0.5);
+    }
+  }
+  .icon {
+    @include icon();
+    &.edit-white {
+      background-image: url(../../../../web/src/images/icons/calendarDetail/edit-simple.png);
+    }
+  }
+  .card-header {
+    flex: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 56px;
+    background: #386ee7;
+    padding: 20px 16px;
+    display: flex;
+    justify-content: space-between;
+
+    &.cancel {
+      background: #a8aaad;
+    }
+    .toolbar {
+      display: flex;
+      justify-content: flex-end;
+      position: relative;
+      z-index: 1;
+    }
+    .title {
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: #ffffff;
+      position: relative;
+      padding-left: 24px;
+      &::before {
+        position: absolute;
+        content: '';
+        height: 16px;
+        width: 16px;
+        background: url('../../../../web/src/images/icons/calendarDetail/calendar_white.png') center center no-repeat;
+        background-size: 16px;
+        left: 0;
+        top: 50%;
+        margin-top: -8px;
+      }
+    }
+  }
+
+  .sub-title {
+    padding: 18px 0;
+    width: 100%;
+    box-shadow: inset 0px -0.5px 0px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    z-index: 1;
+    height: 60px;
+    .action-btn-group {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        outline: none;
+        border: 1px solid #a8aaad;
+        cursor: pointer;
+        box-sizing: border-box;
+        border-radius: 16px;
+        background: #ffffff;
+        width: 92px;
+        height: 32px;
+        color: #262a33;
+        font-size: 14px;
+        line-height: 16px;
+        margin: 0 12px;
+        &:hover {
+          background: #f0f0f1;
+        }
+      }
+    }
+  }
+
+  .card-content {
+    // border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+    .summary {
+      padding: 16px 0;
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      position: relative;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        box-shadow: inset 0px -0.5px 0px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+      }
+    }
+
+    .ics-card-row {
+      padding: 14px 0;
+      line-height: 16px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      .time-row-item {
+        display: flex;
+      }
+      .ics-time-select-item {
+        margin-left: 25px;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        left: 25px;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        box-shadow: inset 0px -0.5px 0px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+      }
+      &:last-of-type::after {
+        display: none;
+      }
+      &.time {
+        cursor: pointer;
+      }
+      &.conflict {
+        cursor: pointer;
+      }
+      &.clickable {
+        cursor: pointer;
+      }
+
+      .ics-reply {
+        background-image: url('../../../../web/src/images/icons/calendarDetail/avatardefault.png');
+      }
+
+      .conflictIcon {
+        background-image: url('../../../../web/src/images/icons/calendarDetail/conflict.png');
+      }
+      .ics-attachment {
+        height: 22px;
+        background-position: center;
+        background-image: url('../../../../web/src/images/icons/calendarDetail/attachment.png');
+      }
+
+      .rruleIcon {
+        background-image: url('../../../../web/src/images/icons/calendarDetail/tosync.png');
+      }
+
+      .timeIcon {
+        background-image: url('../../../../web/src/images/icons/calendarDetail/timeclock.png');
+      }
+
+      .locationIcon {
+        background-image: url('../../../../web/src/images/icons/calendarDetail/address.png');
+      }
+
+      .organizeIcon {
+        background-image: url('../../../../web/src/images/icons/calendarDetail/organizer.png');
+      }
+      .remarkIcon {
+        background-image: url('../../../../web/src/images/icons/calendarDetail/messagedesc.png');
+      }
+      .inviteIcon {
+        background-image: url('../../../../web/src/images/icons/calendarDetail/members.png');
+      }
+
+      .icon {
+        flex: none;
+        width: 16px;
+        height: 16px;
+        margin-right: 9px;
+        background-size: 16px;
+      }
+
+      .text1 {
+        flex: 0 1 auto;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+        .light-text {
+          color: #7d8085;
+        }
+      }
+
+      .text2 {
+        flex: none;
+        margin-left: 4px;
+        padding: 0 4px;
+        background-color: rgba($color: #386ee7, $alpha: 0.1);
+        border-radius: 2px;
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #386ee7;
+      }
+
+      .ics-reply-info {
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: calc(100% - 25px);
+        span {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          width: auto;
+        }
+        i.arrow-right {
+          height: 16px;
+          width: 16px;
+          margin-left: 2px;
+          background: url(../../../../web/src/images/icons/calendarDetail/arrow-right-lg.png) center center no-repeat;
+          background-size: 16px;
+          flex-shrink: 0;
+        }
+      }
+    }
+    .ics-time-select-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    p.event-conflict {
+      width: 356px;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #51555c;
+      margin-bottom: 0;
+      line-height: 1.5;
+      span.event-conflict-title {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: auto;
+      }
+    }
+
+    .time-conflict {
+      color: #5fc375;
+      font-size: 14px;
+      &.red-color {
+        color: #f74f4f;
+      }
+    }
+
+    .location {
+      display: flex;
+      .location-text {
+        flex: 1;
+        overflow: hidden;
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      }
+    }
+
+    .remark {
+      display: flex;
+      .remark-text {
+        word-break: break-word;
+        flex: 1;
+        overflow: hidden;
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    .invite {
+      .invite-list-wrap {
+        flex: 1;
+        overflow: hidden;
+      }
+
+      .invite-list {
+        display: flex;
+        flex-direction: column;
+
+        .text1 {
+          margin-bottom: 16px;
+          font-family: PingFang SC;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 16px;
+          color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+          .light-text {
+            color: #7d8085;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

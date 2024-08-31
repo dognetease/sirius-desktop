@@ -1,0 +1,29 @@
+@import '@web-common/styles/variables.scss';
+.wrapper {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  .title-wrap {
+    display: flex;
+    justify-content: space-between;
+
+    .title {
+      height: 22px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      color: #262a33;
+      margin-bottom: 12px;
+    }
+
+    .follow {
+      color: $Avatar-6;
+      opacity: 0.9;
+      cursor: pointer;
+    }
+  }
+
+  .container {
+    display: flex;
+  }
+}

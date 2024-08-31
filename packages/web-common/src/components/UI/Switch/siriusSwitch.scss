@@ -1,0 +1,53 @@
+@import '../../../styles/common.scss';
+
+$switch-prefix: 'sirius-switch';
+
+.#{$switch-prefix} {
+  &.ant-switch-checked {
+    background-color: $Brand-6;
+  }
+
+  &.ant-switch.ant-switch-disabled:not(.ant-switch-checked) {
+    background-color: $Fill-2_5;
+    opacity: 1;
+  }
+
+  &.ant-switch:focus {
+    box-shadow: none;
+  }
+
+  &.ant-switch-disabled.ant-switch-checked {
+    background-color: $Brand-3;
+    opacity: 1;
+  }
+
+  &.ant-switch:not(.ant-switch-checked) {
+    background-color: $Fill-4;
+  }
+  .ant-click-animating-node {
+    display: none;
+  }
+
+  &.ant-switch:not(.ant-switch-small) {
+    min-width: 35px;
+    height: 20px;
+  }
+
+  &.ant-switch:not(.ant-switch-small) {
+    .ant-switch-handle {
+      height: 16px;
+      width: 16px;
+      transition: none;
+
+      &::before {
+        box-shadow: none;
+      }
+    }
+  }
+
+  &.ant-switch.ant-switch-checked:not(.ant-switch-small) {
+    .ant-switch-handle {
+      left: calc(100% - 18px);
+    }
+  }
+}

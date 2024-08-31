@@ -1,0 +1,124 @@
+$input-height: 60px;
+
+.input-wrapper {
+  display: flex;
+  height: 60px;
+  align-items: center;
+
+  .inputInnerWrapper {
+    border: 1px solid #f0f1f5;
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+
+    &-hidden {
+      border-radius: 4px;
+      border: 1px solid #f0f1f5;
+
+      &:hover,
+      &:focus {
+        border: 1px solid $Brand-6;
+      }
+    }
+
+    &-focus,
+    &:hover {
+      border-color: $Brand-6;
+    }
+
+    .input-input {
+      outline: none;
+      color: $Text-5;
+      border: none;
+      width: 100%;
+      height: 32px;
+      min-width: 300px;
+
+      &-with-list {
+        width: auto;
+      }
+    }
+
+    .input-suffix {
+      padding-right: 16px;
+      display: flex;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+
+    .input-prefix {
+      margin-left: 20px;
+      margin-right: 8px;
+      display: flex;
+      height: 100%;
+      align-items: center;
+    }
+
+    .tagList {
+      position: relative;
+      display: flex;
+      height: 100%;
+      margin-left: auto;
+      align-items: center;
+      margin-right: 24px;
+      row-gap: 20px;
+      flex-wrap: wrap;
+      padding: 14px 0;
+      justify-content: flex-end;
+      overflow: hidden;
+      flex-grow: 1;
+
+      .tag {
+        // background: #e7ebf1;
+        // border-radius: 2px;
+        // font-size: 14px;
+        // line-height: 22px;
+        // color: $label-6_3;
+        // padding: 2px 6px;
+        // display: flex;
+        // gap: 4px;
+        word-break: keep-all;
+        white-space: nowrap;
+
+        :global {
+          .ant-tag {
+            display: flex;
+            align-items: center;
+            margin-right: 0;
+          }
+        }
+
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // .tagClose {
+        //   width: 16px;
+        //   height: 16px;
+        //   background: url(./close.svg) center center no-repeat;
+        //   background-size: contain;
+        //   display: inline-block;
+        //   cursor: pointer;
+        // }
+      }
+    }
+  }
+
+  .input-button {
+    font-family: 'PingFang SC' !important;
+    background-color: $Avatar-6 !important;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    height: 100%;
+    width: 104px;
+    border: none;
+    outline: none;
+    margin-left: 0;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+  }
+}

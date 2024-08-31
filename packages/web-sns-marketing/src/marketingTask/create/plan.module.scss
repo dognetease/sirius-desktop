@@ -1,0 +1,112 @@
+@import '@web-common/styles/variables.scss';
+@import '@web-common/styles/mixin.scss';
+
+.step-wrapper {
+  padding: 16px 20px;
+  background: #fff;
+  .step-inner {
+    max-width: 996px;
+    margin: 0 auto;
+  }
+}
+.empty-plan {
+  margin: 24px;
+}
+
+.empty-plan-blocks {
+  display: grid;
+  grid-template-areas: 'a b' 'c d';
+  justify-content: space-around;
+  gap: 16px;
+}
+
+.empty-plan-block {
+  border-radius: $round-corner-8;
+  border: 1px solid $Line-2;
+  @include p1-3-reg14();
+  color: $Text-3;
+  padding: 16px 20px;
+
+  display: flex;
+  gap: 16px;
+
+  .block-left {
+    width: 100px;
+    height: 100px;
+  }
+
+  .block-title {
+    @include h1-4-med16;
+    color: $Text-5;
+  }
+}
+
+.plan-header {
+  height: 62px;
+  padding-top: 9px;
+
+  text-align: center;
+  background: $Brand-1;
+
+  h2 {
+    margin-bottom: 4px;
+    @include h1-4-med16();
+    color: $Text-5;
+  }
+}
+
+.plan-content {
+  border-radius: $round-corner-8;
+  border: 1px solid $Line-2;
+  @include c4-1-reg12();
+  color: $Text-3;
+}
+
+.plan-blocks {
+  padding: 16px 20px;
+}
+
+.plan-block {
+  display: flex;
+  align-items: center;
+  padding: 5px 8px;
+  gap: 12px;
+  border-radius: $round-corner-4;
+  border: 1px solid $Line-2;
+
+  .left {
+    width: 52px;
+  }
+  .desc {
+    flex: 1;
+    justify-self: center;
+    h4 {
+      margin: 0;
+      @include p1-4-med14();
+      color: $Text-5;
+    }
+  }
+  .right {
+    text-align: right;
+    @include p1-4-med14();
+    color: $Text-5;
+
+    .platform-logos {
+      display: inline-flex;
+      gap: 20px;
+    }
+  }
+}
+
+.plan-block + .plan-block {
+  margin-top: 12px;
+}
+
+.platform-with-logo {
+  color: $Text-4;
+  font-size: 14px;
+  font-weight: 500;
+  img {
+    margin-right: 8px;
+  }
+}

@@ -1,0 +1,297 @@
+.page-container {
+  padding: 0 24px;
+  overflow: hidden;
+
+  .banner {
+    width: 100%;
+    min-width: 1164px;
+    height: 260px;
+    margin: 24px 0px 32px 0px;
+    border-radius: 8px;
+    background-image: url('../../images/home-banner-l.png'), url('../../images/home-banner-r.png');
+    background-size: auto 100%;
+    background-position: left, right;
+    background-repeat: no-repeat;
+    background-color: #f2f8ff;
+  }
+
+  .section-title {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #262a33;
+    margin-bottom: 12px;
+
+    .open-all {
+      cursor: pointer;
+      font-weight: 400;
+      color: #4c6aff;
+    }
+  }
+
+  .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 32px;
+  }
+
+  .btn {
+    cursor: pointer;
+    margin-right: 16px;
+    margin-bottom: 8px;
+
+    width: 220px;
+    height: 72px;
+    box-sizing: border-box;
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(47, 83, 134, 0.1);
+    border-radius: 8px;
+
+    padding: 18px 0 18px 18px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #232d47;
+
+    transition-property: transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.12s;
+
+    &:not(.disabled):hover {
+      transform: translate(0, -2px);
+    }
+
+    &.disabled {
+      cursor: default;
+      font-weight: 400;
+      color: #a9b2c2;
+      box-shadow: none;
+      border: 1px dashed #e1e6ed;
+      border-radius: 8px;
+    }
+  }
+
+  .icon {
+    height: 36px;
+    width: 36px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+  }
+
+  .daily-icon {
+    background-image: url('../../images/dailyIcon.svg');
+  }
+
+  .weekly-icon {
+    background-image: url('../../images/weeklyIcon.svg');
+  }
+
+  .report-icon {
+    background-image: url('../../images/reportIcon.svg');
+  }
+
+  .more-icon {
+    background-image: url('../../images/moreIcon.svg');
+  }
+
+  .ad-banner {
+    // padding: 32px 24px 24px 32px;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    margin: 24px 0px 32px 0px;
+
+    .carousel {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      .itemContainer {
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        max-height: 260px;
+        background-size: 37px 37px;
+        background-position-x: right;
+        background-position-y: 0;
+        background-repeat: no-repeat;
+        border-radius: 8px;
+
+        .itemImg {
+          object-fit: cover;
+          max-width: 1164px;
+          max-height: inherit;
+          border-radius: 8px;
+        }
+      }
+    }
+    .bgTag {
+      top: -1px;
+      right: -2px;
+      position: absolute;
+      width: 100%;
+      height: 37px;
+      z-index: 9999;
+      background-size: 37px 37px;
+      background-position-x: 100%;
+      background-position-y: -1;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .selected-app-root {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-lines: 3;
+    line-clamp: 3;
+    margin-left: -16px;
+
+    .app-view {
+      cursor: pointer;
+
+      background-size: 37px 37px;
+      background-position-x: 101%;
+      background-position-y: -1px;
+      background-repeat: no-repeat;
+
+      padding: 12px;
+      display: flex;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      justify-content: flex-start;
+      align-items: center;
+      width: 280px;
+      height: 96px;
+      box-sizing: border-box;
+      border-radius: 8px;
+      border: 1px solid #eceff4;
+      margin-left: 16px;
+      margin-bottom: 12px;
+
+      &.disabled {
+        cursor: default;
+        font-weight: 400;
+        color: #a9b2c2;
+        box-shadow: none;
+        border: 1px dashed #e1e6ed;
+        border-radius: 8px;
+      }
+    }
+
+    .app-icon {
+      height: 72px;
+      width: 72px;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+
+    .app-desc-root {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+      height: 100%;
+
+      .app-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        color: #262a33;
+      }
+
+      .app-desc {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 12px;
+        line-height: 20px;
+        min-height: 20px;
+        color: #51555c;
+        margin-bottom: 2px;
+      }
+
+      .app-try-it {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: center;
+        width: 74px;
+        line-height: 12px;
+        font-size: 12px;
+        color: #386ee7;
+        padding: 6px 12px;
+        border: 0.5px solid #386ee7;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: #edf0ff;
+        }
+      }
+    }
+  }
+}
+
+.global-ad {
+  flex: none;
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  float: right;
+  right: 10px;
+  bottom: 80px;
+  z-index: 999;
+
+  .close-icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    float: right;
+    top: 0px;
+    right: 0px;
+    z-index: 1000;
+  }
+
+  .image-root {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    top: 8px;
+    left: 0px;
+    width: 52px;
+    height: 52px;
+
+    .image-view {
+      max-width: 40px;
+      max-height: 40px;
+      height: 40px;
+      width: 40px;
+    }
+  }
+}

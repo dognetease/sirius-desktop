@@ -1,0 +1,22 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.online,
+.offline {
+  border-radius: 2px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  padding: 2px 6px;
+  white-space: nowrap;
+}
+
+.online {
+  background: $label-2_1;
+  color: #398e80;
+}
+
+.offline {
+  background: $label-6_1;
+  color: $Fill-6;
+}

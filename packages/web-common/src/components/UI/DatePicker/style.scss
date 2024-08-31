@@ -1,0 +1,182 @@
+@import '../../../styles/common.scss';
+.#{$class-prefix} {
+  &-date-picker,
+  &-date-picker-range {
+    border-radius: 4px;
+    border: 1px solid $Line-3;
+    padding: 4px 8px 4px 12px;
+    .ant-picker-input {
+      color: $Text-5;
+      @include p1-3-reg14;
+      &::placeholder {
+        color: $Text-2;
+        @include p1-3-reg14;
+      }
+    }
+    .ant-picker-input > input {
+      color: $Text-5;
+      @include p1-3-reg14;
+      &::placeholder {
+        color: $Text-2;
+        @include p1-3-reg14;
+      }
+    }
+    &.ant-picker-focused {
+      box-shadow: none;
+      border-color: $Brand-6;
+    }
+    &:hover {
+      border: 1px solid $Brand-6;
+    }
+  }
+
+  &-date-picker {
+  }
+
+  &-date-picker-range {
+    .ant-picker-range-separator {
+      padding: 0 12px;
+    }
+    .separator {
+      display: inline-block;
+      height: 1px;
+      width: 16px;
+      background: $Line-3;
+      position: relative;
+      bottom: 4px;
+    }
+    .ant-picker-active-bar {
+      display: none;
+    }
+    &.ant-picker-focused {
+      .ant-picker-input.ant-picker-input-active {
+        color: $Brand-6;
+        &::placeholder {
+          color: $Brand-6;
+        }
+      }
+      .ant-picker-input.ant-picker-input-active > input {
+        color: $Brand-6;
+        &::placeholder {
+          color: $Brand-6;
+        }
+      }
+    }
+    .ant-picker-clear {
+      right: 8px;
+    }
+  }
+}
+
+.#{$class-prefix} {
+  &-date-picker-dropdown {
+    .ant-picker-cell:hover:not(.ant-picker-cell-in-view) .ant-picker-cell-inner,
+    .ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-range-hover-start):not(
+        .ant-picker-cell-range-hover-end
+      )
+      .ant-picker-cell-inner {
+      background-color: $Fill-2_5;
+    }
+    .ant-picker-cell .ant-picker-cell-inner {
+      border-radius: 12px;
+    }
+    .ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner,
+    .ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+    .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner {
+      color: #fff !important;
+      background: $Brand-6;
+      border-radius: 12px;
+    }
+    .ant-picker-date-panel .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-end .ant-picker-cell-inner:after {
+      right: 0;
+      left: -1px;
+    }
+    .ant-picker-date-panel .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-start .ant-picker-cell-inner:after {
+      right: -1px;
+      left: 0;
+    }
+    .ant-picker-date-panel,
+    .ant-picker-decade-panel,
+    .ant-picker-month-panel,
+    .ant-picker-quarter-panel,
+    .ant-picker-time-panel,
+    .ant-picker-week-panel,
+    .ant-picker-year-panel {
+      width: 224px;
+    }
+    .ant-picker-date-panel .ant-picker-content th {
+      width: 28px;
+    }
+    .ant-picker-date-panel .ant-picker-body {
+      padding: 8px 14px;
+    }
+    .ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner {
+      color: $Brand-6;
+    }
+    .ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner:before {
+      border: 1px solid $Brand-6;
+      border-radius: 12px;
+    }
+    .ant-picker-cell-in-view.ant-picker-cell-range-start:not(.ant-picker-cell-range-start-single):not(.ant-picker-cell-range-end) .ant-picker-cell-inner {
+      border-radius: 12px;
+    }
+    .ant-picker-cell-in-view.ant-picker-cell-range-end:not(.ant-picker-cell-range-end-single):not(.ant-picker-cell-range-start) .ant-picker-cell-inner {
+      border-radius: 12px;
+    }
+    .ant-picker-cell-in-view.ant-picker-cell-in-range:before {
+      background-color: $Brand-2;
+    }
+    .ant-picker-cell-in-view.ant-picker-cell-range-start:not(.ant-picker-cell-range-start-single)::before,
+    .ant-picker-cell-in-view.ant-picker-cell-range-end:not(.ant-picker-cell-range-end-single)::before {
+      background-color: $Brand-2;
+    }
+    tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover:first-child::after,
+    tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-end:first-child::after,
+    .ant-picker-cell-in-view.ant-picker-cell-start.ant-picker-cell-range-hover-edge-start.ant-picker-cell-range-hover-edge-start-near-range::after,
+    .ant-picker-cell-in-view.ant-picker-cell-range-hover-edge-start:not(.ant-picker-cell-range-hover-edge-start-near-range)::after,
+    .ant-picker-cell-in-view.ant-picker-cell-range-hover-start::after {
+      border-left: 1px dashed $Brand-6;
+    }
+    .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:not(.ant-picker-cell-in-range):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end)::after,
+    .ant-picker-cell-in-view.ant-picker-cell-range-hover-end:not(.ant-picker-cell-in-range):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end)::after,
+    .ant-picker-cell-in-view.ant-picker-cell-range-hover-start.ant-picker-cell-range-start-single::after,
+    .ant-picker-cell-in-view.ant-picker-cell-range-hover-start.ant-picker-cell-range-start.ant-picker-cell-range-end.ant-picker-cell-range-end-near-hover::after,
+    .ant-picker-cell-in-view.ant-picker-cell-range-hover-end.ant-picker-cell-range-start.ant-picker-cell-range-end.ant-picker-cell-range-start-near-hover::after,
+    .ant-picker-cell-in-view.ant-picker-cell-range-hover-end.ant-picker-cell-range-end-single::after,
+    .ant-picker-cell-in-view.ant-picker-cell-range-hover:not(.ant-picker-cell-in-range)::after {
+      border-top: 1px dashed $Brand-6;
+      border-bottom: 1px dashed $Brand-6;
+    }
+    tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover:last-child::after,
+    tr > .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::after,
+    .ant-picker-cell-in-view.ant-picker-cell-end.ant-picker-cell-range-hover-edge-end.ant-picker-cell-range-hover-edge-end-near-range::after,
+    .ant-picker-cell-in-view.ant-picker-cell-range-hover-edge-end:not(.ant-picker-cell-range-hover-edge-end-near-range)::after,
+    .ant-picker-cell-in-view.ant-picker-cell-range-hover-end::after {
+      border-right: 1px dashed $Brand-6;
+    }
+    .ant-picker-header {
+      color: $Text-5;
+      @include c4-4-med12;
+      border-bottom: none;
+    }
+    .ant-picker-content thead th {
+      color: $Text-1;
+      @include c4-3-reg12;
+    }
+    .ant-picker-cell {
+      color: $Text-1;
+      @include c4-3-reg12;
+    }
+    .ant-picker-cell-in-view {
+      color: $Text-5;
+      @include c4-3-reg12;
+    }
+    .ant-picker-today-btn {
+      color: $Brand-6;
+      @include p1-3-reg14;
+    }
+    .ant-picker-date-panel .ant-picker-content {
+      width: 196px;
+    }
+  }
+}

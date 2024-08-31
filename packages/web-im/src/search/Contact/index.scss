@@ -1,0 +1,9 @@
+.sirius-scroll {
+  outline: 0;
+}
+.search-item {
+  overflow: hidden;
+  .ant-list-item {
+    height: auto;
+  }
+}

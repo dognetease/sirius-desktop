@@ -1,0 +1,32 @@
+.editor-container {
+  flex: 1;
+  position: relative;
+  .ql-container {
+    // border: none;
+  }
+  .ql-editor {
+    min-height: 80px;
+  }
+  .editor-container-layer {
+    height: 100%;
+    width: 100%;
+    left: -20px;
+    top: -40px;
+    position: absolute;
+  }
+  .editor-container-textarea {
+    width: 100%;
+    min-height: 100px;
+    margin-top: 4px;
+    padding: 0 10px;
+    border: none;
+    resize: none;
+  }
+  .control-editor-height {
+    height: 0;
+    overflow: hidden;
+  }
+  .editor-container-textarea:focus-visible {
+    outline: none;
+  }
+}

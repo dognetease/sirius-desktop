@@ -1,0 +1,110 @@
+.container {
+  height: 100%;
+  padding: 24px;
+  background: #f9fafb;
+  overflow-y: auto;
+
+  .alert {
+    background: $Brand-1;
+    border-radius: 4px;
+    border: none;
+    color: #232d47;
+  }
+
+  .table-wrapper {
+    padding: 20px;
+    background: #fff;
+  }
+
+  .linkBtn {
+    @include p1-3-reg14();
+    color: $Brand-6;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .linkBtnDanger {
+    color: $Error-6;
+  }
+
+  .delTip {
+    color: rgba(255, 181, 76, 1);
+  }
+
+  .operation {
+    display: flex;
+    align-items: center;
+    padding-bottom: 16px;
+  }
+
+  .selectTip {
+    width: 65px;
+    font-size: 14px;
+    color: #232d47;
+    margin-right: 10px;
+    white-space: nowrap;
+  }
+
+  .btn {
+    border: none;
+  }
+
+  .head {
+    .title {
+      font-weight: bold;
+      font-size: 24px;
+      color: #232d47;
+      padding-top: 10px;
+    }
+  }
+
+  .search {
+    display: flex;
+    background: #fff;
+    padding: 20px;
+    margin: 24px 0 16px;
+    align-items: center;
+
+    .field {
+      display: flex;
+      align-items: center;
+      margin-right: 38px;
+    }
+
+    .label {
+      color: #7a8599;
+      margin-right: 8px;
+    }
+
+    .input {
+      :global(.ant-input),
+      :global(.ant-picker-input input) {
+        &::placeholder {
+          color: $label-6_3;
+        }
+      }
+      :global(.ant-picker-input input::placeholder) {
+        text-align: center;
+      }
+    }
+  }
+
+  :global(.ant-breadcrumb > span) {
+    color: #4e5969;
+    cursor: pointer;
+  }
+
+  :global(.ant-breadcrumb > span:last-child) {
+    @include p1-4-med14();
+    color: #1d2129;
+    cursor: default;
+  }
+
+  .max-width-cell {
+    max-width: 200px;
+  }
+}
+
+.contacts {
+  padding-top: 20px;
+}

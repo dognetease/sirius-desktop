@@ -1,0 +1,98 @@
+// @import '@web-common/styles/variables.scss';
+@import '../../../../../web/src/styles/varies.scss';
+
+.BlackListModal-wrap {
+  .ant-modal-header {
+    border-bottom: none;
+  }
+
+  .ant-modal-body {
+    padding-top: 10px;
+  }
+
+  .ant-select-selector {
+    max-height: 130px;
+    overflow-y: auto;
+    @include sirius-scroll;
+  }
+
+  .defaultCCModal-title {
+    font-size: 14px;
+    color: var(--text-5, #272e47);
+  }
+
+  .defaultCCModal-tip {
+    margin-top: 8px;
+    font-size: 14px;
+    color: var(--text-2, #9fa2ad);
+    margin-left: 10px;
+  }
+
+  .defaultCCModal-contactModel-wrap {
+    margin-top: 8px;
+  }
+
+  .defaultCCModal-footer {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .tagWrapper {
+    display: flex;
+    align-items: center;
+    // background: rgba(#272e47, 0.08);
+    background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+    border-radius: 12px;
+    padding: 2px 8px 2px 2px;
+    font-size: 12px;
+    margin: 4px;
+    height: 24px;
+    padding-left: 8px;
+
+    &.tagWrapperError {
+      background: rgba($color: #f74f4f, $alpha: 0.1);
+    }
+
+    .tagAvatar {
+      margin-right: 4px;
+      height: 20px;
+      width: 20px;
+      border-radius: 10px;
+      line-height: 20px;
+      text-align: center;
+      color: #ffffff;
+      flex: none;
+    }
+
+    .tagName {
+      // color: rgba(#272e47, 0.9);
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      // @include flex-ellipsis-text();
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 128px;
+
+      &-error {
+        color: #f74f4f;
+      }
+    }
+
+    .tagNameWidth {
+      max-width: inherit;
+    }
+
+    .tagClose {
+      cursor: pointer;
+      margin-left: 4px;
+
+      &:hover {
+        svg path {
+          stroke: #386ee7;
+          stroke-opacity: 1;
+        }
+      }
+    }
+  }
+}

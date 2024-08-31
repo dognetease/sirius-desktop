@@ -1,0 +1,153 @@
+@import '@web-common/styles/waimao/varies.scss';
+@mixin common-btn {
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  border: 0px;
+  background: $Brand-6;
+
+  &:hover {
+    background: $Brand-5;
+  }
+
+  &:active {
+    background: $Brand-7;
+  }
+}
+.aiCreateSiteModal {
+  :global {
+    .ant-modal-content {
+      background-image: url(../../../images/ai-site-modal-bg.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .ant-modal-body {
+      padding: 0px;
+    }
+    .ant-form-item {
+      margin-bottom: 20px;
+    }
+    .ant-form-item-label > label::after {
+      margin: 0 12px 0 2px;
+    }
+    .ant-radio-checked .ant-radio-inner {
+      border-color: #4c6aff;
+      background-color: #4c6aff;
+    }
+    .ant-radio-wrapper {
+      margin-right: 12px;
+    }
+    .ant-input-prefix {
+      margin-right: 0px;
+    }
+    .ant-input-suffix {
+      margin-left: 0px;
+    }
+    .sirius-input-default {
+      height: 36px;
+      padding: 7px 12px;
+    }
+    .sirius-input-ui-default {
+      height: 36px;
+      padding: 7px 12px;
+    }
+    .sirius-select-small.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+      height: 36px;
+    }
+    .sirius-select-small.ant-select-single .ant-select-selector .ant-select-selection-placeholder {
+      line-height: 34px;
+    }
+    .sirius-select .ant-select-arrow {
+      top: 49%;
+    }
+    .sirius-select-front {
+      line-height: 34px;
+    }
+    .sirius-select-small.ant-select-show-search:not(.ant-select-multiple):not(.ant-select-customize-input) .ant-select-selector input {
+      margin-top: 9px;
+    }
+    .sirius-select-ui-small.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+      height: 36px;
+    }
+    .sirius-select-ui-small.ant-select-single .ant-select-selector .ant-select-selection-placeholder {
+      line-height: 34px;
+    }
+    .sirius-select-ui .ant-select-arrow {
+      top: 49%;
+    }
+    .sirius-select-ui-front {
+      line-height: 34px;
+    }
+    .sirius-select-ui-small.ant-select-show-search:not(.ant-select-multiple):not(.ant-select-customize-input) .ant-select-selector input {
+      margin-top: 9px;
+    }
+    .ant-form-item-with-help {
+      margin-bottom: 0px !important;
+    }
+    .ant-form-item-explain,
+    .ant-form-item-extra {
+      font-size: 12px;
+      min-height: 20px;
+    }
+  }
+
+  .mainContent {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 16px;
+    .header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 20px;
+      padding-top: 37px;
+      .icon {
+        width: 177px;
+        height: 29px;
+        background-image: url(../../../images/ai-site-modal-icon.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+    .form {
+      width: 100%;
+      margin-top: 30px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      padding: 0px 20px 0px 20px;
+      backdrop-filter: blur(2px);
+    }
+    .buttonGroup {
+      margin-top: 18px;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-bottom: 20px;
+      .cancelButton {
+        padding: 5px 24px;
+        background: #ffffff;
+        border-radius: 4px;
+        color: #545a6e;
+        font-size: 14px;
+      }
+      .submitButton {
+        @include common-btn;
+        font-size: 12px;
+        line-height: 24px;
+        padding: 5px 17px;
+        font-size: 14px;
+      }
+    }
+  }
+}

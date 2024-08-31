@@ -1,0 +1,27 @@
+.feedback {
+  :global(.ant-modal-header) {
+    border: none;
+    // padding: 20px 24px 0px;
+  }
+  :global(.ant-modal-footer) {
+    border: none;
+    // height: 68px;
+    // padding: 16px 24px;
+  }
+  // ant-input-textarea
+  :global(.ant-input-textarea) {
+    // border: none;
+    // height: 68px;
+    // padding: 16px 24px;
+    &::after {
+      position: absolute;
+      right: 16px;
+      // top: ;
+      bottom: 26px;
+    }
+    textarea {
+      height: 120px;
+      padding-bottom: 22px;
+    }
+  }
+}

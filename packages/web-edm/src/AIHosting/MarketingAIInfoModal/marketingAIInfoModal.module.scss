@@ -1,0 +1,161 @@
+@import 'src/styles/varies';
+@import '@web-common/styles/variables.scss';
+.wrap {
+  height: 532px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding-right: 4px;
+
+  .header {
+    height: 56px;
+    flex-shrink: 0;
+    padding: 20px 16px 12px 20px;
+    .header-title {
+      color: var(--text-5, #272e47);
+      font-family: PingFang SC;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px; /* 150% */
+    }
+  }
+
+  .content {
+    padding: 0px 10px 0px 20px;
+    @include sirius-scroll;
+
+    .content-inset {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      :global(.sirius-input .ant-input-textarea-show-count:after) {
+        bottom: -3px;
+      }
+      :global(.sirius-input-ui .ant-input-textarea-show-count:after) {
+        bottom: -3px;
+      }
+
+      .content-tips {
+        color: var(--text-4, #545a6e);
+        /* 灵犀桌面2.0/P1.3-Reg14 */
+        font-family: PingFang SC;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px; /* 157.143% */
+      }
+
+      :global .ant-form-item {
+        margin-bottom: 0px;
+      }
+
+      :global(.ant-form-item-label) {
+        > label {
+          color: $Text-4;
+        }
+      }
+
+      .target-email {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        height: 62px;
+        flex-shrink: 0;
+
+        .target-email-title {
+          color: var(--text-4, #545a6e);
+          /* 灵犀桌面2.0/P1.3-Reg14 */
+          font-family: PingFang SC;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22px; /* 157.143% */
+        }
+        .target-email-content {
+          display: flex;
+          align-items: center;
+
+          .radio {
+            display: flex;
+            gap: 16px;
+
+            :global .ant-radio-wrapper {
+              align-items: center;
+              margin: 0px;
+            }
+
+            :global .sirius-radio-ehc .span {
+              padding: 0px;
+            }
+
+            :global .sirius-radio-ehc-ui .span {
+              padding: 0px;
+            }
+
+            :global .ant-radio {
+              width: 16px;
+              height: 16px;
+              top: 0;
+            }
+          }
+        }
+      }
+    }
+
+    :global(.ant-form) {
+      display: flex;
+      gap: 16px;
+      flex-direction: column;
+    }
+    :global(.ant-form-item) {
+      margin-bottom: 16px;
+    }
+    :global(.sirius-select-small) {
+      height: auto;
+    }
+    :global(.sirius-select-ui-small) {
+      height: auto;
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 22px;
+    right: 14px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+}
+
+.base-info-input-count {
+  color: $Text-2;
+  @include c4-1-reg12;
+}
+
+.footer {
+  height: 48px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 12px;
+  align-items: center;
+}
+
+.custom-modal {
+  :global .ant-modal-close {
+    display: none;
+  }
+  :global .ant-modal-body {
+    padding: 0px;
+  }
+  :global .ant-modal-footer {
+    border-top: 0px;
+  }
+}

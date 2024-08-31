@@ -1,0 +1,15 @@
+.customsTagLabel {
+  :global {
+    .lx-tag {
+      height: auto !important;
+      display: inline-flex;
+      line-height: 20px;
+    }
+    .lx-ui-tag,
+    .lx-tag-ui {
+      height: auto !important;
+      display: inline-flex;
+      line-height: 20px;
+    }
+  }
+}

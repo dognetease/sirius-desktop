@@ -1,0 +1,19 @@
+.columnCustomerEmpty {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .columnCustomerEmptyTxt {
+    @include p1-3-reg14();
+    color: $Text-3;
+  }
+  .columnCustomerEmptyBtn {
+    margin-top: 8px;
+    @include p1-3-reg14();
+    color: $Brand-6;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,204 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.order-manage {
+  width: 100%;
+  height: 100%;
+  background: $Fill-2;
+  padding: 20px 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+
+  :global {
+    .ant-spin-nested-loading > div > .ant-spin {
+      min-height: 300px;
+    }
+    .ant-table-thead th {
+      color: $Text-3 !important;
+      background: #f6f7fa;
+      font-weight: 400;
+      padding: 16px 11px !important;
+    }
+    .ant-table-tbody > tr > td {
+      color: $Text-5 !important;
+    }
+    .ant-table-row > td {
+      padding: 16px 11px !important;
+    }
+    .ant-table-tbody > tr.ant-table-row-selected > td,
+    .ant-table-tbody > tr.ant-table-row:hover > td {
+      background: $Fill-1 !important;
+    }
+  }
+
+  .order-manage-header {
+    flex: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-right {
+      display: flex;
+      align-items: center;
+
+      span {
+        color: $Text-4;
+        font-size: 14px;
+        line-height: 22px;
+        margin: 0 8px 0 5.5px;
+      }
+
+      div {
+        color: $Brand-6;
+        font-size: 14px;
+        line-height: 22px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .order-manage-content {
+    flex: 1;
+    padding: 20px;
+    background: #ffffff;
+    position: relative;
+
+    .empty-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      span {
+        color: $Text-3;
+        font-size: 14px;
+        line-height: 22px;
+        margin-top: 8px;
+      }
+
+      button {
+        cursor: pointer;
+        color: #fff;
+        padding: 6px 12px;
+        background: $Brand-6;
+        border-radius: 4px;
+        margin-top: 16px;
+        border: none;
+        outline: none;
+
+        &:hover {
+          background: $Brand-5;
+        }
+
+        &:active {
+          background: $Brand-7;
+        }
+      }
+    }
+  }
+}
+
+.price {
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-left: 8px;
+    color: $Text-2;
+    text-decoration: line-through;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.status-0,
+.status-1,
+.status-2,
+.status-3,
+.status-4,
+.status-5 {
+  color: $Text-5;
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+
+  span {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    margin-right: 8px;
+  }
+}
+
+.status-0 {
+  span {
+    background: $Error-6;
+  }
+}
+
+.status-1 {
+  span {
+    background: $Warning-6;
+  }
+}
+
+.status-2 {
+  span {
+    background: $Brand-6;
+  }
+}
+
+.status-4 {
+  span {
+    background: $Fill-6;
+  }
+}
+
+.status-5 {
+  span {
+    background: $Success-6;
+  }
+}
+
+.link {
+  cursor: pointer;
+  color: $Brand-6;
+  display: flex;
+
+  span {
+    color: $Text-2;
+    display: flex;
+  }
+}
+
+.refund-modal {
+  :global {
+    .ant-modal-confirm-title {
+      margin-left: 0 !important;
+    }
+    .ant-modal-confirm-content {
+      padding-left: 0 !important;
+      margin-top: 10px !important;
+    }
+    .ant-modal-confirm-btns {
+      margin-top: 18px !important;
+    }
+    .ant-btn-primary {
+      background-color: $Brand-6;
+      &:hover {
+        background: $Brand-5;
+      }
+      &:active {
+        background: $Brand-7;
+      }
+    }
+  }
+  &-text {
+    color: $Text-3;
+    line-height: 22px;
+  }
+}

@@ -1,0 +1,175 @@
+@import '@web-common/styles/variables.scss';
+$body-max-width: 1014px;
+.searchIframeContainer {
+  background-color: $Fill-1;
+  padding: 16px;
+  position: relative;
+  &-init {
+    padding: 0;
+  }
+  .affixBox {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 50px;
+    padding: 0px 16px;
+    .affixBtn {
+      margin-right: 12px;
+    }
+  }
+  .iframeBox {
+    width: 100%;
+    .iframeStyle {
+      width: 100%;
+      height: calc(100vh - 120px);
+      top: 0;
+      border: 0;
+    }
+  }
+
+  .bread {
+    margin-bottom: 12px;
+
+    :global {
+      .ant-breadcrumb-separator {
+        margin: 0 4px;
+        vertical-align: middle;
+      }
+
+      .ant-breadcrumb {
+        color: #1d2129;
+      }
+
+      .ant-breadcrumb a:hover {
+        color: $Avatar-6;
+      }
+    }
+  }
+  .titleText {
+    font-size: 14px;
+    color: #747a8c;
+    margin-left: 10px;
+    font-weight: 400;
+  }
+  .searchBox {
+    position: relative;
+    border-radius: 4px;
+    background: #ffffff;
+    box-shadow: 0px 4px 40px 0px rgba(5, 20, 71, 0.08);
+    padding: 16px;
+    display: flex;
+    .searchWrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-right: 32px;
+      width: 30%;
+      .searchLabel {
+        width: 70px;
+        color: #747a8c;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        flex-shrink: 0;
+      }
+    }
+  }
+  .tableBox {
+    margin-top: 12px;
+    .tableListBox {
+      padding: 20px;
+      border-radius: 4px;
+      background: #ffffff;
+      box-shadow: 0px 4px 40px 0px rgba(5, 20, 71, 0.08);
+      .tableListTop {
+        display: flex;
+        justify-content: space-between;
+        line-height: 32px;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+      :global(.ant-pagination .ant-table-cell::before) {
+        border: none;
+      }
+      :global(.ant-table-cell::before) {
+        display: none;
+      }
+      :global(.ant-table-tbody > tr > td) {
+        border-bottom: 0;
+      }
+
+      .pagination {
+        margin: 16px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+      .itemBox {
+        display: flex;
+        width: 100%;
+        position: relative;
+        .countryRegion {
+          position: absolute;
+          right: 16px;
+          top: 12px;
+          color: $Text-3;
+          font-size: 14px;
+          line-height: 22px;
+        }
+
+        .itemLogo {
+          width: 75px;
+          height: 75px;
+          color: #fff;
+          background-color: #4c6aff;
+          border-radius: 4px;
+          text-align: center;
+          line-height: 75px;
+          margin-right: 16px;
+        }
+
+        .infoBoxleft {
+          width: calc(100% - 91px);
+
+          .infoText {
+            color: #747a8c;
+            .urlLink {
+              cursor: pointer;
+              color: $Brand-6;
+              font-size: 12px;
+              line-height: 20px;
+            }
+            .infoTextTop {
+              > span {
+                margin-right: 16px;
+              }
+            }
+          }
+        }
+
+        .flexBox {
+          display: flex;
+          justify-content: space-between;
+          em {
+            color: #ff0000;
+            font-style: normal;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tooltipBoxContent {
+  width: 275px;
+  padding: 10px;
+  color: #272e47;
+  line-height: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .tooltipLeftBox {
+    flex-shrink: 0;
+  }
+}

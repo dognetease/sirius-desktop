@@ -1,0 +1,136 @@
+@import '../../web/src/styles/varies';
+//@import "../../web-entry-wm/src/styles/varies.scss";
+@import '@web-common/styles/waimao/varies.scss';
+.team-creator-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: calc(100% - #{$side-bar-width});
+  margin-left: $side-bar-width;
+  // background-color: #ffffff;
+  background-color: $white;
+  z-index: 10;
+}
+
+.im-entry-wrapper {
+  p,
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+  :global(.ant-modal-content) {
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.wm-entry-team-creator-wrapper {
+  position: absolute;
+  top: $main-offset-top-height;
+  left: 220px;
+  height: calc(100% - #{$main-offset-top-height});
+  width: calc(100% - 220px);
+  margin-left: 0;
+}
+
+.page-content-wm {
+  height: 100%;
+}
+
+.top-wrapper {
+  position: absolute;
+  top: 0;
+  background-color: $white;
+  width: 100%;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  padding: 16px 12px 8px;
+}
+
+.search-button {
+  @include sirius-no-drag();
+  flex: 1;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  // background: #ffffff;
+  background-color: $white;
+  border-radius: 24px;
+  padding: 0 10px;
+  font-size: 12px;
+  line-height: 26px;
+  outline: none;
+  cursor: pointer;
+  border: solid 0.5px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: normal;
+  /* identical to box height, or 133% */
+  text-align: right;
+  /* 字体及ICON颜色/不重要文字40% */
+  color: #a8aaad;
+  .searchIcon {
+    width: 16px;
+    height: 16px;
+    // background-image: url('../../web/src/images/icons/search.svg');
+    background-size: 100% 100%;
+  }
+  .searchTips {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &:hover {
+    color: $main-enhance-color;
+    border-color: $main-enhance-color;
+    // .searchIcon {
+    // background-image: url('../../web/src/images/icons/search_hover.svg');
+    // }
+  }
+  > span {
+    margin-left: 8px;
+  }
+}
+
+.icon-wrapper {
+  @include sirius-no-drag();
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  margin-left: 8px;
+  cursor: pointer;
+  border: solid 1px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #ffffff url(../../web/src/images/icons/common/addMember.svg) center center no-repeat; // 防止 $add-member 不生效的兜底
+  background: $white $add-member center center no-repeat;
+  background-size: 16px 16px;
+  &:hover {
+    background-image: url('../../web/src/images/icons/common/addMember_hover.svg');
+    border-color: $main-enhance-color;
+  }
+}
+
+.tooltip-overlay {
+  padding-top: 2px;
+  :global {
+    .ant-tooltip-arrow {
+      display: none;
+    }
+    .ant-tooltip-inner {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #ffffff;
+      border-radius: 6px;
+      padding: 10px 12px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}

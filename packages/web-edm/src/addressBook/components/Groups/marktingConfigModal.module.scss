@@ -1,0 +1,20 @@
+.markting-config-wrapper {
+  .tips {
+    font-size: 14px;
+    color: $Text-4;
+  }
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+.add-group-wrapper {
+  .add-group-tip {
+    font-size: 14px;
+    color: $Text-4;
+    padding-bottom: 12px;
+    line-height: 22px;
+  }
+}

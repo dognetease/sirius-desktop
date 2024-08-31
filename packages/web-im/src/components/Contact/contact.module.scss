@@ -1,0 +1,77 @@
+@import '../../../../web/src/styles/varies';
+
+.checkbox {
+  box-sizing: border-box;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  list-style: none;
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: none;
+  cursor: pointer;
+}
+.checkbox-checked .checkbox-inner {
+  background-color: $Brand-6;
+  border-color: $Brand-6;
+  &::after {
+    position: absolute;
+    display: table;
+    border: 2px solid #fff;
+    border-top: 0;
+    border-left: 0;
+    transform: rotate(45deg) scale(1) translate(-50%, -50%);
+    opacity: 1;
+    transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+    content: ' ';
+  }
+}
+.checkbox-disabled {
+  cursor: not-allowed;
+}
+.checkbox-disabled .checkbox-inner {
+  background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+  border: none;
+}
+.checkbox-inner {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 12px;
+  height: 12px;
+  direction: ltr;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  border-collapse: separate;
+  transition: all 0.3s;
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 22%;
+    display: table;
+    width: 5.136px;
+    height: 8.22px;
+    border: 2px solid #fff;
+    border-top: 0;
+    border-left: 0;
+    transform: rotate(45deg) scale(0) translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+    content: ' ';
+  }
+}
+
+.contact-tree-container {
+  :global(.ant-tree-treenode-selected) {
+    background-color: $Fill-1;
+  }
+  :global(span.ant-tree-node-content-wrapper) {
+    margin: 2px 0;
+  }
+  :global(.ant-tree-switcher .ant-tree-switcher-icon) {
+    vertical-align: middle;
+  }
+}

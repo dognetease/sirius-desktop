@@ -1,0 +1,10 @@
+.market-history {
+  :global(.ant-table-placeholder) {
+    height: 220px;
+  }
+
+  :global(.ant-spin-dot) {
+    transform: translate(-50%, -50%);
+    margin: 0 !important;
+  }
+}

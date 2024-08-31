@@ -1,0 +1,108 @@
+.download-modal-wrap {
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: 400px;
+  padding: 0;
+  .title {
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    /* 字体及ICON颜色/主要文字100% */
+    display: block;
+    color: #262a33;
+  }
+  .desc {
+    display: block;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+
+    text-align: center;
+    color: #7d8085;
+    margin-top: 8px;
+  }
+  .card-wrap {
+    display: flex;
+    margin: 38px 56px 0 56px;
+  }
+  .download-card-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 32px;
+    cursor: pointer;
+    &:first-child {
+      margin-left: 0;
+    }
+    .card-item-img {
+      width: 160px;
+      height: 156px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.06);
+      border-radius: 8px;
+      &:first-child {
+        margin-left: 0;
+      }
+      .card-item-img-mask {
+        display: block;
+      }
+      .card-item-imgQR {
+        display: none;
+      }
+    }
+    &:hover {
+      .card-item-desc {
+        display: none;
+      }
+      .card-item-title {
+        display: none;
+      }
+      .card-item-hover-title {
+        display: block;
+      }
+      .card-item-img-mask {
+        display: none;
+      }
+      .card-item-imgQR {
+        display: block;
+      }
+    }
+
+    .card-item-desc {
+      margin-top: 8px;
+      padding: 4px 8px;
+      height: 20px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 12px;
+      text-align: center;
+      color: #7d8085;
+      background: #f1f1f1;
+      border-radius: 100px;
+    }
+    .card-item-title,
+    .card-item-hover-title {
+      margin-top: 12px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      text-align: center;
+      color: #232d47;
+    }
+    .card-item-hover-title {
+      display: none;
+    }
+  }
+}

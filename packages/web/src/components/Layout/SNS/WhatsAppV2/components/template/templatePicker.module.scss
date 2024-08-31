@@ -1,0 +1,21 @@
+.template-picker {
+  :global(.ant-modal-body) {
+    padding: 24px 24px 12px 24px;
+  }
+
+  .filter {
+    :global(.ant-input-affix-wrapper) {
+      padding: 6px 11px;
+      width: 240px;
+      margin-right: 8px;
+    }
+  }
+
+  .operations a {
+    margin-right: 12px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

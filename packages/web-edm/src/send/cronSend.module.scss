@@ -1,0 +1,154 @@
+.cron-send-modal {
+  :global(.ant-modal-body) {
+    position: relative;
+    padding: 8px 20px 24px;
+  }
+  :global(.ant-modal-footer) {
+    border: none;
+    padding: 16px 20px;
+  }
+  :global(.ant-modal-header) {
+    border-bottom: 0px;
+    padding: 16px 20px;
+  }
+
+  .send-mode {
+    margin: 0 0 16px;
+  }
+
+  .time-picker {
+    margin-left: 8px;
+    width: 62px !important;
+    .input {
+      width: 62px !important;
+    }
+  }
+
+  .error-tip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 26px;
+    padding-left: 12px;
+    font-size: 12px;
+    line-height: 26px;
+    background: rgba(247, 71, 71, 0.1);
+    color: #51555c;
+  }
+
+  .select {
+    width: 70px;
+
+    &:not(:last-child) {
+      margin-right: 6px;
+    }
+
+    &:not(:first-child) {
+      margin-left: 16px;
+    }
+  }
+
+  .cron-modal-footer {
+    display: flex;
+  }
+
+  .cron-modal-footer-content {
+    display: flex;
+    margin-right: auto;
+  }
+}
+.cronSentForm {
+  // padding: 0 20px;
+  .cron-sent-form-tip {
+    position: absolute;
+    right: 20px;
+    margin-top: -48px;
+  }
+}
+
+.local-send-mode {
+  gap: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.limit-item {
+  :global(label) {
+    white-space: normal;
+    word-break: break-all;
+  }
+  :global(.ant-input-group.ant-input-group-compact) {
+    white-space: nowrap;
+  }
+}
+
+.smart-ass-root {
+  margin-top: 12px;
+  margin-bottom: 20px;
+
+  background: $Fill-1;
+  border-radius: 4px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: flex-start;
+
+  .smart-ass {
+    flex-shrink: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @include c4-3-reg12;
+    color: $Text-5;
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      margin-right: 8px;
+      border-radius: 3px;
+      background: $Brand-6;
+    }
+    .count {
+      color: $Warning-7;
+      @include c4-3-reg12;
+    }
+  }
+
+  .see-all {
+    cursor: pointer;
+    width: 100%;
+    color: $Brand-6;
+    @include c4-3-reg12;
+    gap: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.page-loading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  :global(.sirius-spin) {
+    display: inline-block;
+  }
+  :global(.ant-spin-text) {
+    font-size: 12px;
+    color: rgba(38, 42, 51, 0.5);
+  }
+}

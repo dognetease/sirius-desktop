@@ -1,0 +1,55 @@
+.layout-header {
+  &-left {
+    font-style: normal;
+    line-height: 20px;
+    height: 20px;
+    color: #262a33;
+    display: inline-block;
+    .title {
+      margin-right: 8px;
+      color: rgb(38, 42, 51);
+      font-weight: 500;
+      font-size: 20px;
+      vertical-align: top;
+    }
+    .sub-title {
+      // display: inline-block;
+      font-size: 12px;
+      // line-height: 0; // 基线上移
+      color: rgba(38, 42, 51, 0.6);
+      font-weight: normal;
+    }
+    .num-text {
+      font-style: normal;
+      color: #f7b48e;
+    }
+    .page-content {
+      margin-top: 24px;
+    }
+  }
+  &-right {
+    float: right;
+    :global {
+      .advanced-select-btn {
+        width: 100px;
+        margin-right: 12px;
+        span {
+          margin-left: 8px;
+        }
+      }
+      .header-dropdown-btn {
+        // width: 96px;
+        border-radius: 4px;
+        border-radius: 4px;
+        overflow: hidden;
+        span {
+          display: contents;
+        }
+        svg {
+          vertical-align: middle;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+}

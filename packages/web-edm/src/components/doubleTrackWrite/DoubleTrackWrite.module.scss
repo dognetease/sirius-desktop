@@ -1,0 +1,22 @@
+.modal-wrapper {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 60px;
+  z-index: 102;
+  padding: 43px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  .content {
+    flex: 1;
+    height: 0;
+  }
+  .footer {
+    padding: 0px 16px 8px;
+    flex-shrink: 0;
+    // display: flex;
+    // justify-content: flex-end;
+  }
+}

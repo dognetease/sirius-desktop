@@ -1,0 +1,11 @@
+.select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  .item {
+    width: 130px;
+    height: 32px;
+  }
+}

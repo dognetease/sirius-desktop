@@ -1,0 +1,22 @@
+.tipsStyle {
+  display: flex;
+  width: 100%;
+  .tipsTextStyle {
+    line-height: 24px;
+  }
+  .tipsIconStyle {
+    width: 10;
+    display: 'flex';
+    align-items: 'center';
+    cursor: pointer;
+    stroke: white !important;
+  }
+}
+.tipsTooltip {
+  max-width: 100%;
+  //   :global {
+  //     .ant-tooltip .ant-tooltip-placement-topLeft {
+  //       max-width: 100% !important;
+  //     }
+  //   }
+}

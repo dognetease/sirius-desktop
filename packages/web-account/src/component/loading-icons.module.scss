@@ -1,0 +1,11 @@
+@keyframes loadingCircle {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.loading-icon {
+  margin-left: 5px;
+  :global(svg) {
+    animation: loadingCircle 1s infinite linear;
+  }
+}

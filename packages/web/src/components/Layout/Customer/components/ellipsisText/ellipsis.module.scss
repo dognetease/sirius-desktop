@@ -1,0 +1,17 @@
+.ellipsis-wrap {
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+}
+
+.ellipsis {
+  flex: 0 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.indent {
+  flex: 1 0 auto;
+}

@@ -1,0 +1,51 @@
+.edit-schedule {
+  :global(.ant-modal-header) {
+    border-bottom: none;
+  }
+
+  :global(.ant-modal-body) {
+    padding: 6px 24px 24px;
+  }
+
+  :global(.ant-form-item) {
+    margin-bottom: 16px;
+
+    &:last-child {
+      text-align: center;
+      margin-bottom: 0;
+    }
+  }
+
+  .dateTime {
+    &:global(.ant-form-item) {
+      margin-bottom: 24px;
+
+      :global(.ant-row) {
+        margin-bottom: 0;
+      }
+    }
+
+    :global(.ant-input-group) {
+      display: flex;
+
+      :global(.ant-row) {
+        &:first-child {
+          flex-grow: 1;
+          margin-right: 8px;
+
+          :global(.ant-form-item-control-input-content) > div {
+            display: block !important;
+          }
+        }
+
+        &:last-child {
+          flex-shrink: 0;
+
+          :global(.ant-input) {
+            width: 70px !important;
+          }
+        }
+      }
+    }
+  }
+}

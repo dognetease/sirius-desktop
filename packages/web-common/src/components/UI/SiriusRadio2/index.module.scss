@@ -1,0 +1,8 @@
+.sirius-setting-radio {
+  :global(.ant-radio-checked) :global(.ant-radio-inner) {
+    background-color: #386ee7;
+    &::after {
+      background-color: #fff;
+    }
+  }
+}

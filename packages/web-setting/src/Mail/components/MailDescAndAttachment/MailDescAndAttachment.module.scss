@@ -1,0 +1,84 @@
+@import '@web-common/styles/variables.scss';
+
+.popContent {
+  width: 234px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+  padding: 0px 12px;
+}
+
+.autoWidth {
+  width: auto !important;
+}
+
+.popouter {
+  background-color: rgba(0, 0, 0, 0);
+}
+.poptitle {
+  @include font-size(400, 9px, 10px);
+  color: #ffffff;
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+.popimg1 {
+  width: 210px;
+  height: 72px;
+  background: url('@/images/mail/showDesc.jpg') no-repeat;
+  background-size: 100%;
+  margin-bottom: 2px;
+}
+.popimg2 {
+  width: 210px;
+  height: 52px;
+  background: url('@/images/mail/hideDesc.jpg') no-repeat;
+  background-size: 100%;
+  margin-bottom: 12px;
+}
+.popimg3 {
+  width: 210px;
+  height: 72px;
+  background: url('@/images/mail/showAttachment.jpg') no-repeat;
+  background-size: 100%;
+  margin-bottom: 2px;
+}
+.popimg4 {
+  width: 210px;
+  height: 52px;
+  background: url('@/images/mail/hideAttachment.jpg') no-repeat;
+  background-size: 100%;
+  margin-bottom: 12px;
+}
+.popimg5 {
+  width: 210px;
+  height: 72px;
+  background: url('@/images/mail/showAvator.jpg') no-repeat;
+  background-size: 100%;
+  margin-bottom: 12px;
+}
+.popimg6 {
+  width: 210px;
+  height: 72px;
+  background: url('@/images/mail/hideAvator.jpg') no-repeat;
+  background-size: 100%;
+  margin-bottom: 12px;
+}
+
+.showRealListImg {
+  width: 148px;
+  height: 110px;
+  background: url('@/images/mail/show-mail-real-list.png') no-repeat;
+  background-size: contain;
+  margin-bottom: 12px;
+}
+
+.noShowRealListImg {
+  width: 148px;
+  height: 110px;
+  background: url('@/images/mail/no-show-mail-real-list.png') no-repeat;
+  background-size: contain;
+  margin-bottom: 12px;
+}
+
+.checkbox-label {
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+}

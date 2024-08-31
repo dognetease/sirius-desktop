@@ -1,0 +1,117 @@
+@import '../../../../../web/src/styles/varies.scss';
+.contacts {
+  position: static;
+  border-radius: 4px;
+  background: #fff;
+  // padding: 16px;
+  .min-width-cell {
+    min-width: 110px;
+  }
+
+  .email-cell {
+    display: flex;
+    align-items: center;
+    :global(.ant-space-item):first-child {
+      flex-shrink: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    :global(.ant-space-item):last-child {
+      flex-shrink: 0;
+    }
+  }
+
+  .max-width-cell {
+    max-width: 200px;
+  }
+
+  .one-index {
+    z-index: 10;
+  }
+
+  .company-name-cell:hover {
+    .company-search-icon-wrapper {
+      display: inline-flex;
+    }
+  }
+
+  .operate {
+    min-width: 150px;
+    max-width: 200px;
+  }
+
+  .company-search-icon-wrapper {
+    display: none;
+    padding: 6px;
+    border-radius: 2px;
+    margin-left: 4px;
+    flex-shrink: 0;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f9fafb;
+    }
+  }
+
+  &.has-selected-row-keys :global(.address-book-sync-tip) {
+    display: none;
+  }
+}
+
+.invalidTag {
+  border-radius: 2px;
+  background: var(--label-61, #e7ebf1);
+  color: var(--label-63, #4e5a70);
+  padding: 2px 6px;
+  line-height: 16px;
+  font-size: 12px;
+}
+
+.markhistoryModal {
+  padding: 16px;
+  max-height: 500px;
+  min-height: 286px;
+  max-width: 660px;
+  overflow: auto;
+  @include sirius-scroll();
+}
+
+.groupNamesWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.groupNameLabel {
+  padding: 4px;
+  font-size: 12px;
+  line-height: 12px;
+  border-radius: 2px;
+  white-space: nowrap;
+  max-width: 68px;
+  text-overflow: ellipsis;
+  background-color: rgba(107, 169, 255, 0.12);
+  margin-right: 8px;
+  overflow: hidden;
+}
+
+.otherGroupNameModal {
+  padding: 12px;
+  max-width: 400px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.marketHistoryIcon {
+  line-height: 16px;
+  vertical-align: middle;
+}
+
+.overview-filter {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding-top: 0;
+}

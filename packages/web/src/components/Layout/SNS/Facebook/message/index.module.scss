@@ -1,0 +1,187 @@
+@import '@web-common/styles/variables.scss';
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: $Fill-2;
+
+  .chat-list-wrapper {
+    padding-top: 16px;
+    width: 318px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 318px;
+    flex-shrink: 0;
+    border: 1px solid $Fill-3;
+    border-radius: 4px;
+    background-color: #ffffff;
+    margin-right: 12px;
+
+    .expires-alert-wrapper {
+      flex-shrink: 0;
+      padding: 0 12px;
+      margin-bottom: 8px;
+    }
+
+    .expires-alert {
+      padding: 8px !important;
+      font-size: 12px;
+      border: none;
+      background-color: $Warning-1;
+      border-radius: 4px;
+
+      a {
+        margin-left: 8px;
+      }
+    }
+
+    .chat-list-filter {
+      display: flex;
+      padding: 0 12px 8px;
+      align-items: center;
+      flex-shrink: 0;
+
+      .public-page-select {
+        flex-grow: 1;
+        margin-right: 8px;
+        border-radius: 4px;
+        overflow: hidden;
+
+        :global(.ant-select-selector) {
+          background-color: $Fill-2;
+          border-color: transparent;
+          border-radius: 4px;
+        }
+      }
+
+      .refresh-icon {
+        flex-shrink: 0;
+        cursor: pointer;
+      }
+    }
+
+    .chat-list-tab {
+      flex-shrink: 0;
+      padding: 0 12px;
+
+      :global {
+        .ant-tabs-nav {
+          margin-bottom: 0;
+        }
+
+        .ant-tabs-tab {
+          padding: 6px 0;
+        }
+
+        .ant-tabs-tab + .ant-tabs-tab {
+          margin-left: 24px;
+        }
+
+        .ant-tabs-ink-bar {
+          background-color: transparent;
+
+          &::after {
+            content: '';
+            width: 12px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 50%;
+            background-color: #386ee7;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+
+    .chat-list {
+      padding: 8px;
+      flex-grow: 1;
+    }
+  }
+
+  .chat-content {
+    flex-grow: 1;
+    overflow: hidden;
+    border: 1px solid $Fill-3;
+    border-radius: 4px;
+  }
+
+  .editor-extra-content {
+    font-size: 12px;
+    border: none;
+    padding: 7px 23px;
+    background-color: $Warning-1;
+
+    &-disabled {
+      color: $Text-3;
+      background-color: $Fill-2;
+
+      :global(.anticon) {
+        color: $label-4_2;
+      }
+    }
+  }
+
+  .remain-time {
+    display: inline-block;
+    min-width: 76px;
+    text-align: center;
+  }
+
+  .empty-content {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: 1px solid $Fill-3;
+    border-radius: 4px;
+
+    .empty-image {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 24px;
+    }
+
+    .empty-title {
+      color: #232d47;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      margin-bottom: 12px;
+    }
+
+    .empty-tip {
+      color: #7a8599;
+      @include p1-3-reg14();
+    }
+  }
+}
+
+.public-page-select-dropdown {
+  &:global(.ant-select-dropdown) {
+    border-radius: 4px;
+  }
+
+  :global(.ant-select-item-option-selected) {
+    color: $Avatar-6;
+    background: none;
+    font-weight: normal;
+  }
+
+  :global(.ant-select-item-option-state) {
+    display: none;
+  }
+
+  :global(.ant-select-item-option-active) {
+    background: $Fill-2_5;
+  }
+}

@@ -1,0 +1,19 @@
+<svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_1077_61797" fill="white">
+<rect x="3" y="3" width="15" height="15" rx="2"/>
+</mask>
+<rect x="3" y="3" width="15" height="15" rx="2" stroke="white" stroke-width="6" mask="url(#path-1-inside-1_1077_61797)"/>
+<mask id="path-2-inside-2_1077_61797" fill="white">
+<rect x="21" y="3" width="15" height="15" rx="2"/>
+</mask>
+<rect x="21" y="3" width="15" height="15" rx="2" stroke="white" stroke-width="6" mask="url(#path-2-inside-2_1077_61797)"/>
+<mask id="path-3-inside-3_1077_61797" fill="white">
+<rect x="3" y="21" width="15" height="15" rx="2"/>
+</mask>
+<rect x="3" y="21" width="15" height="15" rx="2" stroke="white" stroke-width="6" mask="url(#path-3-inside-3_1077_61797)"/>
+<rect x="12" y="27" width="3" height="3" transform="rotate(90 12 27)" fill="white"/>
+<rect x="36" y="33" width="3" height="9" transform="rotate(90 36 33)" fill="white"/>
+<rect x="12" y="9" width="3" height="3" transform="rotate(90 12 9)" fill="white"/>
+<rect x="30" y="9" width="3" height="3" transform="rotate(90 30 9)" fill="white"/>
+<path d="M24 36H21V23C21 21.8954 21.8954 21 23 21H28C29.1046 21 30 21.8954 30 23V27H33V21H36V28C36 29.1046 35.1046 30 34 30H29C27.8954 30 27 29.1046 27 28V24H24V36Z" fill="white"/>
+</svg>

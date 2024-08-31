@@ -1,0 +1,52 @@
+.permission-apply-page {
+  width: 100vw;
+  height: 100vh;
+  max-height: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.permission-apply-comp {
+  flex: 1 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  :global {
+    .no-authority-wrapper {
+      flex-grow: 0 !important;
+    }
+  }
+
+  .submit-btn-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .message {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .hint {
+    display: flex;
+    margin-bottom: 10px;
+    color: $Fill-7;
+  }
+
+  .highlight {
+    color: #5383fe;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

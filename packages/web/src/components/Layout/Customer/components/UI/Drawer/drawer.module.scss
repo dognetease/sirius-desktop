@@ -1,0 +1,17 @@
+.customer-drawer {
+  transform: translateX(0) !important;
+
+  :global(.ant-drawer-header-no-title) {
+    position: relative;
+  }
+
+  :global(.ant-drawer-close) {
+    padding: 22px 26px 12px;
+  }
+
+  &.is-windows {
+    :global(.ant-drawer-wrapper-body) {
+      padding-top: 32px;
+    }
+  }
+}

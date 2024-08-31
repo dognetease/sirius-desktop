@@ -1,0 +1,46 @@
+.my-clue-wrap {
+  // position: relative;
+  .tabs-top {
+    margin-top: 16px;
+  }
+  .empty-list-body {
+    width: auto !important;
+  }
+  .table-wrap {
+    margin-top: 16px;
+  }
+  .client-question {
+    padding-left: 5px;
+  }
+}
+.company-name {
+  cursor: pointer;
+  color: #386ee7;
+  &:hover {
+    color: #386ee7;
+  }
+}
+.customer-talble-column {
+  width: 554px;
+  padding: 16px;
+  .title {
+    color: #262a33;
+    margin-bottom: 0;
+    height: 16px;
+    line-height: 16px;
+  }
+  .sub-title {
+    color: rgba(38, 42, 51, 0.6);
+    font-size: 12px;
+    padding-left: 5px;
+  }
+  .sub-dec {
+    margin-top: 6px;
+    color: #a8aaad;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+.customer-talble-column-width {
+  width: 670px;
+}

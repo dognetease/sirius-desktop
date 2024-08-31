@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;">
+</head>
+<body style="width: 100%;margin: 0; padding: 0;" th:object="${data}">
+    <div style="
+        background: url('https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/04/28/8897758550bd4df58f0cb16e02c10944.png') no-repeat center;
+        background-size: 100% 100%;
+        height: 320px !important;
+        padding: 24px 20px;
+        position: relative;
+    ">
+        <!-- 右侧背景图 -->
+        <img style="
+            position: absolute;
+            right: 9.2%;
+            top: 51px;
+            width: 24.1%;
+            max-width: 142px;
+            min-width: 90px;
+        " src="https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/04/28/eb380f825baa4ece810990094fb569ce.png" alt="">
+        <!-- logo -->
+        <img style="
+            width: 111px;
+            height: 24px;
+        " src="https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/05/23/4c00ee89cd0148d9a0b7b5dd6c1372eb.png" alt="">
+        
+        <!-- content -->
+        <div style="
+            position: absolute;
+            top: 96px;
+            left: 20px;
+            font-family: 'PingFang SC';
+        ">
+            <div style="font-style: normal; font-weight: 500;font-size: 16px;line-height: 22px;color: #262A33;" th:text="'你好，'+${data.inviteeName}"></div>
+            <div style="font-size: 14px;line-height: 22px;height: 20.6% !important;width: 54.8%;margin-top: 20px;">
+                你的好友“<span style="color: #000;font-weight: 500;" th:text="${data.inviterName}"></span>”邀请你参与邮件讨论“<span style="color: #000;font-weight: 500;" th:text="${data.teamName}"></span>”，打开灵犀办公客户端最新版查看邮件并进行协作讨论。
+            </div>
+        </div>
+        <a style="
+            position: absolute;
+            bottom: 44px;
+            left: 20px;
+            width: 116px;
+            height: 32px;
+            border-radius: 4px;
+            background-color: #386ee7;
+            text-align: center;
+            color: #fff;
+            line-height: 32px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: normal;
+        " href="https://hubble.netease.com/sl/aaag49">参与邮件讨论</a>
+    </div>
+</body>
+</html>

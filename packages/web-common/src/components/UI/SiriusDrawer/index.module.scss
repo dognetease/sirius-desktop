@@ -1,0 +1,79 @@
+//@import '../../../../../web-entry-wm/src/styles/varies.scss';
+@import '../../../styles/waimao/varies.scss';
+
+.sirius-drawer,
+.siriusDrawer {
+  &.is-web-entry-wm-customer-style {
+    :global(.ant-drawer-content-wrapper) {
+      height: calc(100% - #{$main-offset-top-height});
+      top: $main-offset-top-height;
+    }
+  }
+
+  &:global(.ant-drawer-open.ant-drawer-left) {
+    :global .ant-drawer-content-wrapper {
+      border-right: 1px solid $Line-1;
+      box-shadow: 6px 0px 16px $shadow-1;
+    }
+  }
+  &:global(.ant-drawer-open.ant-drawer-right) {
+    :global .ant-drawer-content-wrapper {
+      border-left: 1px solid $Line-1;
+      box-shadow: -6px 0px 16px $shadow-1;
+    }
+  }
+  &:global(.ant-drawer-open.ant-drawer-top) {
+    :global .ant-drawer-content-wrapper {
+      border-bottom: 1px solid $Line-1;
+      box-shadow: 0px 6px 16px $shadow-1;
+    }
+  }
+  &:global(.ant-drawer-open.ant-drawer-bottom) {
+    :global .ant-drawer-content-wrapper {
+      border-top: 1px solid $Line-1;
+      box-shadow: 0px -6px 16px $shadow-1;
+    }
+  }
+
+  :global .ant-drawer-header {
+    height: 68px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 24px;
+    border: none;
+    .ant-drawer-title {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 500;
+      color: $Text-5;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  :global .ant-drawer-header-no-title {
+    position: relative;
+  }
+
+  :global .ant-drawer-footer {
+    border: none;
+    height: 72px;
+    padding: 20px;
+  }
+
+  :global .ant-drawer-body {
+    padding: 20px;
+  }
+
+  &-windows {
+    :global(.ant-drawer-wrapper-body) {
+      padding-top: 32px;
+    }
+  }
+  &-closable {
+    :global(.ant-drawer-title) {
+      width: calc(100% - 40px);
+    }
+  }
+}

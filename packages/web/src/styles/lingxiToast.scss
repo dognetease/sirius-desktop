@@ -1,0 +1,48 @@
+.ant-message {
+  z-index: 9999;
+  .ant-message-notice {
+    // padding: 0 !important;
+    .ant-message-notice-content {
+      box-shadow: none;
+      background: #fff;
+      box-shadow: $shadow-small;
+      border-radius: $round-corner-4;
+      // color: $Text-5;
+      color: #272e47;
+      padding: 0 16px;
+      height: 40px;
+      @include p1-3-reg14;
+      line-height: 40px;
+    }
+    .ant-message-error .anticon {
+      background-image: url('./icon-new/toast-error.svg');
+    }
+    .ant-message-info .anticon {
+      background-image: url('./icon-new/toast-info.svg');
+    }
+    .ant-message-warning .anticon {
+      background-image: url('./icon-new/toast-warning.svg');
+    }
+    .ant-message-success .anticon {
+      background-image: url('./icon-new/toast-success.svg');
+    }
+    .ant-message-loading .anticon {
+      background-image: url('./icon-new/toast-loading.svg');
+    }
+    .anticon-reject-circle .anticon {
+      background-image: url('./icon-new/toast-reject.svg');
+    }
+    .anticon-pending-circle .anticon {
+      background-image: url('./icon-new/toast-pending.svg');
+    }
+    .anticon {
+      margin-right: 10px;
+      background-size: 20px;
+      background-position: center;
+      background-repeat: no-repeat;
+      > svg {
+        visibility: hidden;
+      }
+    }
+  }
+}

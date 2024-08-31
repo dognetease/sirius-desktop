@@ -1,0 +1,259 @@
+@import '@web-common/styles/variables.scss';
+
+$expand-size: 42px;
+
+.container {
+  position: relative;
+
+  .expandContainer {
+    position: absolute;
+    top: 12px;
+    height: $expand-size;
+    width: $expand-size;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid $Line-3;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(180deg);
+    transition: transform 0.5s;
+
+    &-expanded {
+      transform: rotate(0deg);
+    }
+  }
+
+  .list-wrapper {
+    max-height: 62px;
+    overflow: hidden;
+    width: calc(100% - #{$expand-size});
+
+    &-single {
+      max-height: none;
+    }
+
+    &-expand {
+      max-height: 248px;
+      overflow-y: auto;
+    }
+
+    .list {
+      display: flex;
+      row-gap: 12px;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      .listItem {
+        width: 274px;
+        margin-right: 12px;
+
+        &-single {
+          min-width: 274px;
+          width: auto;
+        }
+
+        .card {
+          height: 62px;
+          background: #ffffff;
+          border: 1px solid $Line-3;
+          border-radius: 4px;
+          cursor: pointer;
+          overflow: hidden;
+          position: relative;
+
+          .title {
+            color: $Text-5;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 0;
+            margin-top: 8px;
+            margin-left: 16px;
+            margin-right: 16px;
+            overflow: hidden;
+            word-break: keep-all;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            &-new {
+              position: relative;
+              padding-left: 12px;
+
+              &::before {
+                position: absolute;
+                content: '';
+                width: 8px;
+                height: 8px;
+                left: 0;
+                top: 50%;
+                margin-top: -4px;
+                border-radius: 4px;
+                background-color: $Error-6;
+              }
+            }
+          }
+
+          .countryWrapper {
+            display: flex;
+            margin-left: 16px;
+            margin-right: 16px;
+            margin-bottom: 0;
+            gap: 8px;
+            align-items: center;
+
+            .country {
+              color: $Text-3;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 22px;
+              overflow: hidden;
+              word-break: keep-all;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+
+            .countryCount {
+              flex-shrink: 0;
+              color: $Text-3;
+            }
+          }
+
+          .operate {
+            display: none;
+          }
+
+          &-single {
+            height: 40px;
+            display: flex;
+            padding: 8px 16px;
+
+            .title {
+              margin: 0;
+              padding-right: 12px;
+            }
+
+            .countryWrapper {
+              position: relative;
+              margin: 0;
+              padding-left: 12px;
+              flex-grow: 1;
+
+              &::before {
+                position: absolute;
+                content: '';
+                height: 14px;
+                width: 1px;
+                background-color: $Line-3;
+                top: 50%;
+                margin-top: -7px;
+                left: 0;
+              }
+
+              &-hasCountry {
+                .country {
+                  max-width: 200px;
+                }
+              }
+            }
+          }
+
+          &-select {
+            background: $Brand-2;
+            border-color: $Brand-3;
+
+            .countryWrapper {
+              .country,
+              .countryCount {
+                color: $Brand-6;
+              }
+
+              &-hasCountry {
+                .country {
+                  max-width: 150px;
+                }
+
+                &::before {
+                  background-color: $Brand-6;
+                }
+              }
+            }
+
+            .title {
+              color: $Brand-6;
+            }
+          }
+
+          &:hover {
+            .countryCount {
+              display: none;
+            }
+
+            .operate {
+              display: flex;
+              gap: 12px;
+              line-height: 16px;
+              flex-shrink: 0;
+              margin-left: auto;
+              align-items: center;
+
+              span {
+                display: flex;
+              }
+            }
+          }
+
+          &:not(.card-select):hover {
+            background: $Fill-3;
+          }
+        }
+      }
+    }
+  }
+
+  .btnBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .createBtn {
+      color: $Brand-6;
+      font-size: 14px;
+      line-height: 22px;
+      margin-top: 12px;
+      margin-bottom: 16px;
+      display: inline-flex;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .showTipsWrapper {
+      margin-left: 12px;
+      cursor: pointer;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      color: #4c6aff;
+    }
+
+    .searchTipsText {
+      font-size: 14px;
+      line-height: 20px;
+      margin-left: 4px;
+    }
+  }
+}
+
+.tips {
+  font-size: 12px;
+  line-height: 20px;
+
+  a {
+    margin-left: 12px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="./pdf.js"></script>
+  <style>
+    :root {
+      --fill-2: #f6f7fa;
+      --text-5: #272E47;
+      --white: #fff;
+      --line-3: #E1E3E8;
+    }
+
+    :root.dark {
+      --fill-2: #232324;
+      --text-5: #EEEff5;
+      --white: #232324;
+      --line-3: #3b3b3d;
+    }
+  </style>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .preview-container {
+      position: fixed;
+      left: 0;
+      top: 44px;
+      right: 0;
+      bottom: 0;
+      margin: 0px;
+      background-color: var(--fill-2, #F6F7FA);
+      overflow-y: auto;
+      overflow-x: auto;
+      flex-direction: column;
+      align-items: center;
+      backdrop-filter: blur(25px);
+    }
+
+    .preview-container::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+      background: #fff;
+    }
+
+    .preview-container::-webkit-scrollbar-track {
+      border-radius: 6px;
+    }
+
+    .preview-container::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background: rgba(38, 42, 51, 0.3);
+      padding: 4px;
+    }
+
+    .dark .dark-invert {
+      filter: invert(100) hue-rotate(180deg);
+    }
+
+    .preview-scroll {
+      padding: 0 20px;
+      min-width: 815px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      padding-top: 14px;
+    }
+
+    .preview-header {
+      position: fixed;
+      top: 0;
+      height: 44px;
+      display: flex;
+      flex-direction: row;
+      background-color: var(--white, #fff);
+      width: 100%;
+      align-items: center;
+      padding: 0 16px;
+      box-sizing: border-box;
+      user-select: none;
+      z-index: 10;
+    }
+
+    .preview-header-title {
+      color: var(--text-5, #272E47);
+      font-weight: 500;
+      flex: 1 1 auto;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .preview-header-actions {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+    }
+
+    .action-btn {
+      padding: 6px 20px;
+      background-color: #4C6AFF;
+      border-radius: 4px;
+      color: white;
+      border: none;
+      line-height: 16px;
+      cursor: pointer;
+    }
+
+    .action-btn:focus,
+    .action-btn:focus-visible {
+      outline: none;
+    }
+
+    .preview-header-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 24px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .preview-header-icon-tooltip {
+      position: absolute;
+      top: 130%;
+      left: -12px;
+      visibility: hidden;
+      background-color: black;
+      color: white;
+      padding: 8px 12px;
+      line-height: 20px;
+      white-space: nowrap;
+      border-radius: 6px;
+      font-size: 12px;
+    }
+
+    .open-outter .preview-header-icon-tooltip {
+      left: -36px;
+    }
+
+    .preview-header-icon:hover .preview-header-icon-tooltip {
+      visibility: visible;
+    }
+
+    .preview-header-txt {
+      color: var(--text-5, #272E47);
+      margin-right: 24px;
+      cursor: pointer;
+    }
+
+    .preview-header-split {
+      background-color: var(--line-3, #E1E3E8);
+      height: 16px;
+      width: 1px;
+      margin-right: 24px;
+    }
+
+    .preview-header-icon.disabled {
+      cursor: not-allowed;
+    }
+
+    .preview-container .canvas-wrapper {
+      background-color: white;
+      box-shadow: 0px 4px 10px 0px rgba(47, 83, 134, 0.12);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .preview-container .canvas-wrapper:not(:first-child) {
+      margin-top: 12px;
+    }
+
+    .preview-container .canvas-wrapper:first-child {
+      margin-top: 0;
+    }
+
+    .preview-container .canvas-wrapper:last-child {
+      margin-bottom: 12px;
+    }
+
+    .canvas-wrapper canvas {
+      transform-origin: left top;
+    }
+  </style>
+  <script>
+    const defaultLang = 'zh';
+    const defalutTheme = 'light';
+
+    const langMap = {
+      zh: {
+        PRINT: '打印',
+        PREVIEW_URL_ERROR: '预览地址错误',
+        ZOOM_IN: '放大',
+        ZOOM_OUT: '缩小',
+        DEFAULT_TOOL_OPEN: '默认工具打开'
+      },
+      en: {
+        PRINT: 'Print',
+        ZOOM_IN: 'Zoom in',
+        PREVIEW_URL_ERROR: 'Preview url is incorrect',
+        ZOOM_OUT: 'Zoom out',
+        DEFAULT_TOOL_OPEN: 'open with default tool'
+      },
+      'zh-trad': {
+        PRINT: '打印',
+        PREVIEW_URL_ERROR: '預覽地址錯誤',
+        ZOOM_IN: '放大',
+        ZOOM_OUT: '縮小',
+        DEFAULT_TOOL_OPEN: '默認工具打開'
+      }
+    }
+
+    const maxScale = 2;
+    const minSacle = 0.5;
+
+    function getLangInfo() {
+      try {
+        var urlInfo = new URL(location.href);
+        return urlInfo.searchParams.get("lang") || defaultLang;
+      } catch (ex) {
+        return defaultLang;
+      }
+    }
+    const currentLang = getLangInfo();
+    function getLableText(textKey) {
+      if (!textKey) return '';
+      let label = (langMap[currentLang] || {})[textKey]
+      if (!label) {
+        label = (langMap[defaultLang] || {})[textKey];
+      }
+      return label;
+    }
+
+
+    pdfjsLib.GlobalWorkerOptions.workerSrc = "./pdf-worker.js";
+    function getPdfPath() {
+      try {
+        var urlInfo = new URL(location.href);
+        return urlInfo.searchParams.get("pdfPath");
+      } catch (ex) {
+        return "";
+      }
+    }
+
+    function getEmailTitle() {
+      try {
+        var urlInfo = new URL(location.href);
+        return decodeURIComponent(urlInfo.searchParams.get("emailTitle") || '');
+      } catch (ex) {
+        return '';
+      }
+    }
+
+    function getThemeInfo() {
+      try {
+        var urlInfo = new URL(location.href);
+        return urlInfo.searchParams.get("theme") || defalutTheme;
+      } catch (ex) {
+        return '' || defalutTheme;
+      }
+    }
+
+    const theme = getThemeInfo();
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+
+    function initElelemtsText() {
+      try {
+        const emailTitle = getEmailTitle();
+        if (emailTitle) {
+          document.querySelector(".preview-header-title").innerText = emailTitle;
+        }
+        document.querySelector('.print-btn').innerText = getLableText('PRINT');
+        document.querySelector('.zoom-in-tooltip').innerText = getLableText('ZOOM_IN');
+        document.querySelector('.zoom-out-tooltip').innerText = getLableText('ZOOM_OUT');
+        document.querySelector('.defalut-tool-tooltip').innerText = getLableText('DEFAULT_TOOL_OPEN');
+      } catch (ex) {
+        console.error('initLangText error', ex);
+      }
+    }
+
+    function getPreviewContainerEl() {
+      return document.querySelector(".preview-scroll");
+    }
+
+    let previewContainerEl = null;
+
+    function drawPageToCanvas(page, scale) {
+      if (!scale) {
+        scale = 1.3;
+      }
+
+      if (!previewContainerEl) {
+        previewContainerEl = getPreviewContainerEl();
+      }
+
+      const viewport = page.getViewport({ scale });
+      const divWrapperEl = document.createElement("div");
+      divWrapperEl.classList.add("canvas-wrapper");
+      const pageCanvas = document.createElement("canvas");
+      divWrapperEl.appendChild(pageCanvas);
+      previewContainerEl.appendChild(divWrapperEl);
+      const context = pageCanvas.getContext("2d");
+
+      const outputScale = window.devicePixelRatio || 1;
+      pageCanvas.width = Math.floor(viewport.width * outputScale);
+      pageCanvas.height = Math.floor(viewport.height * outputScale);
+      pageCanvas.style.width = Math.floor(viewport.width) + "px";
+      pageCanvas.style.height = Math.floor(viewport.height) + "px";
+
+      const transform =
+        outputScale !== 1 ? [outputScale, 0, 0, outputScale, 0, 0] : null;
+
+      const renderContext = {
+        canvasContext: context,
+        transform,
+        viewport,
+      };
+      page.render(renderContext);
+
+      setTimeout(() => {
+        const rect = divWrapperEl.getBoundingClientRect();
+        divWrapperEl.setAttribute(
+          "data-width",
+          Number.parseInt(rect.width)
+        );
+        divWrapperEl.setAttribute(
+          "data-height",
+          Number.parseInt(rect.height)
+        );
+        previewContainerEl.setAttribute('data-scale', 1);
+        document.querySelector(".current-scale-txt").innerText = "100%";
+      }, 0);
+    }
+
+    async function drawPdfDocument(pdfDoc) {
+      if (!pdfDoc) return;
+      const numPages = pdfDoc.numPages;
+      for (let i = 1; i <= numPages; i++) {
+        try {
+          const page = await pdfDoc.getPage(i);
+          drawPageToCanvas(page);
+        } catch (ex) {
+          console.error(ex);
+        }
+      }
+    }
+
+    function getZoomInBtn() {
+      return document.querySelector('.zoom-in');
+    }
+
+    function getZoomOutBtn() {
+      return document.querySelector('.zoom-out');
+    }
+
+    let resizeHandlerTimerId = null;
+
+    function debounsResizeHandler() {
+      if (!resizeHandlerTimerId) {
+        clearTimeout(resizeHandlerTimerId);
+      }
+      resizeHandlerTimerId = setTimeout(() => {
+        const canvasWrapper = document.querySelector('.canvas-wrapper');
+        if (canvasWrapper) {
+          const currWidth = Number.parseInt(canvasWrapper.style.width);
+          if (currWidth) {
+            if (!previewContainerEl) {
+              previewContainerEl = getPreviewContainerEl();
+            }
+            const scrollWidth = newWidth + 40;
+            const mainScrollEl = document.querySelector('.preview-container');
+            if (mainScrollEl && scrollWidth) {
+              const mailScrollElWidth = mainScrollEl.getBoundingClientRect().width;
+              if (scrollWidth > mailScrollElWidth) {
+                previewContainerEl.style.width = scrollWidth + 'px';
+              } else {
+                previewContainerEl.style.width = '';
+              }
+            }
+          }
+        }
+        resizeHandlerTimerId = null;
+      }, 200)
+    }
+
+    function scalePdfPreview(delta) {
+      if (!previewContainerEl) {
+        previewContainerEl = getPreviewContainerEl();
+      }
+      const currentScale = Number.parseFloat(previewContainerEl.getAttribute('data-scale') || '1');
+      const zoomInBtn = getZoomInBtn();
+      const zoomOutBtn = getZoomOutBtn();
+      const disabledClass = 'disabled';
+
+      zoomInBtn.classList.remove(disabledClass)
+      zoomOutBtn.classList.remove(disabledClass);
+
+      let newScale = (currentScale + delta);
+      if (newScale >= maxScale) {
+        zoomInBtn.classList.add(disabledClass);
+        newScale = maxScale;
+      }
+      if (newScale <= minSacle) {
+        zoomOutBtn.classList.add(disabledClass);
+        newScale = minSacle;
+      }
+
+      previewContainerEl.setAttribute('data-scale', newScale);
+      document.querySelector('.current-scale-txt').innerText = Math.round(newScale * 100) + '%';
+
+      const canvasWrappers = document.querySelectorAll('.canvas-wrapper');
+      let hasSetOutterWidth = false;
+      for (let i = 0; i < canvasWrappers.length; ++i) {
+        const currentWrapperEl = canvasWrappers[i];
+        const originWidth = Number.parseInt(currentWrapperEl.getAttribute('data-width'));
+        const originHeight = Number.parseInt(currentWrapperEl.getAttribute('data-height'));
+        const newWidth = Number.parseInt(originWidth * newScale);
+        const newHeight = Number.parseFloat(originHeight * newScale);
+        currentWrapperEl.style.width = newWidth + 'px';
+        currentWrapperEl.style.height = newHeight + 'px';
+        const wrapperCanvas = currentWrapperEl.querySelector('canvas');
+        wrapperCanvas.style.transform = `scale(${newScale})`
+
+        if (!hasSetOutterWidth) {
+          const scrollWidth = newWidth + 40;
+          previewContainerEl.style.minWidth = scrollWidth + 'px';
+          const mainScrollEl = document.querySelector('.preview-container');
+          if (mainScrollEl && scrollWidth) {
+            const mailScrollElWidth = mainScrollEl.getBoundingClientRect().width;
+            if (scrollWidth > mailScrollElWidth) {
+              previewContainerEl.style.width = scrollWidth + 'px';
+            } else {
+              previewContainerEl.style.width = '';
+            }
+          }
+          hasSetOutterWidth = true;
+        }
+      }
+    }
+
+    function addElementsEvents() {
+      try {
+        document.querySelector('.print-btn').addEventListener('click', (ev) => {
+          const targetWin = window.parent || window;
+          targetWin.print();
+        });
+
+        document.querySelector('.zoom-in').addEventListener('click', (ev) => {
+          scalePdfPreview(0.1);
+        });
+
+        document.querySelector('.zoom-out').addEventListener('click', (ev) => {
+          scalePdfPreview(-0.1);
+        });
+
+        document.querySelector('.open-outter').addEventListener('click', (ev) => {
+          const pdfPath = getPdfPath();
+          const targetWin = window.parent || window;
+
+          if (targetWin.electronLib && targetWin.electronLib.windowManage) {
+            targetWin.electronLib.windowManage.openExternalUrl(`file://${pdfPath}`)
+          }
+        });
+
+        window.addEventListener('resize', (ev) => {
+          debounsResizeHandler();
+        }, { passive: true })
+      } catch (ex) {
+        console.error('addElementsEvents-error', ex);
+      }
+    }
+
+    window.addEventListener("load", function () {
+      initElelemtsText();
+      addElementsEvents();
+
+      const urlPdfPath = getPdfPath();
+      if (!urlPdfPath) {
+        alert(getLableText('PREVIEW_URL_ERROR'));
+        return;
+      }
+      const siriusFilePath = `sirius://sirius.file/${encodeURIComponent(urlPdfPath)}`
+      const loadingTask = pdfjsLib.getDocument(siriusFilePath);
+
+      (async () => {
+        const pdf = await loadingTask.promise;
+        drawPdfDocument(pdf);
+      })();
+    });
+  </script>
+</head>
+
+<body>
+  <div class="preview-header">
+    <div class="preview-header-title"></div>
+    <div class="preview-header-actions">
+      <div class="preview-header-icon zoom-out dark-invert">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M2.25 11.9999C2.25 6.6152 6.6152 2.25 11.9999 2.25V2.25C17.3847 2.25 21.7499 6.6152 21.7499 11.9999V11.9999C21.7499 17.3847 17.3847 21.7499 11.9999 21.7499V21.7499C6.6152 21.7499 2.25 17.3847 2.25 11.9999V11.9999Z"
+            stroke="#3C3F47" stroke-width="1.5" />
+          <path d="M7.73438 12H16.2656" stroke="#3C3F47" stroke-width="1.5" stroke-linejoin="round" />
+        </svg>
+        <div class="preview-header-icon-tooltip zoom-out-tooltip">缩小</div>
+      </div>
+      <div class="preview-header-txt current-scale-txt">100%
+      </div>
+      <div class="preview-header-icon zoom-in dark-invert">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M2.25 11.9999C2.25 6.6152 6.6152 2.25 11.9999 2.25V2.25C17.3847 2.25 21.7499 6.6152 21.7499 11.9999V11.9999C21.7499 17.3847 17.3847 21.7499 11.9999 21.7499V21.7499C6.6152 21.7499 2.25 17.3847 2.25 11.9999V11.9999Z"
+            stroke="#3C3F47" stroke-width="1.5" />
+          <path d="M12 7.73438L12 16.2656" stroke="#3C3F47" stroke-width="1.5" stroke-linejoin="round" />
+          <path d="M7.73438 12H16.2656" stroke="#3C3F47" stroke-width="1.5" stroke-linejoin="round" />
+        </svg>
+        <div class="preview-header-icon-tooltip zoom-in-tooltip">放大</div>
+      </div>
+      <div class="preview-header-split"></div>
+      <div class="preview-header-icon open-outter dark-invert">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M3 3.75C3 3.33579 3.33579 3 3.75 3H20.25C20.6642 3 21 3.33579 21 3.75V20.25C21 20.6642 20.6642 21 20.25 21H3.75C3.33579 21 3 20.6642 3 20.25V3.75Z"
+            stroke="#3F465C" stroke-width="1.5" />
+          <path d="M21 9.30872L3 9.30872" stroke="#3F465C" stroke-width="1.5" stroke-linecap="round" />
+          <circle cx="6.14854" cy="6.15403" r="0.9" fill="#3F465C" />
+          <circle cx="9.44846" cy="6.15403" r="0.9" fill="#3F465C" />
+          <circle cx="12.7486" cy="6.15403" r="0.9" fill="#3F465C" />
+        </svg>
+        <div class="preview-header-icon-tooltip defalut-tool-tooltip">默认工具打开</div>
+      </div>
+      <div class="preview-header-btns">
+        <button class="action-btn print-btn">打印</button>
+      </div>
+    </div>
+  </div>
+  <div class="preview-container">
+    <div class="preview-scroll"></div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+.translate-tips {
+  display: flex;
+  align-items: center;
+  // margin: 8px 20px;
+  margin: 8px 16px 8px 16px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+  // background: #f4f4f5;
+  background-color: $white-bg;
+  border-radius: 4px;
+  // color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  font-size: 12px;
+  // color: #51555c;
+  color: $font-color-1;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  .loading-name {
+    margin-left: 10px;
+  }
+  .ant-select-selector {
+    padding: 0px 8px;
+    .ant-select-selection-item {
+      // color: #262a33;
+      color: $font-color-2;
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+
+  .translate-tips-pre-wrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .translate-icon-wrap {
+      width: 16px;
+      height: 16px;
+      line-height: 1;
+      margin-right: 8px;
+    }
+    .translate-tips-info-icon {
+      color: $Brand-6;
+      width: 16px;
+      height: 16px;
+    }
+    .translate-pre-text {
+      color: var(--Text-5, #272e47);
+      font-size: 12px;
+    }
+    .translate-pre-text2 {
+      cursor: pointer;
+      margin-left: 8px;
+      color: var(--Brand-6);
+      font-size: 12px;
+    }
+    .icon-close {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .expand-icon {
+      background: url(../../../../web/src/images/icons/calender-icon-expand.png) center center no-repeat;
+      background-size: 8px;
+      height: 8px;
+      width: 8px;
+      display: inline-block;
+    }
+  }
+  &-close-text {
+    margin-left: 5px;
+    // color: #386ee7;
+    color: $brand-blue-2;
+    cursor: pointer;
+  }
+  &-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin-right: 8px;
+  }
+  &-success {
+    background: url(../../../../web/src/images/translate_success.svg) no-repeat center center;
+  }
+  &-close-div {
+    line-height: 32px;
+    height: 32px;
+    width: 16px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  &-close {
+    background: url(../../../../web/src/images/translate_close.svg) no-repeat center center;
+  }
+  &-loading {
+    background: url(../../../../web/src/images/translate_loading.svg) no-repeat center center;
+  }
+  &-error {
+    background: url(../../../../web/src/images/translate_error.svg) no-repeat center center;
+  }
+}
+
+.translate-modal {
+  .ant-modal-header {
+    background-color: $white;
+    border-bottom: 1px solid $white-hover-bg;
+  }
+  .ant-modal-title {
+    color: $font-color-2;
+  }
+  .ant-modal-body {
+    padding: 0px;
+  }
+  .translate-body {
+    .translate-container {
+      display: flex;
+      background: $Fill-1;
+      border-radius: 4px;
+      margin: 20px;
+      padding-left: 16px;
+      .name {
+        flex: 2;
+      }
+      .product {
+        flex: 1;
+        text-align: center;
+      }
+      .item,
+      .productName {
+        height: 40px;
+        line-height: 40px;
+        // color: #51555c;
+        color: $font-color-1;
+      }
+      .select {
+        background: $Brand-2;
+        .productName {
+          // color: rgba($color: $Text-2, $alpha: 1);
+          color: $Text-2;
+        }
+      }
+    }
+  }
+  .ant-modal-footer {
+    border-top: 1px solid $white-hover-bg;
+  }
+  .footer-tip {
+    color: $font-color-1;
+  }
+}
+
+.translate-lang-dropdown-style {
+  width: 210px !important;
+  .ant-select-item-group {
+    .name {
+      font-size: 14px;
+      margin-right: 8px;
+      color: #262a33;
+    }
+  }
+  .ant-select-item {
+    color: #262a33;
+    font-weight: 400;
+  }
+  .ant-select-item-option-grouped {
+    padding-left: 12px;
+  }
+  .ant-select-item-option-active {
+    background-color: #f0f0f1;
+  }
+  .ant-select-item-option-selected {
+    color: #386ee7 !important;
+    background-color: #fff;
+    // font-weight: 400;
+  }
+  .ant-select-item-option-disabled {
+    color: rgba(0, 0, 0, 0.25) !important;
+  }
+}

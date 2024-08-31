@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>如何颁发勋章</title>
+    <script>
+      document.documentElement.style.fontSize = (window.innerWidth >= 750 ? 750 : window.innerWidth) / 7.5 + "px";
+    </script>
+    <style>
+      html,
+      body {
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 750px;
+      }
+      .praise-introduce {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background: url("https://cowork-storage.nos-jd.163yun.com/reward%2F2022%2F02%2F22%2F75343b0ac49c4d148734f4700c278357?Signature=LKJYQxt7UPA0QC5jgw8maLqt0PadZWu7Ov%2Fip3Jwgbk%3D&Expires=32503651199&NOSAccessKeyId=0cd796d04a3a45dba2ef94a2f2a0c218")
+            top left/2.78rem 2.48rem no-repeat,
+          url("https://cowork-storage.nos-jd.163yun.com/reward%2F2022%2F02%2F22%2Fb3652394296144fdaf632074c05637b5?Signature=rd6EgCXTY%2FryJ%2FpkPPAj1vfe0dm3ZronMSk12bh0O8A%3D&Expires=32503651199&NOSAccessKeyId=0cd796d04a3a45dba2ef94a2f2a0c218")
+            right top/1.66rem 1.52rem no-repeat,
+          url("https://cowork-storage.nos-jd.163yun.com/reward%2F2022%2F02%2F22%2F91201de5ac9b4fe6b59fb52a46068c42?Signature=%2FUdU6kOAp4%2BCrHj3wFI0q7LCkqpY3y6NAb92UuRL9PA%3D&Expires=32503651199&NOSAccessKeyId=0cd796d04a3a45dba2ef94a2f2a0c218")
+            bottom left/ 2.76rem 1.84rem no-repeat,
+          url("https://cowork-storage.nos-jd.163yun.com/reward%2F2022%2F02%2F22%2Fd83514ae0cd44303b5bffd6a730622e7?Signature=kwxXPFqPcoX4jJT1O0g4g%2BISJp3RMF6We8vQsM2Kt74%3D&Expires=32503651199&NOSAccessKeyId=0cd796d04a3a45dba2ef94a2f2a0c218")
+            bottom right/ 3.45rem 3.12rem no-repeat,
+          url("https://cowork-storage.nos-jd.163yun.com/reward%2F2022%2F02%2F22%2F84aa392741404c44ba78b8c3af3f33e4?Signature=N08sbMa89Yy0YI6KQmwYfdNeyN07wzqoC29DNM2%2FaKg%3D&Expires=32503651199&NOSAccessKeyId=0cd796d04a3a45dba2ef94a2f2a0c218")
+            center / cover no-repeat;
+      }
+      .praise-titleBar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0.4rem;
+        height: 0.88rem;
+        position: relative;
+        color: #232D47;
+        font-weight: 500;
+        font-size: 0.34rem;
+      }
+      .praise-back {
+        position: absolute;
+        left: 0;
+        width: 1.04rem;
+        height: 0.88rem;
+        background: url("https://cowork-storage-public-cdn.lx.netease.com/common/2022/02/23/fc44de7ed7b643809d7314254a890416.png") no-repeat;
+        background-position: center center;
+        background-size: 0.14rem 0.28rem;
+      }
+      .praise-content {
+        flex: 1;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+      }
+      .praise-step-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0.32rem 0;
+      }
+      .praise-step-title > span {
+        color: #232D47;
+        font-size: 0.3rem;
+        position: relative;
+        margin: 0 0.2rem;
+      }
+      .line {
+        display: flex;
+        align-items: center;
+      }
+      .line div:first-child {
+        width: 0.36rem;
+        height: 1px;
+        background: #939CAD;
+      }
+      .line div:last-child {
+        width: 0.06rem;
+        height: 0.06rem;
+        background: #939CAD;
+        transform: rotate(-45deg);
+        margin-left: 0.08rem;
+      }
+      .line-reverse {
+        transform: rotate(180deg);
+      }
+      .praise-step-one-content {
+        width: 6.86rem;
+        margin: 0 auto;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0.24rem 0.64rem rgba(0, 0, 0, 0.04);
+      }
+      .praise-step-one-content img {
+        width: 6.86rem;
+        height: 7.05rem;
+      }
+      .praise-step-two-content {
+        width: 6.86rem;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .praise-medal {
+        width: 3.31rem;
+        height: 3.4rem;
+        margin-bottom: 0.2rem;
+        box-shadow: 0 0.24rem 0.64rem rgba(0, 0, 0, 0.04);
+        border-radius: 0.08rem;
+        background: #fff;
+        overflow: hidden;
+      }
+      .praise-medal img {
+        display: block;
+        margin: 0.14rem auto 0;
+        width: 1.9rem;
+        height: 1.9rem;
+      }
+      .praise-medal p {
+        font-size: 0.32rem;
+        line-height: 0.44rem;
+        text-align: center;
+        color: #232D47;
+        margin: 0.1rem 0 0.07rem;
+      }
+      .praise-medal .medal-intro {
+        margin: 0 0.22rem;
+        font-size: 0.22rem;
+        line-height: 0.3rem;
+        text-align: center;
+        /* color: rgba(0, 0, 0, 0.5); */
+        color: #7A8599;
+      }
+      .praise-bottom {
+        background: #dfe8ff;
+      }
+      .praise-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 6.86rem;
+        height: 0.88rem;
+        margin: 0.48rem auto 0.2rem;
+        background: #386ee7;
+        border-radius: 0.16rem;
+        font-size: 0.32rem;
+        color: #ffffff;
+      }
+      .praise-titleBar-iphone {
+        padding-top: constant(safe-area-inset-top);
+        padding-top: env(safe-area-inset-top);
+      }
+      /* iphone6 12系统不支持safe-area-inset-bottom */
+      .praise-btn-iphone {
+        margin-bottom: max(0.2rem, constant(safe-area-inset-bottom));
+        margin-bottom: max(0.2rem, env(safe-area-inset-bottom));
+      }
+    </style>
+  </head>
+  <body>
+    <div class="praise-introduce">
+      <div class="praise-titleBar">
+        <div class="praise-back"></div>
+        如何颁发勋章
+      </div>
+      <div class="praise-content">
+        <div class="praise-step-one">
+          <div class="praise-step-title">
+            <div class="line">
+              <div></div>
+              <div></div>
+            </div>
+            <span>颁发流程</span>
+            <div class="line line-reverse">
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <div class="praise-step-one-content">
+            <!-- https://cowork-storage-public-cdn.lx.netease.com/common/2022/03/11/369a0fca47154a2fbe10215c4b784bd8.png -->
+            <img src="https://cowork-storage-public-cdn.lx.netease.com/common/2022/08/22/ec7e7f1c034f4b4392f088da9243166b.png" alt="" />
+          </div>
+        </div>
+        <div class="praise-step-two">
+          <div class="praise-step-title">
+            <div class="line">
+              <div></div>
+              <div></div>
+            </div>
+            <span>本期上线</span>
+            <div class="line line-reverse">
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <div class="praise-step-two-content">
+            <div class="praise-medal">
+              <img
+                src="https://cowork-storage.nos-jd.163yun.com/reward%2F2022%2F06%2F29%2F83230a4b08554fdf9681f160bb993a20?Signature=VKVSMrF3kLhEGXyAeGE6k8rNbuCazcbUHDGsmH1bkD0%3D&Expires=32503651199&NOSAccessKeyId=0cd796d04a3a45dba2ef94a2f2a0c218"
+                alt=""
+              />
+              <p>担当之星</p>
+              <div class="medal-intro">勇于担当重任，不计个人得失</div>
+            </div>
+            <div class="praise-medal">
+              <img
+                src="https://cowork-storage.nos-jd.163yun.com/reward%2F2022%2F06%2F29%2F88a9d3384a054f3685a5632dd49c4b33?Signature=fBZPfNvYcBeYd4csTBzWV6bIrxNQSEnAUuP992L0MbA%3D&Expires=32503651199&NOSAccessKeyId=0cd796d04a3a45dba2ef94a2f2a0c218"
+                alt=""
+              />
+              <p>协作之星</p>
+              <div class="medal-intro">团队协作榜样，众志成城，坚不可摧</div>
+            </div>
+            <div class="praise-medal">
+              <img
+                src="https://cowork-storage.nos-jd.163yun.com/reward%2F2022%2F06%2F29%2F9c4252540d69465aa4176c19c060cfc0?Signature=E5uQul2A6g0l2GjyLv1KRGWMPupXAvHd4tPw%2BXzczbQ%3D&Expires=32503651199&NOSAccessKeyId=0cd796d04a3a45dba2ef94a2f2a0c218"
+                alt=""
+              />
+              <p>进步之星</p>
+              <div class="medal-intro">锐意进取，不断超越自我</div>
+            </div>
+            <div class="praise-medal">
+              <img
+                src="https://cowork-storage.nos-jd.163yun.com/reward%2F2022%2F06%2F29%2F465a973f40d84898b2802781215030e3?Signature=RJdGR4OKzfJwlZqRXn2JEcI%2Bn55hkxBuNO0RyvbMNlI%3D&Expires=32503651199&NOSAccessKeyId=0cd796d04a3a45dba2ef94a2f2a0c218"
+                alt=""
+              />
+              <p>创新之星</p>
+              <div class="medal-intro">勇于创新的“拓荒者”</div>
+            </div>
+            <div class="praise-medal">
+              <img
+                src="https://cowork-storage.nos-jd.163yun.com/reward%2F2022%2F06%2F29%2F83185ba423fc44c1813c32084cf01221?Signature=PHlcxRN5mg%2BwvSkBWsuZL2KZHL9UqqIJAUGtJd5UHhE%3D&Expires=32503651199&NOSAccessKeyId=0cd796d04a3a45dba2ef94a2f2a0c218"
+                alt=""
+              />
+              <p>服务之星</p>
+              <div class="medal-intro">服务模范，更满意的服务，是他们的追求</div>
+            </div>
+            <div class="praise-medal">
+              <img
+                src="https://cowork-storage.nos-jd.163yun.com/reward%2F2022%2F06%2F29%2F77b02399268041d1b4ab38bde9e1258c?Signature=8%2BN02eVG6Y4lArAoZA0MXSbdzfSeTpaN7iG0OOUCKpA%3D&Expires=32503651199&NOSAccessKeyId=0cd796d04a3a45dba2ef94a2f2a0c218"
+                alt=""
+              />
+              <p>拼搏之星</p>
+              <div class="medal-intro">不断的拼搏就是走上成功之路的秘密</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="praise-bottom">
+        <div class="praise-btn">去试试</div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const isAndroid = navigator.userAgent.indexOf("Android") > -1 || navigator.userAgent.indexOf("Adr") > -1;
+    window.addEventListener("DOMContentLoaded", () => {
+      if (!isAndroid) {
+        document.getElementsByClassName("praise-titleBar")[0].className += " praise-titleBar-iphone";
+        document.getElementsByClassName("praise-btn")[0].className += " praise-btn-iphone";
+      }
+      const h5Bridge = url => {
+        try {
+          if (isAndroid) {
+            window.bridge.callNativeAsync(url);
+          } else {
+            window.webkit.messageHandlers.FLJSCallNative.postMessage(url);
+          }
+        } catch (error) {}
+      };
+      const backDom = document.querySelector(".praise-back");
+      backDom.onclick = () => {
+        h5Bridge("https://lingxi.com/web/close");
+      };
+      const btnDom = document.querySelector(".praise-btn");
+      btnDom.onclick = () => {
+        h5Bridge("https://lingxi.com/web/open?actionUrl=" + encodeURIComponent("https://router.lx.netease.com/sirius/mail/compose?from=praise_guide"));
+      };
+    });
+  </script>
+</html>
+

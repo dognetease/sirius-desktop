@@ -1,0 +1,219 @@
+.wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  overflow-y: auto;
+  // color: #7d8085;
+  // font-size: 14px;
+  .content {
+    // transform: translateY(-150px);
+    display: flex;
+    flex-direction: column;
+    // height: 100%;
+    // padding-bottom: 150px;
+    width: 472px;
+    align-items: center;
+    .send-success {
+      display: inline-flex;
+      padding-bottom: 62px;
+      .success-icon {
+        width: 112px;
+        height: 112px;
+        margin-right: 24px;
+      }
+      .success-content {
+        .success-title {
+          font-family: 'PingFang SC';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 32px;
+          color: #272e47;
+          margin-bottom: 8px;
+        }
+        .success-sub-title {
+          font-family: 'PingFang SC';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          color: #545a6e;
+          margin-bottom: 12px;
+        }
+        .success-info {
+          background: #f8f9fa;
+          border-radius: 4px;
+          padding: 12px 16px;
+          width: 336px;
+          .edm-title {
+            font-family: 'PingFang SC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: #545a6e;
+            margin-bottom: 8px;
+          }
+          .edm-count {
+            font-family: 'PingFang SC';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: #545a6e;
+          }
+        }
+        .btns {
+          margin-top: 20px;
+          // note:guochao UI上按钮宽度超出了。先设置一个120%
+          width: 150%;
+          button {
+            display: inline-block;
+            margin-left: 0 !important;
+          }
+        }
+      }
+    }
+    .video-tip {
+      width: 100%;
+      height: 28px;
+      border-radius: 4px;
+      background: $Brand-2;
+      box-sizing: border-box;
+      margin: 0 0 16px 0;
+      padding: 0 8px;
+      display: flex;
+      align-items: center;
+      @include c4-1-reg12;
+      color: $Brand-6;
+      cursor: pointer;
+      span {
+        margin-left: 4px;
+      }
+      svg:last-child {
+        margin-left: auto;
+      }
+    }
+    .ai-hosting {
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid #ebedf2;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      background-image: url('@/images/icons/edm/send/background.png');
+      background-repeat: no-repeat;
+      background-size: 253px 86px;
+      background-position: right 0px top 0px;
+      position: relative;
+      .left-icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 8px;
+      }
+      .recommend-tag {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #ffe5e2;
+        border-radius: 2px;
+        padding: 2px 6px;
+        font-family: 'PingFang SC';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #cb493d;
+      }
+    }
+    .wiki-info {
+      width: 100%;
+      // margin-top: 16px;
+      background: #ffffff;
+      border: 1px solid #ebedf2;
+      border-radius: 4px;
+      display: flex;
+      background-image: url('@/images/icons/edm/send/background.png');
+      background-repeat: no-repeat;
+      background-size: 258px 115px;
+      background-position: right 0px top 0px;
+      padding: 20px;
+      .left-wrap {
+        padding-top: 7px;
+        margin-right: 8px;
+        .left-icon {
+          width: 32px;
+          height: 32px;
+        }
+      }
+      .wiki-wrap {
+        flex: 1;
+        &-top {
+          display: flex;
+          align-items: center;
+        }
+        .wiki-list {
+          margin-top: 16px;
+          margin-bottom: -12px;
+          .wiki-item {
+            // width: 50%;
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            &-icon {
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background: #4c6aff;
+              margin-right: 6px;
+            }
+            &-info {
+              flex: 1;
+              font-family: 'PingFang SC';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 16px;
+              color: #545a6e;
+              width: 0;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              &:hover {
+                color: #4c6aff;
+              }
+            }
+          }
+        }
+      }
+    }
+    .info-content {
+      flex: 1;
+      .info-title {
+        font-family: 'PingFang SC';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #272e47;
+        margin-bottom: 6px;
+      }
+      .info-info {
+        font-family: 'PingFang SC';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #747a8c;
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.team-member-box {
+  border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+  border-radius: 4px;
+  width: 600px;
+  display: flex;
+  flex: 1 1 344px;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .search-member-box {
+    width: 50%;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .chosen-member-box {
+    width: 50%;
+    border-left: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+    padding: 24px 0;
+    overflow: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  .chosen-status {
+    font-size: 14px;
+    margin: 0 24px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  }
+  .member-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 18px;
+  }
+}
+
+.chosen-member-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 7px 24px;
+  cursor: pointer;
+  .avatar {
+    width: 28px;
+    height: 28px;
+    color: #fff;
+    border-radius: 14px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 28px;
+  }
+  .member-name {
+    margin-left: 8px;
+    font-size: 14px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .remove-btn {
+    position: absolute;
+    right: 24px;
+    width: 16px;
+    height: 16px;
+  }
+  &:hover {
+    background-color: #f0f0f1;
+  }
+}
+.chooser-wrap {
+  :global(.ant-modal-header) {
+    background-color: $white;
+    border-bottom: 1px solid $white-hover-bg;
+  }
+  :global(.ant-modal-title) {
+    color: $font-color-2;
+  }
+  :global(.ant-modal-footer) {
+    border-top: 1px solid $white-hover-bg;
+  }
+}

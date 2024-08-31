@@ -1,0 +1,77 @@
+.emoji-tip-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: -1000;
+  pointer-events: none;
+  img {
+    opacity: 0;
+    height: 41px;
+    width: 727px;
+  }
+}
+.mask-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1000;
+  .archer-wrapper {
+    // position: fixed;
+    position: absolute;
+    // z-index: 1000;
+    box-shadow: 0 0 0 4000px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    background-image: url(@/images/emojitip.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    // &>img {
+    //     // position: absolute;
+    //     // top: 0;
+    //     // left: 0;
+    //     height: 41px;
+    //     width: 1039px;
+    //     border-radius: 6px;
+    // }
+    .guide-bobble {
+      width: 283px;
+      padding: 16px;
+      background: $Brand-5;
+      border-radius: 6px;
+      position: absolute;
+      right: 0;
+      top: 51px;
+      .title {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: #ffffff;
+      }
+      .footer {
+        margin-top: 12px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        .butt {
+          padding: 6px 14px;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 16px;
+          text-align: center;
+          color: #386ee7;
+          background: #ffffff;
+          border-radius: 4px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

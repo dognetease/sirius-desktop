@@ -1,0 +1,162 @@
+.actionList {
+  width: 450px;
+  min-height: 215px;
+  max-height: 450px;
+  overflow: auto;
+  margin: 20px 0;
+  padding: 0 20px;
+
+  .title {
+    // font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #272e47;
+    padding-bottom: 14px;
+  }
+
+  .action {
+    position: relative;
+    padding: 10px 0;
+    .btnLink {
+      cursor: pointer;
+      position: absolute;
+      font-size: 12px;
+      color: #4c6aff;
+      right: -32px;
+      top: 2px;
+    }
+
+    &:last-child {
+      .stepMark {
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .stepMark {
+    position: absolute;
+    width: 30px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding-top: 10px;
+    // background-color: red;
+    &-index {
+      font-family: LX-numbers;
+      position: relative;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #e1e3e8;
+      background-color: #fff;
+      color: #545a6e;
+      border-radius: 50%;
+      z-index: 2;
+    }
+
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 0;
+      border: 1px dashed #e1e3e8;
+      left: 12px;
+      z-index: 1;
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 2) {
+      .stepMark::before {
+        border: 0.5px dashed #e1e3e8;
+      }
+    }
+
+    @media screen and (-webkit-min-device-pixel-ratio: 3) {
+      .stepMark::before {
+        border: 0.333333px dashed #e1e3e8;
+      }
+    }
+  }
+
+  .actionContent {
+    margin-left: 40px;
+    .actionName {
+      font-size: 16px;
+      color: #000000;
+      display: flex;
+      align-items: center;
+    }
+
+    .actionRule {
+      padding: 12px;
+      background: #f9fafb;
+      border-radius: 4px;
+      margin: 10px 0;
+
+      &-name-wrapper {
+        display: flex;
+        position: relative;
+        margin-right: 35px;
+        align-items: center;
+      }
+
+      &-name {
+        // flex: 1;
+        font-size: 12px;
+        color: #272e47;
+      }
+
+      &-desc {
+        font-weight: normal;
+        padding-top: 6px;
+        font-size: 12px;
+        color: #747a8c;
+      }
+
+      &-tags {
+        white-space: nowrap;
+      }
+    }
+
+    .actionTriggerName {
+      font-weight: normal;
+      font-size: 12px;
+      color: #747a8c;
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #e1e3e8;
+    }
+  }
+
+  .ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .bold {
+    font-weight: bold;
+    font-weight: 500;
+  }
+
+  .tag {
+    background: #deebfd;
+    color: #4759b2;
+    margin-left: 4px;
+    margin-right: 0px;
+  }
+
+  .actionTag {
+    margin-left: 2px;
+    margin-right: 6px;
+  }
+
+  .aiTag {
+    background: #ede4ff;
+    color: #7a51cb;
+  }
+}

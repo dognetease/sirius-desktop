@@ -1,0 +1,106 @@
+.link-btn {
+  cursor: pointer;
+  color: #4c6aff;
+  transition: all 0.2s;
+  user-select: none;
+
+  &.disabled {
+    color: #b7c3ff;
+  }
+}
+.max-width-cell {
+  max-width: 260px;
+  color: #4c6aff;
+  font-size: 16px;
+}
+
+.light {
+  color: #4c6aff;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shipInfo {
+  width: 144px;
+  .shipMaster {
+    font-size: 16px;
+    color: #272e47;
+  }
+
+  .shipCount {
+    font-size: 14px;
+    color: #747a8c;
+  }
+}
+
+.date {
+  font-size: 14px;
+  color: #747a8c;
+}
+
+.routeInfo {
+  min-width: 520;
+  display: flex;
+  // margin-right: 20px;
+  .from {
+    // width: 175px;
+    min-width: 175px;
+    flex: 1;
+    text-align: right;
+  }
+
+  .arrow {
+    padding: 0 20px;
+    line-height: 1;
+    text-align: center;
+    width: 160px;
+  }
+
+  .to {
+    // width: 175px;
+    min-width: 175px;
+    flex: 1;
+    text-align: left;
+  }
+
+  .portName {
+    font-size: 16px;
+    color: #272e47;
+    font-weight: bold;
+  }
+  .routeName {
+    font-size: 12px;
+    color: #747a8c;
+  }
+
+  .voyage {
+    color: #747a8c;
+    margin-top: 4px;
+  }
+}
+
+.tableOperate {
+  .opmenuIcon {
+    position: relative;
+    top: 5px;
+    font-size: 20px;
+    color: #4c6aff;
+  }
+}
+
+.tag {
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+  background: #ffe5e2;
+  color: #cb493d;
+  font-weight: normal;
+  font-size: 12px;
+  padding: 2px 6px;
+  margin-right: 4px;
+  top: -2px;
+}

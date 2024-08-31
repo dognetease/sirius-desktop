@@ -1,0 +1,25 @@
+.wrapper {
+  position: relative;
+  padding: 16px;
+  height: 100%;
+  background-color: #f6f7fa;
+  // min-width: 1200px;
+  overflow: auto;
+
+  .breadcrumb {
+    cursor: pointer;
+  }
+}
+
+.loading {
+  padding-top: 200px;
+  text-align: center;
+}
+
+.breadWrap {
+  padding-bottom: 16px;
+}
+
+.panel {
+  padding: 0 0 12px;
+}

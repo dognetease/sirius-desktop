@@ -1,0 +1,39 @@
+.delete {
+  :global {
+    .ant-modal-header {
+      border: none;
+      padding-bottom: 12px;
+      padding-top: 20px;
+    }
+
+    .ant-modal-body {
+      display: none;
+    }
+
+    .ant-modal-footer {
+      border: none;
+      padding-bottom: 20px;
+    }
+  }
+
+  &-header {
+    &-main {
+      display: flex;
+      .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+        margin-top: 1px;
+      }
+    }
+    &-tip {
+      margin-left: 30px;
+      font-size: 14px;
+      font-weight: normal;
+      color: #7a8599;
+    }
+  }
+}

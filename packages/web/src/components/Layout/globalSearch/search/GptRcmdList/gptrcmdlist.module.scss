@@ -1,0 +1,85 @@
+.wrapper {
+  margin-top: 12px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding-right: 40px;
+
+  // :global {
+  //   .ant-checkbox-group-item {
+
+  //   }
+  // }
+
+  &-unfolder {
+    max-height: none !important;
+  }
+
+  .folder {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    cursor: pointer;
+    color: $Brand-6;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+
+    .folderIcon {
+      width: 16px;
+      height: 16px;
+      // background: url(./arrow-down.svg) center center no-repeat;
+      // background-size: 16px;
+      display: flex;
+      margin-left: 4px;
+
+      &-unfolder {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .text {
+    color: $Text-4;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .select {
+    margin: auto 6px;
+  }
+
+  .checkWrapper {
+    .checkAll {
+      margin-left: 28px;
+      margin-right: 28px;
+    }
+
+    .checkGroup {
+      display: inline;
+
+      :global {
+        .ant-checkbox-group {
+          display: inline;
+        }
+      }
+
+      .checkboxgrid {
+        max-width: 320px;
+        margin-top: 8px;
+        margin-right: 20px;
+
+        :global {
+          .ant-checkbox + span {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-break: keep-all;
+          }
+        }
+      }
+    }
+  }
+}

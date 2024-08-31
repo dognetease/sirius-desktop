@@ -1,0 +1,332 @@
+@import '@web-common/styles/variables.scss';
+
+.customs-data-detail {
+  height: 100%;
+  background: $Fill-2;
+
+  :global {
+    .ant-table-placeholder .ant-empty-normal {
+      margin: 52px 0;
+    }
+  }
+
+  :global(.ant-drawer-body) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    flex-shrink: 0;
+    z-index: 1;
+
+    &.shadow {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.03);
+    }
+
+    .content {
+      // min-width: 44px;
+      padding: 0 5px;
+      height: 20px;
+      line-height: 20px;
+      background: rgba(107, 169, 255, 0.1);
+      border-radius: 2px;
+      color: #6ba9ff;
+      font-size: 12px;
+      text-align: center;
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    .content-clue {
+      background: rgba(112, 204, 171, 0.1);
+      color: #70ccab;
+    }
+
+    .options {
+      display: flex;
+
+      > :global(.ant-btn:not(.ant-btn-primary)) {
+        color: #386ee7;
+        border-color: #386ee7;
+        margin-right: 8px;
+
+        &:hover {
+          background-color: #ffffff;
+        }
+
+        &:last-child {
+          padding-right: 6px;
+          padding-left: 12px;
+          margin-right: 0;
+
+          > span:first-child {
+            margin: 0 4px 0 0;
+          }
+
+          :global(.anticon-caret-down) {
+            transform: translateY(-2px) scale(0.7);
+          }
+        }
+      }
+    }
+  }
+
+  .titleBtnStar {
+    width: 32px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid var(---Line-3--, #e1e3e8);
+    margin-left: 8px;
+    &:hover {
+      background: var(---Fill-1--, #f8f9fa);
+    }
+  }
+
+  .iconStyle {
+    font-size: 20px;
+    display: grid;
+    place-items: center;
+    padding: 3px;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid var(---Line-3--, #e1e3e8);
+    &:hover {
+      background: var(---Fill-1--, #f8f9fa);
+    }
+    cursor: pointer;
+    > span {
+      margin-top: 2px;
+    }
+  }
+  .iconYou {
+    border-left: 1px solid #fff;
+    border-radius: 0 4px 4px 0;
+  }
+  .iconZuo {
+    border-radius: 4px 0 0 4px;
+  }
+
+  .disablePage {
+    cursor: no-drop;
+    color: #c9cbd6;
+
+    &:hover {
+      background: #fff;
+    }
+  }
+
+  .znCompanyListBox {
+    background-color: #f8f9fa;
+    width: 100%;
+    padding: 0 0 12px;
+  }
+
+  .body {
+    flex-grow: 1;
+    position: relative;
+    padding: 0;
+    overflow-x: hidden;
+
+    .company-tab {
+      :global {
+        .ant-tabs-nav {
+          // margin: 0 0 12px 0;
+          margin: 0 0 12px;
+        }
+      }
+    }
+
+    .inner-tab {
+      :global {
+        .ant-tabs-ink-bar {
+          display: block;
+        }
+
+        .ant-tabs-nav-wrap {
+          .ant-tabs-tab {
+            background: transparent;
+            border: none;
+            color: #747a8c;
+            font-size: 14px;
+            padding: 0;
+            margin-left: 36px !important;
+          }
+
+          .ant-tabs-tab:first-child {
+            margin-left: 0 !important;
+          }
+
+          .ant-tabs-tab-active {
+            background: transparent;
+            color: #4c6aff !important;
+            border: none;
+            font-weight: bold;
+          }
+
+          .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn,
+          .ant-tabs-tab:hover {
+            color: #4c6aff !important;
+          }
+        }
+
+        .ant-tabs-nav::before {
+          border-bottom: 1px solid #ebedf2;
+        }
+      }
+    }
+
+    .tabsTitle {
+      :global(.ant-tabs-nav) {
+        margin: 0;
+      }
+    }
+
+    .customs-info-base {
+      :global {
+        .ant-tabs-nav {
+          margin: 0 !important;
+          padding-left: 16px;
+        }
+      }
+    }
+  }
+
+  .selectModal {
+    :global(.ant-modal-header) {
+      border: none;
+      padding: 20px 24px 0px;
+    }
+
+    :global(.ant-modal-footer) {
+      border: none;
+      height: 68px;
+      padding: 16px 24px;
+    }
+
+    // :global(.ant-table-tbody) {
+    //   &>tr {
+    //     &>td {
+    //       padding: 10px 16px;
+    //     }
+    //   }
+    // }
+    max-height: 600px;
+
+    .select-body {
+      &-intro {
+        font-size: 14px;
+        line-height: 24px;
+        color: #747a8c;
+        margin-bottom: 12px;
+      }
+    }
+
+    .overflow {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.sticky-header {
+  padding: 20px 86px 20px 0px;
+  border-bottom: 1px solid #f0f1f5;
+  background: #fff;
+  top: 0;
+  z-index: 3;
+  position: fixed;
+  width: 68.125%;
+  min-width: 872px;
+
+  &-win {
+    top: 32px;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+  }
+
+  .sticky-title {
+    color: $Text-6;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-right: 8px;
+  }
+
+  .name {
+    display: flex;
+    align-items: center;
+  }
+
+  .options {
+    > :global(.ant-btn:not(.ant-btn-primary)) {
+      color: #386ee7;
+      border-color: #386ee7;
+      margin-right: 8px;
+
+      &:hover {
+        background-color: #ffffff;
+      }
+
+      &:last-child {
+        padding-right: 6px;
+        padding-left: 12px;
+        margin-right: 0;
+
+        > span:first-child {
+          margin: 0 4px 0 0;
+        }
+
+        :global(.anticon-caret-down) {
+          transform: translateY(-2px) scale(0.7);
+        }
+      }
+    }
+  }
+
+  :global {
+    .lx-btn {
+      flex-shrink: 0;
+    }
+
+    .lx-ui-btn {
+      flex-shrink: 0;
+    }
+
+    .ant-tabs-nav {
+      // margin: 0 0 12px 0;
+      // margin: 0 0 12px 0;
+      margin: 0;
+
+      .ant-tabs-nav-wrap {
+        .ant-tabs-tab {
+          // padding-bottom: 4px;
+          padding: 0;
+          margin: 10px 20px;
+          line-height: 20px;
+          color: $Text-3;
+        }
+      }
+    }
+
+    .ant-tabs-ink-bar {
+      transform: scale(1, 1);
+    }
+  }
+}
+
+.block {
+  padding: 16px;
+  margin-bottom: 12px;
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid #f0f1f5;
+}

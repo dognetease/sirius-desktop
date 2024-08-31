@@ -1,0 +1,27 @@
+.ellipsis-labels {
+  .labels {
+    .label-item {
+      margin-right: 4px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.ellipsis-labels-add {
+  padding: 2px 7px;
+  height: 20px;
+  background: #f6f7fa;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  &-text {
+    font-size: 12px;
+    line-height: 16px;
+    color: #4e5a70;
+    margin-left: 5px;
+  }
+}

@@ -1,0 +1,26 @@
+@import '@web-common/styles/variables.scss';
+@import '@web-common/styles/waimao/varies.scss';
+// @import '@/styles/mixin.scss';
+
+.empty {
+  :global {
+    .ant-empty-image {
+      height: 130px;
+    }
+
+    .ant-empty-description {
+      @include p1-3-reg14;
+      color: #747a8c;
+    }
+
+    .ant-empty-footer {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.group {
+  display: flex;
+  justify-content: center;
+}

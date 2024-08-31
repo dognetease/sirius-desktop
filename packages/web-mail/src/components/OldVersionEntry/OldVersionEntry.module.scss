@@ -1,0 +1,85 @@
+.entry-wrapper {
+  // position: fixed;
+  // flex: 0 1;
+  right: 0px;
+  top: 0;
+  padding: 0 8px;
+  height: 48px; // 和父组件高度一致
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  z-index: 1000;
+  .entry-btn {
+    padding: 0 8px;
+    display: inline-flex;
+    height: 100%;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    align-items: center;
+    /* identical to box height, or 133% */
+    color: #ffffff;
+    &.entry-btn2 {
+      padding: 0;
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      margin-right: 4px;
+      padding-left: 8px;
+      box-sizing: content-box;
+    }
+    .join-activity {
+      padding-right: 8px;
+      border-right: 1px solid rgba($Fill-4-r, $Fill-4-g, $Fill-4-b, 0.2);
+    }
+  }
+}
+
+// modal样式
+.old-entry-modal {
+  :global(.ant-modal-header) {
+    border-bottom: none;
+    box-shadow: inset 0px -0.5px 0px #e1e6ed;
+    .modal-title {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      /* identical to box height, or 150% */
+
+      /* 中性色-文字/Text-5标题-重要信息 */
+
+      color: #232d47;
+    }
+  }
+  :global(.ant-modal-body) {
+    padding: 20px;
+    .old-entry-feedback {
+      margin-top: 20px;
+      border: 1px solid #e1e6ed;
+      border-radius: 4px;
+      height: 160px !important;
+      max-height: 160px !important;
+      padding: 20px;
+      &::-webkit-input-placeholder {
+        font-family: 'PingFang SC';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: $Text-1;
+      }
+    }
+  }
+  :global(.ant-modal-footer) {
+    border-top: none;
+    box-shadow: inset 0px 0.5px 0px #e1e6ed;
+    padding: 10px 20px;
+    :global(.ant-btn.ant-btn-primary) {
+      margin-left: 16px;
+    }
+  }
+}

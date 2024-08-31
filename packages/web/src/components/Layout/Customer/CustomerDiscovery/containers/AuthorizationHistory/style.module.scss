@@ -1,0 +1,28 @@
+@import '../AuthorizationList/style.module.scss';
+
+// .link-btn-state0 {}
+
+.link-btn-state1 {
+  color: #478e83;
+  background: #e6faf6;
+}
+
+.link-btn-state2 {
+  color: #478e83;
+  background: #e6faf6;
+}
+
+.link-btn-state3 {
+  color: #b16059;
+  background: #feeff1;
+}
+
+.title-state {
+  margin-left: 10px;
+}
+
+.state {
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 2px;
+}

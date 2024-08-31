@@ -1,0 +1,17 @@
+.writeSideContainer {
+  height: 100%;
+  width: 100%;
+  min-width: 340px;
+  background-color: #fff;
+  .writeSideTabBar {
+    :global {
+      .ant-tabs-nav {
+        margin: 0;
+        border-bottom: 1px solid $Line-2;
+        .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab {
+          height: 43px;
+        }
+      }
+    }
+  }
+}

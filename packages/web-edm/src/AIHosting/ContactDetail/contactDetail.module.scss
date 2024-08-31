@@ -1,0 +1,120 @@
+.contact-detail {
+  height: 100%;
+  padding: 20px;
+  background-color: #fff;
+  // 满足面包屑组件暂未支持的UI
+  .breadcrumb-item {
+    cursor: pointer;
+    &:hover {
+      color: $Brand-6;
+    }
+  }
+  .header {
+    background: #f9fafb;
+    border-radius: 4px;
+    padding: 16px;
+    width: 100%;
+    margin: 22px 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    .header-item {
+      width: 33.3%;
+      font-size: 14px;
+      line-height: 22px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .header-title {
+      color: #747a8c;
+      flex: none;
+    }
+    .header-value {
+      color: #272e47;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .header-light {
+      color: $Brand-6;
+      cursor: pointer;
+    }
+  }
+  .statistics {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    .statistics-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 21px 23px 34px 12px;
+      background: #f8f9fa;
+      border-radius: 4px;
+      max-height: 100px;
+      flex-grow: 1;
+    }
+    .item-title {
+      font-size: 12px;
+      line-height: 16px;
+      color: #747a8c;
+    }
+    .item-value {
+      font-size: 22px;
+      line-height: 20px;
+      color: #272e47;
+      // margin: 8px 0 0 0;
+    }
+    .statistics-icon {
+      flex: none;
+    }
+  }
+  .table {
+    margin-top: 12px;
+  }
+  .table-astrict {
+    max-width: 112px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .operation {
+    color: #4c6aff;
+    cursor: pointer;
+  }
+  .pagination {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 16px 20px 24px;
+  }
+  .replyed {
+    color: #4c6aff;
+    cursor: pointer;
+  }
+  .icon {
+    cursor: pointer;
+    margin-left: 2px;
+    filter: grayscale(100%);
+  }
+  .link {
+    cursor: pointer;
+    border-bottom: 1px solid $Text-3;
+  }
+  .itemReply {
+    display: flex;
+  }
+  .itemReply:hover {
+    .link {
+      color: #4c6aff;
+      border-bottom: 1px solid #4c6aff !important;
+    }
+    .icon {
+      filter: none;
+    }
+  }
+}

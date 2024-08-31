@@ -1,0 +1,104 @@
+@import '../../../../../web/src/styles/varies';
+.reset-password-form {
+  position: relative;
+  flex: 1;
+  margin: 56px 30px;
+  padding: 0 30px;
+  width: 100%;
+  min-width: 420px;
+  max-height: 600px;
+  min-height: 528px;
+  text-align: left;
+  border: 1px solid $Fill-3;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  .back {
+    // color: #51555c;
+    color: $font-color-1;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10vh;
+    margin-top: 32px;
+  }
+
+  .title {
+    font-family: PingFang SC;
+    font-weight: 500;
+    font-size: 24px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    margin-bottom: 16px;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .desc {
+    font-family: PingFang SC;
+    font-size: 14px;
+    // color: #51555c;
+    color: $font-color-1;
+    margin-bottom: 32px;
+  }
+
+  .pass-wrapper {
+    position: relative;
+  }
+
+  .reset-field {
+    max-width: 400px;
+    height: 48px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+
+  .button-confirm {
+    font-family: PingFang SC;
+    height: 48px;
+
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .forget-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+    .forget-btn {
+      color: #386ee7;
+      cursor: pointer;
+    }
+  }
+  .err-msg {
+    color: #f74f4f;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.reset-password-step1 {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.reset-password-step2 {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.iconEyeWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8px;
+}

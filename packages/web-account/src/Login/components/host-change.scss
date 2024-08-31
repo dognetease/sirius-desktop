@@ -1,0 +1,11 @@
+.host-change-dropdown {
+  user-select: none;
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    color: #386ee7;
+    font-weight: normal;
+    background-color: white;
+  }
+  .ant-select-item-option:not(.ant-select-item-option-selected) {
+    color: #262a33;
+  }
+}

@@ -1,0 +1,15 @@
+@import '@web-common/styles/variables.scss';
+
+.row-dragging {
+  background: #fafafa;
+  border: 1px solid #ccc;
+  z-index: 10;
+  td {
+    padding: 12px 8px;
+    color: #51555c;
+  }
+}
+
+.drag-visible {
+  visibility: visible;
+}

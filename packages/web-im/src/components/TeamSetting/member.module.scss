@@ -1,0 +1,65 @@
+.member-item-wrapper {
+  width: 50%;
+  flex-wrap: wrap;
+  height: 42px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 6px;
+  &:hover {
+    // background-color: #f0f0f1;
+    background-color: $white-hover-bg;
+    .role,
+    .member-name {
+      flex: 1;
+    }
+    .role {
+      display: none;
+    }
+    .icon {
+      display: inline-block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .member-name {
+    padding-left: 8px;
+    font-size: 14px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    max-width: 82px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    // flex: 1;
+    text-align: left;
+    p {
+      margin: 0;
+    }
+  }
+  .role {
+    margin-left: 8px;
+    background: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.1);
+    border-radius: 2px;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0 4px;
+    color: #386ee7;
+  }
+  .icon {
+    display: none;
+    width: 24px;
+    height: 24px;
+    background: #ffffff;
+    border-radius: 12px;
+    margin-right: 12px;
+    cursor: pointer;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  :global(.ant-tooltip-placement-top) {
+    padding-bottom: 0;
+  }
+}

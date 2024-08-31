@@ -1,0 +1,28 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+@mixin common {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.choose-template-status {
+  .have-choose {
+    @include common;
+    color: $Text-5;
+
+    .edit-btn {
+      @include common;
+      margin-left: 16px;
+      color: $Brand-6;
+      cursor: pointer;
+    }
+  }
+
+  .no-choose {
+    @include common;
+    color: $Brand-6;
+    cursor: pointer;
+  }
+}

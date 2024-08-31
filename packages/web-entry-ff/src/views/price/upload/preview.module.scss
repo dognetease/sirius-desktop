@@ -1,0 +1,10 @@
+.table-title-required {
+  position: relative;
+  &::before {
+    display: inline-block;
+    color: #ff4d4f;
+    font-size: 14px;
+    line-height: 1;
+    content: '*';
+  }
+}

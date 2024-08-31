@@ -1,0 +1,215 @@
+.modal-wrapper {
+  :global(.ant-modal-body) {
+    padding: 0;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  :global(.ant-modal-content) {
+    border-radius: 12px;
+  }
+  .content {
+    background: url('https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/08/11/d01482144b8341c295bf318c5da0221d.png') no-repeat center;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: space-between;
+    .left-content {
+      box-sizing: content-box;
+      width: 271px;
+      padding: 148px 0 0 42px;
+      .content-title {
+        font-family: 'PingFang SC';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 33px;
+        line-height: 39px;
+        color: #232d47;
+        padding-bottom: 32px;
+      }
+      .content-info {
+        font-family: 'PingFang SC';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: $label-6_3;
+        margin-bottom: 24px;
+      }
+      .content-btn {
+        width: 186px;
+        height: 40px;
+        background: linear-gradient(91.36deg, #7c71ff 5.28%, #6189ff 99.5%);
+        box-shadow: 0px 5px 9px rgba($Brand-7-r, $Brand-7-g, $Brand-7-b, 0.14);
+        border-radius: 50px;
+        color: #fff;
+        text-align: center;
+        line-height: 40px;
+        cursor: pointer;
+        margin-bottom: 12px;
+      }
+      .content-tips {
+        font-size: 12px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        color: $label-6_3;
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        .tips-number {
+          font-family: 'LX-numbers';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          display: flex;
+          align-items: center;
+          color: $Avatar-6;
+          margin: 0 4px;
+        }
+      }
+    }
+
+    // 活动样式
+    .activity-left {
+      box-sizing: content-box;
+      width: 381px;
+      padding: 140px 0 0 41px;
+      position: relative;
+      .activity-title {
+        font-family: 'PingFang SC';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 33px;
+        line-height: 39px;
+        color: #232d47;
+        padding-bottom: 10px;
+      }
+      .activity-info-wrapper {
+        .activity-info {
+          font-family: 'PingFang SC';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 30px;
+          color: #232d47;
+          &-number {
+            color: $Avatar-6;
+          }
+        }
+        margin-bottom: 28px;
+      }
+      .activity-tips {
+        font-family: 'PingFang SC';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: $label-6_3;
+        margin-bottom: 20px;
+        width: 313px;
+      }
+      .button-wrapper {
+        display: flex;
+        justify-content: space-between;
+        .button-left {
+          width: 186px;
+          height: 40px;
+          background: linear-gradient(91.36deg, #7c71ff 5.28%, #6189ff 99.5%);
+          box-shadow: 0px 5px 9px rgba($Brand-7-r, $Brand-7-g, $Brand-7-b, 0.14);
+          border-radius: 50px;
+          color: #fff;
+          text-align: center;
+          line-height: 40px;
+          cursor: pointer;
+        }
+        .button-right {
+          width: 186px;
+          height: 40px;
+          border: 1px solid $Avatar-6;
+          border-radius: 60px;
+          color: $Avatar-6;
+          text-align: center;
+          line-height: 40px;
+          cursor: pointer;
+        }
+      }
+      .activity-time {
+        position: absolute;
+        left: 42px;
+        bottom: 32px;
+        display: flex;
+        align-items: center;
+        .time-range {
+          font-family: 'PingFang SC';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          display: flex;
+          align-items: center;
+          color: $label-6_3;
+          margin-right: 12px;
+        }
+        .activity-info-btn {
+          cursor: pointer;
+          font-size: 14px;
+          line-height: 22px;
+          color: #386ee7;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+
+    .right-content {
+      padding: 111px 21px 78px 0;
+      .content-bg {
+        width: 500px;
+        height: 332px;
+        background: url('https://cowork-storage-public-cdn.lx.netease.com/lxbg/2022/06/27/1cc6f189b3d04224aebc2a0fd521b175.png') no-repeat center;
+        background-size: 100% 100%;
+      }
+    }
+  }
+
+  .activity-tips-wrapper {
+    padding: 48px 25px 24px 32px;
+    .activity-tips-title {
+      text-align: center;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      text-align: center;
+      color: #262a33;
+      margin-bottom: 18px;
+    }
+    .activity-tips-content {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: $label-6_3;
+      margin-bottom: 21px;
+      .info-mark {
+        color: $Avatar-6;
+      }
+    }
+    .activity-tips-btn {
+      display: flex;
+      justify-content: center;
+      & > div {
+        background: #386ee7;
+        border-radius: 4px;
+        color: #fff;
+        text-align: center;
+        width: 100px;
+        height: 32px;
+        line-height: 32px;
+        cursor: pointer;
+      }
+    }
+  }
+}

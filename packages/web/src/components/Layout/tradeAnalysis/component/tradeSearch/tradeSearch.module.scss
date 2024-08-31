@@ -1,0 +1,85 @@
+@import '@web-common/styles/variables.scss';
+
+.search-comp {
+  width: 100%;
+  position: relative;
+}
+
+.search-input-wrapper {
+  position: relative;
+
+  &-tank {
+    padding: 16px;
+    background: #fff;
+    // border: 1px solid #f0f1f5;
+    border-radius: 4px;
+  }
+}
+
+.useQuery {
+  color: #fff;
+  position: absolute;
+  top: 14px;
+  right: 0;
+
+  span {
+    color: $Avatar-2;
+  }
+}
+
+.searchIcon {
+  margin-left: 11px;
+  display: flex;
+  align-items: center;
+}
+
+.history {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+
+  &-text {
+    width: 56px;
+    line-height: 22px;
+    color: #fff;
+    opacity: 0.8;
+  }
+
+  &-content {
+    width: calc(100% - 68px);
+    position: relative;
+    display: flex;
+    margin-left: 12px;
+    align-items: center;
+    // row-gap: 20px;
+    flex-wrap: wrap;
+    // padding-left: 12px;
+    justify-content: flex-start;
+    overflow: hidden;
+    flex-grow: 1;
+    opacity: 0.8;
+
+    .tag {
+      border-radius: 4px;
+      border: 1px solid $Fill-4;
+      line-height: 22px;
+      color: $Fill-4;
+      padding: 2px 8px;
+      cursor: pointer;
+
+      &:hover {
+        color: $Text-5;
+        background-color: #fff;
+      }
+    }
+  }
+
+  .historyTable {
+    :global {
+      .ant-table-row {
+        color: $Text-5;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.container {
+  font-size: 14px;
+  .title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    // color: #262a33;
+    color: $font-color-2;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .form {
+    width: 100%;
+    .host {
+      width: 330px;
+      margin-right: 16px !important;
+      margin-bottom: 0px;
+    }
+    .port {
+      width: 86px;
+      margin-bottom: 0px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: flex-end;
+      button {
+        margin-left: 12px;
+      }
+    }
+  }
+
+  .warn {
+    display: flex;
+    margin-bottom: 16px;
+    .errMsg {
+      color: #f74f4f;
+      font-size: 12px;
+      line-height: 16px;
+      margin-left: 5px;
+    }
+    .errBtn {
+      color: #386ee7;
+      font-size: 12px;
+      line-height: 16px;
+      cursor: pointer;
+    }
+  }
+}

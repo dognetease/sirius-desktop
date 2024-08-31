@@ -1,0 +1,336 @@
+@import '../../../web/src/styles/varies';
+
+.ant-select-dropdown.sirusDrop {
+  // max-height: 132px;
+  // overflow-y:scroll;
+  .ant-select-item {
+    padding: 10px 12px;
+    // color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    color: rgba(39, 46, 71, 0.9);
+  }
+
+  .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+    background-color: #ffffff;
+    color: $main-enhance-color;
+  }
+
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    background-color: #ffffff;
+    color: $main-enhance-color;
+  }
+}
+
+.langMenuIcon {
+  margin-left: 9px;
+}
+
+.langMenusWrapper {
+  position: absolute;
+  bottom: 15px;
+  left: 25px;
+  user-select: none;
+  color: #7d8085;
+}
+
+.loginContainer {
+  position: relative;
+  flex: 1;
+  margin: 56px 0;
+  padding: 0 30px;
+  width: 100%;
+  min-width: 420px;
+  max-width: 540px;
+  max-height: 600px;
+  min-height: 528px;
+  text-align: left;
+  border: 1px solid $Fill-3;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  .backWrap {
+    position: absolute;
+    top: -50px;
+    left: -20px;
+    cursor: pointer;
+
+    .backIcon {
+      float: left;
+      width: 24px;
+      height: 24px;
+      border-radius: 24px;
+      // background-color: rgba($color: $Text-5, $alpha: 0.07);
+      background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.07);
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i {
+        width: 24px;
+        height: 24px;
+        background-image: url('../../../web/src/images/icons/login/back.svg');
+        background-size: 100%;
+      }
+    }
+
+    .anticon svg {
+      font-size: 11px;
+    }
+
+    .back {
+      color: var(--font-color-1, #51555c);
+      font-size: 16px;
+      line-height: 24px;
+      margin-left: 12px;
+    }
+  }
+
+  &.addAccountLoginWrap {
+    min-height: auto;
+  }
+
+  .loginWrap {
+    width: 100%;
+    max-width: 400px;
+
+    .anticon svg {
+      font-size: 16px;
+    }
+
+    .title {
+      font-size: 24px;
+      line-height: 24px;
+      color: var(--font-color-2, #262a33);
+    }
+
+    .loginFormWrap {
+      margin-top: 20px;
+
+      .loginTabs {
+        padding: 16px 0;
+        display: flex;
+
+        .tab {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-right: 24px;
+          cursor: pointer;
+
+          .tabTxt {
+            font-family: PingFang HK;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 14px;
+            /* identical to box height, or 100% */
+
+            /* 字体及ICON颜色/摘要文字60% */
+
+            color: #7d8085;
+          }
+
+          .tabLine {
+            margin-top: 8px;
+            display: none;
+            width: 10px;
+            height: 2px;
+            background-color: $main-enhance-color;
+          }
+
+          &.active {
+            .tabTxt {
+              color: $main-enhance-color;
+            }
+
+            .tabLine {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .loginContent {
+        height: 304px;
+
+        .mailWrap {
+          height: 100%;
+
+          .u-code {
+            :global(.ant-input-affix-wrapper input.ant-input) {
+              max-width: 220px;
+              width: 100%;
+            }
+          }
+
+          .u-phone {
+            margin: 22px 0 30px;
+            line-height: 20px;
+            font-size: 16px;
+            color: #51555c;
+
+            .uPhoneBlue {
+              color: $main-enhance-color;
+            }
+          }
+
+          .u-input {
+            position: relative;
+            margin-bottom: 16px;
+
+            .password-input :global(.ant-input) {
+              margin-right: 40px;
+            }
+
+            .i-close {
+              height: 16px;
+              font-size: 14px;
+            }
+
+            .i-close-btn {
+              position: absolute;
+              right: 45px;
+              top: 14px;
+              z-index: 11;
+            }
+
+            :global(.ant-input-affix-wrapper) {
+              height: 48px;
+              border-radius: 8px;
+              font-size: 16px;
+              color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+              padding: 4px 16px;
+            }
+            :global(.ant-input-affix-wrapper:hover, .ant-input-affix-wrapper:focus, .ant-input-affix-wrapper-focused) {
+              box-shadow: 0 0 0 0px #ffffff;
+              border: solid 1px $main-enhance-color;
+            }
+          }
+
+          .u-check-protocol {
+            margin-top: 32px;
+            line-height: 1;
+
+            .u-protocol {
+              & > a {
+                margin: 0 4px;
+              }
+            }
+          }
+
+          .u-submit-btn {
+            margin-top: 12px;
+            width: 100%;
+            :global(.ant-btn-primary:hover, .ant-btn-primary:focus) {
+              border-color: $main-enhance-color;
+            }
+          }
+
+          .u-primary-btn {
+            height: 48px;
+            border-radius: 8px;
+            font-size: 16px;
+            border-color: $main-enhance-color;
+            :global(.ant-btn-primary:hover, .ant-btn-primary:focus) {
+              border-color: $main-enhance-color;
+            }
+          }
+
+          .u-code-text {
+            position: absolute;
+            top: 0;
+            right: 16px;
+            line-height: 48px;
+            font-size: 16px;
+            z-index: 9;
+            color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.4);
+            cursor: pointer;
+          }
+
+          .u-link {
+            display: flex;
+            margin-top: 16px;
+
+            :global(.ant-checkbox-checked .ant-checkbox-inner) {
+              background-color: $main-enhance-color;
+              border-color: $main-enhance-color;
+            }
+
+            .u-link-account {
+              flex: 1;
+              > span {
+                cursor: pointer;
+              }
+
+              .validate {
+                margin-left: 8px;
+              }
+            }
+
+            .u-link-pwd {
+              flex: none;
+              color: $main-enhance-color;
+              cursor: pointer;
+            }
+
+            .host-change-wrapper {
+              display: flex;
+              height: 20px;
+              align-items: center;
+
+              :global(.ant-select-selector) {
+                padding-left: 4px;
+              }
+
+              :global(.ant-select-selection-item) {
+                color: #7d8085;
+              }
+            }
+
+            .split-line {
+              background-color: #a8aaad;
+              width: 1px;
+              height: 12px;
+              opacity: 0.6;
+              margin-left: 12px;
+              margin-right: 8px;
+            }
+          }
+
+          .u-warning {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 16px;
+            .uWarningIcon {
+              flex: none;
+              margin-top: 2px;
+            }
+            .u-warning-text {
+              margin-left: 5px;
+              height: 36px;
+              word-break: break-word;
+              flex: 1;
+              overflow: hidden;
+              font-size: 14px;
+              line-height: 18px;
+              color: #f74f4f;
+            }
+          }
+        }
+
+        .mobileWrap {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.u-protocol {
+  & > a {
+    margin: 0 4px;
+  }
+}

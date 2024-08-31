@@ -1,0 +1,21 @@
+.drag-table-wrap {
+  :global(.react-resizable) {
+    position: relative !important;
+  }
+  :global(.ant-table-cell-fix-left) {
+    position: sticky !important;
+  }
+  :global(.ant-table-cell-fix-right) {
+    position: sticky !important;
+  }
+  :global {
+    .ant-table-thead > tr > th,
+    .ant-table-tbody > tr > td {
+      padding: 12px 24px;
+    }
+    .ant-table-thead > tr > th.ant-table-selection-column,
+    .ant-table-tbody > tr > td.ant-table-selection-column {
+      padding: 12px 8px;
+    }
+  }
+}

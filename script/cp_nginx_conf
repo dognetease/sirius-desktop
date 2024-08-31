@@ -1,0 +1,4 @@
+sudo cp -f ../../nginx-local-conf/sirius_desktop_web.conf /usr/local/etc/nginx/nginx.conf
+sudo cp -f conf/self-signed.conf conf/ssl-params.conf /usr/local/etc/nginx/
+sudo cp -f nginx/self-signed.crt nginx/self-signed.key nginx/dhparam.pem /usr/local/etc/nginx/
+nginx -t

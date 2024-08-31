@@ -1,0 +1,8 @@
+.report-wrap {
+  h3 {
+    color: $font-color-2;
+  }
+  :global(.ant-modal-footer) {
+    border-top: 1px solid $white-hover-bg;
+  }
+}

@@ -1,0 +1,48 @@
+.base-search-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 30px;
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  font-size: 12px;
+  // background: #fff;
+  background-color: $white;
+  border-radius: 4px;
+  cursor: pointer;
+
+  .search-filter-label {
+    margin-left: 12px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9) !important;
+  }
+
+  .search-filter-name {
+    color: #386ee7;
+  }
+
+  .search-filter-icon {
+    margin-left: 4px;
+    margin-right: 12px;
+  }
+
+  .search-filter-trigger {
+    line-height: 30px;
+  }
+}
+
+.base-search-filter-menu {
+  width: 100%;
+  pointer-events: auto !important;
+  margin-top: 2px;
+
+  .ant-dropdown-menu-title-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  li.ant-dropdown-menu-item-selected {
+    background: #f4f4f5;
+    color: #386ee7;
+  }
+}

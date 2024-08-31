@@ -1,0 +1,36 @@
+.client-wrap {
+  .tabs-top {
+    margin-top: 16px;
+  }
+  .search {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .margin-right {
+    margin-right: 8px;
+  }
+  .tips {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+.open-sea-rules {
+  .rule-box {
+    padding-bottom: 20px;
+  }
+  .rule-name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    color: #232d47;
+    padding-bottom: 8px;
+  }
+  .rule-content {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #7a8599;
+    padding-bottom: 4px;
+  }
+}

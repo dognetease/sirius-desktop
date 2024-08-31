@@ -1,0 +1,161 @@
+.root {
+  padding: 0px 20px;
+
+  .body {
+    padding: 16px 0px 0px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .sectionTitle {
+    @include c4-4-med12;
+    padding-left: 4px;
+    color: $Text-5;
+    border-left: 2px solid $Brand-6;
+  }
+
+  .title {
+    @include p1-3-reg14;
+    color: $Text-4;
+  }
+  .subTitle {
+    @include c4-1-reg12;
+    color: $Text-3;
+  }
+
+  .check-all {
+    margin-top: 12px;
+  }
+
+  .checkbox-all {
+    margin-top: 8px;
+    gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    :global(.ant-checkbox-wrapper) {
+      margin-left: 0px;
+    }
+  }
+
+  .notify-root {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: #f2f7fe;
+    border-radius: 4px;
+
+    .notify {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 6px 12px;
+
+      .title {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        color: #272e47;
+      }
+    }
+    .icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.filter-display-wrap {
+  position: relative;
+  .button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    color: $Brand-6;
+    @include p1-3-reg14;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.filter-display-title {
+  color: $Text-5;
+  @include p1-4-med14;
+  margin: 0 0 9px 0;
+  display: flex;
+  height: 22px;
+  align-items: center;
+  .divider {
+    display: inline-block;
+    width: 2px;
+    height: 14px;
+    background: $Brand-6;
+    margin-right: 4px;
+  }
+  .tip {
+    color: $Text-3;
+    @include c4-1-reg12;
+  }
+}
+
+.filter-display {
+  height: 40px;
+  min-height: 40px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  gap: 20px;
+
+  border: 1px solid $Line-3;
+  border-radius: 4px;
+
+  display: flex;
+
+  .display-area {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    .title {
+      @include p1-4-med14;
+      color: $Text-5;
+      margin-bottom: 4px;
+    }
+
+    .subTitle {
+      @include c4-1-reg12;
+      color: $Text-3;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
+.filter-wrapper {
+  :global(.ant-drawer-header) {
+    height: 60px;
+  }
+}

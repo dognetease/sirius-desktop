@@ -1,0 +1,54 @@
+.modal {
+  :global(.ant-modal-header) {
+    height: 76px;
+    padding: 16px 20px 16px 20px;
+    border-bottom: none;
+  }
+  :global(.ant-modal-body) {
+    height: 92px;
+    padding: 0px 20px 0px 20px;
+  }
+  :global(.ant-modal-footer) {
+    height: 68px;
+    border-width: 0px;
+    padding: 18px 20px 18px 20px;
+  }
+  .custom-input {
+    height: 36px;
+    border: 1px solid #e1e3e8;
+    border-radius: 4px;
+  }
+  :global(.ant-input::placeholder) {
+    color: #9fa2ad;
+    font-family: PingFang SC;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    margin-left: -10px;
+  }
+  .custom-title {
+    font-family: PingFang SC;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: right;
+    color: #272e47;
+    margin-right: 12px;
+  }
+  .custom-style {
+    margin-top: 20px;
+    :global(.ant-form-item-control-input-content) {
+      border: 1px solid #e1e3e8;
+      border-radius: 4px;
+    }
+    :global(.ant-form-item-control-input-content:hover) {
+      border: 1px solid #4c6aff;
+      border-radius: 4px;
+    }
+  }
+  :global(.ant-form-item-label) label::after {
+    content: none;
+  }
+}

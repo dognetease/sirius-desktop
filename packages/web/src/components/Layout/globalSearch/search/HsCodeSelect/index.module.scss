@@ -1,0 +1,40 @@
+@import '@web-common/styles/variables.scss';
+.hscode {
+  position: absolute;
+  width: 100%;
+  max-width: 832px;
+  background: #fff;
+  z-index: 1;
+  margin-top: 10px;
+  padding-top: 24px;
+  height: 352px;
+  background: linear-gradient(0deg, #ffffff, #ffffff), #c4c4c4;
+  overflow: auto;
+  border-radius: 6px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  padding: 0 24px;
+  color: rgba(0, 0, 0, 0.85);
+  padding-top: 12px;
+  &-row {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    font-size: 14px;
+    min-height: 32px;
+    line-height: 32px;
+    &:hover {
+      background: #f0f0f1;
+    }
+    &-title {
+      color: blue;
+      flex: 0 0 73px;
+    }
+    &-content {
+      flex: auto;
+    }
+    &-next {
+      flex: 0 0 40px;
+    }
+  }
+}

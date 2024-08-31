@@ -1,0 +1,246 @@
+.unfinishedDrafts {
+  border-radius: 8px;
+  overflow: hidden;
+  .header {
+    padding: 20px 24px 11px 24px;
+    .headerTop {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      // color: #232d47;
+      color: $font-color-2;
+    }
+    .headerBottom {
+      margin-top: 20px;
+      display: flex;
+      justify-content: flex-end;
+      .clearAll {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        color: $Text-4;
+        cursor: pointer;
+        .brush {
+          display: block;
+        }
+        .brushBlue {
+          display: none;
+        }
+        &:hover {
+          color: $Avatar-6;
+          .brush {
+            display: none;
+          }
+          .brushBlue {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .versionBatchList {
+    max-height: 540px;
+    padding: 24px 24px 12px 24px;
+    background: $Fill-2;
+    overflow: scroll;
+    box-sizing: border-box;
+
+    .versionTitle {
+      margin-bottom: 12px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: $Text-4;
+    }
+    .circle {
+      content: '';
+      width: 7px;
+      height: 7px;
+      display: inline-block;
+      background: $white;
+      border: 1px solid $Fill-7;
+      border-radius: 999px;
+      position: absolute;
+      top: 5px;
+      left: 13px;
+    }
+
+    .versionBatch {
+      margin: 12px 0;
+      padding-top: 16px;
+      background: $white;
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+      .timeLine {
+        width: 1px;
+        height: 100%;
+        background: $Fill-3;
+        position: absolute;
+        top: 22px;
+        left: 16px;
+      }
+      &:nth-child(1) {
+        margin-top: 0;
+      }
+      .recentVersion {
+        padding: 0 12px 12px 30px;
+        position: relative;
+        overflow: hidden;
+        .recentVersionDetail {
+          padding: 12px;
+          background: $Fill-1;
+          border-radius: 6px;
+          cursor: pointer;
+          &:hover {
+            background: $Fill-2_5;
+          }
+          .recentVersionTop {
+            display: flex;
+            align-items: center;
+            .to {
+              margin-right: 10px;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 22px;
+              color: $Text-5;
+              flex: 1;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+            .right {
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 16px;
+              color: $Text-3;
+              display: inline-flex;
+              align-items: center;
+              .versionTime {
+                text-align: right;
+                color: $Text-3;
+              }
+              .recover {
+                margin-left: 12px;
+                color: $Avatar-6;
+                cursor: pointer;
+              }
+            }
+          }
+          .recentVersionTheme {
+            margin-top: 4px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: $Text-5;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          .recentVersionContent {
+            margin-top: 6px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: $Text-3;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      .historyVersions {
+        padding: 0 12px 12px 30px;
+        position: relative;
+        overflow: hidden;
+        .historyVersionItem {
+          padding: 10px 16px;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+          &:hover {
+            background: $Fill-2;
+          }
+          .versionName {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            color: $Text-5;
+          }
+          .right {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: $Text-3;
+            display: inline-flex;
+            align-items: center;
+            .versionTime {
+              text-align: right;
+              color: $Text-3;
+            }
+            .recover {
+              margin-left: 12px;
+              color: $Avatar-6;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .versionBatchFooter {
+        padding: 11px;
+        background: $white;
+        border-top: 1px solid $Fill-3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        .delArea {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          color: $Text-4;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          .recycleBin {
+            display: block;
+          }
+          .recycleBinBlue {
+            display: none;
+          }
+          &:hover {
+            color: $Avatar-6;
+            .recycleBin {
+              display: none;
+            }
+            .recycleBinBlue {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .noDataArea {
+    height: 540px;
+    padding-top: 170px;
+    text-align: center;
+    background: $Fill-2;
+    .noDataText {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      text-align: center;
+      color: #7a8599;
+    }
+  }
+}

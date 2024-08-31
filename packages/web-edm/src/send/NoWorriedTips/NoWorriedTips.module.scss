@@ -1,0 +1,56 @@
+.wrap {
+  background: rgba(255, 181, 76, 0.1);
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .left {
+    display: flex;
+    align-items: center;
+    .intro {
+      margin-left: 6px;
+      color: var(--text-5, #272e47);
+      /* 灵犀桌面2.0/C4.3-Reg12 */
+      font-family: PingFang SC;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    .link {
+      color: var(--label-13, #4759b2);
+      font-family: PingFang SC;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px; /* 166.667% */
+      text-decoration-line: underline;
+      margin-left: 12px;
+    }
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    padding: 2px 0;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
+
+.wrap2 {
+  background-color: #fff;
+  .left {
+    .intro {
+      color: var(---Warning-7, #e5a344);
+      /* 灵犀桌面2.0/C4.3-Reg12 */
+      font-family: PingFang SC;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    .link2 {
+      margin-left: 0;
+    }
+  }
+}

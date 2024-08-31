@@ -1,0 +1,178 @@
+.all-result {
+  position: relative;
+  height: 494px;
+  display: flex;
+  flex-direction: column;
+
+  .multi-version {
+    width: 984px;
+    display: block;
+    position: relative;
+    height: 38px;
+    border-bottom: 1px solid $Line-2;
+    padding: 0px 20px;
+    :global(.ant-tabs > .ant-tabs-nav .ant-tabs-nav-operations) {
+      display: inline-block !important;
+      visibility: visible !important ;
+    }
+    :global(.ant-tabs-nav-list) {
+      width: auto !important;
+    }
+    :global(.ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap) {
+      margin-right: 0px;
+    }
+  }
+  .mail-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    color: $Text-5;
+    span {
+      white-space: pre-wrap !important;
+    }
+    &::-webkit-scrollbar {
+      display: none !important;
+    }
+    max-height: 384px;
+  }
+  .edm-attachments {
+    position: relative;
+    padding: 0 16px;
+    z-index: 1;
+    :global(.attachment-list) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    :global(.attachment-card) {
+      position: relative;
+    }
+  }
+  .content-header {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 12px;
+    margin-right: 20px;
+  }
+}
+.modal-text {
+  :global(.ant-modal-header) {
+    border-bottom: none;
+  }
+  :global(.ant-modal-footer) {
+    padding: 0px 16px;
+  }
+  :global(.ant-modal-body) {
+    padding: 0;
+    position: relative;
+  }
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  .jump {
+    margin: 0;
+    display: flex;
+    span {
+      cursor: pointer;
+      width: 80px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      border: 1px solid #e1e3e8;
+      border-radius: 4px;
+      color: $Text-4;
+      @include p1-3-reg14;
+      margin-right: 12px;
+    }
+    span.disable {
+      cursor: no-drop;
+    }
+  }
+  .operate {
+    margin: 0;
+    display: flex;
+    span {
+      margin-left: 12px;
+      cursor: pointer;
+      width: 76px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      @include p1-3-reg14;
+    }
+    .edit {
+      border: 1px solid #e1e3e8;
+      background: #ffffff;
+      color: $Text-4;
+    }
+    .close {
+      background-color: $Brand-6;
+      color: #ffffff;
+    }
+  }
+}
+
+.page-loading {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  @keyframes fadenum {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  :global(.ant-spin) {
+    display: flex;
+    align-items: center;
+  }
+  :global(.sirius-spin) {
+    display: inline-block;
+  }
+  :global(.ant-spin-dot) {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    animation: fadenum 1s linear infinite;
+  }
+  :global(.ant-spin-text) {
+    @include p1-3-reg14;
+    color: $Text-5;
+  }
+}
+
+.body-area {
+  max-height: 456px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  .ori-content {
+    padding: 20px 20px 0px;
+    width: 606px;
+    flex-shrink: 0;
+    border-right: 1px solid $Line-1;
+  }
+
+  .multi-content {
+    height: 100%;
+    width: 100%;
+    padding: 20px 20px 0px;
+  }
+}

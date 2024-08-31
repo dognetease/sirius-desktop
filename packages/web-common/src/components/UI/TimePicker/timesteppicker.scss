@@ -1,0 +1,64 @@
+@import '../../../styles/common.scss';
+.datePickerDropDown {
+  z-index: 1060;
+  // background: #ffffff;
+  background-color: $white;
+  /* 黑白灰/字体 20% */
+  overflow: hidden;
+  border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  min-width: 66px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.sirius-time-picker-timeli {
+  list-style: none;
+  cursor: pointer;
+  text-align: left;
+  color: $Text-4;
+  @include p1-3-reg14;
+  padding: 5px 12px !important;
+  background-color: #fff !important;
+  &:hover {
+    background: #f0f2f7 !important;
+  }
+}
+
+.sirius-time-picker-wrapper {
+  display: inline-block;
+  .react-datepicker__aria-live {
+    display: none;
+  }
+  .react-datepicker__time-container {
+    width: 70px;
+  }
+  .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box {
+    width: 70px;
+  }
+  .input {
+    width: 56px;
+    color: $Text-5;
+    @include c4-1-reg12;
+    border-radius: 4px;
+    border: 1px solid $Line-3;
+    padding: 7px 11px;
+    &.ant-input:focus,
+    &.ant-input:hover {
+      border: 1px solid $Brand-6;
+      box-shadow: none;
+    }
+  }
+  .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box {
+    width: 90px;
+    border-radius: 4px;
+    border: 0.5px solid $Line-2;
+    background: #fff;
+    box-shadow: 0px 4px 10px 0px rgba(47, 83, 134, 0.12);
+  }
+}

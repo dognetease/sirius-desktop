@@ -1,0 +1,13 @@
+.close-reason {
+  :global(.ant-form-item-label) {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 4px;
+
+    label {
+      font-size: 12px;
+      line-height: 20px;
+      height: 20px;
+    }
+  }
+}

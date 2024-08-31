@@ -1,0 +1,81 @@
+.ai-marketing-enter {
+  :global(.ant-popover-arrow-content) {
+    background-color: #000;
+  }
+  :global(.ant-tooltip-content .ant-tooltip-arrow) {
+    display: initial;
+  }
+  .ai-marketing-text {
+    color: $Brand-6;
+    @include p1-3-reg14;
+    cursor: pointer;
+  }
+  .ai-marketing-custom {
+    width: 64px;
+    height: 24px;
+    color: $Text-5;
+    @include c4-3-reg12;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    background-image: linear-gradient(to right, #efecff, #efecff), linear-gradient(90deg, #9a8dff, #77cfff);
+  }
+  .ai-marketing-btn {
+    padding: 0 15px;
+  }
+  .ai-marketing-dropdown {
+    @include p1-3-reg14;
+    width: 109px;
+    :global(.ant-btn) {
+      background-color: $Brand-6;
+      &:first-child {
+        border-radius: 0;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        min-width: 77px;
+        border-right: 1px solid #5f7dfa;
+        z-index: 2;
+      }
+      &:last-child {
+        border-radius: 0;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        min-width: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-left: 1px solid #5f7dfa;
+      }
+      &:hover {
+        background-color: $Brand-6;
+      }
+    }
+    :global(.anticon) {
+      width: 10px;
+      height: 10px;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .ai-marketing-guide {
+    @include c4-3-reg12;
+    .ai-marketing-know {
+      @include c4-4-med12;
+      color: $Brand-6;
+      padding-left: 12px;
+      cursor: pointer;
+    }
+  }
+}
+
+.ai-marketing-menu {
+  width: 109px;
+  color: $Text-5;
+  padding: 0;
+  border: 1px solid $Line-2;
+}

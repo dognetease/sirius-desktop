@@ -1,0 +1,23 @@
+.user-item {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  color: inherit;
+
+  .avatar {
+    margin-left: 4px;
+    margin-right: 8px;
+    flex: 0 0 32px;
+  }
+
+  .nick-name {
+    width: 100px;
+    color: inherit;
+    font-size: 14px;
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    white-space: nowrap;
+  }
+}

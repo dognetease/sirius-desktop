@@ -1,0 +1,17 @@
+.chat-text {
+  padding: 8px 12px;
+  color: #272e47;
+  font-size: 14px;
+  line-height: 22px;
+  border-radius: 8px;
+  word-break: break-all;
+  min-height: 38px;
+
+  &.receive {
+    border-top-left-radius: 2px;
+  }
+
+  &.send {
+    border-top-right-radius: 2px;
+  }
+}

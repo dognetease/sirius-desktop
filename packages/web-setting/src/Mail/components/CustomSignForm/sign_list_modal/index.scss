@@ -1,0 +1,68 @@
+@import '@web-common/styles/variables.scss';
+
+.sign-list-modal {
+  .ant-modal-header {
+    padding: 20px 20px 16px 20px;
+    border-bottom: none;
+  }
+  .ant-modal-body {
+    padding: 0 20px 4px 20px;
+    height: 388px;
+    overflow-y: auto;
+    scrollbar-width: none; /* firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+    &::-webkit-scrollbar {
+      display: none; /* Chrome Safari */
+    }
+  }
+  .ant-modal-footer {
+    padding: 0;
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $Avatar-6;
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+}
+.no-result-box {
+  margin: 0 -24px;
+  padding: 0 24px;
+  height: 382px;
+  overflow-y: auto;
+  position: relative;
+  .no-result {
+    position: absolute;
+    top: 105px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    &-img {
+      width: 160px;
+    }
+    &-content {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &-info {
+        color: $Text-1;
+        margin-right: 4px;
+      }
+    }
+  }
+}
+.sign-modal-list-item {
+  margin-bottom: 16px;
+}

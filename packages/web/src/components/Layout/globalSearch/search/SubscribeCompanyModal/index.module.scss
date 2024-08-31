@@ -1,0 +1,12 @@
+.virtualTable {
+  padding-bottom: 20px;
+  &-header {
+    &-intro {
+      font-size: 14px;
+      line-height: 24px;
+      color: #747a8c;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+  }
+}

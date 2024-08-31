@@ -1,0 +1,53 @@
+.app-header {
+  height: 67px;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu {
+  background: #ffffff;
+  border: 0.5px solid rgba(38, 42, 51, 0.16);
+  box-shadow: 0px 4px 8px rgba(38, 42, 51, 0.1);
+  border-radius: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  span {
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #232d47;
+  }
+}
+.right {
+  display: inline-flex;
+  align-items: center;
+}
+.btnViewAll {
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  /* identical to box height, or 157% */
+  /* 常规/中性色/文字/Text-5 标题、重要信息 */
+
+  padding: 3px 8px;
+}
+
+.btnCommon {
+  color: #232d47;
+  border-radius: 4px;
+  height: 28px;
+}
+.btnMore {
+  width: 32px;
+  margin-left: 12px;
+  padding: 6px 8px !important;
+  min-width: 32px;
+  text-align: center;
+}

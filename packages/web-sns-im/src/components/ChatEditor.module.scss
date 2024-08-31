@@ -1,0 +1,101 @@
+@import 'src/styles/varies';
+
+.chat-editor {
+  padding: 12px 20px;
+  background-color: #ffffff;
+
+  .editor {
+    height: 100px;
+    overflow: auto;
+
+    :global {
+      .DraftEditor-root,
+      .DraftEditor-editorContainer,
+      .public-DraftEditor-content {
+        height: 100%;
+      }
+
+      .DraftEditor-root {
+        position: relative;
+      }
+
+      .public-DraftEditorPlaceholder-root {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        color: #bfbfbf;
+        pointer-events: none;
+      }
+
+      .public-DraftEditorPlaceholder-inner {
+        position: static;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+
+    .options {
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+
+      .option {
+        margin-right: 16px;
+        cursor: pointer;
+      }
+
+      .emoji-wrapper {
+        position: relative;
+        cursor: default;
+        z-index: 1;
+
+        & > div {
+          display: flex;
+        }
+      }
+
+      .emoji-trigger {
+        cursor: pointer;
+      }
+
+      .emoji-popper {
+        position: absolute;
+        left: 0;
+        bottom: 28px;
+      }
+    }
+
+    .text-exceeded-tip {
+      color: $Error-6;
+      font-size: 12px;
+      line-height: 16px;
+      margin-left: 8px;
+    }
+
+    .send {
+      margin-left: 8px;
+    }
+  }
+}
+
+.chat-editor.disabled {
+  cursor: not-allowed;
+
+  .emoji-trigger {
+    cursor: not-allowed;
+  }
+
+  .option {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  :global(.public-DraftEditorPlaceholder-root) {
+    opacity: 0.5;
+  }
+}

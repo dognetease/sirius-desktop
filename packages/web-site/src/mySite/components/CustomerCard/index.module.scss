@@ -1,0 +1,64 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.customer-card {
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 20px;
+  margin: 0px 0 0px 0;
+  border: 1px solid $Line-1;
+  border-radius: 4px;
+
+  .item {
+    cursor: pointer;
+    width: calc((100% - 32px) / 3);
+    height: 74px;
+    background: $Fill-1;
+    border-radius: 4px;
+    position: relative;
+
+    & > * {
+      position: absolute;
+    }
+
+    &:hover {
+      background: $Fill-2;
+    }
+
+    svg:nth-child(1) {
+      top: 17px;
+      left: 14px;
+    }
+
+    svg:nth-child(4) {
+      right: 16px;
+      top: 29px;
+
+      path {
+        stroke: $Fill-7;
+      }
+    }
+
+    .item1 {
+      top: 16px;
+      left: 48px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      color: $Text-5;
+    }
+
+    .item2 {
+      font-size: 12px;
+      line-height: 22px;
+      color: $Text-3;
+      top: 38px;
+      left: 48px;
+
+      span {
+        font-weight: 500;
+        color: $Brand-6;
+      }
+    }
+  }
+}

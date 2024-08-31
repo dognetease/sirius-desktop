@@ -1,0 +1,154 @@
+// .btn {
+//   width: 76px;
+//   height: 32px;
+//   border-radius: 4px;
+//   font-family: PingFang SC;
+// }
+
+// .cancel {
+//   background: #f0f3f5;
+//   color: #4e5a70;
+//   &:hover {
+//     background: #f0f3f5;
+//     color: #4e5a70;
+//   }
+// }
+
+// .confirm {
+//   background: $Brand-6;
+//   color: #fff;
+//   margin-left: 16px !important;
+//   &:hover {
+//     background: $Brand-6;
+//     color: #fff;
+//   }
+// }
+
+.contact {
+  :global {
+    .ant-modal-header {
+      padding: 20px 24px;
+      @include h1-4-med16();
+      border: none;
+    }
+    .ant-modal-body {
+      padding-top: 0;
+    }
+    .ant-modal-footer {
+      border-top: none;
+    }
+    .ant-modal-close-icon {
+      svg {
+        color: #626e85;
+      }
+    }
+  }
+
+  :global(.ant-tabs-tab) {
+    padding-top: 0;
+    padding-bottom: 7px;
+  }
+  :global(.ant-tabs-ink-bar) {
+    background-color: transparent;
+    &::after {
+      content: '';
+      width: 12px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      background-color: #386ee7;
+      transform: translateX(-50%);
+    }
+  }
+  :global(.ant-tabs-nav) {
+    margin-bottom: 0;
+  }
+
+  &-upload {
+    border: 1px solid #e1e6ed;
+    border-radius: 4px;
+
+    &-dragger {
+      padding: 28px 24px 0 24px;
+
+      border: none !important;
+      background: #fff !important;
+    }
+
+    &-icon {
+      margin-top: 50px;
+      img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    &-title {
+      margin-top: 12px;
+      @include h1-4-med16();
+      color: $label-6_3;
+    }
+
+    &-sub {
+      margin-top: 4px;
+      @include c4-3-reg12();
+      color: #7a8599;
+      a {
+        color: $Brand-6;
+      }
+    }
+
+    &-tip {
+      @include c4-3-reg12();
+      text-align: center;
+      color: #7a8599;
+      margin-bottom: 41px;
+    }
+
+    &-result {
+      padding: 12px;
+
+      &-file {
+        height: 64px;
+        display: flex;
+        align-items: center;
+        background: #f9fafb;
+        border-radius: 3px;
+        svg {
+          &:first-child {
+            width: 25px;
+            margin-left: 23px;
+            margin-right: 11px;
+          }
+          &:last-child {
+            width: 16px;
+            margin-left: auto;
+            margin-right: 21px;
+          }
+        }
+        .content {
+          @include p1-3-reg14();
+          text-overflow: ellipsis;
+          max-width: 300px;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  &-paste {
+    :global {
+      .ant-input {
+        border-color: #e1e3ed;
+      }
+    }
+  }
+
+  &-label {
+    @include p1-3-reg14();
+    color: #232d47;
+    margin: 24px 0 8px 0;
+  }
+}

@@ -1,0 +1,208 @@
+@import '@web-common/styles/variables.scss';
+$input-height: 60px;
+
+.wrapper {
+  .head {
+    height: 390px;
+    background: url('https://cowork-storage-public-cdn.lx.netease.com/common/2023/12/06/2e61aa7312d54731b9db058ba3d0bc67.png') center center no-repeat;
+    background-size: 1220px 390px;
+    background-color: #272d4d;
+    position: relative;
+    padding-top: 119px;
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    /* identical to box height, or 138% */
+    color: #ffffff;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .desc {
+    font-weight: 400;
+    font-size: 12px;
+    height: 20px;
+    color: #ffffff;
+    text-align: center;
+    > span {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 36px;
+
+      > svg {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .search {
+    margin: 70px 103px 0;
+  }
+
+  .companyTabs {
+    :global(.ant-tabs-tab) {
+      // background-color: #f4f6f7;
+      border-radius: 72px;
+      // min-width: 80px;
+      padding: 0 16px;
+      height: 28px;
+      font-size: 12px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+
+    :global(.ant-tabs-tab.ant-tabs-tab-active) {
+      background-color: $Avatar-6;
+
+      :global(.ant-tabs-tab-btn) {
+        color: #fff;
+      }
+    }
+
+    :global(.ant-tabs-ink-bar) {
+      display: none;
+    }
+
+    :global(.ant-tabs-tab + .ant-tabs-tab) {
+      margin-left: 12px;
+    }
+  }
+
+  .inputWrap {
+    display: flex;
+    // border: 1px solid $Fill-3;
+    border-radius: 5px;
+    position: relative;
+    transition: border-color 0.3s ease;
+    align-items: center;
+    padding: 19px 0;
+    height: $input-height;
+    background: #fff;
+    margin-top: 12px;
+
+    & > *:first-child {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+
+    & > *:last-child {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &:hover {
+      border-color: #386ee7;
+    }
+
+    :global(.ant-input-affix-wrapper) {
+      border-width: 0 !important;
+      background-color: #fff;
+    }
+
+    :global(.ant-select-selector) {
+      height: $input-height;
+      padding: 0 16px;
+      width: 111px;
+      border-right: 0;
+      border-radius: 4px 0 0 4px !important;
+      border-width: 0;
+      background-color: #fff;
+    }
+
+    :global(.ant-select-arrow) {
+      height: 16px;
+      width: 16px;
+      top: 45%;
+      right: 18px;
+    }
+
+    :global(.ant-select-selection-item) {
+      height: $input-height;
+      line-height: $input-height;
+      color: #232d47;
+      font-size: 14px;
+    }
+
+    :global(.ant-input-affix-wrapper) {
+      padding: 4px 20px;
+
+      :global(.ant-input-prefix) {
+        margin-right: 8px;
+      }
+    }
+
+    .inputPreIcon {
+      color: $Fill-7;
+    }
+
+    :global(.ant-input-affix-wrapper-focused) .inputPreIcon {
+      color: $Avatar-6;
+    }
+  }
+
+  .searchBtn {
+    width: 104px;
+    height: 60px;
+  }
+
+  .divider {
+    height: 28px;
+    margin: 0 16px;
+  }
+
+  .tipIcon {
+    margin-right: 20px;
+    color: rgba(63, 70, 92, 1);
+  }
+}
+
+.content {
+  margin: 30px 103px;
+  background: #fff;
+  border: 1px solid $Fill-3;
+  border-radius: 4px;
+
+  .contentTitle {
+    font-weight: bold;
+    font-size: 14px;
+    color: $Text-5;
+    padding: 20px 20px 0;
+  }
+
+  .descCard {
+    // max-width: 324px;
+    min-height: 160px;
+    padding: 20px;
+    display: flex;
+    // background: $Fill-1;
+    border-radius: 4px;
+    text-align: left;
+
+    .descIcon {
+    }
+
+    .descContent {
+      padding-left: 15px;
+      flex: 1;
+    }
+
+    .descTitle {
+      font-weight: bold;
+      font-size: 16px;
+      color: $Text-5;
+    }
+
+    .descText {
+      padding-top: 8px;
+      font-size: 14px;
+      color: $Text-4;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@import '../../../../web/src/styles/varies.scss';
+
+.selectWrapper {
+  :global(.ant-select-selection-item) {
+    background-color: #ffffff;
+    border: none;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+  }
+
+  :global(.ant-select-selector) {
+    max-height: 230px;
+    @include sirius-scroll();
+  }
+}
+
+.tagWrapper {
+  display: inline-block;
+  background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+  border-radius: 12px;
+  padding: 2px 8px 2px 2px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin: 4px;
+  height: 24px;
+
+  &.tagWrapperError {
+    background: rgba($color: #f74f4f, $alpha: 0.1);
+  }
+
+  .tagAvatar {
+    margin-right: 4px;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    line-height: 20px;
+    text-align: center;
+    color: #ffffff;
+    flex: none;
+  }
+
+  .tagName {
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    @include ellipsis-text();
+    max-width: 128px;
+
+    &-error {
+      color: #f74f4f;
+    }
+  }
+
+  .tagClose {
+    cursor: pointer;
+    color: #262a33;
+    margin-left: 4px;
+  }
+}
+
+.optionWrapper {
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  font-size: 12px;
+
+  b {
+    color: #386ee7;
+  }
+
+  .optionDepart {
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.4);
+  }
+}

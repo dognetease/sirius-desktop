@@ -1,0 +1,99 @@
+@import '@web-common/styles/variables.scss';
+
+.customs-freight {
+  padding: 16px;
+
+  :global {
+    .customs-scroll-box {
+      position: absolute;
+      left: 0px !important;
+      bottom: 4px !important;
+    }
+  }
+
+  :global(.ant-table-thead th) {
+    border-bottom: 1px solid rgba(38, 42, 51, 0.08) !important;
+  }
+
+  :global(.freight-edm-table .ant-table) {
+    border-radius: 0px;
+    border: none;
+  }
+
+  :global {
+    .ant-table-expanded-row-fixed {
+      min-height: 200px;
+    }
+
+    .ant-table-container table > thead > tr:first-child th:first-child {
+      padding-left: 0;
+    }
+
+    .ant-table-container .ant-table-tbody tr td:first-child {
+      padding-left: 0;
+    }
+  }
+
+  :global(.ant-table-column-sorter-up.active),
+  :global(.ant-table-column-sorter-down.active) {
+    color: #1890ff !important;
+  }
+}
+
+.echar {
+  &-content {
+    height: 348px;
+    background: $Fill-1;
+    padding: 20px;
+    margin-bottom: 12px;
+
+    :global {
+      .ant-tabs-nav {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-time {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+}
+
+.tip {
+  width: 262px;
+  border-radius: 4px;
+  border: 1px solid $Line-1;
+  background: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(47, 83, 134, 0.12);
+  padding: 16px;
+
+  :global {
+    .ant-table-tbody > tr > td {
+      padding: 12px 16px !important;
+    }
+
+    .ant-table-container table > thead > tr th {
+      padding: 12px 16px !important;
+    }
+  }
+
+  header {
+    font-weight: 500;
+    line-height: 22px;
+    color: $Text-5;
+    margin-bottom: 12px;
+  }
+}
+
+.link {
+  cursor: pointer;
+  color: #386ee7;
+}

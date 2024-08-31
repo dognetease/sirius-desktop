@@ -1,0 +1,337 @@
+@import '@web-common/styles/variables.scss';
+.wrapper {
+  :global {
+    .ant-tabs {
+      overflow: visible !important;
+    }
+    .ant-tabs-nav-wrap {
+      overflow: visible !important;
+    }
+  }
+}
+.start-table-box {
+  :global(.ant-table-column-sorter-up.active),
+  :global(.ant-table-column-sorter-down.active) {
+    color: #1890ff !important;
+  }
+
+  :global {
+    .edm-table .ant-table {
+      border: none;
+      border-radius: 0;
+      tr.ant-table-row {
+        &:nth-of-type(odd) {
+          background-color: $Fill-1;
+          .ant-table-cell-fix-right {
+            background-color: $Fill-1;
+          }
+        }
+      }
+    }
+    .edm-table .ant-table-thead > tr > th,
+    .edm-table .ant-table-tbody > tr > td {
+      padding: 12px 16px;
+      line-height: 22px;
+    }
+  }
+
+  .company-name-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    .updateTag {
+      background: $label-2_1;
+      border-radius: 2px;
+      line-height: 16px;
+      height: 20px;
+      padding: 2px 6px;
+      font-size: 12px;
+      color: $label-2_3;
+      flex-shrink: 0;
+    }
+    &-new::before {
+      display: block;
+      background: $Error-6;
+      height: 6px;
+      width: 6px;
+      border-radius: 3px;
+      content: '';
+      position: absolute;
+      left: -12px;
+      top: 50%;
+      margin-top: -3px;
+    }
+
+    .company-text {
+      display: none;
+    }
+
+    &:hover {
+      .company-text {
+        display: flex;
+      }
+    }
+
+    .company-text-star {
+      display: flex;
+    }
+  }
+
+  .label {
+    box-sizing: border-box;
+    color: rgb(107, 169, 255);
+    max-width: 66px;
+    background-color: rgb(240, 246, 255);
+    padding: 4px;
+    font-size: 12px;
+    border-radius: 2px;
+    height: 20px;
+    margin-right: 5px;
+  }
+
+  .label-clue {
+    color: #70ccab;
+    background: rgba(112, 204, 171, 0.1);
+  }
+
+  .opCell {
+    span {
+      color: $Avatar-6;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 22px;
+      margin: 0 12px;
+      position: relative;
+      &::after {
+        position: absolute;
+        width: 0;
+        height: 14px;
+        border-right: 1px solid $Fill-4;
+        right: -13px;
+        content: '';
+        display: block;
+        top: 50%;
+        margin-top: -7px;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.dataLogWrapper {
+  max-height: 600px;
+
+  .dataLogItem {
+    margin-bottom: 16px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    &-title {
+      margin: 0;
+      font-size: 12px;
+      line-height: 20px;
+      color: $Text-3;
+    }
+    ul.dataLogUl {
+      margin: 0;
+      display: block;
+      list-style-type: disc;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 1em;
+      li {
+        list-style: none;
+        font-size: 14px;
+        line-height: 22px;
+        color: $Text-5;
+        margin-top: 8px;
+        position: relative;
+        &::before {
+          content: '';
+          width: 5px;
+          height: 5px;
+          display: inline-block;
+          position: absolute;
+          border-radius: 50%;
+          background-color: $Text-5;
+          left: -12px;
+          top: 8px;
+        }
+        .dataLogLink {
+          cursor: pointer;
+          color: $Avatar-6;
+          padding-left: 8px;
+        }
+      }
+    }
+  }
+}
+
+.increase {
+  color: $Error-6;
+}
+
+.multiOpCell {
+  width: 134px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.opCell {
+  cursor: pointer;
+  color: #4c6aff;
+}
+
+.opCellDisabled {
+  cursor: not-allowed;
+  color: #b7c3ff;
+}
+
+.customs-body {
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid $Fill-3;
+  border-radius: 4px;
+  margin-top: 12px;
+  :global {
+    .ant-table-tbody {
+      .ant-table-row {
+        .ant-table-cell {
+          vertical-align: top;
+        }
+      }
+    }
+  }
+}
+
+.tableTips {
+  font-size: 12px;
+  line-height: 20px;
+  color: #747a8c;
+}
+
+.tableAlert {
+  font-size: 12px;
+  line-height: 20px;
+  color: #272e47;
+  margin-bottom: 12px;
+  padding: 5px 12px;
+  border: none;
+  background-color: rgba(76, 106, 255, 0.1);
+}
+
+.tableOps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.opBtn {
+  margin-left: 8px !important;
+}
+
+.filter {
+  display: flex;
+  border-radius: 4px;
+  border: 1px solid #f0f1f5;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0 16px 16px;
+  background-color: #ffffff;
+  margin-bottom: 12px;
+  :global {
+    .lx-date-picker-range .ant-picker-input.ant-picker-input-active > input::placeholder {
+      color: #9fa2ad !important;
+    }
+    .lx-ui-date-picker-range .ant-picker-input.ant-picker-input-active > input::placeholder {
+      color: #9fa2ad !important;
+    }
+  }
+}
+
+.filterItem {
+  display: flex;
+  margin-top: 16px;
+  align-items: center;
+  margin-right: 36px;
+  flex-shrink: 0;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.filterInput {
+  width: 300px;
+}
+
+.filterLabel {
+  color: #545a6e;
+  flex-shrink: 0;
+  margin-right: 12px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.isOpacity {
+  opacity: 0.6;
+}
+
+.totalText {
+  display: flex;
+  align-items: center;
+  color: #272e47;
+}
+
+.extraNum {
+  color: #4c6aff;
+}
+.companyNameStar {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 16px;
+}
+.rowContainer {
+  .companyNameStarIcon {
+    display: none;
+  }
+  &:hover {
+    .companyNameStarIcon {
+      display: inline;
+    }
+  }
+}
+
+.redPoint {
+  display: block;
+  position: absolute;
+  left: -13px;
+  top: 7px;
+  height: 8px;
+  width: 8px;
+  background-color: #fe5b4c;
+  border-radius: 4px;
+}
+
+.tabNum {
+  position: absolute;
+  right: -5px;
+  top: -8px;
+}

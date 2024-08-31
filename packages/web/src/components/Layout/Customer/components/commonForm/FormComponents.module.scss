@@ -1,0 +1,109 @@
+.contact-item-card {
+  background: #f9fafb;
+  border-radius: 4px;
+  padding: 20px 20px 16px;
+  width: 360px;
+  margin-bottom: 16px;
+}
+.contact-delete {
+  cursor: pointer;
+  float: right;
+  font-size: 14px;
+  color: #51555c;
+  line-height: 16px;
+  svg {
+    vertical-align: bottom;
+  }
+}
+.form-components-wrap {
+  padding-bottom: 20px;
+  :global(.ant-input:focus) {
+    box-shadow: none !important;
+  }
+  :global {
+    .ant-form-item {
+      margin-bottom: 16px; // 此值会影响错误提示
+      .ant-form-item-label {
+        padding-bottom: 4px;
+        label {
+          height: 20px;
+          line-height: 20px;
+          font-size: 12px;
+        }
+      }
+      // 更改错误提示的大小
+      .ant-form-item-explain-success,
+      .ant-form-item-explain-error {
+        min-height: 16px;
+        line-height: 16px;
+        font-size: 12px;
+      }
+    }
+    .ant-form-item-with-help {
+      margin-bottom: 0px; // 此值会影响错误提示
+    }
+    // 上传upload间距问题
+    .form-item-company_name_box,
+    .form-item-contact_name_box {
+      .ant-space-item:last-child {
+        position: absolute;
+        right: -72px;
+        width: 56px;
+      }
+      .ant-form-item-explain-error {
+        width: 80%;
+      }
+    }
+    // 控制space下的form-item，如电话等多个情况
+    .ant-space {
+      .ant-space-item {
+        .ant-form-item {
+          margin-bottom: 0;
+        }
+        .form-item-social_media,
+        .form-item-social_media-number,
+        .form-item-social_media-handler,
+        .form-item-social_platform,
+        .form-item-social_platform-number,
+        .form-item-social_platform-handler {
+          margin-bottom: 16px;
+          &.ant-form-item-with-help {
+            margin-bottom: 0px;
+          }
+        }
+      }
+    }
+    // radio 单选框
+    .ant-radio-wrapper {
+      height: 16px;
+      line-height: 16px;
+      align-items: center;
+      margin-bottom: 16px;
+      .ant-radio {
+        top: 0;
+      }
+      span {
+        color: #51555c;
+      }
+      svg {
+        vertical-align: bottom;
+      }
+    }
+    // checkbox
+    .ant-checkbox-wrapper {
+      height: 16px;
+      line-height: 16px;
+      align-items: center;
+      margin-bottom: 16px;
+      .ant-checkbox {
+        top: 0;
+      }
+      span {
+        color: #51555c;
+      }
+      svg {
+        vertical-align: bottom;
+      }
+    }
+  }
+}

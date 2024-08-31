@@ -1,0 +1,51 @@
+@import '@web-common/styles/variables.scss';
+
+.container {
+  position: fixed;
+  z-index: 10;
+}
+.tooltip {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  left: unset !important;
+  top: unset !important;
+  max-width: 280px;
+  :global(.ant-tooltip-content) {
+    background: #386ee7;
+    font-weight: 500;
+    p {
+      font-style: normal;
+      @include p1-4-med14();
+    }
+  }
+  .close-tooltips-btn {
+    float: right;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+}
+.action-group {
+  display: flex;
+  justify-content: space-between;
+}
+.closeBtn,
+.closeBtn:hover,
+.closeBtn:focus,
+.closeBtn:active {
+  background: transparent;
+  @include c4-3-reg12();
+  color: #fff;
+  border: none;
+}
+.openBtn {
+  @include c4-1-reg12();
+  text-align: center;
+  color: #386ee7;
+  border: none;
+  &:hover,
+  &:active,
+  &:focus {
+    color: #386ee7;
+  }
+}

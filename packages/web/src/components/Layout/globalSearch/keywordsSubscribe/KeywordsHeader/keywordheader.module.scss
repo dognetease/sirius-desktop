@@ -1,0 +1,72 @@
+@import '@web-common/styles/variables.scss';
+.header {
+  padding: 0;
+  margin-bottom: 12px;
+  :global {
+    .ant-page-header-heading-left {
+      align-items: baseline;
+      margin: 0;
+    }
+  }
+  .subTitle {
+    display: flex;
+    align-items: center;
+  }
+
+  .subTitleText {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 10px;
+  }
+}
+
+.subHeader {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 12px;
+  justify-content: space-between;
+  border-radius: 4px 4px 0 0;
+  border: 1px solid $Fill-3;
+  border-bottom: none;
+  background: #ffffff;
+  .buttonDanger {
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 12px;
+    transition: none;
+    min-width: 80px;
+    height: 32px;
+    background: #ff4d4f;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.5715;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+    text-transform: none;
+    overflow: visible;
+    margin: 0;
+    &:hover {
+      background: #ff7875;
+    }
+  }
+}
+
+.syncIcon {
+  font-size: 16px;
+}
+.reflesh {
+  color: #396ee7;
+  cursor: pointer;
+  font-size: 12px;
+  padding-left: 4px;
+}

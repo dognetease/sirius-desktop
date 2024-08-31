@@ -1,0 +1,46 @@
+@import '../../../../../../web/src/styles/varies';
+.wrap {
+  width: 480px;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  .title {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+    flex: none;
+    box-sizing: border-box;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 56px;
+    color: $font-color-2;
+    .titleName {
+      display: flex;
+      align-items: center;
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 16px;
+      // color: #262a33;
+      color: $font-color-2;
+    }
+    .close {
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+      background-size: 100% 100%;
+      background-image: url('../../../../../../web/src/images/icons/contact_modal_close.svg');
+    }
+  }
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,154 @@
+.container {
+  padding: 20px;
+  background: #fff;
+
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+
+  .field {
+    padding: 10px 0;
+    .label {
+      width: 85px;
+    }
+    .item {
+    }
+  }
+
+  .addBtn {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .operate {
+    padding-top: 14px;
+    text-align: right;
+  }
+
+  .btnSecond {
+    background: #f0f3f5;
+    color: $label-6_3;
+  }
+}
+
+.col {
+  padding-bottom: 20px;
+}
+
+.colNew {
+  padding-bottom: 8px;
+  margin-right: 24px;
+}
+
+.filterLabel {
+  display: inline-block;
+  width: 75px;
+  color: var(--text-5, #272e47);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 32px;
+  vertical-align: middle;
+}
+
+.filterLabelNew {
+  display: inline-block;
+  margin-right: 12px;
+  color: var(--text-5, #272e47);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 32px;
+  vertical-align: middle;
+}
+
+.breadcrumb {
+  padding-bottom: 10px;
+
+  :global(.ant-breadcrumb > span) {
+    color: #4e5969;
+    cursor: pointer;
+  }
+
+  :global(.ant-breadcrumb > span:last-child) {
+    font-weight: bold;
+    font-size: 14px;
+    color: #1d2129;
+    cursor: default;
+  }
+}
+
+.search {
+  position: relative;
+  background: #fff;
+  height: auto;
+  padding: 20px 55px 0 20px;
+  transition: height 0.3s ease;
+  overflow: hidden;
+  margin-bottom: 16px;
+
+  .searchExpand {
+    color: $Brand-6;
+    position: absolute;
+    right: 20px;
+    top: 24px;
+    cursor: pointer;
+    z-index: 100;
+  }
+}
+
+.inputWrapper {
+  border-color: #d9d9d9;
+}
+
+.table {
+  :global(.ant-table-thead .ant-table-cell) {
+    background: #fff;
+    color: #7a8599;
+    font-weight: 400;
+    font-size: 14px;
+    border-bottom: 1px solid #f0f3f5;
+  }
+
+  :global(.ant-table-header) {
+    border-radius: 8px;
+  }
+
+  :global(.ant-table-cell) {
+    &::before {
+      display: none;
+    }
+  }
+
+  :global(.ant-pagination) {
+    margin-right: 20px;
+  }
+}
+
+.markerDataContainer {
+  border-radius: 4px;
+  background: var(--white, #fff);
+  padding: 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.markerDataContainerTitle {
+  color: var(--text-5, #272e47);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 16px;
+}
+
+.cellContainer {
+  display: flex;
+  .contactEmail {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 4px;
+  }
+}

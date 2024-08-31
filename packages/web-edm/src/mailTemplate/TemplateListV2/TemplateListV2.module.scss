@@ -1,0 +1,102 @@
+@import '@/styles/varies.scss';
+
+.aggregation-wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 16px;
+  .aggregation-list {
+    display: flex;
+    // align-items: center;
+    .aggregation-label {
+      color: var(--text-4, #545a6e);
+      /* 灵犀桌面2.0/P1.3-Reg14 */
+      font-family: PingFang SC;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      margin-right: 4px;
+      white-space: nowrap;
+    }
+    .aggregation-right {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: -12px;
+    }
+    :global(.ant-tabs-nav) {
+      margin: 0;
+    }
+  }
+}
+.card-list {
+  padding: 0 16px 16px;
+  margin-right: -12px;
+  margin-bottom: -12px;
+  .card-item {
+    vertical-align: top;
+    display: inline-block;
+    margin-right: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+.my-radio {
+  margin-left: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  background: #f6f7fa;
+  border-radius: 16px;
+  padding: 0 12px;
+  height: 24px;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  width: 72px;
+  text-align: center;
+  white-space: nowrap;
+  /* identical to box height, or 167% */
+
+  /* 文字/Text-3次要信息 */
+
+  color: #747a8c;
+  &.active-radio {
+    padding: 0 11px;
+    border: 1px solid var(--brand-6, #4c6aff);
+    background: var(--brand-2, #eff2ff);
+    color: var(--brand-6, #4c6aff);
+    /* 灵犀桌面2.0/C4.4-Med12 */
+    font-family: PingFang SC;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    // line-height: 20px;
+  }
+}
+.modal-radio {
+  background-color: #fff;
+}
+
+.ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.no-result {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 16px;
+  }
+  div {
+    display: inline-block;
+    color: var(--Text-5, #272e47);
+  }
+}

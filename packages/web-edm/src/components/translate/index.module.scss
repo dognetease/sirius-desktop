@@ -1,0 +1,27 @@
+.translate-box {
+  display: flex;
+  width: 46px;
+  height: 26px;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid $Line-3;
+  border-radius: 2px;
+  margin: 0;
+  span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    font-weight: 600;
+    font-size: 12px;
+    color: $Text-3;
+    cursor: pointer;
+  }
+  span.checked {
+    color: #fff;
+    background-color: $Brand-6;
+    border-radius: 1px;
+  }
+}

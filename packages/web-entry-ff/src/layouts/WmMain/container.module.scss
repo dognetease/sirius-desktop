@@ -1,0 +1,200 @@
+@import './pageStyles/customer.module.scss';
+
+.render-container {
+  background-color: #f9fafb;
+  /* 设置滚动条的样式 */
+  &::-webkit-scrollbar {
+    width: 6px;
+    background: #fff;
+  }
+  /* 滚动槽 */
+  &::-webkit-scrollbar-track {
+    border-radius: 6px;
+  }
+  /* 滚动条滑块 */
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: rgba(38, 42, 51, 0.3);
+    padding: 4px;
+  }
+  .ant-table-content,
+  .ant-table-body {
+    &::-webkit-scrollbar {
+      // display: none;
+      opacity: 0;
+      width: 6px;
+      background-color: transparent;
+      height: 6px;
+      // background-color: transparent;
+    }
+    &:hover {
+      &::-webkit-scrollbar {
+        opacity: 1;
+        display: block;
+        background-color: transparent;
+        width: 6px;
+        padding-right: 4px;
+        &:horizontal {
+          height: 6px;
+        }
+      }
+      /*滚动条两端方向按钮*/
+      &::-webkit-scrollbar-button {
+        display: none;
+      }
+      /*滚动条中间滑动部分*/
+      &::-webkit-scrollbar-thumb {
+        background: #d4d4d6;
+        border-radius: 3px;
+        padding-right: 4px;
+        // right: 4px;
+        width: 6px;
+        opacity: 0;
+        &:hover {
+          background: #dddddd;
+        }
+      }
+      /*滚动条右下角区域*/
+      &::-webkit-scrollbar-corner {
+        display: none;
+      }
+    }
+    table {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+  :global(.ant-select:not(.ant-select-disabled)) {
+    :global(.ant-select-selector) {
+      &:hover {
+        border-color: #386ee7;
+      }
+    }
+    :global(.ant-select-selector) {
+      &:hover {
+        border-color: #386ee7;
+      }
+    }
+  }
+  :global {
+    .ant-input:focus,
+    .ant-input:hover,
+    .ant-input-focused {
+      border-color: #386ee7;
+      box-shadow: none;
+    }
+    .ant-picker:focus,
+    .ant-picker:hover:not(.ant-picker-disabled),
+    .ant-picker-focused {
+      border-color: #386ee7;
+    }
+  }
+  :global(.ant-picker-active-bar) {
+    display: none;
+  }
+  :global(.ant-select-selector) {
+    border-radius: 4px;
+  }
+  :global(.ant-picker-panel-container) {
+    border-radius: 6px;
+  }
+  :global(.ant-table-tbody > tr.ant-table-row-selected > td),
+  :global(.ant-table-tbody > tr.ant-table-row:hover > td) {
+    background: #f0f0f1;
+  }
+  :global(.ant-table-ping-right:not(.ant-table-has-fix-right) .ant-table-container::after) {
+    box-shadow: none;
+  }
+
+  :global(td.ant-table-column-sort) {
+    background-color: inherit;
+  }
+  :global(.odd td) {
+    background-color: #f8f9fa;
+  }
+  :global(.ant-table-header) {
+    table {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+  }
+  :global(.ant-table-body) {
+    table {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+  }
+  :global(.ant-cascader-menu-item-active) {
+    &:hover {
+      background-color: #f0f0f1;
+    }
+    color: #386ee7;
+    background-color: #f0f0f1;
+    font-weight: normal;
+  }
+
+  :global(.pagination-wrap) {
+    color: #7d8085;
+    float: right;
+    display: flex;
+    height: 56px;
+    box-sizing: border-box;
+    align-items: center;
+    :global(.ant-pagination-item) {
+      border-radius: 4px;
+      border: none;
+      line-height: 24px;
+      a {
+        padding: 0 10px;
+        color: #7d8085;
+      }
+    }
+    :global(.ant-pagination-item-active) {
+      background: #386ee7;
+      border-color: #386ee7;
+      margin: 0 4px;
+    }
+    :global(.ant-pagination-item-active) a {
+      color: #ffffff;
+      padding: 0 6px;
+    }
+    :global(.ant-select-item) {
+      border-radius: 4px;
+      min-width: 20px;
+    }
+    :global(.ant-select-item-option-selected) {
+      background-color: #f0f0f1;
+      :global(.ant-select-item-option-content) {
+        color: #386ee7;
+        font-weight: normal;
+      }
+    }
+    :global(.ant-pagination-options) {
+      :global(.ant-select):not(:global(.ant-select-focused)) {
+        :global(.ant-select-selector) {
+          background: #f4f6f7;
+          color: #7d8085;
+          border-color: transparent;
+          border-radius: 4px;
+          align-items: center;
+        }
+      }
+      :global(.ant-select-selection-item) {
+        color: #7d8085;
+      }
+      :global(.ant-select-selection-search) {
+        color: #7d8085;
+      }
+    }
+  }
+}
+
+.resSlot {
+  height: 48px;
+  width: 100%;
+  background: #4162ff;
+  cursor: pointer;
+  > img {
+    height: 48px;
+  }
+}

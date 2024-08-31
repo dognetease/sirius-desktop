@@ -1,0 +1,56 @@
+@import '@web-common/styles/variables.scss';
+
+.authorize {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  .info {
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    > p {
+      color: $Text-5;
+      font-weight: 600;
+      line-height: 45px;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .main {
+      .item {
+        margin-bottom: 20px;
+        .title {
+          display: block;
+          margin-bottom: 8px;
+          color: $Text-5;
+          font-weight: 500;
+          > svg {
+            margin-right: 6px;
+          }
+        }
+        .desc {
+          color: $Text-3;
+        }
+      }
+    }
+
+    .btn {
+      background-color: $Brand-6;
+      height: 32px;
+      margin-right: auto;
+      padding: 7px 54px;
+      line-height: 1;
+    }
+  }
+
+  .thumbnail {
+    > img {
+      width: 519px;
+      height: 371px;
+    }
+  }
+}

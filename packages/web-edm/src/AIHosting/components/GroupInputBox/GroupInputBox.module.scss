@@ -1,0 +1,42 @@
+.group-input-box {
+  .select {
+    min-width: 112px;
+    width: 100%;
+  }
+}
+
+.dropdown-operation {
+  position: relative;
+  margin: 0 12px;
+  .dropdown-input {
+    margin: 4px 0;
+  }
+  .dropdown-btns {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    @include c4-3-reg12;
+    color: $Brand-6;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 10;
+  }
+  .error-tip {
+    @include c4-3-reg12;
+    color: $Error-6;
+    display: block;
+    margin: 5px 0;
+  }
+}
+
+.dropdown-create {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 12px;
+  color: $Text-4;
+  &:hover {
+    background-color: $Fill-2;
+  }
+}

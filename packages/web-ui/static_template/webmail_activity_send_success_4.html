@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;">
+</head>
+<body style="width: 100%;margin: 0; padding: 0;" th:object="${data}">
+    <div>亲爱的<span th:text="${data.receiveUserName}"></span>：</div>
+    <br>
+    <div>&emsp;&emsp;您好！感谢您参加《企业邮箱全新改版，限时体验领福利》活动。您的奖品“35天有道云笔记会员”兑换码为<span th:text="${data.yNoteCode}"></span>，兑换码有效期为一年。
+    <div>&emsp;&emsp;点击网址使用兑换码：<a href="https://note.youdao.com/vipexchange/" target="_blank">https://note.youdao.com/vipexchange/</a></div>
+    <div>&emsp;&emsp;如有疑问，可联系kf@office.163.com。</div>
+    <br>
+    <div>&emsp;&emsp;祝您工作顺利！</div>
+    <br>
+    <div>&emsp;&emsp;网易企业邮箱</div>
+</body>
+</html>

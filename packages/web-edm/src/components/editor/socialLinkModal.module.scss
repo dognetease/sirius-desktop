@@ -1,0 +1,204 @@
+.mailEditorSocialLinkModal {
+  :global(.ant-modal-header) {
+    border-bottom: none;
+  }
+
+  :global(.ant-modal-body) {
+    // padding-top: 0;
+    // padding-bottom: 0;
+    padding: 12px 24px;
+  }
+
+  :global(.ant-modal-close) {
+    display: none;
+  }
+
+  :global(.ant-modal-footer) {
+    border-top: none;
+    padding: 4px 24px 16px 24px;
+    display: none;
+  }
+
+  :global(.ant-modal-close-x) {
+    transform: scale(1.3);
+  }
+
+  .content {
+    height: 526px;
+    display: flex;
+    flex-direction: column;
+    & > div {
+      flex-shrink: 0;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      .title {
+        font-family: 'PingFang SC';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        color: #272e47;
+      }
+      .close {
+        cursor: pointer;
+      }
+    }
+    .input-list {
+      margin-top: 24px;
+      flex-grow: 1;
+      height: 0;
+      overflow-y: overlay;
+      margin-bottom: -12px;
+    }
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-top: 12px;
+    }
+  }
+  .iconList {
+    // display: flex;
+    // font-size: 0;
+    // margin-right: -23px;
+    // margin-bottom: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 -7px;
+
+    .iconwrap {
+      cursor: pointer;
+      // margin-right: 23px;
+      // margin-bottom: 20px;
+      display: inline-block;
+      // flex-direction: column;
+      // align-items: center;
+      .icon-box {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        // overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // margin-bottom: 8px;
+        margin: 0 auto 8px;
+        .icon {
+          width: 24px;
+          height: 24px;
+        }
+        .iconactive {
+          width: 24px;
+          height: 24px;
+        }
+      }
+      .icon-box1 {
+        display: none;
+      }
+      &.active,
+      &:hover {
+        // .icon {
+        //   display: none;
+        // }
+        // .iconactive {
+        //   display: block;
+        // }
+        .icon-box {
+          display: none;
+        }
+        .icon-box1 {
+          display: flex;
+        }
+      }
+    }
+
+    // .iconactive {
+    //   display: none;
+    // }
+
+    .link-info {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      /* identical to box height, or 133% */
+
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      /* 中性色-文字/Text-2提示信息 */
+
+      color: #9fa2ad;
+    }
+  }
+
+  .input {
+    // padding-top: 24px;
+    margin-bottom: 12px;
+    background: #f6f7fa;
+    border-radius: 4px;
+    padding: 12px 24px 24px;
+    .input-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2px;
+      & > div {
+        display: flex;
+        align-items: center;
+      }
+      .input-left {
+        .left-icon {
+          width: 16px;
+          height: 16px;
+          margin-right: 6px;
+        }
+        .left-title {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          /* identical to box height, or 157% */
+
+          display: flex;
+          align-items: center;
+
+          /* 中性色-文字/Text-5标题-重要信息 */
+
+          color: #272e47;
+        }
+      }
+      .input-right {
+        cursor: pointer;
+        .right-icon {
+          width: 16px;
+          height: 16px;
+          margin-right: 4px;
+        }
+        .right-title {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          display: flex;
+          align-items: center;
+          color: #545a6e;
+        }
+      }
+    }
+    .input-form {
+      // background-color: red;
+      :global(.ant-form-item-label) {
+        width: 49px;
+      }
+    }
+    :global(.ant-form-item) {
+      margin: 16px 0 0 !important;
+    }
+  }
+  .input-box {
+    border-radius: 4px !important;
+  }
+}

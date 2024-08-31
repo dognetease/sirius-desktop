@@ -1,0 +1,11 @@
+.priorityText {
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+  white-space: nowrap;
+  .withdraw {
+    padding-left: 24px;
+    color: $Brand-5;
+    cursor: pointer;
+  }
+}

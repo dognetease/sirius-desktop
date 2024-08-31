@@ -1,0 +1,480 @@
+@import './../../../../web/src/styles/varies.scss';
+
+.staticPageWrap {
+  .pageTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .ArrowLeftWrap {
+      display: flex;
+      align-items: center;
+      &:hover {
+        cursor: pointer;
+      }
+      .ArrowLeft {
+        width: 22px;
+        height: 22px;
+        background-image: url('@/images/icons/disk/arrow_left.svg');
+        background-size: 100% 100%;
+      }
+      .mainPage {
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+        font-size: 14px;
+        &:hover {
+          color: #386ee7;
+        }
+      }
+      > span {
+        margin-left: 8px;
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 20px;
+        // color: #262a33;
+        color: $font-color-2;
+      }
+    }
+    .staticSearch {
+      width: 188px;
+      height: 28px;
+      // background: #ffffff;
+      background-color: $white;
+      border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.11);
+      box-sizing: border-box;
+      border-radius: 4px;
+      :global(.ant-input) {
+        font-size: $sub-font-size;
+        line-height: $sub-font-size;
+      }
+      &:hover {
+        border-color: $main-enhance-color;
+      }
+    }
+  }
+  .selectGroup {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .select-over {
+      width: 110px;
+      &:global(.ant-select .ant-select-selector) {
+        height: 32px;
+      }
+      &:global(.ant-select .ant-select-selector .ant-select-selection-item) {
+        height: 30px;
+        line-height: 30px;
+      }
+      &:global(.ant-select .ant-select-selector .ant-select-selection-search-input) {
+        height: 30px;
+      }
+    }
+    .shareTime,
+    .inviteTime {
+      margin-bottom: 12px;
+      flex: none;
+      display: flex;
+      align-items: center;
+    }
+    .shareTime {
+      margin-right: 48px;
+    }
+  }
+}
+
+.selectDropDown {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding: 8px 0;
+  border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+  //  :global {
+  // }
+  // &:before {
+  //   content: " ";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 200%;
+  //   height: 200%;
+  //   border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+  //   transform-origin: 0 0;
+  //   transform: scale(0.5);
+  //   border-radius: 6px;
+  // }
+  .selectOption {
+    font-size: 12px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    height: 30px;
+    min-height: 30px;
+    font-weight: normal !important;
+  }
+  :global(.ant-select-item-option-selected:not(.ant-select-item-option-disabled)) {
+    background: #ffffff;
+    color: #386ee7;
+  }
+  //  :global(.ant-select-item-option:hover) {
+  //     background: #ffffff;
+  // }
+}
+.breadContainer {
+  display: flex;
+}
+.bread-authority {
+  margin-bottom: 24px;
+  flex: 1;
+  overflow: hidden;
+  .breadContainer {
+    .bread {
+      flex: 1;
+      display: flex;
+      align-items: flex-end;
+      overflow-x: auto;
+      overflow-y: hidden;
+      .breadArea {
+        display: inline-block;
+      }
+      .authorityTag {
+        margin-left: 4px;
+        padding: 0 4px;
+        font-family: PingFang SC;
+        font-size: 12px;
+        line-height: 16px;
+        color: #386ee7;
+        border-radius: 2px;
+        border: 0.5px solid rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.6);
+        box-sizing: border-box;
+        display: inline-block;
+      }
+    }
+  }
+  .authority {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+  }
+}
+
+.operate {
+  display: flex;
+  // 灵犀办公electron应用 win 平台中, 设置了无边框拖拽区, 导致点击不生效. 这里设置下
+  -webkit-app-region: no-drag;
+  .btn {
+    margin-right: 12px;
+  }
+}
+
+.empty {
+  margin-top: 220px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  .empty-text {
+    margin-top: 8px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+  }
+}
+
+.non-list {
+  justify-content: center;
+}
+
+.tooltip {
+  :global(.ant-tooltip-arrow) {
+    display: block !important;
+  }
+}
+
+.create-menu {
+  :global(.ant-dropdown-menu) {
+    border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+    box-shadow: 0px 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+    border-radius: 4px;
+    padding: 8px 0;
+    background-color: $white;
+  }
+  :global(.ant-dropdown-menu-item) {
+    padding: 4px 24px 4px 16px;
+    &:hover {
+      // background-color: #f0f0f1;
+      background-color: $white-hover-bg;
+    }
+  }
+  .menu-text-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .menu-text {
+    margin-left: 8px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  }
+  :global(.ant-dropdown-menu-item-disabled) {
+    opacity: 0.3;
+  }
+}
+.disk-create-tooltip {
+  width: 335px;
+  max-width: 350px;
+  z-index: 999;
+  // :global(.ant-tooltip) {
+  // }
+  :global(.ant-tooltip-content .ant-tooltip-arrow) {
+    display: block;
+    right: 100px;
+  }
+  :global(.ant-tooltip-content .ant-tooltip-inner) {
+    width: auto;
+  }
+  span.tip {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  span.confirm {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #5383fe;
+    margin-left: 24px;
+    cursor: pointer;
+  }
+}
+
+.ranger-wrap {
+  margin-left: 8px;
+  width: 164px;
+  height: 32px;
+  border-radius: 4px;
+  border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: #ffffff;
+  :global(.ant-picker-active-bar) {
+    display: none;
+  }
+  :global(.ant-picker-range-separator) {
+    padding: 0;
+  }
+  :global(.ant-picker-input input) {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    height: 30px;
+    &:hover {
+      color: $main-enhance-color;
+    }
+  }
+  .ranger-picker {
+    width: 164px;
+    height: 30px;
+    border-radius: 4px;
+    padding: 0;
+  }
+  .ranger-txt {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    &:hover {
+      color: $main-enhance-color;
+    }
+  }
+  &:hover {
+    .ranger-txt {
+      color: $main-enhance-color;
+    }
+    border: 1px solid $main-enhance-color;
+    color: $main-enhance-color;
+  }
+}
+.ranger-picker-dropdown-wrap {
+  :global(.ant-picker-date-panel) {
+    width: 292px;
+  }
+  :global(.ant-picker-date-panel .ant-picker-body) {
+    padding-right: 0;
+  }
+  :global(.ant-picker-body .ant-picker-content) {
+    width: 280px;
+  }
+  :global(.ant-picker-body .ant-picker-content thead tr th) {
+    width: 40px;
+    text-align: left;
+    padding-left: 8px;
+    font-family: PingFang SC;
+    font-style: normal;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    font-weight: 500;
+    font-size: 12px;
+  }
+  :global(.ant-picker-body .ant-picker-content tbody tr td) {
+    width: 40px;
+    height: 28px;
+  }
+  :global(.ant-picker-body .ant-picker-content tbody tr td:last-child) {
+    width: 28px;
+  }
+  :global(.ant-picker-body .ant-picker-content tbody tr td:last-child::before) {
+    right: 12px !important;
+  }
+  :global(.ant-picker-body .ant-picker-content tbody tr td:last-child::after) {
+    right: 12px !important;
+  }
+  :global(.ant-picker-body .ant-picker-content tbody tr td:last-child .ant-picker-cell-inner::after) {
+    right: 0 !important;
+  }
+  :global(.ant-picker-panel-container) {
+    border-radius: 6px;
+  }
+  :global(.ant-picker-cell .ant-picker-cell-inner) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+    font-family: PingFang SC;
+    font-style: normal;
+  }
+  :global(.ant-picker-cell::before) {
+    height: 28px;
+  }
+  :global(.ant-picker-cell-in-view .ant-picker-cell-inner) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+  :global(.ant-picker-content .ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner) {
+    background: #386ee7;
+    border-radius: 4px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-size: 12px;
+  }
+  :global(.ant-picker-content .ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner) {
+    background: #386ee7;
+    border-radius: 4px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-size: 12px;
+  }
+  :global(.ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner) {
+    color: #386ee7;
+    font-weight: 500;
+  }
+  :global(.ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before) {
+    border: 1px solid #386ee7;
+    border-radius: 4px;
+  }
+  :global(.ant-picker-date-panel tr .ant-picker-cell-in-view.ant-picker-cell-range-hover:last-child::after) {
+    right: 12px;
+  }
+  :global(.ant-picker-date-panel tr.ant-picker-cell-in-view.ant-picker-cell-range-hover-start:last-child::after) {
+    right: 12px;
+  }
+  :global(.ant-picker-date-panel tr .ant-picker-cell-in-view.ant-picker-cell-range-hover-end:last-child::after) {
+    right: 12px;
+  }
+  :global(.ant-picker-date-panel .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-start::before) {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+  :global(.ant-picker-date-panel .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-end::before) {
+    background: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.1);
+  }
+  :global(.ant-picker-date-panel .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-start .ant-picker-cell-inner) {
+    background: #386ee7;
+    border-radius: 4px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-size: 12px;
+  }
+  :global(.ant-picker-date-panel .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-end .ant-picker-cell-inner) {
+    background: #386ee7;
+    border-radius: 4px;
+    color: #ffffff;
+    font-weight: 500;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-size: 12px;
+  }
+  :global(.ant-picker-date-panel .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-start .ant-picker-cell-inner::after) {
+    display: none;
+    background: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.4);
+  }
+  :global(.ant-picker-date-panel .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-end .ant-picker-cell-inner::after) {
+    left: 0;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    background: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.4);
+  }
+  /*选中日期内的颜色*/
+  :global(.ant-picker-cell-in-view.ant-picker-cell-in-range::before) {
+    height: 28px;
+    background: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.1);
+  }
+  :global(.ant-picker-cell-in-view.ant-picker-cell-range-start:not(.ant-picker-cell-range-start-single)::before) {
+    background: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.1);
+    height: 28px;
+  }
+  :global(.ant-picker-cell-in-view.ant-picker-cell-range-end::before) {
+    background: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.1);
+  }
+
+  /*hover选中日期内的颜色加深*/
+
+  :global(.ant-picker-content .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover::before) {
+    background: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.4);
+    height: 28px;
+  }
+  :global(.ant-picker-content .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-start::before) {
+    background: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.4);
+    height: 28px;
+  }
+
+  :global(.ant-picker-content .ant-picker-cell-in-view.ant-picker-cell-range-start.ant-picker-cell-range-hover-start:not(.ant-picker-cell-range-start-single)::before) {
+    background: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.4);
+    height: 28px;
+  }
+
+  :global(.ant-picker-content .ant-picker-cell-in-view.ant-picker-cell-range-start.ant-picker-cell-range-hover::before) {
+    background: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.4);
+    height: 28px;
+  }
+  :global(.ant-picker-content .ant-picker-cell-in-view.ant-picker-cell-range-end.ant-picker-cell-range-hover::before) {
+    background: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.4);
+    height: 28px;
+  }
+  :global(.ant-picker-cell-in-view.ant-picker-cell-range-start:before) {
+    left: 0;
+  }
+}
+
+.flex-align {
+  display: flex;
+  align-items: center;
+}

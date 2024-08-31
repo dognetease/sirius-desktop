@@ -1,0 +1,40 @@
+.risk-reminder-tips {
+  width: 400px;
+  padding: 26px 16px 24px;
+  // background: #ffffff;
+  background-color: $white;
+  box-shadow: 0px 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+
+  .divider {
+    margin: 16px 10px;
+    width: 350px;
+    min-width: 100px;
+  }
+
+  .title {
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .sub-title {
+    font-weight: 500;
+    font-size: 14px;
+    // color: #262a33;
+    color: $font-color-2;
+    margin-bottom: 16px;
+  }
+
+  .desc {
+    // color: #262a33;
+    color: $font-color-2;
+    font-size: 12px;
+  }
+
+  .example {
+    width: 100%;
+  }
+}

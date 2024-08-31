@@ -1,0 +1,231 @@
+@import '@web-common/styles/variables.scss';
+@import '@web-common/styles/mixin.scss';
+
+.prompt {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  min-width: fit-content;
+}
+.left {
+  flex-shrink: 0;
+  width: 450px;
+  padding: 24px 36px;
+  background: #fff;
+  border: 1px solid $Line-2;
+  border-radius: $round-corner-4;
+  margin-right: 68px;
+  height: 100%;
+  overflow: auto;
+
+  h4 {
+    color: $Text-5;
+    @include h1-4-med16();
+  }
+  .tip {
+    margin-bottom: 16px;
+    color: $Text-3;
+    @include c4-1-reg12;
+  }
+}
+
+.right {
+  flex-shrink: 0;
+  width: 694px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: auto;
+}
+
+.prompt-form :global {
+  .ant-form-item-label {
+    overflow: initial;
+    height: auto;
+  }
+
+  .ant-form-item-label label {
+    position: relative;
+    align-items: flex-start;
+    display: inline-block;
+    padding-top: 5px;
+    padding-right: 4px;
+    height: auto;
+
+    &::before {
+      position: absolute;
+      left: -12px;
+      top: 12px;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.prompt-form > :global(.ant-row) > :global(.ant-form-item-control) {
+  max-width: calc(100% - 80px);
+}
+
+.prompt-form {
+  .radio-form-limit-item {
+    margin-top: -5px;
+
+    :global(.ant-form-item-control-input) {
+      min-height: 35px;
+    }
+  }
+
+  .radio-form-limit-item {
+    margin-bottom: 2px;
+
+    :global {
+      .ant-form-item-label {
+        label {
+          padding: 0;
+
+          &::before {
+            top: 5px;
+          }
+        }
+      }
+
+      .ant-form-item-control {
+        flex: 1 1 !important;
+      }
+
+      .ant-radio-group {
+        label {
+          margin-bottom: 17px;
+        }
+      }
+    }
+  }
+
+  .label-wrapper {
+    display: flex;
+
+    .label {
+      flex-grow: 1;
+      white-space: normal;
+      word-break: break-all;
+    }
+
+    .extra {
+      flex-shrink: 0;
+      margin-top: 3px;
+      margin-left: 4px;
+    }
+  }
+
+  .picture-required-form-item {
+    margin-bottom: 0;
+    margin-top: -24px;
+  }
+
+  .picture-required-tip {
+    color: $Warning-6;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  // :global(.ant-form-item-has-error) + .picture-required-form-item {
+  //   display: none;
+  // }
+}
+
+.post-creating-tip {
+  height: 32px;
+  padding: 0 12px;
+  background: #e6eaff;
+  border-radius: 4px;
+  color: $Text-5;
+  @include c4-1-reg12();
+  line-height: 32px;
+}
+
+.post-type-tab {
+  width: 100%;
+  display: flex;
+  padding: 6px 8px;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid $Line-2;
+  border-radius: 4px;
+  text-align: center;
+
+  .post-type-tab-item {
+    color: $Text-3;
+    @include p1-3-reg14();
+    flex: 1;
+    height: 32px;
+    line-height: 32px;
+    background: $Fill-2;
+    border-radius: 4px;
+    cursor: pointer;
+
+    svg {
+      margin-right: 4px;
+      vertical-align: middle;
+      color: #c9cbd6;
+    }
+  }
+
+  .active-tab {
+    background: $Brand-6;
+    color: #fff;
+
+    svg {
+      color: #fff;
+    }
+  }
+}
+
+.generate-tip {
+  margin-bottom: 8px;
+}
+
+.post-type-tab-wrapper {
+  margin-bottom: 8px;
+}
+
+.post-preview-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  // max-height: 600px;
+  overflow: hidden auto;
+
+  .post-preview {
+    max-height: 500px;
+  }
+}
+
+.post-error-tip {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 12px;
+  @include c4-3-reg12();
+  color: $Text-5;
+  background: $Error-1;
+  border-radius: 4px;
+}
+
+.empty-post {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid $Line-2;
+  font-size: 12px;
+  line-height: 20px;
+  color: $Text-3;
+  img {
+    margin-bottom: 14px;
+  }
+}

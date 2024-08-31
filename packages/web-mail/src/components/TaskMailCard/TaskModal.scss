@@ -1,0 +1,151 @@
+.task-mail-user-modal {
+  // 重写 ant design 样式
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn .ant-tabs-tab:hover {
+    color: #386ee7 !important;
+  }
+  .ant-tabs-ink-bar {
+    display: none !important;
+  }
+  .ant-tabs-tab-active {
+    position: relative !important;
+  }
+  .ant-tabs-tab-active::after {
+    content: '' !important;
+    height: 2px;
+    width: 10px;
+    background: #386ee7;
+    position: absolute;
+    bottom: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+  .ant-tabs-nav {
+    padding-left: 20px !important;
+    border-bottom: 1px solid $Fill-2_5 !important;
+    margin-bottom: 0;
+  }
+  .ant-modal-header {
+    border-bottom: none !important;
+  }
+  .ant-modal-body {
+    padding: 0 !important;
+  }
+  // 弹窗样式
+  .user-body {
+    height: 364px;
+    overflow-y: scroll;
+  }
+  .user-blank {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .blank-img {
+      width: 160px;
+      height: 160px;
+      margin: 60px auto 20px;
+      background-image: url('../../../../web/src/images/blank.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    .blank-txt {
+      font-size: 14px;
+      line-height: 16px;
+      color: #7d8085;
+      text-align: center;
+    }
+  }
+  .user-error {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .error-txt {
+      font-size: 14px;
+      line-height: 16px;
+      color: #7d8085;
+      text-align: center;
+      margin: 109px 0 20px;
+    }
+  }
+  .user-nowifi {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    .nowifi-img {
+      width: 160px;
+      height: 160px;
+      margin: 58px auto 20px;
+      background-image: url('../../../../web/src/images/no-wifi.png');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+    .nowifi-txt {
+      font-size: 14px;
+      line-height: 16px;
+      color: #7d8085;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+  .error-btn {
+    margin: 0 auto;
+    width: 80px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background: #386ee7;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 32px;
+    color: #ffffff;
+  }
+  .user-item {
+    padding: 0 20px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    .user-photo {
+      width: 32px;
+      height: 32px;
+      border-radius: 16px;
+      margin: 12px 12px 12px 0;
+      cursor: pointer;
+    }
+    .user-detail {
+      width: 315px;
+      padding: 12px 0;
+      border-bottom: 1px solid $Fill-2_5;
+      cursor: pointer;
+      p:nth-child(1) {
+        font-size: 14px;
+        line-height: 16px;
+        // color: #262a33;
+        color: $font-color-2;
+        font-weight: 500;
+        margin-bottom: 4px;
+        width: 190px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      p:nth-child(2) {
+        font-size: 12px;
+        line-height: 14px;
+        color: #7d8085;
+        margin: 0;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+    .user-time {
+      font-size: 12px;
+      line-height: 16px;
+      color: #7d8085;
+      position: absolute;
+      right: 20px;
+      top: 12px;
+    }
+  }
+}

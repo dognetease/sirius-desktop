@@ -1,0 +1,89 @@
+.maskWrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 998;
+  .archerWrapper {
+    position: absolute;
+    border-radius: 6px;
+    box-shadow: 0 0 0 4000px rgba(0, 0, 0, 0.5);
+    .guideBobble {
+      margin-top: 11px;
+      width: 283px;
+      padding: 16px;
+      background: $Brand-5;
+      border-radius: 6px;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      box-sizing: border-box;
+      .arrowUp {
+        width: 28px;
+        height: 7px;
+        position: absolute;
+        right: 29px;
+        top: -7px;
+      }
+    }
+    .guideBobble-right {
+      margin-left: 11px;
+      width: 283px;
+      padding: 16px;
+      background: $Brand-5;
+      border-radius: 6px;
+      position: absolute;
+      left: 100%;
+      top: 0;
+      transform: translateY(-20%);
+      box-sizing: border-box;
+      .arrowLeft {
+        transform: rotate(-90deg);
+        width: 28px;
+        height: 7px;
+        position: absolute;
+        // right: 29px;
+        // top: -7px;
+        left: -17px;
+      }
+    }
+    .title {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      color: #ffffff;
+    }
+    .intro {
+      margin-top: 8px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      color: #ffffff;
+      opacity: 0.8;
+    }
+    .footer {
+      margin-top: 12px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .butt {
+        padding: 6px 14px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        color: #386ee7;
+        background: #ffffff;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+    }
+  }
+}

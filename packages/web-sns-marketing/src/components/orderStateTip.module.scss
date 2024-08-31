@@ -1,0 +1,42 @@
+.no-order-tip {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .inner {
+    flex: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+.item-title {
+  &::before {
+    margin-right: 4px;
+    content: ' ';
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle at center, $Brand-6 0%, $Brand-6 50%, $Brand-2 50%, $Brand-2 100%);
+  }
+}
+
+.left {
+  flex: none;
+  width: 315px;
+
+  h3 {
+    font-family: PingFang SC;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+}
+
+.right {
+  flex: none;
+  width: 448px;
+}

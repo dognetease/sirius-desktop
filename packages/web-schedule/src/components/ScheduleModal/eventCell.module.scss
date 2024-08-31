@@ -1,0 +1,44 @@
+@mixin event {
+  display: block;
+  background-color: $Brand-4;
+  border-color: $Brand-4;
+  color: #ffffff;
+  min-height: 18px;
+  height: 100%;
+  width: 100%;
+  line-height: 18px;
+  box-sizing: border-box;
+  padding: 0 4px;
+  border-radius: 2px;
+  font-family: PingFang SC;
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: keep-all;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  text-decoration: inherit;
+  text-align: left;
+}
+
+.detailOuter {
+  @include event;
+  .detailInner {
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    display: inline-block;
+    width: 100%;
+    white-space: break-spaces;
+    word-break: break-all;
+    text-decoration: inherit;
+  }
+}
+
+.isPast {
+  background: $Fill-3 !important;
+  color: #a8aaad !important;
+  opacity: 0.6;
+}

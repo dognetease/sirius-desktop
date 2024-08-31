@@ -1,0 +1,55 @@
+// @import '../../../../web/src/styles/varies.scss';
+.customRepeat {
+  :global(.ant-modal-header) {
+    border: none;
+    padding: 16px 20px;
+  }
+  :global(.ant-modal-footer) {
+    border: none;
+    padding: 20px;
+  }
+  .btn {
+    width: 45px;
+    min-width: 45px;
+  }
+  :global(.ant-select-selector) {
+    border-radius: 4px !important;
+    font-size: 12px;
+    box-shadow: none !important;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  }
+  :global(.ant-input-number) {
+    border-radius: 4px !important;
+    font-size: 12px;
+    box-shadow: none !important;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  }
+  :global(.ant-picker) {
+    border-radius: 4px !important;
+    font-size: 12px;
+    box-shadow: none !important;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  }
+}
+.line {
+  height: 32px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.label {
+  width: 70px;
+  display: inline-block;
+}
+.radio {
+  height: 32px;
+  line-height: 32px;
+}
+.count {
+  width: 120px;
+  margin-top: 8px;
+}
+.util {
+  width: 248px;
+}

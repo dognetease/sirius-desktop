@@ -1,0 +1,113 @@
+.flex-center {
+  align-items: center;
+  // padding: 2px 0;
+}
+
+.add-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+  border: 1px solid #e1e6ed;
+}
+
+.modal-wrapper {
+  :global(.ant-modal-footer) {
+    border-top: none;
+    padding-bottom: 20px;
+    padding-top: 12px;
+  }
+}
+
+.popover {
+  padding-top: 0;
+}
+
+.rule-value-tip {
+  .tip-title {
+    font-size: 14px;
+    color: #4e5a70;
+    padding-bottom: 8px;
+  }
+
+  .tip-words {
+    & > span {
+      color: #4c6aff;
+      font-size: 14px;
+      margin-right: 8px;
+      cursor: pointer;
+    }
+  }
+}
+
+.link-btn {
+  color: #396ee7;
+  cursor: pointer;
+}
+
+.view-permissions {
+  width: 320px;
+  &-title {
+    font-size: 14px;
+    color: #232d47;
+    padding: 20px;
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #f0f3f5;
+  }
+
+  &-tip {
+    padding: 0 20px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #a9b2c2;
+  }
+
+  &-content {
+    padding: 12px 20px 20px;
+  }
+
+  &-list {
+    max-height: 180px;
+    overflow-y: auto;
+    line-height: 1.9;
+    /* 设置滚动条的样式 */
+    &::-webkit-scrollbar {
+      width: 6px;
+      background: #eee;
+    }
+
+    /* 滚动槽 */
+    &::-webkit-scrollbar-track {
+      border-radius: 6px;
+    }
+
+    /* 滚动条滑块 */
+    &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background: rgba(38, 42, 51, 0.3);
+      padding: 4px;
+    }
+  }
+}
+
+.form-list-row {
+  width: 487px;
+}
+
+.keyword-wrap {
+  position: relative;
+  top: -20px;
+  background: #fff;
+  padding-top: 5px;
+  .keyword-panel {
+    padding: 16px;
+    background: #f2f5ff;
+    border-radius: 4px;
+    margin-right: 8px;
+  }
+}

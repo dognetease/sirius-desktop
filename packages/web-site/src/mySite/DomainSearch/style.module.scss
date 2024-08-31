@@ -1,0 +1,59 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.container {
+  height: 100%;
+  min-height: 470px;
+  min-width: 585px;
+  background: url('https://cowork-storage-public-cdn.lx.netease.com/common/2023/05/17/2c061566b6a54fa2b1f47c2d724b32dc.png') no-repeat;
+  background-size: cover;
+  background-position: right bottom;
+  position: relative;
+
+  :global {
+    .ant-breadcrumb {
+      padding: 20px 16px;
+      color: rgba(255, 255, 255, 0.6);
+      .ant-breadcrumb-link {
+        cursor: pointer;
+      }
+    }
+
+    .ant-breadcrumb-separator {
+      color: #8d92a1;
+      margin: 0 4px;
+    }
+    .ant-breadcrumb > span:last-child {
+      color: #fff;
+      font-weight: 500;
+      .ant-breadcrumb-link {
+        cursor: default;
+      }
+    }
+  }
+}
+
+.main {
+  width: 68%;
+  max-width: 830px;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+
+  &-title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 44px;
+  }
+}
+
+.statement {
+  position: absolute;
+  left: 20px;
+  bottom: 12px;
+  font-size: 13px;
+  color: $Text-3;
+}

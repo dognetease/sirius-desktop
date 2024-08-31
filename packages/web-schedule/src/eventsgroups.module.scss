@@ -1,0 +1,211 @@
+@import '../../web/src/styles/varies.scss';
+.eventsGroupsOuter {
+  background-color: $Fill-2;
+  height: 100%;
+}
+
+.toolbar {
+  padding: 16px 16px;
+  display: flex;
+  align-items: center;
+  .button {
+    width: 112px;
+    border: none;
+    outline: none;
+    // background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+    border-radius: 4px;
+    height: 28px;
+    line-height: 28px;
+    color: #ffffff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+    cursor: pointer;
+    // background: #386ee7;
+    background: $Brand-6;
+    .text {
+      // width: calc(112px - 24px);
+      text-align: center;
+    }
+    .dropdown {
+      text-align: center;
+      margin-left: auto;
+      width: 24px;
+      background-color: $Brand-7;
+      border-radius: 0 4px 4px 0;
+      background-image: url(@/images/icons/calendarDetail/toopen.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 8px;
+    }
+  }
+  .syncIcon {
+    margin-left: 12px;
+    box-sizing: border-box;
+    border: 1px solid $white;
+    background: #ffffff url(../../web/src/images/icons/common/sync.svg) center center no-repeat; // 防止 $mail-refresh 不生效的兜底
+    background: $white $mail-refresh center center no-repeat;
+    background-size: 16px;
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    &:hover {
+      // background-image: url('@/images/icons/common/sync_hover.svg');
+      border-color: $main-enhance-color;
+    }
+  }
+}
+
+.listTitle {
+  height: 36px;
+  line-height: 36px;
+  padding: 0 16px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  .addIcon {
+    margin-left: auto;
+    cursor: pointer;
+  }
+}
+
+.listScroll {
+  height: calc(100% - 60px);
+}
+
+.calenderList {
+  padding-top: 8px;
+  height: 100%;
+  .collapse {
+    font-size: 12px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    .expandArrow {
+      position: absolute;
+      right: 20px !important;
+      .expandIcon {
+        background: url(@/images/icons/calender-icon-expand.png) center center no-repeat;
+        background-size: 8px;
+        height: 8px;
+        width: 8px;
+        display: inline-block;
+        &Collapse {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .item {
+      font-size: 14px;
+      height: 32px;
+      line-height: 32px;
+      display: flex;
+      align-items: center;
+      user-select: none;
+      padding: 0 20px 0 16px;
+      position: relative;
+      &:hover {
+        background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+        .item-close,
+        .item-setting {
+          display: block;
+        }
+      }
+      &-close {
+        // position: absolute;
+        // right: 12px;
+        // top: 8px;
+        margin-left: auto;
+        display: none;
+        cursor: pointer;
+      }
+      &-setting {
+        // position: absolute;
+        // right: 28px;
+        // top: 8px;
+        display: none;
+        margin-left: auto;
+        cursor: pointer;
+      }
+      .checkbox {
+        cursor: pointer;
+        height: 16px;
+        width: 16px;
+        line-height: 16px;
+        display: inline-block;
+        margin-right: 9px;
+      }
+      &-unchecked {
+        opacity: 0.5;
+      }
+    }
+    .item-close + .item-setting {
+      margin-left: 1px;
+    }
+  }
+  :global(.ant-collapse-header) {
+    padding: 0 16px !important;
+  }
+  :global(.ant-collapse-content-box) {
+    padding: 4px 14px 0px !important;
+  }
+}
+
+.addIcon {
+  background: url(@/images/icons/schedule-add-white.png) center center no-repeat;
+  background-size: 16px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.addIcon2 {
+  background: url(@/images/icons/schedule-add.png) center center no-repeat;
+  background-size: 16px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.dropDownOverlay {
+  border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+  box-sizing: border-box;
+  /* 投影样式 */
+  box-shadow: 0px 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+  border-radius: 6px;
+  overflow: hidden;
+  width: 112px;
+  .menuItem {
+    line-height: 32px;
+    // width: 100px;
+    padding: 0;
+    text-align: center;
+    font-size: 14px;
+    color: #51555c;
+    :global(.ant-dropdown-menu-title-content) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span[role='img'] {
+        margin-right: 8px;
+      }
+    }
+  }
+  :global(.ant-dropdown-menu-item-disabled) {
+    opacity: 0.5;
+  }
+}
+.calendarLogo {
+  width: 16px;
+  height: 16px;
+  margin: -1px 4px 0;
+}

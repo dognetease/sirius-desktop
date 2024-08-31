@@ -1,0 +1,106 @@
+@import '@web-common/styles/variables.scss';
+.table {
+  background: #ffffff;
+  padding: 20px;
+  padding-top: 0;
+  border-radius: 0 0 4px 4px;
+  border: 1px solid $Fill-3;
+  border-top: none;
+
+  :global {
+    .ant-table-thead > tr > th,
+    .ant-table-tbody > tr > td {
+      padding: 12px 16px;
+      line-height: 22px;
+    }
+    .ant-table {
+      border: none;
+      border-radius: 0;
+      // .ant-table-selection-col{
+      //   width: 48px;
+      // }
+      tr.ant-table-row {
+        &:nth-of-type(odd) {
+          background-color: $Fill-1;
+          .ant-table-cell-fix-right {
+            background-color: $Fill-1;
+          }
+        }
+      }
+
+      // .ant-table-tbody>tr>td {
+      //   border-bottom: none;
+      // }
+    }
+
+    // .ant-table-thead {
+    //   height: 54px;
+    //   border-radius: 4px;
+
+    //   tr {
+    //     th {
+    //       background-color: $Fill-2;
+    //       font-family: PingFang SC;
+    //       font-size: 14px;
+    //       line-height: 22px;
+    //       color: $label-6_3;
+    //       font-weight: normal;
+    //       border-bottom: none;
+
+    //       &::before {
+    //         display: none;
+    //       }
+    //     }
+    //   }
+    // }
+
+    // .ant-table-selection-column {
+    //   padding-left: 24px;
+    // }
+
+    // .ant-table-tbody {
+    //   .ant-table-row {
+    //     .ant-table-cell {
+    //       vertical-align: top;
+    //     }
+    //   }
+
+    //   tr.ant-table-row-selected>td {
+    //     background: #f0f0f1;
+    //   }
+    // }
+  }
+}
+.nameWrapper {
+  line-height: 20px;
+  vertical-align: middle;
+  .subName {
+    color: #386ee7;
+    padding-right: 8px;
+    cursor: pointer;
+    word-break: break-all;
+  }
+  .iconWrapper {
+    vertical-align: middle;
+  }
+  .subNew {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+
+    display: inline-block;
+    /* 标签/label-2.3 绿色-字体 */
+
+    color: $label-2_3;
+    width: 84px;
+    height: 20px;
+
+    /* 标签/label-2.1 绿色-背景 */
+
+    background: $label-2_1;
+    border-radius: 2px;
+    padding: 2px 6px;
+    margin-left: 8px;
+  }
+}

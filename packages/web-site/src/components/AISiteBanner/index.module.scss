@@ -1,0 +1,67 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+@mixin common-btn {
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+
+  background: $Brand-6;
+
+  &:hover {
+    background: $Brand-5;
+  }
+
+  &:active {
+    background: $Brand-7;
+  }
+}
+.aiSiteBanner {
+  width: 100%;
+  height: 180px;
+  background-image: url(../../images/ai-site-banner-bg.gif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 36px;
+  box-sizing: border-box;
+
+  .experienceButton {
+    @include common-btn;
+    width: 148px;
+    height: 28px;
+    border-radius: 4px;
+    margin-top: 20px;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .title {
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 34px;
+    color: #272e47;
+    & > span {
+      color: #4c6aff;
+    }
+  }
+  .subTitle {
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #545a6e;
+    margin-top: 4px;
+  }
+}

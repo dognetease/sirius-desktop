@@ -1,0 +1,15 @@
+.customer-picker {
+  .select {
+    width: 100%;
+  }
+
+  :global {
+    .ant-modal-header {
+      border-bottom: none;
+    }
+
+    .ant-modal-footer {
+      border-top: none;
+    }
+  }
+}

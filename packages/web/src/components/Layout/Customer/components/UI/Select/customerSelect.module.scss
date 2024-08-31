@@ -1,0 +1,26 @@
+.selector-dropdown {
+  border-radius: 4px;
+  :global(.ant-select-item-option-selected) {
+    color: #386ee7;
+    background: none;
+    font-weight: normal;
+  }
+  :global(.ant-select-item-option-state) {
+    display: none;
+  }
+  :global(.ant-select-item-option-active) {
+    background: #f0f0f1;
+  }
+}
+:global(.ant-select:not(.ant-select-disabled)) {
+  :global(.ant-select-selector) {
+    &:hover {
+      border-color: #386ee7;
+    }
+  }
+  :global(.ant-select-selector) {
+    &:hover {
+      border-color: #386ee7;
+    }
+  }
+}

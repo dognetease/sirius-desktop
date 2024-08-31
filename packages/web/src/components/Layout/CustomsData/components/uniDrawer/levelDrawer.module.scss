@@ -1,0 +1,58 @@
+@import '@web-common/styles/variables.scss';
+.uni-drawer {
+  //  :global(.ant-drawer-content-wrapper) {
+  //     box-shadow: none !important;
+  // }
+  :global(.ant-drawer-body) {
+    padding: 0;
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  user-select: none;
+  &-windows {
+    padding-top: 60px;
+  }
+  > iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+.loading-text {
+  margin-left: 8px;
+  color: rgba(38, 42, 51, 0.9);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.loading-icon {
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,733 @@
+@import './../../web/src/styles/varies.scss';
+
+/** 顶部工具栏样式覆盖 */
+
+@mixin cirle-button {
+  width: 28px;
+  height: 28px;
+}
+
+@mixin arrow-icon {
+  background-position: center;
+  background-size: 16px;
+  background-repeat: no-repeat;
+}
+
+@mixin group-button($first: false, $last: false) {
+  border-left: none;
+  border-right: none;
+  padding: 1px 0;
+  @if ($first) {
+    border-left: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    padding-left: 1px;
+  }
+  @if ($last) {
+    border-right: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding-right: 1px;
+  }
+}
+
+.fc .fc-button {
+  @include sirius-no-drag();
+}
+
+.fc-col-header {
+  width: 100% !important;
+}
+
+.fc-daygrid-body {
+  width: 100% !important;
+  height: 100% !important;
+  .fc-scrollgrid-sync-table {
+    width: 100% !important;
+    height: 100% !important;
+    colgroup {
+      col {
+        width: 80px !important;
+      }
+    }
+  }
+}
+
+.fc-direction-ltr .fc-toolbar > * > :not(:first-child) {
+  margin-left: 0;
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+  margin-bottom: 0;
+  height: $calendar-toolbar-height;
+  padding: 0 8px;
+  .fc-toolbar-chunk {
+    margin: auto 8px;
+    display: flex;
+    .fc-toolbar-title {
+      font-size: 18px;
+      font-family: 'DIN Alternate Bold';
+      color: $font-color-2;
+    }
+    .fc-button {
+      outline: none !important;
+      box-shadow: none !important;
+      background: $white;
+      border-radius: 0;
+      font-size: 14px;
+      height: 28px;
+      border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+      padding: 0;
+      // color: #262a33;
+      color: $font-color-2;
+      &:not(:disabled):hover {
+        // background-color: #f0f0f1;
+        background-color: $white-hover-bg;
+      }
+      &.fc-depended-button {
+        border: none;
+        background: url('./../../web/src/images/icons/calendarDetail/dependedwindow.png') center center no-repeat;
+        width: 16px;
+        height: 16px;
+        padding: 0;
+        background-size: contain;
+        margin-right: 0;
+        margin-left: 19px;
+        position: relative;
+        z-index: 99;
+        // &::before {
+        //   content: '';
+        //   position: absolute;
+        //   height: 16px;
+        //   width: 1px;
+        //   background: $Text-1;
+        //   left: -16px;
+        //   top: 0;
+        // }
+      }
+      &.fc-independed-button {
+        border: none;
+        background: url('./../../web/src/images/icons/calendarDetail/indpendedwindow.png') center center no-repeat;
+        width: 16px;
+        height: 16px;
+        padding: 0;
+        background-size: contain;
+        margin-right: 0;
+        margin-left: 19px;
+        position: relative;
+        z-index: 99;
+        // &::before {
+        //   content: '';
+        //   position: absolute;
+        //   height: 16px;
+        //   width: 1px;
+        //   background: $Text-1;
+        //   left: -16px;
+        //   top: 0;
+        // }
+      }
+      &.fc-settings-button {
+        border: none;
+        background: url('./../../web/src/images/icons/calendarDetail/catalog_setting.svg') center center no-repeat; // 兜底
+        background: $fc-settings-button center center no-repeat;
+        width: 16px;
+        height: 16px;
+        padding: 0;
+        background-size: contain;
+        margin-right: 0;
+        margin-left: 17px;
+        position: relative;
+        z-index: 99;
+        // &::before {
+        //   content: '';
+        //   position: absolute;
+        //   height: 16px;
+        //   width: 1px;
+        //   background: $Text-1;
+        //   left: -16px;
+        //   top: 0;
+        // }
+      }
+      &.fc-weekNumberTitle-button {
+        span {
+          display: block;
+          padding: 0 12px;
+          // background: #ebedf2;
+          background-color: $Fill-3;
+          border-radius: 4px;
+        }
+        height: 28px;
+        line-height: 28px;
+        // color: #272e47;
+        color: $Text-5;
+        /* background: #ebedf2; */
+        border: none;
+        border-radius: 4px;
+        cursor: auto;
+        margin-left: 16px;
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+    .fc-today-button {
+      width: 52px;
+      margin-right: 16px;
+      border-radius: 4px;
+    }
+    .fc-prev-button {
+      @include cirle-button;
+      @include group-button(true);
+      position: relative;
+      width: 29px;
+      &::after {
+        content: '';
+        position: absolute;
+        border-right: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+        width: 0;
+        height: 16px;
+        right: 0;
+        top: 6px;
+        z-index: 2;
+      }
+    }
+    .fc-next-button {
+      @include cirle-button;
+      @include group-button(false, true);
+    }
+    // 月视图按钮类
+    .fc-dayGridMonth-button {
+      @include group-button(false, true);
+      @include cirle-button;
+      width: 46px;
+      background-clip: content-box !important;
+    }
+    // 周视图按钮类
+    .fc-timeGridWeek-button {
+      @include group-button(true);
+      @include cirle-button;
+      background-clip: content-box !important;
+      width: 46px;
+    }
+    .fc-timeGridDay-button {
+      @include cirle-button;
+      background-clip: content-box !important;
+      width: 46px;
+    }
+    .fc-button-active {
+      background: $Brand-2;
+      color: #386ee7;
+    }
+    .fc-icon-chevron-left:before,
+    .fc-icon-chevron-right:before {
+      content: '';
+    }
+    .fc-icon-chevron-left {
+      @include arrow-icon;
+      background-image: url('./../../web/src/images/icons/calendarDetail/arrow-left.png'); // 兜底
+      background-image: $arrow-left;
+    }
+    .fc-icon-chevron-right {
+      @include arrow-icon;
+      background-image: url('./../../web/src/images/icons/calendarDetail/arrow-right.png'); // 兜底
+      background-image: $arrow-right;
+    }
+    .fc-button-group {
+      align-items: center;
+    }
+    &:last-of-type {
+      margin-left: auto;
+    }
+  }
+}
+
+.fc-scrollgrid-section.fc-scrollgrid-section-header {
+  height: 48px !important;
+  td {
+    border-top: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+    border-bottom: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+    vertical-align: middle;
+  }
+}
+
+.fc-timeGridWeek-view .fc-scrollgrid-section.fc-scrollgrid-section-header {
+  height: 0px !important;
+  td {
+    border-bottom: none;
+  }
+}
+
+.fc .fc-scrollgrid-section {
+  height: 0px;
+}
+
+.fc .fc-scrollgrid-section-liquid {
+  height: 1px;
+}
+
+.fc-col-header-cell.fc-day {
+  text-align: left;
+  border: none;
+  a.fc-col-header-cell-cushion {
+    font-size: 12px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    font-style: normal;
+    font-weight: normal;
+    padding-left: 16px;
+    height: 46px;
+    line-height: 46px;
+  }
+}
+
+.fc .fc-scrollgrid {
+  border: none;
+}
+
+// .fc-scrollgrid-sync-table{
+//     tr{
+//         height: 20%;
+//     }
+// }
+.fc-theme-standard .fc-daygrid {
+  td,
+  th {
+    border: none;
+    border-top: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+  }
+}
+
+.fc-theme-standard td {
+  border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+}
+
+.fc .fc-daygrid-day {
+  // overflow: hidden;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  // background: #ffffff;
+  background-color: $white;
+}
+
+.fc .fc-timegrid-col.fc-day-today {
+  // background-color: #ffffff;
+  background-color: $white;
+}
+
+.fc-timegrid-col-misc {
+  display: none;
+}
+
+.fc .fc-daygrid-day.fc-day-sun,
+.fc-daygrid-day.fc-day-sat,
+.fc-timegrid-col.fc-day-sat,
+.fc-timegrid-col.fc-day-sun {
+  background: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.04) !important;
+}
+
+.fc-timegrid .fc-daygrid-day.fc-day-sat,
+.fc-timegrid .fc-daygrid-day.fc-day-sun {
+  // background-color: #ffffff !important;
+  background-color: $white !important;
+}
+
+.fc-timegrid .fc-daygrid-day.fc-day {
+  border: none;
+}
+
+.fc .fc-daygrid-day-top {
+  // height: 28px;
+  height: auto;
+  flex-direction: row;
+  padding: 0 8px;
+  a.fc-daygrid-day-number {
+    padding: 0;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    display: flex;
+    align-items: flex-start;
+    // padding-bottom: 6px;
+  }
+}
+
+.fc .fc-daygrid-day-frame {
+  padding: 8px 0;
+  padding-bottom: 5px;
+  .fc-daygrid-week-number {
+    background: none;
+    padding: 8px;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.fc-direction-ltr .fc-daygrid-event.fc-event-start,
+.fc-direction-rtl .fc-daygrid-event.fc-event-end {
+  // margin-right: 16px;
+  margin-left: 8px;
+  // padding: 0 8px;
+}
+
+.fc-direction-ltr .fc-daygrid-event.fc-event-end,
+.fc-direction-rtl .fc-daygrid-event.fc-event-start {
+  margin-right: 8px;
+  // margin-left: 16px;
+  // padding: 0 8px;
+}
+
+.fc .fc-daygrid-day-bottom {
+  margin-left: 8px;
+  a.fc-daygrid-more-link {
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.6);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    // line-height: 16px;
+  }
+}
+
+a.fc-daygrid-event {
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: keep-all;
+  border: none;
+  padding: 0;
+  // background-color: #ffffff;
+  /** 过期日程 */
+  // &
+}
+
+a.fc-timegrid-event {
+  overflow: hidden;
+  white-space: nowrap;
+  word-break: keep-all;
+  border: none;
+  padding: 0;
+  // background-color: #ffffff;
+  /** 过期日程 */
+  // &
+}
+
+/**
+ * 本来background类型的event层叠顺序是低于普通event的
+ * 但是为了实现临时的【新建日程】能够不影响周视图相临日程的size
+ * 将临时日程作为background日程
+ * 提高层叠顺序以免被遮挡
+ * 隐患是以后可能会用到类似的background类型的日程时会收到影响。不过可能性很低
+ */
+
+.fc .fc-timegrid-col-bg {
+  z-index: 4;
+}
+
+.fc-event-past:not(.fc-temp-event) {
+  opacity: 1;
+  .fc-event-custom-inner {
+    opacity: 0.6;
+    background: $Fill-3 !important;
+    // color: #a8aaad !important;
+    color: $calendar-1 !important;
+    &.fc-event-custom-inner-invited:not(.fc-event-custom-inner-invited-accept) {
+      // background: #ffffff !important;
+      background-color: $white !important;
+    }
+  }
+}
+
+/** 全部日程浮窗 */
+
+.fc-popover.fc-more-popover {
+  // background: #ffffff;
+  background-color: $white;
+  border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  max-width: 300px;
+  padding: 0;
+  padding-bottom: 16px;
+  .fc-popover-header {
+    height: 44px;
+    // background: #ffffff;
+    background-color: $white;
+    border-radius: 6px;
+    padding: 0 16px;
+    font-size: 12px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    .fc-popover-close {
+      font-size: 16px;
+      background: url('./../../web/src/images/icons/calendar_icon_close.png') center center no-repeat;
+      background-size: 16px;
+      opacity: 1;
+      &::before {
+        display: none;
+      }
+    }
+  }
+  .fc-popover-body {
+    padding: 0 16px;
+    max-height: 220px;
+    @include sirius-scroll;
+    .fc-daygrid-event-harness {
+      .fc-daygrid-event.fc-event {
+        margin: 0 0 2px 0;
+      }
+    }
+  }
+}
+
+.fc-daygrid-event-harness {
+  // 兼容莫名其妙的 margin-top 值
+  // margin-top: 0 !important;
+}
+
+.fc-view-harness {
+  @include sirius-scroll();
+}
+
+a.fc-timegrid-event .fc-event-main > div {
+  height: 100%;
+}
+
+.fc .fc-timegrid-divider {
+  display: none;
+  border: none;
+}
+
+.fc-timegrid-event-harness-inset .fc-timegrid-event,
+.fc-timegrid-event.fc-event-mirror,
+.fc-timegrid-more-link {
+  box-shadow: none;
+  // background-color: #ffffff;
+  background-color: $white;
+}
+
+.fc-timegrid-slot.fc-timegrid-slot-label.fc-scrollgrid-shrink {
+  border-top: none;
+}
+
+.fc-timegrid-event.fc-event-start-end-same {
+  height: 24px;
+}
+
+.fc-timegrid-slot.fc-timegrid-slot-lane {
+  height: 25px;
+}
+
+.fc .fc-timegrid-slot-minor {
+  border-top-style: none;
+}
+
+.fc .fc-timegrid-slot-label {
+  vertical-align: top;
+}
+
+.slotLabelCustom {
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: var(---Text-4-, #545a6e);
+  width: 46px;
+  text-align: center;
+  position: relative;
+  .slotLabelCustomSpan {
+    color: var(---Text-4-, #545a6e);
+    position: absolute;
+    left: -6px;
+    top: -23px;
+  }
+  .slotLabelSpanTopOffset {
+    top: -32px;
+  }
+  .slotTimeZoneLabelCustomSpan {
+    position: absolute;
+    left: -6px;
+    top: -16px;
+    color: var(---Text-2, #9fa2ad);
+  }
+  .slotLabelCustomSpanFirst {
+    display: none !important;
+  }
+}
+.fc-timezone-select {
+  position: absolute;
+  left: -36px;
+  top: 20px;
+  height: 30px;
+  width: 92px;
+  .ant-select-arrow {
+    top: 65%;
+  }
+}
+.fc-timezone-select-eletron {
+  top: -25px;
+}
+
+.fc-timegrid .fc-timegrid-axis {
+  border: none;
+}
+
+.fc .fc-timegrid-axis-frame {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: normal;
+  // color: #a8aaad;
+  color: $calendar-1 !important;
+}
+
+.fc .fc-daygrid-body-natural .fc-daygrid-day-events {
+  margin-bottom: 4px;
+  // max-height: 60px;
+  min-height: 0px;
+  table {
+    colgroup {
+      col {
+        width: 80px !important;
+      }
+    }
+  }
+}
+
+.fc-timegrid-now-indicator-arrow {
+  left: 12px !important;
+  border: none !important;
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  /* 辅助色/提示、错误 */
+  color: #f74f4f;
+  width: 54px;
+  text-align: center;
+}
+
+.fc .fc-timegrid-now-indicator-line {
+  border-color: #f74f4f;
+}
+
+.fc .fc-timegrid-now-indicator-line::before {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #f74f4f;
+  position: absolute;
+  content: '';
+  top: -4px;
+}
+
+.fc .fc-timegrid-now-indicator-line-clone {
+  border-top: 1px dashed #f74f4f;
+  position: absolute;
+  z-index: 4;
+  left: 0;
+  right: 0;
+}
+
+.fc-timegrid-event-harness.fc-timegrid-event-harness-inset {
+  min-height: 26px;
+}
+
+// 自定义头部样式
+.fc-timegrid {
+  .fc-col-header {
+    display: none;
+  }
+}
+
+.fc .fc-highlight {
+  background: rgba(255, 255, 255, 0) !important;
+}
+
+.fc .fc-timegrid-axis-cushion {
+  position: fixed;
+  top: 112px;
+}
+
+.fc-timegrid-event .fc-event-main {
+  padding: 0px;
+}
+
+.fc-timegrid-event {
+  margin: 1px;
+}
+
+.fc-h-event {
+  background-color: transparent;
+}
+
+.fc-temp-event {
+  background: rgba($Link-2-r, $Link-2-g, $Link-2-b, 0.95) !important;
+  border: 1px solid rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.8) !important;
+  color: #386ee7 !important;
+  border-radius: 2px !important;
+  opacity: 1 !important;
+  font-size: 12px;
+  z-index: 7 !important;
+  &.fc-temp-event-weekview {
+    left: 2px;
+    right: 2px;
+    overflow: hidden;
+    min-height: 20px;
+    &.fc-temp-event-weekview-allday {
+      height: 20px;
+    }
+  }
+  &.fc-temp-event-monthview {
+    top: 38px;
+    left: 8px;
+    right: 8px;
+    bottom: auto;
+    &::after {
+      content: '';
+      height: 20px;
+      width: 100%;
+    }
+  }
+  .fc-event-main {
+    color: #386ee7 !important;
+  }
+}
+
+.fc-timegrid-bg-harness {
+  .fc-temp-event-weekview.fc-temp-event-weekview-allday {
+    display: none;
+  }
+}
+
+// 周视图滚动条兼容
+.fc-timegrid-body {
+  width: 100% !important;
+  .fc-timegrid-slots > table {
+    width: 100% !important;
+    colgroup {
+      col {
+        width: 80px !important;
+      }
+    }
+  }
+  .fc-timegrid-cols > table {
+    width: 100% !important;
+    colgroup {
+      col {
+        width: 80px !important;
+      }
+    }
+  }
+}
+
+.fc-scroller-harness .fc-scroller {
+  overflow: hidden !important;
+}
+
+.fc-scroller.fc-scroller-liquid-absolute {
+  @include sirius-scroll();
+  overflow-y: auto !important;
+  overflow-y: overlay !important;
+  overflow-x: hidden;
+}

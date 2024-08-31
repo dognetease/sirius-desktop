@@ -1,0 +1,27 @@
+.address {
+  &-bread {
+    margin-bottom: 8px;
+    margin-top: 16px;
+  }
+
+  &-group {
+    padding: 0 12px;
+  }
+
+  &-contact {
+    padding: 0 12px;
+  }
+
+  &-footer {
+    padding: 16px 20px;
+    height: 32px;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+
+    &-btn {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+}

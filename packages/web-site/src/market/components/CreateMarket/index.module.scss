@@ -1,0 +1,78 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.create-market {
+  :global {
+    .ant-modal-body {
+      padding: 0 24px 16px;
+      margin-top: 24px;
+    }
+
+    .ant-modal-header {
+      border-bottom: none;
+      padding: 24px 24px 0;
+    }
+
+    .ant-modal-footer {
+      border-top: none;
+    }
+
+    .ant-checkbox-group-item {
+      margin-bottom: 21px;
+    }
+
+    .ant-form-item {
+      &:first-child {
+        height: 54px;
+        margin-bottom: 0;
+
+        &.ant-form-item-with-help {
+          height: 54px;
+        }
+      }
+
+      &:nth-child(2) {
+        height: 61px;
+        margin-bottom: 0;
+
+        &.ant-form-item-with-help {
+          height: 61px;
+        }
+      }
+
+      &:nth-child(3) {
+        height: 67px;
+        margin-bottom: 0;
+
+        &.ant-form-item-with-help {
+          height: 67px;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+        justify-content: flex-end;
+        .ant-form-item-control-input-content {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+
+      .market-name {
+        width: 100%;
+
+        &-tip {
+          margin-top: 8px;
+          font-size: 14px;
+          line-height: 22px;
+          color: $Text-2;
+        }
+      }
+    }
+    .ant-form-horizontal .ant-form-item-label {
+      padding-right: 5px;
+    }
+    .ant-form-item-label > label {
+      color: $Text-5;
+    }
+  }
+}

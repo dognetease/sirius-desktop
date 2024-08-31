@@ -1,0 +1,29 @@
+.team-stats-modal {
+  :global {
+    .ant-modal-body {
+      padding: 0;
+    }
+  }
+
+  .notice {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    background-color: $Brand-1;
+
+    .description {
+      color: $Text-4;
+      font-size: 14px;
+      line-height: 22px;
+      margin-left: 6px;
+    }
+  }
+
+  .stats {
+    margin: 24px;
+  }
+
+  .column-max-width {
+    max-width: 150px;
+  }
+}

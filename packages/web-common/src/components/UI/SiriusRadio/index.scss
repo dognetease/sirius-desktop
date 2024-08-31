@@ -1,0 +1,30 @@
+.sirius-radio-wrap {
+  display: inline-flex;
+  align-items: center;
+  .sirius-radio {
+    width: 14px;
+    height: 14px;
+    &.normal {
+      border-radius: 50%;
+      border: 1.5px solid #a8aaad;
+    }
+    &.checked {
+      background-image: url('../../../../../web/src/images/icons/radio_checked.svg');
+      background-size: 100% 100%;
+    }
+    &.disabled {
+      background-image: url('../../../../../web/src/images/icons/checkbox_disabled.svg');
+      background-size: 100% 100%;
+    }
+  }
+  .sirius-radio-name {
+    margin-left: 5px;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    // color: #262a33;
+    color: $font-color-2;
+  }
+}

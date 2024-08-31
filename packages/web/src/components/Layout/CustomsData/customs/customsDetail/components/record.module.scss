@@ -1,0 +1,45 @@
+@import '@web-common/styles/variables.scss';
+.tableStyle {
+  :global {
+    .ant-table-thead > tr > th {
+      padding: 12px 10px;
+    }
+  }
+}
+.base-info {
+  padding: 12px 20px;
+  :global {
+    .customs-scroll-box {
+      position: absolute;
+      left: 0px !important;
+      bottom: 4px !important;
+    }
+  }
+  .box {
+    display: flex;
+    gap: 12px;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+
+  .link {
+    color: #386ee7;
+    cursor: pointer;
+  }
+
+  :global(.ant-table-column-sorter-up.active),
+  :global(.ant-table-column-sorter-down.active) {
+    color: #1890ff !important;
+  }
+}
+
+.freight-search {
+  padding-top: 16px;
+}
+
+:global(.ant-tooltip) {
+  em {
+    color: #f77c7c !important;
+    font-style: normal;
+  }
+}

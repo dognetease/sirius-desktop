@@ -1,0 +1,32 @@
+.comp-doc-box {
+  padding-bottom: 15px;
+}
+.render-code-box {
+  margin: 15px;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fafafa;
+  .render-code-comp {
+    // padding-bottom: 15px;
+    // display: flex;
+    display: block;
+  }
+  .render-code-comp.row-space > div {
+    margin-right: 15px;
+  }
+  .render-code-describe {
+    // padding-bottom: 15px;
+  }
+  .render-code-code {
+    position: relative;
+    .render-code-code-copy {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+}
+.render-code-box + .render-code-box {
+  margin-top: 30px;
+}

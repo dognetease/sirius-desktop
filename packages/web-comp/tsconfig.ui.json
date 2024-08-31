@@ -1,0 +1,21 @@
+{
+  "include": ["src/index.ts", "src/declaration.d.ts"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@web-common/*": ["../../web-common/src/*"]
+    },
+    "target": "es6",
+    "module": "es2015",
+    "lib": ["dom", "esnext"],
+    "allowJs": true,
+    "declaration": true,
+    "rootDir": "./src",
+    "sourceMap": false,
+    "moduleResolution": "node",
+    "jsx": "react",
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true
+  }
+}

@@ -1,0 +1,76 @@
+.score-wrap {
+  padding: 16px 16px 22px;
+  background: linear-gradient(95deg, #fff 14.03%, #eaeeff 89.34%);
+  border-radius: 4px;
+  .score-title {
+    margin-bottom: 27px;
+    @include p1-4-med14;
+    color: $Text-5;
+  }
+  .score-container {
+    display: flex;
+    justify-content: space-between;
+    .score-gauge {
+      position: relative;
+      height: 164px;
+      width: 220px;
+      margin-left: 121px;
+      .Gauge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 170px;
+        height: 170px;
+      }
+    }
+    .score-tips {
+      width: 420px;
+      height: 164px;
+      margin-right: 20px;
+      border-radius: 8px;
+      border: 1px solid #fff;
+      background: rgba(255, 255, 255, 0.5);
+      position: relative;
+      .tips-item {
+        padding: 16px;
+        .tips-icon {
+          display: flex;
+          align-items: center;
+          color: $Text-5;
+          @include p1-4-med14;
+          margin-bottom: 8px;
+          span {
+            margin-left: 4px;
+          }
+        }
+        .tips-content {
+          margin: 0;
+          color: $Text-3;
+          @include c4-3-reg12;
+        }
+      }
+      .btn-wrap {
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+        margin: 0;
+        span {
+          cursor: pointer;
+        }
+        .prev {
+          margin-right: 12px;
+        }
+      }
+      .bulb {
+        width: 54px;
+        height: 54px;
+        background: url(@/images/bulb.png) no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        right: -12px;
+        bottom: -4px;
+        margin: 0;
+      }
+    }
+  }
+}

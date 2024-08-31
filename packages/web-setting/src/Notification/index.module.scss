@@ -1,0 +1,113 @@
+@import '@web-common/styles/variables.scss';
+@import '../../../web/src/styles/varies';
+
+.mailFolderBtn {
+  border: 1px solid var(--line-3, #e1e3e8);
+  border-radius: 4px;
+  color: var(--text-4, #545a6e);
+}
+
+.mailFolderSettingModal {
+  :global(.ant-modal-body) {
+    padding: 0;
+    height: 392px;
+  }
+}
+
+.mainWrapper {
+  height: 100%;
+  display: flex;
+  &-left {
+    flex: 1 1;
+  }
+  &-right {
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  &-line {
+    flex: 0 0 1px;
+    width: 1px;
+    height: 100%;
+    background-color: #f0f1f5;
+  }
+  :global(.ant-checkbox-wrapper) {
+    user-select: none;
+  }
+}
+
+.folderGroup {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  :global(.ant-checkbox-wrapper) {
+    display: flex;
+    padding: 10px 24px;
+    cursor: pointer;
+  }
+  :global(.ant-checkbox-wrapper + .ant-checkbox-wrapper) {
+    margin-left: 0;
+  }
+}
+
+.accountItem {
+  font-size: 14px;
+  color: var(--text-5, #232d47);
+  line-height: 22px;
+  padding: 10px 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+  cursor: pointer;
+  &.accountItemSelected {
+    background: var(--line-3, #e1e3e8);
+  }
+}
+
+.folderSettingItem {
+  overflow: hidden;
+  padding: 10px 24px;
+  flex: 0 0 auto;
+  &.mailSetting {
+    border-bottom: 1px solid var(--line-2, #ebedf2);
+  }
+}
+
+.config-content {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  margin: 24px 24px 0 24px;
+
+  &-title {
+    flex: 1;
+    flex-grow: 10;
+    font-weight: 700;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  }
+  &-checkbox {
+    margin: 0 0 28px 0;
+    &-title {
+      color: $Text-5;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      @include p1-4-med14();
+      margin-bottom: 6px;
+    }
+
+    &-info {
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+      font-style: normal;
+      font-weight: normal;
+      @include c4-1-reg12();
+      display: flex;
+      align-items: center;
+      &-link {
+        margin-left: 4px;
+        color: $Text-2;
+        cursor: pointer;
+      }
+    }
+  }
+}

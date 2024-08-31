@@ -1,0 +1,63 @@
+{
+  // see https://www.typescriptlang.org/tsconfig to better understand tsconfigs
+  "include": ["src", "types", "*.d.ts"],
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["../../web/src/*"],
+      "api": ["../../api/src/index.ts"],
+      "env_def": ["../../env/src/index.ts"],
+      "@web-disk/*": ["../../web-disk/src/*"],
+      "@web-schedule/*": ["../../web-schedule/src/*"],
+      "@web-im/*": ["../../web-im/src/*"],
+      "@web-account/*": ["../../web-account/src/*"],
+      "@web-setting/*": ["../../web-setting/src/*"],
+      "@web-mail/*": ["../../web-mail/src/*"],
+      "@web-mail-write/*": ["../../web-mail-write/src/*"],
+      "@web-contact/*": ["../../web-contact/src/*"],
+      "@web-unitable-crm/*": ["../../web-unitable-crm/src/*"],
+      "@web-edm/*": ["../../web-edm/src/*"],
+      "@web-common/*": ["../../web-common/src/*"],
+      "@web-sns-im": ["../../web-sns-im/src/index.ts"]
+    },
+    "typeRoots": ["node_modules/@types/*"],
+    "experimentalDecorators": true,
+    "target": "es2017",
+    "module": "esnext",
+    "lib": ["dom", "esnext"],
+    "emitDecoratorMetadata": true,
+    "allowJs": true,
+    "importHelpers": true,
+    // output .d.ts declaration files for consumers
+    "declaration": true,
+    // output .js.map sourcemap files for consumers
+    "sourceMap": true,
+    //    "inlineSourceMap": true,
+    "inlineSources": true,
+    // match output dir to input dir. e.g. dist/index instead of dist/src/index
+    //    "rootDir": "./src",
+    // stricter type-checking for stronger correctness. Recommended by TS
+    "strict": true,
+    // linter checks for common issues
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    // noUnused* overlap with @typescript-eslint/no-unused-vars, can disable if duplicative
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    // use Node's module resolution algorithm, instead of the legacy TS one
+    "moduleResolution": "node",
+    // transpile JSX to React.createElement
+    "jsx": "react",
+    // interop between ESM and CJS modules. Recommended by TS
+    "esModuleInterop": true,
+    // significant perf increase by skipping checking .d.ts files, particularly those in node_modules. Recommended by TS
+    "skipLibCheck": true,
+    // error out if import and file system have a casing mismatch. Recommended by TS
+    "forceConsistentCasingInFileNames": true,
+    // `tsdx build` ignores this option, but it is commonly used when type-checking separately with `tsc`
+    "allowUmdGlobalAccess": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "removeComments": true
+  }
+}

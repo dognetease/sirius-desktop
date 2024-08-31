@@ -1,0 +1,40 @@
+@import '../../../web/src/styles/varies';
+.im-network-status {
+  opacity: 0.8;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  display: block;
+  line-height: 40px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.failed {
+    background-color: $main-error-color;
+  }
+  &.ing {
+    background-color: $Warning-6;
+  }
+  &.success {
+    background-color: $main-success-color;
+    display: none;
+  }
+  .failed-icon {
+    height: 16px;
+    width: 16px;
+    background-image: url('../../../web/src/images/icons/wifi_closed.svg');
+    background-position: center;
+    background-size: 16px;
+    margin-left: 16px;
+    margin-right: 8px;
+  }
+  .text {
+    padding: 0 8px;
+  }
+  .ing-icon {
+  }
+}

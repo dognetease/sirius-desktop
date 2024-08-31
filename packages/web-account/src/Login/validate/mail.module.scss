@@ -1,0 +1,67 @@
+@import '../../../../web/src/styles/varies';
+
+.wrap {
+  width: 100%;
+  max-width: 400px;
+  :global(.ant-input-affix-wrapper) {
+    height: 48px;
+    border-radius: 8px;
+    font-size: 16px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    padding: 4px 16px;
+  }
+  :global(.ant-input-affix-wrapper:hover, .ant-input-affix-wrapper:focus, .ant-input-affix-wrapper-focused) {
+    box-shadow: 0 0 0 0px #ffffff;
+    border: solid 1px $main-enhance-color;
+  }
+  .pwdWrap {
+    margin-top: 16px;
+  }
+  .protocolWrap {
+    margin-top: 32px;
+    line-height: 1;
+
+    .u-protocol {
+      & > a {
+        margin: 0 4px;
+      }
+    }
+  }
+  .submitBtn {
+    margin-top: 32px;
+    width: 100%;
+    height: 48px;
+    background: #386ee7;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    cursor: pointer;
+
+    color: #ffffff;
+  }
+  .errorWrap {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 16px;
+    .errorIcon {
+      flex: none;
+      margin-top: 2px;
+    }
+    .errorText {
+      margin-left: 5px;
+      height: 36px;
+      word-break: break-word;
+      flex: 1;
+      overflow: hidden;
+      font-size: 14px;
+      line-height: 18px;
+      color: #f74f4f;
+    }
+  }
+}

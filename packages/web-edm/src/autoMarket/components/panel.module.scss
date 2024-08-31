@@ -1,0 +1,164 @@
+.panel {
+  padding: 24px;
+  width: 340px;
+  border: 1px solid #eceff4;
+  box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.06);
+  border-radius: 2px;
+  background-color: #ffffff;
+  position: relative;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+  }
+
+  .name {
+    color: #232d47;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .delete {
+    cursor: pointer;
+  }
+
+  .desc {
+    color: #7a8599;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    white-space: normal;
+  }
+
+  .options {
+    .option {
+      padding: 12px 16px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      border-radius: 2px;
+      border: 1px solid #e1e6ed;
+      margin-bottom: 12px;
+      cursor: pointer;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover:not(.option-active) {
+        border-color: #c0c8d6;
+      }
+
+      &-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        margin-right: 12px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+      }
+
+      &-content {
+        margin-top: 5px;
+      }
+
+      &-finished {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-left: 12px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+      }
+
+      &-name {
+        color: #232d47;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 4px;
+      }
+      &-green {
+        color: #398e80;
+        background: #d6f7f1;
+        border-radius: 2px;
+        font-weight: 400;
+        font-size: 12px;
+        padding: 2px 6px;
+        line-height: 16px;
+        margin-right: 5px;
+      }
+
+      &-aiTag {
+        background: #ede4ff;
+        color: #7a51cb;
+      }
+    }
+
+    .option-active {
+      border-color: #445fe5;
+    }
+
+    .option-has-infos {
+      .option-icon {
+        flex-shrink: 0;
+        margin-top: 7px;
+      }
+
+      .option-content {
+        flex-grow: 1;
+        overflow: hidden;
+        margin-top: 0;
+        margin-bottom: 4px;
+      }
+
+      .option-finished {
+        flex-shrink: 0;
+        margin-top: 13px;
+      }
+
+      .option-infos {
+        .option-info {
+          color: #7a8599;
+          font-size: 12px;
+          line-height: 20px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin-bottom: 4px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .end-wrap {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .end-line {
+      width: 1px;
+      background-color: #c9cbd6;
+      height: 24px;
+    }
+    .end-box {
+      width: 56px;
+      height: 28px;
+      background: #ebedf2;
+      border-radius: 28px;
+      text-align: center;
+      line-height: 28px;
+      color: #545a6e;
+    }
+  }
+}

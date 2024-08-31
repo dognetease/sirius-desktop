@@ -1,0 +1,108 @@
+@import '../../../../web/src/styles/varies';
+.chat-item-sub-menu {
+  transform: translate(4px, 0);
+  // background: #ffffff;
+  background-color: $white;
+  /* 字体及ICON颜色/10% */
+  border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+  box-sizing: border-box;
+  border-radius: 4px !important;
+  min-width: 24px;
+  box-sizing: border-box;
+  padding: 4px 0;
+  :global(li.ant-menu-item) {
+    // padding: 0 12px;
+    margin: 0 !important;
+    height: 24px;
+    line-height: 24px;
+    font-size: 11px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    display: flex;
+    align-items: center;
+    border-bottom: 0;
+    padding: 0 !important;
+    justify-content: center;
+    &:last-child {
+      border-bottom-width: 0;
+    }
+    .icon-wrapper {
+      display: inline-flex;
+      margin-right: 6px;
+    }
+    &::after {
+      content: '';
+      width: 100%;
+      height: 0.5px;
+      font-size: 0;
+      overflow: hidden;
+      background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+    }
+  }
+  :global(.ant-menu-item):hover {
+    // color: #51555c;
+    color: $font-color-1;
+    // background-color: #f0f0f1 !important;
+    background-color: $white-hover-bg !important;
+  }
+  :global(.ant-menu-item-selected),
+  :global(.ant-menu-item-active) {
+    background-color: transparent !important;
+    // color: #ffffff !important;
+  }
+  :global(.ant-menu-title-content) {
+    padding: 0 12px;
+  }
+}
+
+.chat-operation-menu {
+  // @include borderHalfPx(rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1), 4px, 0.5px, 0.5px, 0.5px, 0.5px);
+  border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin: 0 4px;
+  height: 28px;
+  font-size: 11px;
+  align-self: flex-end;
+  padding: 0 2.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  flex-shrink: 0;
+  .delimiter {
+    width: 0.5px;
+    height: 10px;
+    background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+  }
+  .menu-item {
+    height: 100%;
+    min-width: 32px;
+    display: inline-block;
+    line-height: 26px;
+    text-align: center;
+    padding: 0 5px;
+    cursor: pointer;
+    color: $Text-5;
+    &:hover {
+      color: $main-enhance-color;
+    }
+    &:last-of-type {
+      border-right-width: 0;
+    }
+    &.menu-item-sub-entry {
+      font-weight: bold;
+      font-size: 15px;
+    }
+  }
+}
+
+div[data-msg-wrapper='true']:hover .chat-operation-menu {
+  visibility: visible;
+}
+
+.chat-item-copy-tip {
+  margin-left: 8px;
+}

@@ -1,0 +1,14 @@
+.template-modal {
+  height: 612px;
+  :global(.ant-modal-body) {
+    height: 612px;
+    overflow-y: auto;
+    padding: 0px !important;
+    border-radius: 8px;
+  }
+  &.template-modal2 {
+    :global(.ant-modal-body) {
+      display: none;
+    }
+  }
+}

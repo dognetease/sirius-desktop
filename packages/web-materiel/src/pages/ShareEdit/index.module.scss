@@ -1,0 +1,264 @@
+.share-edit {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $Fill-2;
+  overflow: hidden;
+
+  .share-initing {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header {
+    flex-shrink: 0;
+    padding: 16px 16px 8px;
+
+    .title {
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+
+      .back {
+        display: flex;
+        width: auto;
+        height: auto;
+        font-size: 16px;
+      }
+
+      .text {
+        color: $Text-5;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .body {
+    flex-grow: 1;
+    padding: 4px 16px 16px;
+    overflow: auto;
+
+    .content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border: 1px solid $Line-1;
+      border-radius: 4px;
+      background-color: #fff;
+      overflow: auto;
+
+      .content-header {
+        color: $Text-5;
+        flex-shrink: 0;
+        padding-left: 6px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        margin-bottom: 16px;
+      }
+
+      .content-body {
+        flex-grow: 1;
+        display: flex;
+        align-items: flex-start;
+        overflow: auto;
+
+        .config {
+          width: 50%;
+          border-right: 1px solid $Line-1;
+
+          .form {
+            margin-left: -20px;
+            padding-left: 20px;
+            padding-right: 44px;
+          }
+
+          .form :global {
+            .ant-form-item {
+              margin-bottom: 20px;
+            }
+
+            .ant-form-item-label {
+              overflow: initial;
+              height: auto;
+            }
+
+            .ant-form-item-label label {
+              position: relative;
+              align-items: flex-start;
+              display: inline-block;
+              padding-top: 5px;
+              padding-right: 4px;
+              padding-left: 10px;
+              height: auto;
+              color: $Text-3;
+
+              &::before {
+                position: absolute;
+                left: 0px;
+                top: 10px;
+              }
+
+              &::after {
+                content: none;
+              }
+            }
+
+            .ant-form-item-control {
+              max-width: calc(100% - 64px);
+            }
+
+            .ant-form-item-with-help {
+              margin-bottom: 0;
+            }
+
+            .ant-form-item-explain,
+            .ant-form-item-extra {
+              font-size: 12px;
+              min-height: 20px;
+            }
+
+            .lx-btn {
+              display: inline-flex;
+            }
+
+            .lx-btn + .lx-btn {
+              margin-left: 12px;
+            }
+            .lx-ui-btn {
+              display: inline-flex;
+            }
+
+            .lx-ui-btn + .lx-ui-btn {
+              margin-left: 12px;
+            }
+          }
+
+          .file-card {
+            background-color: $Fill-1;
+          }
+
+          .file-trigger {
+            display: flex;
+            padding: 4px 0;
+            border: 1px solid transparent;
+
+            .upload-trigger {
+              margin-left: 8px;
+            }
+          }
+
+          .file-card + .file-trigger {
+            padding: 0;
+            font-size: 12px;
+            line-height: 1;
+            margin-top: 12px;
+            margin-bottom: -12px;
+          }
+
+          :global(.ant-form-item-has-error) .file-trigger {
+            border-bottom-color: $Error-6;
+          }
+
+          .form-item-cover {
+            margin-bottom: 4px !important;
+          }
+
+          .cover-img {
+            width: 240px;
+          }
+
+          .cover-trigger {
+            display: flex;
+            padding: 4px 0;
+            border: 1px solid transparent;
+          }
+
+          .cover-img + .cover-trigger {
+            padding: 0;
+            font-size: 12px;
+            margin-top: 8px;
+          }
+
+          :global(.ant-form-item-has-error) .cover-trigger {
+            border-bottom-color: $Error-6;
+          }
+
+          .with-business-card {
+            color: $Text-5;
+          }
+
+          .business-card-setting {
+            color: $Text-3;
+            font-size: 14px;
+            font-weight: 400;
+            cursor: pointer;
+          }
+
+          .buttons {
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .preview {
+          width: 50%;
+          padding-left: 44px;
+          padding-right: 44px;
+
+          .preview-header {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+            margin-bottom: 15px;
+          }
+
+          .preview-message {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid $Line-2;
+            background-color: #fff;
+          }
+
+          .preview-cover {
+            width: 100%;
+          }
+
+          .preview-title {
+            columns: $Text-5;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 22px;
+            word-break: break-all;
+            margin-top: 12px;
+          }
+
+          .preview-description {
+            color: $Text-3;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+            word-break: break-all;
+            margin-top: 4px;
+          }
+
+          .preview-link {
+            display: inline-flex;
+            margin-top: 8px;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 16px;
+          }
+        }
+      }
+    }
+  }
+}

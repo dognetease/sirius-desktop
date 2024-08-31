@@ -1,0 +1,52 @@
+@import '../../common.module.scss';
+
+.overView {
+  cursor: default;
+  background: #f9fafb;
+  border-radius: 8px;
+  // margin: 0 24px;
+  padding: 20px;
+  margin-bottom: 30px;
+
+  .col {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #e1e6ed;
+
+    // &:first-child {
+    //   justify-content: left;
+    // }
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &.al-right {
+      justify-content: right;
+    }
+
+    .label {
+      color: #7a8599;
+      font-size: 14px;
+      span,
+      img {
+        vertical-align: middle;
+      }
+    }
+
+    .value {
+      color: #232d47;
+      font-size: 20px;
+      font-weight: 500;
+    }
+  }
+
+  .cell-content {
+    display: flex;
+    img {
+      margin-right: 12px;
+    }
+  }
+}

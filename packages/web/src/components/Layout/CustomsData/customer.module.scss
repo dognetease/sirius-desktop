@@ -1,0 +1,61 @@
+@import '@web-common/styles/variables.scss';
+.container {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  min-width: 852px;
+  min-height: 640px;
+}
+.tree-container {
+  // padding: 0 $container-padding;
+  margin-top: 24px;
+  :global(.ant-tree) {
+    background: transparent;
+    font-size: 14px;
+    :global(.ant-tree-treenode) {
+      padding: 0;
+      padding-left: 8px;
+      overflow: hidden;
+      font-weight: normal;
+      height: 36px;
+      .leaf-node {
+        font-weight: 400;
+      }
+      :global(.ant-tree-indent-unit) {
+        width: 12px;
+      }
+      :global(.ant-tree-switcher) {
+        width: 15px;
+        padding-left: 4px;
+        line-height: 36px;
+      }
+      :global(.ant-tree-node-content-wrapper) {
+        height: 36px;
+        line-height: 36px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        word-break: keep-all;
+        flex: 1;
+        &:hover {
+          background: none;
+        }
+      }
+      :global(.ant-tree-node-content-wrapper.ant-tree-node-selected) {
+        background: none;
+      }
+    }
+    :global(.ant-tree-treenode.ant-tree-treenode-selected) {
+      background: rgba(210, 224, 255, 0.9);
+    }
+    :global(.ant-tree-treenode:not(.ant-tree-treenode-selected)) {
+      &:hover {
+        background: rgba(38, 42, 51, 0.08);
+      }
+    }
+  }
+  .tree-seperator {
+    margin: 6px 12px;
+    height: 1px;
+    background: rgba(38, 42, 51, 0.08);
+  }
+}

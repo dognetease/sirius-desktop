@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charSet="utf-8" />
+    <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>邮件详情</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: 'PingFang SC';
+            font-style: normal;
+        }
+
+        .black_overlay {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 100;
+        }
+
+        .enlargeContainer {
+            display: none;
+        }
+
+        .enlargePreviewImg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 100%;
+            z-index: 200;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .close {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            z-index: 300;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 100vw; height: 100vh; margin: 0; padding: 0;position: absolute;left: 0; top: 0;overflow: hidden;overflow-y: auto;"
+        th:object="${data}">
+        <div style="position: fixed; top: 0px; z-index: 10; width: 100%;">
+            <div style="height: 32px; padding: 13px 14px; background: #FFFFFF; box-shadow: inset 0px -0.5px 0px #ECEFF4;
+            display: flex; justify-content: space-between; align-items:center;">
+                <div style="display: flex;">
+                    <img style="width: 32px; height: 32px;"
+                        src="https://cowork-storage-public-cdn.lx.netease.com/common/2022/07/28/62cc6e1437ed4beba8ca979ab50c894c.png">
+                    <span
+                        style="color: #333333; font-size: 18px; display: inline-block; height: 32px; line-height: 32px; margin-left: 8px; font-weight: 500;">网易灵犀办公</span>
+                </div>
+                <div style="width: 70px; height: 25px; background: #4C6AFF; border-radius: 4px; font-size: 13px; color: #FFFFFF; line-height: 25px; text-align: center;"
+                    th:onclick="'getName()'">打开App</div>
+            </div>
+        </div>
+        <div style="margin: 0px 16px 20px 16px; overflow-y: scroll;"
+            th:styleappend="*{backgroundUrl} ? 'background: url('+ *{backgroundUrl} +'); top left repeat transparent;' : '' ">
+            <div style="font-size: 20px; font-weight: 500; color: #232D47; line-height: 28px; margin-top: 62px; width: 100%;"
+                itemid="subject" th:text="*{subject}">
+            </div>
+
+            <div style="padding: 14px 0px; border-bottom: 1px dashed #E1E6ED; height: 40px; display: flex;">
+                <img style="width: 40px; height: 40px; border-radius: 50%;" th:src="*{iconUrl}" alt="">
+                <div style="font-size: 14px; width: calc(100% - 52px); margin-left: 12px;">
+                    <div>
+                        <span style="font-size: 16px; color: #232D47; line-height: 20px;" itemid="name"
+                            th:if="*{from!=null && from.length>0}" th:text="*{from[0].name}">
+                        </span>
+                        <span style="font-size: 12px; line-height: 14px; color: #A9B2C2; margin-left: 8px;"
+                            itemid="displayDate" th:text="*{displayDate}">
+                        </span>
+                    </div>
+                    <!-- <span th:text="${item.name}+(${itemStat.last}?'':'、')"></span> -->
+                    <div style="display: flex; justify-content: space-between;">
+                        <div
+                            style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #7A8599; line-height: 16px;">
+                            <span style="color: #4E5A70; line-height: 16px;">
+                                发至
+                            </span>
+                            <th:block th:if="*{to!=null && to.length>0}" th:each="item,itemStat:*{to}">
+                                <span th:text="${item.name}+(${itemStat.last}?'':'、')"></span>
+                            </th:block>
+                            <th:block th:if="*{cc!=null && cc.length>0}" th:each="item,itemStat:*{cc}">
+                                <span>、</span>
+                                <span th:text="${item.name}"></span>
+                            </th:block>
+                        </div>
+                        <img style="width: 16px; height: 16px;" th:onclick="'changeBlock(this)'"
+                            src="https://cowork-storage-public-cdn.lx.netease.com/common/2022/08/17/cb2123916fb64a4aa804992cd88a33fe.png">
+                    </div>
+
+                </div>
+            </div>
+            <div id="infoBlock"
+                style="background: #f9fafb; border-radius: 4px; margin: 8px 0px; font-size: 14px; color: #7A8599; padding-top: 12px; display: none;">
+                <div style="padding: 0px 12px 8px 12px; display: flex;" th:if="*{from!=null && from.length>0}">
+                    <span style="min-width: 42px;">发件人</span>
+                    <div style="display: block;">
+                        <th:block style="display: inline-block;" th:each="item:*{from}">
+                            <div>
+                                <span style="color: #232D47; margin-left: 8px; margin-right: 4px;"
+                                    th:text="${item.name}"></span>
+                                <span th:text="${item.address}"></span>
+                            </div>
+                        </th:block>
+                    </div>
+                </div>
+
+                <div style="padding: 0px 12px 8px 12px; display: flex;" th:if="*{to!=null && to.length>0}">
+                    <span style="min-width: 42px;">收件人</span>
+                    <div style="display: block;">
+                        <th:block style="display: inline-block;" th:each="item:*{to}">
+                            <div>
+                                <span style="color: #232D47; margin-left: 8px; margin-right: 4px;"
+                                    th:text="${item.name}"></span>
+                                <span th:text="${item.address}"></span>
+                            </div>
+                        </th:block>
+                    </div>
+                </div>
+
+                <div style="padding: 0px 12px 8px 12px; display: flex;" th:if="*{cc!=null && cc.length>0}">
+                    <span style="min-width: 42px;">抄送</span>
+                    <div style="display: block;">
+                        <th:block style="display: inline-block;" th:each="item:*{cc}">
+                            <div>
+                                <span style="color: #232D47; margin-left: 8px; margin-right: 4px;"
+                                    th:text="${item.name}"></span>
+                                <span th:text="${item.address}"></span>
+                            </div>
+                        </th:block>
+                    </div>
+                </div>
+                <div style="padding: 0px 12px 8px 12px; display: flex;">
+                    <span style="min-width: 42px;">时间</span>
+                    <div style="display: block;">
+                        <div style="display: inline-block;">
+                            <span style="color: #232D47; margin-left: 8px; margin-right: 4px;"
+                                th:text="*{sentDate}"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div itemid="html" id="imgContainer" th:utext="*{html}" style="width: 100%">
+            </div>
+            <div style="background: #F9FAFB; border-radius: 6px; font-size: 14px;"
+                th:if="*{attachments!=null && attachments.length>0}">
+                <div
+                    style="font-weight: 500; padding: 16px; line-height: 16px; color: #232D47; border-bottom: 1px solid #ECEFF4;">
+                    附件(<span th:text="*{attachments.length}"></span>)
+                </div>
+                <div>
+                    <th:block th:each="item:*{attachments}">
+                        <div style="display: flex; justify-content:space-between; align-items:center">
+                            <img style="margin-left: 12px" width="24" height="24" th:src="${item.iconUrl}" alt="">
+                            <div style="display: block;width: calc(100% - 80px); margin: 10px 0px 10px 0px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                                <a th:href="${item.url}" th:download="${item.url}" th:text="${item.filename}"
+                                    style="font-size: 16px; height: 20px; line-height: 20px; color: #232D47; margin-bottom: 5px; text-decoration: none">
+                                </a>
+                                <div th:if="${item.contentLength}" th:text="${item.contentLength}"
+                                    style="font-size: 12px; height: 14px; line-height: 14px; color: #7A8599;"></div>
+                            </div>
+                            <div style="height: 16px; margin-right: 12px">
+                                <a th:href="${item.url}" th:download="${item.url}"
+                                    style="text-decoration: none;display: block; font-size: 12px; line-height: 12px;color:#386EE7">下载</a>
+                            </div>
+                        </div>
+                    </th:block>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="black_overlay" id="black_overlay"></div>
+    <div class="enlargeContainer" id="enlargeContainer">
+        <div class="close" id="close">
+            <img style="width: 20px; height: 20px;"
+                src="https://cowork-storage-public-cdn.lx.netease.com/common/2022/08/17/9b980ed73aef434dbdaf0bbe999b5ae2.png"
+                alt="">
+        </div>
+    </div>
+</body>
+<script th:inline="javascript">
+    let timer;
+    let hidden;
+    let visibilityChange;
+    function getSupportedProperty() {
+        if (typeof document === 'undefined') return;
+        if (typeof document.hidden !== 'undefined') {
+            hidden = 'hidden';
+            visibilityChange = 'visibilitychange';
+        } else if (typeof document.msHidden !== 'undefined') {
+            hidden = 'msHidden';
+            visibilityChange = 'msvisibilitychange';
+        } else if (typeof document.webkitHidden !== 'undefined') {
+            hidden = 'webkitHidden';
+            visibilityChange = 'webkitvisibilitychange';
+        }
+    };
+
+    getSupportedProperty();
+
+    if (typeof visibilityChange !== 'undefined') {
+        document.addEventListener(visibilityChange, () => {
+            if (hidden) {
+                clearTimeout(timer);
+            };
+        });
+    } else {
+        window.addEventListener('pagehide', () => {
+            clearTimeout(timer);
+        });
+    };
+
+    function changeBlock(obj) {
+        var t = document.getElementById('infoBlock');
+        if (t.style.display === 'none') {
+            t.style.display = 'block';
+            obj.src = "https://cowork-storage-public-cdn.lx.netease.com/common/2022/08/17/476922c734ac4719a7236f7cc959f8ef.png";
+        } else {
+            t.style.display = 'none';
+            obj.src = "https://cowork-storage-public-cdn.lx.netease.com/common/2022/08/17/cb2123916fb64a4aa804992cd88a33fe.png";
+        }
+    };
+
+    function getName() {
+        const ua = navigator.userAgent || '';
+        const isAndroid = /android/i.test(ua);
+        const isWechat = /micromessenger/i.test(ua);
+        const isIos = /iphone|ipod/i.test(ua);
+
+        const isIpad =
+            navigator.userAgent.match(/(iPad)/) ||
+            (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        const isOriginalChrome =
+            /chrome\/[\d.]/i.test(ua) && isAndroid && ua.indexOf('Version') < 0;
+        const mid = /*[[${data.mid}]]*/"";
+        const iosUri = "https://lingxi.office.163.com/static_html/download_h5.html?deeplink=sirius://mail/in-share-detail?mailId=" + mid;
+        const androidUri = "lingxi://lx.office.163.com/mailDetail?mailId=" + mid;
+        const downloadUri = "https://lingxi.office.163.com/static_html/download_h5.html?deeplink=sirius://mail/in-share-detail?mailId=" + mid;
+        if (isIos || isIpad) {
+            timer = setTimeout(() => {
+                evokeByLocation(downloadUri);
+            }, 3000);
+            evokeByLocation(iosUri);
+        } else if (isOriginalChrome) {
+            timer = setTimeout(() => {
+                evokeByLocation(downloadUri)
+            }, 3000);
+            evokeByLocation(androidUri);
+        } else if (isWechat) {
+            evokeByLocation(downloadUri);
+        }
+    };
+
+    function evokeByLocation(uri) {
+        window.location.href = uri;
+    };
+</script>
+<script>
+    let black_overlay = document.getElementById('black_overlay');
+    let enlargeContainer = document.getElementById('enlargeContainer');
+    let closeBtn = document.getElementById('close');
+    let toEnlargeImg = document.getElementById('imgContainer').getElementsByTagName('img');
+    toEnlargeImg = [].slice.call(toEnlargeImg);
+    if (toEnlargeImg && toEnlargeImg.length > 0) {
+        toEnlargeImg.forEach((img) => {
+            img.style.maxWidth = '100%';
+            img.style.height = 'auto';
+            img.addEventListener('click', function () {
+                let imgUrl = this.src;
+                black_overlay.style.display = 'block';
+                enlargeContainer.style.display = 'block';
+                let img = new Image();
+                img.src = imgUrl;
+                img.classList.add('enlargePreviewImg');
+                if (closeBtn.nextElementSibling) {
+                    enlargeContainer.removeChild(closeBtn.nextElementSibling);
+                };
+                enlargeContainer.appendChild(img);
+            });
+            closeBtn.addEventListener('click', function () {
+                black_overlay.style.display = 'none';
+                enlargeContainer.style.display = 'none';
+            });
+        });
+    };
+</script>
+
+</html>

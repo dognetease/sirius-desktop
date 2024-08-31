@@ -1,0 +1,180 @@
+@import '../../../../web/src/styles/varies.scss';
+.textNormal {
+  cursor: default;
+  // color: $main-font-color;
+  color: $font-color-2;
+}
+
+.busyFreeIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  margin-top: -2px;
+}
+
+.scheduleModalWrap {
+  z-index: 1030;
+}
+
+.outer {
+  height: 100%;
+  width: 220px;
+  background-color: $Fill-1;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  overflow: hidden;
+  cursor: default;
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    .button {
+      width: 94px;
+      border: none;
+      outline: none;
+      border-radius: 4px;
+      height: 28px;
+      line-height: 28px;
+      color: #ffffff;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      padding-left: 0;
+      padding-right: 0;
+      justify-content: center;
+      cursor: pointer;
+      background: #386ee7;
+      .text {
+        text-align: center;
+      }
+    }
+    .addIcon {
+      background: url(@/images/icons/schedule-add-white.png) center center no-repeat;
+      background-size: 16px;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+    .syncIcon {
+      margin-left: 12px;
+      box-sizing: border-box;
+      border: 1px solid $white;
+      background: $white url(../../../../web/src/images/icons/common/sync.svg) center center no-repeat;
+      background-size: 16px;
+      width: 28px;
+      height: 28px;
+      border-radius: 14px;
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+      &:hover {
+        background-image: url('@/images/icons/common/sync_hover.svg');
+        border-color: $main-enhance-color;
+      }
+    }
+  }
+  .miniHeader {
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    height: 20px;
+    display: flex;
+    // color: #000000;
+    color: $font-color-3;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    padding-left: 16px;
+    .arrow {
+      display: inline-block;
+      cursor: pointer;
+      height: 20px;
+      width: 20px;
+      background-size: 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+      &.left {
+        margin-left: 6px;
+        background-image: url('@/images/icons/calendarDetail/date-picker-arrow-left.svg');
+      }
+      &.right {
+        margin-right: 13px;
+        background-image: url('@/images/icons/calendarDetail/date-picker-arrow-right.svg');
+      }
+    }
+  }
+  .miniMonth {
+    min-width: 65px;
+  }
+  .miniCalendar {
+    width: 100%;
+    padding: 0 14px;
+    .miniDay {
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      font-family: DIN Alternate;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 28px;
+      align-items: center;
+      text-align: center;
+      // color: #51555c;
+      color: $font-color-1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    }
+    .notMonth {
+      // color: #a8aaad;
+      color: $calendar-1;
+    }
+    .today {
+      border: 1px solid #386ee7;
+      color: #386ee7;
+    }
+    .todaySelected {
+      background: $Brand-6;
+      color: #ffffff;
+    }
+    .notTodaySelected {
+      background: $Brand-6;
+      color: #ffffff;
+    }
+    :global(.ant-picker-date-panel .ant-picker-content th) {
+      width: auto;
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 20px;
+      // color: #a8aaad;
+      color: $calendar-1;
+      padding-bottom: 6px;
+    }
+    :global(.ant-picker-calendar) {
+      background: rgba(0, 0, 0, 0);
+    }
+    :global(.ant-picker-calendar .ant-picker-panel) {
+      background: rgba(0, 0, 0, 0);
+    }
+    :global(.ant-picker-panel) {
+      background: rgba(0, 0, 0, 0);
+    }
+    :global(.ant-picker-calendar .ant-picker-panel) {
+      border-top: 0;
+    }
+    :global(.ant-picker-cell) {
+      padding: 0px;
+    }
+    :global(.ant-picker-date-panel .ant-picker-content) {
+      height: 218px;
+    }
+  }
+}

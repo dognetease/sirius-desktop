@@ -1,0 +1,107 @@
+@import './../../../../web/src/styles/varies.scss';
+
+.modal {
+  :global(.ant-modal-header) {
+  }
+  :global(.ant-modal-body) {
+    min-height: 343px;
+    padding: 32px 24px 0 24px;
+    .header {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      .title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: #262a33;
+      }
+    }
+    .body {
+      display: flex;
+      flex-flow: row nowrap;
+      margin-top: 40px;
+      .left-content {
+        flex: 0 0 261px;
+        margin-right: 24px;
+        height: 208px;
+        .bg {
+          width: 100%;
+          height: 100%;
+          background-image: url(./bg.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+      .right-content {
+        flex: auto;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+      }
+    }
+    .item {
+      position: relative;
+      flex: 0 0 86px;
+      background: #ffffff;
+      border: 1px solid #f0f0f1;
+      box-sizing: border-box;
+      border-radius: 4px;
+      height: 86px;
+      width: 380px;
+      margin-bottom: 24px;
+      padding: 20px 20px 20px 16px;
+      box-sizing: border-box;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .container {
+        display: inline-block;
+        text-align: left;
+        .title {
+          width: 64px;
+          height: 18px;
+          font-family: PingFang SC;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 18px;
+          color: #262a33;
+          margin-bottom: 12px;
+        }
+        .content {
+          width: 252px;
+          height: 16px;
+          font-family: PingFang SC;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 16px;
+          color: rgba(#272e47, 0.5);
+          // color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+        }
+      }
+      .btn {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-block;
+        padding: 6px 10px;
+        width: 76px;
+        height: 28px;
+        border-radius: 4px;
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+  .modal-close {
+    @include icon();
+    background-image: url(@/images/icons/calendarDetail/close.png);
+  }
+}

@@ -1,0 +1,37 @@
+@import '@web-common/styles/variables.scss';
+.searchInputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 16px;
+  border: 1px solid var(--Line-1, #f0f1f5);
+  border-radius: 4px;
+  margin-bottom: 12px;
+  .inputLabel {
+    width: 50px;
+    font-size: 14px;
+    line-height: 22px;
+    flex-shrink: 0;
+    color: '#545A6E';
+    font-weight: 'normal';
+  }
+  .resetBtn {
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    color: #4c6aff;
+    cursor: pointer;
+    .resetIcon {
+      width: 16px;
+      height: 16px;
+      display: flex;
+      margin-left: 4px;
+    }
+  }
+  .filterCheckBoxFlex {
+    display: flex;
+    align-items: center;
+  }
+}

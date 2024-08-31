@@ -1,0 +1,51 @@
+@import '@web-common/styles/variables.scss';
+
+.waimao-recommend-template-filter {
+  margin-bottom: 8px;
+  width: 100%;
+
+  .row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .label {
+      flex-shrink: 0;
+      color: #7a8599;
+      @include font-size(400, 14px, 32px);
+      margin-right: 20px;
+    }
+
+    .content {
+      flex-grow: 1;
+      display: flex;
+      flex-wrap: wrap;
+
+      &-item {
+        min-width: 88px;
+        height: 32px;
+        padding: 4px 4px;
+        color: #232d47;
+        @include font-size(400, 14px, 24px);
+        text-align: center;
+        border: 1px solid $Fill-2_5;
+        background-color: #ffffff;
+        border-radius: 2px;
+        margin: 0 16px 8px 0;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      &-item-active {
+        color: #ffffff;
+        font-weight: 500;
+        border-color: $Avatar-6;
+        background-color: $Avatar-6;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+/**
+ * Created by zh on 2023/3/17.
+ */
+.salesPitchStageTagList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .salesPitchStageTag {
+    background: #f0f2f7;
+    border-radius: 16px;
+    padding: 0 12px;
+    height: 24px;
+    line-height: 24px;
+    color: #747a8c;
+    font-size: 12px;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border: 1px solid transparent;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.checked {
+      border: 1px solid #4c6aff;
+      color: #4c6aff;
+    }
+  }
+}

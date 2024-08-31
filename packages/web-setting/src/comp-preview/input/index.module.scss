@@ -1,0 +1,27 @@
+.suffix {
+  padding-left: 12px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    left: 0;
+    top: 1px;
+    width: 1px;
+    background-color: #e1e3e8;
+  }
+}
+
+.prefix {
+  padding-right: 12px;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    right: 0;
+    top: 1px;
+    width: 1px;
+    background-color: #e1e3e8;
+  }
+}

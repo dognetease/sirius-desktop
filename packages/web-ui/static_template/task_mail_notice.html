@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charSet="utf-8"/>
+    <meta httpEquiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+</head>
+<body style="width: 100%;margin: 0; padding: 0;" th:object="${data}">
+     <div style="width: 100%; padding: 16px; box-sizing: border-box;" class="divNeteaseSiriusTaskNotice" th:attr="data-task-id=*{taskId}">
+          <div style="width: 100%;background: #FFFFFF; border: 1px solid #EFE9E6; box-sizing: border-box; box-shadow: 0px 2px 12px #EFF2F7; border-radius: 6px;" class="qiyesu-task-card">
+               <p th:if="*{noticeType==1 || noticeType==3}" class="qiyesu-task-title" style="display: flex; align-items: center; background: rgba(107, 169, 255, 0.08); border-radius: 6px 6px 0 0; height: 52px; padding-left: 23px; margin: 0;">
+                    <span style="width: 24px; height: 24px; background-size: 24px 24px; background-repeat: no-repeat; background-position: center; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAADh0lEQVR4Ae2b7W3bMBCGM0JHyAgZISN0gFbkCAYiCv2XbNBukG6QbqCCUtCfHkEjeAQXR5kOZeuDIinJId8AgWRDuqOe93g8n+m7O/yBAAiAAAiAAAiAAAiAAAiAAAiAAAiAAAiAAAiAAAiAAAiAAAiAAAiAAAjcGgFe7u6ZLH7e2riSGM93me+YFAdWiSOv8sckHvoWHpKX4oFVeUngjf/yFsYW/RiyKn82oJsCHHm5+xI9gK0eUOX666j/EKAuGv7vx/1W44var5nre6Mf8JfRn1JKT67/iHpaAwB/GfjfyvyRSdH0RrxefAF/GfhU14+C15G/x6IbVIHJhRaRH5R3x5hVytGRj2qnw877hapydHSPHZHzvVl3DKgqxybfI/I73IK8aPO92E8utu2MOOBDVhDsrRHVy5kqMY1UxN/FQ0D3aZvK6iemO5g20c/fBU+bWMCnH2uk9YnBq+IloPu0TQH+hvozKV77InzovUyKvxsONx7XbTPNutJpm2yo9cMEwMwyE/DDYG+tKPgzykydirh8+hpyHEnacoYfY8VDDS4CslYkuMJntXhda4yr+Tk3uKRo1hDBHX7R8Jj6+gMNrgMJspT6zvArEVePR4Gohss++jAUWgQP+EdeLxcUoZ9z0t6MBteeoE0atLjAC34lflm4+ByXnPO90UHUpV3vkdYFzw6jD3y1kyGWvK9AVO3+yF7YI6K4piQv+LSPM7avFCmamaMItAOBFm7bue4NP6a8b0LzE8GuVHXq7ZgzMMZ6P6gIE60AJou3uWnufH0qTTYuBT8/tBl9ludD64LVZqkRHzQuM1iiPvcVgVXijXK9hjT3y5SrAIg99WhQ5tFbhFMLY3aJezkLUkk9Jnx97i3CJUyH10mlHg3ePG4qQoqpx4SvzzcRIeXUo8Gbx7VFSD71mPD1OaefdTrk8dn3IPVo5NdH2uw0G+hM0aLr9Vxj9HtnSRGwm81Sm0VEqIvG0j0uIwKhRcDC6xBXoUTIZP7HwT1uCTUTsPB6xpLXTEDZ6Un/dLurCIj+MPyVlbki0PUB3cMUEbAWAf2e5QLGRgRE/3L8leVRERD9C9M/mR8SAdG/Dn/lJZP578sGHiqfFQUgVx0RUPevTP/kTouA6N+Gv/KKX65vCB+uQQAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEPiuB/5zm7btj2L+rAAAAAElFTkSuQmCC');"></span>
+                    <span style="margin-left: 10px; color: #262A33; font-size: 16px;"><span th:text="*{operatorName}"></span>完成了任务</span>
+               </p>
+               <p th:if="*{noticeType==4}" class="qiyesu-task-title" style="display: flex; align-items: center; background: rgba(107, 169, 255, 0.08); border-radius: 6px 6px 0 0; height: 52px; padding-left: 23px; margin: 0;">
+                    <span style="width: 24px; height: 24px; background-size: 24px 24px; background-repeat: no-repeat; background-position: center; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAADh0lEQVR4Ae2b7W3bMBCGM0JHyAgZISN0gFbkCAYiCv2XbNBukG6QbqCCUtCfHkEjeAQXR5kOZeuDIinJId8AgWRDuqOe93g8n+m7O/yBAAiAAAiAAAiAAAiAAAiAAAiAAAiAAAiAAAiAAAiAAAiAAAiAAAiAAAjcGgFe7u6ZLH7e2riSGM93me+YFAdWiSOv8sckHvoWHpKX4oFVeUngjf/yFsYW/RiyKn82oJsCHHm5+xI9gK0eUOX666j/EKAuGv7vx/1W44var5nre6Mf8JfRn1JKT67/iHpaAwB/GfjfyvyRSdH0RrxefAF/GfhU14+C15G/x6IbVIHJhRaRH5R3x5hVytGRj2qnw877hapydHSPHZHzvVl3DKgqxybfI/I73IK8aPO92E8utu2MOOBDVhDsrRHVy5kqMY1UxN/FQ0D3aZvK6iemO5g20c/fBU+bWMCnH2uk9YnBq+IloPu0TQH+hvozKV77InzovUyKvxsONx7XbTPNutJpm2yo9cMEwMwyE/DDYG+tKPgzykydirh8+hpyHEnacoYfY8VDDS4CslYkuMJntXhda4yr+Tk3uKRo1hDBHX7R8Jj6+gMNrgMJspT6zvArEVePR4Gohss++jAUWgQP+EdeLxcUoZ9z0t6MBteeoE0atLjAC34lflm4+ByXnPO90UHUpV3vkdYFzw6jD3y1kyGWvK9AVO3+yF7YI6K4piQv+LSPM7avFCmamaMItAOBFm7bue4NP6a8b0LzE8GuVHXq7ZgzMMZ6P6gIE60AJou3uWnufH0qTTYuBT8/tBl9ludD64LVZqkRHzQuM1iiPvcVgVXijXK9hjT3y5SrAIg99WhQ5tFbhFMLY3aJezkLUkk9Jnx97i3CJUyH10mlHg3ePG4qQoqpx4SvzzcRIeXUo8Gbx7VFSD71mPD1OaefdTrk8dn3IPVo5NdH2uw0G+hM0aLr9Vxj9HtnSRGwm81Sm0VEqIvG0j0uIwKhRcDC6xBXoUTIZP7HwT1uCTUTsPB6xpLXTEDZ6Un/dLurCIj+MPyVlbki0PUB3cMUEbAWAf2e5QLGRgRE/3L8leVRERD9C9M/mR8SAdG/Dn/lJZP578sGHiqfFQUgVx0RUPevTP/kTouA6N+Gv/KKX65vCB+uQQAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEQAAEPiuB/5zm7btj2L+rAAAAAElFTkSuQmCC');"></span>
+                    <span style="margin-left: 10px; color: #262A33; font-size: 16px;">创建人<span th:text="*{operatorName}"></span>将任务设为已完成</span>
+               </p>
+               <p th:if="*{noticeType==2 || noticeType==5 || noticeType==6 || noticeType==7 || noticeType==8}" class="qiyesu-task-title" style="display: flex; align-items: center; background: rgba(247, 79, 79, 0.06); border-radius: 6px 6px 0 0; height: 52px; padding-left: 23px; margin: 0;">
+                    <span style="width: 24px; height: 24px; background-size: 24px 24px; background-repeat: no-repeat; background-position: center; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAFLklEQVR4Ae1d7VXbMBTNCB2hIzACvzlYFhO0I7ABbEA3gA3KBmGDjpBu0B8lNuVPeq5rp4mxruzEcnQdcQ4nJE+W373vQ0+KJRaL9JMYSAwkBhIDiYHEQGIgMZAYSAwkBgQYKPN80/UroPo8VOwiH5/NA50AimSAExspGSAZ4MQMTHj7jbWf1llm18bcl3n++JbnP1wRUOb5ssjz72iLa3DthKrO51altZ9LY+5AKCG7sxJqt4fBXrPsFn3Oh6FASH5fX1+OQXrbCDvvl69Z9jWQ+rrd1sSvdojq5d1HtF8lQywWiyrVjJBmDjVEgfHkXFNTYe3tocSNfp0xd7r5Y6DmqEyG5vkiz3+ujXmC0dbWWnhtu8Kposnay6qNMU9lng9NacvZR0NFUk9iijz/VVp7X1p7OdDG2+av1l4UxnwbYIzVbI0wgHyQMHqlgj57GmJ+RuhDPjwe6WPrvoH+eLP2tooux4pqPb7Mxwi9yDfmZcrQr3XyTfLmYQRf2CNHB3J2b7fVGEMiAbPo9mDv7TSmBm/GPLCSEWs2p9bXZ4TCmIdT63jQ/THTjJ38BhjGBaYrZupNW4nXutZ31uExeH6bSE8krKRS0R9rsZLpWs95bIOP5T0mey69Y3SaTt7qCsNFftSexCIXpatEFFAvyjLbabWIPsTMWzYK4P1kkhNt6mnbH9+qdRkh+iiglY/Qsi9Lo0WWBZ+ttx2i93uyyinj/Q1YgmXZtInqlXmNXB3978si51gQ5WBM0s8qKk8ZoIxrPIsyDRXGPHcNXHiUZADmqJrW3yV0ldTxYXI9r6OYfhovICVpXFFdT2C6PGUTZb5sGPa8yuB6t/aiK/3gqQMPxujF+D66Cxu+7oxGeVeoFsa8RKPkgYq4xjY8HHBgl+NfRiqg+AargfBdSyvAPLCrcM2TAcJx26tnLNV25UmZJVyCUgKbhJKEZCaSwCahJGOZyCSwSShJSGYiCWwSSjKWiUwCm4SShGQmksAmoSRjmcgksEkoSUhmIglsEkoylolMApuEkoRkJpLAJqEkY5nIJLBJKElIZiIJbBJKMpaJTAKbhJKEZCaSwCahJGOZyCSwSShJSGYiCWwSSjKWiUwCm4SShGQmksAmoSRjmcgksEkoSUhmIglsEkoylolMApuEkoRkJooeGx7fcz0XCuUZOAWZywBRbOLGngAX+XhMZc4GqB/DOd1xBvWGDOde4ErBAKeeTB01PQ6Wmt4IeDDVdwYEImNqskLdj0V5EwmTPayL8zhdO0dqZZB6npQfS28bElhcOycbzOAE3LSvHfX9+83Nl+aGrtdTnn4yKtiOzsiOme3eCHDUcenxH7FNeI0x5jDo+pjynCmxqbJDiC25PutPcdqVj5yp5F4jhDgDieyb3YZfEwnn/hpkY0oygPP0lw8OGMYAOELSfQTNByXOuW2QQgSDsK/8PGfS97CHGIQxwNVnbyZvZ5kg9OwfkbA25jlFw/8xAVwg7x9zyu9UFRy9j6u8A8AhM2u0dS2VBMnPFJWQ0LXfuM6vvbe8suMyJ1uzEeJ9T1VW7uIMTxYJtec/7g2IO/k6SHm4p/0M3niiAAVA9d8vXq+utkcFVMskxtz5xiXlg0MmNa1v2cPl4ezzlPsHmBCppMcafO9yGH2x1DVAtfNpirQyhhGqPkJNjOZuDnjtMekI1ybPH8FLMDBXE52disaT7/UnRSPwNnoXqOHh1TDGbsWDQ5XqmehR/3NmdIVTh4mBxEBiIDGQGEgMJAYSA4mBOBn4C/3XkPSVw0NGAAAAAElFTkSuQmCC');"></span>
+                    <span th:if="*{noticeType==2}" style="margin-left: 10px; color: #262A33; font-size: 16px;"><span th:text="*{operatorName}"></span>重新开启了任务</span>
+                    <span th:if="*{noticeType==5}" style="margin-left: 8px; color: #262A33; font-size: 16px;">创建人<span th:text="*{operatorName}"></span>重新开启了任务</span>
+                    <span th:if="*{noticeType==6}" style="margin-left: 8px; color: #262A33; font-size: 16px;">创建人<span th:text="*{operatorName}"></span>提醒您尽快完成任务</span>
+                    <span th:if="*{noticeType==7}" style="margin-left: 8px; color: #262A33; font-size: 16px;">任务即将到期，请关注</span>
+                    <span th:if="*{noticeType==8}" style="margin-left: 8px; color: #262A33; font-size: 16px;">任务已逾期，请关注</span>
+               </p>
+               <div style="margin: 20px 20px 0 20px;" class="qiyesu-task-subject">
+                    <p style="height: 14px; line-height: 14px; font-size: 14px; color: #7D8085;">主题</p>
+                    <p style="margin-top: 8px; line-height: 16px; font-size: 16px; color: #262A33;" th:text="*{subjectName}"></p>
+               </div>
+               <div style="margin: 20px 20px 0 20px;" th:if="*{deadLine!=null && deadLine!=''}" class="qiyesu-task-deadline">
+                    <p style="height: 14px; line-height: 14px; font-size: 14px; color: #7D8085;">截止时间</p>
+                    <p style="margin-top: 8px; line-height: 16px; font-size: 16px; color: #262A33;" th:text="*{deadLine}"></p>
+               </div>
+               <div style="margin: 20px 20px 0 20px;" th:if="*{noticeType==1 || noticeType==2 || noticeType==3}" class="qiyesu-task-taskprogress">
+                    <p style="height: 14px; line-height: 14px; font-size: 14px; color: #7D8085;">当前进度</p>
+                    <p style="margin-top: 8px; line-height: 16px; font-size: 16px; color: #262A33;" th:text="*{taskProgress}"></p>
+               </div>
+               <div style="margin: 20px 20px 0 20px;" th:if="*{(noticeType==1 || noticeType==2 || noticeType==3) && unDoneUsers!=null && unDoneUsers!=''}" class="qiyesu-task-undoneusers">
+                    <p style="height: 14px; line-height: 14px; font-size: 14px; color: #7D8085;">未完成</p>
+                    <p style="margin-top: 8px; line-height: 16px; font-size: 16px; color: #262A33;"  th:text="*{unDoneUsers}"></p>
+               </div>
+               <div style="margin: 20px 20px 0 20px; border-top: 1px solid rgba(38, 42, 51, 0.16); display: flex; align-items: center; justify-content: center; padding: 15px 0 20px;" class="qiyesu-task-footer divNeteaseSiriusHidden">
+                    <p class="qiyesu-task-suptxt" style="font-size: 14px; line-height: 21px; color: #51555C; margin: 0;">温馨提醒：此任务提醒来自网易灵犀办公客户端，可<a href="https://hubble.netease.com/sl/aaagXW" style="color: #386EE7; text-decoration: none;">点此下载灵犀办公客户端</a>或升级灵犀办公至最新版本以查看完整信息，并支持在线完成任务及查看任务进度。</p>
+               </div>
+          </div>
+     </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+@import '@/styles/varies.scss';
+.aiDrawer {
+  :global(.ant-drawer-header) {
+    padding: 18px 16px 5px;
+    border-bottom: none;
+  }
+
+  :global(.ant-drawer-close) {
+    padding: 0;
+  }
+}
+
+.buttonWrapper {
+  position: fixed;
+  right: 5px;
+  bottom: 190px;
+  cursor: pointer;
+  font-size: 20px;
+  width: 65px;
+  height: 65px;
+
+  img {
+    position: relative;
+    width: 65px;
+    height: 65px;
+    z-index: 1;
+  }
+
+  z-index: 2000;
+
+  &::before {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+  }
+}
+
+.tip {
+  white-space: nowrap;
+}
+
+.tipOk {
+  margin-left: 12px;
+  color: $Brand-5;
+  cursor: pointer;
+}
+
+.title {
+  text-align: right;
+
+  span {
+    cursor: pointer;
+  }
+
+  &.winapp {
+    padding-top: 40px;
+  }
+}
+
+.content {
+  position: relative;
+  height: 100%;
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+}

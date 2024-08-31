@@ -1,0 +1,135 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.result {
+  width: 100%;
+  height: 100%;
+  min-width: 585px;
+  background: #f6f7fa;
+  overflow-y: auto;
+
+  :global {
+    .ant-breadcrumb {
+      padding: 20px 16px 16px;
+    }
+  }
+
+  &-main {
+    background: #fff;
+    margin: 0 20px 20px;
+    min-height: calc(100vh - 134px);
+    padding: 20px;
+    position: relative;
+
+    &-title {
+      margin-top: 32px;
+      font-weight: 500;
+      color: #272e47;
+      display: flex;
+      align-items: center;
+
+      &-border {
+        width: 3px;
+        height: 16px;
+        border-radius: 3px;
+        background: #4c6aff;
+        margin-right: 8px;
+      }
+
+      &-count {
+        color: #4c6aff;
+        margin-left: 10px;
+      }
+    }
+
+    &-list {
+      border: 1px solid #f0f1f5;
+      border-bottom: none;
+      margin-top: 16px;
+      &-item {
+        height: 76px;
+        border-bottom: 1px solid #f0f1f5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        color: #272e47;
+        &:hover {
+          background: #f9fafb;
+        }
+
+        &-name {
+          font-weight: 500;
+        }
+        &-disabled {
+          color: #9fa2ad;
+        }
+        &-free {
+          display: inline-block;
+          color: #fff;
+          background: #fe5b4c;
+          border-radius: 2px;
+          width: 60px;
+          height: 20px;
+          line-height: 20px;
+          text-align: center;
+          margin-left: 8px;
+          font-size: 12px;
+        }
+
+        &-right {
+          display: flex;
+          align-items: center;
+        }
+        &-price {
+          margin-right: 32px;
+          text-align: right;
+          &-actual {
+            font-family: 'LX-numbers';
+            color: #fe5b4c;
+            font-size: 22px;
+            vertical-align: middle;
+            margin-right: 4px;
+          }
+          &-unit {
+            vertical-align: middle;
+          }
+          &-original {
+            color: #9fa2ad;
+            text-decoration-line: line-through;
+            font-size: 12px;
+          }
+        }
+      }
+      :global {
+        .ant-btn-background-ghost.ant-btn-primary {
+          color: $Brand-6;
+          border: 1px solid $Brand-6;
+        }
+        .ant-btn-background-ghost:hover {
+          background: #f2f5ff;
+        }
+      }
+    }
+
+    :global {
+      .ant-input {
+        background: #f6f7fa;
+        border-color: #f6f7fa;
+        &:hover,
+        &:focus {
+          border-color: #f6f7fa !important;
+        }
+      }
+    }
+  }
+}
+
+// .purchase-modal {
+//   :global {
+//     .ant-modal-confirm-body > svg,
+//     .ant-modal-confirm-title {
+//       vertical-align: middle;
+//       display: inline;
+//     }
+//   }
+// }

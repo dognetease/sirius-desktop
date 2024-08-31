@@ -1,0 +1,177 @@
+@import '../../../web/src/styles/varies';
+// p,
+// h1 {
+//     margin: 0;
+//     padding: 0
+// }
+.session-list-item {
+  height: 64px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 12px;
+  &.checked {
+    // background-color: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.12);
+    background-color: $Fill-4;
+    border-radius: 6px;
+  }
+  &:not([class*='checked']):hover {
+    // background-color: #f0f0f1;
+    background-color: $white-hover-bg;
+  }
+  .session-user-avatar {
+    width: 38px;
+    height: 38px;
+    margin-right: 38px;
+  }
+  .conv-item-content {
+    flex: 1;
+    min-width: 0;
+    padding-left: 12px;
+    .name-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .name {
+        font-size: 14px;
+        margin-right: 12px;
+        line-height: 22px;
+        font-family: PingFang;
+        font-style: normal;
+        font-weight: 500;
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-wrap: normal;
+      }
+    }
+    .time {
+      font-family: PingFang;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 12px;
+      /* identical to box height, or 100% */
+      text-align: right;
+      /* 黑白灰/字体 50% */
+      // color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+      color: $Text-3;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+    .latest-msg-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .latest-msg-placeholder {
+        width: 100%;
+      }
+      .last-msg-status {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+      }
+      .latest-msg-text,
+      .draft-content {
+        font-family: PingFang;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height, or 133% */
+        /* 字体及ICON颜色/60% */
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.6);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        flex: 1;
+        padding-right: 12px;
+      }
+      .un-read-count {
+        margin-left: 6px;
+        padding: 0 5px;
+        height: 16px;
+        min-width: 16px;
+        display: inline-block;
+        /* 提醒色/红 */
+        background: #f74f4f;
+        border-radius: 8px;
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        color: #fff;
+        &.is-muted {
+          // background-color: #d4d4d6;
+          background-color: $Fill-5;
+        }
+      }
+      .is-mute-icon {
+        display: flex;
+        margin-left: 6px;
+        margin-top: 1px;
+      }
+      .draft-content .icon {
+        color: #f74f4f;
+      }
+    }
+  }
+  .teamName {
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+    overflow: hidden;
+    .text {
+      font-size: 14px;
+      line-height: 22px;
+      font-family: PingFang;
+      font-style: normal;
+      font-weight: 500;
+      // color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      color: $Text-5;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      word-wrap: normal;
+    }
+  }
+}
+
+.later-deal-tip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.later-deal-comp {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  background: url('../../../web/src/images/icons/im/msg-dealed.svg') 100%;
+}
+
+.later-deal-icon {
+  width: 24px;
+  height: 16px;
+  background: #ffaa00;
+  border-radius: 8px;
+  background-image: url('../../../web/src/images/icons/im/msg-later.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 6px;
+  flex-shrink: 0;
+  &:hover {
+    background-image: url('../../../web/src/images/icons/im/msg-deal.svg');
+  }
+}
+
+.hightlight {
+  color: $main-error-color;
+}
+
+:global(.session-lastmsg-sending) {
+}

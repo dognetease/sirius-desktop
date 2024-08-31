@@ -1,0 +1,91 @@
+.itemCompanyListBox {
+  border-radius: 4px;
+  border: 1px solid #f0f1f5;
+  background-color: #fff;
+  padding: 16px;
+
+  :global {
+    .ant-alert-info {
+      border: 0px;
+      background-color: rgba(76, 106, 255, 0.09);
+    }
+
+    .ant-alert-icon {
+      color: #4c6aff;
+    }
+  }
+
+  header {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 12px;
+    color: #272e47;
+  }
+
+  .itemBox {
+    display: flex;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #eeedee;
+    padding: 16px;
+    margin-top: 12px;
+    position: relative;
+
+    .countryRegion {
+      position: absolute;
+      right: 16px;
+      top: 12px;
+      color: $Text-3;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .itemLogo {
+      width: 75px;
+      height: 75px;
+      color: #fff;
+      background-color: #4c6aff;
+      border-radius: 4px;
+      text-align: center;
+      line-height: 75px;
+      margin-right: 16px;
+    }
+
+    .infoBoxleft {
+      width: calc(100% - 91px);
+
+      .infoBox {
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .infoText {
+        color: #747a8c;
+
+        .infoTextTop {
+          > span {
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+
+    .flexBox {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .moreStyle {
+    margin-top: 10px;
+    text-align: center;
+    color: #4c6aff;
+
+    > span {
+      cursor: pointer;
+    }
+  }
+}

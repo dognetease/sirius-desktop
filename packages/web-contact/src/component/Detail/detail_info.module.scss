@@ -1,0 +1,128 @@
+@import '../../../../web/src/styles/varies';
+
+.info-wrapper {
+  width: 100%;
+  padding-bottom: 20px;
+
+  .info-rows {
+    display: flex;
+    margin: 17px 20px 0;
+    align-items: flex-start;
+
+    &.infoSingleRow {
+      margin-top: 20px;
+
+      .info-label {
+        line-height: 16px;
+      }
+
+      .info-content .infoLine {
+        .infoText {
+          margin-top: -4px;
+          line-height: 24px;
+        }
+      }
+    }
+
+    .info-label {
+      flex: none;
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 22px;
+      color: #7d8085;
+      // color: $Fill-7;
+      margin-right: 12px;
+    }
+
+    .info-content {
+      flex: 1;
+
+      .infoLine {
+        margin-top: 8px;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        .infoText {
+          flex: 1;
+          display: flex;
+          word-break: break-word;
+          font-family: PingFang SC;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 22px;
+          // color: #262a33;
+          color: $font-color-2;
+          // color: $Text-5;
+
+          &.infoLink {
+            cursor: pointer;
+            // color: $main-enhance-color;
+            color: $Brand-6 !important;
+          }
+
+          .infoPoint {
+            display: block;
+            margin-right: 8px;
+            margin-top: 9px;
+            flex: none;
+            width: 4px;
+            height: 4px;
+            border-radius: 4px;
+            background-color: #a8aaad;
+          }
+        }
+
+        .copyIcon {
+          margin-left: 12px;
+          flex: none;
+          width: 16px;
+          height: 16px;
+          display: flex;
+        }
+      }
+
+      .personalOrgWrap {
+        position: relative;
+        left: -8px;
+        top: -8px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .personalOrgLabel {
+        margin-top: 8px;
+        margin-left: 8px;
+        padding: 4px 8px;
+        background: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.1);
+        border-radius: 4px;
+        font-family: 'PingFang SC';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        // color: #262a33;
+        color: $font-color-2;
+        max-width: 143px;
+        @include ellipsis-text;
+      }
+    }
+
+    .remark-content {
+      word-break: break-all;
+
+      p {
+        width: 332px;
+        line-height: 16px;
+      }
+    }
+  }
+}

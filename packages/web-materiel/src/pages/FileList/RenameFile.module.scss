@@ -1,0 +1,11 @@
+.rename-file {
+  :global(.ant-modal-body) {
+    padding: 10px 20px !important;
+  }
+
+  .input.error {
+    :global(.ant-input) {
+      border-color: #f74f4f;
+    }
+  }
+}

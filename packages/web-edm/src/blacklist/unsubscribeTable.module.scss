@@ -1,0 +1,29 @@
+.unsubscribe-table {
+  .input-filter {
+    border-color: transparent;
+    border-radius: 4px;
+    margin-bottom: 16px;
+
+    :global(.ant-input) {
+      font-size: 12px;
+    }
+  }
+
+  :global(.ant-spin-dot) {
+    transform: translate(-50%, -50%);
+    margin: 0 !important;
+  }
+
+  .highlight {
+    color: #386ee7;
+    cursor: pointer;
+  }
+}
+
+.alert {
+  background: #fff8ed;
+  border-radius: 4px;
+  border: none;
+  color: #232d47;
+  margin-bottom: 12px;
+}

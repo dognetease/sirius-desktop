@@ -1,0 +1,17 @@
+.wrapper {
+  padding: 20px 0;
+
+  .formItem {
+    padding-top: 20px;
+  }
+
+  .inlineForm {
+    :global(.ant-form-item-control-input-content) {
+      display: flex;
+    }
+
+    :global(.ant-select-selection-overflow-item-rest) {
+      display: none;
+    }
+  }
+}

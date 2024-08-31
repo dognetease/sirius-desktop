@@ -1,0 +1,34 @@
+.clue-modal-wrap {
+  :global(.ant-modal-header) {
+    border-bottom: none;
+    padding: 23px 24px 24px;
+  }
+  :global(.ant-modal-body) {
+    // padding-right: 4px;
+    // padding-left: 4px;
+  }
+  :global(.ant-modal-footer) {
+    padding: 24px 16px;
+    border-top: none;
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+  }
+  .title {
+    font-size: 12px;
+    line-height: 20px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    // padding-bottom: 4px;
+    margin-bottom: 4px;
+  }
+  .content {
+    font-size: 14px;
+    line-height: 20px;
+    color: #a8aaad;
+    margin-top: 16px;
+    margin-bottom: 4px;
+  }
+}

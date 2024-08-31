@@ -1,0 +1,22 @@
+@import '@web-common/styles/variables.scss';
+.customs-scroll-box {
+  position: fixed;
+  z-index: 10;
+  bottom: 4px;
+  height: 12px;
+  background-color: transparent;
+}
+.customs-scroll-tool {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 2px;
+  background-color: #e1e6ed;
+  border-radius: 4px;
+  height: 8px;
+}
+.cutoms-hide-scroll {
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+}

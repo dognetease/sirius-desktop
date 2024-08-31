@@ -1,0 +1,140 @@
+@import '../../../../web/src/styles/varies';
+.sirius-collapse-wrap {
+  position: relative;
+  width: 100% !important;
+  border: none;
+  background-color: transparent;
+  :global {
+    .ant-collapse-item > .ant-collapse-header {
+      padding: 0;
+      &:hover {
+        background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+      }
+    }
+    .ant-collapse-item {
+      border: none;
+      .ant-collapse-header .ant-collapse-arrow {
+        display: none;
+      }
+    }
+    .ant-collapse-content {
+      border: none;
+      background-color: transparent;
+    }
+    .ant-collapse-content-box {
+      padding: 0;
+    }
+  }
+  .sirius-collapse-title {
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .sirius-collapse-title-type {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    margin-right: 8px;
+    flex: none;
+    position: relative;
+  }
+  .sirius-collapse-title-type-expired {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+  }
+  .sirius-collapse-title-name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    flex-grow: 1;
+    color: $font-color-2;
+  }
+  .sirius-collapse-title-right {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    margin-left: 12px;
+    flex: none;
+  }
+  .sirius-collapse-open,
+  .sirius-collapse-close {
+    flex: none;
+    display: flex;
+    align-items: center;
+    height: 22px;
+  }
+  .sirius-collapse-open,
+  .sirius-collapse-close {
+    width: 17px;
+  }
+  .sirius-collapse-icon-right {
+    background: url('@/images/icons/arrow_expand_gray.svg') no-repeat center;
+    width: 8px;
+    height: 8px;
+  }
+  .sirius-collapse-icon-down {
+    background: url('@/images/icons/calender-icon-expand.png') no-repeat center;
+    background-size: 100%;
+    width: 8px;
+    height: 8px;
+  }
+  .sirius-collapse-middle {
+    :global(.ant-collapse-header) {
+      background-color: $Fill-4;
+    }
+  }
+  .sirius-collapse-selected {
+    :global(.ant-collapse-header) {
+      background-color: rgba($Link-2-r, $Link-2-g, $Link-2-b, 0.9);
+    }
+  }
+  .sirius-collapse-selected.sirius-collapse-no-hover {
+    :global(.ant-collapse-header) {
+      &:hover {
+        background-color: rgba($Link-2-r, $Link-2-g, $Link-2-b, 0.9);
+      }
+    }
+  }
+  .avtive-panel-head {
+    :global(.ant-collapse-header) {
+      // background-color: rgba(214, 230, 252, 0.9);
+      background-color: rgba($tree-hover-r, $tree-hover-g, $tree-hover-b, 0.9);
+    }
+  }
+  .sirius-collapse-logo {
+    height: 16px;
+    width: 16px;
+    object-fit: contain;
+  }
+  .edit-tree-input {
+    height: 28px;
+    border-radius: 4px;
+    border: 1px solid $Avatar-6;
+  }
+  .folder-input-cancel {
+    color: $Avatar-6;
+    font-size: 12px;
+    cursor: pointer;
+    &:hover {
+      font-weight: 600;
+    }
+  }
+}
+
+.accountMenu {
+  min-width: 80px;
+  border-radius: 4px;
+  :global {
+    .ant-dropdown-menu-item {
+      height: 32px;
+      font-weight: 400;
+      font-size: 14px;
+      color: #545a6e;
+      line-height: 22px;
+      letter-spacing: 0;
+    }
+  }
+}

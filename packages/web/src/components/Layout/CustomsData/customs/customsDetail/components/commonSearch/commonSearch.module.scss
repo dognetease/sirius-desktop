@@ -1,0 +1,94 @@
+@import '@web-common/styles/variables.scss';
+
+.customs-common-search {
+  .preciseSearch {
+    font-size: 12px;
+    line-height: 16px;
+    color: $Text-5;
+    border-left: 1px solid #ebedf2;
+    padding-left: 8px;
+    :global {
+      .ant-checkbox-wrapper {
+        margin-left: 4px;
+      }
+      .ant-checkbox + span {
+        padding: 0 0 0 4px;
+      }
+    }
+  }
+  .item {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    margin-right: 26px;
+
+    .title {
+      font-weight: 400;
+      font-size: 12px;
+      color: #7d8085;
+      min-width: 50px;
+    }
+  }
+
+  :global {
+    .ant-picker {
+      border: 1px solid #e1e3e8;
+    }
+
+    .ant-input-affix-wrapper {
+      border: 1px solid #e1e3e8;
+    }
+
+    .ant-select-selector {
+      border: 1px solid #e1e3e8;
+    }
+
+    .sirius-cascader-select-selector {
+      border-radius: 2px !important;
+    }
+  }
+}
+
+.customs-common-search-wrap {
+  position: relative;
+  display: flex;
+
+  .click-btn {
+    padding-top: 5px;
+    color: #386ee7;
+    flex-shrink: 0;
+  }
+
+  .box-padding {
+    padding-top: 0px;
+  }
+}
+
+.dateSelectFoot {
+  display: flex;
+  column-gap: 8px;
+  padding: 12px 0;
+
+  .dateSelectItem {
+    text-align: center;
+    background: #f2f3f5;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 2px 12px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+
+    &:hover {
+      background: #e5e6eb;
+    }
+
+    &-selected {
+      background: $Avatar-6 !important;
+      color: #fff !important;
+    }
+  }
+}

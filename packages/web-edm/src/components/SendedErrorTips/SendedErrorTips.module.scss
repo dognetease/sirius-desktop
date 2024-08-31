@@ -1,0 +1,208 @@
+.wrap {
+  margin-top: 8px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+  background: rgba(254, 91, 76, 0.1);
+  .left,
+  .right {
+    display: flex;
+    align-items: center;
+    .icon {
+      margin-right: 6px;
+      color: #fe5b4c;
+    }
+    .info {
+      color: var(--text-5, #272e47);
+      /* 灵犀桌面2.0/C4.3-Reg12 */
+      font-family: PingFang SC;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    .icon2 {
+      margin-left: 16px;
+      cursor: pointer;
+    }
+    .info2 {
+      color: var(--brand-6, #4c6aff);
+      text-align: right;
+      /* 灵犀桌面2.0/C4.3-Reg12 */
+      font-family: PingFang SC;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+    }
+  }
+}
+
+.modal-box {
+  // height: 452px;
+  margin: -20px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  .top {
+    // height: 204px;
+    position: relative;
+    background: var(--brand-1, #f2f5ff);
+    padding: 24px 0 16px;
+    .bg-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        height: 104px;
+      }
+    }
+    .title {
+      margin-top: 8px;
+      color: var(--text-5, #272e47);
+      /* 灵犀桌面2.0/H2-Med18 */
+      font-family: PingFang SC;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 26px;
+      text-align: center;
+    }
+    .info {
+      margin-top: 4px;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      color: var(--text-4, #545a6e);
+      /* 灵犀桌面2.0/P1.3-Reg14 */
+      font-family: PingFang SC;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      .mark {
+        color: var(--error-6, #fe5b4c);
+        margin: 0 4px;
+      }
+    }
+  }
+  .content {
+    padding: 20px;
+    margin-bottom: -12px;
+    height: 292px;
+    overflow-y: auto;
+    .tips-item {
+      border-radius: 4px;
+      background: var(--fill-2, #f6f7fa);
+      margin-bottom: 12px;
+      padding: 6px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 4px;
+      align-self: stretch;
+      &-info {
+        flex: 1;
+        &-icon {
+          width: 16px;
+          height: 16px;
+          color: #fe5b4c;
+          margin-right: 4px;
+          position: absolute;
+          top: 4px;
+          left: 0;
+        }
+        &-icon2 {
+          color: #ffb54c;
+        }
+        .hide {
+          visibility: hidden;
+        }
+        &-title {
+          color: var(--text-5, #272e47);
+          text-align: justify;
+          /* 灵犀桌面2.0/P1.3-Reg14 */
+          font-family: PingFang SC;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22px;
+          // display: flex;
+          // align-items: center;
+          // align-items: baseline;
+          position: relative;
+          padding-left: 20px;
+        }
+        &-bottom {
+          display: flex;
+          flex-wrap: wrap;
+          // align-items: center;
+          // white-space: nowrap;
+          // position: relative;
+          padding-left: 20px;
+          margin-right: -10px;
+          // margin-top: 4px;
+          .ellipsis {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+          .tips-bottom-info {
+            color: var(--label-43, #cc913d);
+            text-align: justify;
+            /* 灵犀桌面2.0/C4.1-Reg12 */
+            font-family: PingFang SC;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+            display: inline-block;
+            white-space: nowrap;
+            margin-top: 4px;
+            margin-right: 10px;
+            // max-width: 264px;
+          }
+          a {
+            margin-top: 4px;
+            white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+          }
+          .tips-bottom-action {
+            color: var(--brand-6, #4c6aff);
+            text-align: justify;
+            /* 灵犀桌面2.0/C4.1-Reg12 */
+            font-family: PingFang SC;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+            // margin-left: 10px;
+            cursor: pointer;
+            // max-width: 100px;
+          }
+          .tips-bottom-icon {
+            margin-left: 4px;
+          }
+        }
+      }
+    }
+    .bottom-tips {
+      color: var(--text-3, #747a8c);
+      text-align: justify;
+      /* 灵犀桌面2.0/C4.1-Reg12 */
+      @include c4-3-reg12;
+      display: flex;
+      align-items: center;
+      line-height: 16px;
+      .tips-mark {
+        color: var(--text-5, #272e47);
+        /* 灵犀桌面2.0/C4.1-Reg12 */
+        @include c4-3-reg12;
+        line-height: 16px;
+      }
+    }
+  }
+}

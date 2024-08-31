@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>im-notice</title>
+</head>
+<body style="width: 100%;margin: 0; padding: 0;">
+     <!-- 相关文档 -->
+     <!-- https://www.figma.com/file/kJs10C8QW7dqLT2GpUobdt/%E7%A7%BB%E5%8A%A8%E7%AB%AFV1.11.0%E4%BA%A4%E4%BA%92%E7%A8%BF?node-id=83%3A4702 -->
+     <!-- https://www.figma.com/file/LIGRkY4cJPnnBMamsCA0ow/%E7%81%B5%E7%8A%80%E5%8A%9E%E5%85%AC%E7%A7%BB%E5%8A%A8%E7%AB%AF%E5%BC%80%E5%8F%91%E6%96%87%E4%BB%B6?node-id=30848%3A167136 -->
+     <!-- https://lingxi.office.163.com/doc/#id=19000000990464&from=PERSONAL&parentResourceId=19000000910991&spaceId=505197849&ref=517487151&type=doc -->
+     <!-- 这是不涉及数据填充的im通知邮件的卡片，为了方便查看样式和本地调试 -->
+     <!-- 带有真实数据填充的im通知邮件卡片的代码 ./im_notice.html -->
+     <style type="text/css">
+          #qiyesu-im-notice-main {
+               width: 100%;
+               margin: 0 auto;
+               padding: 16px;
+               box-sizing: border-box;
+               overflow: hidden;
+          }
+          .qiyesu-im-notice-box {
+               background: #FFFFFF;
+               border: 0.5px solid #EFE9E6;
+               box-shadow: 0px 2px 12px #EFF2F7;
+               border-radius: 8px;
+               box-sizing: border-box;
+               padding: 20px;
+          }
+          .qiyesu-im-notice-title {
+               font-weight: 650;
+               font-size: 16px;
+               line-height: 22px;
+               color: #262A33;
+               margin:0 0 16px 0;
+          }
+          .qiyesu-im-notice-message-box {
+               background: #FFFFFF;
+               border: 0.5px solid #DCDDDE;
+               border-radius: 6px;
+               padding: 8px 12px;
+               margin-bottom: 12px;
+               position: relative;
+          }
+          .qiyesu-im-notice-message-box-lint {
+               position: absolute;
+               top: 0;
+               left: 0;
+               bottom: 0;
+               right: 0;
+          }
+          .qiyesu-im-notice-message-name {
+               font-weight: 650;
+               font-size: 16px;
+               line-height: 150%;
+               color: #262A33;
+               padding-right: 28px;
+               position: relative;
+               margin: 0 0 2px 0;
+          }
+          .qiyesu-im-notice-message-num {
+               position: absolute;
+               right: 0;
+               top: 0;
+               height: 16px;
+               min-width: 16px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               padding: 0 4px;
+               box-sizing: border-box;
+               background: #F74F4F;
+               border-radius: 8px;
+               font-weight: 650;
+               font-size: 12px;
+               color: #FFFFFF;
+          }
+          .qiyesu-im-notice-message-txt {
+               font-size: 14px;
+               line-height: 32px;
+               height: 32px;
+               color: #262A33;
+               word-wrap: break-word;
+               word-break:break-all;
+               display: -webkit-box;
+               -webkit-box-orient:vertical;
+               overflow: hidden !important;
+               -webkit-line-clamp:1;
+               margin: 0 0 2px 0;
+          }
+          .qiyesu-im-notice-message-time {
+               font-size: 12px;
+               line-height: 150%;
+               color: #7D8085;
+               margin: 0;
+          }
+          .qiyesu-im-notice-more-text {
+               font-size: 12px;
+               line-height: 14px;
+               text-align: center;
+               color: #7D8085;
+               margin: 28px 0 16px 0;
+          }
+          .qiyesu-im-notice-more-btn {
+               width: 136px;
+               padding: 0 6px;
+               height: 32px;
+               background: #386EE7;
+               border-radius: 4px;
+               font-size: 14px;
+               color: #FFFFFF;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               margin: 0 auto 16px;
+               text-decoration: none;
+          }
+          .qiyesu-im-notice-footer {
+               font-size: 14px;
+               line-height: 22px;
+               color: #51555C;
+          }
+     </style>
+     <div class="divNeteaseSiriusImNotice" id="qiyesu-im-notice-main">
+          <div class="qiyesu-im-notice-box">
+               <p class="qiyesu-im-notice-title">
+                    您<span class="divNeteaseSiriusHidden">昨天</span>有<span>72</span>条来自同事的未读消息<span class="divNeteaseSiriusHidden">，请及时打开灵犀办公查看</span>
+               </p>
+               <div class="qiyesu-im-notice-message-box">
+                    <p class="qiyesu-im-notice-message-name">
+                         来自：<span>孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷</span>
+                         <span class="qiyesu-im-notice-message-num">1</span>
+                    </p>
+                    <p class="qiyesu-im-notice-message-txt">孙小楷孙小楷孙小楷孙小楷：发现宝藏啦！！！来网易灵犀办公...孙小楷：发现宝藏啦！！！来网易灵犀办公...孙小楷：发现宝藏啦！！！来网易灵犀办公...孙小楷：发现宝藏啦！！！来网易灵犀办公...孙小楷：发现宝藏啦！！！来网易灵犀办公...</p>
+                    <p class="qiyesu-im-notice-message-time">2022.3.24 17:32</p>
+                    <a class="qiyesu-im-notice-message-box-lint" href="https://hubble.netease.com/sl/aaag0w"></a>
+               </div>
+               <div class="qiyesu-im-notice-message-box">
+                    <p class="qiyesu-im-notice-message-name">
+                         来自：<span>孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷孙小楷</span>
+                         <span class="qiyesu-im-notice-message-num">133</span>
+                    </p>
+                    <p class="qiyesu-im-notice-message-txt">孙小楷孙小楷孙小楷孙小楷：发现宝藏啦！！！来网易灵犀办公...孙小楷：发现宝藏啦！！！来网易灵犀办公...孙小楷：发现宝藏啦！！！来网易灵犀办公...孙小楷：发现宝藏啦！！！来网易灵犀办公...孙小楷：发现宝藏啦！！！来网易灵犀办公...</p>
+                    <p class="qiyesu-im-notice-message-time">2022.3.24 17:32</p>
+                    <a class="qiyesu-im-notice-message-box-lint" href="https://hubble.netease.com/sl/aaag0w"></a>
+               </div>
+               <div class="qiyesu-im-notice-message-box">
+                    <p class="qiyesu-im-notice-message-name">
+                         来自：<span>孙小楷</span>
+                         <span class="qiyesu-im-notice-message-num">123</span>
+                    </p>
+                    <p class="qiyesu-im-notice-message-txt">孙小楷孙小楷孙小楷孙小楷：发现宝藏啦！！！来网易灵犀办公...孙小楷：发现宝藏啦！！！来网易灵犀办公...孙小楷：发现宝藏啦！！！来网易灵犀办公...孙小楷：发现宝藏啦！！！来网易灵犀办公...孙小楷：发现宝藏啦！！！来网易灵犀办公...</p>
+                    <p class="qiyesu-im-notice-message-time">2022.3.24 17:32</p>
+                    <a class="qiyesu-im-notice-message-box-lint" href="https://hubble.netease.com/sl/aaag0w"></a>
+               </div>
+               <div class="qiyesu-im-notice-message-box">
+                    <p class="qiyesu-im-notice-message-name">
+                         来自：<span>孙小楷</span>
+                         <span class="qiyesu-im-notice-message-num">1</span>
+                    </p>
+                    <p class="qiyesu-im-notice-message-txt">孙小楷：发现宝藏啦！！！来网易灵犀办公</p>
+                    <p class="qiyesu-im-notice-message-time">2022.3.24 17:32</p>
+                    <a class="qiyesu-im-notice-message-box-lint" href="https://hubble.netease.com/sl/aaag0w"></a>
+               </div>
+               <p class="qiyesu-im-notice-more-text">更多未读请前往客户端查看</p>
+               <a class="qiyesu-im-notice-more-btn" href="https://hubble.netease.com/sl/aaag0w">查看全部消息</a>
+          </div>
+          <p class="qiyesu-im-notice-footer divNeteaseSiriusHidden">温馨提醒：此提醒来自网易灵犀办公客户端，可<a href="https://hubble.netease.com/sl/aaag0w" style="color: #386EE7; text-decoration: none;">点此下载客户端</a>查看全部并回复，及时高效。</p>
+     </div>
+</body>
+</html>

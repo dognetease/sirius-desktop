@@ -1,0 +1,19 @@
+@import '@web-common/styles/variables.scss';
+.wrapper {
+  color: #262a33;
+  .btnSpan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btnSpanHover {
+    cursor: pointer;
+    &:hover {
+      color: $Brand-6;
+    }
+  }
+}
+.menu-item {
+  min-width: 80px;
+  color: #232d47;
+}

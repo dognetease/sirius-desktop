@@ -1,0 +1,153 @@
+.forward-picker {
+  :global(.ant-modal-header) {
+    padding: 14px 24px;
+    background-color: #eeeeee;
+  }
+
+  :global(.ant-modal-title) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  :global(.ant-modal-close),
+  :global(.ant-modal-close-x) {
+    width: 62px;
+    height: 44px;
+    line-height: 44px;
+  }
+
+  :global(.anticon-close) {
+    vertical-align: 0.2em;
+  }
+
+  :global(.ant-input:hover),
+  :global(.ant-input:focus),
+  :global(.ant-input-focused) {
+    border-color: #386ee7;
+    box-shadow: none;
+  }
+
+  :global(.ant-modal-body) {
+    display: flex;
+    padding: 0;
+    height: 388px;
+
+    .picker,
+    .picked {
+      width: 50%;
+    }
+
+    .picker {
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid rgba(38, 42, 51, 0.16);
+
+      .search-filter {
+        flex-shrink: 0;
+        padding: 16px 12px 16px 24px;
+      }
+
+      .recent-contact {
+        flex-shrink: 0;
+        padding-left: 24px;
+        color: #a8aaad;
+        font-size: 12px;
+        line-height: 12px;
+        margin-bottom: 4px;
+      }
+
+      .picker-list {
+        flex-grow: 1;
+        overflow: auto;
+      }
+
+      .picker-item {
+        margin: 0 !important;
+        padding: 7px 16px 7px 26px;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          background-color: #f0f0f1;
+        }
+
+        :global(.ant-checkbox) {
+          position: relative;
+          top: 0;
+          margin-right: 13px;
+        }
+
+        :global(.ant-checkbox) + span {
+          padding: 0;
+          display: flex;
+          align-items: center;
+          width: 100%;
+          overflow: hidden;
+
+          .avatar {
+            margin-right: 8px;
+          }
+
+          .name {
+            color: rgba(38, 42, 51, 0.9);
+            font-size: 14px;
+            line-height: 14px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+
+    .picked {
+      display: flex;
+      flex-direction: column;
+
+      .picked-count {
+        flex-shrink: 0;
+        padding: 24px 24px 18px;
+        color: rgba(38, 42, 51, 0.9);
+        font-size: 14px;
+        line-height: 14px;
+      }
+
+      .picked-list {
+        flex-grow: 1;
+        overflow: auto;
+      }
+
+      .picked-item {
+        padding: 7px 24px;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+          background-color: #f0f0f1;
+        }
+
+        .avatar {
+          margin-right: 8px;
+        }
+
+        .name {
+          color: rgba(38, 42, 51, 0.9);
+          font-size: 14px;
+          line-height: 14px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        .remove {
+          width: 14px;
+          height: 14px;
+          margin-left: auto;
+          background: url(@/images/icons/im/reply-close-icon.svg) no-repeat;
+          background-size: 100% 100%;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

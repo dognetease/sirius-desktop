@@ -1,0 +1,28 @@
+.search-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .text {
+    font-size: 14px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    padding-left: 8px;
+    margin: 0;
+  }
+  .icon {
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+    animation-timing-function: linear;
+    display: inline-block;
+    overflow: hidden;
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.wrapper {
+  * {
+    font-family: 'LX-numbers';
+  }
+
+  .qicon {
+    margin: 0 5px;
+  }
+
+  :global(.ant-descriptions-title) {
+    font-size: 14px;
+  }
+
+  :global(.ant-descriptions-header) {
+    margin-bottom: 16px;
+  }
+
+  :global(.ant-descriptions-item-label) {
+    color: #7a8599;
+    align-items: center;
+  }
+
+  :global(.ant-descriptions-item-content) {
+    color: #232d47;
+    font-weight: 400;
+    align-items: center;
+  }
+}

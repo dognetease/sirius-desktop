@@ -1,0 +1,50 @@
+.rateTransferCont {
+  width: 50%;
+  min-width: 251px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 8px;
+  .rateSelectGroup {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    margin-top: 12px;
+    .dropDownLink {
+      @include p1-3-reg14();
+      color: $Text-5;
+    }
+  }
+  .currencyTransferInfo {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'LX-numbers';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #262a33;
+    margin-top: 7px;
+    span {
+      font-family: inherit;
+    }
+    & > span:last-child {
+      font-weight: 400;
+      font-size: 12px;
+      color: #a8aaad;
+      margin-top: 6px;
+      margin-left: 6px;
+    }
+  }
+  .footerTip {
+    @include c4-1-reg12();
+    color: #a8aaad;
+    margin-top: 15px;
+  }
+}

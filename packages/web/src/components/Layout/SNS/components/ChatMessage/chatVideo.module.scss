@@ -1,0 +1,12 @@
+.chat-video {
+  border: 0.5px solid #f6f7fa;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+
+  video {
+    display: block;
+    max-width: 280px;
+    max-height: 220px;
+  }
+}

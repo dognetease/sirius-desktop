@@ -1,0 +1,524 @@
+@import '../../web/src/styles/varies';
+
+$contact-tree-bg-color: rgba(
+  $color: $Text-5,
+  $alpha: 0.05,
+);
+$search-input-back-color: #ffffff;
+$container-padding: 12px;
+
+.modalCheckContentWrap {
+  display: flex;
+  align-items: center;
+}
+
+.page-content-wm {
+  height: 100%;
+}
+
+.contact-detail-box {
+  background-color: $white;
+}
+
+.list-layout {
+  // background-color: #ffffff;
+  background-color: $white;
+  /** 保证子组件的绝对布局以及不超出容器范围 */
+  position: relative;
+  overflow: hidden;
+  // transform: translate(0, 0);
+  @include sirius-scroll-hide();
+}
+.contact-tree-list {
+  position: absolute;
+  top: 52px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  @include sirius-scroll;
+  &-offline {
+    top: 92px;
+  }
+  &-searching-tag {
+    padding-left: 36px;
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+  }
+}
+.tree-wrapper {
+  width: 100%;
+  height: 100%;
+  @include sirius-scroll();
+  &-offline {
+    top: 92px;
+  }
+}
+
+.treeContainer {
+  width: 100%;
+  height: 100%;
+  :global(.VListTreeCard-Wrap) {
+    padding: 0 12px;
+  }
+  :global(.VListTreeCard-Wrap:hover) {
+    .titleIcon {
+      display: flex;
+      .moreIcon {
+        display: block;
+      }
+    }
+  }
+}
+
+.titleIcon {
+  display: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  .addIcon {
+    width: 16px;
+    height: 16px;
+    background-size: 100%;
+    background-image: url('../../web/src/images/icons/contact/fold_add.svg');
+  }
+  .moreIcon {
+    display: none;
+    width: 16px;
+    height: 16px;
+    background-size: 100%;
+    background-image: url('../../web/src/images/icons/contact/fold_more.svg');
+  }
+  &:hover {
+    background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+  }
+}
+
+.contact-tree-container {
+  //background-color: $contact-tree-bg-color;
+  .search-container {
+    padding: 16px $container-padding;
+    position: absolute;
+    display: flex;
+    left: 0;
+    right: 2px;
+
+    .searchIcon {
+      width: 16px;
+      height: 16px;
+      // background-image: url('../../web/src/images/icons/search.svg');
+      background-size: 100% 100%;
+    }
+
+    :global(.ant-input) {
+      color: $font-color-2;
+    }
+
+    //background-color: #f4f4f5;
+    :global(.ant-input-affix-wrapper) {
+      // background: $search-input-back-color;
+      background-color: $white;
+      font-size: $sub-font-size;
+      height: 28px;
+      border-radius: 24px;
+
+      &:hover {
+        background: $white;
+        .searchIcon {
+          width: 16px;
+          height: 16px;
+
+          // background-image: url('../../web/src/images/icons/search_hover.svg');
+          background-size: 100% 100%;
+        }
+        :global(.ant-input::placeholder) {
+          color: $main-enhance-color;
+        }
+      }
+
+      // &-focused {
+      //   // background: #ffffff;
+      //   background-color: $white;
+      //   color: $font-color-2;
+      // }
+
+      :global(.ant-input) {
+        font-size: $sub-font-size;
+        line-height: $sub-font-size;
+        background: transparent;
+      }
+
+      :global(.ant-input-clear-icon) {
+        color: rgba(0, 0, 0, 0.16);
+        font-size: 14px;
+      }
+    }
+
+    i {
+      flex-shrink: 0;
+    }
+  }
+
+  .personalTipWrap {
+    position: relative;
+    margin: 10px 12px 16px;
+    padding: 12px 40px 12px 12px;
+    background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.04);
+    border-radius: 4px;
+    .close {
+      position: absolute;
+      right: 12px;
+      top: 12px;
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+      background-size: 100% 100%;
+      background-image: url('../../web/src/images/icons/common/close.svg');
+    }
+    .tips {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: #7d8085;
+    }
+    .createPersonalOrg {
+      cursor: pointer;
+      margin-top: 8px;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: $main-enhance-color;
+    }
+  }
+
+  .dividerContainer {
+    padding: 0 $container-padding;
+
+    :global(.ant-divider-horizontal) {
+      margin: 8px 0;
+    }
+  }
+}
+
+.virtual-list {
+  // outline: none;
+  padding: 0 $container-padding;
+}
+
+.virtual-list-padding {
+  padding: $container-padding;
+}
+
+.fixHeader {
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 16px;
+  border-bottom: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+  // @include sirius-no-drag;
+  .headerLeft {
+    display: flex;
+    justify-content: flex-start;
+    flex: none;
+    align-items: center;
+  }
+  .headerRight {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .addBtn {
+    @include sirius-no-drag;
+    height: 28px;
+    padding: 0 7px;
+    border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+      background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.04);
+    }
+    i {
+      margin-right: 4px;
+      width: 16px;
+      height: 16px;
+      background-size: 100%;
+      background-image: url('../../web/src/images/icons/contact/fold_add.svg');
+    }
+    span {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      // color: #262a33;
+      color: $Text-5;
+    }
+  }
+  &.mailListHeader {
+    margin: 0;
+    padding: 0 16px;
+    width: 99.9%;
+    background: white;
+    border-bottom: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    border-bottom: none;
+  }
+}
+
+.sortTip {
+  position: absolute;
+  top: 72px;
+  left: 0;
+  right: 0;
+  height: 62px;
+  margin: 0 12px;
+  background: $Brand-2;
+  border-radius: 6px;
+  padding: 12px 36px 12px 12px;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
+  z-index: 1;
+  .sortTipClose {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 16px;
+    height: 16px;
+    background-image: url('../../web/src/images/icons/common/close.svg');
+    background-size: 100% 100%;
+    cursor: pointer;
+  }
+  .sortIcon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('../../web/src/images/icons/contact/drag_btn.svg');
+    background-size: 100% 100%;
+    position: relative;
+    top: 3px;
+  }
+}
+
+.footerHeightHidden {
+  height: 0px;
+  display: none;
+  &:hover {
+    height: 60px;
+    display: block;
+  }
+}
+.footerHeightShow {
+  height: 60px;
+  display: block;
+}
+.footerHeightFixed {
+  position: fixed;
+  top: 0px;
+}
+.footerHeightCancel {
+  height: 0px !important;
+  display: none !important;
+}
+
+.noPersonalData {
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height, or 129% */
+
+  /* 黑白灰/字体 50% */
+
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+}
+
+.back-top-wrapper {
+  position: fixed;
+  bottom: 0;
+  // right: 0;
+  width: 58px;
+  height: 58px;
+  transition: bottom 0.3s;
+
+  &-with-footer {
+    bottom: $contact-footer-height;
+  }
+}
+
+.search-tab-container {
+  p {
+    padding: 10px 0 10px 36px;
+    font-size: 14px;
+    line-height: 16px;
+    color: $label-6_3;
+  }
+
+  .search-tab-btn {
+    width: 100%;
+    padding-left: 36px;
+    height: 36px;
+    line-height: 36px;
+    color: $Fill-8;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 14px;
+    white-space: nowrap;
+
+    &:hover {
+      background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+    }
+
+    &-focus {
+      background: rgba($Link-2-r, $Link-2-g, $Link-2-b, 0.9);
+    }
+  }
+}
+
+.createBtn {
+  background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  line-height: 32px;
+  width: 118px;
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.7);
+  font-size: 16px;
+}
+
+.titleIconDropMenu {
+  :global(.ant-dropdown-menu) {
+    padding: 8px 0;
+    background: #ffffff;
+    border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+    box-shadow: 0px 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+    border-radius: 4px;
+  }
+  :global(.ant-dropdown-menu-item) {
+    padding: 0 16px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+// 邮件列表顶栏
+.mailListTitle {
+  font-size: 14px;
+  line-height: 20px;
+  flex: 1;
+}
+.mailListTabs {
+  flex: 1;
+  @include sirius-no-drag();
+  :global(.ant-tabs-nav) {
+    margin-bottom: 0;
+  }
+  :global(.ant-tabs-tab) {
+    padding: 4px 0;
+    font-size: 14px;
+    line-height: 20px;
+    &:nth-child(1) {
+      margin-left: 0;
+    }
+    &:hover {
+      color: $Avatar-6;
+    }
+  }
+  :global(.ant-tabs-tab-active) {
+    :global(.ant-tabs-tab-btn) {
+      color: $Avatar-6;
+    }
+  }
+  :global(.ant-tabs-ink-bar) {
+    background: $Avatar-6;
+  }
+}
+
+.personalMarkEmptyWrap {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+  .image {
+    width: 290px;
+    height: 192px;
+    background-image: url('../../web/src/images/icons/contact/no_personal_mark.png');
+    background-size: 100%;
+  }
+  .title {
+    margin-top: 24px;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    // color: #232d47;
+    color: $font-color-2;
+  }
+  .content {
+    margin-top: 12px;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    // color: #7a8599;
+    color: $Text-3;
+  }
+  .btn {
+    margin-top: 24px;
+    width: 203px;
+    height: 36px;
+    background: $Avatar-6;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ffffff;
+    cursor: pointer;
+  }
+}

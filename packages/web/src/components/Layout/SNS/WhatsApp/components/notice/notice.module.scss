@@ -1,0 +1,25 @@
+.notice {
+  padding: 8px 12px;
+  color: #51555c;
+  @include c4-1-reg12();
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+
+  &.info {
+    background-color: rgba(#386ee7, 0.06);
+  }
+
+  &.error {
+    background-color: $Error-1;
+  }
+
+  &.warning {
+    background-color: rgba(#ffaa00, 0.06);
+  }
+
+  &-icon {
+    flex-shrink: 0;
+    margin-right: 8px;
+  }
+}

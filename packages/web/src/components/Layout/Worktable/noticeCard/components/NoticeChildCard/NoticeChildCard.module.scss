@@ -1,0 +1,54 @@
+.noticeChildCard {
+  padding: 18px 0px 16px 14px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  cursor: pointer;
+  border-radius: 4px;
+  &:not(:first-child) {
+    border-top: 1px solid $Line-1;
+  }
+  &:hover,
+  &:active {
+    background-color: $Fill-2;
+  }
+  .closeBtn {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+  }
+  .infoLine {
+    max-width: 212px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; //多行在这里修改数字即可
+    overflow: hidden;
+    line-height: 22px;
+    /* autoprefixer: ignore next */
+    -webkit-box-orient: vertical;
+    color: $Text-4;
+    word-break: break-all;
+  }
+  .timeLine {
+    margin-top: 2px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    span {
+      @include p1-3-reg14();
+      color: $Text-3;
+      margin-left: 4px;
+    }
+  }
+}

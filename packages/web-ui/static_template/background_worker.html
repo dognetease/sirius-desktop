@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <script>
+    var global_inWindow = typeof window !== 'undefined';
+    try {
+      if (global_inWindow && console) {
+        var useragentLowerCase = navigator.userAgent.toLowerCase();
+        var reg = new RegExp('chrome/([\\d]+)');
+        var match = useragentLowerCase.match(reg);
+        if (match && match[1]) {
+          var chromeVersion = parseInt && typeof parseInt === 'function' ? parseInt(match[1]) : Number.parseInt(match[1]);
+          if (chromeVersion < 90) {
+            console.log = function() {};
+            console.warn = function() {};
+            console.info = function() {};
+          }
+        }
+      }
+    } catch (ex) {
+      console.error(ex);
+    }
+    var featureSupportInfo = {
+      supportNativeProxy: typeof Proxy !== 'undefined' && Proxy.toString().indexOf('[native code]') !== -1 ? true : false,
+      supportCrypto: typeof window !== 'undefined' && window.crypto && window.crypto.getRandomValues ? true : false
+    }
+    if (!Object.values) {
+      Object.values = function(obj) {
+        var keys = Object.keys(obj);
+        var result = [];
+        for (var i = 0; i < keys.length; ++i) {
+          result.push(obj[keys[i]]);
+        }
+        return result;
+      }
+    }
+    if (!Object.entries) {
+      Object.entries = function(obj) {
+        var keys = Object.keys(obj);
+        var result = [];
+        for (i = 0; i < keys.length; ++i) {
+          var currKey = keys[i];
+          var currVal = obj[currKey];
+          result.push([currKey, currVal]);
+        }
+        return result;
+      }
+    }
+    Array.prototype.flat || Object.defineProperty(Array.prototype, "flat", {
+      configurable: !0,
+      value: function r() {
+        var t = isNaN(arguments[0]) ? 1 : Number(arguments[0]);
+        return t ? Array.prototype.reduce.call(this, function(a, e) {
+          return Array.isArray(e) ? a.push.apply(a, r.call(e, t - 1)) : a.push(e), a
+        }, []) : Array.prototype.slice.call(this)
+      },
+      writable: !0
+    })
+    if (!Array.prototype.flatMap) {
+      Object.defineProperty(Array.prototype, 'flatMap', {
+        configurable: true,
+        value: function flatMap(callback) {
+          return Array.prototype.map.apply(this, arguments).flat();
+        },
+        writable: true
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <div className="sirius-loading" id="sirius-root-loading"></div>
+  <div className="sirius-app-loading" id="sirius-app-loading">
+    <i className="sirius-app-loading-icon"></i>
+    <span className="sirius-app-loading-label">加载中...</span>
+  </div>
+
+  <script src="./DATracker_Init.js?v=1.21.1"></script>
+
+</body>
+
+</html>

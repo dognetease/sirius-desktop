@@ -1,0 +1,225 @@
+@import '@web-common/styles/variables.scss';
+
+.process {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  background: #ffffff;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  color: #000000;
+  width: 418px;
+  height: fit-content;
+  padding: 11px 0;
+
+  .title {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 0 20px;
+
+    &-process {
+      margin-right: 8px;
+      display: flex;
+    }
+
+    .opIcon {
+      margin-left: auto;
+      display: flex;
+
+      .arrow {
+        display: flex;
+        cursor: pointer;
+      }
+
+      .close {
+        display: flex;
+        cursor: pointer;
+        margin-left: 16px;
+      }
+    }
+  }
+
+  .grubWarn {
+    padding: 12px;
+    height: 68px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #545a6e;
+    border-radius: 4px;
+    background: #f8f9fa;
+    margin-top: 8px;
+  }
+
+  .detailWrapper {
+    max-height: 340px;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0px 20px 20px 20px;
+    border-top: 1px solid $Line-2;
+
+    .grubItem {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: #232d47;
+      padding: 16px 0;
+      position: relative;
+      border-bottom: 1px solid $Line-2;
+
+      :global {
+        .ant-progress-line {
+          margin-top: 12px;
+          font-size: 0 !important;
+          line-height: 0 !important;
+        }
+      }
+
+      &-title {
+        display: flex;
+
+        .grubText {
+          display: flex;
+          align-items: center;
+          color: #7a8599;
+        }
+
+        .grubLinkText {
+          color: $Avatar-6;
+          cursor: pointer;
+
+          &-visited {
+            color: $Text-3;
+          }
+        }
+
+        .grubName {
+          max-width: 250px;
+          word-break: keep-all;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+        .grubNameTag {
+          padding: 2px 6px;
+          font-size: 12px;
+          line-height: 16px;
+          border-radius: 2px;
+          margin-right: 8px;
+          background-color: #deebfd;
+          color: #4759b2;
+        }
+
+        .grubStatus {
+          margin-left: auto;
+          display: flex;
+          flex-shrink: 0;
+          align-items: center;
+        }
+      }
+
+      &:nth-last-child(1) {
+        border-bottom: 1px solid transparent;
+      }
+
+      // &:nth-child() {
+      //   padding-top: 0;
+      // }
+    }
+  }
+
+  :global(.ant-tabs-nav) {
+    margin-bottom: 0;
+  }
+}
+
+.processFloat {
+  position: relative;
+  &:hover {
+    path:nth-child(-n + 3) {
+      fill: #ffffff;
+    }
+  }
+}
+
+.processNew {
+  &::before {
+    content: 'New';
+    position: absolute;
+    right: -12px;
+    top: -6px;
+    background: $Error-6;
+    width: 33px;
+    height: 16px;
+    line-height: 16px;
+    background: $Error-6;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+  }
+}
+
+.messageLink {
+  cursor: pointer;
+  color: $Avatar-6;
+  padding-left: 8px;
+}
+
+.emptyImage {
+  background: url(./grub-no-data.svg) center center no-repeat;
+  background-size: 138px 130px;
+  width: 138px;
+  height: 130px;
+  margin: 0 auto;
+}
+
+.empty {
+  :global {
+    .ant-empty-image {
+      height: 130px;
+    }
+  }
+
+  &-title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+
+    text-align: center;
+
+    /* 中性色-文字/Text-5标题-重要信息 */
+
+    color: $Text-5;
+    margin-bottom: 4px;
+  }
+
+  &-desc {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* or 157% */
+
+    text-align: center;
+
+    /* 中性色-文字/Text-5标题-重要信息 */
+
+    color: $Text-5;
+
+    opacity: 0.6;
+  }
+}
+
+.groupBtn {
+  :global {
+    .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+      border-color: $Avatar-6 !important;
+      color: $Avatar-6;
+      box-shadow: none;
+    }
+  }
+}

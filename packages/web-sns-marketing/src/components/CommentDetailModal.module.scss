@@ -1,0 +1,8 @@
+.comment-detail-modal {
+  :global {
+    .ant-modal-body {
+      max-height: 560px;
+      overflow: auto;
+    }
+  }
+}

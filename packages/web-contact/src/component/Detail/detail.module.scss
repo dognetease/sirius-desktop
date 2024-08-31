@@ -1,0 +1,461 @@
+@import '../../../../web/src/styles/varies';
+@import '@web-common/styles/waimao/varies.scss';
+.tooltip-overlay {
+  :global(.ant-tooltip-content) {
+    // height: 38px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 6px;
+    font-size: 14px;
+    box-shadow: none;
+
+    :global(.ant-tooltip-inner) {
+      box-shadow: none;
+      padding: 10px 12px;
+      // height: 18px;
+      line-height: 18px;
+      border-radius: 6px;
+      background: transparent;
+    }
+
+    :global(.ant-tooltip-arrow) {
+      display: none;
+    }
+
+    :global(.ant-tooltip-inner) {
+      min-width: 68px;
+      text-align: center;
+    }
+  }
+}
+
+.dropDownOverlay {
+  width: 76px;
+  border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+  border-radius: 4px;
+
+  :global(.ant-menu-item:hover) {
+    color: #ffffff;
+  }
+}
+
+.contactDetailWrap {
+}
+
+.detailContainer {
+  position: relative;
+  margin: 0 auto;
+
+  p {
+    margin: 0;
+  }
+  .closeIcon {
+    position: absolute;
+    right: 16px;
+    top: 20px;
+    z-index: 3;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background-image: url('../../../../web/src/images/icons/contactDetail/detail_close.png');
+    background-size: 100%;
+  }
+
+  .avatarContainer {
+    width: 320px;
+    height: 280px;
+    position: relative;
+
+    .avatar,
+    .avatarMask,
+    .avatarInfoWrap {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 0;
+    }
+
+    .avatar {
+      display: flex;
+      justify-content: center;
+
+      .avatarImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        cursor: zoom-out;
+      }
+
+      .avatarColor {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .avatarMask {
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%);
+    }
+
+    .avatarInfoWrap {
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      .contactName {
+        margin: 0 20px;
+        display: flex;
+        .contactNameLabel {
+          cursor: text;
+          @include flex-ellipsis-text;
+          font-family: PingFang SC;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 1.3;
+          color: #ffffff;
+        }
+
+        .contactrPriority {
+        }
+
+        .contactDisabled {
+          flex: none;
+          margin-left: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 32px;
+          height: 20px;
+          background: rgba(255, 255, 255, 0.5);
+          border-radius: 2px;
+          font-family: PingFang SC;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 12px;
+          color: #262a33;
+        }
+      }
+
+      .iconGroup {
+        margin: 20px 19px;
+        display: flex;
+        .iconWrap {
+          margin-right: 32px;
+          height: 60px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          &:nth-last-child(1) {
+            margin-right: 0;
+          }
+          .iconTxt {
+            cursor: text;
+            font-family: PingFang SC;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 1;
+            color: #ffffff;
+            white-space: nowrap;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+  }
+
+  .contactAvatarWrap {
+    width: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .contactAvatar {
+    }
+
+    .contactAvatarInfo {
+      .contactAvatarInfoName {
+        text-align: center;
+        margin-top: 12px;
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        color: $Text-6;
+      }
+
+      .contactIconGroup {
+        margin-top: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .btnWrap {
+          padding: 5px 16px;
+          margin-left: 20px;
+          // background-color: #ffffff;
+          background-color: $white;
+          @include p1-3-reg14;
+          color: $Text-4;
+          border: 1px solid $Line-3;
+          border-radius: 4px;
+          cursor: pointer;
+          &:hover {
+            background-color: $Fill-2_5;
+          }
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12.8px);
+
+  &:hover {
+    background-color: #386ee7;
+    backdrop-filter: blur(12.8px);
+  }
+
+  @mixin icon {
+    display: inline-block;
+    //width: 20px;
+    //height: 20px;
+    background-position: center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    // background-color: #FFFFFF;
+  }
+
+  &-send-email {
+    @include icon();
+    background-image: url(../../../../web/src/images/icons/contactDetail/send_mail_light.svg);
+  }
+
+  &-send-message {
+    @include icon();
+    background-image: url(../../../../web/src/images/icons/contactDetail/send_message_light.svg);
+  }
+
+  &-edit-contact {
+    @include icon();
+    background-image: url(../../../../web/src/images/icons/contactDetail/edit_contact_light.svg);
+  }
+
+  &-add-contact {
+    @include icon();
+    background-image: url(../../../../web/src/images/icons/contactDetail/add_contact_light.svg);
+  }
+
+  &-create-customer {
+    @include icon();
+    background-image: url(../../../../web/src/images/icons/contactDetail/create_customer_light.svg);
+  }
+
+  &-add-to-contact {
+    @include icon();
+    background-image: url(../../../../web/src/images/icons/contactDetail/add_to_customers.svg);
+  }
+
+  &-mail-related {
+    @include icon();
+    background-image: url(../../../../web/src/images/icons/contactDetail/send_receive_mail_light.svg);
+  }
+
+  &.editContactLight {
+    @include icon();
+    background-image: url(../../../../web/src/images/icons/contactDetail/edit_contact_light.svg);
+  }
+}
+
+.copy-icon {
+  height: 28px;
+  width: 28px;
+  padding: 4px 6px;
+
+  &:hover {
+    background-color: #f0f0f1;
+    border-radius: 14px;
+  }
+}
+
+.sendMailContent {
+  width: 320px;
+
+  // height: 180px;
+  p {
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    font-size: 14px;
+    line-height: 16px;
+    padding: 16px;
+  }
+
+  .radioWrapper {
+    @include sirius-scroll();
+    max-height: 92px;
+    width: 100%;
+    padding: 0 16px;
+    display: block;
+
+    :global {
+      .ant-radio-wrapper {
+        display: block;
+        line-height: 16px;
+        margin-bottom: 12px;
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+        font-size: 12px;
+
+        &:nth-last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      .ant-radio-input:focus + .ant-radio-inner {
+        box-shadow: none;
+      }
+
+      .ant-radio-inner {
+        height: 14px;
+        width: 14px;
+        border: 2px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+        transition: none;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      .ant-radio-checked {
+        &::after {
+          display: none;
+        }
+
+        .ant-radio-inner {
+          border-color: #386ee7;
+          border-width: 4px;
+
+          &::after {
+            display: none;
+          }
+        }
+
+        &::after {
+          border: 4px solid #386ee7;
+        }
+      }
+    }
+  }
+
+  .buttonWrapper {
+    &-bordered {
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    text-align: right;
+    padding: 16px;
+
+    :global {
+      .ant-btn {
+        height: 28px;
+        font-size: 12px;
+        box-shadow: none;
+        transition: none;
+        border-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+        border-radius: 4px;
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+        text-shadow: none;
+
+        &:hover {
+          border-color: #386ee7;
+        }
+
+        &.ant-btn-primary {
+          color: #ffffff;
+          text-shadow: none;
+          background: #386ee7;
+        }
+      }
+    }
+  }
+}
+
+.detailMedalContainer {
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+  justify-content: space-between;
+
+  &.detailMedalOtherContainer {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+  }
+
+  .medalInfoWrap {
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+
+  .medalInfo {
+    font-size: 14px;
+    color: #737373;
+    margin-right: 12px;
+  }
+
+  .medalList {
+    display: flex;
+    flex: 1;
+
+    .medalItem {
+      width: 28px;
+      height: 28px;
+      margin-right: 12px;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .countInfo {
+    color: #51555c;
+    font-size: 13px;
+    cursor: pointer;
+
+    svg {
+      vertical-align: middle;
+    }
+  }
+}
+
+.delMailListTitle {
+  max-width: 100%;
+  white-space: nowrap;
+  display: inline-flex;
+  .contactNameTitle {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

@@ -1,0 +1,97 @@
+.markting-guide-wrapper {
+  margin-top: 5px;
+  // background-color: $Brand-1;
+  // border-radius: 4px;
+  // padding: 8px 12px;
+  .loading {
+    font-size: 12px;
+    color: $Text-4;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    svg {
+      margin-right: 4px;
+      animation: loadingCircle 1s infinite linear;
+    }
+  }
+  p {
+    margin: 0;
+  }
+  .tips {
+    color: $Warning-7;
+    margin: 0;
+    font-size: 12px;
+    text-indent: 22px;
+    background-position: left top;
+    line-height: 20px;
+    background-image: url('./images/lighticon.png');
+    background-size: 20px;
+    background-repeat: no-repeat;
+    &.success {
+      background-image: url('./images/marktingGuideGreat.png');
+      color: $Success-7;
+      background-size: 16px;
+      background-position: left 2px;
+    }
+  }
+  .guide-list {
+    padding-top: 12px;
+  }
+  .guide-item {
+    color: $Text-5;
+    font-size: 12px;
+    line-height: 20px;
+    list-style-type: none;
+    margin-bottom: 12px;
+    font-weight: 500;
+    text-indent: 15px;
+    position: relative;
+    &.with-status {
+      background-size: 14px;
+      text-indent: 22px;
+      background-position: center left;
+      background-repeat: no-repeat;
+      background-image: url('./images/guideItemWarning.png');
+    }
+    &.with-status::before {
+      content: none;
+    }
+    &.with-status.success {
+      background-image: url('./images/guideItemSuccess.png');
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: #000;
+      left: 5px;
+      top: 8px;
+      border-radius: 4px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .desc {
+    }
+    .count {
+      font-size: 500;
+      color: $Warning-7;
+    }
+  }
+  .markting-action {
+    margin-left: 12px;
+    cursor: pointer;
+    color: $Brand-6;
+  }
+}
+
+@keyframes loadingCircle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

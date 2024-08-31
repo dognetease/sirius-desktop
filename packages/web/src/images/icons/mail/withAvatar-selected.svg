@@ -1,0 +1,16 @@
+<svg width="140" height="64" viewBox="0 0 140 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.25" y="0.25" width="139.5" height="63.5" rx="3.75" fill="#F2F5FF"/>
+<rect opacity="0.5" x="8" y="8" width="20" height="20" rx="10" fill="#B7C3FF"/>
+<mask id="mask0_475_258259" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="8" y="8" width="20" height="20">
+<rect x="8" y="8" width="20" height="20" rx="10" fill="#D4DCFF"/>
+</mask>
+<g mask="url(#mask0_475_258259)">
+<ellipse cx="18" cy="27.125" rx="7.5" ry="7.375" fill="white"/>
+<circle cx="18" cy="16" r="3.75" fill="white"/>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M85 20C85.5523 20 86 19.5523 86 19L86 9C86 8.44772 85.5523 8 85 8L37 8C36.4477 8 36 8.44772 36 9L36 19C36 19.5523 36.4477 20 37 20L85 20Z" fill="#B7C3FF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M131 32C131.552 32 132 31.5523 132 31L132 25C132 24.4477 131.552 24 131 24L37 24C36.4477 24 36 24.4477 36 25L36 31C36 31.5523 36.4477 32 37 32L131 32Z" fill="#B7C3FF"/>
+<path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M109 44C109.552 44 110 43.5523 110 43L110 37C110 36.4477 109.552 36 109 36L37 36C36.4477 36 36 36.4477 36 37L36 43C36 43.5523 36.4477 44 37 44L109 44Z" fill="#B7C3FF"/>
+<path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M109 56C109.552 56 110 55.5523 110 55L110 49C110 48.4477 109.552 48 109 48L37 48C36.4477 48 36 48.4477 36 49L36 55C36 55.5523 36.4477 56 37 56L109 56Z" fill="#B7C3FF"/>
+<rect x="0.25" y="0.25" width="139.5" height="63.5" rx="3.75" stroke="#4C6AFF" stroke-width="0.5"/>
+</svg>

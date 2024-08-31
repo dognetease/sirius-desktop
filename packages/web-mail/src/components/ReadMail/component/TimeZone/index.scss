@@ -1,0 +1,70 @@
+@import '@/styles/varies.scss';
+.edm-u-timezone-container {
+  display: flex;
+  align-items: center;
+  @include c4-1-reg12;
+  color: $Text-2;
+  padding-left: 42px;
+  margin-top: 8px;
+  .edm-u-timezone-zone {
+    color: $Text-4;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    span {
+      flex-shrink: 0;
+    }
+    .time-area {
+      flex-shrink: 1;
+      @include ellipsis-text;
+    }
+  }
+  .edm-u-timezone-edit {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  .area-icon {
+    margin-right: 3px;
+    display: flex;
+    align-items: center;
+    svg {
+      transform: scale(0.82);
+      -webkit-transform: scale(0.82);
+      -moz-transform: scale(0.82);
+    }
+  }
+  .time-icon {
+    margin: 0 4px 0 10px;
+    display: flex;
+    align-items: center;
+    svg {
+      transform: scale(0.82);
+      -webkit-transform: scale(0.82);
+      -moz-transform: scale(0.82);
+    }
+  }
+  .open-detail-btn {
+    color: $Avatar-6;
+    cursor: pointer;
+    margin-left: 4px;
+  }
+}
+.timeZoneContactName {
+  color: $Text-5;
+  font-family: PingFang SC;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 166.667% */
+}
+.timeZoneAccountName {
+  color: $Text-3;
+  font-family: PingFang SC;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 166.667% */
+  padding-left: 4px;
+  padding-right: 4px;
+}

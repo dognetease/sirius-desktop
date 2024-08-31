@@ -1,0 +1,21 @@
+.content {
+  display: flex;
+  .right {
+    flex: 1;
+    border: 1px solid rgb(235, 237, 242);
+    border-radius: 4px;
+    height: 600px;
+    overflow-y: auto;
+    > ul {
+      list-style: none;
+      padding-left: 10px;
+    }
+  }
+  .query-input {
+    background-color: $Fill-2;
+
+    :global(.ant-input) {
+      background-color: $Fill-2;
+    }
+  }
+}

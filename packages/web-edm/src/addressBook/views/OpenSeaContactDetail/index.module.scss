@@ -1,0 +1,143 @@
+// @import url("../../pages/openSea/index.module.scss");
+@import '../../pages/openSea/index.module.scss';
+
+.detail {
+  :global(.ant-tabs-tab) {
+    padding-top: 0;
+    padding-bottom: 7px;
+  }
+  :global(.ant-tabs-ink-bar) {
+    background-color: transparent;
+    &::after {
+      content: '';
+      width: 12px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      background-color: #386ee7;
+      transform: translateX(-50%);
+    }
+  }
+  :global(.ant-tabs-nav) {
+    margin-bottom: 0;
+  }
+
+  :global {
+    .ant-modal-header {
+      padding: 20px 24px;
+      @include h1-4-med16();
+      border: none;
+    }
+    .ant-modal-body {
+      padding-top: 0;
+    }
+    .ant-modal-close-icon {
+      svg {
+        color: #626e85;
+      }
+    }
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    &-basic {
+      .email {
+        display: flex;
+        align-items: center;
+
+        &-info {
+          font-weight: 500;
+          margin-right: 9px;
+          color: #232d47;
+        }
+
+        &-icon {
+          width: 16px;
+          cursor: pointer;
+          user-select: none;
+        }
+      }
+
+      .base {
+        display: flex;
+        align-items: center;
+        &-name {
+          color: #7a8599;
+        }
+
+        &-group {
+          display: flex;
+          align-items: center;
+          column-gap: 8px;
+          font-size: 12px;
+          :global {
+            .ant-tag {
+              height: 100%;
+              background: $label-2_1 !important;
+              color: $label-2_3 !important;
+            }
+          }
+        }
+      }
+    }
+
+    &-btn {
+      margin-right: 0;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+      :global {
+        .ant-btn {
+          min-width: 57px;
+          background: #f0f3f5;
+          color: $label-6_3;
+          border: none;
+          border-radius: 2px;
+        }
+
+        .ant-btn-primary {
+          background: $Brand-6;
+          color: #fff;
+        }
+      }
+
+      .dropdown {
+        width: 57px;
+      }
+
+      .edit {
+        width: 64px;
+      }
+
+      .transfer {
+        width: 76px;
+      }
+      .add {
+        width: 76px;
+      }
+    }
+  }
+
+  &-body {
+    margin-top: 18px;
+    &-item {
+      .label {
+        display: inline-block;
+        width: 72px;
+        color: #7a8599;
+      }
+      .value {
+        display: inline-block;
+        color: #232d47;
+      }
+    }
+  }
+
+  &-remark {
+    @extend .table;
+  }
+}

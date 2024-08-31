@@ -1,0 +1,34 @@
+.star-folder-empty-warp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  .empty-wrap {
+    padding: 10px;
+  }
+  .empty-logo {
+    display: flex;
+    justify-content: center;
+  }
+  .empty-title {
+    margin-top: 25px;
+    font-size: 16px;
+    // color: #232d47;
+    color: $font-color-2;
+    text-align: center;
+  }
+  .empty-tip {
+    font-size: 14px;
+    // color: #7a8599;
+    color: $Text-3;
+    text-align: center;
+    margin-top: 12px;
+    max-width: 255px;
+  }
+  .empry-btn-wrap {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

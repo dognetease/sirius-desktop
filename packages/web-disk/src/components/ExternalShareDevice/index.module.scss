@@ -1,0 +1,142 @@
+@import './../../../../web/src/styles/varies.scss';
+.device-modal-wrap {
+  :global(.ant-modal-content) {
+    background-color: #fff;
+    // border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+    box-shadow: 0px 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+    border-radius: 4px;
+  }
+  :global(.ant-modal-body) {
+    padding: 0;
+  }
+  .deviceWrap {
+    width: 476px;
+    padding: 24px 18px 10px 24px;
+    max-height: 480px;
+    min-height: 100px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    .deviceWrapTitle {
+      flex: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .name {
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #000000;
+      }
+      .closeIcon {
+        margin-right: 6px;
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        // background-image: url('@/images/icons/close_icon.svg');
+        background-size: 100% 100%;
+      }
+    }
+    .deviceWrapContent {
+      @include sirius-scroll;
+      max-height: 412px;
+      margin: 18px 0 8px;
+      .list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -8px;
+        margin-left: -8px;
+        .item {
+          margin-top: 8px;
+          margin-left: 8px;
+          padding: 12px 8px;
+          flex: 1;
+          height: 76px;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+          background-color: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.04);
+          border-radius: 4px;
+          .deviceIcon {
+            flex: none;
+            margin-right: 12px;
+            align-self: flex-start;
+            width: 24px;
+            height: 24px;
+            background-size: 100% 100%;
+            &.devicePCIcon {
+              // background-image: url('@/images/icons/device_pc_icon.svg');
+            }
+            &.deviceMobileIcon {
+              // background-image: url('@/images/icons/device_mobile_icon.svg');
+            }
+            &.deviceWebIcon {
+              background-image: url('@/images/icons/device_web_icon.svg');
+            }
+          }
+          .deviceInfo {
+            flex: 1;
+            overflow: hidden;
+            font-family: PingFang SC;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 12px;
+            color: #7d8085;
+            .name {
+              display: flex;
+              align-items: center;
+              .nameTxt {
+                @include flex-ellipsis-text;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 14px;
+                color: #262a33;
+              }
+              .owner {
+                flex: none;
+                width: 32px;
+                height: 16px;
+                background: $Link-2;
+                border-radius: 2px;
+                font-size: 12px;
+                color: $main-enhance-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 8px;
+              }
+            }
+            .system {
+              @include flex-ellipsis-text;
+              margin-top: 8px;
+            }
+            .time {
+              @include flex-ellipsis-text;
+              margin-top: 6px;
+            }
+          }
+        }
+      }
+    }
+
+    .device-empty-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 340px;
+      color: #51555c;
+
+      .device-empty-img {
+        height: 160px;
+        width: 160px;
+        background: url('@/images/icons/device_not_found.png');
+        margin-bottom: 10px;
+        background-size: 160px;
+      }
+    }
+  }
+}

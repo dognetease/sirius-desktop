@@ -1,0 +1,49 @@
+@import '@web-common/styles/waimao/varies.scss';
+.trafficDeliveryPage {
+  padding: 0px 20px 20px 20px;
+  background-color: #f6f7fa;
+  height: 100%;
+  overflow: overlay;
+  position: relative;
+  :global {
+    .ant-select-selector:hover,
+    .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+      border-color: $Brand-6 !important;
+      box-shadow: none;
+    }
+    .ant-select-item .ant-select-item-option:hover {
+      background: $Fill-2 !important;
+    }
+    .ant-select-item-option-selected {
+      background: $Brand-1 !important;
+      color: $Brand-6 !important;
+    }
+    .ant-select-single.ant-select-show-arrow .ant-select-selection-placeholder {
+      position: relative;
+      top: 2px;
+    }
+    .ant-select-single.ant-select-show-arrow .ant-select-selection-item {
+      display: flex;
+    }
+  }
+  .siteListContainer {
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    z-index: 1;
+    .option {
+      color: $Text-5;
+      font-size: 14px;
+      line-height: 22px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      div {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+  }
+}

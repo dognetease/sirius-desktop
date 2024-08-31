@@ -1,0 +1,33 @@
+.base-info {
+  padding: 12px 20px;
+
+  .system-info {
+    color: #262a33;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+    margin-bottom: 16px;
+  }
+
+  .divider {
+    height: 1px;
+    background-color: rgba(38, 42, 51, 0.08);
+    margin: 24px 0 16px 0;
+  }
+
+  .link {
+    color: #386ee7;
+    cursor: pointer;
+  }
+
+  :global(.ant-tag) {
+    padding: 0 4px;
+    height: 20px;
+    line-height: 20px;
+  }
+
+  :global(.anticon-close) {
+    color: rgba(38, 42, 51, 0.5) !important;
+    vertical-align: -0.04em;
+  }
+}

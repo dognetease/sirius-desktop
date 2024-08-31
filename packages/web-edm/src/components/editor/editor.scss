@@ -1,0 +1,17 @@
+.editor-container.edm-editor-container {
+  flex: 1;
+  .ql-container {
+    // border: none;
+  }
+  .ql-editor {
+    min-height: 80px;
+  }
+  .editor-container-layer {
+    height: 100%;
+    width: auto !important;
+    right: 17px;
+    left: -20px;
+    top: -40px;
+    position: absolute;
+  }
+}

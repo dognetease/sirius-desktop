@@ -1,0 +1,150 @@
+.additional-edm-setting {
+  :global(.ant-drawer-header) {
+    border-bottom: none;
+  }
+
+  :global(.ant-drawer-footer) {
+    border-top: none;
+
+    :global(.ant-btn:not(.ant-btn-primary)) {
+      border-color: #f0f3f5;
+      background-color: #f0f3f5;
+    }
+
+    :global(.ant-btn-primary) {
+      background-color: #4c6aff;
+    }
+  }
+
+  &-body {
+    padding: 8px 24px;
+
+    .group-name {
+      color: #232d47;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 20px;
+      margin-bottom: 8px;
+    }
+
+    .smart-name {
+      height: 20px;
+      color: #232d47;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    .form-item-trigger-condition {
+      margin-bottom: 0;
+    }
+
+    .trigger-condition {
+      display: flex;
+      align-items: flex-start;
+
+      .email-op-days {
+        flex-grow: 1;
+      }
+
+      .email-op-type {
+        width: 100px;
+      }
+
+      .space-text {
+        flex-shrink: 0;
+        line-height: 32px;
+        margin: 0 16px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .form {
+      :global(.ant-space) {
+        width: 100%;
+      }
+
+      :global(.ant-space-item:first-child) {
+        flex-grow: 1;
+      }
+
+      .subject-icon {
+        display: flex;
+        cursor: pointer;
+      }
+    }
+
+    .form-item-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      > :global(.ant-form-item) {
+        width: 100%;
+        margin-right: 16px;
+
+        &.customer-tag-op-type {
+          width: 156px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .tip {
+      color: #7a8599;
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 24px;
+    }
+
+    .email-draft {
+      display: flex;
+      padding: 20px;
+      border-radius: 4px;
+      background-color: #f9fafb;
+      margin-top: 8px;
+    }
+
+    .email-content {
+      flex-grow: 1;
+      color: #232d47;
+      font-size: 14px;
+      line-height: 22px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-right: 12px;
+    }
+
+    .email-edit {
+      flex-shrink: 0;
+      color: #4c6aff;
+      font-size: 14px;
+      line-height: 22px;
+      cursor: pointer;
+    }
+  }
+
+  &-footer {
+    text-align: right;
+
+    :global(.ant-btn) {
+      margin-right: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

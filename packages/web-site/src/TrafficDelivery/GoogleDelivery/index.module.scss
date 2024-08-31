@@ -1,0 +1,146 @@
+.googleDelivery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 17px;
+  height: 100%;
+  overflow: overlay;
+  .deliveryOverview {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #fff;
+    padding: 20px;
+    .header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .title {
+        color: #272e47;
+        font-family: PingFang SC;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+      }
+      .filterWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+    }
+
+    .infoWrapper {
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 12px;
+      margin-top: 20px;
+
+      .card {
+        padding: 20px;
+        height: 90px;
+        flex: 1;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        border-radius: 4px;
+        background: #f6f7fa;
+        min-width: 138px;
+
+        .icon {
+          width: 48px;
+          height: 48px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .content {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: space-between;
+          height: 44px;
+
+          .title {
+            color: #545a6e;
+            font-family: PingFang SC;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+          }
+
+          .value {
+            color: #272e47;
+            font-family: LX-numbers;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    .lineChartWrapper {
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .costInfo {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    .header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .title {
+        color: #272e47;
+        font-family: PingFang SC;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+      }
+      .filterWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+    }
+    .costTableWrapper {
+      width: 100%;
+      height: 260px;
+      overflow: overlay;
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-top: 23px;
+      :global(.edm-table) {
+        :global(.ant-table) {
+          border: 0px !important;
+          border-radius: 0px !important;
+        }
+      }
+    }
+  }
+}
+
+.trafficDeliveryLineChartCard {
+  flex: 1 !important;
+  padding: 0px !important;
+}

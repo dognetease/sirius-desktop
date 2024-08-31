@@ -1,0 +1,64 @@
+.top-banner {
+  // height: 50px;
+  height: 48px;
+  padding: 0 16px;
+  border-bottom: 1px solid #f0f3f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: none;
+
+  .card-type {
+    font-size: 14px;
+    color: #7a8599;
+  }
+
+  .top-banner-icon {
+    cursor: pointer;
+    vertical-align: middle;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+}
+:global(.customer-global-style) {
+  &.noBorder {
+    border: none;
+  }
+}
+.rightSiderStyle {
+  border-left: 1px solid rgba(38, 42, 51, 0.12);
+}
+.noBorder {
+  border: none;
+}
+
+.column-flex-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.commonSideBar {
+  :global(.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn) {
+    text-shadow: none;
+  }
+}
+
+.switch-customer-overlay {
+  :global(.ant-dropdown-menu-item) {
+    color: #232d47;
+  }
+  :global(.ant-dropdown-menu-item-selected) {
+    background: $Fill-1;
+  }
+  :global(.ant-dropdown-menu-item-selected::after) {
+    margin-left: 20px;
+    content: ' ';
+    width: 16px;
+    height: 16px;
+    background: url(@/images/mailCustomerCard/menu-checked.svg);
+  }
+}

@@ -1,0 +1,137 @@
+@import '../Pagination/index.module.scss';
+
+.siriusTable {
+  @extend .siriusPaginationUi;
+
+  &.headerBgColor {
+    :global .ant-table-thead > tr > th,
+    :global .lx-ant-table-thead > tr > th {
+      background-color: $Fill-2;
+      color: #7a8599;
+    }
+  }
+
+  :global(.ant-table-cell.ant-table-cell-fix-right.react-resizable),
+  :global(.lx-ant-table-cell.lx-ant-table-cell-fix-right.react-resizable) {
+    position: sticky !important;
+  }
+
+  :global .ant-table-tbody > tr.ant-table-row:hover > td,
+  :global .lx-ant-table-tbody > tr.lx-ant-table-row:hover > td {
+    background-color: $Fill-3;
+  }
+
+  :global .ant-spin-text,
+  :global .lx-ant-spin-text {
+    color: $Text-3;
+    margin-top: 15px;
+  }
+
+  :global .ant-checkbox-checked .ant-checkbox-inner,
+  :global .lx-ant-checkbox-checked .lx-ant-checkbox-inner {
+    background-color: $Avatar-6;
+    border-color: $Avatar-6;
+  }
+
+  :global .ant-checkbox-indeterminate .ant-checkbox-inner:after,
+  :global .lx-ant-checkbox-indeterminate .lx-ant-checkbox-inner:after {
+    // background-color: $Avatar-6;
+    height: 1.6px;
+    width: 8px;
+  }
+  :global .ant-table-tbody > tr.ant-table-row-selected > td,
+  :global .lx-ant-table-tbody > tr.lx-ant-table-row-selected > td {
+    background-color: $Brand-2;
+  }
+
+  // :global .ant-table-wrapper .anticon-spin{
+  //   height: 24px;
+  // }
+
+  // :global .ant-table-tbody .ant-table-row:nth-child(even) td {
+  //   background-color: $Fill-1;
+  // }
+  :global .odd td {
+    background-color: $Fill-1;
+  }
+
+  :global .ant-table-thead > tr > th,
+  :global .lx-ant-table-thead > tr > th {
+    font-weight: normal;
+    font-family: PingFang SC;
+  }
+
+  :global .ant-table-thead > tr > th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan])::before,
+  :global .lx-ant-table-thead > tr > th:not(:last-child):not(.lx-ant-table-selection-column):not(.lx-ant-table-row-expand-icon-cell):not([colspan])::before {
+    display: none;
+  }
+
+  :global .ant-table-ping-right .ant-table-cell-fix-right-first,
+  :global .ant-table-ping-right .ant-table-cell-fix-right-last,
+  :global .lx-ant-table-ping-right .lx-ant-table-cell-fix-right-first,
+  :global .lx-ant-table-ping-right .lx-ant-table-cell-fix-right-last {
+    filter: drop-shadow(-4px 0px 10px rgba($label-1_3-r, $label-1_3-g, $label-1_3-b, 0.12));
+  }
+
+  :global .ant-table-ping-left .ant-table-cell-fix-left-first,
+  :global .ant-table-ping-left .ant-table-cell-fix-left-last,
+  :global .lx-ant-table-ping-left .lx-ant-table-cell-fix-left-first,
+  :global .lx-ant-table-ping-left .lx-ant-table-cell-fix-left-last {
+    filter: drop-shadow(4px 0px 10px rgba($label-1_3-r, $label-1_3-g, $label-1_3-b, 0.12));
+  }
+
+  :global .ant-table-ping-left .ant-table-cell-fix-left-first::after,
+  :global .ant-table-ping-left .ant-table-cell-fix-left-last::after,
+  :global .ant-table-ping-right .ant-table-cell-fix-right-first::after,
+  :global .ant-table-ping-right .ant-table-cell-fix-right-last::after,
+  :global .lx-ant-table-ping-left .lx-ant-table-cell-fix-left-first::after,
+  :global .lx-ant-table-ping-left .lx-ant-table-cell-fix-left-last::after,
+  :global .lx-ant-table-ping-right .lx-ant-table-cell-fix-right-first::after,
+  :global .lx-ant-table-ping-right .lx-ant-table-cell-fix-right-last::after {
+    box-shadow: none;
+  }
+
+  :global .ant-table-thead > tr > th,
+  :global .ant-table-tbody > tr > td,
+  :global .ant-table tfoot > tr > th,
+  :global .ant-table tfoot > tr > td,
+  :global .lx-ant-table-thead > tr > th,
+  :global .lx-ant-table-tbody > tr > td,
+  :global .lx-ant-table tfoot > tr > th,
+  :global .lx-ant-table tfoot > tr > td {
+    padding: 12px 10px;
+    border: none;
+  }
+
+  :global .ant-table-cell.react-resizable,
+  :global .lx-ant-table-cell.react-resizable {
+    position: relative !important;
+    background-clip: padding-box;
+  }
+
+  :global .ant-table-cell .react-resizable-handle,
+  :global .lx-ant-table-cell .react-resizable-handle {
+    position: absolute !important;
+    width: 10px !important;
+    height: 100% !important;
+    bottom: 0;
+    right: -5px;
+    cursor: col-resize !important;
+    z-index: 1;
+    background: none !important;
+  }
+
+  :global .ant-table-body .ant-table-row.odd td,
+  :global .lx-ant-table-body .lx-ant-table-row.odd td {
+    background-color: $Fill-1;
+  }
+
+  :global .ant-table-body .ant-table-row.even td,
+  :global .lx-ant-table-body .lx-ant-table-row.even td {
+    background-color: #fff;
+  }
+
+  // :global .ant-table-thead > tr > th {
+  //   color: #747a8c !important;
+  // }
+}

@@ -1,0 +1,20 @@
+.header-button {
+  float: right;
+  svg {
+    margin-right: 4px;
+    vertical-align: sub;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-right: 24px;
+}
+.head {
+  margin-bottom: 16px;
+}
+.body {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 4px;
+}

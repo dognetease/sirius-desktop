@@ -1,0 +1,143 @@
+@import '@web-common/styles/variables.scss';
+
+.extension-wrap {
+  height: 100%;
+  padding: 20px;
+  background: $Fill-2;
+  display: flex;
+  flex-direction: column;
+  min-width: 1100px;
+
+  .header {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #272e47;
+    margin-bottom: 12px;
+  }
+}
+
+.hint {
+  font-size: 12px;
+  line-height: 16px;
+  color: #747a8c;
+  display: inline-block;
+  vertical-align: bottom;
+
+  .btn-setting {
+    color: #4c6aff;
+    cursor: pointer;
+  }
+}
+
+.container {
+  flex-grow: 1;
+  display: flex;
+  background: #ffffff;
+  border: 1px solid #f0f1f5;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+
+  .content {
+    width: 236px;
+
+    .title {
+      color: #272e47;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 45px;
+      margin-bottom: 22px;
+    }
+
+    .text {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      color: #747a8c;
+      margin-top: 8px;
+      margin-bottom: 24px;
+    }
+
+    .feature {
+      margin-bottom: 20px;
+    }
+
+    .feature-title {
+      color: #272e47;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 20px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+
+      &::before {
+        display: inline-block;
+        flex-shrink: 0;
+        content: '';
+        width: 12px;
+        height: 12px;
+        border: 3px solid #edf0ff;
+        border-radius: 50%;
+        background-color: #4c6aff;
+        margin-right: 8px;
+      }
+    }
+
+    .feature-content {
+      color: #747a8c;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    .hint {
+      font-size: 12px;
+      line-height: 16px;
+      color: #9fa2ad;
+      margin-top: 12px;
+
+      > a > svg {
+        vertical-align: sub;
+      }
+    }
+  }
+
+  .checked-btn {
+    width: 236px;
+    margin-top: 28px;
+    background: #4c6aff;
+  }
+
+  .picture {
+    margin-left: 100px;
+  }
+}
+
+.play-btn {
+  height: 28px;
+  margin-left: 12px;
+  color: #4c6aff;
+  font-size: 12px;
+
+  > svg {
+    vertical-align: text-top;
+    margin-right: 4px;
+  }
+}
+
+.videoModal {
+  :global {
+    .ant-modal-body {
+      padding: 0px;
+      background-color: transparent;
+    }
+
+    .ant-modal-content {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+}

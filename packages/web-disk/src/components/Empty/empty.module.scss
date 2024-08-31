@@ -1,0 +1,11 @@
+.empty {
+  margin-top: 220px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  .empty-text {
+    margin-top: 8px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+  }
+}

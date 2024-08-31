@@ -1,0 +1,32 @@
+.my-clue-wrap {
+  // position: relative;
+  .tabs-top {
+    margin-top: 16px;
+  }
+  .empty-list-body {
+    width: auto !important;
+  }
+  .table-wrap {
+    margin-top: 16px;
+  }
+  .pagination-wrap {
+    float: right;
+    display: flex;
+    height: 56px;
+    line-height: 56px;
+    box-sizing: border-box;
+    align-items: center;
+
+    :global(.ant-select-item) {
+      border-radius: 4px;
+      min-width: 20px;
+    }
+  }
+}
+.company-name {
+  cursor: pointer;
+  color: #386ee7;
+  &:hover {
+    color: #386ee7;
+  }
+}

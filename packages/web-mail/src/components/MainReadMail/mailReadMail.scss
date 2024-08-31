@@ -1,0 +1,11 @@
+@import '../../../../web/src/styles/varies';
+
+.mainreadmail-wrap {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  align-items: stretch;
+  @include sirius-scroll();
+  overflow-x: overlay;
+  overflow-y: hidden;
+}

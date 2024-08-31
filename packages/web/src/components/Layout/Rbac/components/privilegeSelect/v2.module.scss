@@ -1,0 +1,29 @@
+.noMargin {
+  margin-bottom: 0 !important;
+}
+
+.table {
+  padding: 0 16px 1px;
+  background-color: #fff;
+
+  .item {
+    padding: 12px 16px 16px;
+    background: #f9fafb;
+    margin-bottom: 12px;
+
+    h3 {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    h3:not(:fist-child) {
+      margin-top: 12px;
+    }
+
+    :global {
+      .ant-table-tbody > tr.ant-table-row:hover > td {
+        background: #fff !important;
+      }
+    }
+  }
+}

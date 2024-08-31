@@ -1,0 +1,54 @@
+@import '@web-common/styles/variables.scss';
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: $Fill-2;
+  padding: 16px 16px 16px;
+  overflow-x: auto;
+}
+
+.title {
+  margin: 4px 0 12px;
+  color: $Text-5;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.tabs {
+  flex: 0 0 48px;
+  background: #fff;
+  min-width: 800px;
+
+  :global {
+    .ant-tabs-nav {
+      height: 100%;
+    }
+    .ant-tabs-tab {
+      padding: 0 16px;
+      margin-left: 0 !important;
+    }
+    .ant-tabs-ink-bar::after {
+      width: 24px !important;
+    }
+    .ant-tabs-tab-btn {
+      font-size: 14px;
+      font-weight: 400;
+      color: #747a8c;
+    }
+    .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn,
+    .ant-tabs-tab:hover {
+      color: $Brand-6;
+    }
+  }
+}
+
+.content {
+  position: relative;
+  background: #fff;
+  flex: 1;
+  overflow: auto;
+  min-width: 800px;
+}

@@ -1,0 +1,131 @@
+.product-setting-modal {
+  :global {
+    .ant-modal-header {
+      border-bottom: none;
+    }
+    .ant-modal-body {
+      padding: 0 24px 8px;
+      max-height: 410px;
+      overflow-y: scroll;
+      /* 设置滚动条的样式 */
+      &::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+        background: #fff;
+      }
+      /* 滚动槽 */
+      &::-webkit-scrollbar-track {
+        border-radius: 6px;
+      }
+      /* 滚动条滑块 */
+      &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background: $Fill-4;
+        padding: 4px;
+      }
+    }
+    .ant-modal-footer {
+      border-top: none;
+      padding: 16px 24px;
+    }
+    .ant-btn {
+      min-width: 76px;
+    }
+    .ant-btn-primary {
+      background-color: #4c6aff;
+      margin-left: 12px !important;
+    }
+
+    .double-row {
+      white-space: pre-wrap;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+  }
+
+  .table-pagination {
+    padding-top: 46px;
+    text-align: right;
+  }
+
+  .search-outer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    .search {
+      width: 280px;
+    }
+  }
+
+  .add-wrapper {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 4px;
+    }
+  }
+
+  .empty-list {
+    margin-top: 50px;
+    margin-bottom: 40px;
+  }
+  .sample-link {
+    display: block;
+    margin-top: 8px;
+  }
+
+  .add-product {
+    margin-top: 24px;
+  }
+
+  .choose-products-outer {
+    display: flex;
+    margin-bottom: 16px;
+    position: relative;
+
+    .title {
+      font-size: 14px;
+      line-height: 22px;
+      color: #a9b2c2;
+      flex-shrink: 0;
+    }
+
+    .choose-products {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+
+      .product-item {
+        padding: 0 8px;
+        height: 20px;
+        background: #f4f6f7;
+        border-radius: 2px;
+        display: flex;
+        align-items: center;
+        .product-name {
+          max-width: 94px;
+          min-width: 36px;
+          line-height: 20px;
+          color: #4e5a70;
+          margin-right: 4px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+        .close {
+          cursor: pointer;
+          stroke: #939cad;
+          &:hover {
+            stroke: #4c6aff;
+          }
+        }
+      }
+    }
+  }
+}

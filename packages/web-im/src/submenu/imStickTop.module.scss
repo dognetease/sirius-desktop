@@ -1,0 +1,120 @@
+@import '../../../web/src/styles/varies';
+$top-session-item-width: 50px;
+$top-session-item-height: 64px;
+$top-session-item-margin-right: 1px;
+.custom-tooltip-style {
+  padding: 0 0 0 4px;
+  :global(.ant-tooltip-arrow) {
+    display: none !important;
+  }
+  :global(.ant-tooltip-inner) {
+    min-height: auto !important;
+    padding: 10 12px !important;
+    line-height: 18px !important;
+    background-color: #080b19;
+    box-sizing: border-box !important;
+    border-radius: 6px !important;
+    font-family: PingFang SC !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-size: 14px !important;
+    word-break: break-all;
+  }
+}
+
+.top-session-wrap {
+  padding: 0;
+  position: sticky;
+  top: 0;
+  // background-color: #fff;
+  background-color: $white;
+  &.hidden {
+    display: none;
+  }
+  .top-session-list {
+    padding: 0 10px 0px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: hidden;
+    max-height: $top-session-item-height * 2;
+    position: relative;
+    justify-content: space-between;
+    .top-session-item {
+      padding: 8px 0 2px;
+      width: $top-session-item-width;
+      height: 64px;
+      text-align: center;
+      box-sizing: border-box;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1px;
+      position: relative;
+      &:hover {
+        // background: #f0f0f1;
+        background-color: $white-hover-bg;
+        border-radius: 6px;
+      }
+    }
+    .top-session-item-select,
+    .top-session-item-select:hover {
+      background: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.12);
+      border-radius: 6px;
+    }
+    .top-nickname {
+      font-family: PingFang;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 20px;
+      // color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.6);
+      color: $Text-3;
+      // text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      transform: scale(0.5);
+      transform-origin: center;
+      width: 200%;
+      &.top-operate {
+        color: $main-enhance-color;
+      }
+    }
+    & > i {
+      width: $top-session-item-width;
+      margin-right: $top-session-item-margin-right;
+    }
+  }
+  .list-expanded {
+    @include sirius-scroll;
+    max-height: $top-session-item-height * 5;
+  }
+  .item-unexpanded {
+    position: absolute !important;
+    bottom: 0;
+    right: 10px;
+    background: $white;
+  }
+  .top-session-unread {
+    padding: 0 5px;
+    height: 16px;
+    min-width: 16px;
+    display: inline-block;
+    background: #f74f4f;
+    border-radius: 8px;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    &.mute {
+      background-color: #d4d4d6;
+    }
+  }
+}

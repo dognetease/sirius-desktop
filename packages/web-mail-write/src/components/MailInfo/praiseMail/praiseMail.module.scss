@@ -1,0 +1,169 @@
+:global {
+  .ant-modal-wrap.medal-chooser {
+    .ant-modal-content {
+      border-radius: 12px;
+    }
+    .ant-modal-body {
+      padding: 0 !important;
+      background: linear-gradient(119.63deg, #d5e2ff -11.22%, #f5f9ff 43.62%, #e5e9ff 107.38%);
+      border-radius: 12px;
+      backdrop-filter: blur(14.6484px);
+    }
+  }
+}
+
+.medal-box {
+  padding: 20px 20px 0;
+  margin-right: 4px;
+  .header {
+    .title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+      color: #000;
+      margin-bottom: 20px;
+    }
+    .close-button {
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      cursor: pointer;
+    }
+    .desc {
+      font-size: 14px;
+      line-height: 22px;
+      color: #51555c;
+    }
+    margin-bottom: 12px;
+  }
+  .medal-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -20px;
+    height: 365px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      opacity: 1;
+      display: block;
+      background-color: transparent;
+      width: 6px;
+      padding-right: 4px;
+      &:horizontal {
+        height: 6px;
+      }
+    }
+    /*滚动条两端方向按钮*/
+    &::-webkit-scrollbar-button {
+      display: none;
+    }
+    /*滚动条中间滑动部分*/
+    &::-webkit-scrollbar-thumb {
+      background: #d4d4d6;
+      border-radius: 3px;
+      padding-right: 4px;
+      // right: 4px;
+      width: 6px;
+      opacity: 0;
+      &:hover {
+        background: $Fill-4;
+      }
+    }
+    /*滚动条右下角区域*/
+    &::-webkit-scrollbar-corner {
+      display: none;
+    }
+    .medal-item {
+      width: 144px;
+      height: 166px;
+      margin-right: 20px;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      background: #fff;
+      border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+      border-radius: 6px;
+      overflow: hidden;
+      &.selected {
+        border: 1px solid rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.4);
+        box-shadow: 0px 6px 8px rgba(111, 155, 255, 0.14);
+      }
+      .medal-img {
+        width: 70px;
+        height: 70px;
+        margin: 12px 37px 2px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .medal-info {
+        background-color: #fff;
+        flex: 1;
+        text-align: center;
+        .medal-name {
+          margin: 0 auto 4px;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 22px;
+          color: #262a33;
+        }
+        .medal-desc {
+          margin-bottom: 16px;
+          font-size: 12px;
+          line-height: 20px;
+          color: #7d8085;
+        }
+      }
+    }
+  }
+}
+
+.tag-wrapper {
+  position: relative;
+  margin-right: 8px;
+  .tag-close-btn {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    cursor: pointer;
+    display: none;
+  }
+  &:hover {
+    .tag-close-btn {
+      display: block;
+    }
+  }
+}
+
+.desc {
+  display: flex;
+  justify-content: flex-start;
+  .medal-img {
+    height: 35px;
+    width: 35px;
+  }
+  .item {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  .winners {
+    display: flex;
+    align-items: center;
+  }
+  .winners-num {
+    margin-left: 5px;
+  }
+  .text-content {
+    display: inline-block;
+    max-width: 105px;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}

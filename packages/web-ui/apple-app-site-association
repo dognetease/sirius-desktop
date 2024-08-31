@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "VNFST8HJXN.com.netease.enterprise.work",
+                "paths": [ "/app/*" ]
+            }
+        ]
+    }
+}

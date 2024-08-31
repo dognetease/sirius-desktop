@@ -1,0 +1,129 @@
+.template-item-wrap {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  width: 170px;
+  height: 200px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  border: 0.5px solid $Fill-3;
+  border-radius: 4px;
+  transition: box-shadow 0.3s ease;
+  border-top-color: $Success-6;
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+  background-color: #ffffff;
+  &::after {
+    background: $Success-6;
+    display: block;
+    height: 2px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  &.doc {
+    border-top-color: $Brand-5;
+  }
+  &.doc::after {
+    background-color: $Brand-5;
+  }
+  &.unitable {
+    border-top-color: $Warning-6;
+  }
+  &.unitable::after {
+    background-color: $Warning-6;
+  }
+  &.mask {
+    box-shadow: 0px 8px 16px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+
+    &:hover {
+      box-shadow: 0px 8px 16px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+    }
+  }
+
+  &:hover {
+    box-shadow: 0px 4px 8px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+  }
+  &.mask:hover {
+    transform: translate(0, -4px);
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &::before {
+    display: block;
+    height: 2px;
+    content: '';
+  }
+
+  &.doc::before {
+    background: $Brand-5;
+  }
+  &.unitable::before {
+    background: $Warning-6;
+  }
+
+  &.excel::before {
+    background: $Success-6;
+  }
+
+  & > div {
+    height: 160px;
+    position: relative;
+  }
+  &:hover .opration-box {
+    display: flex;
+  }
+
+  // 按钮组
+  .opration-box {
+    display: none;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    padding: 0 18px;
+    justify-content: center;
+  }
+  button {
+    box-sizing: border-box;
+    width: 62px;
+    border-radius: 13px !important;
+    height: 28px !important;
+    min-width: 60px !important;
+    padding: 3px 0px !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+  }
+  .delete {
+    margin-right: 15px;
+  }
+
+  // 底部名称
+  p {
+    box-sizing: border-box;
+    font-size: 14px;
+    margin-bottom: 0;
+    display: flex;
+    height: 38px;
+    color: #232d47;
+    border-top: 1px solid $Fill-3;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+  }
+  .title {
+    margin-left: 10px;
+    width: 110px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+.btn {
+  background: $Brand-6;
+}

@@ -1,0 +1,11 @@
+@import '../../../../web/src/styles/varies';
+.select-title {
+  font-size: 12px;
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.6);
+}
+
+.record-wrapper,
+.recordWrapper {
+  overflow: auto;
+  @include sirius-scroll();
+}

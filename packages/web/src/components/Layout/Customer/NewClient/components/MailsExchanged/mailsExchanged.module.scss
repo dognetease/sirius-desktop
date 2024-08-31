@@ -1,0 +1,65 @@
+.mails-client-wrap {
+  height: 100%;
+  position: relative;
+  // padding: 24px;
+  // overflow-y: auto;
+  // background: #fff;
+  // min-width: 852px;
+  // min-height: 640px;
+  .main-content {
+    position: absolute;
+    top: 245px;
+    bottom: 0;
+    left: 24px;
+    right: 24px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .multi-select-action {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: calc(100% - 288px);
+    padding: 0 24px;
+    height: 60px;
+    line-height: 60px;
+    background: #fff;
+    box-shadow: inset 0px 0.5px 0px rgba(38, 42, 51, 0.24);
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px 16px;
+    .title {
+      font-size: 20px;
+    }
+    .des {
+      color: #7d8085;
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+    }
+    svg {
+      position: relative;
+      // left: 8px;
+    }
+  }
+
+  .client-table-wrap {
+    :global(.ant-alert) {
+      padding: 4px 15px;
+      margin: 10px 0;
+    }
+    :global(.ant-alert-content) {
+      flex: none;
+    }
+    :global(.ant-alert-action) {
+      flex: 1;
+    }
+    .client-table {
+      table {
+        border: 1px solid #f0f0f0;
+      }
+    }
+  }
+}

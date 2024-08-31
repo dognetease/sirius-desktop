@@ -1,0 +1,31 @@
+.expand-wrapper,
+.fold-wrapper {
+  position: relative;
+}
+.expand-btn,
+.fold-btn {
+  width: 16px;
+  height: 28px;
+  border: 1px solid #e1e6ed;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 0px 2px 2px 0px;
+  top: 33px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+.isElectron {
+  top: 53px !important;
+}
+.expand-btn {
+  border-left: none;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);
+  z-index: 1;
+  background-image: url('../../../../web/src/images/icons/submenu-right.svg');
+}
+.fold-btn {
+  border-right: none;
+  right: 0;
+  background-image: url('../../../../web/src/images/icons/submenu-left.svg');
+}

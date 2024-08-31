@@ -1,0 +1,30 @@
+.customer-tree-container {
+  .edti-tree-wrap {
+    .ant-tree {
+      .ant-tree-list {
+        .ant-tree-treenode {
+          .ant-tree-node-content-wrapper {
+            padding-right: 8px;
+            flex: 1 1 auto;
+            width: 100px;
+
+            .ant-tree-title {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.edit-tree-padding0 {
+  .VListTreeCard-Wrap {
+    padding: 0px;
+  }
+  .VListTreeCard-Wrap.active {
+    .u-unread {
+      background: $Brand-5;
+      color: #ffffff;
+    }
+  }
+}

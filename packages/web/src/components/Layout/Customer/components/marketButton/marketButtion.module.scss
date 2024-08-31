@@ -1,0 +1,39 @@
+.customer-button {
+  min-width: 80px;
+  height: 32px;
+  border-radius: 4px;
+  border: 1px solid rgba(38, 42, 51, 0.16);
+  background-color: #fff;
+  color: rgba(38, 42, 51, 0.8);
+  box-shadow: none;
+  outline: none;
+  padding: 4px 8px;
+  display: inline-block;
+  cursor: pointer;
+  .text {
+    position: relative;
+    margin-right: 16px;
+    &::after {
+      content: '';
+      position: absolute;
+      right: -8px;
+      height: 20px;
+      width: 1px;
+      background-color: rgba(38, 42, 51, 0.16);
+      // border: 1px solid rgba(38, 42, 51, 0.16);
+    }
+  }
+  svg {
+    vertical-align: -3px;
+  }
+}
+:global(.customer-button-content) {
+  background: #ffffff;
+  /* 黑白灰/字体 20% */
+  border: 0.5px solid rgba(38, 42, 51, 0.2);
+  box-sizing: border-box;
+  /* 投影样式 */
+  box-shadow: 0px 4px 8px rgba(38, 42, 51, 0.1);
+  border-radius: 8px;
+  width: 336px;
+}

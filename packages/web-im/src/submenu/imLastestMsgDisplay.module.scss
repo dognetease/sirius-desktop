@@ -1,0 +1,22 @@
+@import '../../../web/src/styles/varies';
+.latest-msg-text {
+  font-family: PingFang;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 22px;
+  /* identical to box height, or 133% */
+  /* 字体及ICON颜色 */
+  // color: #7d8085;
+  color: $Text-3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.sys-msg {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

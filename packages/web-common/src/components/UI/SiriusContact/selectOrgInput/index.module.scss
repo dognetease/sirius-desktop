@@ -1,0 +1,232 @@
+@import '../../../../../../web/src/styles/varies';
+
+.contactSelectWrap {
+  position: relative;
+  width: 100%;
+  min-width: 220px;
+  min-height: 32px;
+
+  :global(.ant-select-selection-item) {
+    background-color: #ffffff;
+    border: none;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+  }
+  :global(.ant-select-selector) {
+    max-height: 230px;
+    @include sirius-scroll();
+  }
+  :global(.ant-select-clear) {
+    right: 36px;
+    top: 16px;
+  }
+  &.suffixPadding {
+    :global(.ant-select-selector) {
+      padding-right: 32px;
+    }
+  }
+  &.suffixPaddingTxt {
+    :global(.ant-select-selector) {
+      padding-right: 80px;
+    }
+  }
+  &.clearPadding {
+    :global(.ant-select-selector) {
+      padding-right: 32px;
+    }
+  }
+  &.clearSuffixIconPadding {
+    :global(.ant-select-selector) {
+      padding-right: 52px;
+    }
+  }
+  &.clearSuffixTxtPadding {
+    :global(.ant-select-selector) {
+      padding-right: 100px;
+    }
+  }
+  .contactSelectClearIcon {
+    cursor: pointer;
+    position: absolute;
+    bottom: 8px;
+    right: 32px;
+    background-size: 100% 100%;
+    width: 16px;
+    height: 16px;
+    background-image: url('../../../../../../web/src/images/icons/close_btn.svg');
+  }
+  .contactSelectSuffixIcon {
+    cursor: pointer;
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    background-size: 100% 100%;
+    width: 16px;
+    height: 16px;
+    background-image: url('../../../../../../web/src/images/icons/schedule_add_contact.svg');
+  }
+  .contactSelectSuffixIconDisable {
+    background-image: url('../../../../../../web/src/images/icons/schedule_add_contact_gray.svg');
+  }
+  .contactSelectSuffixTxt {
+    cursor: pointer;
+    position: absolute;
+    bottom: 6px;
+    right: 12px;
+    font-size: 12px;
+    color: $main-enhance-color;
+    &.contactSelectSuffixTxtDisable {
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    }
+  }
+}
+
+.contactSelectScroll {
+  :global(.ant-select-selection-overflow) {
+    @include sirius-scroll();
+    max-height: 90px;
+    overflow-y: scroll;
+    margin-right: 20px;
+  }
+  :global(.ant-select-selector) {
+    &::after {
+      content: '';
+    }
+  }
+  :global(.ant-select-selection-overflow-item:last-child) {
+    flex: 1 1 auto;
+    display: flex;
+  }
+  :global(.ant-select-selection-search:last-child) {
+    flex-grow: 1;
+  }
+}
+.dropDownWrapper {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding: 8px 0;
+  border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+  //  :global {
+  // }
+  // &:before {
+  //   content: " ";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 200%;
+  //   height: 200%;
+  //   border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+  //   transform-origin: 0 0;
+  //   transform: scale(0.5);
+  //   border-radius: 6px;
+  // }
+  .selectOption {
+    font-size: 12px;
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    height: 30px;
+    min-height: 30px;
+    font-weight: normal !important;
+  }
+  :global(.ant-select-item-option-selected:not(.ant-select-item-option-disabled)) {
+    background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.1);
+    color: #386ee7;
+  }
+  // :global(.ant-select-item-option-selected) {
+  //   display: none;
+  // }
+}
+.dropDownHideFirstChild {
+  :global(.ant-select-item) {
+    &:first-child {
+      display: none;
+    }
+  }
+}
+
+.tagWrapper {
+  display: flex;
+  align-items: center;
+  background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+  border-radius: 12px;
+  padding: 2px 8px 2px 2px;
+  font-size: 12px;
+  margin: 4px;
+  height: 24px;
+
+  &.tagWrapperError {
+    background: rgba($color: #f74f4f, $alpha: 0.1);
+  }
+
+  .tagAvatar {
+    margin-right: 4px;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    line-height: 20px;
+    text-align: center;
+    color: #ffffff;
+    flex: none;
+  }
+
+  .tagName {
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    @include flex-ellipsis-text();
+    max-width: 128px;
+
+    &-error {
+      color: #f74f4f;
+    }
+  }
+
+  .tagNameWidth {
+    max-width: inherit;
+  }
+
+  .tagClose {
+    cursor: pointer;
+    margin-left: 4px;
+    &:hover {
+      svg path {
+        stroke: #386ee7;
+        stroke-opacity: 1;
+      }
+    }
+  }
+}
+.contactSelectNoData {
+  display: flex;
+  align-items: center;
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  font-size: 14px;
+  .contactIcon {
+    flex: none;
+    background-image: url('../../../../../../web/src/images/icons/contact_enhance.svg');
+    background-size: 100% 100%;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
+  .contactValue {
+    flex: 1;
+  }
+}
+
+.optionWrapper {
+  display: flex;
+  align-items: center;
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  font-size: 12px;
+
+  b {
+    color: #386ee7;
+  }
+  .optionAvatarWrap {
+    flex: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+
+  .optionDepart {
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.4);
+  }
+}

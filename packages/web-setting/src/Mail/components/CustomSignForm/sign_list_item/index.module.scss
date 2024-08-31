@@ -1,0 +1,141 @@
+@import '@web-common/styles/variables.scss';
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+// 邮件签名样式
+.mail-sign-item {
+  width: 100%;
+  min-width: 392px;
+  // border: 1px solid #e1e6ed;
+  border: 1px solid $Fill-3;
+  border-radius: 4px;
+  p {
+    margin: 0;
+  }
+}
+.mail-sign-item .mail-sign-item-operation {
+  display: flex;
+  height: 44px;
+  padding: 0 16px;
+  justify-content: space-between;
+  align-items: center;
+  // border-bottom: 1px solid #e1e6ed;
+  border-bottom: 1px solid $Fill-3;
+  .operation-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60px;
+      height: 20px;
+      margin-right: 8px;
+      border-radius: 2px;
+      font-size: 12px;
+    }
+    .write-tag {
+      color: $label-1_3;
+      background-color: $Brand-2-bg;
+    }
+    .reply-tag {
+      color: $label-2_3;
+      background-color: $Success-1;
+    }
+    .forward-tag {
+      color: $label-3_3;
+      background-color: $label-3_1;
+    }
+  }
+  .operation-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    & > span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      cursor: pointer;
+      height: 30px;
+    }
+    & > span + span {
+      margin-left: 16px;
+    }
+    .del-btn {
+      color: $Error-6;
+    }
+    .edit-btn {
+      color: $label-6_3;
+    }
+    .set-btn {
+      color: $label-6_3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      i {
+        margin-left: 4px;
+      }
+      .set-modal {
+        display: none;
+      }
+    }
+    .set-btn:hover {
+      color: $Avatar-6;
+      i {
+        transform: rotate(180deg);
+      }
+      .set-modal {
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        right: 0;
+        top: 26px;
+        // width: 147px;
+        height: 104px;
+        padding: 13px;
+        // background: #ffffff;
+        background-color: $white;
+        border: 1px solid $Fill-3;
+        box-shadow: 0px 4px 10px rgba($label-1_3-r, $label-1_3-g, $label-1_3-b, 0.1);
+        border-radius: 4px;
+      }
+    }
+  }
+}
+.mail-sign-item .mail-sign-item-content {
+  padding: 16px 12px;
+  background-color: #fff;
+}
+.docIframe {
+  border: none;
+  scrollbar-width: none; /* firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+  }
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  i {
+    width: 24px !important;
+    height: 24px !important;
+    border: none !important;
+    // background-image: url(../../../../../../web/src/images/icons/common/loading.svg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    animation: spin 1s linear infinite;
+  }
+}

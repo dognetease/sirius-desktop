@@ -1,0 +1,231 @@
+@import '../../../../web/src/styles/varies';
+
+@keyframes spin-0-180 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+@keyframes spin-180-0 {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+.wrap {
+  .mobileControl,
+  .codeControl {
+    position: relative;
+    margin-bottom: 16px;
+    :global(.ant-input-affix-wrapper) {
+      height: 48px;
+      border-radius: 8px;
+      font-size: 16px;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      padding: 4px 16px;
+    }
+    :global(.ant-input-affix-wrapper:hover, .ant-input-affix-wrapper:focus, .ant-input-affix-wrapper-focused) {
+      box-shadow: 0 0 0 0px #ffffff;
+      border: solid 1px $main-enhance-color;
+    }
+  }
+  .mobileControl {
+    position: relative;
+    height: 48px;
+    .defaultMobile {
+      height: 48px;
+      display: flex;
+      align-items: center;
+      font-family: PingFang SC;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 16px;
+      // color: #262a33;
+      color: $font-color-2;
+    }
+    .mobileAreaWrap {
+      width: 100%;
+      :global(.ant-dropdown-menu) {
+        margin-top: 10px;
+        border-radius: 8px;
+        height: 308px;
+        @include sirius-scroll;
+      }
+      :global(.ant-dropdown-menu-item) {
+        padding: 0;
+        margin: 0 8px;
+        height: 40px;
+      }
+      :global(.ant-dropdown-menu-item-active) {
+        // background: #f0f0f1;
+        background-color: $white-hover-bg;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      :global(.ant-dropdown-menu-item-group-list) {
+        padding: 0;
+        margin: 0;
+      }
+      :global(.ant-dropdown-menu-item-group-title) {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        // background: #f0f0f1;
+        background-color: $white-hover-bg;
+        padding: 0 16px;
+        margin: 4px 0;
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: #7d8085;
+      }
+      :global(.ant-dropdown-menu-item .ant-dropdown-menu-title-content) {
+        padding: 0 8px;
+        display: flex;
+        justify-content: space-between;
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      }
+    }
+    .mobileAreaTxt {
+      position: absolute;
+      left: 0;
+      top: 10px;
+      z-index: 2;
+      width: 73px;
+      height: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-right: 1px solid $Text-1;
+      // color: #262a33;
+      color: $font-color-2;
+      cursor: pointer;
+      span {
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 16px;
+        // color: #262a33;
+        color: $font-color-2;
+      }
+      i {
+        margin-left: 4px;
+        width: 8px;
+        height: 8px;
+        background-image: url('../../../../web/src/images/icons/arrow-down.svg');
+        background-size: 100%;
+        &.arrowUp {
+          animation: spin-0-180 0.5s linear;
+          transform: rotate(180deg);
+        }
+        &.arrowDown {
+          transform: rotate(0deg);
+          animation: spin-180-0 0.5s linear;
+        }
+      }
+    }
+    .mobileInput {
+      padding-left: 90px;
+    }
+  }
+  .codeControl {
+    .codeInput {
+      padding-right: 124px;
+    }
+    .codeTime {
+      position: absolute;
+      top: 10px;
+      right: 0;
+      z-index: 2;
+      width: 108px;
+      height: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-left: 1px solid $Text-1;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.4);
+      cursor: pointer;
+      .disabled {
+        color: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.3);
+      }
+    }
+  }
+  .protocolWrap {
+    margin-top: 32px;
+    line-height: 1;
+
+    .u-protocol {
+      & > a {
+        margin: 0 4px;
+      }
+    }
+  }
+  .submitBtn {
+    margin-top: 12px;
+    width: 100%;
+    height: 48px;
+    background: #386ee7;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    cursor: pointer;
+
+    color: #ffffff;
+  }
+  .toRegister {
+    display: flex;
+    margin-top: 16px;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height, or 114% */
+
+    /* 黑白灰/字体 80% */
+
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.8);
+    .blue {
+      color: $main-enhance-color;
+      cursor: pointer;
+    }
+  }
+  .errorWrap {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 16px;
+    .errorIcon {
+      flex: none;
+      margin-top: 2px;
+    }
+    .errorText {
+      margin-left: 5px;
+      height: 36px;
+      word-break: break-word;
+      flex: 1;
+      overflow: hidden;
+      font-size: 14px;
+      line-height: 18px;
+      color: #f74f4f;
+    }
+  }
+}

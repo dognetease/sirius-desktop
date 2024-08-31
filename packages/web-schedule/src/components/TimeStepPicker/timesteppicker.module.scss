@@ -1,0 +1,51 @@
+.datePickerDropDown {
+  z-index: 1060;
+  // background: #ffffff;
+  background-color: $white;
+  /* 黑白灰/字体 20% */
+  overflow: hidden;
+  border: 0.5px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.2);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  min-width: 66px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.timeLi {
+  list-style: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 12px !important;
+  color: #272e47;
+  padding: 5px 12px !important;
+  background-color: #fff !important;
+  font-weight: normal !important;
+  &:hover {
+    background: #f0f0f1 !important;
+  }
+}
+
+.wrapper {
+  display: inline-block;
+  :global(.react-datepicker__time-container) {
+    width: 70px;
+  }
+  :global(.react-datepicker__aria-live) {
+    display: none;
+  }
+  :global(.react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box) {
+    width: 70px;
+  }
+  :global(.react-datepicker__aria-live) {
+    display: none;
+  }
+}
+
+.input {
+  width: 55px;
+}

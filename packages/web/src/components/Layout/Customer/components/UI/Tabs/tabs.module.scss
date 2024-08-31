@@ -1,0 +1,33 @@
+.customer-tabs {
+  :global(.ant-tabs-nav) {
+    margin: 0;
+  }
+
+  :global(.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn) {
+    text-shadow: none;
+  }
+
+  :global(.ant-tabs-tab) {
+    padding: 8px 0;
+  }
+
+  :global(.ant-tabs-ink-bar) {
+    background-color: transparent;
+
+    &::after {
+      content: '';
+      width: 12px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #386ee7;
+    }
+  }
+
+  :global(.ant-tabs-top > .ant-tabs-nav::before) {
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,17 @@
+.binding-entry-modal {
+  :global(.ant-modal-body) {
+    padding: 0;
+  }
+
+  .notice {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 12px 20px;
+    border: none;
+    background: $Warning-1;
+  }
+
+  .content {
+    padding: 24px;
+  }
+}

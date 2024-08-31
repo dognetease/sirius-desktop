@@ -1,0 +1,151 @@
+@import '../../styles/varies.scss';
+
+$select: 'sirius-select-ui';
+
+.#{$select} {
+  &-single {
+    .#{$select}-front {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  &.ant-select-single:not(.ant-select-customize-input) .ant-select-selector,
+  &.lx-ant-select-single:not(.lx-ant-select-customize-input) .lx-ant-select-selector {
+    padding-right: 24px;
+  }
+
+  &-multi {
+    .#{$select}-front {
+      display: inline-flex;
+      width: 100%;
+
+      .#{$select}-main-option {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+
+    .ant-select-item-option,
+    .lx-ant-select-item-option {
+      .#{$select}-checked:not(.ant-select-item-option-selected),
+      .#{$select}-checked:not(.lx-ant-select-item-option-selected) {
+        label.#{$select}-checked {
+          height: 16px;
+          display: none;
+        }
+
+        label.#{$select}-no-checked {
+          margin-left: 0;
+          margin-right: 12px;
+        }
+      }
+    }
+  }
+
+  .ant-select-selection-item-content,
+  .lx-ant-select-selection-item-content {
+    .#{$select}-front {
+      .#{$select}-checkbox {
+        display: none;
+      }
+    }
+  }
+
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled),
+  .lx-ant-select-item-option-selected:not(.lx-ant-select-item-option-disabled) {
+    span.#{$select}-checkbox {
+      label.#{$select}-no-checked {
+        display: none;
+      }
+
+      label.#{$select}-checked {
+        margin-right: 12px;
+        display: inline-flex;
+
+        .ant-checkbox-checked,
+        .lx-ant-checkbox-checked {
+          .ant-checkbox-inner,
+          .lx-ant-checkbox-inner {
+            background-color: $Brand-6;
+            border-color: $Brand-6;
+          }
+        }
+      }
+    }
+  }
+
+  .ant-select-item-option,
+  .lx-ant-select-item-option {
+    .#{$select}-checkbox:not(.ant-select-item-option-selected),
+    .#{$select}-checkbox:not(.lx-ant-select-item-option-selected) {
+      label.#{$select}-checked {
+        display: none;
+      }
+
+      label.#{$select}-no-checked {
+        margin-left: 0;
+        margin-right: 12px;
+      }
+    }
+  }
+
+  span.ant-select-item-option-state,
+  span.lx-ant-select-item-option-state {
+    display: none;
+  }
+}
+
+.ant-select-selection-item-content,
+.lx-ant-select-selection-item-content {
+  .#{$select}-front {
+    .#{$select}-checkbox {
+      display: none;
+    }
+  }
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled),
+.lx-ant-select-item-option-selected:not(.lx-ant-select-item-option-disabled) {
+  span.#{$select}-checkbox {
+    label.#{$select}-no-checked {
+      display: none;
+    }
+
+    label.#{$select}-checked {
+      margin-right: 12px;
+      display: inline-flex;
+
+      .ant-checkbox-checked,
+      .lx-ant-checkbox-checked {
+        .ant-checkbox-inner,
+        .lx-ant-checkbox-inner {
+          background-color: $Brand-6;
+          border-color: $Brand-6;
+        }
+      }
+    }
+  }
+}
+
+.ant-select-item-option,
+.lx-ant-select-item-option {
+  .#{$select}-checkbox:not(.ant-select-item-option-selected),
+  .#{$select}-checkbox:not(.lx-ant-select-item-option-selected) {
+    label.#{$select}-checked {
+      display: none;
+    }
+
+    label.#{$select}-no-checked {
+      margin-left: 0;
+      margin-right: 12px;
+    }
+  }
+}
+
+span.ant-select-item-option-state,
+span.lx-ant-select-item-option-state {
+  display: none;
+}

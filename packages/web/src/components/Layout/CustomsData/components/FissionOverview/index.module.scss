@@ -1,0 +1,19 @@
+@import '@web-common/styles/variables.scss';
+@import '@/styles/varies.scss';
+
+.overview {
+  &-table {
+    :global {
+      .ant-table-row {
+        color: $Text-5;
+      }
+    }
+  }
+}
+.fession {
+  :global {
+    .ant-modal-header {
+      padding-bottom: 4px !important;
+    }
+  }
+}

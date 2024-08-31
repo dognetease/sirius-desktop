@@ -1,0 +1,131 @@
+.post-edit-modal {
+  :global {
+    .ant-modal-body {
+      padding: 0;
+    }
+
+    .ant-modal-footer {
+      padding: 12px 20px;
+
+      .ant-btn:last-child {
+        margin-left: 12px;
+      }
+    }
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+
+    .ai-quota {
+      margin-left: 8px;
+    }
+  }
+
+  .post-edit {
+    display: flex;
+    align-items: center;
+    height: 585px;
+
+    .config {
+      padding: 24px 26px;
+      width: 50%;
+      height: 100%;
+      overflow: auto;
+      border-right: 1px solid $Line-2;
+
+      .media-list-label {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .label {
+          flex-shrink: 0;
+        }
+
+        .media-tooltip {
+          flex-shrink: 0;
+          margin-left: 4px;
+        }
+
+        .unsupport-text {
+          flex-grow: 1;
+          flex-wrap: wrap;
+          color: $Text-2;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 20px;
+          margin-left: 4px;
+        }
+
+        .image-replace-tooltip-trigger {
+          position: absolute;
+          left: 0;
+          bottom: -8px;
+        }
+      }
+
+      .picture-required-form-item {
+        margin-bottom: 8px;
+        margin-top: -24px;
+      }
+
+      .picture-required-tip {
+        color: $Warning-6;
+        font-size: 14px;
+      }
+
+      :global(.ant-form-item-has-error) + .picture-required-form-item {
+        display: none;
+      }
+    }
+
+    .preview {
+      padding: 16px 26px;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+
+      .generate-tip {
+        flex-shrink: 0;
+        margin-bottom: 12px;
+      }
+
+      .post {
+        flex-grow: 1;
+        overflow: auto;
+
+        .post-preview {
+          width: 500px;
+          max-height: 100%;
+          margin: 0 auto;
+          border: 1px solid $Line-2;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+.image-replace-tooltip {
+  max-width: none;
+
+  :global {
+    .ant-tooltip-arrow {
+      display: block !important;
+    }
+
+    .ant-tooltip-inner {
+      color: #ffffff;
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 400;
+
+      a {
+        margin-left: 12px;
+      }
+    }
+  }
+}

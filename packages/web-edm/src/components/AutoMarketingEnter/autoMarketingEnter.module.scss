@@ -1,0 +1,31 @@
+.auto-marketing-enter {
+  display: flex;
+  align-items: center;
+  .auto-marketing-divider {
+    margin: 1px 12px 0;
+    height: 24px;
+    background-color: $Line-3;
+    &-margin {
+      margin-right: 9px;
+    }
+  }
+  .auto-marketing-content {
+    color: $Text-5;
+    @include p1-3-reg14;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    .auto-marketing-btn {
+      color: $Brand-6;
+      cursor: pointer;
+    }
+    .auto-marketing-light-icon {
+      margin-bottom: 2px;
+    }
+    .auto-marketing-arrow-icon {
+      path {
+        stroke: $Brand-6;
+      }
+    }
+  }
+}

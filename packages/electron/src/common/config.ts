@@ -1,0 +1,12 @@
+export const isMac = process.platform === 'darwin';
+export const isDev = process.env.NODE_ENV === 'development';
+export const isWeb = process.env.DEV_WEB === '1';
+export const webURL = 'https://su-desktop-web.cowork.netease.com:8000/';
+export const webWriteURL = 'https://su-desktop-web.cowork.netease.com:8000/write';
+export const rootURL = __dirname.replace(/\\/g, '/');
+export const mainURL = `file://${rootURL}/renderer/index.html`;
+export const writeEmailURL = `file://${rootURL}/renderer/index_write.html`;
+// export const fileURL = `file://${rootURL}/renderer/index.html`;
+// export const fileURL2 = `file://${rootURL}/renderer/index_write.html`;
+//export const fileURL = `${rootURL}/renderer/index.html`;
+//export const fileURL2 = `${rootURL}/renderer/index_write.html`;

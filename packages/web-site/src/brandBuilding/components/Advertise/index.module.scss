@@ -1,0 +1,111 @@
+.container {
+  position: relative;
+  background: rgb(244, 248, 254);
+  height: 166px;
+
+  img {
+    position: absolute;
+    height: 166px;
+    right: 0;
+    top: 0;
+  }
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 166px;
+  top: 0;
+  left: 0;
+  margin-left: 30px;
+}
+
+.title {
+  color: $Text-5;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  padding-right: 60px;
+}
+
+.split {
+  width: 1px;
+  height: 23px;
+  margin: 0 16px;
+  opacity: 0.2;
+  background: #b7c3ff;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-title {
+  color: $Text-5;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+
+  span {
+    width: 6px;
+    height: 6px;
+    background: $Brand-6;
+    border-radius: 50%;
+    margin: 0 9px 0 3px;
+  }
+}
+
+.item-info {
+  color: $Text-3;
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 6px;
+}
+
+.line {
+  width: 1px;
+  height: 18px;
+  margin: 0 12px;
+  opacity: 0.4;
+  background: #b7c3ff;
+}
+
+.money {
+  color: $Error-6;
+}
+
+.btn {
+  position: absolute;
+  right: 20px;
+  top: 32px;
+  cursor: pointer;
+  color: #fff;
+  padding: 5px 16px;
+  background: $Brand-6;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+
+  &:hover {
+    background: $Brand-5;
+  }
+
+  &:active {
+    background: $Brand-7;
+  }
+}

@@ -1,0 +1,20 @@
+@import '@web-common/styles/variables.scss';
+.header-bg {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 4px;
+  padding: 16px;
+  font-size: 12px;
+  color: #a8aaad;
+  line-height: 14px;
+}
+.header {
+  height: 22px;
+  font-family: 'PingFang SC';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: $Text-5;
+}

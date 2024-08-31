@@ -1,0 +1,8 @@
+/**
+ * Created by zh on 2023/3/17.
+ */
+@import '@web-common/styles/waimao/varies.scss';
+
+.listScroll {
+  @include sirius-scroll;
+}

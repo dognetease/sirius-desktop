@@ -1,0 +1,129 @@
+@import '@web-common/styles/waimao/varies.scss';
+@mixin common-btn {
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  border: 0px;
+  background: $Brand-6;
+
+  &:hover {
+    background: $Brand-5;
+  }
+
+  &:active {
+    background: $Brand-7;
+  }
+}
+.aICreateSiteProgressModal {
+  :global {
+    .ant-modal-content {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .ant-modal-body {
+      padding: 0px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .collapse {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    line-height: 22px;
+    color: #4c6aff;
+    cursor: pointer;
+  }
+
+  .progressContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    background-image: url(../../../images/ai-create-site-progress-modal-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    .progrssIcon {
+      width: 220px;
+      height: 146px;
+      background-image: url(../../../images/ai-create-site-progress-icon.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-top: -35px;
+    }
+    .text {
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      color: #545a6e;
+      margin-top: -26px;
+    }
+  }
+  .successContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-image: url(../../../images/ai-create-site-progress-modal-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    position: relative;
+    .completeIcon {
+      width: 168px;
+      height: 168px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 24px;
+    }
+    .completeText {
+      margin-top: 34px;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      margin-top: -28px;
+      color: #272e47;
+    }
+    .jumpButton {
+      @include common-btn;
+      width: 268px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-family: 'PingFang SC';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      color: #ffffff;
+      bottom: 40px;
+      position: absolute;
+      z-index: 2;
+    }
+    .scatterFlowersContainer {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      z-index: 1;
+    }
+  }
+}

@@ -1,0 +1,377 @@
+@import '../../../../web/src/styles/varies.scss';
+
+@mixin input-style {
+  border-color: #386ee7;
+  box-shadow: none;
+}
+
+.body {
+  // padding: 24px;
+  // height: 542px;
+  // width: 680px;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  background-color: $white;
+
+  .listContainer {
+    .listInner {
+      padding: 0 24px;
+    }
+
+    .listBottom {
+      display: flex;
+      justify-content: center;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+      font-size: 14px;
+      line-height: 16px;
+      padding: 12px 0;
+    }
+  }
+
+  :global {
+    .ant-page-header {
+      padding: 24px;
+      padding-bottom: 4px;
+
+      .ant-page-header-heading-left {
+        margin: 0;
+        overflow: visible;
+      }
+
+      .ant-page-header-back {
+        margin-right: 8px;
+      }
+
+      .ant-page-header-heading-title {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        /* identical to box height, or 100% */
+        /* 字体及ICON颜色/90% */
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+        overflow: visible;
+        margin-right: 0;
+      }
+    }
+
+    .ant-tabs {
+      &-ink-bar {
+        display: none;
+      }
+
+      .ant-tabs-tab {
+        margin-left: 24px;
+      }
+
+      &-tab {
+        color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+        font-size: 14px;
+        line-height: 16px;
+
+        &-active {
+          .ant-tabs-tab-btn {
+            color: $main-enhance-color;
+          }
+        }
+
+        &-btn:focus,
+        &-remove:focus,
+        &-btn:active,
+        &-remove:active {
+          color: $main-enhance-color;
+        }
+      }
+    }
+  }
+
+  .timeWrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .timeSplit {
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+      line-height: 32px;
+    }
+  }
+
+  :global {
+    .ant-picker-suffix {
+      line-height: 1px;
+    }
+
+    .ant-picker-clear {
+      font-size: 12px;
+      // right: -10px;
+    }
+
+    .ant-input-affix-wrapper {
+      border-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+      border-radius: 4px;
+      // .ant-input-suffix {
+      //   display: none;
+      // }
+      &:hover,
+      &-focused {
+        @include input-style();
+
+        .ant-input-suffix {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  //  :global(.ant-checkbox-inner) {
+  //     border: 1px solid $Text-1;
+  // }
+  //  :global(.ant-checkbox-wrapper-checked) {
+  //      :global(.ant-checkbox-inner) {
+  //         border: 1px solid #386EE7;
+  //     }
+  // }
+  //  :global(.ant-form-item) {
+  //     margin-bottom: 16px;
+  //      :global(.ant-form-item-explain) {
+  //         display: none;
+  //     }
+  // }
+  :global(.ant-input) {
+    border-radius: 4px;
+    font-size: 12px;
+    //   padding-top: 6px;
+    //   padding-bottom: 6px;
+  }
+
+  :global(.ant-picker) {
+    box-shadow: none;
+    border-radius: 4px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    // &-focused {
+    //   @include input-style();
+    // }
+
+    &:hover {
+      @include input-style();
+    }
+
+    input {
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      font-size: 12px;
+    }
+  }
+  :global(.ant-select-disabled.ant-select:not(.ant-select-customize-input) .ant-select-selector) {
+    background-color: $white-bg;
+    color: $Text-1;
+  }
+
+  :global(.ant-select) {
+    :global(.ant-select-selector) {
+      border-radius: 4px;
+      font-size: 12px;
+      box-shadow: none !important;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      background-color: $white;
+
+      &:hover {
+        border-color: #386ee7;
+      }
+    }
+
+    // &-focused {
+    //   :global(.ant-select-selector) {
+    //     background-color: $white;
+    //     border-color: #386ee7 !important;
+    //   }
+    // }
+  }
+
+  :global(.ant-input:hover) {
+    @include input-style();
+  }
+
+  :global(.ant-input:focus) {
+    @include input-style();
+  }
+
+  :global(.ant-input-focused) {
+    @include input-style();
+  }
+
+  .arrowLeft {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background: url(@/images/icons/arrow-left.png) center center no-repeat;
+    background-size: 6px 11px;
+  }
+
+  .autoMatchTip {
+    color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+    padding: 0 24px;
+    font-size: 14px;
+    line-height: 14px;
+    margin-bottom: 8px;
+
+    b {
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    }
+  }
+
+  .roomCard {
+    padding: 12px;
+    margin: 6px 0;
+    border-radius: 4px;
+    // @include borderHalfPx(rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16), 4px, 1px, 1px, 1px, 1px);
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: calc(200% - 2px);
+      height: calc(200% - 2px);
+      border-radius: 8px;
+      border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+      transform-origin: 1px 1px;
+      -webkit-transform-origin: 1px 1px;
+      transform: scale(0.5, 0.5);
+      -webkit-transform: scale(0.5, 0.5);
+    }
+
+    &:hover:not(.roomCardNohover):not(.roomCard-selected) {
+      // background-color: #f0f0f1;
+      background-color: $white-hover-bg;
+    }
+
+    .roomName {
+      @include ellipsis-text();
+      width: 100%;
+      font-size: 14px;
+      line-height: 16px;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+      margin-bottom: 8px;
+    }
+
+    .media {
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.5);
+      line-height: 14px;
+      margin-bottom: 12px;
+
+      &-icon {
+        font-size: 10px;
+      }
+
+      &-desc {
+        font-size: 12px;
+        padding-left: 6px;
+      }
+    }
+
+    &-selected {
+      color: #ffffff;
+      background-color: rgba(#386ee7, 0.8);
+
+      .roomName,
+      .media {
+        color: #ffffff;
+      }
+    }
+
+    &:not(.roomCardNohover) {
+      .media {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .toolbar {
+    padding: 0 24px;
+    margin-bottom: 12px;
+
+    :global {
+      .ant-picker,
+      .ant-select {
+        margin-right: 12px;
+        background-color: $white;
+      }
+    }
+  }
+
+  .footer {
+    @include borderTopHalfPx(rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.17), 1px);
+    padding: 0 24px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 56px;
+    position: absolute;
+    // background-color: #ffffff;
+    background-color: $white;
+    :global(.ant-btn) {
+      background-color: $white;
+    }
+    :global(.ant-btn-primary) {
+      background-color: #386ee7;
+    }
+  }
+
+  .button {
+    outline: none;
+    border-radius: 4px;
+    border: none;
+    color: #51555c;
+    height: 32px;
+    padding: 8px 12px;
+    line-height: 16px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 4px;
+    margin-right: 4px;
+    min-width: 100px;
+    width: auto;
+
+    &.defaul {
+      @include borderHalfPx(rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.17), 4px, 1px, 1px, 1px, 1px);
+      background-color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.03);
+    }
+
+    &.primary {
+      background: #386ee7;
+      color: #ffffff;
+    }
+
+    &:disabled {
+      opacity: 0.75;
+    }
+  }
+}
+
+.expandIcon {
+  background: url(@/images/icons/calender-icon-expand.png) center center no-repeat;
+  background-size: 8px;
+  height: 8px;
+  width: 8px;
+  display: inline-block;
+}
+
+.datePicker {
+  :global {
+    .ant-picker-input {
+      cursor: pointer;
+    }
+  }
+
+  input {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,36 @@
+.price-search {
+  :global(.ant-form-item) {
+    margin-bottom: 16px;
+  }
+  .line {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .label {
+      min-width: 60px;
+      text-align: right;
+      color: #747a8c;
+    }
+
+    :global {
+      .ant-form-item-label > label {
+        color: #747a8c;
+      }
+    }
+  }
+
+  .split {
+    :global {
+      .ant-form-item {
+        flex: 1;
+        margin-right: 32px;
+      }
+    }
+  }
+
+  .last-line {
+    :global(.ant-form-item) {
+      margin-bottom: 0px;
+    }
+  }
+}

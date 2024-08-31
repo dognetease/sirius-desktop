@@ -1,0 +1,90 @@
+@import '@web-common/styles/variables.scss';
+
+.mail-template-add-modal {
+  // color: #262a33;
+  color: $font-color-2;
+  // 覆盖ant组件样式
+  .ant-modal-body {
+    padding: 0 !important;
+  }
+  #writeMailEditorScroll {
+    margin-top: 40px !important;
+  }
+  .ant-modal-header {
+    border: none;
+    padding: 16px 20px;
+  }
+  // 自定义样式
+  .write {
+    height: 501px;
+    padding-bottom: 45px;
+    .tox-edit-area {
+      // margin-top: 45px;
+    }
+
+    #writeMailInfo {
+      & > div[class*='mailInfo-module--info-item'] span[class*='mailInfo-module--info-label'] {
+        flex: 0 0 82px;
+      }
+
+      & > div[class*='mailInfo-module--info-item']:first-child,
+      & > div[class*='mailInfo-module--info-item']:nth-child(3) {
+        span[class*='mailInfo-module--info-label']:first-child {
+          &::before {
+            display: inline;
+            content: '*';
+            color: $Error-6;
+          }
+        }
+      }
+    }
+  }
+  .add-footer-btn {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 41px;
+    padding: 0 16px;
+    background: $Fill-2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .btn-disable {
+      opacity: 0.3;
+    }
+    button {
+      display: flex;
+      min-width: 64px;
+      height: 28px;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      padding: 0 12px;
+      font-size: 14px;
+      // color: #262a33;
+      color: $font-color-2;
+      background: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.08);
+      border-radius: 4px;
+      margin-left: 12px;
+      cursor: pointer;
+    }
+    button.primary {
+      background: #386ee7;
+      color: #ffffff;
+    }
+  }
+
+  // 设置编辑器操作栏固定定位
+  .template-editor .tox.tox-tinymce .tox-editor-header {
+    position: fixed;
+  }
+  // 设置编辑器操作栏固定定位的参考父级
+  .template-editor .tox.tox-tinymce {
+    transform: none;
+  }
+
+  // 设置联系人胶囊
+  .ant-select-selector {
+    max-height: 80px !important;
+  }
+}

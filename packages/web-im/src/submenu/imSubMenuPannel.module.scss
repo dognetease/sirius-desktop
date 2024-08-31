@@ -1,0 +1,19 @@
+@import '../../../web/src/styles/varies';
+.top-session-wrapper {
+  position: absolute;
+  top: 52px;
+  width: 100%;
+  height: calc(100% - 52px);
+  &.padding-more {
+    top: 92px;
+    height: calc(100% - 92px);
+  }
+}
+
+.top-session-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  // background-color: #ffffff;
+  background-color: $white;
+}

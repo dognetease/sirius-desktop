@@ -1,0 +1,94 @@
+.modal {
+  .title {
+    text-align: center;
+    // color: #262a33;
+    color: $font-color-2;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+    .logoContainer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      .image {
+        width: 100%;
+      }
+      .iNeteaseQiYeMail {
+        height: 30px;
+        margin: 21px 0px;
+        background: url('../../../../../web/src/images/icons/login/qiye_mail_logo.png') center center no-repeat; //兜底
+        background: $logo-qiye center center no-repeat;
+        background-size: contain;
+      }
+      .iQQMail {
+        height: 25px;
+        margin: 23.5px 0px;
+        background: url('../../../../../web/src/images/icons/login/qq_mail_logo.png') center center no-repeat; //兜底
+        background: $logo-qq center center no-repeat;
+        background-size: contain;
+      }
+      .i163Mail {
+        height: 25px;
+        margin: 23.5px 0px;
+        background: url('../../../../../web/src/images/icons/login/163_mail_logo.png') center center no-repeat; //兜底
+        background: $logo-163 center center no-repeat;
+        background-size: contain;
+      }
+      .iOthers {
+        height: 25px;
+        margin: 23.5px 0px;
+        background: url('../../../../../web/src/images/icons/login/other_mail_logo.png') center center no-repeat; //兜底
+        background: $logo-other center center no-repeat;
+        background-size: contain;
+      }
+      .iGmail {
+        height: 34px;
+        margin: 19px 0px;
+        background: url('../../../../../web/src/images/icons/login/gmail_logo.png') center center no-repeat; //兜底
+        background: $logo-gmail center center no-repeat;
+        background-size: contain;
+      }
+      .iOutlook {
+        height: 45px;
+        margin: 13.5px 0px;
+        background: url('../../../../../web/src/images/icons/login/outlook_mail_logo.png') center center no-repeat; //兜底
+        background: $logo-outlook center center no-repeat;
+        background-size: contain;
+      }
+      .iMicrosoft {
+        height: 42px;
+        margin: 15px 0;
+        background: url('../../../../../web/src/images/icons/login/microsoft_365_mail_logo.png') center center no-repeat; //兜底
+        background: $logo-microsoft center center no-repeat;
+        background-size: contain;
+      }
+      .iMicrosoftGlobal {
+        height: 42px;
+        margin: 15px 0;
+        background: url('../../../../../web/src/images/icons/login/microsoft_mail_logo.png') center center no-repeat; //兜底
+        background: $logo-microsoft-global center center no-repeat;
+        background-size: contain;
+      }
+      .iTencentQiye {
+        height: 60px;
+        margin: 6px 0px;
+        background: url('../../../../../web/src/images/icons/login/tencent_qiye_mail_logo.png') center center no-repeat; //兜底
+        background: $logo-tencent-qiye center center no-repeat;
+        background-size: contain;
+      }
+    }
+    .logoContainer:hover {
+      // background: #f0f0f1;
+      background-color: $white-hover-bg;
+      border-radius: 6px;
+    }
+  }
+}

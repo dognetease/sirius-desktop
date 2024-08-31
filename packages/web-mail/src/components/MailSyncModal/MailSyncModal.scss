@@ -1,0 +1,15 @@
+.local-import-btn {
+  width: auto !important;
+  min-width: unset !important;
+  padding: 0 24px !important;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+}
+.readmail-comment {
+  .ant-input {
+    width: 100%;
+    padding: 5px 12px;
+    height: 110px;
+    border: 1px solid $Line-3;
+    resize: none;
+  }
+}

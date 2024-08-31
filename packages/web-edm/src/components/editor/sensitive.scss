@@ -1,0 +1,38 @@
+.editor-sensitive-layer {
+  position: relative;
+}
+
+.editor-sensitive-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.editor-sensitive-mark {
+  position: absolute;
+  pointer-events: none;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fe5b4c;
+    opacity: 0.2;
+    pointer-events: none;
+  }
+  .editor-sensitive-mark-index {
+    position: absolute;
+    height: 16px;
+    background: rgba(254, 91, 76, 0.85);
+    color: #fff;
+    font-size: 12px;
+    padding: 0 8px;
+    top: -16px;
+    pointer-events: none;
+  }
+}

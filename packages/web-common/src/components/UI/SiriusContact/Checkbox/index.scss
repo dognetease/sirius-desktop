@@ -1,0 +1,14 @@
+.sirius-checkbox {
+  width: 100%;
+  height: 100%;
+  background-image: url('../../../../../../web/src/images/icons/checkbox_normal.svg');
+  background-size: 100% 100%;
+
+  &.checked {
+    background-image: url('../../../../../../web/src/images/icons/checkbox_checked.svg');
+  }
+
+  &.disabled {
+    background-image: url('../../../../../../web/src/images/icons/checkbox_disabled.svg');
+  }
+}

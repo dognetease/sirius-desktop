@@ -1,0 +1,98 @@
+.modal-title {
+  display: flex;
+  align-items: center;
+  @include h1-4-med16();
+  &-close {
+    margin-left: auto;
+    margin-right: 0;
+    cursor: pointer;
+  }
+}
+
+.group {
+  :global {
+    .ant-modal-header {
+      padding: 20px 24px;
+      @include h1-4-med16();
+      border: none;
+    }
+    .ant-modal-body {
+      padding-top: 0;
+    }
+    .ant-modal-footer {
+      border-top: none;
+    }
+    .ant-modal-close-icon {
+      svg {
+        color: #626e85;
+      }
+    }
+  }
+
+  &-body {
+    margin-top: 15px;
+    @include p1-3-reg14();
+    &-display {
+      .name {
+        line-height: 22px;
+        color: #232d47;
+        display: flex;
+        align-items: center;
+        &::before {
+          display: block;
+          content: '*';
+          color: $Error-6;
+        }
+        height: 22px;
+      }
+      .input {
+        height: 32px;
+        margin-top: 8px;
+      }
+      .checkbox {
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+
+        &-wrapper {
+          margin-left: auto;
+          margin-right: 0;
+          display: flex;
+          align-items: center;
+          &-count {
+            margin-right: 8px;
+            color: #7a8599;
+          }
+          &-btn {
+            user-select: none;
+            color: $Brand-6;
+            margin-right: 0;
+            &-disable {
+              color: $Brand-3;
+              cursor: not-allowed;
+            }
+          }
+        }
+      }
+      .table {
+        :global {
+          .ant-table-thead {
+            .ant-table-cell {
+              border: none;
+              &::before {
+                display: none;
+              }
+            }
+          }
+        }
+        margin-top: 16px;
+        &-remove {
+          color: $Brand-6;
+          @include p1-3-reg14();
+          cursor: pointer;
+          user-select: none;
+        }
+      }
+    }
+  }
+}

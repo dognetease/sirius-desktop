@@ -1,0 +1,15 @@
+export { ReactComponent as WebsiteIcon } from '@/images/mailCustomerCard/website.svg';
+export { ReactComponent as AccountIcon } from '@/images/mailCustomerCard/account.svg';
+export { ReactComponent as EditIcon } from '@/images/mailCustomerCard/edit.svg';
+export { ReactComponent as NewBoIcon } from '@/images/mailCustomerCard/new-bo.svg';
+export { ReactComponent as NewScheduleIcon } from '@/images/mailCustomerCard/new-schedule.svg';
+export { ReactComponent as NewFollowIcon } from '@/images/mailCustomerCard/new-follow.svg';
+export { ReactComponent as AddManagerIcon } from '@/images/mailCustomerCard/add-manager.svg';
+export { ReactComponent as BackToOpenSeaIcon } from '@/images/mailCustomerCard/back-to-open-sea.svg';
+export { ReactComponent as AddCustomerIcon } from '@/images/icons/waimao/add.svg';
+export { ReactComponent as CreateCustomerIcon } from '@/images/mailCustomerCard/create_customer.svg';
+export { ReactComponent as JoinCustomerIcon } from '@/images/mailCustomerCard/join_customer.svg';
+export { ReactComponent as AddContactIcon } from '@/images/mailCustomerCard/add_contact.svg';
+export { ReactComponent as SendMailIcon } from '@/images/mailCustomerCard/send_mail.svg';
+export { ReactComponent as SendImIcon } from '@/images/mailCustomerCard/send_im.svg';
+export { ReactComponent as CreateScheduleIcon } from '@/images/mailCustomerCard/create_schedule.svg';

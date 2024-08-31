@@ -1,0 +1,36 @@
+.history-mail-modal {
+  width: 600px;
+}
+
+.history-mail-list {
+  margin: 0;
+  padding: 0 0 0 12px;
+  max-height: 316px;
+  overflow-y: auto;
+  list-style: none;
+  .item {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 6px;
+    text-align: center;
+    margin-bottom: 28px;
+    &:hover img {
+      border-color: #386ee7;
+    }
+  }
+  img {
+    border: 1px solid #dcddde;
+    border-radius: 4px;
+  }
+  .title {
+    max-width: 132px;
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #51555c;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

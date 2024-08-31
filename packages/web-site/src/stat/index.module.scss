@@ -1,0 +1,91 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.stat {
+  &-container {
+    padding: 16px 16px 18px;
+    background: #f6f7fa;
+    height: 100%;
+    overflow-y: auto;
+    min-width: 1020px;
+    overflow-x: overlay;
+  }
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    &-container {
+      display: flex;
+      position: relative;
+      bottom: -9px;
+    }
+    &-title,
+    &-title-active {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: $Text-5;
+      padding: 0 14px;
+      cursor: pointer;
+    }
+    &-title-active {
+      font-weight: 500;
+      color: $Brand-6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      span {
+        margin-top: 7px;
+        width: 24px;
+        height: 2px;
+        background: $Brand-6;
+      }
+    }
+    &-date {
+      display: flex;
+      &-switch {
+        :global {
+          .ant-radio-button-wrapper:hover {
+            color: #4c6aff;
+          }
+          .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+            color: #4c6aff;
+            border-color: #4c6aff !important;
+          }
+          .ant-radio-button-wrapper:focus-within {
+            box-shadow: none !important;
+          }
+          .ant-radio-button-wrapper {
+            border-color: #e1e3e8;
+          }
+          .ant-radio-button-wrapper:first-child {
+            border-color: #e1e3e8;
+          }
+          .ant-radio-button-wrapper:not(:first-child)::before {
+            background-color: #e1e3e8;
+          }
+          .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)::before {
+            background-color: #4c6aff;
+          }
+        }
+      }
+      &-picker {
+        margin-left: 12px;
+      }
+      :global(.ant-picker) {
+        border: 1px solid E1E3E8;
+      }
+      :global(.ant-picker-range-separator) {
+        padding: 0 4px;
+      }
+    }
+    &-country-picker {
+      margin-left: 12px;
+    }
+  }
+  &-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 4px;
+  }
+}

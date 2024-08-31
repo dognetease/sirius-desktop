@@ -1,0 +1,26 @@
+.customer-tabs {
+  :global(.ant-tabs-tab) {
+    padding-top: 0;
+    padding-bottom: 2px;
+  }
+  :global(.ant-tabs-tab + .ant-tabs-tab) {
+    margin-left: 24px;
+  }
+  :global(.ant-tabs-ink-bar) {
+    background-color: transparent;
+    &::after {
+      content: '';
+      width: 12px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      background-color: #386ee7;
+      transform: translateX(-50%);
+    }
+  }
+  :global(.ant-tabs-nav) {
+    margin-bottom: 0;
+  }
+}

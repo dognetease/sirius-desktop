@@ -1,0 +1,55 @@
+@import '../../../../web/src/styles/varies';
+
+.tag-guide-title-wrap {
+  :global(.ant-popover-message-title) {
+    padding-left: 0;
+  }
+  :global(.ant-popover-buttons) {
+    padding: 0 16px 10px 16px;
+  }
+}
+
+.tag-guide-modal-wrap {
+  :global(.ant-modal-body) {
+    padding: 0;
+  }
+  :global(.ant-modal-footer) {
+    border-top: none;
+  }
+}
+
+.mail-tag-guide {
+  padding: 16px;
+
+  .guid-img {
+    width: 290px;
+    height: 210px;
+  }
+
+  .tag-guid-title {
+    color: var(--text-5, #272e47);
+    /* 灵犀桌面2.0/P1.4-Med14 */
+    font-family: PingFang SC;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    /* 157.143% */
+    margin-top: 12px;
+    user-select: none;
+  }
+
+  .tag-guid-sub-title {
+    color: var(--text-5, #272e47);
+
+    /* 灵犀桌面2.0/C4.3-Reg12 */
+    font-family: PingFang SC;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 166.667% */
+    margin-top: 8px;
+    user-select: none;
+  }
+}

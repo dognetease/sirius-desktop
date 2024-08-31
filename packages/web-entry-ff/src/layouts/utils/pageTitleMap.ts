@@ -1,0 +1,80 @@
+const pageTitleMap: { [k: string]: string } = {
+  index: '发件任务',
+  detail: '任务详情',
+  drafts: '草稿列表',
+  contact: '数据统计',
+  write: '普通任务',
+  batchWrite: '分批任务',
+  blacklist: '营销黑名单',
+  autoMarketTask: '自动化营销',
+  autoMarketTaskDetail: '自动化营销',
+  autoMarketTaskEdit: '自动化营销',
+
+  addressBookIndex: '营销联系人',
+  addressBookOpenSea: '地址簿公海',
+  addressBookDatastat: '营销统计',
+  mailTemplate: '邮件模板',
+  templateAddModal: '邮件模板',
+
+  labelManage: '标签管理',
+  customerDuplicateCheck: '客户查重',
+  customer: '客户列表',
+  customerOpenSea: '客户公海',
+  business: '商机',
+  clue: '线索列表',
+  seaClue: '线索公海',
+  autoRecommend: '自动筛选',
+  customRecommend: '手动筛选',
+  recommendOperateList: '筛选记录总览',
+  authorization: '授权管理',
+  extension: '网易外贸通助手',
+  importRecord: '导入记录',
+  dataTransfer: '数据迁移',
+
+  customs: '数据搜索',
+  star: '星标数据',
+
+  search: '数据搜索',
+  keywords: '关键词订阅',
+
+  variables: '邮件营销模板变量',
+  saleStage: '销售阶段设置',
+  quota: '邮件营销配额',
+  mailTag: '邮件智能标签',
+  checkField: '字段查重',
+  insertWhatsApp: 'WhatsApp对接',
+  authorizationEmail: '授权管理-往来邮件',
+  openSeaSetting: '公海设置',
+  noticeSetting: '通知设置',
+  fieldSetting: '字段设置',
+
+  members: '企业成员',
+  rolePermissions: '角色管理',
+  roleDetail: '角色详情',
+  menuSetting: '菜单管理',
+
+  // WhatsApp
+  whatsAppJob: '群发任务',
+  whatsAppJobEdit: 'whatsApp',
+  whatsAppJobReport: 'whatsApp',
+  whatsAppMessage: '消息',
+  whatsAppTemplate: '消息模版',
+  whatsAppStatistic: '数据统计',
+
+  // 个人设置
+  security: '账号与安全',
+  emailSetting: '邮箱设置',
+  shortcutSetting: '快捷键设置',
+  sysSetting: '系统设置',
+
+  message: 'im消息',
+  mailbox: '邮件管理',
+  lxContact: '通讯录',
+  schedule: '日历',
+  disk: '云文档',
+  setting: '设置',
+  worktable: '首页',
+  globalSearch: '全球搜索',
+};
+
+export { pageTitleMap };

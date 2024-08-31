@@ -1,0 +1,90 @@
+@import '@web-common/styles/waimao/varies.scss';
+.skuIntroducePanel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 4px;
+  overflow: hidden;
+  .header {
+    height: 140px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px;
+    background-image: url(../../../images/sku-intro-header-bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 16px;
+      .title {
+        color: #000;
+        font-family: Arial;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+      }
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 16px;
+      .contactImgWrapper {
+        padding: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 2px;
+        .contactImg {
+          width: 80px;
+          height: 80px;
+        }
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 4px;
+        .mainTitle {
+          color: $Text-6;
+          font-family: PingFang SC;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+        }
+        .subTitle {
+          color: $Text-3;
+          font-family: PingFang SC;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  .contentBorderContainer {
+    width: 100%;
+    padding: 24px;
+    background: #ecf0fb;
+    height: 460px;
+    overflow: hidden;
+    .content {
+      background: #ecf0fb;
+      overflow-y: overlay;
+      height: 100%;
+      .image {
+        width: 100%;
+      }
+    }
+  }
+}

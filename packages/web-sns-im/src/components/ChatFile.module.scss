@@ -1,0 +1,51 @@
+.chat-file {
+  padding: 16px;
+  width: 280px;
+  display: flex;
+  align-items: flex-start;
+  border: 0.5px solid $Fill-2;
+  border-radius: 8px;
+  background-color: $Fill-1;
+  overflow: hidden;
+
+  &.downloadable {
+    cursor: pointer;
+  }
+
+  .icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    margin-right: 6px;
+  }
+
+  .content {
+    flex-grow: 1;
+    overflow: hidden;
+
+    .header {
+      margin-bottom: 2px;
+
+      .file-name {
+        color: $Text-4;
+        font-size: 14px;
+        line-height: 22px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .body {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .file-size {
+        color: $Text-2;
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+}

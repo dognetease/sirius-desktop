@@ -1,0 +1,161 @@
+.account-card {
+  display: inline-flex;
+  width: 367px;
+  height: 308px;
+  flex-direction: column;
+
+  .header {
+    flex-shrink: 0;
+    height: 40px;
+    padding-left: 18px;
+    background: $Fill-8;
+    border-radius: 8px 8px 0px 0px;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+
+    .status-icon {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: $Success-6;
+
+      &-error {
+        background-color: $Error-6;
+      }
+    }
+
+    .status-name {
+      font-size: 12px;
+      line-height: 20px;
+      color: #ffffff;
+      margin-left: 8px;
+    }
+
+    .dropdown-trigger {
+      width: 52px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #353b4e;
+      }
+    }
+
+    .dropdown-menu {
+      border-radius: 4px;
+      border: 1px solid $Line-2;
+      box-shadow: 0px 4px 16px rgba(37, 41, 49, 0.08);
+
+      :global(.ant-dropdown-menu-item) {
+        color: $Text-5;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+
+        &:hover {
+          background: $Fill-2;
+        }
+      }
+    }
+  }
+
+  .body {
+    flex-grow: 1;
+    padding: 18px 20px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $Fill-2;
+    border: 1px solid $Line-2;
+    border-radius: 4px;
+
+    .account-avatar {
+      margin-bottom: 13px;
+    }
+
+    .account-name {
+      max-width: 100%;
+      color: $Text-5;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      margin-bottom: 2px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .oauth-time {
+      color: $Text-3;
+      font-size: 12px;
+      line-height: 20px;
+      margin-bottom: 12px;
+    }
+
+    .stats {
+      display: flex;
+      margin-bottom: 16px;
+
+      .stat {
+        position: relative;
+        width: 92px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .stat-count {
+          color: $Text-5;
+          font-size: 16px;
+          line-height: 22px;
+        }
+
+        .stat-name {
+          position: relative;
+          color: $Text-3;
+          font-size: 12px;
+          line-height: 20px;
+        }
+
+        .stat-tip {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: -18px;
+          margin: auto;
+          cursor: pointer;
+        }
+      }
+
+      .stat + .stat {
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 1px;
+          height: 24px;
+          background-color: $Line-3;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    .option {
+      width: 100%;
+      white-space: nowrap;
+    }
+  }
+
+  .btnWrapper {
+    width: 100%;
+
+    :global .ant-space-item {
+      flex: 1;
+    }
+  }
+}

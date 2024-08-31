@@ -1,0 +1,16 @@
+.filterContainer {
+  // margin-left: 12px;
+}
+
+.radio-group {
+  :global(.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):first-child) {
+    border-color: $Brand-6;
+  }
+  :global(.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled)) {
+    color: $Brand-6;
+    border-color: $Brand-6;
+  }
+  :global(.ant-radio-button-wrapper:hover) {
+    color: $Brand-6;
+  }
+}

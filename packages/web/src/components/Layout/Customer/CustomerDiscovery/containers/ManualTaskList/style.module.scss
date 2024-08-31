@@ -1,0 +1,187 @@
+@import '../../common.module.scss';
+
+.rule-table {
+  position: relative;
+  min-height: 0; // fix flex height
+}
+
+.addTask {
+  position: absolute;
+  right: 0;
+  top: -50px;
+}
+
+.search {
+  padding-bottom: 20px;
+}
+
+.table {
+  overflow: hidden;
+
+  :global(.rule-table-finished) {
+    opacity: 0.4;
+  }
+}
+
+.task-name-wrapper {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+
+  .task-name {
+    display: inline;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .taskTip {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+  }
+}
+
+.empty {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #47484c;
+}
+
+.talbe-cell-num {
+  white-space: nowrap;
+
+  .num {
+    display: inline-block;
+    width: 30px;
+    margin-right: 12px;
+    color: #396ee7;
+    cursor: pointer;
+  }
+}
+
+.tag-success {
+  color: #478e83;
+  background: #e6faf6;
+}
+
+.tag-error {
+  color: #be565e;
+  background: #feeff1;
+}
+
+.tag-warning {
+  color: #cca266;
+  background: #fffbe6;
+}
+
+.tag-default {
+  background: #f0f3f5;
+  color: #4e5a70;
+}
+
+.tag-new {
+  background: #fe5b4c;
+  color: #fff;
+}
+
+.tag-rest-time {
+  background: #ffb54c;
+  color: #fff;
+}
+
+.line {
+  * {
+    vertical-align: middle;
+  }
+}
+
+.rule-detail {
+  padding: 24px;
+
+  .title {
+    font-weight: 500;
+    font-size: 16px;
+    color: #232d47;
+  }
+
+  .label {
+    font-weight: 400;
+    font-size: 12px;
+    color: #7a8599;
+    margin-top: 8px;
+  }
+
+  .value {
+    font-weight: 400;
+    font-size: 12px;
+    color: #232d47;
+    margin-top: 4px;
+
+    .highlight {
+      color: #4c6aff;
+    }
+
+    .index {
+      display: inline-block;
+      width: 15px;
+    }
+  }
+}
+
+.tips {
+  display: flex;
+  align-items: center;
+  background: #f2f5ff;
+  padding: 16px 24px;
+  gap: 8px;
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #232d47;
+  margin-bottom: 16px;
+}
+
+:global(.ant-tag) {
+  font-weight: 400;
+  font-size: 12px;
+  border: none;
+  border-radius: 2px;
+}
+
+.drawerTitle {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  white-space: nowrap;
+
+  .title {
+    font-weight: 500;
+    font-size: 20px;
+    color: #232d47;
+    padding-right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .tag {
+    margin-right: 20px;
+  }
+
+  :global(.ant-checkbox + span) {
+    color: #232d47;
+    font-weight: 400;
+  }
+
+  :global(.ant-spin .ant-spin-dot > i) {
+    width: 14px;
+    height: 14px;
+  }
+
+  :global(.spin-label) {
+    display: none;
+  }
+}

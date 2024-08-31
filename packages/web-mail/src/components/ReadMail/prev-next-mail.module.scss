@@ -1,0 +1,36 @@
+.prev-next-mail-container {
+  display: flex;
+  margin-right: 20px;
+  border-radius: 4px;
+  margin-left: 20px;
+  background-color: #f4f6f7;
+  // background-color: $white-bg;
+  align-items: center;
+  .prev,
+  .next {
+    user-select: none;
+    width: 20px;
+    height: 20px;
+    margin: 2px 4px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hover {
+    background-color: #f0f2f7;
+    // background-color: $white-hover-bg;
+  }
+  .disable {
+    background-color: #e1e3e8;
+    // background-color: $Fill-4;
+    cursor: not-allowed;
+  }
+  .splitLine {
+    width: 1px;
+    height: 12px;
+    background-color: rgba(38, 42, 51, 0.16);
+  }
+}

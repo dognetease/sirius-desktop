@@ -1,0 +1,30 @@
+.container {
+  padding: 24px;
+  background: #f4f6f7;
+  box-shadow: inset -0.5px 0px 0px rgba(38, 42, 51, 0.11);
+  min-width: 852px;
+  min-height: 100vh;
+  overflow: auto;
+  height: 100%;
+
+  .breadcrumb {
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 14px;
+    :global(.ant-breadcrumb-link) {
+      cursor: pointer;
+      &:hover {
+        color: #4c6aff;
+      }
+    }
+    & > span {
+      vertical-align: middle;
+    }
+    & > span:last-child {
+      color: #262a33;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+}

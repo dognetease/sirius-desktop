@@ -1,0 +1,109 @@
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.chat-file {
+  padding: 16px;
+  width: 280px;
+  display: flex;
+  align-items: flex-start;
+  border: 0.5px solid #f6f7fa;
+  border-radius: 8px;
+  background-color: #ffffff;
+  overflow: hidden;
+  cursor: pointer;
+
+  .icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    margin-right: 6px;
+  }
+
+  .content {
+    flex-grow: 1;
+    overflow: hidden;
+
+    .header {
+      margin-bottom: 2px;
+
+      .file-name {
+        color: #545a6e;
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+
+    .body {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .file-size {
+        color: #9fa2ad;
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      .cancel {
+        color: #4c6aff;
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+}
+
+.chat-file-small {
+  padding: 16px;
+  width: 280px;
+  display: flex;
+  align-items: flex-start;
+  border: 0.5px solid #ffffff;
+  border-radius: 8px;
+  background-color: #ffffff;
+  overflow: hidden;
+  cursor: pointer;
+
+  .icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    margin-right: 6px;
+  }
+
+  .content {
+    flex-grow: 1;
+    overflow: hidden;
+
+    .header {
+      margin-bottom: 2px;
+
+      .file-name {
+        color: #545a6e;
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+
+    .body {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .file-size {
+        color: #9fa2ad;
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      .cancel {
+        color: #4c6aff;
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+}

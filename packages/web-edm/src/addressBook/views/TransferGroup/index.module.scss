@@ -1,0 +1,56 @@
+.transfer {
+  :global {
+    .ant-modal-header {
+      border: none;
+      padding-bottom: 12px;
+    }
+
+    .ant-modal-footer {
+      border: none;
+    }
+  }
+
+  &-header {
+    &-tip {
+      margin-top: 4px;
+      font-size: 12px;
+      color: #a9b2c2;
+      font-weight: normal;
+    }
+  }
+
+  &-body {
+    &-move {
+      .label {
+        margin-left: 0;
+        margin-right: 12px;
+        @include p1-3-reg14();
+        flex-shrink: 0;
+      }
+      .source {
+        display: flex;
+        align-items: center;
+        &-value {
+          :global {
+            .ant-tag-has-color {
+              color: $label-6_3;
+            }
+          }
+        }
+      }
+
+      .target {
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+        &-value {
+          width: 100%;
+        }
+      }
+    }
+
+    &-new {
+      width: 100%;
+    }
+  }
+}

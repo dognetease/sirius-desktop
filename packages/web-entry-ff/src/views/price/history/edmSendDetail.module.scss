@@ -1,0 +1,107 @@
+.wrapper {
+  position: relative;
+  padding: 15px 20px;
+  background: #f6f7fa;
+
+  .edmSelect {
+  }
+
+  .detailCount {
+    padding-bottom: 12px;
+
+    .detailCell {
+      &:first-child {
+        .detailCard {
+          border-radius: 4px 0px 0px 4px;
+        }
+      }
+
+      &:last-child {
+        .detailCard {
+          border-radius: 0px 4px 4px 0px;
+          border-right: 1px solid #ebedf2;
+        }
+      }
+    }
+
+    .detailCard {
+      position: relative;
+      overflow: hidden;
+      padding: 6px 12px;
+      display: flex;
+      // border-radius: 4px;
+      align-items: center;
+      background-color: #f8f9fa;
+      color: #545a6e;
+      border: 1px solid #ebedf2;
+      border-right: none;
+      cursor: pointer;
+
+      &.actived {
+        color: #4c6aff;
+        background-color: #fff;
+
+        &::before {
+          position: absolute;
+          display: block;
+          content: '';
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 2px;
+          background: #4c6aff;
+        }
+      }
+
+      .icon {
+        font-size: 0;
+        padding-top: 4px;
+        img {
+          width: 22px;
+          height: 22px;
+        }
+      }
+
+      .number {
+        color: #545a6e;
+        & > span {
+          color: #272e47;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .table {
+    width: 705px;
+
+    :global {
+      .ant-table-ping-right:not(.ant-table-has-fix-right) > .ant-table-container:after {
+        box-shadow: none;
+      }
+      .ant-table-ping-left:not(.ant-table-has-fix-left) > .ant-table-container:before {
+        box-shadow: none;
+      }
+
+      thead.ant-table-thead th.ant-table-cell {
+        background-color: #fff;
+      }
+
+      tbody.ant-table-tbody .odd td {
+        background-color: #fff;
+      }
+
+      tbody.ant-table-tbody > tr.ant-table-row:hover > td {
+        background-color: #fff;
+      }
+
+      thead.ant-table-thead th.ant-table-cell {
+        border-bottom: 1px solid #f0f1f5;
+      }
+
+      tbody.ant-table-tbody td {
+        border-bottom: 1px solid #f0f1f5;
+      }
+    }
+  }
+}

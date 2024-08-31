@@ -1,0 +1,31 @@
+@import '@web-common/styles/variables.scss';
+
+.posts-detail-wrap {
+  :global(.ant-drawer-content-wrapper) {
+    box-shadow: -6px 0px 16px rgba(47, 83, 134, 0.12);
+  }
+  :global(.ant-drawer-body) {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+  }
+  .main-content {
+    padding: 20px 20px 0;
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .outer-loading {
+      padding: 0 16px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+}

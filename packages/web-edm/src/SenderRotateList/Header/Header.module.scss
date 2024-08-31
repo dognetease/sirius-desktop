@@ -1,0 +1,423 @@
+@import '@web-common/styles/variables.scss';
+@import '@web-common/styles/common.scss';
+
+.header-info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  position: sticky;
+  top: 0;
+  padding: 16px 0 8px;
+  z-index: 10;
+  &-left {
+    display: flex;
+    align-items: center;
+    // &>img {
+    //   width: 62px;
+    //   height: 70px;
+    // }
+    &-info {
+      .slog {
+        display: flex;
+        align-items: center;
+        &-title {
+          font-family: 'PingFang SC';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 26px;
+          /* identical to box height, or 144% */
+
+          color: #1a2233;
+          margin-right: 8px;
+        }
+        &-switch {
+          // background-color: red;
+          &:global(.ant-switch-checked) {
+            background-color: #4c6aff;
+          }
+        }
+      }
+      .slog-time {
+        font-family: 'PingFang SC';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        /* identical to box height, or 167% */
+
+        /* 文字/Text-3次要信息 */
+
+        color: #747a8c;
+        margin-top: 2px;
+        display: flex;
+        align-items: center;
+        .slog-count {
+          color: var(--brand-6, #4c6aff);
+          /* 全部/Text-C1-Reg12 */
+          font-family: PingFang SC;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  &-right {
+    display: flex;
+    align-items: center;
+    // background-color: red;
+    .edit-btn {
+      // &:hover, &:focus, &:active {
+      //   border: 1px solid #747A8C;
+      //   color: #747A8C;
+      // }
+    }
+    .slog-btn-wrap {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-left: 16px;
+      &-title {
+        margin-left: 4px;
+        color: var(--text-4, #545a6e);
+        /* 灵犀桌面2.0/C4.1-Reg12 */
+        font-size: 12px;
+        font-family: PingFang SC;
+        line-height: 16px;
+        &:hover {
+          color: var(--brand-6, #4c6aff);
+        }
+      }
+    }
+  }
+}
+.tips {
+  background: #f2f7fe;
+  border-radius: 4px;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  img {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+  }
+  .tips-txt {
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    /* identical to box height, or 167% */
+
+    /* 文字/Text-5标题-重要信息 */
+
+    color: #272e47;
+  }
+  a {
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    /* identical to box height, or 167% */
+
+    text-align: right;
+
+    /* 常用/Brand-6常规 */
+
+    color: #4c6aff;
+  }
+}
+.tips2 {
+  background: #ffefed;
+}
+.header {
+  // margin-top: -110px;
+  // padding-top: 110px;
+  // background-color: #1F2238;
+  // padding: 0px 20px 24px;
+  // padding-bottom: 12px;
+  margin: 0px 0 12px;
+  .strategy {
+    display: flex;
+    align-items: stretch;
+    // height: 244px;
+    .post-data {
+      flex: 1;
+      // margin-right: 16px;
+      // background-color: #fff;
+      // padding: 12px 16px 16px;
+      // border-radius: 4px;
+      .post-data-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .slog-time {
+          color: var(--text-3, #747a8c);
+          /* 全部/Text-C1-Reg12 */
+          font-size: 12px;
+          font-family: PingFang SC;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+        }
+      }
+      &-title {
+        @include h1-4-med16;
+        margin-bottom: 8px;
+        color: #272e47;
+      }
+    }
+    .strategy-list {
+      flex-shrink: 0;
+      width: 300px;
+      background-color: #fff;
+      padding: 12px 0px;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      &-header {
+        flex: 0 0;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        .strategy-list-title {
+          @include h1-4-med16;
+          // margin-bottom: 8px;
+          color: #272e47;
+        }
+        a {
+          display: flex;
+          align-items: center;
+          @include c4-3-reg12;
+          color: #4c6aff;
+          img {
+            width: 14px;
+            height: 14px;
+            margin-right: 4px;
+          }
+        }
+      }
+      .list {
+        flex: 1;
+        height: 0;
+        padding: 0 16px;
+        overflow-y: overlay;
+        margin-bottom: -8px;
+        .item {
+          background: #f9fafb;
+          height: 88px;
+          padding: 12px;
+          margin-bottom: 8px;
+          &-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 4px;
+            &-left {
+              display: flex;
+              align-items: center;
+              .left-icon {
+                width: 16px;
+                height: 16px;
+                margin-right: 6px;
+              }
+              .left-title {
+                color: #272e47;
+                @include p1-3-reg14;
+                line-height: 22px;
+              }
+            }
+            &-right {
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              img {
+                width: 16px;
+                height: 16px;
+              }
+              span {
+                margin-left: 4px;
+                color: var(--text-4, #545a6e);
+                text-align: center;
+                /* 灵犀桌面2.0/C4.1-Reg12 */
+                font-size: 12px;
+                font-family: PingFang SC;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 16px;
+              }
+            }
+          }
+          &-data {
+            display: flex;
+            align-items: center;
+            &-item {
+              flex: 1;
+              padding-right: 35px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              &-num {
+                @include h1-3-reg16;
+                font-family: 'LX-numbers';
+                color: #272e47;
+              }
+              &-title {
+                font-family: 'PingFang SC';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 10px;
+                line-height: 14px;
+                /* identical to box height, or 140% */
+
+                text-align: center;
+
+                /* 中性色-文字/Text-3次要信息 */
+
+                color: #747a8c;
+              }
+            }
+            &-item2 {
+              padding-left: 35px;
+              padding-right: 0;
+            }
+            .split-line {
+              background-color: #ebedf2;
+              width: 1px;
+              height: 26px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-view {
+    // margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px -6px 0px;
+    .view-card {
+      height: 120px;
+      margin: 0 6px;
+      flex: 1;
+      border-radius: 4px;
+      padding: 16px 20px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .card-title {
+        display: flex;
+        align-items: center;
+        img {
+          width: 17px;
+          height: 17px;
+          // border-radius: 50%;
+          // background: linear-gradient(225deg, rgba(97, 198, 232, 0.98) 0%, rgba(65, 140, 247, 0.98) 37.92%, rgba(75, 127, 247, 0.98) 68.04%, rgba(105, 90, 246, 0.98) 100%);
+          margin-right: 5px;
+        }
+        .title {
+          @include p1-4-med14;
+          color: #ffffff;
+          margin-left: 5px;
+        }
+      }
+      .number {
+        font-family: 'LX-numbers';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 36px;
+        /* identical to box height, or 112% */
+
+        color: #ffffff;
+      }
+    }
+  }
+  .replay-list {
+  }
+  .replay {
+    height: 48px;
+    padding: 12px 0;
+    display: flex;
+    align-items: stretch;
+    background: #f9fafb;
+    backdrop-filter: blur(47px);
+    border-radius: 4px;
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 4px;
+    &-item {
+      // border-right: 1px solid #E1E3E8;
+      display: flex;
+      align-items: center;
+      flex: 1;
+      justify-content: center;
+      &-label {
+        font-family: 'PingFang SC';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        /* identical to box height, or 133% */
+
+        /* 文字/Text-3次要信息 */
+
+        color: #747a8c;
+        margin-right: 12px;
+      }
+      &-num {
+        font-family: 'LX-numbers';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        /* identical to box height, or 150% */
+        color: #272e47;
+      }
+      &:nth-last-child(1) {
+        border: none;
+      }
+    }
+  }
+  &-modal {
+    :global(.ant-row) {
+      display: inherit;
+    }
+    :global(.ant-modal-header) {
+      border: none;
+      padding: 20px;
+    }
+    :global(.ant-modal-body) {
+      padding: 12px 20px 0;
+    }
+    :global(.ant-modal-footer) {
+      border: none;
+      padding: 18px 20px;
+    }
+    :global(.ant-form-horizontal .ant-form-item) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    :global(.ant-form-horizontal > .ant-form-item) {
+      margin-bottom: 0;
+    }
+  }
+}
+.loading {
+  background-color: red;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

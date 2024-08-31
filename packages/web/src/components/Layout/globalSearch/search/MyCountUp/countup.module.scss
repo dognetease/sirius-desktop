@@ -1,0 +1,37 @@
+@import '@web-common/styles/variables.scss';
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  /* identical to box height, or 157% */
+  color: #ffffff;
+  padding: 12px;
+  background: linear-gradient(270.04deg, rgba(230, 238, 255, 0) 12.5%, rgba(153, 187, 255, 0.0940625) 55.98%, rgba(108, 158, 255, 0) 84.84%);
+  border-radius: 4px;
+  .count {
+    width: 110px;
+    text-align: left;
+  }
+  .iconWrapper {
+    display: flex;
+    align-items: center;
+  }
+  .icon {
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    background: url('../../../../../images/globalSearch/datadate.svg') center center no-repeat;
+    background-size: 16px;
+    vertical-align: middle;
+  }
+  .iconText {
+    padding-left: 8px;
+  }
+  .prefix {
+    padding-right: 8px;
+  }
+}

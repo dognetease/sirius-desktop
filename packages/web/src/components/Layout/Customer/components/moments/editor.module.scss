@@ -1,0 +1,152 @@
+.follow-editor {
+  margin-bottom: 24px;
+}
+.editor-wrap {
+  position: relative;
+  margin: 0 0 8px;
+  border: 1px solid #386ee7;
+  border-radius: 4px;
+  &.drag-enter {
+    .drag-enter-mask {
+      display: flex;
+    }
+  }
+
+  .drag-enter-mask {
+    position: absolute;
+    display: none;
+    inset: 8px;
+    border: 1px dashed #7d8085;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.8);
+    pointer-events: none;
+    justify-content: center;
+    align-items: center;
+  }
+
+  :global(.ant-input) {
+    border: none !important;
+    resize: none;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .attachment-container {
+    position: relative;
+    padding: 16px 6px 36px 6px;
+    min-height: 32px;
+  }
+  .attachment-link {
+    position: absolute;
+    right: 8px;
+    bottom: 0;
+    left: 8px;
+    height: 24px;
+    cursor: pointer;
+  }
+}
+
+.time-picker {
+  display: flex;
+  gap: 8px;
+  :global(.ant-picker) {
+    padding: 4px 8px;
+    flex: 1;
+    input {
+      font-size: 12px;
+    }
+  }
+  :global(.ant-picker-focused),
+  :global(.ant-picker:hover) {
+    border-color: #386ee7;
+    box-shadow: none;
+  }
+}
+
+.date-picker-dropdown {
+  :global(.ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner) {
+    background-color: #386ee7;
+  }
+  :global(.ant-picker-time-panel-column > li.ant-picker-time-panel-cell-selected .ant-picker-time-panel-cell-inner) {
+    background: none;
+    color: #386ee7;
+    &:hover {
+      background: #f5f5f5;
+    }
+  }
+}
+
+.datepicker {
+  position: absolute;
+  top: -8px;
+  padding-left: 4px !important;
+}
+.float-attachment-icon {
+  position: relative;
+  top: -8px;
+  font-size: 12px;
+  color: #7a8599;
+  margin-right: 20px;
+  svg {
+    vertical-align: -3px;
+    margin-right: 4px;
+  }
+}
+
+.attachment-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 8px;
+  grid-row-gap: 16px;
+}
+.attachment-item {
+  position: relative;
+  min-width: 0;
+}
+.attachment {
+  display: flex;
+  line-height: 16px;
+  gap: 4px;
+}
+
+.progress {
+  margin-top: 3px;
+  height: 2px;
+  background: #f0f0f0;
+  border-radius: 2px;
+  overflow: hidden;
+  .progress-inner {
+    height: 100%;
+    background: #386ee7;
+    border-radius: 2px;
+  }
+}
+
+.attachment-icon {
+  width: 16px;
+  height: 16px;
+  svg {
+    transform: scale(0.666667);
+    transform-origin: 0 0;
+  }
+}
+.close-icon {
+  display: none;
+  position: absolute;
+  left: 12px;
+  top: -8px;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}
+.attachment-item:hover .close-icon {
+  display: block;
+}
+
+.footer {
+  margin-top: 12px;
+  :global(.ant-btn:not(:first-child)) {
+    margin-left: 8px;
+  }
+}

@@ -1,0 +1,57 @@
+@import '@web-common/styles/variables.scss';
+@import '../../../web/src/styles/varies';
+.setting-menu {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  // background-color: #fff;
+  background-color: $white;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+}
+// .setting-menu-web {
+//   top: 48px !important;
+// }
+
+.web-wm-entry {
+  position: unset;
+}
+
+.config-title {
+  flex: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  box-shadow: inset 0px -0.5px 0px rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.12);
+  padding: 0 16px;
+  font-weight: 500;
+  // background-color: #fff;
+  background-color: $white;
+  &-icon {
+    @include sirius-no-drag;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    background-image: url('../../../web/src/images/icons/close_icon.svg');
+    background-size: 100% 100%;
+  }
+}
+
+.config-content {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+  margin: 24px 24px 0 24px;
+
+  &-wrap {
+    margin-top: 12px;
+    flex: 1;
+    @include sirius-scroll;
+  }
+}

@@ -1,0 +1,105 @@
+.scheduleModalWrap {
+  z-index: 1030;
+}
+
+.MemberList {
+  .ant-spin-nested-loading,
+  .ant-spin-container {
+    height: 100%;
+  }
+  .container {
+    height: 100%;
+    .title {
+      color: #000000;
+      font-weight: 400;
+      font-size: 16px;
+      padding: 12px 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+    .content {
+      height: calc(100% - 56px);
+      padding: 5px 20px 20px 20px;
+      overflow-y: auto;
+      .no-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        .no-content-light {
+          color: #7d8085;
+          margin-top: 16px;
+        }
+        .no-content-btn {
+          margin-top: 16px;
+        }
+      }
+      .content-title {
+        font-weight: 500;
+        color: #262a33;
+        margin: 12px 0px;
+      }
+      .content-email {
+        cursor: pointer;
+        padding: 5px 0px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        .content-name {
+          margin-right: 5px;
+        }
+        .content-domain {
+          font-weight: 300;
+        }
+      }
+      .content-email-item {
+        margin-left: 12px;
+      }
+      .content-email-item:hover {
+        margin-left: #f0f0f1;
+      }
+      .content-member-email {
+        padding: 6px 0px 6px 22px;
+      }
+      .content-member-email:hover {
+        background-color: #f5f5f5;
+      }
+    }
+  }
+  .ant-tree-treenode {
+    .ant-tree-switcher {
+      width: 16px;
+      text-align: left;
+    }
+    .ant-tree-switcher-noop {
+      display: inline-block;
+    }
+    .ant-tree-node-content-wrapper-normal {
+      // margin-left: 12px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  .ant-tree-treenode-switcher-close {
+    .ant-tree-indent {
+      display: none;
+    }
+  }
+  .ant-spin-nested-loading {
+    .spin-label {
+      display: none;
+    }
+    .ant-spin-text {
+      color: #262a33;
+      height: 16px;
+      line-height: 16px;
+      margin-top: 10px;
+    }
+  }
+  .ant-modal-close-x {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+  }
+}

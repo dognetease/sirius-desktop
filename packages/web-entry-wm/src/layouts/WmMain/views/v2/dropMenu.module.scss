@@ -1,0 +1,209 @@
+//@import '../../../styles/varies.scss';
+@import '@web-common/styles/waimao/varies.scss';
+
+.dropMenuBox {
+  background-color: #fff;
+  border: 1px solid $Line-3;
+  box-shadow: 0px 4px 30px rgba(78, 86, 130, 0.2);
+  border-radius: 4px;
+  padding: 28px;
+  display: grid;
+  grid-template-columns: auto;
+  column-gap: 28px;
+
+  .textBox {
+    font-family: PingFang SC;
+
+    .title {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 26px;
+    }
+
+    .tip {
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      color: #747a8c;
+    }
+
+    .more {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      margin-top: 8px;
+      color: #545a6e;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .arrow {
+        margin-left: 8px;
+        display: flex;
+      }
+    }
+
+    .videoContainer {
+      margin-top: 12px;
+    }
+  }
+
+  .divider {
+    height: 100%;
+    margin: 0;
+    border-color: #f0f1f5;
+  }
+}
+
+.coopContaienr {
+  display: block;
+  padding: 28px 24px 20px;
+}
+
+.isNewVersion {
+  grid-template-columns: 256px auto auto;
+}
+
+.container {
+  .menuItem {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .title {
+      color: $Text-5;
+      font-weight: 500;
+      height: 38px;
+      line-height: 38px;
+      white-space: nowrap;
+      padding: 0 12px;
+      display: flex;
+      align-items: center;
+
+      > svg {
+        margin-right: 9px;
+        margin-left: 2px;
+      }
+    }
+
+    .subTitle {
+      position: relative;
+      color: $Text-4;
+      font-weight: 400;
+      margin-right: 10px;
+      width: 150px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 0 0 0 38px;
+
+      &:hover {
+        background-color: $Fill-2_5;
+        border-radius: 4px;
+      }
+    }
+
+    .titleWrapper {
+      background: #fff;
+
+      > .itemWrapper {
+        > .title {
+          margin-bottom: 6px;
+        }
+      }
+    }
+
+    .subTitleWrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .specWrapper {
+      background-color: #fff;
+    }
+
+    .columnList {
+      display: flex;
+      flex-wrap: nowrap;
+
+      .columnWrapper {
+        flex: 1;
+
+        > .itemWrapper + .itemWrapper {
+          margin-top: 71px;
+        }
+
+        .itemWrapper {
+          :global {
+            .ant-menu-item-icon {
+              width: 16px;
+              height: 16px;
+              font-size: 16px;
+              margin-right: 4px;
+            }
+          }
+        }
+
+        .subTitleWrapper {
+          display: block;
+
+          .title {
+            font-weight: 400;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      .columnWrapper + .columnWrapper {
+        margin-left: 12px;
+      }
+    }
+
+    .itemWrapper {
+      &:last-child {
+        > .subTitle {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+/** 区分语言 **/
+
+.container.specialModule.intelli.enLang {
+  max-width: 757px;
+
+  .titleWrapper {
+    > div.itemWrapper {
+      min-width: calc(100% - 485px);
+    }
+  }
+}
+
+.linkable {
+  cursor: pointer;
+}
+
+:global(.lang-en) {
+  .title {
+    display: block !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 150px;
+  }
+
+  .subTitle {
+    display: block !important;
+    line-height: 38px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 150px;
+  }
+}

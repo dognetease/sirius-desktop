@@ -1,0 +1,317 @@
+.wrap {
+  padding: 16px;
+  border-radius: 4px;
+  max-height: 378px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: #fff;
+  :global(.ant-modal-body) {
+    max-height: initial !important;
+  }
+  &.wrap2 {
+    max-height: none;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    .header-left {
+      display: flex;
+      align-items: center;
+      .my-task {
+        color: var(--text-5, #272e47);
+        /* 灵犀桌面2.0/P1.4-Med14 */
+        font-family: PingFang SC;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px; /* 157.143% */
+      }
+      .limit {
+        display: flex;
+        align-items: center;
+        color: var(--text-3, #747a8c);
+        /* 全部/Text-C1-Reg12 */
+        font-family: PingFang SC;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        margin-left: 8px;
+        & > span {
+          margin: 0 3px;
+          display: flex;
+          align-items: center;
+        }
+      }
+      .info {
+        color: var(--text-3, #747a8c);
+        /* 全部/Text-C1-Reg12 */
+        font-family: PingFang SC;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+      }
+      .mod {
+        color: var(--brand-6, #4c6aff);
+        /* 灵犀桌面2.0/C4.3-Reg12 */
+        font-family: PingFang SC;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        margin-left: 4px;
+      }
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+      color: var(--text-5, #272e47);
+      /* 灵犀桌面2.0/P1.3-Reg14 */
+      font-family: PingFang SC;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      cursor: pointer;
+      .open-icon {
+        transform-origin: center;
+        transform: rotateZ(180deg);
+      }
+    }
+  }
+  .content {
+    flex: 1;
+    height: 0;
+    overflow-y: hidden;
+    .list {
+      margin-bottom: -12px;
+      .item {
+        margin-bottom: 12px;
+        padding: 16px;
+        border-radius: 4px;
+        border: 1px solid var(--line-1, #f0f1f5);
+        background: var(--fill-1, #f8f9fa);
+        &-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 12px;
+          &-info {
+            display: flex;
+            align-items: center;
+          }
+          &-btn {
+            display: flex;
+            align-items: center;
+          }
+          &-title {
+            color: var(--text-5, #272e47);
+            /* 灵犀桌面2.0/P1.4-Med14 */
+            font-family: PingFang SC;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 22px;
+            margin-right: 8px;
+            margin-left: 8px;
+            max-width: 377px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+        &-info {
+          display: flex;
+          align-items: center;
+          margin-bottom: 8px;
+          color: var(--text-5, #272e47);
+          /* 灵犀桌面2.0/P1.3-Reg14 */
+          font-family: PingFang SC;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22px;
+          &-item {
+            margin-right: 32px;
+            display: flex;
+            align-items: center;
+            &-intro {
+              margin-left: 4px;
+              display: flex;
+              align-items: center;
+              flex-wrap: nowrap;
+              &-info {
+                max-width: 248px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+        &-data {
+          display: flex;
+          margin: 0 -6px;
+          &-item {
+            margin: 0 6px;
+            height: 60px;
+            border-radius: 4px;
+            background: var(--unnamed, #fff);
+            padding: 8px 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 1;
+            align-items: center;
+            &-title {
+              color: var(--text-3, #747a8c);
+              /* 灵犀桌面2.0/C4.1-Reg12 */
+              font-family: PingFang SC;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 16px;
+              display: flex;
+            }
+            &-title:hover {
+              .link {
+                color: #4c6aff;
+                border-bottom: 1px solid #4c6aff !important;
+              }
+              .icon {
+                filter: none;
+              }
+            }
+            .link {
+              cursor: pointer;
+              border-bottom: 1px solid var(--text-3, #747a8c);
+              // &:hover{
+              //   color: #4C6AFF;
+              //   border-bottom: 1px solid #4C6AFF!important;
+              // }
+            }
+            .icon {
+              cursor: pointer;
+              margin-left: 2px;
+              filter: grayscale(100%);
+              // &:hover {
+              //   filter: none;
+              // }
+            }
+            &-data {
+              color: var(--text-5, #272e47);
+              font-family: LX-numbers;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal-content {
+  // padding: 12px 20px;
+  margin: -12px -20px 21px;
+  padding: 0 20px;
+  max-height: 492px;
+  overflow-y: overlay;
+  .modal-info {
+    color: var(--text-5, #272e47);
+    /* 常用/Text-C2-Reg14 */
+    font-family: PingFang SC;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 28px;
+  }
+  .input {
+    // background-color: red;
+    width: 100%;
+  }
+  .priority {
+    color: $Text-5;
+    @include p1-3-reg14;
+    .priority-title {
+      margin: 0;
+    }
+    .priority-desc {
+      color: $Text-3;
+    }
+    .priority-list {
+      border: 1px solid $Line-3;
+      border-radius: 4px;
+      padding: 10px 0;
+      margin: 8px 0 18px;
+    }
+    .priority-item {
+      padding: 7px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 8px;
+      &:hover,
+      &:active {
+        background-color: $Fill-2_5;
+      }
+      svg {
+        &:hover,
+        &:active {
+          cursor: move;
+        }
+      }
+    }
+    .time-pick {
+      display: flex;
+      align-items: center;
+      margin-top: 8px;
+      gap: 8px;
+      .split-line {
+        background: var(--fill-6, #8d92a1);
+        height: 1px;
+        width: 16px;
+      }
+      .time-label {
+        color: var(--text-3, #747a8c);
+        @include c4-1-reg12();
+      }
+      // :global(.react-datepicker__time-list-item) {
+      //   background-color: red !important;
+      //   cursor: not-allowed;
+      //   pointer-events: none;
+      // }
+    }
+    .error-tip {
+      color: var(--Error-6, #fe5b4c);
+      @include p1-3-reg14();
+      line-height: 24px;
+    }
+  }
+}
+.btn-form {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 18px;
+  background-color: #fff;
+}
+
+.my-picker {
+  // :global(.react-datepicker__time-list-item) {
+  //   background-color: red !important;
+  //   cursor: not-allowed;
+  //   pointer-events: none;
+  // }
+}
+.pick-item-disabled {
+  background: rgba(0, 0, 0, 0.04) !important;
+  cursor: not-allowed !important;
+}

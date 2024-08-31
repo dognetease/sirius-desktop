@@ -1,0 +1,19 @@
+  origin/HEAD -> origin/dev
+  origin/all-merged
+  origin/api-schedule-dev
+  origin/api_read_dev
+  origin/change-web-frame
+  origin/dev
+  origin/feat_bug_fix
+  origin/feat_chatbox_hotkey
+  origin/guochao_im_dev
+  origin/mail-data-dev
+  origin/mail-merge
+  origin/mail-selector-dev
+  origin/mail_dev_v2
+  origin/master
+  origin/new-conf-dev
+  origin/optimize-dev
+  origin/sys-optimise-dev
+  origin/ui-chore-dev
+  origin/web-worker-dev

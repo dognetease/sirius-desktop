@@ -1,0 +1,192 @@
+.items {
+  // max-height: 195px;
+  // min-height: 88px;
+  height: 220px;
+  overflow-y: scroll;
+  display: block;
+  border: 1px solid #ebedf2;
+  border-radius: 4px;
+  padding: 8px 0px;
+  .itemsNo {
+    width: 100%;
+    height: 88px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(122, 133, 153, 1);
+  }
+  /* 设置滚动条的样式 */
+  &::-webkit-scrollbar {
+    width: 6px;
+    background: #fff;
+  }
+  /* 滚动槽 */
+  &::-webkit-scrollbar-track {
+    border-radius: 6px;
+  }
+  /* 滚动条滑块 */
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: rgba(38, 42, 51, 0.3);
+    padding: 4px;
+  }
+  .item span:last-child {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .item-select {
+    background: #f2f5ff;
+    position: relative;
+    color: #4c6aff !important;
+    .icon {
+      position: absolute;
+      right: 6px;
+      top: 10px;
+    }
+  }
+
+  // .item2, .item1 {
+  //   height: 48px;
+  //   display: flex;
+  //   flex-direction: row;
+  //   align-items: center;
+  //   border-radius: 2px;
+  //   // box-shadow: 0px 1px 0px #eceff4;
+  //   border-bottom: 1px solid #eceff4;
+  //   padding: 13px 16px;
+  //   position: relative;
+  //   background: #FFFFFF;
+  //   .btns {
+  //     display: none;
+  //     position: absolute;
+  //     right: 16px;
+  //     top: 16px;
+  //     height: 20px;
+  //     line-height: 20px;
+  //     .editIcon {
+  //       margin-right: 24px;
+  //       cursor: pointer;
+  //     }
+  //     .deleteIcon {
+  //       cursor: pointer;
+  //     }
+  //   }
+  //   .item-name {
+  //     width: calc(100% - 60px);
+  //     text-overflow: ellipsis;
+  //     overflow: hidden;
+  //     white-space: nowrap;
+  //   }
+  //   .inputBtn {
+  //     color: #4C6AFF;
+  //     font-size: 12px;
+  //     cursor: pointer;
+  //   }
+  // }
+  .item {
+    position: relative;
+    .btnsEdit {
+      position: absolute;
+      right: 16px;
+      top: 10px;
+      height: 20px;
+      line-height: 20px;
+      .editIcon {
+        margin-right: 24px;
+        cursor: pointer;
+      }
+      .deleteIcon {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.inputBtn {
+  color: #4c6aff;
+  font-size: 12px;
+  cursor: pointer;
+}
+.footer {
+  // padding: 10px 14px 0px 14px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: #232d47;
+  margin-bottom: 8px;
+  .title {
+    color: #545a6e;
+  }
+  .btns-group {
+    display: flex;
+    .btns {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      height: 22px;
+      line-height: 22px;
+      margin-left: 16px;
+      .svg {
+        margin-right: 4px;
+      }
+    }
+  }
+}
+.err {
+  color: #fe5b4c;
+  font-size: 12px;
+  // padding: 8px;
+  height: 16px;
+  line-height: 16px;
+  .errText {
+    // height: 20px;
+    // line-height: 20px;
+    display: flex;
+    align-items: center;
+  }
+}
+.group {
+  // width: 234px;
+  // padding-top: 8px;
+  :global(.ant-checkbox-group) {
+    width: 100%;
+  }
+  :global(.ant-checkbox-wrapper) {
+    display: flex !important;
+    padding: 8px 12px;
+  }
+  :global(.ant-checkbox + span) {
+    padding-left: 0px;
+  }
+
+  :global(.ant-input-group) {
+    padding: 8px 12px;
+    .ant-input-affix-wrapper {
+      border: 1px solid rgba(76, 106, 255, 1);
+      padding: 5px 8px;
+    }
+  }
+}
+.empty {
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  color: #747a8c;
+  padding: 33px 0;
+  .create {
+    color: #4c6aff;
+    cursor: pointer;
+  }
+}
+.group-hide {
+  :global(.ant-checkbox) {
+    width: 0;
+    overflow: hidden;
+  }
+  :global(.ant-checkbox-wrapper) {
+    &:hover {
+      background: #f0f2f7;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #747a8c;
+}

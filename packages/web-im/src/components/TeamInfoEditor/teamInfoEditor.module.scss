@@ -1,0 +1,130 @@
+@import '../../../../web/src/styles/varies';
+.info-editor {
+  p {
+    margin: 0;
+  }
+  .team-item {
+    margin-bottom: 24px;
+    position: relative;
+    .clear-text-icon {
+      position: absolute;
+      right: 80px;
+      bottom: -26px;
+      cursor: pointer;
+    }
+    .small-margin-icon {
+      right: 58px;
+    }
+    .clear-input-icon {
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      right: 12px;
+      bottom: 8px;
+      cursor: pointer;
+    }
+    .label {
+      font-size: 14px;
+      line-height: 14px;
+      color: rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.9);
+    }
+    .input {
+      font-size: 12px;
+      line-height: 16px;
+      margin-top: 8px;
+    }
+    textarea {
+      padding: 8px 11px;
+    }
+    .input-box {
+      height: 32px;
+    }
+    textarea,
+    .input-box {
+      border: 1px solid rgba($Text-5-r, $Text-5-g, $Text-5-b, 0.16);
+      border-radius: 4px;
+      color: $font-color-2;
+      &:hover {
+        border-color: $Link-5;
+      }
+      &:focus,
+      &:focus-within {
+        border-color: #386ee7;
+      }
+    }
+    :global(.ant-input-textarea-show-count::after) {
+      margin-top: 4px;
+      color: $font-color-2;
+    }
+  }
+}
+
+.team-anno-header {
+  display: flex;
+  align-items: center;
+  p,
+  h1 {
+    margin: 0;
+  }
+  .title {
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height, or 114% */
+    // color: #000000;
+    color: $font-color-3;
+  }
+  .edit-icon {
+    border-radius: 12px;
+    width: 24px;
+    height: 24px;
+    box-sizing: border-box;
+    // color: rgba($color: $Fill-7, $alpha: 1);
+    color: $Fill-7;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+      background: rgba($Text-2-r, $Text-2-g, $Text-2-b, 0.1);
+    }
+  }
+}
+
+.anno-cat-content {
+  font-family: PingFang SC;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 22px;
+  /* or 183% */
+  text-align: justify;
+  /* 文字颜色/文字 */
+  // color: #262a33;
+  color: $font-color-2;
+  height: 396px;
+  overflow-y: auto;
+  padding: 0 24px 28px;
+  @include sirius-scroll();
+}
+
+.im-team-anno-cat {
+  p {
+    margin: 0;
+  }
+  :global(.ant-modal-content) {
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: $white;
+  }
+  :global(.ant-modal-header) {
+    border-bottom: solid 0px transparent !important;
+    background-color: $white;
+  }
+  :global(.ant-modal-body) {
+    user-select: text;
+  }
+}

@@ -1,0 +1,38 @@
+@import '@web-common/styles/variables.scss';
+
+.base-info {
+  padding: 12px 20px;
+
+  .box {
+    display: flex;
+    gap: 12px;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+
+  .link {
+    color: #386ee7;
+    cursor: pointer;
+  }
+
+  :global(.ant-table-column-sorter-up.active),
+  :global(.ant-table-column-sorter-down.active) {
+    color: #1890ff !important;
+  }
+}
+
+.link {
+  color: #386ee7;
+  cursor: pointer;
+}
+
+.freight-search {
+  padding-top: 16px;
+}
+.tableStyle {
+  :global {
+    .ant-table-thead > tr > th {
+      padding: 12px 10px;
+    }
+  }
+}

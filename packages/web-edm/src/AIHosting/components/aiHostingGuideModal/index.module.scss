@@ -1,0 +1,81 @@
+.secheme-and-group-box {
+  // :global(.ant-radio-wrapper:not(:last-child)) {
+  //   margin-bottom: 12px;
+  // }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  :global(.ant-modal-header) {
+    background-image: linear-gradient(97.32deg, rgba(135, 200, 252, 0.57) 15.46%, rgba(201, 203, 253, 0.57) 82.02%);
+  }
+
+  :global(.ant-modal-footer) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .ai-hosting-guide-wrapper {
+  }
+  .form-item {
+    display: flex;
+    gap: 12px;
+    .form-label {
+      color: #272e47;
+      display: inline-block;
+      flex: none;
+      margin-top: 5px;
+    }
+    .form-input {
+      width: 100%;
+      flex: 1;
+    }
+    &:first-child .form-input {
+      overflow: hidden;
+    }
+    // .form-radio {
+    //   color: $Text-5;
+    //   @include p1-3-reg14;
+    //   width: 100%;
+    //   flex: 1;
+    // }
+    &:not(:last-child) .form-label {
+      margin-top: 5px;
+    }
+  }
+  .form-tip {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: $Text-3;
+    @include p1-3-reg14;
+  }
+  .multipleOptionsTips {
+    font-size: 12px;
+    color: $Text-3;
+  }
+  .form-label .required {
+    color: $Error-6;
+    margin-right: 4px;
+  }
+  .form-label .non-required {
+    color: transparent;
+    margin-right: 4px;
+  }
+  .recommend-mark {
+    // background: $Lable-5.1;
+    background: rgba(255, 229, 226, 1);
+    border-radius: 2px;
+    padding: 2px 6px;
+    color: rgba(203, 73, 61, 1);
+    font-size: 12px;
+    line-height: 20px;
+    margin-left: 4px;
+  }
+  .up-value {
+    color: $Error-6;
+    font-weight: 500;
+  }
+}

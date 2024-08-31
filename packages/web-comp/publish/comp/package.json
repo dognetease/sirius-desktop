@@ -1,0 +1,27 @@
+{
+  "name": "@lingxi-common-component/sirius-ui",
+  "version": "1.5.0",
+  "main": "index.js",
+  "description": "基于antd的组件库",
+  "dependencies": {
+    "@babel/runtime": "^7.12.5",
+    "@types/react-datepicker": "^4.1.4"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0",
+    "@ant-design/icons": "4.4.0",
+    "antd": "4.16.13",
+    "react-resizable": "1.11.1",
+    "@sirius/icons": "^1.2.3",
+    "moment": "^2.29.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "comp"
+  ],
+  "author": "lujiajian",
+  "license": "ISC"
+}

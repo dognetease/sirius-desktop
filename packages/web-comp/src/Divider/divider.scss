@@ -1,0 +1,7 @@
+@import '../styles/common.scss';
+.#{$class-prefix}-divider:before,
+.#{$class-prefix}-divider:after {
+  position: relative;
+  width: 50% !important;
+  top: 0 !important;
+}

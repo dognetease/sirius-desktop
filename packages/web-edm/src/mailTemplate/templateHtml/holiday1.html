@@ -1,0 +1,153 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>holiday1</title>
+    <style>
+      .lx-template-h1-container {
+          width: 100%;
+          max-width: 566px;
+          margin-top: 8px;
+      }
+  
+      .lx-template-h1-prominent {
+          background: none;
+          animation: lx-template-h1-mymove 4s 1;
+      }
+  
+      @keyframes lx-template-h1-mymove {
+          0% {
+              background: #D6E6FC;
+          }
+  
+          50% {
+              background: #D6E6FC;
+          }
+  
+          100% {
+              background: none;
+          }
+      }
+  
+      @-webkit-keyframes lx-template-h1-mymove {
+          0% {
+              background: #D6E6FC;
+          }
+  
+          50% {
+              background: #D6E6FC;
+          }
+  
+          100% {
+              background: none;
+          }
+      }
+  
+      .lx-template-h1-imgContainer {
+          width: 100%;
+          position: relative;
+      }
+  
+      .lx-template-h1-image {
+          width: 100%;
+      }
+  
+      .lx-template-h1-companyInfo {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: calc(100% - 4px);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: rgba(0, 0, 0, 0.36);
+          color: rgba(255, 255, 255, 1);
+          font-weight: 600;
+          font-size: 2rem;
+      }
+  
+      .lx-template-h1-content {
+          width: 100%;
+      }
+  
+      .lx-template-h1-title {
+          width: 100%;
+          height: 32px;
+          font-size: 20px;
+          font-weight: 500;
+          color: rgba(39, 46, 71, 1);
+          margin-bottom: 12px;
+      }
+  
+      .lx-template-h1-des {
+          width: 100%;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          color: #272E47;
+      }
+  </style>
+</head>
+
+
+<body style="margin: 0px;">
+    <div class="lx-template-h1-container">
+        <div class="lx-template-h1-imgContainer">
+          <!--  https://cowork-storage-public-cdn.lx.netease.com/b9f39b1e-7ebc-451e-bb41-56016e305621_Mask group (1).png -->
+            <img class="lx-template-h1-image"
+                src="https://cowork-storage-public-cdn.lx.netease.com/common/2022/11/30/6e6183de1be0486eb3a80c06a5ad206c.png"
+                alt="这是图片" />
+            <div class="lx-template-h1-companyInfo">
+                New year，New you
+            </div>
+        </div>
+
+        <div></div>
+        <div class="lx-template-h1-content" style="width: 100%;">
+            <div class="lx-template-h1-title">
+                Hi Dear <span class="lx-template-h1-prominent">[Name]</span>
+            </div>
+            <div class="lx-template-h1-des" style="margin-bottom: 16px;">
+                As the year comes to a close, I'd like to take the opportunity to thank you, for your continued
+                commitment to experiencing the difference with our powerful products and solutions.
+            </div>
+            <div class="lx-template-h1-des">
+                A new year means a new you. Please make the most of the holiday and look forward to enjoying further
+                issues of in the new year.
+            </div>
+        </div>
+    </div>
+    <script>
+
+    // function resetHeight () {
+    //     const imgContainer = document.getElementsByClassName('imgContainer')[0];
+    //     if (imgContainer) {
+    //         const width = imgContainer.clientWidth;
+    //         const height = (parseInt(width * 0.571)) + 'px';
+    //         console.log(width, height);
+    //         imgContainer.style.height = height;
+    //     }
+    // }
+
+    // function debounce (fn, delay) {
+    //     let timer = null;
+    //     return function () {
+    //         if (timer) {
+    //             clearTimeout(timer);
+    //         }
+    //         timer = setTimeout(() => {
+    //             fn()
+    //         }, delay)
+    //     }
+    // }
+    // // resetHeight();
+    // const cancelDebonce = debounce(resetHeight, 500);
+    // window.addEventListener('resize', cancelDebonce);
+
+    </script>
+</body>
+
+</html>

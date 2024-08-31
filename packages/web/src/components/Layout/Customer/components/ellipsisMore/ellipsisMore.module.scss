@@ -1,0 +1,40 @@
+.ellipsis-more {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+
+  &-mirror {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    white-space: normal;
+  }
+
+  &-mirror-item {
+    display: inline-flex;
+  }
+
+  &-default-dots {
+    line-height: 20px;
+    cursor: pointer;
+    margin-right: 4px;
+
+    &::before {
+      content: '…';
+      display: block;
+      width: 22px;
+      height: 20px;
+      border-radius: 2px;
+      text-align: center;
+    }
+  }
+
+  &-dropdown {
+    padding: 10px 12px;
+    font-size: 12px;
+    background: linear-gradient(0deg, #ffffff, #ffffff), #c4c4c4;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+  }
+}

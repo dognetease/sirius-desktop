@@ -1,0 +1,67 @@
+.contact-tree {
+  :global(.tree-leaf-checkbox) {
+    line-height: 16px;
+  }
+}
+
+.org-item {
+  position: relative;
+  overflow: hidden;
+  padding: 8px 16px;
+  border-radius: 4px;
+
+  &:hover {
+    background: #f0f0f1;
+  }
+
+  &.normal {
+    height: 50px;
+  }
+
+  .hitText {
+    color: #386ee7;
+  }
+
+  :global {
+    .ant-list-item-meta {
+      &.p-right {
+        padding-right: 24px;
+      }
+    }
+    .ant-list-item-meta-avatar {
+      margin-right: 12px;
+    }
+
+    .ant-list-item-meta-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: keep-all;
+      white-space: nowrap;
+      width: auto;
+      margin-bottom: 2px;
+      line-height: 16px;
+      color: rgba(38, 42, 51, 0.9);
+    }
+
+    .ant-list-item-meta-description {
+      color: rgba(38, 42, 51, 0.5);
+    }
+  }
+}
+
+.item-delete {
+  background: url('@/images/icons/calendar_icon_close.png') center center no-repeat;
+  background-size: 100% 100%;
+  cursor: pointer;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+}
+
+.list-item {
+  padding: 8px 12px;
+  border-radius: 4px;
+}

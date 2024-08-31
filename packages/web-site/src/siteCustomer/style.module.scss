@@ -1,0 +1,79 @@
+@import '@web-common/styles/waimao/varies.scss';
+
+.site-customer {
+  width: 100%;
+  height: 100%;
+  background: $Fill-2;
+  padding: 20px 16px;
+  overflow-y: auto;
+
+  &-header {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $Text-5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .stat-header-container {
+    display: flex;
+    margin-bottom: 7px;
+  }
+  .stat-header-title,
+  .stat-header-title-active {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: $Text-5;
+    padding: 0 14px;
+    cursor: pointer;
+  }
+  .stat-header-title-active {
+    font-weight: 500;
+    color: $Brand-6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      margin-top: 7px;
+      width: 24px;
+      height: 2px;
+      background: $Brand-6;
+    }
+  }
+
+  &-desc {
+    font-size: 12px;
+    color: $Text-3;
+    line-height: 20px;
+  }
+
+  &-content {
+    width: 100%;
+    min-height: 100px;
+    padding: 20px;
+    border-radius: 4px;
+    background: #fff;
+    white-space: nowrap;
+  }
+
+  :global {
+    .ant-table-body {
+      overflow: auto !important;
+      color: $Text-5;
+    }
+  }
+}
+
+.detail-table {
+  :global {
+    .ant-table-thead > tr > th,
+    .ant-table-tbody > tr > td {
+      padding: 12px 8px;
+      line-height: 21px;
+    }
+  }
+}

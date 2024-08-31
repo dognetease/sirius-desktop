@@ -1,0 +1,15 @@
+.blacklist {
+  padding-bottom: 0;
+  // padding: 0 15px 20px;
+  .header-button {
+    float: right;
+  }
+
+  .tabs {
+    margin: 0px 0 14px;
+
+    :global(.ant-tabs) {
+      color: #747a8c;
+    }
+  }
+}

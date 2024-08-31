@@ -1,0 +1,137 @@
+.email-score-detail {
+  color: #51555c;
+
+  .icon {
+    text-align: center;
+    line-height: 1;
+  }
+
+  .title {
+    color: #000000;
+    font-size: 16px;
+    text-align: center;
+    padding: 6px 0 14px;
+    font-weight: bold;
+    font-weight: 500;
+  }
+
+  .guide {
+    padding: 0px 60px 0px 54px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    .title {
+      padding: 0;
+      flex-shrink: 0;
+      color: $Brand-6;
+      @include c4-1-reg12;
+    }
+  }
+
+  .score {
+    text-align: center;
+    margin-bottom: 16px;
+
+    .highlight {
+      color: #5fc375;
+      margin-right: 16px;
+    }
+  }
+
+  .list {
+    border-radius: 4px;
+    padding: 10px 50px;
+    margin: 0 4px;
+    height: 150px;
+    overflow-y: scroll;
+    /* 设置滚动条的样式 */
+    &::-webkit-scrollbar {
+      width: 6px;
+      background: #eee;
+    }
+
+    /* 滚动槽 */
+    &::-webkit-scrollbar-track {
+      border-radius: 6px;
+    }
+
+    /* 滚动条滑块 */
+    &::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background: rgba(38, 42, 51, 0.3);
+      padding: 4px;
+    }
+
+    .item {
+      border-radius: 4px;
+      margin-bottom: 4px;
+      font-size: 12px;
+    }
+
+    .item-defect {
+      // background-color: rgba(255, 170, 0, 0.06);
+
+      > .data-item {
+        cursor: pointer;
+      }
+    }
+
+    .data-item {
+      padding: 9px 15px;
+      display: flex;
+      align-items: center;
+      background: #f2f5ff;
+
+      .arrow-icon {
+        width: 8px;
+        height: 8px;
+        display: block;
+        flex-shrink: 0;
+        margin-right: 6px;
+        transition: height 0.3s;
+
+        &-open {
+          transform: rotate(90deg);
+        }
+      }
+
+      .name {
+        flex-grow: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-right: 12px;
+      }
+
+      .mark {
+        flex-shrink: 0;
+        color: #fe5b4c;
+        img {
+          display: block;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .sub-list {
+      overflow: hidden;
+      transition: height 0.3s;
+      .data-item {
+        background-color: #fff8ed;
+        margin-bottom: 4px;
+        border-radius: 4px;
+        &:first-child {
+          margin-top: 4px;
+        }
+      }
+    }
+
+    .sub-list .data-item .name {
+      padding-left: 16px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.org-tree-select-popup :global {
+  .ant-select-tree-treenode {
+    padding: 4px 0 !important;
+  }
+
+  .ant-select-tree-treenode-checkbox-checked {
+    background-color: $Brand-1;
+  }
+
+  .ant-select-tree-treenode:not(.ant-select-tree-treenode-checkbox-checked):hover {
+    background-color: $Fill-2;
+  }
+
+  .ant-select-tree-node-content-wrapper:hover {
+    background-color: transparent !important;
+  }
+
+  .ant-select-tree-checkbox-checked .ant-select-tree-checkbox-inner {
+    border-color: $Brand-6 !important;
+    background-color: $Brand-6 !important;
+  }
+
+  .ant-select-tree-checkbox-inner:hover {
+    border-color: $Brand-6 !important;
+  }
+}
+
+.account {
+  display: flex;
+  align-items: center;
+
+  .avatar {
+    width: 22px;
+    height: 22px;
+    margin-right: 4px;
+  }
+
+  .text {
+    color: $Text-5;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+
+  .un-bind {
+    color: $Text-2;
+  }
+}

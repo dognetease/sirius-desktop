@@ -1,0 +1,87 @@
+.qrcode-switch-container {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  .hover-tip {
+    width: 94px;
+    height: 44px;
+    top: 22px;
+    right: 81px;
+    position: absolute;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 44px;
+    background-image: url(./../../../icons/login-type-tip-bg.svg);
+    background-repeat: no-repeat;
+    &.en {
+      width: 164px;
+      background-image: url(./../../../icons/login-type-en-tip-bg.svg);
+    }
+  }
+
+  .hoverTip2 {
+    width: 94px;
+    height: 56px;
+    line-height: 56px;
+    top: 8px;
+    right: 70px;
+    position: absolute;
+    color: var(--text-4, #545a6e);
+    font-size: 12px;
+    text-align: center;
+    user-select: none;
+
+    &.hoverTipAccount {
+      width: 121px;
+      background: url(./../../../icons/login-type-tip-bg_account.svg) center 4px no-repeat;
+      background-size: cover;
+    }
+
+    &.hoverTipQr {
+      width: 184px;
+      background: url(./../../../icons/login-type-tip-bg_qr.svg) center 4px no-repeat;
+      background-size: cover;
+
+      &.en2 {
+        width: 290px;
+        background: url(./../../../icons/login-type-tip-bg_qr_en.svg) center 4px no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+  .right {
+    overflow: hidden;
+    border-radius: 4px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .icon-container {
+    width: 0;
+    height: 0;
+    border-top: 80px solid rgba(76, 106, 255, 0.8);
+    border-left: 80px solid transparent;
+    .icon {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      height: 39px;
+      width: 39px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+    .icon.pc-login-icon {
+      background-image: url(./../../../icons/pc-login-icon.svg);
+    }
+    .icon.qrcode-login-icon {
+      background-image: url(./../../../icons/qrcode-login-icon.svg);
+    }
+  }
+  .icon-container:hover {
+    border-top-color: $Avatar-6;
+    cursor: pointer;
+  }
+}

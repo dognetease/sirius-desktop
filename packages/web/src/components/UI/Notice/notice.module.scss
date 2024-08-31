@@ -1,0 +1,34 @@
+.alert-info {
+  position: absolute;
+  top: 30px;
+  left: 20%;
+  width: 60%;
+  z-index: 999;
+  padding: 11px 16px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: $Text-5;
+  min-height: 46px;
+  background: $Warning-5;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  &.is-web {
+    top: 54px;
+    left: 0;
+    width: 100%;
+  }
+
+  .info-icon {
+    margin-right: 8px;
+  }
+
+  .close-icon-wrapper {
+    display: flex;
+    margin-left: auto;
+    cursor: pointer;
+  }
+}

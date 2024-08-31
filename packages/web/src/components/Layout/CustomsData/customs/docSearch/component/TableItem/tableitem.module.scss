@@ -1,0 +1,90 @@
+@import '@web-common/styles/variables.scss';
+@import '@web-common/styles/waimao/varies.scss';
+
+.copyIcon {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  cursor: pointer;
+  background: url('../../../../../../../images/icons/customs/copy.svg') center center no-repeat;
+  background-size: 16px;
+  /* 中性色-填充/Fill-2浅背景 */
+  &:hover {
+    background: url('../../../../../../../images/icons/customs/copyHover.svg') center center no-repeat;
+  }
+}
+
+$text-width: 200px;
+$text-width-one: 172px;
+$text-width-two: 144px;
+
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .text {
+    // 如果表格改成可拖动调整列大小，这里需要修改成自适应/绝对布局
+    max-width: $text-width;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+
+    .iconWrapper {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      right: 0;
+      bottom: -3px;
+      background: #f0f0f1;
+    }
+
+    .inlineText {
+      float: right;
+      width: 100%;
+      word-break: break-all;
+    }
+
+    &-search {
+      cursor: pointer;
+      color: $Avatar-6;
+    }
+
+    &-color {
+      color: $Text-2;
+    }
+
+    &-with-one {
+      max-width: $text-width-one;
+    }
+
+    &-with-both {
+      max-width: $text-width-two;
+    }
+  }
+
+  .translate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+  }
+}
+
+.country {
+  color: $Text-3;
+}
+
+.lightText {
+  font-weight: 500;
+  color: $Error-6;
+}
+
+.textOpacity {
+  opacity: 0.5;
+}

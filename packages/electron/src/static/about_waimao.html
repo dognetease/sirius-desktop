@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>网易外贸通-关于</title>
+</head>
+<style>
+  .about-container{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width:400px;
+    height:300px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 6px;
+  }
+  .about-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo{
+    margin-top: 56px;
+    width:56px;
+    height: 56px;
+  }
+  .name{
+    margin-top: 24px;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+  }
+  .version{
+    margin-top: 8px;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: rgba(38, 42, 51, 0.9);
+  }
+  .protocol-wrap {
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+  }
+  .protocol-wrap >span {
+    cursor: pointer;
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+    text-align: center;
+    text-decoration-line: underline;
+    /* 主色/灵犀蓝 */
+    color: #386EE7;
+  }
+  .protocol-wrap >span:first-child{
+     margin-right: 32px;
+   }
+
+</style>
+<body>
+  <div class='about-container'>
+    <div class='about-wrap'>
+      <img src="./tray_edm.png" class='logo' alt='' />
+      <div class='name'>网易外贸通</div>
+      <div class='version'>版本号：<span class='version-num'></span></div>
+      <div class='protocol-wrap'>
+        <span data-url='https://qiye.163.com/sirius/agreement_waimao/index.html'>服务条款</span>
+        <span data-url='https://qiye.163.com/sirius/privacy_waimao/index.html'>隐私政策</span>
+      </div>
+    </div>
+  </div>
+</div>
+  <script>
+    const {electronLib} = require('../lib/index')
+    const version = electronLib.env.showVersion;
+    document.querySelector('.version .version-num').innerHTML = version;
+    document.querySelectorAll('.protocol-wrap span').forEach(ele => {
+      ele.onclick = () => {
+        const url = ele.getAttribute('data-url');
+        const electron = require('electron');
+        electron.shell.openExternal(url)
+      }
+    })
+  </script>
+</body>
+</html>

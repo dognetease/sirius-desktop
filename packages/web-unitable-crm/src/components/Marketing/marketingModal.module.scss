@@ -1,0 +1,29 @@
+.clue-modal-wrap {
+  :global(.ant-modal-header) {
+    border-bottom: none;
+    padding: 24px;
+  }
+  :global(.ant-modal-footer) {
+    padding: 10px 24px 24px;
+    border-top: none;
+    position: relative;
+    z-index: 10;
+    background-color: #fff;
+    border-radius: 8px;
+  }
+  .content {
+    :global(.ant-form-item) {
+      margin-bottom: 16px;
+    }
+  }
+  :global(.ant-form-item-label > label) {
+    font-size: 12px;
+    font-weight: normal;
+  }
+  :global(.ant-modal-footer .ant-btn + .ant-btn) {
+    margin-left: 8px;
+  }
+}
+.hide {
+  display: none !important;
+}

@@ -1,0 +1,133 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.progress {
+  :global(.ant-modal-body) {
+    padding: 28px 36px 24px;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .icon {
+      margin-bottom: 12px;
+
+      &.loading {
+        animation: spin 1s infinite linear;
+      }
+    }
+
+    .title {
+      color: #333;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 26px;
+      margin-bottom: 4px;
+    }
+
+    .sub-title {
+      color: $Text-3;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .options {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      .button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.progress.ins-error-modal :global(.ant-modal-body) {
+  padding: 28px 28px 24px;
+
+  .suggestions {
+    position: relative;
+    margin-bottom: 12px;
+    padding: 16px;
+    border-radius: 4px;
+    background-color: $Fill-1;
+
+    .help-link {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+
+    .suggestion {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 20px;
+      color: $Text-3;
+    }
+
+    .suggestion-header + .suggestion {
+      margin-top: 8px;
+    }
+
+    .suggestion + .suggestion {
+      margin-top: 4px;
+    }
+  }
+}
+
+.account-pick-row {
+  display: flex;
+  align-items: center;
+
+  .account-avatar {
+    flex-shrink: 0;
+    margin-right: 12px;
+  }
+
+  .account-name {
+    flex-grow: 1;
+    color: $Text-5;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-right: 12px;
+  }
+
+  .account-status {
+    flex-shrink: 0;
+    padding: 2px 6px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: $label-2_3;
+    border-radius: 2px;
+    background-color: $label-2_1;
+    margin-left: auto;
+  }
+}
